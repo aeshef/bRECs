@@ -178,7 +178,7 @@ def collect_telegram_news(
             # Сохраняем все сообщения в CSV
             if not df.empty:
                 timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-                all_messages_file = os.path.join(output_dir, f"telegram_cbrstocks_{timestamp}.csv")
+                all_messages_file = os.path.join(output_dir, f"telegram_headlines_{timestamp}.csv")
                 df.to_csv(all_messages_file, index=False, encoding='utf-8')
                 logger.info(f"Сохранено {len(df)} сообщений в файл {all_messages_file}")
             
@@ -240,11 +240,12 @@ def collect_telegram_news(
         return {}
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Парсер Telegram-канала @cbrstocks')
+    parser = argparse.ArgumentParser(description=f'Парсер Telegram-канала')
     parser.add_argument('--api_id', type=int, required=True, help='API ID для Telegram')
     parser.add_argument('--api_hash', type=str, required=True, help='API Hash для Telegram')
     parser.add_argument('--limit', type=int, default=50000, help='Лимит сообщений (по умолчанию 100)')
     parser.add_argument('--tickers', type=str, nargs='+', help='Список тикеров для фильтрации')
+    parser.add_argument('--channel', type=str, required=True, help='API ID для Telegram')
     
     # Добавляем аргументы для дат
     parser.add_argument('--start_date', 
@@ -261,6 +262,7 @@ if __name__ == "__main__":
         api_hash=args.api_hash,
         limit=args.limit,
         tickers=args.tickers,
+        channel=args.channel,
         start_date=args.start_date,
-        end_date=args.end_date
+        end_date=args.end_date,
     )

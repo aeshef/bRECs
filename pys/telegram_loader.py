@@ -9,6 +9,7 @@ import datetime
 def load_telegram_results(
     data_dir: str = "/Users/aeshef/Documents/GitHub/kursach/data/telegram_news",
     tickers: List[str] = None,
+    channel: str = "cbrstocks",
     start_date: datetime.date = None,  # Новый параметр
     end_date: datetime.date = None,    # Новый параметр
     latest_only: bool = True
