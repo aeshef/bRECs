@@ -25,7 +25,6 @@ class DataStorage:
         self.raw_data_dir = os.path.join(base_directory, "raw_data")
         self.processed_data_dir = os.path.join(base_directory, "processed_data")
         
-        # Создаем основные директории, если они не существуют
         os.makedirs(self.raw_data_dir, exist_ok=True)
         os.makedirs(self.processed_data_dir, exist_ok=True)
     
@@ -64,8 +63,7 @@ class DataStorage:
                 try:
                     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
                         zip_ref.extractall(extract_dir)
-                    
-                    # Собираем пути к извлеченным CSV-файлам
+
                     for root, _, files in os.walk(extract_dir):
                         for csv_file in files:
                             if csv_file.endswith(".csv"):
@@ -86,7 +84,6 @@ class DataStorage:
                                       names=["date", "open", "close", "min", "max", "volume", "unused"], 
                                       header=None)
                 
-                # Удаляем неиспользуемую колонку и обрабатываем даты
                 if 'unused' in temp_df.columns:
                     temp_df.drop('unused', axis=1, inplace=True)
                 
@@ -97,10 +94,8 @@ class DataStorage:
         if not dfs:
             return None
             
-        # Объединяем все DataFrame
         combined_df = pd.concat(dfs, ignore_index=True)
         
-        # Обрабатываем даты и сортируем
         combined_df["date"] = pd.to_datetime(combined_df["date"], format="%Y-%m-%dT%H:%M:%SZ")
         combined_df.sort_values(by='date', inplace=True)
         combined_df.reset_index(drop=True, inplace=True)
@@ -111,7 +106,6 @@ class DataStorage:
         """Сохранить обработанные данные в Parquet формате"""
         ticker_dir = self.get_ticker_processed_path(ticker)
         
-        # Создаем имя файла с информацией о периоде данных
         if len(data) > 0:
             start_date = data['date'].min().strftime('%Y-%m-%d')
             end_date = data['date'].max().strftime('%Y-%m-%d')
@@ -121,7 +115,6 @@ class DataStorage:
         
         file_path = os.path.join(ticker_dir, file_name)
         
-        # Сохраняем в формате Parquet (эффективнее CSV)
         data.to_parquet(file_path, index=False)
         
         return file_path
@@ -138,7 +131,6 @@ class DataStorage:
         if not all_files:
             return None
         
-        # Загружаем все файлы и объединяем
         dfs = [pd.read_parquet(file) for file in all_files]
         if not dfs:
             return None
@@ -162,21 +154,17 @@ class DataStorage:
         end_date = pd.to_datetime(end_date)
         
         if existing_data is None or len(existing_data) == 0:
-            # Нет данных, нужно загрузить весь период
             return [(start_date, end_date)]
         
-        # Находим пропущенные периоды
         existing_dates = existing_data['date']
         min_date = existing_dates.min()
         max_date = existing_dates.max()
         
         missing_ranges = []
         
-        # Проверяем, нужно ли загрузить данные до имеющихся
         if start_date < min_date:
             missing_ranges.append((start_date, min_date))
         
-        # Проверяем, нужно ли загрузить данные после имеющихся
         if end_date > max_date:
             missing_ranges.append((max_date, end_date))
         
@@ -198,33 +186,21 @@ class TimeframeConverter:
         if df is None or len(df) == 0:
             return pd.DataFrame()
         
-        # Проверка корректности входных данных
         required_columns = ['date', 'open', 'close', 'min', 'max', 'volume']
         if not all(col in df.columns for col in required_columns):
             raise ValueError(f"DataFrame должен содержать колонки: {required_columns}")
-        
-        # Устанавливаем date как индекс
+
         df = df.copy()
         df.set_index('date', inplace=True)
         
-        # Преобразуем временной интервал
-        # Правила агрегации для OHLCV данных:
-        # - open: первое значение в интервале
-        # - high: максимальное значение
-        # - low: минимальное значение
-        # - close: последнее значение
-        # - volume: сумма
-        
-        # Маппинг имен колонок dataframe -> pandas aggregation
         agg_dict = {
             'open': 'first',
-            'min': 'min',        # минимальная цена (low)
-            'max': 'max',        # максимальная цена (high)
+            'min': 'min',
+            'max': 'max',
             'close': 'last',
             'volume': 'sum'
         }
         
-        # Преобразуем pandas timeframe в формат ресемплирования
         resample_map = {
             '5min': '5T',
             '15min': '15T',
@@ -234,13 +210,8 @@ class TimeframeConverter:
             '1M': 'M'
         }
         
-        # Выбираем правило ресемплирования
-        rule = resample_map.get(timeframe, '1D')  # По умолчанию дневной интервал
-        
-        # Выполняем ресемплирование
+        rule = resample_map.get(timeframe, '1D')
         resampled = df.resample(rule).agg(agg_dict)
-        
-        # Сбрасываем индекс для получения колонки date
         resampled.reset_index(inplace=True)
         
         return resampled
@@ -332,17 +303,14 @@ class TinkoffDataDownloader:
         :param end_date: Дата окончания в формате YYYY-MM-DD
         :return: DataFrame с минутными данными
         """
-        # Определяем годы, за которые нужно скачать данные
         start_year = pd.to_datetime(start_date).year
         end_year = pd.to_datetime(end_date).year
         years_to_download = list(range(start_year, end_year + 1))
         
-        # Получаем идентификаторы для тикера
         ticker_figi = self.get_figi(ticker)
         ticker_uid = self.get_uid(ticker)
         ticker_isin = self.get_isin(ticker)
         
-        # Получаем корректный FIGI
         correct_figi = self.get_correct_figi(ticker_figi)
         
         downloaded_files = []
@@ -350,38 +318,28 @@ class TinkoffDataDownloader:
         if correct_figi != "0":
             print(f"Congratulations! {correct_figi} is a correct figi for {ticker}")
             
-            # Скачиваем данные за все годы
             for year in years_to_download:
                 file_path = self._download_year_data(ticker, correct_figi, year)
                 if file_path:
                     downloaded_files.append(file_path)
         else:
-            # Пробуем разные идентификаторы
             for instrument_list in [ticker_figi, ticker_isin, ticker_uid]:
                 for instrument_id in instrument_list:
-                    # Скачиваем данные за все годы
                     for year in years_to_download:
                         file_path = self._download_year_data(ticker, instrument_id, year)
                         if file_path:
                             downloaded_files.append(file_path)
             
-        # Извлекаем данные из zip-файлов
         csv_files = self.storage.extract_raw_data(ticker)
-        
-        # Загружаем данные из CSV-файлов
         data = self.storage.load_raw_csv_files(csv_files)
         
-        # Фильтруем по указанному диапазону дат
         if data is not None:
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
             
             data = data[(data['date'] >= start_date_dt) & (data['date'] <= end_date_dt)]
-            
-            # Сохраняем обработанные данные
+
             self.storage.save_processed_data(ticker, data)
-            
-            # Выводим статистику
             self._print_data_stats(ticker, data)
         
         return data
@@ -397,7 +355,6 @@ class TinkoffDataDownloader:
             response = requests.get(self.url, params=params, headers=headers)
             
             if response.status_code == 200:
-                # Сохраняем сырые данные
                 return self.storage.store_raw_data(ticker, figi, year, response.content)
             elif response.status_code == 429:
                 print("Rate limit exceeded. Sleeping for 5 seconds...")
@@ -450,36 +407,29 @@ class MarketDataManager:
         :param force_download: Принудительно скачать новые данные, даже если они уже есть
         :return: DataFrame с данными
         """
-        # Проверяем, есть ли у нас уже данные для этого тикера
         existing_data = None if force_download else self.storage.load_processed_data(ticker)
         
-        # Определяем, какие периоды данных нужно дозагрузить
         if existing_data is not None:
             missing_ranges = self.storage.get_missing_date_ranges(ticker, start_date, end_date)
             
-            # Если есть пропущенные периоды, скачиваем их
             for range_start, range_end in missing_ranges:
                 print(f"Downloading missing data for {ticker} from {range_start} to {range_end}")
                 new_data = self.downloader.download_for_ticker(ticker, range_start.strftime('%Y-%m-%d'), 
                                                              range_end.strftime('%Y-%m-%d'))
                 
                 if new_data is not None and len(new_data) > 0:
-                    # Объединяем с существующими данными
                     existing_data = pd.concat([existing_data, new_data], ignore_index=True)
                     existing_data.drop_duplicates(subset=['date'], inplace=True)
                     existing_data.sort_values(by='date', inplace=True)
                     existing_data.reset_index(drop=True, inplace=True)
             
-            # Фильтруем по указанному диапазону дат
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
             data = existing_data[(existing_data['date'] >= start_date_dt) & 
                                  (existing_data['date'] <= end_date_dt)]
         else:
-            # У нас нет данных для этого тикера, скачиваем все
             data = self.downloader.download_for_ticker(ticker, start_date, end_date)
         
-        # Если нужен временной интервал, отличный от минутного, выполняем преобразование
         if timeframe != "1min" and data is not None and len(data) > 0:
             data = self.converter.resample_ohlcv(data, timeframe)
         
@@ -510,7 +460,6 @@ class MarketDataManager:
                     data = future.result()
                     results[ticker] = data
                     
-                    # Выводим статистику
                     if data is not None and len(data) > 0:
                         print(f"\n{ticker} data:")
                         print(f"  - Timeframe: {timeframe}")

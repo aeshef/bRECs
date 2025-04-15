@@ -1,5 +1,3 @@
-# telegram_loader.py
-
 import os
 import pandas as pd
 import glob
@@ -10,8 +8,8 @@ def load_telegram_results(
     data_dir: str = "/Users/aeshef/Documents/GitHub/kursach/data/telegram_news",
     tickers: List[str] = None,
     channel: str = "cbrstocks",
-    start_date: datetime.date = None,  # Новый параметр
-    end_date: datetime.date = None,    # Новый параметр
+    start_date: datetime.date = None,
+    end_date: datetime.date = None,
     latest_only: bool = True
 ) -> Dict[str, pd.DataFrame]:
     
@@ -30,7 +28,6 @@ def load_telegram_results(
         print(f"Директория {data_dir} не существует")
         return {}
     
-    # Определяем список доступных тикеров
     available_tickers = set()
     ticker_files = glob.glob(os.path.join(data_dir, "*_telegram_news_*.csv"))
     
@@ -43,7 +40,6 @@ def load_telegram_results(
         print(f"Нет файлов с результатами в {data_dir}")
         return {}
     
-    # Если тикеры не указаны, используем все доступные
     if tickers is None:
         tickers = list(available_tickers)
     
@@ -56,7 +52,6 @@ def load_telegram_results(
             print(f"Данные для тикера {ticker} не найдены, пропускаем")
             continue
         
-        # Ищем все файлы для данного тикера
         ticker_pattern = os.path.join(data_dir, f"{ticker}_telegram_news_*.csv")
         files = glob.glob(ticker_pattern)
         
@@ -64,25 +59,20 @@ def load_telegram_results(
             print(f"Файлы для тикера {ticker} не найдены, пропускаем")
             continue
         
-        # Сортируем файлы по дате в имени (последние будут в конце)
         files.sort()
         
-        # Если нужен только последний файл
         if latest_only:
             files = [files[-1]]
         
-        # Загружаем файлы
         dfs = []
         for file_path in files:
             try:
                 df = pd.read_csv(file_path, encoding='utf-8')
                 
-                # Преобразуем строковые представления списков обратно в списки
                 for col in ['tickers', 'tickers_from_tags', 'tickers_from_keywords']:
                     if col in df.columns:
                         df[col] = df[col].apply(lambda x: eval(x) if isinstance(x, str) and pd.notna(x) else x)
                 
-                # Преобразуем дату в datetime
                 if 'date' in df.columns:
                     df['date'] = pd.to_datetime(df['date'])
                 
@@ -94,7 +84,6 @@ def load_telegram_results(
         if dfs:
             combined_df = pd.concat(dfs, ignore_index=True)
             
-            # Фильтрация по дате
             if 'date' in combined_df.columns:
                 combined_df['date'] = pd.to_datetime(combined_df['date']).dt.date
                 if start_date:
@@ -102,10 +91,8 @@ def load_telegram_results(
                 if end_date:
                     combined_df = combined_df[combined_df['date'] <= end_date]
 
-            # Удаляем дубликаты по ID
             if 'id' in combined_df.columns:
                 combined_df = combined_df.drop_duplicates(subset='id')
-            # Сортируем по дате, если она есть
             if 'date' in combined_df.columns:
                 combined_df = combined_df.sort_values('date', ascending=False)
             

@@ -1,5 +1,3 @@
-# telegram_parser.py
-
 import os
 import re
 import json
@@ -21,8 +19,8 @@ def collect_telegram_news(
     limit: int = 50000,
     output_dir: str = "/Users/aeshef/Documents/GitHub/kursach/data/telegram_news",
     tickers: List[str] = None,
-    start_date: datetime.date = None,  # Новый параметр
-    end_date: datetime.date = None     # Новый параметр
+    start_date: datetime.date = None,
+    end_date: datetime.date = None
 ) -> Dict[str, pd.DataFrame]:
     
     """
@@ -39,7 +37,6 @@ def collect_telegram_news(
     Returns:
         Dict[str, pd.DataFrame]: словарь {тикер: DataFrame с сообщениями}
     """
-    # Проверка наличия необходимых пакетов
     try:
         import pandas as pd
         from telethon.sync import TelegramClient
@@ -49,7 +46,6 @@ def collect_telegram_news(
         print("pip install pandas telethon")
         return {}
     
-    # Настройка логирования
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -57,10 +53,8 @@ def collect_telegram_news(
     )
     logger = logging.getLogger('Telegram_Parser')
     
-    # Создаем директорию для результатов
     os.makedirs(output_dir, exist_ok=True)
     
-    # Словарь компаний и их ключевых слов
     COMPANY_INFO = {
         'AFKS': {'name': 'АФК "Система"', 'industry': 'конгломерат', 
                 'keywords': ['афк система', 'система', 'евтушенков']},
@@ -94,7 +88,6 @@ def collect_telegram_news(
                 'keywords': ['втб', 'внешторгбанк', 'костин']}
     }
 
-    # Дефолтные тикеры если не указаны
     if tickers is None:
         tickers = [
             'AFKS', 'ALRS', 'GMKN', 'LKOH', 'MAGN', 
@@ -108,12 +101,10 @@ def collect_telegram_news(
             logger.info(f"Подключено к Telegram API")
             entity = client.get_entity(channel)
 
-            # Собираем сообщения с ручной фильтрацией по дате
             messages = []
             for message in client.iter_messages(entity, limit=limit):
                 msg_date = message.date.date()
                 
-                # Пропускаем сообщения вне диапазона
                 if start_date and msg_date < start_date:
                     continue
                 if end_date and msg_date > end_date:
@@ -127,22 +118,18 @@ def collect_telegram_news(
 
             logger.info(f"Всего получено {len(messages)} сообщений после фильтрации")
             
-            # Преобразуем сообщения в DataFrame
             message_data = []
             
             for msg in messages:
                 if not msg.text:
                     continue
                     
-                # Ищем тикеры в тексте по хэштегам #TICKER
                 tickers_from_tags = []
                 ticker_pattern = r'#([A-Z0-9]{4,6})'
                 found_tickers = re.findall(ticker_pattern, msg.text)
                 
-                # Фильтруем только известные тикеры
                 tickers_from_tags = [t for t in found_tickers if t in COMPANY_INFO]
                 
-                # Ищем по ключевым словам если не нашли по тегам
                 tickers_from_keywords = []
                 if not tickers_from_tags:
                     text_lower = msg.text.lower()
@@ -156,10 +143,8 @@ def collect_telegram_news(
                                 tickers_from_keywords.append(ticker)
                                 break
                 
-                # Объединяем найденные тикеры
                 all_tickers = list(set(tickers_from_tags + tickers_from_keywords))
                 
-                # Если нашли тикеры, добавляем сообщение
                 message_info = {
                     'id': msg.id,
                     'date': msg.date,
@@ -172,27 +157,21 @@ def collect_telegram_news(
                 
                 message_data.append(message_info)
             
-            # Создаем DataFrame
             df = pd.DataFrame(message_data)
             
-            # Сохраняем все сообщения в CSV
             if not df.empty:
                 timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
                 all_messages_file = os.path.join(output_dir, f"telegram_headlines_{timestamp}.csv")
                 df.to_csv(all_messages_file, index=False, encoding='utf-8')
                 logger.info(f"Сохранено {len(df)} сообщений в файл {all_messages_file}")
             
-            # Словарь для хранения результатов по тикерам
             results = {}
             
-            # Фильтруем сообщения по тикерам
             for ticker in tickers:
-                # Проверяем, есть ли тикер в COMPANY_INFO
                 if ticker not in COMPANY_INFO:
                     logger.warning(f"Тикер {ticker} не найден в списке компаний, пропускаем")
                     continue
                     
-                # Фильтруем сообщения для текущего тикера
                 ticker_messages = df[df['tickers'].apply(
                     lambda x: isinstance(x, list) and ticker in x
                 )].copy()
@@ -201,12 +180,10 @@ def collect_telegram_news(
                     logger.warning(f"Нет сообщений для тикера {ticker}")
                     continue
                 
-                # Добавляем информацию о тикере и компании
                 ticker_messages['ticker'] = ticker
                 ticker_messages['company_name'] = COMPANY_INFO[ticker]['name']
                 ticker_messages['industry'] = COMPANY_INFO[ticker]['industry']
                 
-                # Помечаем тип новости
                 ticker_messages['news_type'] = ticker_messages.apply(
                     lambda row: 'company_specific' if ticker in row.get('tickers_from_tags', []) 
                     else 'industry', axis=1
@@ -214,14 +191,12 @@ def collect_telegram_news(
                 
                 results[ticker] = ticker_messages
                 
-                # Сохраняем в отдельный файл
                 timestamp = datetime.datetime.now().strftime("%Y%m%d")
                 ticker_filename = f"{ticker}_telegram_news_{timestamp}.csv"
                 ticker_path = os.path.join(output_dir, ticker_filename)
                 ticker_messages.to_csv(ticker_path, index=False, encoding='utf-8')
                 logger.info(f"Сохранено {len(ticker_messages)} сообщений для {ticker} в файл {ticker_path}")
             
-            # Выводим статистику
             logger.info("\nРезультаты:")
             for ticker, ticker_df in results.items():
                 company_messages = ticker_df[ticker_df['news_type'] == 'company_specific']
