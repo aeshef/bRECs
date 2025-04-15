@@ -1,0 +1,88 @@
+=== Сводный отчет по техническому анализу ===
+Дата анализа: 2025-04-15 21:37:45.797310
+
+Тикер: GAZP
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_MACD.png
+--------------------------------------------------
+Тикер: SBER
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_MACD.png
+--------------------------------------------------
+Тикер: LKOH
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_MACD.png
+--------------------------------------------------
+Тикер: GMKN
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_MACD.png
+--------------------------------------------------
+Тикер: ROSN
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_MACD.png
+--------------------------------------------------
+Тикер: TATN
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_MACD.png
+--------------------------------------------------
+Тикер: MTSS
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_MACD.png
+--------------------------------------------------
+Тикер: ALRS
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_MACD.png
+--------------------------------------------------
+Тикер: SNGS
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_MACD.png
+--------------------------------------------------
+Тикер: VTBR
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/VTBR/tech_analysis/VTBR_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/VTBR/tech_analysis/VTBR_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/VTBR/tech_analysis/VTBR_MACD.png
+--------------------------------------------------
+Тикер: NVTK
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_MACD.png
+--------------------------------------------------
+Тикер: MVID
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_MACD.png
+--------------------------------------------------
+Тикер: PHOR
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_MACD.png
+--------------------------------------------------
+Тикер: SIBN
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_MACD.png
+--------------------------------------------------
+Тикер: AFKS
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_MACD.png
+--------------------------------------------------
+Тикер: MAGN
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_MACD.png
+--------------------------------------------------
+Тикер: RUAL
+CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_price_indicators.png
+График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_MACD.png
+--------------------------------------------------
