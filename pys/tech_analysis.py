@@ -3,7 +3,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import datetime
 from typing import List
+import importlib
 
+import technical_indicators
+importlib.reload(technical_indicators)
 from technical_indicators import TechnicalIndicators
 
 class TechAnalysisPipeline:
@@ -53,8 +56,8 @@ class TechAnalysisPipeline:
 
                 plt.figure(figsize=(14, 7))
                 plt.plot(tech_pipeline.df.index, tech_pipeline.df["close"], label="Close", color="blue")
-                plt.plot(tech_pipeline.df.index, tech_pipeline.df["SMA"], label=f"SMA ({tech_pipeline.sma_window})", color="orange")
-                plt.plot(tech_pipeline.df.index, tech_pipeline.df["EMA"], label=f"EMA ({tech_pipeline.sma_window})", color="green")
+                plt.plot(tech_pipeline.df.index, tech_pipeline.df["SMA_20"], label=f"SMA_20 ({tech_pipeline.sma_window})", color="orange")
+                plt.plot(tech_pipeline.df.index, tech_pipeline.df["EMA_20"], label=f"EMA_20 ({tech_pipeline.sma_window})", color="green")
                 plt.fill_between(tech_pipeline.df.index,
                                  tech_pipeline.df["BB_lower"],
                                  tech_pipeline.df["BB_upper"],

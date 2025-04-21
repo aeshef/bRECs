@@ -1,5 +1,5 @@
 === Сводный отчет по техническому анализу ===
-Дата анализа: 2025-04-21 19:29:23.142980
+Дата анализа: 2025-04-22 02:33:51.155768
 
 Тикер: GAZP
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_tech_indicators.csv

@@ -94,30 +94,70 @@ class NewsPreprocessor:
             return pd.DataFrame()
     
     def process_ticker_news(self, ticker, save=True):
-        """
-        Обработка всех файлов новостей для конкретного тикера
-        
-        Args:
-            ticker (str): Тикер компании
-            save (bool): Сохранять ли результат в файл
-            
-        Returns:
-            pd.DataFrame: DataFrame со всеми обработанными новостями для тикера
-        """
+        """Обработка всех файлов новостей для конкретного тикера"""
         ticker_dir = os.path.join(self.base_dir, 'data', 'processed_data', ticker)
         
         if not os.path.exists(ticker_dir):
             print(f"Директория {ticker_dir} не существует")
-            return pd.DataFrame()
+            os.makedirs(ticker_dir, exist_ok=True)
         
-        news_files = glob.glob(os.path.join(ticker_dir, f"{ticker}_news_*.csv"))
+        # Находим все файлы с новостями
+        news_files = []
+        news_files.extend(glob.glob(os.path.join(ticker_dir, f"{ticker}_news_*.csv")))
+        news_files.extend(glob.glob(os.path.join(ticker_dir, f"{ticker}_telegram_*.csv")))
         
         if not news_files:
             print(f"Не найдено файлов новостей для тикера {ticker}")
             return pd.DataFrame()
         
-        processed_dfs = []
+        # Проверяем, есть ли уже обработанный файл
+        all_processed_file = os.path.join(ticker_dir, f"{ticker}_all_news_processed.csv")
         
+        if os.path.exists(all_processed_file):
+            # Находим только новые файлы, которые появились после последнего обновления
+            processed_time = os.path.getmtime(all_processed_file)
+            new_files = [f for f in news_files if os.path.getmtime(f) > processed_time]
+            
+            if not new_files:
+                print(f"Нет новых файлов для {ticker}, используем существующий обработанный файл")
+                return pd.read_csv(all_processed_file)
+            
+            # Загружаем существующие данные
+            existing_df = pd.read_csv(all_processed_file)
+            if 'date' in existing_df.columns:
+                existing_df['date'] = pd.to_datetime(existing_df['date'])
+            
+            # Обрабатываем только новые файлы
+            processed_new = []
+            for file_path in new_files:
+                df = self.process_news_file(file_path, save=False)
+                if not df.empty:
+                    processed_new.append(df)
+            
+            if not processed_new:
+                print(f"Нет новых данных для обработки в {ticker}")
+                return existing_df
+            
+            # Объединяем новые данные с существующими
+            new_combined = pd.concat(processed_new, ignore_index=True)
+            combined_df = pd.concat([existing_df, new_combined], ignore_index=True)
+            
+            # Удаляем дубликаты
+            if 'id' in combined_df.columns:
+                combined_df = combined_df.drop_duplicates(subset='id')
+            else:
+                combined_df = combined_df.drop_duplicates(subset=['date', 'clean_text'])
+            
+            combined_df = combined_df.sort_values('date')
+            
+            if save:
+                combined_df.to_csv(all_processed_file, index=False)
+                print(f"Обновлены данные в {all_processed_file}: всего {len(combined_df)} новостей")
+            
+            return combined_df
+        
+        # Если нет существующего файла, обрабатываем все файлы
+        processed_dfs = []
         for file_path in news_files:
             df = self.process_news_file(file_path, save=False)
             if not df.empty:
@@ -132,9 +172,8 @@ class NewsPreprocessor:
         combined_df = combined_df.sort_values('date')
         
         if save:
-            combined_file_path = os.path.join(ticker_dir, f"{ticker}_all_news_processed.csv")
-            combined_df.to_csv(combined_file_path, index=False)
-            print(f"Объединенные данные сохранены в {combined_file_path}")
+            combined_df.to_csv(all_processed_file, index=False)
+            print(f"Объединенные данные сохранены в {all_processed_file}")
         
         return combined_df
     
