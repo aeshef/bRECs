@@ -1,0 +1,17 @@
+{
+  "params": {
+    "tickers": [
+      "SBER"
+    ],
+    "collect_telegram": true,
+    "telegram_api_id": 28994010,
+    "telegram_api_hash": "6e7a57fdfe1a10b0a3434104b42badf2",
+    "telegram_channel": "cbrstocks",
+    "telegram_limit": 1,
+    "start_date": "2025-04-20",
+    "end_date": "2025-04-21",
+    "use_cached_telegram": true
+  },
+  "target": "NewsPipeline",
+  "method": "run_pipeline"
+}

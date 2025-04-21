@@ -26,6 +26,10 @@ class TechnicalIndicators:
         :return: агрегированный DataFrame с дневными данными
         """
         self.df = pd.read_parquet(self.file_path)
+        if 'min' in self.df.columns and 'max' in self.df.columns:
+            self.df.rename(columns={'min': 'low', 'max': 'high'}, inplace=True)
+
+        print(self.df.columns)
 
         if "date" in self.df.columns:
             self.df["date"] = pd.to_datetime(self.df["date"], errors="coerce")
