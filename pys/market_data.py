@@ -482,3 +482,24 @@ class MarketDataManager:
                     results[ticker] = None
         
         return results
+    
+    def run_pipeline(self, tickers, start_date, end_date):
+        """
+        Запускает пайплайн: настраивает логирование и загружает данные.
+        
+        Параметры:
+            tickers (list): Список тикеров.
+            start_date (str): Начальная дата в формате "YYYY-MM-DD".
+            end_date (str): Конечная дата в формате "YYYY-MM-DD".
+            
+        Возвращает:
+            Данные, полученные через get_data_for_multiple_tickers.
+        """
+    
+        data = self.get_data_for_multiple_tickers(
+            tickers=tickers,
+            start_date=start_date,
+            end_date=end_date
+        )
+        
+        return data
