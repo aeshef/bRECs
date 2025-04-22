@@ -5,9 +5,25 @@ import os
 class NewsIntegration:
     """Класс для интеграции новостных данных с моделями прогнозирования"""
     
-    def __init__(self):
-        """Инициализация интегратора новостей"""
-        pass
+    def __init__(self, file_path, resample_rule="1D", 
+                 sma_window=20, ema_window=20, 
+                 rsi_window=14, bb_window=20,
+                 atr_window=14, stoch_window=14,
+                 adx_window=14, cci_window=20):
+        """
+        Инициализация с настройкой окон для индикаторов
+        """
+        self.file_path = file_path
+        self.resample_rule = resample_rule
+        self.sma_window = sma_window
+        self.ema_window = ema_window
+        self.rsi_window = rsi_window
+        self.bb_window = bb_window
+        self.atr_window = atr_window
+        self.stoch_window = stoch_window
+        self.adx_window = adx_window
+        self.cci_window = cci_window
+        self.df = None
     
     def merge_news_with_price_data(self, news_features_df, price_df, date_column='date'):
         """
@@ -25,30 +41,38 @@ class NewsIntegration:
             print("Один из входных DataFrame пуст")
             return pd.DataFrame()
         
-
-        news_features_df[date_column] = pd.to_datetime(news_features_df[date_column])
+        # Создаем копии для безопасности
+        news_features_df_copy = news_features_df.copy()
+        price_df_copy = price_df.copy()
         
-        if isinstance(price_df.index, pd.DatetimeIndex):
-            price_df_copy = price_df.copy()
+        # Преобразуем даты в единый формат (без часовых поясов)
+        news_features_df_copy[date_column] = pd.to_datetime(news_features_df_copy[date_column]).dt.tz_localize(None)
+        
+        if isinstance(price_df_copy.index, pd.DatetimeIndex):
+            # Если индекс имеет часовой пояс, удаляем его
+            if price_df_copy.index.tz is not None:
+                price_df_copy.index = price_df_copy.index.tz_localize(None)
         else:
-            date_col = date_column if date_column in price_df.columns else price_df.columns[0]
-            price_df_copy = price_df.copy()
-            price_df_copy[date_col] = pd.to_datetime(price_df_copy[date_col])
+            date_col = date_column if date_column in price_df_copy.columns else price_df_copy.columns[0]
+            price_df_copy[date_col] = pd.to_datetime(price_df_copy[date_col]).dt.tz_localize(None)
             price_df_copy.set_index(date_col, inplace=True)
         
-        news_features_index = news_features_df.set_index(date_column)
+        # Теперь обе даты без часовых поясов
+        news_features_index = news_features_df_copy.set_index(date_column)
         
+        # Выполняем объединение
         combined_df = price_df_copy.join(news_features_index, how='left')
         
-        numeric_cols = news_features_df.select_dtypes(include=['number']).columns
+        # Заполняем пропуски
+        numeric_cols = news_features_df_copy.select_dtypes(include=['number']).columns
         for col in numeric_cols:
             if col in combined_df.columns and col != date_column:
                 combined_df[col].fillna(0, inplace=True)
         
-        categorical_cols = news_features_df.select_dtypes(include=['object', 'category']).columns
+        categorical_cols = news_features_df_copy.select_dtypes(include=['object', 'category']).columns
         for col in categorical_cols:
             if col in combined_df.columns and col != date_column:
-                most_common = news_features_df[col].mode()[0]
+                most_common = news_features_df_copy[col].mode()[0] if not news_features_df_copy[col].empty else ""
                 combined_df[col].fillna(most_common, inplace=True)
         
         return combined_df
