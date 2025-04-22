@@ -74,13 +74,21 @@ class NewsPreprocessor:
             
             df['clean_text'] = df['text'].apply(self.clean_text)
             
+            # Удаляем короткие тексты
             df = df[df['clean_text'].str.len() > 20]
+            
+            # Удаляем сообщения с мусорными фразами из телеграм-канала
+            df = df[~df["clean_text"].str.contains("Фокус недели", na=False)]
+            df = df[~df["clean_text"].str.contains("Что было сегодня", na=False)]
+            df = df[~df["clean_text"].str.contains("Что было вчера", na=False)]
+            df = df[~df["clean_text"].str.contains("акция от Шпиона РЦБ", na=False)]
+            df = df[~df["clean_text"].str.contains("Закрытые идеи Мозгового центра Сигналов РЦБ", na=False)]
+            df = df[~df["clean_text"].str.contains("Вопрос от подписчик", na=False)]
             
             if save:
                 dir_path = os.path.dirname(file_path)
                 file_name = os.path.basename(file_path)
                 
-
                 processed_file_name = file_name.replace('.csv', '_processed.csv')
                 processed_file_path = os.path.join(dir_path, processed_file_name)
                 

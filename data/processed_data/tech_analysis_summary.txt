@@ -1,88 +1,581 @@
 === Сводный отчет по техническому анализу ===
-Дата анализа: 2025-04-22 02:33:51.155768
+Дата анализа: 2025-04-22 15:07:46.394744
 
 Тикер: GAZP
+Общее число строк данных: 317
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 317 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 317 записей
+  WMA -> window: 14 | Пропущено: 13 из 317 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 317 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 317 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 317 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 317 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 317 записей
+  OBV -> N/A | Пропущено: 0 из 317 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 317 записей
+  MACD -> default settings | Пропущено: 25 из 317 записей
+  MACD_signal -> default settings | Пропущено: 33 из 317 записей
+  MACD_diff -> default settings | Пропущено: 33 из 317 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 317 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 317 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 317 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 317 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 317 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 317 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 317 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 317 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 317 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 317 записей
 --------------------------------------------------
 Тикер: SBER
+Общее число строк данных: 317
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 317 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 317 записей
+  WMA -> window: 14 | Пропущено: 13 из 317 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 317 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 317 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 317 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 317 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 317 записей
+  OBV -> N/A | Пропущено: 0 из 317 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 317 записей
+  MACD -> default settings | Пропущено: 25 из 317 записей
+  MACD_signal -> default settings | Пропущено: 33 из 317 записей
+  MACD_diff -> default settings | Пропущено: 33 из 317 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 317 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 317 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 317 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 317 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 317 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 317 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 317 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 317 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 317 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 317 записей
 --------------------------------------------------
 Тикер: LKOH
+Общее число строк данных: 317
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 317 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 317 записей
+  WMA -> window: 14 | Пропущено: 13 из 317 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 317 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 317 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 317 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 317 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 317 записей
+  OBV -> N/A | Пропущено: 0 из 317 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 317 записей
+  MACD -> default settings | Пропущено: 25 из 317 записей
+  MACD_signal -> default settings | Пропущено: 33 из 317 записей
+  MACD_diff -> default settings | Пропущено: 33 из 317 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 317 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 317 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 317 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 317 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 317 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 317 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 317 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 317 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 317 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 317 записей
 --------------------------------------------------
 Тикер: GMKN
+Общее число строк данных: 317
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 317 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 317 записей
+  WMA -> window: 14 | Пропущено: 13 из 317 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 317 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 317 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 317 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 317 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 317 записей
+  OBV -> N/A | Пропущено: 0 из 317 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 317 записей
+  MACD -> default settings | Пропущено: 25 из 317 записей
+  MACD_signal -> default settings | Пропущено: 33 из 317 записей
+  MACD_diff -> default settings | Пропущено: 33 из 317 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 317 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 317 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 317 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 317 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 317 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 317 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 317 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 317 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 317 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 317 записей
 --------------------------------------------------
 Тикер: ROSN
+Общее число строк данных: 317
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 317 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 317 записей
+  WMA -> window: 14 | Пропущено: 13 из 317 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 317 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 317 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 317 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 317 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 317 записей
+  OBV -> N/A | Пропущено: 0 из 317 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 317 записей
+  MACD -> default settings | Пропущено: 25 из 317 записей
+  MACD_signal -> default settings | Пропущено: 33 из 317 записей
+  MACD_diff -> default settings | Пропущено: 33 из 317 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 317 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 317 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 317 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 317 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 317 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 317 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 317 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 317 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 317 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 317 записей
 --------------------------------------------------
 Тикер: TATN
+Общее число строк данных: 317
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 317 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 317 записей
+  WMA -> window: 14 | Пропущено: 13 из 317 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 317 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 317 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 317 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 317 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 317 записей
+  OBV -> N/A | Пропущено: 0 из 317 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 317 записей
+  MACD -> default settings | Пропущено: 25 из 317 записей
+  MACD_signal -> default settings | Пропущено: 33 из 317 записей
+  MACD_diff -> default settings | Пропущено: 33 из 317 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 317 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 317 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 317 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 317 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 317 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 317 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 317 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 317 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 317 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 317 записей
 --------------------------------------------------
 Тикер: MTSS
+Общее число строк данных: 317
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 317 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 317 записей
+  WMA -> window: 14 | Пропущено: 13 из 317 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 317 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 317 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 317 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 317 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 317 записей
+  OBV -> N/A | Пропущено: 0 из 317 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 317 записей
+  MACD -> default settings | Пропущено: 25 из 317 записей
+  MACD_signal -> default settings | Пропущено: 33 из 317 записей
+  MACD_diff -> default settings | Пропущено: 33 из 317 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 317 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 317 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 317 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 317 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 317 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 317 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 317 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 317 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 317 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 317 записей
 --------------------------------------------------
 Тикер: ALRS
+Общее число строк данных: 317
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 317 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 317 записей
+  WMA -> window: 14 | Пропущено: 13 из 317 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 317 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 317 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 317 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 317 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 317 записей
+  OBV -> N/A | Пропущено: 0 из 317 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 317 записей
+  MACD -> default settings | Пропущено: 25 из 317 записей
+  MACD_signal -> default settings | Пропущено: 33 из 317 записей
+  MACD_diff -> default settings | Пропущено: 33 из 317 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 317 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 317 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 317 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 317 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 317 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 317 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 317 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 317 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 317 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 317 записей
 --------------------------------------------------
 Тикер: SNGS
+Общее число строк данных: 317
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 317 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 317 записей
+  WMA -> window: 14 | Пропущено: 13 из 317 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 317 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 317 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 317 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 317 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 317 записей
+  OBV -> N/A | Пропущено: 0 из 317 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 317 записей
+  MACD -> default settings | Пропущено: 25 из 317 записей
+  MACD_signal -> default settings | Пропущено: 33 из 317 записей
+  MACD_diff -> default settings | Пропущено: 33 из 317 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 317 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 317 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 317 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 317 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 317 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 317 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 317 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 317 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 317 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 317 записей
 --------------------------------------------------
 Тикер: VTBR
+Общее число строк данных: 308
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/VTBR/tech_analysis/VTBR_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/VTBR/tech_analysis/VTBR_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/VTBR/tech_analysis/VTBR_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 308 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 308 записей
+  WMA -> window: 14 | Пропущено: 13 из 308 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 308 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 308 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 308 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 308 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 308 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 308 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 308 записей
+  OBV -> N/A | Пропущено: 0 из 308 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 308 записей
+  MACD -> default settings | Пропущено: 25 из 308 записей
+  MACD_signal -> default settings | Пропущено: 33 из 308 записей
+  MACD_diff -> default settings | Пропущено: 33 из 308 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 308 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 308 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 308 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 308 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 308 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 308 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 308 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 308 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 308 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 308 записей
 --------------------------------------------------
 Тикер: NVTK
+Общее число строк данных: 314
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 314 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 314 записей
+  WMA -> window: 14 | Пропущено: 13 из 314 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 314 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 314 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 314 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 314 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 314 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 314 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 314 записей
+  OBV -> N/A | Пропущено: 0 из 314 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 314 записей
+  MACD -> default settings | Пропущено: 25 из 314 записей
+  MACD_signal -> default settings | Пропущено: 33 из 314 записей
+  MACD_diff -> default settings | Пропущено: 33 из 314 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 314 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 314 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 314 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 314 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 314 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 314 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 314 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 314 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 314 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 314 записей
 --------------------------------------------------
 Тикер: MVID
+Общее число строк данных: 317
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 317 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 317 записей
+  WMA -> window: 14 | Пропущено: 13 из 317 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 317 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 317 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 317 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 317 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 317 записей
+  OBV -> N/A | Пропущено: 0 из 317 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 317 записей
+  MACD -> default settings | Пропущено: 25 из 317 записей
+  MACD_signal -> default settings | Пропущено: 33 из 317 записей
+  MACD_diff -> default settings | Пропущено: 33 из 317 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 317 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 317 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 317 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 317 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 317 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 317 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 317 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 317 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 317 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 317 записей
 --------------------------------------------------
 Тикер: PHOR
+Общее число строк данных: 317
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 317 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 317 записей
+  WMA -> window: 14 | Пропущено: 13 из 317 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 317 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 317 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 317 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 317 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 317 записей
+  OBV -> N/A | Пропущено: 0 из 317 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 317 записей
+  MACD -> default settings | Пропущено: 25 из 317 записей
+  MACD_signal -> default settings | Пропущено: 33 из 317 записей
+  MACD_diff -> default settings | Пропущено: 33 из 317 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 317 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 317 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 317 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 317 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 317 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 317 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 317 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 317 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 317 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 317 записей
 --------------------------------------------------
 Тикер: SIBN
+Общее число строк данных: 313
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 313 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 313 записей
+  WMA -> window: 14 | Пропущено: 13 из 313 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 313 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 313 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 313 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 313 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 313 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 313 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 313 записей
+  OBV -> N/A | Пропущено: 0 из 313 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 313 записей
+  MACD -> default settings | Пропущено: 25 из 313 записей
+  MACD_signal -> default settings | Пропущено: 33 из 313 записей
+  MACD_diff -> default settings | Пропущено: 33 из 313 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 313 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 313 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 313 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 313 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 313 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 313 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 313 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 313 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 313 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 313 записей
 --------------------------------------------------
 Тикер: AFKS
+Общее число строк данных: 317
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 317 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 317 записей
+  WMA -> window: 14 | Пропущено: 13 из 317 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 317 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 317 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 317 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 317 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 317 записей
+  OBV -> N/A | Пропущено: 0 из 317 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 317 записей
+  MACD -> default settings | Пропущено: 25 из 317 записей
+  MACD_signal -> default settings | Пропущено: 33 из 317 записей
+  MACD_diff -> default settings | Пропущено: 33 из 317 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 317 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 317 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 317 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 317 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 317 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 317 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 317 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 317 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 317 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 317 записей
 --------------------------------------------------
 Тикер: MAGN
+Общее число строк данных: 315
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 315 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 315 записей
+  WMA -> window: 14 | Пропущено: 13 из 315 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 315 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 315 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 315 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 315 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 315 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 315 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 315 записей
+  OBV -> N/A | Пропущено: 0 из 315 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 315 записей
+  MACD -> default settings | Пропущено: 25 из 315 записей
+  MACD_signal -> default settings | Пропущено: 33 из 315 записей
+  MACD_diff -> default settings | Пропущено: 33 из 315 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 315 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 315 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 315 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 315 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 315 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 315 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 315 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 315 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 315 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 315 записей
 --------------------------------------------------
 Тикер: RUAL
+Общее число строк данных: 317
+sma_window: 20, rsi_window: 14
 CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_tech_indicators.csv
 График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_price_indicators.png
 График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -> window: sma_window | Пропущено: 19 из 317 записей
+  EMA_20 -> window: sma_window | Пропущено: 0 из 317 записей
+  WMA -> window: 14 | Пропущено: 13 из 317 записей
+  RSI_14 -> window: rsi_window | Пропущено: 13 из 317 записей
+  Stoch_%K -> window: 14 | Пропущено: 13 из 317 записей
+  Stoch_%D -> signal period: 14 | Пропущено: 15 из 317 записей
+  BB_upper -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  BB_mid -> BB window: sma_window | Пропущено: 19 из 317 записей
+  BB_lower -> BB window: sma_window, std: 2 | Пропущено: 19 из 317 записей
+  ATR_14 -> window: 14 | Пропущено: 0 из 317 записей
+  OBV -> N/A | Пропущено: 0 из 317 записей
+  CMF_20 -> window: 20 | Пропущено: 19 из 317 записей
+  MACD -> default settings | Пропущено: 25 из 317 записей
+  MACD_signal -> default settings | Пропущено: 33 из 317 записей
+  MACD_diff -> default settings | Пропущено: 33 из 317 записей
+  ADX_14 -> window: 14 | Пропущено: 0 из 317 записей
+  Vortex_14+ -> window: 14 | Пропущено: 14 из 317 записей
+  Vortex_14- -> window: 14 | Пропущено: 14 из 317 записей
+  CCI_20 -> window: 20 | Пропущено: 19 из 317 записей
+  Williams_%R_14 -> window: 14 | Пропущено: 13 из 317 записей
+  Ichimoku_Conversion -> params: (9,26) | Пропущено: 8 из 317 записей
+  Ichimoku_Base -> params: (9,26) | Пропущено: 25 из 317 записей
+  KAMA_10 -> window: 10 | Пропущено: 9 из 317 записей
+  ROC_10 -> window: 10 | Пропущено: 10 из 317 записей
+  Ultimate_Osc -> default settings | Пропущено: 28 из 317 записей
 --------------------------------------------------

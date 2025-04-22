@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import os
+import logging
 
 class DataIntegrator:
     def __init__(self, base_path, nan_fill_method='median'):
@@ -11,6 +12,16 @@ class DataIntegrator:
         """
         self.base_path = base_path
         self.nan_fill_method = nan_fill_method
+        self.logger = self._setup_logger()
+    
+    def _setup_logger(self):
+        """Настройка логгера"""
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S'
+        )
+        return logging.getLogger('DataIntegrator')
 
 
     def load_ticker_data(self, ticker):
@@ -27,29 +38,27 @@ class DataIntegrator:
         sentiment_path = f'{self.base_path}/{ticker}/news_analysis/{ticker}_sentiment_features.csv'
         tech_path = f'{self.base_path}/{ticker}/tech_analysis/{ticker}_tech_indicators.csv'
 
-        # Проверяем существование файлов
         files_exist = True
         if not os.path.exists(ml_path):
-            print(f"Файл ML-признаков не найден: {ml_path}")
+            self.logger.warning(f"Файл ML-признаков не найден: {ml_path}")
             files_exist = False
         if not os.path.exists(sentiment_path):
-            print(f"Файл с настроениями не найден: {sentiment_path}")
+            self.logger.warning(f"Файл с настроениями не найден: {sentiment_path}")
             files_exist = False
         if not os.path.exists(tech_path):
-            print(f"Файл с техническими индикаторами не найден: {tech_path}")
+            self.logger.warning(f"Файл с техническими индикаторами не найден: {tech_path}")
             files_exist = False
-        
+
         if not files_exist:
-            print(f"Пропускаем тикер {ticker} из-за отсутствия файлов")
+            self.logger.info(f"Пропускаем тикер {ticker} из-за отсутствия необходимых файлов")
             return pd.DataFrame()
 
-        # Загружаем данные
         try:
             ml_features = pd.read_csv(ml_path)
             sentiment_features = pd.read_csv(sentiment_path)
             base_with_tech = pd.read_csv(tech_path)
             
-            # Убедимся, что формат даты одинаковый
+            # Приводим столбец date к нужному формату
             ml_features['date'] = pd.to_datetime(ml_features['date']).dt.date
             sentiment_features['date'] = pd.to_datetime(sentiment_features['date']).dt.date
             base_with_tech['date'] = pd.to_datetime(base_with_tech['date']).dt.date
@@ -59,27 +68,23 @@ class DataIntegrator:
             df = pd.merge(df1, ml_features, on='date', how='left', suffixes=('', '_ml'))
             
             # Очистка дублирующихся колонок
-            # Создаем список колонок для удаления - все с суффиксами
             cols_to_drop = [col for col in df.columns if col.endswith(('_sentiment', '_ml'))]
             
-            # Также проверим и удалим дублирующиеся колонки без явных суффиксов
             base_cols = ['date', 'open', 'close', 'high', 'low', 'volume']
             for col in base_cols:
                 duplicates = [c for c in df.columns if c != col and c.startswith(col + '_')]
                 cols_to_drop.extend(duplicates)
             
-            # Удаляем дубликаты
             df = df.drop(columns=cols_to_drop, errors='ignore')
-            
+            self.logger.info(f"Данные для {ticker} загружены за период: {df['date'].min()} - {df['date'].max()}")
+
             # Добавляем тикер
             df['ticker'] = ticker
-            
+
             return df
         
         except Exception as e:
-            print(f"Ошибка при загрузке данных для {ticker}: {e}")
-            import traceback
-            traceback.print_exc()
+            self.logger.error(f"Ошибка при загрузке данных для {ticker}: {e}")
             return pd.DataFrame()
         
     def _fill_nan_in_columns(self, df):
@@ -109,7 +114,6 @@ class DataIntegrator:
                     else:
                         fill_value = 0
                     
-                    # Если после всего fill_value все еще NaN (например, если все значения NaN)
                     if pd.isna(fill_value):
                         fill_value = 0
                         
@@ -120,50 +124,68 @@ class DataIntegrator:
     def load_multiple_tickers(self, tickers):
         """
         Загружает и объединяет данные для списка тикеров.
-        
+
         Параметры:
             tickers - список тикеров (например, ["SBER", "GAZP", ...])
-        
+
         Возвращает:
             overall_df - совокупный DataFrame, содержащий данные для всех тикеров с колонкой 'ticker'
         """
         overall_df = pd.DataFrame()
         
         for ticker in tickers:
-            print(f"Обработка тикера {ticker}...")
+            self.logger.info(f"Обработка тикера {ticker}...")
             df = self.load_ticker_data(ticker)
             
             if not df.empty:
-                # Проверяем наличие пропущенных значений
                 null_count = df.isnull().sum().sum()
                 if null_count > 0:
-                    print(f"  - Обнаружено {null_count} пропущенных значений для {ticker}")
+                    self.logger.info(f"  - Обнаружено {null_count} пропущенных значений для {ticker}")
                     df = self._fill_nan_in_columns(df)
-                    print(f"  - Пропущенные значения заполнены методом {self.nan_fill_method}")
+                    self.logger.info(f"  - Пропущенные значения заполнены методом {self.nan_fill_method}")
                 
                 overall_df = pd.concat([overall_df, df], ignore_index=True)
             else:
-                print(f"  - Пропуск тикера {ticker}: нет данных")
+                self.logger.info(f"  - Пропуск тикера {ticker}: нет данных")
         
         if not overall_df.empty:
-            # Преобразуем дату в формат datetime для сортировки
             overall_df['date'] = pd.to_datetime(overall_df['date'])
             overall_df.sort_values(['ticker', 'date'], inplace=True)
             
-            # Проверка на оставшиеся NaN
             remaining_nulls = overall_df.isnull().sum().sum()
             if remaining_nulls > 0:
-                print(f"Внимание: в итоговом датасете осталось {remaining_nulls} пропущенных значений")
-                
-                # Вывод колонок с пропущенными значениями
+                self.logger.warning(f"Внимание: в итоговом датасете осталось {remaining_nulls} пропущенных значений")
                 null_columns = overall_df.columns[overall_df.isnull().any()]
-                print(f"Колонки с пропущенными значениями: {null_columns.tolist()}")
-                
-                # Заполняем оставшиеся пропуски нулями
+                self.logger.warning(f"Колонки с пропущенными значениями: {null_columns.tolist()}")
                 overall_df = overall_df.fillna(0)
-                print("Все оставшиеся пропуски заполнены нулями")
+                self.logger.info("Все оставшиеся пропуски заполнены нулями")
         
         return overall_df
+    
+    def run_pipeline(self, tickers, output_path):
+        """
+        Запускает полный процесс загрузки, объединения данных и сохранения результата.
+
+        Параметры:
+            tickers (list): Список тикеров для обработки.
+            output_path (str): Путь для сохранения объединенного CSV-файла.
+
+        Возвращает:
+            pd.DataFrame: Объединенный датасет или пустой DataFrame в случае ошибки.
+        """
+        # Загружаем и объединяем данные
+        combined_data = self.load_multiple_tickers(tickers=tickers)
         
+        if not combined_data.empty:
+            # Создаем директорию для сохранения, если ее нет
+            output_dir = os.path.dirname(output_path)
+            if not os.path.exists(output_dir):
+                os.makedirs(output_dir, exist_ok=True)
+            
+            # Сохраняем данные
+            combined_data.to_csv(output_path, index=False)
+            self.logger.info(f"Данные успешно объединены и сохранены в {output_path}")
+            self.logger.info(f"Форма объединенного датасета: {combined_data.shape}")
+            self.logger.info(f"Количество уникальных тикеров: {combined_data['ticker'].nunique()}")
         
         

@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import ta
+import logging
 
 class TechnicalIndicators:
     def __init__(self, file_path, resample_rule="1D", sma_window=20, rsi_window=14):
@@ -16,6 +17,19 @@ class TechnicalIndicators:
         self.sma_window = sma_window
         self.rsi_window = rsi_window
         self.df = None
+        self.logger = self._setup_logger()
+
+    def _setup_logger(self):
+        """Настройка логгера"""
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S'
+        )
+        return logging.getLogger('TechPipeline')
+    
+        # self.logger.warning("API данные не предоставлены. Пропускаем сбор данных Telegram.")
+        # self.logger.info(f"Получена сущность канала: {entity.title}")
 
     def load_data(self):
         """
@@ -25,6 +39,7 @@ class TechnicalIndicators:
         и либо 'date', либо 'timestamp' (если timestamp в миллисекундах).
         :return: агрегированный DataFrame с дневными данными
         """
+        self.logger.info("Начало загрузки данных.")
         self.df = pd.read_parquet(self.file_path)
         if 'min' in self.df.columns and 'max' in self.df.columns:
             self.df.rename(columns={'min': 'low', 'max': 'high'}, inplace=True)
@@ -65,6 +80,8 @@ class TechnicalIndicators:
         """
         if self.df is None:
             raise ValueError("Данные не загружены. Сначала вызовите load_data().")
+        
+        self.logger.info("Начало расчёта технических индикаторов.")
         
         # Трендовые индикаторы
         self.df['SMA_20'] = self.df['close'].rolling(20).mean()
@@ -120,6 +137,8 @@ class TechnicalIndicators:
         if self.df is None or "SMA" not in self.df.columns:
             raise ValueError("Сначала загрузите данные и рассчитайте индикаторы (load_data() и calculate_indicators()).")
         
+        self.logger.info("Построение графика с ценами")
+
         plt.figure(figsize=(14, 7))
         plt.plot(self.df.index, self.df["close"], label="Close", color="blue")
         plt.plot(self.df.index, self.df["SMA_20"], label=f"SMA_20 ({self.sma_window})", color="orange")
@@ -139,6 +158,8 @@ class TechnicalIndicators:
         """
         if self.df is None or "MACD" not in self.df.columns:
             raise ValueError("Сначала загрузите данные и рассчитайте индикаторы (load_data() и calculate_indicators()).")
+        
+        self.logger.info("Построение MACD графика.")
         
         plt.figure(figsize=(14, 4))
         plt.plot(self.df.index, self.df["MACD"], label="MACD", color="blue")

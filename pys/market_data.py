@@ -102,45 +102,56 @@ class DataStorage:
         
         return combined_df
     
-    def save_processed_data(self, ticker, data, timeframe="1min"):
-        """Сохранить обработанные данные в Parquet формате"""
+    def save_processed_data(self, ticker, new_data):
+        """
+        Сохранить обработанные данные в один паркет-файл.
+        Если файл уже существует, объединяем с новыми данными, удаляем дубликаты и перезаписываем
+        :param ticker: Тикер инструмента
+        :param new_data: DataFrame с новыми данными
+        :return: Путь к сохранённому файлу
+        """
         ticker_dir = self.get_ticker_processed_path(ticker)
-        
-        if len(data) > 0:
-            start_date = data['date'].min().strftime('%Y-%m-%d')
-            end_date = data['date'].max().strftime('%Y-%m-%d')
-            file_name = f"{ticker}_{start_date}_{end_date}.parquet"
-        else:
-            file_name = f"{ticker}_empty.parquet"
-        
+        file_name = f"{ticker}.parquet"  # фиксированное имя файла для каждого тикера
         file_path = os.path.join(ticker_dir, file_name)
         
-        data.to_parquet(file_path, index=False)
+        # Загружаем из уже существующего файла данные (если файл есть)
+        if os.path.exists(file_path):
+            try:
+                existing_data = pd.read_parquet(file_path)
+            except Exception as e:
+                print(f"Error reading existing parquet for {ticker}: {e}")
+                existing_data = None
+        else:
+            existing_data = None
         
+        # Если уже есть данные, объединяем
+        if existing_data is not None and not existing_data.empty:
+            combined_data = pd.concat([existing_data, new_data], ignore_index=True)
+            combined_data.drop_duplicates(subset=['date'], inplace=True)
+            combined_data.sort_values(by='date', inplace=True)
+            combined_data.reset_index(drop=True, inplace=True)
+        else:
+            combined_data = new_data.copy()
+        
+        combined_data.to_parquet(file_path, index=False)
         return file_path
+
     
     def load_processed_data(self, ticker):
-        """Загрузить обработанные данные для тикера"""
+        """Загрузить обработанные данные для тикера из фиксированного файла"""
         ticker_dir = self.get_ticker_processed_path(ticker)
+        file_name = f"{ticker}.parquet"
+        file_path = os.path.join(ticker_dir, file_name)
         
-        all_files = []
-        for file in os.listdir(ticker_dir):
-            if file.endswith(".parquet"):
-                all_files.append(os.path.join(ticker_dir, file))
-        
-        if not all_files:
-            return None
-        
-        dfs = [pd.read_parquet(file) for file in all_files]
-        if not dfs:
-            return None
-        
-        combined_df = pd.concat(dfs, ignore_index=True)
-        combined_df.drop_duplicates(subset=['date'], inplace=True)
-        combined_df.sort_values(by='date', inplace=True)
-        combined_df.reset_index(drop=True, inplace=True)
-        
-        return combined_df
+        if os.path.exists(file_path):
+            try:
+                data = pd.read_parquet(file_path)
+                return data
+            except Exception as e:
+                print(f"Error reading processed data for {ticker}: {e}")
+                return None
+        return None
+
     
     def get_missing_date_ranges(self, ticker, start_date, end_date):
         """
@@ -149,7 +160,6 @@ class DataStorage:
         :return: Список кортежей (start_date, end_date) для отсутствующих периодов
         """
         existing_data = self.load_processed_data(ticker)
-        
         start_date = pd.to_datetime(start_date)
         end_date = pd.to_datetime(end_date)
         
@@ -161,10 +171,8 @@ class DataStorage:
         max_date = existing_dates.max()
         
         missing_ranges = []
-        
         if start_date < min_date:
             missing_ranges.append((start_date, min_date))
-        
         if end_date > max_date:
             missing_ranges.append((max_date, end_date))
         

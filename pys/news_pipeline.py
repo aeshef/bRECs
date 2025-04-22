@@ -25,6 +25,96 @@ from news_integration import NewsIntegration
 import warnings
 warnings.filterwarnings('ignore')
 
+def merge_with_existing(new_df: pd.DataFrame, file_path: str, unique_columns: list):
+    """
+    Загружает существующий CSV, объединяет с new_df и удаляет дубликаты на основе уникальных колонок.
+    Если файла нет, возвращает new_df.
+    """
+    if os.path.exists(file_path):
+        try:
+            existing_df = pd.read_csv(file_path, parse_dates=['date'], encoding='utf-8')
+            combined_df = pd.concat([existing_df, new_df], ignore_index=True)
+            combined_df.drop_duplicates(subset=unique_columns, keep='last', inplace=True)
+            logging.info(f"Объединено данных из {file_path}: {len(combined_df)} записей после объединения")
+            return combined_df
+        except Exception as e:
+            logging.error(f"Ошибка при объединении данных из {file_path}: {e}")
+            return new_df
+    else:
+        return new_df
+
+
+def save_sentiment_data(sentiment_analyzer, news_df: pd.DataFrame, sentiment_file: str):
+    """
+    Производит сентимент-анализ новостей с объединением новых и исторических данных.
+    Если файл уже существует, выбираются только новые записи, затем объединяются и сохраняются.
+    """
+    if os.path.exists(sentiment_file):
+        logging.info(f"Существующий файл сентимента найден: {sentiment_file}")
+        try:
+            existing_sentiment = pd.read_csv(sentiment_file, parse_dates=['date'], encoding='utf-8')
+        except Exception as e:
+            logging.error(f"Ошибка при загрузке файла {sentiment_file}: {e}")
+            existing_sentiment = pd.DataFrame()
+
+        # Выборка новых новостей, которых ещё нет в исторических данных.
+        if 'id' in existing_sentiment.columns and 'id' in news_df.columns:
+            processed_ids = set(existing_sentiment['id'])
+            news_to_process = news_df[~news_df['id'].isin(processed_ids)]
+        else:
+            # Генерируем уникальный ключ, если отсутствует идентификатор.
+            existing_sentiment['key'] = existing_sentiment.apply(
+                lambda row: f"{str(row.get('date', ''))}_{row.get('clean_text', '')[:50]}",
+                axis=1
+            )
+            news_df['key'] = news_df.apply(
+                lambda row: f"{str(row.get('date', ''))}_{row.get('clean_text', '')[:50]}",
+                axis=1
+            )
+            existing_keys = set(existing_sentiment['key'])
+            news_to_process = news_df[~news_df['key'].isin(existing_keys)]
+
+        logging.info(f"Найдено {len(news_to_process)} новых новостей для сентимент-анализа")
+        sentiment_new = sentiment_analyzer.analyze_ticker_news(news_to_process, save_path=None)
+        combined_sentiment = pd.concat([existing_sentiment, sentiment_new], ignore_index=True)
+        if 'id' in combined_sentiment.columns:
+            combined_sentiment.drop_duplicates(subset='id', keep='last', inplace=True)
+        else:
+            combined_sentiment.drop_duplicates(subset=['date', 'clean_text'], keep='last', inplace=True)
+    else:
+        combined_sentiment = sentiment_analyzer.analyze_ticker_news(news_df, save_path=None)
+
+    combined_sentiment.to_csv(sentiment_file, index=False, encoding='utf-8')
+    logging.info(f"Сохранено {len(combined_sentiment)} новостей с сентиментом в {sentiment_file}")
+    return combined_sentiment
+
+
+def update_daily_sentiment(sentiment_analyzer, combined_sentiment: pd.DataFrame, output_dir: str, ticker: str):
+    """
+    Создает или обновляет CSV-файл с ежедневным сентиментом путем объединения новых и исторических данных.
+    """
+    daily_sentiment_new = sentiment_analyzer.create_daily_sentiment_series(combined_sentiment)
+    daily_sentiment_path = os.path.join(output_dir, f"{ticker}_daily_sentiment.csv")
+    daily_sentiment = merge_with_existing(daily_sentiment_new, daily_sentiment_path, unique_columns=['date'])
+    daily_sentiment.to_csv(daily_sentiment_path, index=False, encoding='utf-8')
+    logging.info(f"Ежедневный сентимент обновлен и сохранен в {daily_sentiment_path}")
+    return daily_sentiment
+
+
+def save_events_data(event_detector, combined_sentiment: pd.DataFrame, events_file: str):
+    """
+    Обнаруживает и оценивает события на основе сентиментированных новостей, затем объединяет
+    их с историческими данными и сохраняет результат.
+    """
+    news_with_events_new = event_detector.detect_events(combined_sentiment)
+    news_with_events_new = event_detector.assess_event_impact(news_with_events_new)
+    
+    unique_columns = ['id'] if 'id' in news_with_events_new.columns else ['date', 'clean_text']
+    news_with_events = merge_with_existing(news_with_events_new, events_file, unique_columns=unique_columns)
+    news_with_events.to_csv(events_file, index=False, encoding='utf-8')
+    logging.info(f"Данные по событиям объединены и сохранены в {events_file}")
+    return news_with_events
+
 class NewsPipeline:
     """Единый пайплайн для сбора и анализа новостей"""
     
@@ -49,8 +139,6 @@ class NewsPipeline:
             
         os.makedirs(output_dir, exist_ok=True)
 
-        
-        # Компании и ключевые слова для поиска
         COMPANY_INFO = {
             'SBER': {'name': 'Сбербанк', 'industry': 'банк', 
                     'keywords': ['сбербанк', 'греф', 'сбер', 'банковские услуги']},
@@ -286,15 +374,15 @@ class NewsPipeline:
         return results
 
     def _process_ticker(
-    self, 
-    ticker: str,
-    base_dir: str,
-    preprocessor: NewsPreprocessor,
-    sentiment_analyzer: SentimentAnalyzer,
-    event_detector: EventDetector,
-    feature_extractor: NewsFeatureExtractor,
-    integrator: NewsIntegration
-) -> Dict[str, Any]:
+        self, 
+        ticker: str,
+        base_dir: str,
+        preprocessor: NewsPreprocessor,
+        sentiment_analyzer: SentimentAnalyzer,
+        event_detector: EventDetector,
+        feature_extractor: NewsFeatureExtractor,
+        integrator: NewsIntegration
+    ) -> Dict[str, Any]:
         """Обработка одного тикера целиком"""
         results = {}
         output_dir = os.path.join(base_dir, 'data', 'processed_data', ticker, 'news_analysis')

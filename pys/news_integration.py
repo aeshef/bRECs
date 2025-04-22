@@ -5,7 +5,7 @@ import os
 class NewsIntegration:
     """Класс для интеграции новостных данных с моделями прогнозирования"""
     
-    def __init__(self, file_path, resample_rule="1D", 
+    def __init__(self, resample_rule="1D", 
                  sma_window=20, ema_window=20, 
                  rsi_window=14, bb_window=20,
                  atr_window=14, stoch_window=14,
@@ -13,7 +13,6 @@ class NewsIntegration:
         """
         Инициализация с настройкой окон для индикаторов
         """
-        self.file_path = file_path
         self.resample_rule = resample_rule
         self.sma_window = sma_window
         self.ema_window = ema_window

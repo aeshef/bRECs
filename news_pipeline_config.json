@@ -25,7 +25,7 @@
     "telegram_channel": "cbrstocks",
     "telegram_limit": 10000,
     "start_date": "2024-06-01",
-    "end_date": "2025-04-21",
+    "end_date": "2025-04-15",
     "use_cached_telegram": true
   },
   "target": "NewsPipeline",
