@@ -1,0 +1,18 @@
+2025-04-23 03:04:48,830 - portfolio_optimizer - INFO - Запуск пайплайна оптимизации портфеля
+2025-04-23 03:04:48,833 - portfolio_optimizer - INFO - Использован предоставленный DataFrame с 55 строками
+2025-04-23 03:04:48,834 - portfolio_optimizer - INFO - Подготовка данных доходностей для оптимизации
+2025-04-23 03:04:48,835 - portfolio_optimizer - ERROR - Ошибка при подготовке доходностей: 'str' object has no attribute 'columns'
+2025-04-23 03:04:48,836 - portfolio_optimizer - ERROR - Не удалось рассчитать доходности
+2025-04-23 03:07:51,378 - portfolio_optimizer - INFO - Запуск пайплайна оптимизации портфеля
+2025-04-23 03:07:51,381 - portfolio_optimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-23 03:07:51,590 - portfolio_optimizer - INFO - Загружено 7471 строк данных
+2025-04-23 03:07:51,591 - portfolio_optimizer - INFO - Подготовка данных доходностей для оптимизации
+2025-04-23 03:07:51,598 - portfolio_optimizer - INFO - Отфильтровано 7030 строк по shortlist и сигналам
+2025-04-23 03:07:51,619 - portfolio_optimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-23 03:07:51,620 - portfolio_optimizer - INFO - Запуск оптимизации портфеля для 16 активов
+2025-04-23 03:07:51,644 - portfolio_optimizer - INFO - Оптимизация успешно завершена
+2025-04-23 03:07:51,644 - portfolio_optimizer - INFO - Расчет итогового портфеля с долей безрисковых активов 40.0%
+2025-04-23 03:07:51,646 - portfolio_optimizer - INFO - Ожидаемая доходность портфеля: 10.38%, волатильность: 23.48%, Шарп: -0.64
+2025-04-23 03:07:51,646 - portfolio_optimizer - INFO - Создание визуализации портфеля
+2025-04-23 03:07:51,930 - portfolio_optimizer - INFO - График весов сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/portfolio_weights.png
+2025-04-23 03:07:51,931 - portfolio_optimizer - INFO - Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio

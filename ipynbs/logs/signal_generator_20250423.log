@@ -1,0 +1,246 @@
+2025-04-23 03:03:42,081 - signal_generator - INFO - Запуск пайплайна генерации торговых сигналов
+2025-04-23 03:03:42,083 - signal_generator - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-23 03:03:42,254 - signal_generator - INFO - Загружено 7471 строк данных
+2025-04-23 03:03:42,255 - signal_generator - INFO - Расчет композитного скора
+2025-04-23 03:03:42,260 - signal_generator - INFO - Технический скор рассчитан на основе 6 индикаторов
+2025-04-23 03:03:42,263 - signal_generator - INFO - Сентимент-скор рассчитан на основе 5 индикаторов
+2025-04-23 03:03:42,264 - signal_generator - INFO - Расчет фундаментального скора
+2025-04-23 03:03:42,265 - signal_generator - INFO - Загрузка фундаментальных данных для 16 тикеров
+2025-04-23 03:03:42,267 - signal_generator - INFO - Загружены данные AFKS за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:03:42,268 - signal_generator - INFO - Загружены данные AFKS за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:03:42,270 - signal_generator - INFO - Загружены данные ALRS за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:03:42,271 - signal_generator - INFO - Загружены данные ALRS за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:03:42,272 - signal_generator - INFO - Загружены данные GAZP за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:03:42,273 - signal_generator - INFO - Загружены данные GAZP за 2024: 0 показателей, 37 отсутствует
+2025-04-23 03:03:42,275 - signal_generator - INFO - Загружены данные GMKN за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:03:42,276 - signal_generator - INFO - Загружены данные GMKN за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:03:42,278 - signal_generator - INFO - Загружены данные LKOH за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:03:42,280 - signal_generator - INFO - Загружены данные LKOH за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:03:42,281 - signal_generator - INFO - Загружены данные MAGN за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:03:42,283 - signal_generator - INFO - Загружены данные MAGN за 2024: 34 показателей, 3 отсутствует
+2025-04-23 03:03:42,284 - signal_generator - INFO - Загружены данные MTSS за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:03:42,285 - signal_generator - INFO - Загружены данные MTSS за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:03:42,287 - signal_generator - INFO - Загружены данные MVID за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:03:42,288 - signal_generator - INFO - Загружены данные MVID за 2024: 0 показателей, 37 отсутствует
+2025-04-23 03:03:42,289 - signal_generator - INFO - Загружены данные NVTK за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:03:42,291 - signal_generator - INFO - Загружены данные NVTK за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:03:42,292 - signal_generator - INFO - Загружены данные PHOR за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:03:42,293 - signal_generator - INFO - Загружены данные PHOR за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:03:42,295 - signal_generator - INFO - Загружены данные ROSN за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:03:42,296 - signal_generator - INFO - Загружены данные ROSN за 2024: 35 показателей, 2 отсутствует
+2025-04-23 03:03:42,299 - signal_generator - INFO - Загружены данные RUAL за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:03:42,300 - signal_generator - INFO - Загружены данные RUAL за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:03:42,301 - signal_generator - INFO - Загружены данные SBER за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:03:42,302 - signal_generator - INFO - Загружены данные SBER за 2024: 13 показателей, 24 отсутствует
+2025-04-23 03:03:42,304 - signal_generator - INFO - Загружены данные SIBN за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:03:42,305 - signal_generator - INFO - Загружены данные SIBN за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:03:42,306 - signal_generator - INFO - Загружены данные SNGS за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:03:42,307 - signal_generator - INFO - Загружены данные SNGS за 2024: 0 показателей, 37 отсутствует
+2025-04-23 03:03:42,310 - signal_generator - INFO - Загружены данные TATN за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:03:42,312 - signal_generator - INFO - Загружены данные TATN за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:03:42,345 - signal_generator - INFO - Доступность фундаментальных показателей:
+2025-04-23 03:03:42,345 - signal_generator - INFO -   2023 - EPS, руб: 100.0% компаний
+2025-04-23 03:03:42,346 - signal_generator - INFO -   2023 - EV, млрд руб: 100.0% компаний
+2025-04-23 03:03:42,347 - signal_generator - INFO -   2023 - P/E: 100.0% компаний
+2025-04-23 03:03:42,347 - signal_generator - INFO -   2023 - ROA, %: 100.0% компаний
+2025-04-23 03:03:42,352 - signal_generator - INFO -   2023 - ROE, %: 100.0% компаний
+2025-04-23 03:03:42,409 - signal_generator - INFO -   2023 - Див доход, ао, %: 100.0% компаний
+2025-04-23 03:03:42,411 - signal_generator - INFO -   2023 - Дивиденды/прибыль, %: 100.0% компаний
+2025-04-23 03:03:42,411 - signal_generator - INFO -   2023 - Капитализация, млрд руб: 100.0% компаний
+2025-04-23 03:03:42,412 - signal_generator - INFO -   2023 - Опер. расходы, млрд руб: 100.0% компаний
+2025-04-23 03:03:42,412 - signal_generator - INFO -   2023 - Цена акции ао, руб: 100.0% компаний
+2025-04-23 03:03:42,413 - signal_generator - INFO -   2023 - Число акций ао, млн: 100.0% компаний
+2025-04-23 03:03:42,414 - signal_generator - INFO -   2023 - Чистая прибыль, млрд руб: 100.0% компаний
+2025-04-23 03:03:42,414 - signal_generator - INFO -   2023 - Чистый долг, млрд руб: 100.0% компаний
+2025-04-23 03:03:42,417 - signal_generator - INFO -   2024 - BV/акцию, руб: 75.0% компаний
+2025-04-23 03:03:42,418 - signal_generator - INFO -   2024 - CAPEX, млрд руб: 75.0% компаний
+2025-04-23 03:03:42,419 - signal_generator - INFO -   2024 - CAPEX/Выручка, %: 75.0% компаний
+2025-04-23 03:03:42,422 - signal_generator - INFO -   2024 - EBITDA, млрд руб: 75.0% компаний
+2025-04-23 03:03:42,422 - signal_generator - INFO -   2024 - EPS, руб: 81.2% компаний
+2025-04-23 03:03:42,423 - signal_generator - INFO -   2024 - EV, млрд руб: 81.2% компаний
+2025-04-23 03:03:42,423 - signal_generator - INFO -   2024 - EV/EBITDA: 75.0% компаний
+2025-04-23 03:03:42,424 - signal_generator - INFO -   2024 - FCF, млрд руб: 75.0% компаний
+2025-04-23 03:03:42,424 - signal_generator - INFO -   2024 - FCF/акцию, руб: 75.0% компаний
+2025-04-23 03:03:42,425 - signal_generator - INFO -   2024 - P/BV: 75.0% компаний
+2025-04-23 03:03:42,426 - signal_generator - INFO -   2024 - P/E: 81.2% компаний
+2025-04-23 03:03:42,426 - signal_generator - INFO -   2024 - P/FCF: 75.0% компаний
+2025-04-23 03:03:42,427 - signal_generator - INFO -   2024 - P/S: 75.0% компаний
+2025-04-23 03:03:42,427 - signal_generator - INFO -   2024 - R&D/CAPEX, %: 75.0% компаний
+2025-04-23 03:03:42,428 - signal_generator - INFO -   2024 - ROA, %: 81.2% компаний
+2025-04-23 03:03:42,428 - signal_generator - INFO -   2024 - ROE, %: 81.2% компаний
+2025-04-23 03:03:42,429 - signal_generator - INFO -   2024 - Активы, млрд руб: 75.0% компаний
+2025-04-23 03:03:42,430 - signal_generator - INFO -   2024 - Амортизация, млрд руб: 68.8% компаний
+2025-04-23 03:03:42,430 - signal_generator - INFO -   2024 - Баланс стоимость, млрд руб: 75.0% компаний
+2025-04-23 03:03:42,430 - signal_generator - INFO -   2024 - Выручка, млрд руб: 75.0% компаний
+2025-04-23 03:03:42,431 - signal_generator - INFO -   2024 - Див доход, ао, %: 81.2% компаний
+2025-04-23 03:03:42,431 - signal_generator - INFO -   2024 - Дивиденды/прибыль, %: 81.2% компаний
+2025-04-23 03:03:42,432 - signal_generator - INFO -   2024 - Долг, млрд руб: 68.8% компаний
+2025-04-23 03:03:42,433 - signal_generator - INFO -   2024 - Долг/EBITDA: 68.8% компаний
+2025-04-23 03:03:42,433 - signal_generator - INFO -   2024 - Доходность FCF, %: 75.0% компаний
+2025-04-23 03:03:42,434 - signal_generator - INFO -   2024 - Капитализация, млрд руб: 81.2% компаний
+2025-04-23 03:03:42,434 - signal_generator - INFO -   2024 - Наличность, млрд руб: 75.0% компаний
+2025-04-23 03:03:42,435 - signal_generator - INFO -   2024 - Опер. расходы, млрд руб: 81.2% компаний
+2025-04-23 03:03:42,435 - signal_generator - INFO -   2024 - Опер.денежный поток, млрд руб: 75.0% компаний
+2025-04-23 03:03:42,436 - signal_generator - INFO -   2024 - Операционная прибыль, млрд руб: 75.0% компаний
+2025-04-23 03:03:42,436 - signal_generator - INFO -   2024 - Рентаб EBITDA, %: 75.0% компаний
+2025-04-23 03:03:42,436 - signal_generator - INFO -   2024 - Цена акции ао, руб: 81.2% компаний
+2025-04-23 03:03:42,437 - signal_generator - INFO -   2024 - Число акций ао, млн: 81.2% компаний
+2025-04-23 03:03:42,437 - signal_generator - INFO -   2024 - Чистая прибыль, млрд руб: 81.2% компаний
+2025-04-23 03:03:42,438 - signal_generator - INFO -   2024 - Чистая рентаб, %: 75.0% компаний
+2025-04-23 03:03:42,438 - signal_generator - INFO -   2024 - Чистые активы, млрд руб: 75.0% компаний
+2025-04-23 03:03:42,439 - signal_generator - INFO -   2024 - Чистый долг, млрд руб: 68.8% компаний
+2025-04-23 03:04:14,715 - signal_generator - INFO - Запуск пайплайна генерации торговых сигналов
+2025-04-23 03:04:14,716 - signal_generator - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-23 03:04:14,907 - signal_generator - INFO - Загружено 7471 строк данных
+2025-04-23 03:04:14,908 - signal_generator - INFO - Расчет композитного скора
+2025-04-23 03:04:14,912 - signal_generator - INFO - Технический скор рассчитан на основе 6 индикаторов
+2025-04-23 03:04:14,916 - signal_generator - INFO - Сентимент-скор рассчитан на основе 5 индикаторов
+2025-04-23 03:04:14,916 - signal_generator - INFO - Расчет фундаментального скора
+2025-04-23 03:04:14,917 - signal_generator - INFO - Загрузка фундаментальных данных для 16 тикеров
+2025-04-23 03:04:14,919 - signal_generator - INFO - Загружены данные AFKS за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:04:14,920 - signal_generator - INFO - Загружены данные AFKS за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:04:14,922 - signal_generator - INFO - Загружены данные ALRS за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:04:14,923 - signal_generator - INFO - Загружены данные ALRS за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:04:14,925 - signal_generator - INFO - Загружены данные GAZP за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:04:14,926 - signal_generator - INFO - Загружены данные GAZP за 2024: 0 показателей, 37 отсутствует
+2025-04-23 03:04:14,927 - signal_generator - INFO - Загружены данные GMKN за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:04:14,929 - signal_generator - INFO - Загружены данные GMKN за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:04:14,930 - signal_generator - INFO - Загружены данные LKOH за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:04:14,932 - signal_generator - INFO - Загружены данные LKOH за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:04:14,933 - signal_generator - INFO - Загружены данные MAGN за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:04:14,934 - signal_generator - INFO - Загружены данные MAGN за 2024: 34 показателей, 3 отсутствует
+2025-04-23 03:04:14,935 - signal_generator - INFO - Загружены данные MTSS за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:04:14,937 - signal_generator - INFO - Загружены данные MTSS за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:04:14,938 - signal_generator - INFO - Загружены данные MVID за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:04:14,939 - signal_generator - INFO - Загружены данные MVID за 2024: 0 показателей, 37 отсутствует
+2025-04-23 03:04:14,941 - signal_generator - INFO - Загружены данные NVTK за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:04:14,943 - signal_generator - INFO - Загружены данные NVTK за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:04:14,945 - signal_generator - INFO - Загружены данные PHOR за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:04:14,946 - signal_generator - INFO - Загружены данные PHOR за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:04:14,947 - signal_generator - INFO - Загружены данные ROSN за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:04:14,949 - signal_generator - INFO - Загружены данные ROSN за 2024: 35 показателей, 2 отсутствует
+2025-04-23 03:04:14,950 - signal_generator - INFO - Загружены данные RUAL за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:04:14,951 - signal_generator - INFO - Загружены данные RUAL за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:04:14,952 - signal_generator - INFO - Загружены данные SBER за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:04:14,954 - signal_generator - INFO - Загружены данные SBER за 2024: 13 показателей, 24 отсутствует
+2025-04-23 03:04:14,955 - signal_generator - INFO - Загружены данные SIBN за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:04:14,956 - signal_generator - INFO - Загружены данные SIBN за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:04:14,958 - signal_generator - INFO - Загружены данные SNGS за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:04:14,959 - signal_generator - INFO - Загружены данные SNGS за 2024: 0 показателей, 37 отсутствует
+2025-04-23 03:04:14,961 - signal_generator - INFO - Загружены данные TATN за 2023: 13 показателей, 0 отсутствует
+2025-04-23 03:04:14,963 - signal_generator - INFO - Загружены данные TATN за 2024: 37 показателей, 0 отсутствует
+2025-04-23 03:04:14,997 - signal_generator - INFO - Доступность фундаментальных показателей:
+2025-04-23 03:04:14,998 - signal_generator - INFO -   2023 - EPS, руб: 100.0% компаний
+2025-04-23 03:04:14,999 - signal_generator - INFO -   2023 - EV, млрд руб: 100.0% компаний
+2025-04-23 03:04:14,999 - signal_generator - INFO -   2023 - P/E: 100.0% компаний
+2025-04-23 03:04:15,000 - signal_generator - INFO -   2023 - ROA, %: 100.0% компаний
+2025-04-23 03:04:15,000 - signal_generator - INFO -   2023 - ROE, %: 100.0% компаний
+2025-04-23 03:04:15,000 - signal_generator - INFO -   2023 - Див доход, ао, %: 100.0% компаний
+2025-04-23 03:04:15,001 - signal_generator - INFO -   2023 - Дивиденды/прибыль, %: 100.0% компаний
+2025-04-23 03:04:15,001 - signal_generator - INFO -   2023 - Капитализация, млрд руб: 100.0% компаний
+2025-04-23 03:04:15,002 - signal_generator - INFO -   2023 - Опер. расходы, млрд руб: 100.0% компаний
+2025-04-23 03:04:15,002 - signal_generator - INFO -   2023 - Цена акции ао, руб: 100.0% компаний
+2025-04-23 03:04:15,003 - signal_generator - INFO -   2023 - Число акций ао, млн: 100.0% компаний
+2025-04-23 03:04:15,003 - signal_generator - INFO -   2023 - Чистая прибыль, млрд руб: 100.0% компаний
+2025-04-23 03:04:15,004 - signal_generator - INFO -   2023 - Чистый долг, млрд руб: 100.0% компаний
+2025-04-23 03:04:15,004 - signal_generator - INFO -   2024 - BV/акцию, руб: 75.0% компаний
+2025-04-23 03:04:15,004 - signal_generator - INFO -   2024 - CAPEX, млрд руб: 75.0% компаний
+2025-04-23 03:04:15,005 - signal_generator - INFO -   2024 - CAPEX/Выручка, %: 75.0% компаний
+2025-04-23 03:04:15,005 - signal_generator - INFO -   2024 - EBITDA, млрд руб: 75.0% компаний
+2025-04-23 03:04:15,006 - signal_generator - INFO -   2024 - EPS, руб: 81.2% компаний
+2025-04-23 03:04:15,006 - signal_generator - INFO -   2024 - EV, млрд руб: 81.2% компаний
+2025-04-23 03:04:15,007 - signal_generator - INFO -   2024 - EV/EBITDA: 75.0% компаний
+2025-04-23 03:04:15,007 - signal_generator - INFO -   2024 - FCF, млрд руб: 75.0% компаний
+2025-04-23 03:04:15,008 - signal_generator - INFO -   2024 - FCF/акцию, руб: 75.0% компаний
+2025-04-23 03:04:15,008 - signal_generator - INFO -   2024 - P/BV: 75.0% компаний
+2025-04-23 03:04:15,009 - signal_generator - INFO -   2024 - P/E: 81.2% компаний
+2025-04-23 03:04:15,009 - signal_generator - INFO -   2024 - P/FCF: 75.0% компаний
+2025-04-23 03:04:15,010 - signal_generator - INFO -   2024 - P/S: 75.0% компаний
+2025-04-23 03:04:15,010 - signal_generator - INFO -   2024 - R&D/CAPEX, %: 75.0% компаний
+2025-04-23 03:04:15,011 - signal_generator - INFO -   2024 - ROA, %: 81.2% компаний
+2025-04-23 03:04:15,011 - signal_generator - INFO -   2024 - ROE, %: 81.2% компаний
+2025-04-23 03:04:15,012 - signal_generator - INFO -   2024 - Активы, млрд руб: 75.0% компаний
+2025-04-23 03:04:15,012 - signal_generator - INFO -   2024 - Амортизация, млрд руб: 68.8% компаний
+2025-04-23 03:04:15,013 - signal_generator - INFO -   2024 - Баланс стоимость, млрд руб: 75.0% компаний
+2025-04-23 03:04:15,013 - signal_generator - INFO -   2024 - Выручка, млрд руб: 75.0% компаний
+2025-04-23 03:04:15,014 - signal_generator - INFO -   2024 - Див доход, ао, %: 81.2% компаний
+2025-04-23 03:04:15,014 - signal_generator - INFO -   2024 - Дивиденды/прибыль, %: 81.2% компаний
+2025-04-23 03:04:15,015 - signal_generator - INFO -   2024 - Долг, млрд руб: 68.8% компаний
+2025-04-23 03:04:15,015 - signal_generator - INFO -   2024 - Долг/EBITDA: 68.8% компаний
+2025-04-23 03:04:15,015 - signal_generator - INFO -   2024 - Доходность FCF, %: 75.0% компаний
+2025-04-23 03:04:15,016 - signal_generator - INFO -   2024 - Капитализация, млрд руб: 81.2% компаний
+2025-04-23 03:04:15,016 - signal_generator - INFO -   2024 - Наличность, млрд руб: 75.0% компаний
+2025-04-23 03:04:15,017 - signal_generator - INFO -   2024 - Опер. расходы, млрд руб: 81.2% компаний
+2025-04-23 03:04:15,017 - signal_generator - INFO -   2024 - Опер.денежный поток, млрд руб: 75.0% компаний
+2025-04-23 03:04:15,017 - signal_generator - INFO -   2024 - Операционная прибыль, млрд руб: 75.0% компаний
+2025-04-23 03:04:15,018 - signal_generator - INFO -   2024 - Рентаб EBITDA, %: 75.0% компаний
+2025-04-23 03:04:15,018 - signal_generator - INFO -   2024 - Цена акции ао, руб: 81.2% компаний
+2025-04-23 03:04:15,019 - signal_generator - INFO -   2024 - Число акций ао, млн: 81.2% компаний
+2025-04-23 03:04:15,019 - signal_generator - INFO -   2024 - Чистая прибыль, млрд руб: 81.2% компаний
+2025-04-23 03:04:15,020 - signal_generator - INFO -   2024 - Чистая рентаб, %: 75.0% компаний
+2025-04-23 03:04:15,020 - signal_generator - INFO -   2024 - Чистые активы, млрд руб: 75.0% компаний
+2025-04-23 03:04:15,021 - signal_generator - INFO -   2024 - Чистый долг, млрд руб: 68.8% компаний
+2025-04-23 03:04:15,891 - signal_generator - INFO - Фундаментальные скоры по тикерам:
+2025-04-23 03:04:15,891 - signal_generator - INFO -   AFKS: 2023: -0.174, 2024: -0.294
+2025-04-23 03:04:15,892 - signal_generator - INFO -   ALRS: 2023: 0.003, 2024: -0.183
+2025-04-23 03:04:15,893 - signal_generator - INFO -   GAZP: 2023: -0.326, 2024: 0.000
+2025-04-23 03:04:15,893 - signal_generator - INFO -   GMKN: 2023: -0.048, 2024: -0.135
+2025-04-23 03:04:15,894 - signal_generator - INFO -   LKOH: 2023: 0.281, 2024: 0.362
+2025-04-23 03:04:15,894 - signal_generator - INFO -   MAGN: 2023: -0.041, 2024: -0.113
+2025-04-23 03:04:15,895 - signal_generator - INFO -   MTSS: 2023: -0.039, 2024: -0.222
+2025-04-23 03:04:15,895 - signal_generator - INFO -   MVID: 2023: -0.026, 2024: 0.000
+2025-04-23 03:04:15,896 - signal_generator - INFO -   NVTK: 2023: 0.011, 2024: 0.126
+2025-04-23 03:04:15,896 - signal_generator - INFO -   PHOR: 2023: 0.173, 2024: 0.089
+2025-04-23 03:04:15,897 - signal_generator - INFO -   ROSN: 2023: 0.047, 2024: 0.230
+2025-04-23 03:04:15,897 - signal_generator - INFO -   RUAL: 2023: -0.343, 2024: -0.222
+2025-04-23 03:04:15,898 - signal_generator - INFO -   SBER: 2023: 0.148, 2024: 0.151
+2025-04-23 03:04:15,898 - signal_generator - INFO -   SIBN: 2023: 0.085, 2024: 0.072
+2025-04-23 03:04:15,899 - signal_generator - INFO -   SNGS: 2023: 0.160, 2024: 0.000
+2025-04-23 03:04:15,899 - signal_generator - INFO -   TATN: 2023: 0.082, 2024: 0.145
+2025-04-23 03:04:15,900 - signal_generator - INFO - Композитный скор рассчитан
+2025-04-23 03:04:15,915 - signal_generator - INFO - Сгенерировано сигналов: Buy - 644, Hold - 6386, Sell - 441
+2025-04-23 03:04:16,274 - signal_generator - INFO - Создан shortlist из 7471 записей (топ 30.0%)
+2025-04-23 03:04:16,278 - signal_generator - INFO - Шортлист сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/shortlists/shortlist_20250414.csv
+2025-04-23 03:04:16,279 - signal_generator - INFO - Актуальный шортлист сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/results.csv
+2025-04-23 03:04:16,280 - signal_generator - INFO - Визуализация графиков котировок с торговыми сигналами
+2025-04-23 03:04:16,555 - signal_generator - INFO - График сигналов для AFKS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/AFKS/signals.png
+2025-04-23 03:04:17,078 - signal_generator - INFO - График сигналов для ALRS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/ALRS/signals.png
+2025-04-23 03:04:17,355 - signal_generator - INFO - График сигналов для GAZP сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/GAZP/signals.png
+2025-04-23 03:04:17,626 - signal_generator - INFO - График сигналов для GMKN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/GMKN/signals.png
+2025-04-23 03:04:17,905 - signal_generator - INFO - График сигналов для LKOH сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/LKOH/signals.png
+2025-04-23 03:04:18,173 - signal_generator - INFO - График сигналов для MAGN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/MAGN/signals.png
+2025-04-23 03:04:18,445 - signal_generator - INFO - График сигналов для MTSS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/MTSS/signals.png
+2025-04-23 03:04:18,713 - signal_generator - INFO - График сигналов для MVID сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/MVID/signals.png
+2025-04-23 03:04:18,983 - signal_generator - INFO - График сигналов для NVTK сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/NVTK/signals.png
+2025-04-23 03:04:19,250 - signal_generator - INFO - График сигналов для PHOR сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/PHOR/signals.png
+2025-04-23 03:04:19,523 - signal_generator - INFO - График сигналов для ROSN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/ROSN/signals.png
+2025-04-23 03:04:19,794 - signal_generator - INFO - График сигналов для RUAL сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/RUAL/signals.png
+2025-04-23 03:04:20,060 - signal_generator - INFO - График сигналов для SBER сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/SBER/signals.png
+2025-04-23 03:04:20,329 - signal_generator - INFO - График сигналов для SIBN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/SIBN/signals.png
+2025-04-23 03:04:20,601 - signal_generator - INFO - График сигналов для SNGS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/SNGS/signals.png
+2025-04-23 03:04:20,870 - signal_generator - INFO - График сигналов для TATN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/TATN/signals.png
+2025-04-23 03:04:20,870 - signal_generator - INFO - Визуализация компонентов композитного скора
+2025-04-23 03:04:21,332 - signal_generator - INFO - График скоров для AFKS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/AFKS/scores.png
+2025-04-23 03:04:21,789 - signal_generator - INFO - График скоров для ALRS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/ALRS/scores.png
+2025-04-23 03:04:22,293 - signal_generator - INFO - График скоров для GAZP сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/GAZP/scores.png
+2025-04-23 03:04:22,831 - signal_generator - INFO - График скоров для GMKN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/GMKN/scores.png
+2025-04-23 03:04:23,306 - signal_generator - INFO - График скоров для LKOH сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/LKOH/scores.png
+2025-04-23 03:04:23,762 - signal_generator - INFO - График скоров для MAGN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/MAGN/scores.png
+2025-04-23 03:04:24,227 - signal_generator - INFO - График скоров для MTSS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/MTSS/scores.png
+2025-04-23 03:04:24,679 - signal_generator - INFO - График скоров для MVID сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/MVID/scores.png
+2025-04-23 03:04:25,147 - signal_generator - INFO - График скоров для NVTK сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/NVTK/scores.png
+2025-04-23 03:04:25,603 - signal_generator - INFO - График скоров для PHOR сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/PHOR/scores.png
+2025-04-23 03:04:26,066 - signal_generator - INFO - График скоров для ROSN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/ROSN/scores.png
+2025-04-23 03:04:26,525 - signal_generator - INFO - График скоров для RUAL сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/RUAL/scores.png
+2025-04-23 03:04:26,986 - signal_generator - INFO - График скоров для SBER сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/SBER/scores.png
+2025-04-23 03:04:27,450 - signal_generator - INFO - График скоров для SIBN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/SIBN/scores.png
+2025-04-23 03:04:27,919 - signal_generator - INFO - График скоров для SNGS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/SNGS/scores.png
+2025-04-23 03:04:28,384 - signal_generator - INFO - График скоров для TATN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/TATN/scores.png
+2025-04-23 03:04:29,599 - signal_generator - INFO - Исторические сигналы сохранены в /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations/signals/signals_20250423.csv
+2025-04-23 03:04:30,842 - signal_generator - INFO - Полные результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-23 03:04:30,843 - signal_generator - INFO - Пайплайн выполнен за 16.13 секунд
+2025-04-23 03:04:30,844 - signal_generator - INFO - Обработано 7471 строк данных
+2025-04-23 03:04:30,845 - signal_generator - INFO - Обработано 16 тикеров
+2025-04-23 03:04:30,845 - signal_generator - INFO - Создано сигналов: Buy - 644, Hold - 6386, Sell - 441
+2025-04-23 03:04:30,846 - signal_generator - INFO - В шортлист включено 7471 записей
+2025-04-23 03:04:30,846 - signal_generator - INFO - Все результаты сохранены в каталоге: /Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations
