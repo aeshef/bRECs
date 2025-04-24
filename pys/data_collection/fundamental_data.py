@@ -7,21 +7,25 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 from collections import Counter
+import sys
 
-class SmartLabYearlyParser:
-    def __init__(self, ticker, base_path='/Users/aeshef/Documents/GitHub/kursach/data/processed_data'):
+current_dir = os.path.dirname(os.path.abspath(__file__))
+while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
+    current_dir = os.path.dirname(current_dir)
+
+if current_dir not in sys.path:
+    sys.path.insert(0, current_dir)
+
+from utils.logger import BaseLogger
+
+class SmartLabYearlyParser(BaseLogger):
+    def __init__(self, ticker, base_path='/Users/aeshef/Documents/GitHub/kursach/data/processed_data', needed_prc_per_year=0.9):
+        super().__init__('SmartLabYearlyParser')
         self.ticker = ticker.upper()
         self.url = f"https://smart-lab.ru/q/{self.ticker}/f/y/"
         self.base_path = base_path
-        self.logger = self._setup_logger()
-
-    def _setup_logger(self):
-        logging.basicConfig(
-            level=logging.INFO,
-            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-            datefmt='%Y-%m-%d %H:%M:%S'
-        )
-        return logging.getLogger('SmartLabYearlyParser')
+        # self.logger = self._setup_logger()
+        self.needed_prc_per_year = needed_prc_per_year
 
     def fetch_page(self):
         headers = {
@@ -37,9 +41,10 @@ class SmartLabYearlyParser:
             response = requests.get(self.url, headers=headers)
             if response.status_code == 200:
                 return BeautifulSoup(response.text, "html.parser")
+            self.logger.error(f"Failed to fetch data: HTTP {response.status_code}")
             return None
         except Exception as e:
-            self.logger.error(f"[{self.ticker}] Ошибка при запросе: {e}")
+            self.logger.error(f"Error during request: {e}")
             return None
 
     def parse_yearly_tables(self, soup):
@@ -48,6 +53,7 @@ class SmartLabYearlyParser:
 
         tables = soup.find_all("table")
         if not tables:
+            self.logger.warning("No tables found on the page")
             return pd.DataFrame()
 
         dataframes = []
@@ -56,7 +62,8 @@ class SmartLabYearlyParser:
                 df_list = pd.read_html(str(table), header=None, decimal=',')
                 if df_list:
                     dataframes.append(df_list[0])
-            except Exception:
+            except Exception as e:
+                self.logger.debug(f"Failed to parse a table: {e}")
                 continue
 
         if dataframes:
@@ -134,177 +141,168 @@ class SmartLabYearlyParser:
         return processed_data
 
 
-def run_pipeline_fundamental(ticker_list, base_path='/Users/aeshef/Documents/GitHub/kursach/data/processed_data'):
-    """
-    Основной процесс:
-    1. Парсим данные для каждого тикера по годам
-    2. Сохраняем два файла для каждого тикера и года:
-       - {YEAR}/all.csv - все доступные показатели для этого тикера
-       - {YEAR}/common.csv - общие показатели, которые есть у большинства тикеров
-    3. Если у тикера нет каких-то "общих" показателей, заполняем их спецтокеном "NO_DATA"
-    """
-    print(f"\nОбработка тикеров: {ticker_list}")
-    
-    # Сбор данных по тикерам
-    ticker_data_dict = {}
-    parser_objects = {}
-
-    for ticker in ticker_list:
-        parser = SmartLabYearlyParser(ticker, base_path)
-        parser_objects[ticker] = parser
+class FundamentalPipeline(BaseLogger):
+    def __init__(self, base_path='/Users/aeshef/Documents/GitHub/kursach/data/processed_data', needed_prc_per_year=0.9):
+        """Initialize the pipeline with base path and percentage threshold"""
+        super().__init__('FundamentalPipeline')
+        self.base_path = base_path
+        self.needed_prc_per_year = needed_prc_per_year
+        self.logger = self._setup_logger()
+        self.ticker_data_dict = {}
+        self.parser_objects = {}
         
-        soup = parser.fetch_page()
-        if soup is None:
-            ticker_data_dict[ticker] = {}
-            continue
+    def process_tickers(self, ticker_list):
+        """Process a list of tickers by fetching and parsing their data"""
+        self.logger.info(f"Processing tickers: {ticker_list}")
         
-        df = parser.parse_yearly_tables(soup)
-        if df.empty:
-            ticker_data_dict[ticker] = {}
-            continue
-        
-        processed_data = parser.preprocess_dataframe(df)
-        ticker_data_dict[ticker] = processed_data
-    
-    # Отладка: показатели для каждого тикера и года
-    print("\n[DEBUG] Список показателей (value_float не NaN) для каждого тикера и года:")
-    for ticker in ticker_list:
-        data_for_ticker = ticker_data_dict.get(ticker, {})
-        if not data_for_ticker:
-            print(f"  {ticker} -> Данных нет совсем.")
-            continue
-        
-        for year, df_year in data_for_ticker.items():
-            inds = df_year[df_year["value_float"].notna()]["Показатель"].unique()
-            print(f"  {ticker}, {year} -> {len(inds)} показателей: {list(inds)}")
-
-    # Собираем все годы из всех тикеров
-    all_years = set()
-    for t in ticker_data_dict:
-        all_years.update(ticker_data_dict[t].keys())
-
-    # Для каждого года:
-    # 1. Соберем все индикаторы для всех тикеров
-    # 2. Найдем частоту встречаемости каждого индикатора
-    # 3. Выберем индикаторы, которые встречаются у большинства тикеров
-    
-    # year -> {"ind1": count, "ind2": count, ...} где count - сколько тикеров имеют этот индикатор
-    indicators_frequency_by_year = {}
-    
-    # year -> список "часто встречающихся" индикаторов
-    common_indicators_by_year = {}
-    
-    for year in sorted(all_years):
-        indicators_counter = Counter()
-        
-        # Собираем, сколько тикеров имеют каждый индикатор
         for ticker in ticker_list:
-            data_for_year = ticker_data_dict[ticker].get(year, None)
-            if data_for_year is not None:
-                df_year = data_for_year
-                available = set(df_year[df_year["value_float"].notna()]["Показатель"].unique())
-                for indicator in available:
-                    indicators_counter[indicator] += 1
+            parser = SmartLabYearlyParser(ticker, self.base_path, self.needed_prc_per_year)
+            self.parser_objects[ticker] = parser
+            
+            self.logger.info(f"Fetching data for {ticker}")
+            soup = parser.fetch_page()
+            if soup is None:
+                self.ticker_data_dict[ticker] = {}
+                self.logger.warning(f"No data fetched for {ticker}")
+                continue
+            
+            df = parser.parse_yearly_tables(soup)
+            if df.empty:
+                self.ticker_data_dict[ticker] = {}
+                self.logger.warning(f"No tables found for {ticker}")
+                continue
+            
+            processed_data = parser.preprocess_dataframe(df)
+            self.ticker_data_dict[ticker] = processed_data
+            self.logger.info(f"Successfully processed {ticker}")
+            
+        self._log_indicators_by_ticker()
+        return self.ticker_data_dict
         
-        indicators_frequency_by_year[year] = indicators_counter
+    def _log_indicators_by_ticker(self):
+        """Log available indicators for each ticker and year"""
+        self.logger.debug("Available indicators (with non-NaN value_float) for each ticker and year:")
+        for ticker, data_for_ticker in self.ticker_data_dict.items():
+            if not data_for_ticker:
+                self.logger.debug(f"  {ticker} -> No data available.")
+                continue
+            
+            for year, df_year in data_for_ticker.items():
+                inds = df_year[df_year["value_float"].notna()]["Показатель"].unique()
+                self.logger.debug(f"  {ticker}, {year} -> {len(inds)} indicators: {list(inds)}")
+                
+    def analyze_common_indicators(self):
+        """Analyze and identify common indicators across tickers by year"""
+        all_years = set()
+        for ticker_data in self.ticker_data_dict.values():
+            all_years.update(ticker_data.keys())
+            
+        indicators_frequency_by_year = {}
+        common_indicators_by_year = {}
         
-        # Считаем минимальное количество тикеров для "общности"
-        # Например, если есть 16 тикеров, а данные есть только у 13, 
-        # то берем индикаторы, которые есть хотя бы у 13 тикеров
-        non_empty_tickers = sum(1 for ticker in ticker_list 
-                               if year in ticker_data_dict.get(ticker, {}))
-        
-        # Если у всех тикеров есть этот год, то берем индикаторы, которые есть у всех
-        # Иначе берем те, которые есть хотя бы у 90% тикеров с данными
-        if non_empty_tickers == len(ticker_list):
-            min_count = non_empty_tickers  # Все тикеры
-        else:
-            min_count = max(int(non_empty_tickers * 0.9), 1)  # Минимум 90% или 1
-        
-        # Отбираем индикаторы, которые встречаются хотя бы у min_count тикеров
-        common_inds = [ind for ind, count in indicators_counter.items() 
-                       if count >= min_count]
-        
-        common_indicators_by_year[year] = common_inds
-    
-    # Сохраняем данные в два файла для каждого тикера и года
-    for ticker in ticker_list:
-        parser = parser_objects[ticker]
-        ticker_year_data = ticker_data_dict.get(ticker, {})
-
         for year in sorted(all_years):
-            # Создаем папку для года
-            year_folder_path = os.path.join(parser.base_path, ticker, "fundamental_analysis", year)
-            os.makedirs(year_folder_path, exist_ok=True)
+            indicators_counter = Counter()
             
-            # Пути к файлам
-            all_file_path = os.path.join(year_folder_path, "all.csv")
-            common_file_path = os.path.join(year_folder_path, "common.csv")
+            for ticker, ticker_data in self.ticker_data_dict.items():
+                data_for_year = ticker_data.get(year, None)
+                if data_for_year is not None:
+                    available = set(data_for_year[data_for_year["value_float"].notna()]["Показатель"].unique())
+                    for indicator in available:
+                        indicators_counter[indicator] += 1
             
-            # 1. Сохраняем "all.csv" - все показатели для данного тикера
-            if year in ticker_year_data:
-                df_year = ticker_year_data[year].copy()
-                # Берем только не-NaN значения
-                all_df = df_year[df_year["value_float"].notna()][["Показатель", "value_float"]]
-                all_df.to_csv(all_file_path, index=False, encoding="utf-8")
+            indicators_frequency_by_year[year] = indicators_counter
+            
+            non_empty_tickers = sum(1 for ticker_data in self.ticker_data_dict.values() 
+                                   if year in ticker_data)
+            
+            if non_empty_tickers == len(self.ticker_data_dict):
+                min_count = non_empty_tickers
             else:
-                # Если данных нет, создаем пустой файл
-                pd.DataFrame(columns=["Показатель", "value_float"]).to_csv(
-                    all_file_path, index=False, encoding="utf-8"
-                )
+                min_count = max(int(non_empty_tickers * self.needed_prc_per_year), 1)
             
-            # 2. Сохраняем "common.csv" - общие показатели для всех тикеров
+            common_inds = [ind for ind, count in indicators_counter.items() 
+                          if count >= min_count]
+            
+            common_indicators_by_year[year] = common_inds
+            
+        self._log_yearly_results(all_years, common_indicators_by_year, indicators_frequency_by_year)
+        return all_years, common_indicators_by_year, indicators_frequency_by_year
+        
+    def _log_yearly_results(self, all_years, common_indicators_by_year, indicators_frequency_by_year):
+        """Log results of common indicators analysis by year"""
+        self.logger.info("Results by year:")
+        for year in sorted(all_years):
+            non_empty_tickers = sum(1 for ticker_data in self.ticker_data_dict.values() 
+                                   if year in ticker_data)
+            
             common_inds = common_indicators_by_year[year]
             
-            if year in ticker_year_data:
-                df_year = ticker_year_data[year].copy()
+            self.logger.info(f"  Year {year}:")
+            self.logger.info(f"    - Data available for {non_empty_tickers} out of {len(self.ticker_data_dict)} tickers")
+            self.logger.info(f"    - {len(common_inds)} common indicators (for most tickers)")
+            
+            for ind in sorted(common_inds):
+                freq = indicators_frequency_by_year[year][ind]
+                self.logger.info(f"      * {ind} (found in {freq} tickers)")
                 
-                # Создаем DataFrame с общими показателями
-                result_rows = []
+    def save_data(self, all_years, common_indicators_by_year):
+        """Save processed data to files for each ticker and year"""
+        for ticker, parser in self.parser_objects.items():
+            ticker_year_data = self.ticker_data_dict.get(ticker, {})
+
+            for year in sorted(all_years):
+                year_folder_path = os.path.join(self.base_path, ticker, "fundamental_analysis", year)
+                os.makedirs(year_folder_path, exist_ok=True)
                 
-                for indicator in sorted(common_inds):
-                    # Проверяем, есть ли этот индикатор у тикера
-                    matching_rows = df_year[df_year["Показатель"] == indicator]
+                all_file_path = os.path.join(year_folder_path, "all.csv")
+                common_file_path = os.path.join(year_folder_path, "common.csv")
+                
+                if year in ticker_year_data:
+                    df_year = ticker_year_data[year].copy()
+                    all_df = df_year[df_year["value_float"].notna()][["Показатель", "value_float"]]
+                    all_df.to_csv(all_file_path, index=False, encoding="utf-8")
+                else:
+                    pd.DataFrame(columns=["Показатель", "value_float"]).to_csv(
+                        all_file_path, index=False, encoding="utf-8"
+                    )
+                
+                common_inds = common_indicators_by_year[year]
+                
+                if year in ticker_year_data:
+                    df_year = ticker_year_data[year].copy()
                     
-                    if len(matching_rows) > 0 and not pd.isna(matching_rows["value_float"].iloc[0]):
-                        # Индикатор есть и значение не NaN
-                        result_rows.append({
-                            "Показатель": indicator,
-                            "value_float": matching_rows["value_float"].iloc[0]
-                        })
-                    else:
-                        # Индикатор отсутствует или значение NaN
-                        result_rows.append({
-                            "Показатель": indicator,
-                            "value_float": "NO_DATA"
-                        })
-                
-                result_df = pd.DataFrame(result_rows)
-                result_df.to_csv(common_file_path, index=False, encoding="utf-8")
-                
-            else:
-                # Если данных нет, создаем файл со спецтокенами
-                placeholder_df = pd.DataFrame({
-                    "Показатель": common_inds,
-                    "value_float": ["NO_DATA"] * len(common_inds)
-                })
-                placeholder_df.to_csv(common_file_path, index=False, encoding="utf-8")
+                    result_rows = []
+                    
+                    for indicator in sorted(common_inds):
+                        matching_rows = df_year[df_year["Показатель"] == indicator]
+                        
+                        if len(matching_rows) > 0 and not pd.isna(matching_rows["value_float"].iloc[0]):
+                            result_rows.append({
+                                "Показатель": indicator,
+                                "value_float": matching_rows["value_float"].iloc[0]
+                            })
+                        else:
+                            result_rows.append({
+                                "Показатель": indicator,
+                                "value_float": "NO_DATA"
+                            })
+                    
+                    result_df = pd.DataFrame(result_rows)
+                    result_df.to_csv(common_file_path, index=False, encoding="utf-8")
+                    
+                else:
+                    placeholder_df = pd.DataFrame({
+                        "Показатель": common_inds,
+                        "value_float": ["NO_DATA"] * len(common_inds)
+                    })
+                    placeholder_df.to_csv(common_file_path, index=False, encoding="utf-8")
+                    
+        self.logger.info("Process completed. Created all.csv and common.csv files for each year and ticker.")
+        self.logger.info("Used 'NO_DATA' token for missing indicators.")
 
-    # Печатаем статистику
-    print("\nРезультаты по годам:")
-    for year in sorted(all_years):
-        non_empty_tickers = sum(1 for ticker in ticker_list 
-                               if year in ticker_data_dict.get(ticker, {}))
-        
-        common_inds = common_indicators_by_year[year]
-        
-        print(f"  Год {year}:")
-        print(f"    - Данные есть у {non_empty_tickers} из {len(ticker_list)} тикеров")
-        print(f"    - {len(common_inds)} общих показателей (для большинства тикеров):")
-        
-        for ind in sorted(common_inds):
-            freq = indicators_frequency_by_year[year][ind]
-            print(f"      * {ind} (встречается у {freq} тикеров)")
 
-    print("\nПроцесс завершён. Созданы файлы all.csv и common.csv для каждого года и тикера.")
-    print("Для отсутствующих показателей использовался токен 'NO_DATA'.")
+def run_pipeline_fundamental(ticker_list, base_path='/Users/aeshef/Documents/GitHub/kursach/data/processed_data'):
+    pipeline = FundamentalPipeline(base_path)
+    pipeline.process_tickers(ticker_list)
+    all_years, common_indicators_by_year, _ = pipeline.analyze_common_indicators()
+    pipeline.save_data(all_years, common_indicators_by_year)

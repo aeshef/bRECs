@@ -15,14 +15,23 @@ from typing import List, Dict, Optional, Any
 
 from telethon.sync import TelegramClient
 
-sys.path.append('/Users/aeshef/Documents/GitHub/kursach')
+sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection/news_processor')
 
-from news_preprocessor import NewsPreprocessor
-from sentiment_analysis import SentimentAnalyzer
-from news_feature_extractor import NewsFeatureExtractor
-from event_detector import EventDetector
-from news_visualizer import NewsVisualizer
-from news_integration import NewsIntegration
+from news_processor.news_preprocessor import NewsPreprocessor
+from news_processor.sentiment_analysis import SentimentAnalyzer
+from news_processor.news_feature_extractor import NewsFeatureExtractor
+from news_processor.event_detector import EventDetector
+from news_processor.news_visualizer import NewsVisualizer
+from news_processor.news_integration import NewsIntegration
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
+    current_dir = os.path.dirname(current_dir)
+
+if current_dir not in sys.path:
+    sys.path.insert(0, current_dir)
+
+from utils.logger import BaseLogger
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -117,22 +126,22 @@ def save_events_data(event_detector, combined_sentiment: pd.DataFrame, events_fi
     logging.info(f"Данные по событиям объединены и сохранены в {events_file}")
     return news_with_events
 
-class NewsPipeline:
+class NewsPipeline(BaseLogger):
     """Единый пайплайн для сбора и анализа новостей"""
     
     def __init__(self):
         self.telegram_data = {}
-        self.logger = self._setup_logger()
+        super().__init__('NewsPipeline')
         self.base_dir='/Users/aeshef/Documents/GitHub/kursach'
         
-    def _setup_logger(self):
-        """Настройка логгера"""
-        logging.basicConfig(
-            level=logging.INFO,
-            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-            datefmt='%Y-%m-%d %H:%M:%S'
-        )
-        return logging.getLogger('NewsPipeline')
+    # def _setup_logger(self):
+    #     """Настройка логгера"""
+    #     logging.basicConfig(
+    #         level=logging.INFO,
+    #         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    #         datefmt='%Y-%m-%d %H:%M:%S'
+    #     )
+    #     return logging.getLogger('NewsPipeline')
 
     def _collect_telegram_data(self, api_id, api_hash, channel, limit, output_dir, tickers, start_date=None, end_date=None):
         if not api_id or not api_hash:

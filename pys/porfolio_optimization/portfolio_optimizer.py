@@ -7,7 +7,7 @@ import logging
 from datetime import datetime
 
 class PortfolioOptimizer:
-    def __init__(self, input_file=None, risk_free_rate=0.06, min_rf_allocation=0.25, 
+    def __init__(self, input_file=None, max_weight=0.2, risk_free_rate=0.06, min_rf_allocation=0.25, 
                 max_rf_allocation=0.35, log_level=logging.INFO):
         """
         Оптимизатор портфеля с использованием модели Марковица
@@ -31,6 +31,7 @@ class PortfolioOptimizer:
         self.returns = None
         self.optimal_weights = None
         self.portfolio_performance = None
+        self.max_weight = max_weight
         
         # Настройка логгера
         self.logger = logging.getLogger('portfolio_optimizer')
@@ -168,6 +169,9 @@ class PortfolioOptimizer:
             
         if risk_free_rate is None:
             risk_free_rate = self.risk_free_rate
+
+        if bounds is None and constrained:
+            bounds = tuple((0, self.max_weight) for _ in range(n))
             
         self.logger.info(f"Запуск оптимизации портфеля для {returns.shape[1]} активов")
         
@@ -255,7 +259,7 @@ class PortfolioOptimizer:
     
     def visualize_portfolio(self, output_dir=None):
         """
-        Визуализирует итоговый портфель
+        Визуализирует итоговый портфель с помощью круговой диаграммы
         """
         if self.portfolio_performance is None:
             self.logger.error("Нет данных для визуализации")
@@ -266,22 +270,40 @@ class PortfolioOptimizer:
             
         self.logger.info("Создание визуализации портфеля")
         
-        # График весов
-        plt.figure(figsize=(12, 6))
+        # График весов в виде круговой диаграммы (пай-чарт)
+        plt.figure(figsize=(12, 8))
         weights = self.portfolio_performance['weights']
+
+        # Сортируем веса по убыванию
         sorted_weights = {k: v for k, v in sorted(weights.items(), key=lambda item: item[1], reverse=True)}
-        plt.bar(sorted_weights.keys(), sorted_weights.values())
+        
+        # Фильтруем веса > 0.5% для лучшей визуализации
+        significant_weights = {ticker: weight for ticker, weight in sorted_weights.items() if weight > 0.005}
+        
+        # Если есть малозначительные веса, группируем их
+        other_weight = 1.0 - sum(significant_weights.values())
+        if other_weight > 0:
+            significant_weights['Другие'] = other_weight
+        
+        # Создаем пай-чарт
+        plt.pie(
+            significant_weights.values(), 
+            labels=significant_weights.keys(),
+            autopct='%1.1f%%',
+            startangle=90,
+            shadow=False,
+            explode=[0.05] * len(significant_weights)  # Небольшое смещение всех сегментов
+        )
+        plt.axis('equal')  # Обеспечивает круглую форму
         plt.title('Оптимальные веса портфеля')
-        plt.xticks(rotation=45)
-        plt.ylabel('Вес')
-        plt.tight_layout()
         
         if output_dir:
-            plt.savefig(os.path.join(output_dir, 'portfolio_weights.png'))
-            self.logger.info(f"График весов сохранен в {output_dir}/portfolio_weights.png")
+            plt.savefig(os.path.join(output_dir, 'portfolio_weights_pie.png'))
+            self.logger.info(f"График весов сохранен в {output_dir}/portfolio_weights_pie.png")
         else:
             plt.show()
             
+        # Обязательно закрываем фигуру после создания
         plt.close()
         
         # Сохраняем результаты в CSV, если указана директория
@@ -298,12 +320,35 @@ class PortfolioOptimizer:
                 f.write(f"Доля безрисковых активов: {self.portfolio_performance['rf_allocation']*100:.2f}%\n")
                 
             self.logger.info(f"Результаты сохранены в {output_dir}")
+
     
     def run_pipeline(self, input_file=None, output_dir="/Users/aeshef/Documents/GitHub/kursach/data",
-                risk_free_rate=None, min_rf_allocation=None, max_rf_allocation=None):
+              risk_free_rate=None, min_rf_allocation=None, max_rf_allocation=None, max_weight=None):
         """
         Запускает полный пайплайн оптимизации портфеля
+        
+        Parameters:
+        -----------
+        input_file : str, optional
+            Путь к файлу с данными
+        output_dir : str, optional
+            Директория для сохранения результатов
+        risk_free_rate : float, optional
+            Безрисковая ставка
+        min_rf_allocation : float, optional
+            Минимальная доля безрисковых активов
+        max_rf_allocation : float, optional
+            Максимальная доля безрисковых активов
+        max_weight : float, optional
+            Максимальный вес одной бумаги в портфеле (для диверсификации)
+        
+        Returns:
+        --------
+        dict
+            Словарь с результатами оптимизации
         """
+        # Закрываем все предыдущие фигуры для предотвращения утечек памяти
+        plt.close('all')
         self.logger.info("Запуск пайплайна оптимизации портфеля")
         
         # Обновление параметров, если указаны
@@ -313,6 +358,9 @@ class PortfolioOptimizer:
             self.min_rf_allocation = min_rf_allocation
         if max_rf_allocation is not None:
             self.max_rf_allocation = max_rf_allocation
+        if max_weight is not None:
+            self.max_weight = max_weight
+            self.logger.info(f"Максимальный вес одной бумаги: {self.max_weight}")
             
         # Использование input_file если не указан, берем значение по умолчанию
         if input_file is None:
@@ -332,8 +380,9 @@ class PortfolioOptimizer:
             self.logger.error("Не удалось рассчитать доходности")
             return None
             
-        # Оптимизация портфеля
-        self.optimize_portfolio()
+        # Оптимизация портфеля с учетом max_weight
+        self.optimize_portfolio(constrained=True, 
+                            bounds=tuple((0, self.max_weight) for _ in range(len(self.returns.columns))))
         
         if self.optimal_weights is None:
             self.logger.error("Не удалось оптимизировать портфель")
@@ -346,6 +395,13 @@ class PortfolioOptimizer:
         if output_dir:
             # Добавляем подпапку "portfolio" к указанной директории
             output_dir = os.path.join(output_dir, 'portfolio')
-        self.visualize_portfolio(output_dir)
-            
+            # Убедимся, что все графики закрываются после создания
+            try:
+                self.visualize_portfolio(output_dir)
+            except Exception as e:
+                self.logger.error(f"Ошибка при визуализации: {e}")
+            finally:
+                # Дополнительно закрываем все фигуры после визуализации
+                plt.close('all')
+                
         return portfolio

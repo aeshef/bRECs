@@ -2,27 +2,28 @@ import pandas as pd
 import numpy as np
 import os
 import logging
+import sys
 
-class DataIntegrator:
+current_dir = os.path.dirname(os.path.abspath(__file__))
+while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
+    current_dir = os.path.dirname(current_dir)
+
+if current_dir not in sys.path:
+    sys.path.insert(0, current_dir)
+
+from utils.logger import BaseLogger
+
+class DataIntegrator(BaseLogger):
     def __init__(self, base_path, nan_fill_method='median'):
         """
         Параметры:
             base_path - базовый путь до папки с данными, в которой находятся подпапки:
                         AFKS/news_analysis и AFKS/tech_analysis
         """
+        super().__init__('DataIntegrator')
         self.base_path = base_path
         self.nan_fill_method = nan_fill_method
         self.logger = self._setup_logger()
-    
-    def _setup_logger(self):
-        """Настройка логгера"""
-        logging.basicConfig(
-            level=logging.INFO,
-            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-            datefmt='%Y-%m-%d %H:%M:%S'
-        )
-        return logging.getLogger('DataIntegrator')
-
 
     def load_ticker_data(self, ticker):
         """
@@ -58,16 +59,13 @@ class DataIntegrator:
             sentiment_features = pd.read_csv(sentiment_path)
             base_with_tech = pd.read_csv(tech_path)
             
-            # Приводим столбец date к нужному формату
             ml_features['date'] = pd.to_datetime(ml_features['date']).dt.date
             sentiment_features['date'] = pd.to_datetime(sentiment_features['date']).dt.date
             base_with_tech['date'] = pd.to_datetime(base_with_tech['date']).dt.date
             
-            # Последовательное объединение
             df1 = pd.merge(base_with_tech, sentiment_features, on='date', how='left', suffixes=('', '_sentiment'))
             df = pd.merge(df1, ml_features, on='date', how='left', suffixes=('', '_ml'))
             
-            # Очистка дублирующихся колонок
             cols_to_drop = [col for col in df.columns if col.endswith(('_sentiment', '_ml'))]
             
             base_cols = ['date', 'open', 'close', 'high', 'low', 'volume']
@@ -78,7 +76,6 @@ class DataIntegrator:
             df = df.drop(columns=cols_to_drop, errors='ignore')
             self.logger.info(f"Данные для {ticker} загружены за период: {df['date'].min()} - {df['date'].max()}")
 
-            # Добавляем тикер
             df['ticker'] = ticker
 
             return df
@@ -99,7 +96,6 @@ class DataIntegrator:
         base_cols = ['date', 'open', 'close', 'volume', 'ticker']
         num_cols = df.select_dtypes(include=[np.number]).columns.difference(base_cols)
         
-        # Группировка по тикеру для правильного заполнения
         for ticker in df['ticker'].unique():
             ticker_mask = df['ticker'] == ticker
             
@@ -173,23 +169,18 @@ class DataIntegrator:
         Возвращает:
             pd.DataFrame: Объединенный датасет или пустой DataFrame в случае ошибки.
         """
-        # Загружаем и объединяем данные
         combined_data = self.load_multiple_tickers(tickers=tickers)
         
         if not combined_data.empty:
-            # Создаем директорию для сохранения, если ее нет
             output_dir = os.path.dirname(output_path)
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir, exist_ok=True)
             
-            # Сохраняем данные
             combined_data.to_csv(output_path, index=False)
             self.logger.info(f"Данные успешно объединены и сохранены в {output_path}")
             self.logger.info(f"Форма объединенного датасета: {combined_data.shape}")
             self.logger.info(f"Количество уникальных тикеров: {combined_data['ticker'].nunique()}")
         
-        
-
 def run_pipeline_integration(tickers, output_path="/Users/aeshef/Documents/GitHub/kursach/data/df.csv", method='zero'):
     DataIntegrator(base_path="/Users/aeshef/Documents/GitHub/kursach/data/processed_data", nan_fill_method=method).run_pipeline(
         tickers=tickers,

@@ -1,9 +1,20 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import ta
+import sys
+import os
 import logging
 
-class TechnicalIndicators:
+current_dir = os.path.dirname(os.path.abspath(__file__))
+while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
+    current_dir = os.path.dirname(current_dir)
+
+if current_dir not in sys.path:
+    sys.path.insert(0, current_dir)
+
+from utils.logger import BaseLogger
+
+class TechnicalIndicators(BaseLogger):
     def __init__(self, file_path, resample_rule="1D", sma_window=20, rsi_window=14):
         """
         Инициализация.
@@ -12,24 +23,13 @@ class TechnicalIndicators:
         :param sma_window: окно для расчёта скользящей средней
         :param rsi_window: окно для расчёта RSI
         """
+        super().__init__('TechnicalIndicators')
         self.file_path = file_path
         self.resample_rule = resample_rule
         self.sma_window = sma_window
         self.rsi_window = rsi_window
         self.df = None
-        self.logger = self._setup_logger()
-
-    def _setup_logger(self):
-        """Настройка логгера"""
-        logging.basicConfig(
-            level=logging.INFO,
-            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-            datefmt='%Y-%m-%d %H:%M:%S'
-        )
-        return logging.getLogger('TechPipeline')
-    
-        # self.logger.warning("API данные не предоставлены. Пропускаем сбор данных Telegram.")
-        # self.logger.info(f"Получена сущность канала: {entity.title}")
+        # self.logger = self._setup_logger()
 
     def load_data(self):
         """

@@ -146,7 +146,8 @@ class Backtester:
     
     def calculate_portfolio_return(self, weights=None):
         """
-        Рассчитывает доходность портфеля с заданными весами
+        Рассчитывает доходность портфеля с заданными весами,
+        поддерживает формат тикеров TICKER_LONG и TICKER_SHORT
         """
         if not self.returns_by_ticker:
             self.logger.error("Доходности по тикерам не рассчитаны")
@@ -165,30 +166,70 @@ class Backtester:
         # Создаем DataFrame для каждого тикера
         portfolio_returns = pd.DataFrame()
         
+        # Сопоставляем веса с тикерами, поддерживая формат TICKER_LONG и TICKER_SHORT
+        self.logger.info("Анализ данных доходностей:")
         for ticker, returns_df in self.returns_by_ticker.items():
+            if 'strategy_return' in returns_df.columns:
+                non_zero = (returns_df['strategy_return'] != 0).sum()
+                total = len(returns_df)
+                max_val = returns_df['strategy_return'].abs().max()
+                self.logger.info(f"Тикер {ticker}: {non_zero}/{total} ненулевых точек, макс. значение: {max_val:.6f}")
+                
+            # Проверяем различные форматы тикеров в весах
             if ticker in weights and ticker != 'RISK_FREE':
-                # Добавляем взвешенную доходность в портфель
+                # Стандартный формат
                 portfolio_returns[ticker] = returns_df['strategy_return'] * weights[ticker]
+                self.logger.info(f"Добавлен тикер {ticker} с весом {weights[ticker]:.4f}")
+            elif f"{ticker}_LONG" in weights:
+                # Формат LONG: обычная доходность
+                portfolio_returns[ticker] = returns_df['strategy_return'] * weights[f"{ticker}_LONG"]
+                self.logger.info(f"Добавлен тикер {ticker} (LONG) с весом {weights[f'{ticker}_LONG']:.4f}")
+            elif f"{ticker}_SHORT" in weights:
+                # Формат SHORT: инвертированная доходность
+                portfolio_returns[ticker] = -returns_df['strategy_return'] * weights[f"{ticker}_SHORT"]
+                self.logger.info(f"Добавлен тикер {ticker} (SHORT) с весом {weights[f'{ticker}_SHORT']:.4f}")
         
-        # Рассчитываем общую доходность портфеля
-        portfolio_returns['portfolio_return'] = portfolio_returns.sum(axis=1)
+        # Проверяем, что у нас есть хотя бы один тикер в портфеле
+        if portfolio_returns.empty:
+            self.logger.warning("Нет совпадений между тикерами в весах и данными")
+            # Детальная отладка проблем сопоставления
+            self.logger.info(f"Доступные тикеры в данных: {list(self.returns_by_ticker.keys())}")
+            weight_tickers = [k for k in weights.keys() if k != 'RISK_FREE']
+            self.logger.info(f"Тикеры в весах: {weight_tickers}")
+            
+            # Создаем пустой DataFrame для дальнейших расчётов
+            dates = next(iter(self.returns_by_ticker.values())).index
+            portfolio_returns = pd.DataFrame(index=dates)
+            portfolio_returns['portfolio_return'] = 0.0
+        else:
+            # Рассчитываем общую доходность портфеля
+            portfolio_returns['portfolio_return'] = portfolio_returns.sum(axis=1)
         
         # Если есть безрисковая часть, добавляем ее
-        if 'RISK_FREE' in weights:
-            # Предполагаем, что безрисковая ставка годовая, конвертируем в дневную
-            daily_rf_rate = (1 + weights['RISK_FREE']) ** (1/252) - 1
+        if 'RISK_FREE' in weights and weights['RISK_FREE'] > 0:
+            rf_weight = weights['RISK_FREE']
+            # Предполагаем безрисковую ставку в годовом исчислении, переводим в дневную
+            risk_free_rate = 0.075  # Например, 7.5%
+            daily_rf_rate = (1 + risk_free_rate) ** (1/252) - 1
+            
+            self.logger.info(f"Добавлена безрисковая часть с весом {rf_weight*100:.1f}% и ставкой {risk_free_rate*100:.2f}%")
+            
+            # Пропорционально уменьшаем вес портфеля с акциями
+            if 'portfolio_return' in portfolio_returns.columns:
+                portfolio_returns['portfolio_return'] = portfolio_returns['portfolio_return'] * (1 - rf_weight)
+            
+            # Добавляем безрисковую часть
             portfolio_returns['risk_free_return'] = daily_rf_rate
             
             # Обновляем общую доходность
-            portfolio_returns['portfolio_return'] = (
-                portfolio_returns['portfolio_return'] * (1 - weights.get('RISK_FREE', 0)) + 
-                portfolio_returns['risk_free_return'] * weights.get('RISK_FREE', 0)
-            )
-            
-            self.logger.info(f"Добавлена безрисковая часть с весом {weights.get('RISK_FREE', 0)*100:.1f}%")
+            if 'portfolio_return' in portfolio_returns.columns:
+                portfolio_returns['portfolio_return'] = portfolio_returns['portfolio_return'] + daily_rf_rate * rf_weight
+            else:
+                portfolio_returns['portfolio_return'] = daily_rf_rate * rf_weight
         
         self.portfolio_returns = portfolio_returns
         return portfolio_returns
+
     
     def calculate_performance_metrics(self, returns=None, risk_free_rate=0):
         """

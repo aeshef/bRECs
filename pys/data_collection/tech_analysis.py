@@ -7,12 +7,22 @@ from datetime import datetime
 from typing import List
 import importlib
 import logging
+import sys
 
 import pys.data_collection.technical_indicators as technical_indicators
 importlib.reload(technical_indicators)
 from pys.data_collection.technical_indicators import TechnicalIndicators
 
-class TechAnalysisPipeline:
+current_dir = os.path.dirname(os.path.abspath(__file__))
+while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
+    current_dir = os.path.dirname(current_dir)
+
+if current_dir not in sys.path:
+    sys.path.insert(0, current_dir)
+
+from utils.logger import BaseLogger
+
+class TechAnalysisPipeline(BaseLogger):
     def __init__(self,
                  base_dir: str = "/Users/aeshef/Documents/GitHub/kursach",
                  tickers: List[str] = [
@@ -20,23 +30,10 @@ class TechAnalysisPipeline:
                      "ALRS", "SNGS", "VTBR", "NVTK", "POLY", "MVID", "PHOR",
                      "SIBN", "AFKS", "MAGN", "RUAL"
                  ]):
+        super().__init__('TechAnalysisPipeline')
         self.base_dir = base_dir
         self.tickers = tickers
         self.results = {} 
-        self.logger = self._setup_logger()
-        self.logger.info("Инициализирован TechAnalysisPipeline.")
-
-    def _setup_logger(self):
-        """Настройка логгера для пайплайна аналитики."""
-        logger = logging.getLogger('TechAnalysisPipeline')
-        if not logger.handlers:
-            handler = logging.StreamHandler()
-            formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                                          '%Y-%m-%d %H:%M:%S')
-            handler.setFormatter(formatter)
-            logger.addHandler(handler)
-            logger.setLevel(logging.INFO)
-        return logger
 
     def run_pipeline(self):
         self.logger.info("=== НАЧАЛО ТЕХНИЧЕСКОГО АНАЛИЗА ===")
