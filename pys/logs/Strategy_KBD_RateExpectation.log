@@ -1,0 +1,27 @@
+2025-04-25 21:43:59 - Strategy_KBD_RateExpectation - INFO - Инициализирована стратегия с параметрами: толерантность к риску=medium, состояние рынка=unknown
+2025-04-25 21:43:59 - Strategy_KBD_RateExpectation - INFO - Параметры фильтрации: {'min_yield': 1.5, 'max_yield': 17.5, 'min_duration': 0.5, 'max_duration': 4.0, 'market_condition': 'unknown'}
+2025-04-25 21:43:59 - Strategy_KBD_RateExpectation - INFO - Параметры формирования портфеля: {'n_bonds': 5, 'weighting_strategy': 'inverse_duration', 'portfolio_stability': 0.7}
+2025-04-25 21:52:21 - Strategy_KBD_RateExpectation - INFO - Инициализирована стратегия с параметрами: толерантность к риску=medium, состояние рынка=unknown
+2025-04-25 21:52:21 - Strategy_KBD_RateExpectation - INFO - Параметры фильтрации: {'min_yield': 1.5, 'max_yield': 17.5, 'min_duration': 0.5, 'max_duration': 4.0, 'market_condition': 'unknown'}
+2025-04-25 21:52:21 - Strategy_KBD_RateExpectation - INFO - Параметры формирования портфеля: {'n_bonds': 5, 'weighting_strategy': 'inverse_duration', 'portfolio_stability': 0.7}
+2025-04-25 22:43:00 - Strategy_KBD_RateExpectation - INFO - Инициализирована стратегия с параметрами: толерантность к риску=medium, состояние рынка=unknown
+2025-04-25 22:43:00 - Strategy_KBD_RateExpectation - INFO - Параметры фильтрации: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-25 22:43:00 - Strategy_KBD_RateExpectation - INFO - Параметры формирования портфеля: {'n_bonds': 5, 'weighting_strategy': 'inverse_duration', 'portfolio_stability': 0.7}
+2025-04-25 22:44:50 - Strategy_KBD_RateExpectation - INFO - Инициализирована стратегия с параметрами: толерантность к риску=medium, состояние рынка=unknown
+2025-04-25 22:44:50 - Strategy_KBD_RateExpectation - INFO - Параметры фильтрации: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-25 22:44:50 - Strategy_KBD_RateExpectation - INFO - Параметры формирования портфеля: {'n_bonds': 5, 'weighting_strategy': 'inverse_duration', 'portfolio_stability': 0.7}
+2025-04-25 22:45:53 - Strategy_KBD_RateExpectation - INFO - Инициализирована стратегия с параметрами: толерантность к риску=medium, состояние рынка=unknown
+2025-04-25 22:45:53 - Strategy_KBD_RateExpectation - INFO - Параметры фильтрации: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-25 22:45:53 - Strategy_KBD_RateExpectation - INFO - Параметры формирования портфеля: {'n_bonds': 5, 'weighting_strategy': 'inverse_duration', 'portfolio_stability': 0.7}
+2025-04-25 23:36:49 - Strategy_KBD_RateExpectation - INFO - Инициализирована стратегия с параметрами: толерантность к риску=medium, состояние рынка=unknown
+2025-04-25 23:36:49 - Strategy_KBD_RateExpectation - INFO - Параметры фильтрации: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-25 23:36:49 - Strategy_KBD_RateExpectation - INFO - Параметры формирования портфеля: {'n_bonds': 5, 'weighting_strategy': 'inverse_duration', 'portfolio_stability': 0.7}
+2025-04-25 23:37:30 - Strategy_KBD_RateExpectation - INFO - Инициализирована стратегия с параметрами: толерантность к риску=medium, состояние рынка=unknown
+2025-04-25 23:37:30 - Strategy_KBD_RateExpectation - INFO - Параметры фильтрации: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-25 23:37:30 - Strategy_KBD_RateExpectation - INFO - Параметры формирования портфеля: {'n_bonds': 5, 'weighting_strategy': 'inverse_duration', 'portfolio_stability': 0.7}
+2025-04-25 23:37:48 - Strategy_KBD_RateExpectation - INFO - Инициализирована стратегия с параметрами: толерантность к риску=medium, состояние рынка=neutral
+2025-04-25 23:37:48 - Strategy_KBD_RateExpectation - INFO - Параметры фильтрации: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-25 23:37:48 - Strategy_KBD_RateExpectation - INFO - Параметры формирования портфеля: {'n_bonds': 5, 'weighting_strategy': 'inverse_duration', 'portfolio_stability': 0.7}
+2025-04-26 00:00:05 - Strategy_KBD_RateExpectation - INFO - Инициализирована стратегия с параметрами: толерантность к риску=medium, состояние рынка=neutral
+2025-04-26 00:00:05 - Strategy_KBD_RateExpectation - INFO - Параметры фильтрации: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-26 00:00:05 - Strategy_KBD_RateExpectation - INFO - Параметры формирования портфеля: {'n_bonds': 5, 'weighting_strategy': 'inverse_duration', 'portfolio_stability': 0.7}

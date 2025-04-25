@@ -1,47 +1,45 @@
 import requests
 import pandas as pd
 import os
-import sys
-from bs4 import BeautifulSoup
-from datetime import datetime
-
-# current_dir = os.path.dirname(os.path.abspath(__file__))
-# while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
-#     current_dir = os.path.dirname(current_dir)
-#     if current_dir == os.path.dirname(current_dir):
-#         break
-# if current_dir not in sys.path:
-#     sys.path.insert(0, current_dir)
-# from utils.logger import BaseLogger
-
-# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
-# from private_info import BASE_PATH
+import traceback
+from datetime import datetime, timedelta
 
 from pys.utils.logger import BaseLogger
 from pys.data_collection.private_info import BASE_PATH
 
 class KBDDownloader(BaseLogger):
     """
-    Класс для загрузки данных кривой бескупонной доходности (КБД) с сайта ЦБ РФ
+    Класс для загрузки данных кривой бескупонной доходности (КБД) с MOEX API
     """
     
-    def __init__(self, output_dir=f'{BASE_PATH}/data/processed_data'):
+    def __init__(self, output_dir=f'{BASE_PATH}/data/processed_data/BONDS/kbd'):
         """
         Инициализация загрузчика данных КБД
         
         :param output_dir: Директория для сохранения данных
         """
         super().__init__('KBDDownloader')
+        # Гарантируем, что все данные сохраняются в указанной директории
         self.output_dir = output_dir
-        self.url = "https://cbr.ru/hd_base/zcyc_params/"
+        
+        # Организуем логическую структуру подпапок
+        self.data_dir = os.path.join(self.output_dir, 'data')
+        self.raw_dir = os.path.join(self.output_dir, 'raw')
+        
+        # Создаем нужные директории
+        os.makedirs(self.output_dir, exist_ok=True)
+        os.makedirs(self.data_dir, exist_ok=True)
+        os.makedirs(self.raw_dir, exist_ok=True)
+        
+        self.moex_url = "https://iss.moex.com/iss/apps/bondization/zcyc_range_calculator.csv"
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
         }
         self.logger.info("KBDDownloader initialized")
-        
+    
     def get_kbd(self, start_date, end_date):
         """
-        Получить данные КБД за указанный период и сохранить их в CSV
+        Получить данные КБД с MOEX API за указанный период и сохранить их в CSV
         
         :param start_date: Начальная дата в формате datetime
         :param end_date: Конечная дата в формате datetime
@@ -49,71 +47,132 @@ class KBDDownloader(BaseLogger):
         """
         self.logger.info(f"Fetching KBD data from {start_date} to {end_date}")
         
-        session = requests.Session()
-        session.headers.update(self.headers)
-
         try:
-            response = session.get(self.url)
+            # Форматируем даты в нужный формат для API
+            start_str = start_date.strftime('%Y-%m-%d')
+            end_str = end_date.strftime('%Y-%m-%d')
             
-            if response.status_code == 200:
-                self.logger.info("Successfully retrieved page from CBR")
-                soup = BeautifulSoup(response.content, 'html.parser')
+            # Формируем параметры запроса
+            params = {
+                'from': start_str,
+                'till': end_str,
+                'periods': '0.25,0.5,0.75,1,2,3,5,7,10,15,20,30',  # Тенора
+                'iss.dp': 'comma',  # Использовать запятую как десятичный разделитель
+                'iss.df': '%d.%m.%Y'  # Формат даты (без экранирования)
+            }
+            
+            # Отправляем запрос
+            response = requests.get(self.moex_url, params=params, headers=self.headers)
+            
+            if response.status_code != 200:
+                self.logger.error(f"MOEX API request error: HTTP {response.status_code}")
+                return None
+            
+            # Сохраняем сырые данные для анализа
+            raw_file_path = os.path.join(self.raw_dir, f'raw_kbd_data_{start_str}_to_{end_str}.csv')
+            with open(raw_file_path, 'wb') as f:
+                f.write(response.content)
+            
+            self.logger.info(f"Raw KBD data saved to {raw_file_path}")
+            
+            # Парсим CSV данные
+            df = self._parse_moex_csv(raw_file_path)
+            
+            if df is not None and not df.empty:
+                # Сохраняем обработанные данные в основной файл
+                file_path = os.path.join(self.data_dir, 'kbd_data.csv')
+                df.to_csv(file_path, index=False)
+                self.logger.info(f"Processed KBD data saved to {file_path} with {len(df)} rows")
                 
-                table = soup.find('table', {'class': 'data spaced'})
+                # Сохраняем также копию с датой получения
+                dated_file_path = os.path.join(self.data_dir, f'kbd_data_{datetime.now().strftime("%Y%m%d")}.csv')
+                df.to_csv(dated_file_path, index=False)
                 
-                if table:
-                    headers = []
-                    header_row = table.find_all('tr')[1]
-                    header_columns = header_row.find_all('th')[1:]
-                    for col in header_columns:
-                        headers.append(col.text.strip())
-                    
-                    self.logger.debug(f"Found table headers: {headers}")
-                    
-                    rows = table.find_all('tr')[2:]
-                    data = []
-                    
-                    for row in rows:
-                        cols = row.find_all('td')
-                        if len(cols) > 1:
-                            date_str = cols[0].text.strip()
-                            date_obj = datetime.strptime(date_str, '%d.%m.%Y')
-                            
-                            if start_date <= date_obj <= end_date:
-                                row_data = {'date': date_obj}
-                                
-                                for i, col in enumerate(cols[1:]):
-                                    if i < len(headers):
-                                        row_data[headers[i]] = col.text.strip()
-                                
-                                data.append(row_data)
-                    
-                    self.logger.info(f"Extracted {len(data)} rows of KBD data within date range")
-                    
-                    if data:
-                        df = pd.DataFrame(data)
-
-                        os.makedirs(self.output_dir, exist_ok=True)
-                        file_path = os.path.join(self.output_dir, 'kbd.csv')
-                        
-                        df.to_csv(file_path, index=False)
-                        self.logger.info(f"KBD data successfully saved to {file_path}")
-                        
-                        return df
-                    else:
-                        self.logger.warning("No data found within the specified date range")
-                        return None
-                else:
-                    self.logger.error("Table not found on the page")
-                    return None
+                return df
             else:
-                self.logger.error(f"Request error: HTTP {response.status_code}")
+                self.logger.error("Failed to parse MOEX data")
                 return None
                 
         except Exception as e:
             self.logger.error(f"Exception during KBD data retrieval: {e}")
+            self.logger.error(traceback.format_exc())
             return None
+    
+    def _parse_moex_csv(self, file_path):
+        """
+        Парсинг CSV-файла от MOEX API
+        
+        :param file_path: Путь к CSV-файлу
+        :return: DataFrame с данными КБД
+        """
+        try:
+            # Проверяем содержимое файла
+            with open(file_path, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+                self.logger.info(f"Raw file contains {len(lines)} lines")
+                
+                # Определяем, есть ли строка "zcyc" в начале
+                first_line_is_zcyc = lines[0].strip() == 'zcyc'
+                skip_rows = 1 if first_line_is_zcyc else 0
+                
+                if first_line_is_zcyc:
+                    self.logger.info("First line contains 'zcyc', skipping it")
             
+            # Читаем CSV с правильным числом пропускаемых строк
+            df = pd.read_csv(
+                file_path, 
+                sep=';', 
+                skiprows=skip_rows,
+                encoding='utf-8'
+            )
+            
+            self.logger.info(f"Parsed CSV with columns: {df.columns.tolist()}")
+            
+            # Преобразуем в нужный формат для дальнейшего анализа
+            result_df = pd.DataFrame()
+            
+            # Обрабатываем дату
+            if 'tradedate' in df.columns:
+                try:
+                    result_df['date'] = pd.to_datetime(df['tradedate'], format='%d.%m.%Y')
+                    self.logger.info(f"Successfully parsed dates, first date: {result_df['date'].iloc[0]}")
+                except Exception as e:
+                    self.logger.error(f"Error parsing dates: {e}")
+                    return None
+            else:
+                self.logger.error("Missing tradedate column in MOEX data")
+                return None
+            
+            # Маппинг колонок периодов в стандартный формат
+            period_mapping = {
+                'period_0.25': '0.25Y',
+                'period_0.5': '0.5Y',
+                'period_0.75': '0.75Y',
+                'period_1.0': '1Y',
+                'period_2.0': '2Y',
+                'period_3.0': '3Y',
+                'period_5.0': '5Y',
+                'period_7.0': '7Y',
+                'period_10.0': '10Y',
+                'period_15.0': '15Y',
+                'period_20.0': '20Y',
+                'period_30.0': '30Y'
+            }
+            
+            # Копируем и преобразуем колонки с периодами
+            for moex_col, std_col in period_mapping.items():
+                if moex_col in df.columns:
+                    # Заменяем запятые на точки и преобразуем в числа
+                    result_df[std_col] = pd.to_numeric(df[moex_col].astype(str).str.replace(',', '.'), errors='coerce')
+            
+            self.logger.info(f"Processed MOEX data: {len(result_df)} rows with {len([c for c in result_df.columns if c != 'date'])} tenors")
+            return result_df
+                
+        except Exception as e:
+            self.logger.error(f"Error parsing MOEX CSV: {e}")
+            self.logger.error(traceback.format_exc())
+            return None
+    
     def load_kbd_data(self, file_path=None):
         """
         Загрузить ранее сохраненные данные КБД из CSV файла
@@ -122,7 +181,7 @@ class KBDDownloader(BaseLogger):
         :return: DataFrame с данными КБД
         """
         if file_path is None:
-            file_path = os.path.join(self.output_dir, 'kbd.csv')
+            file_path = os.path.join(self.data_dir, 'kbd_data.csv')
             
         try:
             if os.path.exists(file_path):

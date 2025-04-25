@@ -448,3 +448,9 @@
 2025-04-25 17:38:44 - MOEXBondHistoricalParser - INFO - Найдено 49 облигаций с порогом непрерывности не менее 99%
 2025-04-25 17:38:45 - MOEXBondHistoricalParser - INFO - Датасет с порогом непрерывности 99% создан и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/threshold_dataset_20240101_20250422_99
 2025-04-25 17:38:45 - MOEXBondHistoricalParser - INFO - Всего дат: 340, облигаций: 49
+2025-04-25 23:37:05 - MOEXBondHistoricalParser - INFO - MOEX Bond Parser initialized
+2025-04-25 23:37:05 - MOEXBondHistoricalParser - INFO - Запуск массового парсинга данных с 2024-01-01 по 2025-04-24
+2025-04-25 23:37:05 - MOEXBondHistoricalParser - INFO - Запрошен период с 2024-01-01 по 2025-04-24
+2025-04-25 23:37:05 - MOEXBondHistoricalParser - INFO - Получение облигаций за период с 2024-01-01 по 2025-04-24
+2025-04-25 23:37:05 - MOEXBondHistoricalParser - INFO - Обработка даты: 2024-01-01 (рабочий день)
+2025-04-25 23:37:05 - MOEXBondHistoricalParser - INFO - Получение списка облигаций на 2024-01-01

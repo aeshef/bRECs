@@ -1,0 +1,35 @@
+{
+  "run_id": "20250426_012525",
+  "run_date": "2025-04-26 01:25:26",
+  "strategy_profile": "aggressive",
+  "weighting_strategy_used": "equal",
+  "initial_params": {
+    "min_yield": 18.58,
+    "max_yield": 56.58,
+    "min_duration": 0.08000000000000002,
+    "max_duration": 2.9699999999999993,
+    "market_condition": "inverted",
+    "excluded_issuers": [
+      "\u0412\u0422\u0411",
+      "\u041c\u0435\u0447\u0435\u043b"
+    ]
+  },
+  "final_params": {
+    "min_yield": 18.58,
+    "max_yield": 56.58,
+    "min_duration": 0.08000000000000002,
+    "max_duration": 2.9699999999999993,
+    "market_condition": "inverted",
+    "excluded_issuers": [
+      "\u0412\u0422\u0411",
+      "\u041c\u0435\u0447\u0435\u043b"
+    ]
+  },
+  "portfolio_stats": {
+    "number_of_bonds": 5,
+    "date": "2025-04-26",
+    "weighted_yield": 23.288,
+    "weighted_duration": 0.7360000000000001,
+    "avg_score": 0.5737106710424517
+  }
+}

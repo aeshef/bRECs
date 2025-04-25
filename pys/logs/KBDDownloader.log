@@ -1,0 +1,334 @@
+2025-04-25 21:43:59 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 21:43:59 - KBDDownloader - INFO - Successfully loaded KBD data from /Users/aeshef/Documents/GitHub/kursach/data/processed_data/kbd.csv (6 rows)
+2025-04-25 21:43:59 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 21:43:59 - KBDDownloader - INFO - Successfully loaded KBD data from /Users/aeshef/Documents/GitHub/kursach/data/processed_data/kbd.csv (6 rows)
+2025-04-25 21:43:59 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 21:43:59 - KBDDownloader - INFO - Successfully loaded KBD data from /Users/aeshef/Documents/GitHub/kursach/data/processed_data/kbd.csv (6 rows)
+2025-04-25 21:52:21 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 21:52:21 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-25 21:52:21 - KBDDownloader - INFO - Successfully retrieved page from CBR
+2025-04-25 21:52:21 - KBDDownloader - INFO - Extracted 3 rows of KBD data within date range
+2025-04-25 21:52:21 - KBDDownloader - INFO - KBD data successfully saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/kbd.csv
+2025-04-25 21:52:21 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 21:52:21 - KBDDownloader - INFO - Successfully loaded KBD data from /Users/aeshef/Documents/GitHub/kursach/data/processed_data/kbd.csv (3 rows)
+2025-04-25 22:42:59 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 22:42:59 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-25 22:42:59 - KBDDownloader - INFO - Successfully retrieved page from CBR
+2025-04-25 22:43:00 - KBDDownloader - INFO - Extracted 3 rows of KBD data within date range
+2025-04-25 22:43:00 - KBDDownloader - INFO - KBD data successfully saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/kbd_data.csv
+2025-04-25 22:43:00 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 22:43:00 - KBDDownloader - WARNING - KBD data file not found at /Users/aeshef/Documents/GitHub/kursach/data/processed_data/kbd_data.csv
+2025-04-25 22:43:00 - KBDDownloader - INFO - Fetching KBD data from 2024-04-25 22:43:00.038907 to 2025-04-25 22:43:00.038907
+2025-04-25 22:43:00 - KBDDownloader - INFO - Successfully retrieved page from CBR
+2025-04-25 22:43:00 - KBDDownloader - INFO - Extracted 6 rows of KBD data within date range
+2025-04-25 22:43:00 - KBDDownloader - INFO - KBD data successfully saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/kbd_data.csv
+2025-04-25 22:44:49 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 22:44:49 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-25 22:44:50 - KBDDownloader - INFO - Successfully retrieved page from CBR
+2025-04-25 22:44:50 - KBDDownloader - INFO - Extracted 3 rows of KBD data within date range
+2025-04-25 22:44:50 - KBDDownloader - INFO - KBD data successfully saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/kbd_data.csv
+2025-04-25 22:44:50 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 22:44:50 - KBDDownloader - INFO - Loaded existing KBD data: 3 records
+2025-04-25 22:44:50 - KBDDownloader - INFO - Fetching KBD data from 2024-04-25 22:44:50.513482 to 2025-04-25 22:44:50.513482
+2025-04-25 22:44:50 - KBDDownloader - INFO - Successfully retrieved page from CBR
+2025-04-25 22:44:50 - KBDDownloader - INFO - Extracted 6 rows of KBD data within date range
+2025-04-25 22:44:50 - KBDDownloader - INFO - KBD data successfully saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/kbd_data.csv
+2025-04-25 22:44:50 - KBDDownloader - INFO - Retrieved new KBD data: 6 records
+2025-04-25 22:44:50 - KBDDownloader - INFO - Updated KBD data: 6 records after merging
+2025-04-25 22:45:52 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 22:45:52 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-25 22:45:53 - KBDDownloader - INFO - Successfully retrieved page from CBR
+2025-04-25 22:45:53 - KBDDownloader - INFO - Extracted 3 rows of KBD data within date range
+2025-04-25 22:45:53 - KBDDownloader - INFO - KBD data successfully saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/kbd_data.csv
+2025-04-25 22:45:53 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 22:45:53 - KBDDownloader - INFO - Loaded existing KBD data: 3 records
+2025-04-25 22:45:53 - KBDDownloader - INFO - Fetching KBD data from 2024-04-25 22:45:53.157820 to 2025-04-25 22:45:53.157820
+2025-04-25 22:45:53 - KBDDownloader - INFO - Successfully retrieved page from CBR
+2025-04-25 22:45:53 - KBDDownloader - INFO - Extracted 6 rows of KBD data within date range
+2025-04-25 22:45:53 - KBDDownloader - INFO - KBD data successfully saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/kbd_data.csv
+2025-04-25 22:45:53 - KBDDownloader - INFO - Retrieved new KBD data: 6 records
+2025-04-25 22:45:53 - KBDDownloader - INFO - Updated KBD data: 6 records after merging
+2025-04-25 23:36:48 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 23:36:48 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-25 23:36:49 - KBDDownloader - INFO - Successfully retrieved page from CBR
+2025-04-25 23:36:49 - KBDDownloader - INFO - Extracted 3 rows of KBD data within date range
+2025-04-25 23:36:49 - KBDDownloader - INFO - KBD data successfully saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/kbd_data.csv
+2025-04-25 23:36:49 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 23:36:49 - KBDDownloader - INFO - Loaded existing KBD data: 3 records
+2025-04-25 23:36:49 - KBDDownloader - INFO - Fetching KBD data from 2024-04-25 23:36:49.517607 to 2025-04-25 23:36:49.517607
+2025-04-25 23:36:49 - KBDDownloader - INFO - Successfully retrieved page from CBR
+2025-04-25 23:36:49 - KBDDownloader - INFO - Extracted 6 rows of KBD data within date range
+2025-04-25 23:36:49 - KBDDownloader - INFO - KBD data successfully saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/kbd_data.csv
+2025-04-25 23:36:49 - KBDDownloader - INFO - Retrieved new KBD data: 6 records
+2025-04-25 23:36:49 - KBDDownloader - INFO - Updated KBD data: 6 records after merging
+2025-04-25 23:37:30 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 23:37:30 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-25 23:37:30 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw_kbd_data.csv
+2025-04-25 23:37:30 - KBDDownloader - INFO - Columns in raw data: ['zcyc']
+2025-04-25 23:37:30 - KBDDownloader - ERROR - Date column not found in MOEX data
+2025-04-25 23:37:30 - KBDDownloader - ERROR - Failed to process MOEX data
+2025-04-25 23:37:30 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 23:37:30 - KBDDownloader - INFO - Successfully loaded KBD data from /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/kbd_data.csv (6 rows)
+2025-04-25 23:37:30 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 23:37:30 - KBDDownloader - INFO - Fetching KBD data from 2024-04-25 23:37:30.422957 to 2025-04-25 23:37:30.422957
+2025-04-25 23:37:30 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/results/kbd/raw_kbd_data.csv
+2025-04-25 23:37:30 - KBDDownloader - INFO - Columns in raw data: ['zcyc']
+2025-04-25 23:37:30 - KBDDownloader - ERROR - Date column not found in MOEX data
+2025-04-25 23:37:30 - KBDDownloader - ERROR - Failed to process MOEX data
+2025-04-25 23:37:30 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 23:37:30 - KBDDownloader - WARNING - KBD data file not found at /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/results/kbd_data.csv
+2025-04-25 23:37:30 - KBDDownloader - INFO - Fetching KBD data from 2024-04-25 23:37:30.489372 to 2025-04-25 23:37:30.489372
+2025-04-25 23:37:30 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/results/raw_kbd_data.csv
+2025-04-25 23:37:30 - KBDDownloader - INFO - Columns in raw data: ['zcyc']
+2025-04-25 23:37:30 - KBDDownloader - ERROR - Date column not found in MOEX data
+2025-04-25 23:37:30 - KBDDownloader - ERROR - Failed to process MOEX data
+2025-04-25 23:37:48 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 23:37:48 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-25 23:37:48 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw_kbd_data.csv
+2025-04-25 23:37:48 - KBDDownloader - INFO - Columns in raw data: ['zcyc']
+2025-04-25 23:37:48 - KBDDownloader - ERROR - Date column not found in MOEX data
+2025-04-25 23:37:48 - KBDDownloader - ERROR - Failed to process MOEX data
+2025-04-25 23:37:48 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 23:37:48 - KBDDownloader - WARNING - KBD data file not found at /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/kbd_data.csv
+2025-04-25 23:37:48 - KBDDownloader - INFO - Fetching KBD data from 2024-04-25 23:37:48.415310 to 2025-04-25 23:37:48.415310
+2025-04-25 23:37:48 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw_kbd_data.csv
+2025-04-25 23:37:48 - KBDDownloader - INFO - Columns in raw data: ['zcyc']
+2025-04-25 23:37:48 - KBDDownloader - ERROR - Date column not found in MOEX data
+2025-04-25 23:37:48 - KBDDownloader - ERROR - Failed to process MOEX data
+2025-04-25 23:37:48 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 23:37:48 - KBDDownloader - INFO - Fetching KBD data from 2024-04-25 23:37:48.484067 to 2025-04-25 23:37:48.484067
+2025-04-25 23:37:48 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/results/kbd/raw_kbd_data.csv
+2025-04-25 23:37:48 - KBDDownloader - INFO - Columns in raw data: ['zcyc']
+2025-04-25 23:37:48 - KBDDownloader - ERROR - Date column not found in MOEX data
+2025-04-25 23:37:48 - KBDDownloader - ERROR - Failed to process MOEX data
+2025-04-25 23:37:48 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-25 23:37:48 - KBDDownloader - WARNING - KBD data file not found at /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/results/kbd_data.csv
+2025-04-25 23:37:48 - KBDDownloader - INFO - Fetching KBD data from 2024-04-25 23:37:48.569583 to 2025-04-25 23:37:48.569583
+2025-04-25 23:37:48 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/results/raw_kbd_data.csv
+2025-04-25 23:37:48 - KBDDownloader - INFO - Columns in raw data: ['zcyc']
+2025-04-25 23:37:48 - KBDDownloader - ERROR - Date column not found in MOEX data
+2025-04-25 23:37:48 - KBDDownloader - ERROR - Failed to process MOEX data
+2025-04-26 00:00:03 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 00:00:03 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-26 00:00:04 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:04 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:04 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:04 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:04 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:04 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:04 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:04 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:04 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:04 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:04 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:04 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - No KBD data found for the specified period
+2025-04-26 00:00:05 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 00:00:05 - KBDDownloader - WARNING - KBD data file not found at /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/kbd_data.csv
+2025-04-26 00:00:05 - KBDDownloader - INFO - Fetching KBD data from 2024-04-26 00:00:05.126978 to 2025-04-26 00:00:05.126978
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - No KBD data found for the specified period
+2025-04-26 00:00:05 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 00:00:05 - KBDDownloader - INFO - Fetching KBD data from 2024-04-26 00:00:05.654208 to 2025-04-26 00:00:05.654208
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:05 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:06 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:06 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:06 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:06 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:06 - KBDDownloader - ERROR - Could not find GCurveResult in response
+2025-04-26 00:00:06 - KBDDownloader - ERROR - No KBD data found for the specified period
+2025-04-26 00:20:47 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 00:20:47 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-26 00:20:47 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw_kbd_data.csv
+2025-04-26 00:20:47 - KBDDownloader - INFO - Raw file contains 261 lines
+2025-04-26 00:20:47 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 00:20:47 - KBDDownloader - ERROR - Error parsing MOEX CSV: time data "0000000000000000000000003.0000000000000000000000001.0000000000000000000002024" doesn't match format "%d.%m.%Y", at position 0. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-04-26 00:20:47 - KBDDownloader - ERROR - Traceback (most recent call last):
+  File "/Users/aeshef/Documents/GitHub/kursach/pys/data_collection/kbd.py", line 128, in _parse_moex_csv
+    result_df['date'] = pd.to_datetime(df['tradedate'], format='%d.%m.%Y')
+                        ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/pandas/core/tools/datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/pandas/core/tools/datetimes.py", line 433, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/pandas/core/tools/datetimes.py", line 467, in _array_strptime_with_fallback
+    result, tz_out = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "strptime.pyx", line 501, in pandas._libs.tslibs.strptime.array_strptime
+  File "strptime.pyx", line 451, in pandas._libs.tslibs.strptime.array_strptime
+  File "strptime.pyx", line 583, in pandas._libs.tslibs.strptime._parse_with_format
+ValueError: time data "0000000000000000000000003.0000000000000000000000001.0000000000000000000002024" doesn't match format "%d.%m.%Y", at position 0. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+
+2025-04-26 00:20:47 - KBDDownloader - ERROR - Failed to parse MOEX data
+2025-04-26 00:20:47 - KBDDownloader - WARNING - KBD data file not found at /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/kbd_data.csv
+2025-04-26 00:25:14 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 00:25:14 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-26 00:25:25 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw_kbd_data.csv
+2025-04-26 00:25:25 - KBDDownloader - INFO - Raw file contains 261 lines
+2025-04-26 00:25:25 - KBDDownloader - INFO - Headers: ['']
+2025-04-26 00:25:25 - KBDDownloader - INFO - Found 257 data rows
+2025-04-26 00:25:25 - KBDDownloader - ERROR - Error parsing MOEX CSV: 1 columns passed, passed data had 14 columns
+2025-04-26 00:25:25 - KBDDownloader - ERROR - Traceback (most recent call last):
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/pandas/core/internals/construction.py", line 939, in _finalize_columns_and_data
+    columns = _validate_or_indexify_columns(contents, columns)
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/pandas/core/internals/construction.py", line 986, in _validate_or_indexify_columns
+    raise AssertionError(
+    ...<2 lines>...
+    )
+AssertionError: 1 columns passed, passed data had 14 columns
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/aeshef/Documents/GitHub/kursach/pys/data_collection/kbd.py", line 120, in _parse_moex_csv
+    df = pd.DataFrame(data_rows, columns=headers)
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/pandas/core/frame.py", line 851, in __init__
+    arrays, columns, index = nested_data_to_arrays(
+                             ~~~~~~~~~~~~~~~~~~~~~^
+        # error: Argument 3 to "nested_data_to_arrays" has incompatible
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        dtype,
+        ^^^^^^
+    )
+    ^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/pandas/core/internals/construction.py", line 520, in nested_data_to_arrays
+    arrays, columns = to_arrays(data, columns, dtype=dtype)
+                      ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/pandas/core/internals/construction.py", line 845, in to_arrays
+    content, columns = _finalize_columns_and_data(arr, columns, dtype)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/pandas/core/internals/construction.py", line 942, in _finalize_columns_and_data
+    raise ValueError(err) from err
+ValueError: 1 columns passed, passed data had 14 columns
+
+2025-04-26 00:25:25 - KBDDownloader - ERROR - Failed to parse MOEX data
+2025-04-26 00:25:25 - KBDDownloader - WARNING - KBD data file not found at /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/kbd_data.csv
+2025-04-26 00:30:58 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 00:30:58 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-26 00:30:59 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw_kbd_data.csv
+2025-04-26 00:30:59 - KBDDownloader - INFO - Raw file contains 261 lines
+2025-04-26 00:30:59 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 00:30:59 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 00:30:59 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-01-03 00:00:00
+2025-04-26 00:30:59 - KBDDownloader - INFO - Processed MOEX data: 256 rows with 12 tenors
+2025-04-26 00:30:59 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/kbd_data.csv with 256 rows
+2025-04-26 00:47:14 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 00:47:14 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-26 00:47:14 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-01-01_to_2025-04-22.csv
+2025-04-26 00:47:14 - KBDDownloader - INFO - Raw file contains 261 lines
+2025-04-26 00:47:14 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 00:47:14 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 00:47:14 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-01-03 00:00:00
+2025-04-26 00:47:14 - KBDDownloader - INFO - Processed MOEX data: 256 rows with 12 tenors
+2025-04-26 00:47:14 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 256 rows
+2025-04-26 01:03:39 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 01:03:39 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-26 01:03:39 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-01-01_to_2025-04-22.csv
+2025-04-26 01:03:39 - KBDDownloader - INFO - Raw file contains 261 lines
+2025-04-26 01:03:39 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 01:03:39 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 01:03:39 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-01-03 00:00:00
+2025-04-26 01:03:39 - KBDDownloader - INFO - Processed MOEX data: 256 rows with 12 tenors
+2025-04-26 01:03:39 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 256 rows
+2025-04-26 01:17:53 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 01:17:53 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-26 01:17:53 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-01-01_to_2025-04-22.csv
+2025-04-26 01:17:53 - KBDDownloader - INFO - Raw file contains 261 lines
+2025-04-26 01:17:53 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 01:17:53 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 01:17:53 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-01-03 00:00:00
+2025-04-26 01:17:53 - KBDDownloader - INFO - Processed MOEX data: 256 rows with 12 tenors
+2025-04-26 01:17:53 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 256 rows
+2025-04-26 01:20:01 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 01:20:01 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-26 01:20:01 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-01-01_to_2025-04-22.csv
+2025-04-26 01:20:01 - KBDDownloader - INFO - Raw file contains 261 lines
+2025-04-26 01:20:01 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 01:20:01 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 01:20:01 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-01-03 00:00:00
+2025-04-26 01:20:01 - KBDDownloader - INFO - Processed MOEX data: 256 rows with 12 tenors
+2025-04-26 01:20:01 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 256 rows
+2025-04-26 01:20:07 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 01:20:07 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-26 01:20:07 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-01-01_to_2025-04-22.csv
+2025-04-26 01:20:07 - KBDDownloader - INFO - Raw file contains 261 lines
+2025-04-26 01:20:07 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 01:20:07 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 01:20:07 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-01-03 00:00:00
+2025-04-26 01:20:07 - KBDDownloader - INFO - Processed MOEX data: 256 rows with 12 tenors
+2025-04-26 01:20:07 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 256 rows
+2025-04-26 01:20:44 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 01:20:44 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-26 01:20:44 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-01-01_to_2025-04-22.csv
+2025-04-26 01:20:44 - KBDDownloader - INFO - Raw file contains 261 lines
+2025-04-26 01:20:44 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 01:20:44 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 01:20:44 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-01-03 00:00:00
+2025-04-26 01:20:44 - KBDDownloader - INFO - Processed MOEX data: 256 rows with 12 tenors
+2025-04-26 01:20:44 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 256 rows
+2025-04-26 01:21:25 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 01:21:25 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-26 01:21:25 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-01-01_to_2025-04-22.csv
+2025-04-26 01:21:25 - KBDDownloader - INFO - Raw file contains 261 lines
+2025-04-26 01:21:25 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 01:21:25 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 01:21:25 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-01-03 00:00:00
+2025-04-26 01:21:25 - KBDDownloader - INFO - Processed MOEX data: 256 rows with 12 tenors
+2025-04-26 01:21:25 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 256 rows
+2025-04-26 01:22:26 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 01:22:26 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-26 01:22:26 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-01-01_to_2025-04-22.csv
+2025-04-26 01:22:26 - KBDDownloader - INFO - Raw file contains 261 lines
+2025-04-26 01:22:26 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 01:22:26 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 01:22:26 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-01-03 00:00:00
+2025-04-26 01:22:26 - KBDDownloader - INFO - Processed MOEX data: 256 rows with 12 tenors
+2025-04-26 01:22:26 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 256 rows
+2025-04-26 01:23:30 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 01:23:30 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-26 01:23:30 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-01-01_to_2025-04-22.csv
+2025-04-26 01:23:30 - KBDDownloader - INFO - Raw file contains 261 lines
+2025-04-26 01:23:30 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 01:23:30 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 01:23:30 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-01-03 00:00:00
+2025-04-26 01:23:30 - KBDDownloader - INFO - Processed MOEX data: 256 rows with 12 tenors
+2025-04-26 01:23:30 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 256 rows
+2025-04-26 01:25:25 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 01:25:25 - KBDDownloader - INFO - Fetching KBD data from 2024-01-01 00:00:00 to 2025-04-22 00:00:00
+2025-04-26 01:25:25 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-01-01_to_2025-04-22.csv
+2025-04-26 01:25:25 - KBDDownloader - INFO - Raw file contains 261 lines
+2025-04-26 01:25:25 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 01:25:25 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 01:25:25 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-01-03 00:00:00
+2025-04-26 01:25:25 - KBDDownloader - INFO - Processed MOEX data: 256 rows with 12 tenors
+2025-04-26 01:25:25 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 256 rows

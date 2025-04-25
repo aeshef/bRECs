@@ -1,0 +1,138 @@
+2025-04-25 21:43:59 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-25 21:43:59 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендации: {'min_yield': 1.5, 'max_yield': 17.5, 'min_duration': 0.5, 'max_duration': 4.0, 'market_condition': 'unknown'}
+2025-04-25 21:43:59 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-25 21:43:59 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-25 21:43:59 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендации: {'min_yield': 1.5, 'max_yield': 17.5, 'min_duration': 0.5, 'max_duration': 4.0, 'market_condition': 'unknown'}
+2025-04-25 21:43:59 - BondsKBDPipeline - INFO - Параметры переопределены вручную: {'min_yield': 1.5, 'max_yield': 17.5, 'min_duration': 0.5, 'max_duration': 4.0, 'market_condition': 'unknown'}
+2025-04-25 21:43:59 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-25 21:52:21 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-25 21:52:21 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендации: {'min_yield': 1.5, 'max_yield': 17.5, 'min_duration': 0.5, 'max_duration': 4.0, 'market_condition': 'unknown'}
+2025-04-25 21:52:21 - BondsKBDPipeline - INFO - Параметры переопределены вручную: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-25 21:52:22 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-25 22:43:00 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-25 22:43:00 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендации: {'min_yield': 1.5, 'max_yield': 17.5, 'min_duration': 0.5, 'max_duration': 4.0, 'market_condition': 'unknown'}
+2025-04-25 22:43:00 - BondsKBDPipeline - INFO - Параметры переопределены вручную: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-25 22:43:00 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-25 22:44:50 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-25 22:44:50 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендации: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.5, 'max_duration': 4.0, 'market_condition': 'unknown'}
+2025-04-25 22:44:50 - BondsKBDPipeline - INFO - Параметры переопределены вручную: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-25 22:44:51 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-25 22:45:53 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-25 22:45:53 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендации: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.5, 'max_duration': 4.0, 'market_condition': 'unknown'}
+2025-04-25 22:45:53 - BondsKBDPipeline - INFO - Параметры переопределены вручную: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-25 22:45:53 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-25 23:36:49 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-25 23:36:49 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендации: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.5, 'max_duration': 4.0, 'market_condition': 'unknown'}
+2025-04-25 23:36:49 - BondsKBDPipeline - INFO - Параметры переопределены вручную: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-25 23:36:50 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-25 23:37:30 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-25 23:37:30 - BondsKBDPipeline - INFO - Загружаем данные КБД с 2024-04-25 по 2025-04-25
+2025-04-25 23:37:30 - BondsKBDPipeline - INFO - Данные КБД загружены: 0 записей
+2025-04-25 23:37:30 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендации: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-25 23:37:30 - BondsKBDPipeline - INFO - Параметры переопределены вручную: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-25 23:37:31 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-25 23:37:48 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-25 23:37:48 - BondsKBDPipeline - INFO - Загружаем данные КБД с 2024-04-25 по 2025-04-25
+2025-04-25 23:37:48 - BondsKBDPipeline - INFO - Данные КБД загружены: 0 записей
+2025-04-25 23:37:48 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендации: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-25 23:37:48 - BondsKBDPipeline - INFO - Параметры переопределены вручную: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-25 23:37:49 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-26 00:00:05 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-26 00:00:05 - BondsKBDPipeline - INFO - Загружаем данные КБД с 2024-04-26 по 2025-04-26
+2025-04-26 00:00:06 - BondsKBDPipeline - WARNING - Не удалось загрузить актуальные данные КБД
+2025-04-26 00:00:06 - BondsKBDPipeline - INFO - КБД анализ пропущен, используются стандартные параметры
+2025-04-26 00:00:06 - BondsKBDPipeline - INFO - Параметры переопределены вручную: {'min_yield': 6.0, 'max_yield': 22.0, 'min_duration': 0.1, 'max_duration': 5.0, 'market_condition': 'unknown'}
+2025-04-26 00:00:06 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-26 00:20:47 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-26 00:20:47 - BondsKBDPipeline - INFO - Загружаем данные КБД с 2024-01-01 по 2025-04-22
+2025-04-26 00:20:47 - BondsKBDPipeline - WARNING - Не удалось загрузить актуальные данные КБД, пробуем использовать локальные
+2025-04-26 00:20:47 - BondsKBDPipeline - WARNING - Данные КБД недоступны
+2025-04-26 00:20:47 - BondsKBDPipeline - INFO - КБД анализ пропущен, используются стандартные параметры
+2025-04-26 00:20:48 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-26 00:25:14 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-26 00:25:14 - BondsKBDPipeline - INFO - Загружаем данные КБД с 2024-01-01 по 2025-04-22
+2025-04-26 00:25:25 - BondsKBDPipeline - WARNING - Не удалось загрузить актуальные данные КБД, пробуем использовать локальные
+2025-04-26 00:25:25 - BondsKBDPipeline - WARNING - Данные КБД недоступны
+2025-04-26 00:25:25 - BondsKBDPipeline - INFO - КБД анализ пропущен, используются стандартные параметры
+2025-04-26 00:25:26 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-26 00:30:58 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-26 00:30:58 - BondsKBDPipeline - INFO - Загружаем данные КБД с 2024-01-01 по 2025-04-22
+2025-04-26 00:30:59 - BondsKBDPipeline - INFO - Данные КБД доступны: 256 записей
+2025-04-26 00:30:59 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендации: {'min_yield': np.float64(21.58), 'max_yield': np.float64(37.58), 'min_duration': 0.1, 'max_duration': 2.0, 'market_condition': 'inverted'}
+2025-04-26 00:30:59 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-26 00:47:14 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-26 00:47:14 - BondsKBDPipeline - INFO - Загружаем данные КБД с 2024-01-01 по 2025-04-22
+2025-04-26 00:47:14 - BondsKBDPipeline - INFO - Данные КБД доступны: 256 записей
+2025-04-26 00:47:14 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Исходные рекомендации: {'min_yield': np.float64(18.58), 'max_yield': np.float64(47.08), 'min_duration': 0.09000000000000001, 'max_duration': 2.4749999999999996, 'market_condition': 'inverted'}
+2025-04-26 00:47:14 - BondsKBDPipeline - INFO - Скорректированные рекомендации: {'min_yield': np.float64(18.58), 'max_yield': np.float64(47.08), 'min_duration': 0.09000000000000001, 'max_duration': 2.4749999999999996, 'market_condition': 'inverted'}
+2025-04-26 00:47:15 - BondsKBDPipeline - INFO - Сформирован портфель из 4 облигаций (достаточно)
+2025-04-26 00:47:15 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-26 01:03:39 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-26 01:03:39 - BondsKBDPipeline - INFO - Загружаем данные КБД с 2024-01-01 по 2025-04-22
+2025-04-26 01:03:39 - BondsKBDPipeline - INFO - Данные КБД доступны: 256 записей
+2025-04-26 01:03:39 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Исходные рекомендации: {'min_yield': np.float64(18.58), 'max_yield': np.float64(47.08), 'min_duration': 0.09000000000000001, 'max_duration': 2.4749999999999996, 'market_condition': 'inverted'}
+2025-04-26 01:03:39 - BondsKBDPipeline - INFO - Скорректированные рекомендации: {'min_yield': np.float64(18.58), 'max_yield': np.float64(47.08), 'min_duration': 0.09000000000000001, 'max_duration': 2.4749999999999996, 'market_condition': 'inverted'}
+2025-04-26 01:03:40 - BondsKBDPipeline - INFO - Сформирован портфель из 5 облигаций (достаточно)
+2025-04-26 01:03:40 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-26 01:17:53 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-26 01:17:53 - BondsKBDPipeline - INFO - Загружаем данные КБД с 2024-01-01 по 2025-04-22
+2025-04-26 01:17:53 - BondsKBDPipeline - INFO - Данные КБД доступны: 256 записей
+2025-04-26 01:17:53 - BondsKBDPipeline - INFO - Копия данных КБД сохранена в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/results/kbd_data_20250426_011753.csv
+2025-04-26 01:17:54 - BondsKBDPipeline - INFO - Результаты анализа КБД сохранены в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/analysis/kbd_analysis_20250426_011753.json
+2025-04-26 01:17:54 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендуемая стратегия взвешивания: equal (inverted_curve)
+2025-04-26 01:17:54 - BondsKBDPipeline - INFO - Используется рекомендованная КБД стратегия взвешивания: equal
+2025-04-26 01:20:01 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-26 01:20:01 - BondsKBDPipeline - INFO - Загружаем данные КБД с 2024-01-01 по 2025-04-22
+2025-04-26 01:20:01 - BondsKBDPipeline - INFO - Данные КБД доступны: 256 записей
+2025-04-26 01:20:01 - BondsKBDPipeline - INFO - Копия данных КБД сохранена в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/results/kbd_data_20250426_012001.csv
+2025-04-26 01:20:01 - BondsKBDPipeline - INFO - Результаты анализа КБД сохранены в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/analysis/kbd_analysis_20250426_012001.json
+2025-04-26 01:20:01 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендуемая стратегия взвешивания: equal (inverted_curve)
+2025-04-26 01:20:01 - BondsKBDPipeline - INFO - Используется рекомендованная КБД стратегия взвешивания: equal
+2025-04-26 01:20:07 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-26 01:20:07 - BondsKBDPipeline - INFO - Загружаем данные КБД с 2024-01-01 по 2025-04-22
+2025-04-26 01:20:07 - BondsKBDPipeline - INFO - Данные КБД доступны: 256 записей
+2025-04-26 01:20:07 - BondsKBDPipeline - INFO - Копия данных КБД сохранена в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/results/kbd_data_20250426_012007.csv
+2025-04-26 01:20:07 - BondsKBDPipeline - INFO - Результаты анализа КБД сохранены в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/analysis/kbd_analysis_20250426_012007.json
+2025-04-26 01:20:07 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендуемая стратегия взвешивания: equal (inverted_curve)
+2025-04-26 01:20:07 - BondsKBDPipeline - INFO - Используется рекомендованная КБД стратегия взвешивания: equal
+2025-04-26 01:20:44 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-26 01:20:44 - BondsKBDPipeline - INFO - Загружаем данные КБД с 2024-01-01 по 2025-04-22
+2025-04-26 01:20:44 - BondsKBDPipeline - INFO - Данные КБД доступны: 256 записей
+2025-04-26 01:20:44 - BondsKBDPipeline - INFO - Копия данных КБД сохранена в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/results/kbd_data_20250426_012044.csv
+2025-04-26 01:20:44 - BondsKBDPipeline - INFO - Результаты анализа КБД сохранены в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/analysis/kbd_analysis_20250426_012044.json
+2025-04-26 01:20:44 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендуемая стратегия взвешивания: equal (inverted_curve)
+2025-04-26 01:20:44 - BondsKBDPipeline - INFO - Используется рекомендованная КБД стратегия взвешивания: equal
+2025-04-26 01:21:25 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-26 01:21:25 - BondsKBDPipeline - INFO - Загружаем данные КБД с 2024-01-01 по 2025-04-22
+2025-04-26 01:21:25 - BondsKBDPipeline - INFO - Данные КБД доступны: 256 записей
+2025-04-26 01:21:25 - BondsKBDPipeline - INFO - Копия данных КБД сохранена в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/results/kbd_data_20250426_012125.csv
+2025-04-26 01:21:26 - BondsKBDPipeline - INFO - Результаты анализа КБД сохранены в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/analysis/kbd_analysis_20250426_012125.json
+2025-04-26 01:21:26 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендуемая стратегия взвешивания: equal (inverted_curve)
+2025-04-26 01:21:26 - BondsKBDPipeline - INFO - Используется рекомендованная КБД стратегия взвешивания: equal
+2025-04-26 01:22:26 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-26 01:22:26 - BondsKBDPipeline - INFO - Загружаем данные КБД с 2024-01-01 по 2025-04-22
+2025-04-26 01:22:26 - BondsKBDPipeline - INFO - Данные КБД доступны: 256 записей
+2025-04-26 01:22:26 - BondsKBDPipeline - INFO - Копия данных КБД сохранена в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/results/kbd_data_20250426_012226.csv
+2025-04-26 01:22:26 - BondsKBDPipeline - INFO - Результаты анализа КБД сохранены в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/analysis/kbd_analysis_20250426_012226.json
+2025-04-26 01:22:26 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендуемая стратегия взвешивания: equal (inverted_curve)
+2025-04-26 01:22:26 - BondsKBDPipeline - INFO - Используется рекомендованная КБД стратегия взвешивания: equal
+2025-04-26 01:23:30 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-26 01:23:30 - BondsKBDPipeline - INFO - Загружаем данные КБД с 2024-01-01 по 2025-04-22
+2025-04-26 01:23:30 - BondsKBDPipeline - INFO - Данные КБД доступны: 256 записей
+2025-04-26 01:23:30 - BondsKBDPipeline - INFO - Копия данных КБД сохранена в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/results/kbd_data_20250426_012330.csv
+2025-04-26 01:23:30 - BondsKBDPipeline - INFO - Результаты анализа КБД сохранены в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/analysis/kbd_analysis_20250426_012330.json
+2025-04-26 01:23:30 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендуемая стратегия взвешивания: equal (inverted_curve)
+2025-04-26 01:23:30 - BondsKBDPipeline - INFO - Используется рекомендованная КБД стратегия взвешивания: equal
+2025-04-26 01:23:31 - BondsKBDPipeline - INFO - Сформирован портфель из 5 облигаций (достаточно)
+2025-04-26 01:23:31 - BondsKBDPipeline - INFO - Сводка результатов сохранена в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/results/bonds_results_20250426_012330.json
+2025-04-26 01:23:31 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-26 01:25:25 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-26 01:25:25 - BondsKBDPipeline - INFO - Загружаем данные КБД с 2024-01-01 по 2025-04-22
+2025-04-26 01:25:25 - BondsKBDPipeline - INFO - Данные КБД доступны: 256 записей
+2025-04-26 01:25:25 - BondsKBDPipeline - INFO - Копия данных КБД сохранена в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/results/kbd_data_20250426_012525.csv
+2025-04-26 01:25:25 - BondsKBDPipeline - INFO - Результаты анализа КБД сохранены в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/analysis/kbd_analysis_20250426_012525.json
+2025-04-26 01:25:25 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендуемая стратегия взвешивания: equal (inverted_curve)
+2025-04-26 01:25:25 - BondsKBDPipeline - INFO - Используется рекомендованная КБД стратегия взвешивания: equal
+2025-04-26 01:25:26 - BondsKBDPipeline - INFO - Сформирован портфель из 5 облигаций (достаточно)
+2025-04-26 01:25:26 - BondsKBDPipeline - INFO - Сводка результатов сохранена в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/results/bonds_results_20250426_012525.json
+2025-04-26 01:25:26 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен

@@ -1023,7 +1023,7 @@ def run_pipeline_bonds_processor(
     use_latest_snapshot_only=True,
     n_bonds=5,
     weighting_strategy='inverse_duration',
-    portfolio_stability=0.7
+    portfolio_stability=0.7,
 ):
     """
     Полный пайплайн для обработки облигаций и создания оптимального портфеля.
@@ -1046,8 +1046,8 @@ def run_pipeline_bonds_processor(
         Максимальная дюрация для фильтрации
     excluded_issuers : list, optional
         Список эмитентов для исключения
-    use_latest_snapshot_only : bool, default=True
-        Использовать только последний снапшот
+    included_issuers : list, optional
+        Список эмитентов для включения (имеет приоритет)
     n_bonds : int, default=5
         Количество облигаций в портфеле
     weighting_strategy : str, default='inverse_duration'
@@ -1106,7 +1106,7 @@ def run_pipeline_bonds_processor(
         min_duration=min_duration,
         max_duration=max_duration,
         excluded_issuers=excluded_issuers,
-        use_latest_snapshot_only=use_latest_snapshot_only
+        use_latest_snapshot_only=True
     )
     
     results = {
@@ -1125,9 +1125,9 @@ def run_pipeline_bonds_processor(
         
         # Формирование портфеля
         portfolio = processor.get_bonds_for_portfolio(
-            n_bonds=n_bonds,
-            weighting_strategy=weighting_strategy,
-            portfolio_stability=portfolio_stability
+        n_bonds=n_bonds,
+        weighting_strategy=weighting_strategy,
+        portfolio_stability=portfolio_stability,
         )
         
         if portfolio is not None and not portfolio.empty:
