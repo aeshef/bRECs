@@ -1,5 +1,0 @@
-{
-    "python.analysis.extraPaths": [
-        "./pys/data_collection"
-    ]
-}

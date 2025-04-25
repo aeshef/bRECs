@@ -6,4 +6,4 @@ __pycache__/
 .idea/
 private_info.py
 news_pipeline_config.json
-telegram_session.session
+telegram_session.session.vscode/
