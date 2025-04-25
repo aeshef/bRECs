@@ -1,5 +1,3 @@
-# tech_analysis_pipeline.py
-
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -9,22 +7,24 @@ import importlib
 import logging
 import sys
 
-import pys.data_collection.technical_indicators as technical_indicators
-importlib.reload(technical_indicators)
 from pys.data_collection.technical_indicators import TechnicalIndicators
+  
+# current_dir = os.path.dirname(os.path.abspath(__file__))
+# while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
+#     current_dir = os.path.dirname(current_dir)
+# if current_dir not in sys.path:
+#     sys.path.insert(0, current_dir)
+# from utils.logger import BaseLogger
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
-    current_dir = os.path.dirname(current_dir)
+# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
+# from private_info import BASE_PATH
 
-if current_dir not in sys.path:
-    sys.path.insert(0, current_dir)
-
-from utils.logger import BaseLogger
+from pys.utils.logger import BaseLogger
+from pys.data_collection.private_info import BASE_PATH
 
 class TechAnalysisPipeline(BaseLogger):
     def __init__(self,
-                 base_dir: str = "/Users/aeshef/Documents/GitHub/kursach",
+                 base_dir: str = BASE_PATH,
                  tickers: List[str] = [
                      "GAZP", "SBER", "LKOH", "GMKN", "ROSN", "TATN", "MTSS",
                      "ALRS", "SNGS", "VTBR", "NVTK", "POLY", "MVID", "PHOR",
@@ -185,4 +185,4 @@ class TechAnalysisPipeline(BaseLogger):
         self.logger.info(f"Сводный отчет сохранен в {report_path}")
 
 def run_pipeline_technical():
-    TechAnalysisPipeline(base_dir="/Users/aeshef/Documents/GitHub/kursach").run_pipeline()
+    TechAnalysisPipeline(base_dir=BASE_PATH).run_pipeline()

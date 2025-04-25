@@ -7,8 +7,15 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import shutil
+import sys
 
-class SignalGenerator:
+# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
+# from private_info import BASE_PATH
+
+from pys.utils.logger import BaseLogger
+from pys.data_collection.private_info import BASE_PATH
+
+class SignalGenerator(BaseLogger):
     def __init__(self, input_file=None, weight_tech=0.4, weight_sentiment=0.3, weight_fundamental=0.3, 
                 threshold_buy=0.5, threshold_sell=-0.5, log_level=logging.INFO):
         """
@@ -25,6 +32,7 @@ class SignalGenerator:
         weight_fundamental : float
             Вес фундаментальных индикаторов в композитном скоре
         """
+        super().__init__('SignalGenerator')
         self.input_file = input_file
         self.weight_tech = weight_tech
         self.weight_sentiment = weight_sentiment
@@ -33,26 +41,26 @@ class SignalGenerator:
         self.threshold_sell = threshold_sell
         self.df = None
         
-        # Настройка логгера
-        self.logger = logging.getLogger('signal_generator')
-        self.logger.setLevel(log_level)
+        # # Настройка логгера
+        # self.logger = logging.getLogger('signal_generator')
+        # self.logger.setLevel(log_level)
         
-        # Создаем обработчик для записи в файл
-        log_dir = 'logs'
-        os.makedirs(log_dir, exist_ok=True)
-        file_handler = logging.FileHandler(f'{log_dir}/signal_generator_{datetime.now().strftime("%Y%m%d")}.log')
+        # # Создаем обработчик для записи в файл
+        # log_dir = 'logs'
+        # os.makedirs(log_dir, exist_ok=True)
+        # file_handler = logging.FileHandler(f'{log_dir}/signal_generator_{datetime.now().strftime("%Y%m%d")}.log')
         
-        # Создаем форматтер
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-        file_handler.setFormatter(formatter)
+        # # Создаем форматтер
+        # formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        # file_handler.setFormatter(formatter)
         
-        # Добавляем обработчик к логгеру, если его еще нет
-        if not self.logger.handlers:
-            self.logger.addHandler(file_handler)
-            # Добавляем вывод в консоль
-            console_handler = logging.StreamHandler()
-            console_handler.setFormatter(formatter)
-            self.logger.addHandler(console_handler)
+        # # Добавляем обработчик к логгеру, если его еще нет
+        # if not self.logger.handlers:
+        #     self.logger.addHandler(file_handler)
+        #     # Добавляем вывод в консоль
+        #     console_handler = logging.StreamHandler()
+        #     console_handler.setFormatter(formatter)
+        #     self.logger.addHandler(console_handler)
     
     def load_data(self, input_file=None):
         """Загрузка данных для анализа"""
@@ -196,7 +204,7 @@ class SignalGenerator:
         self.logger.info("Композитный скор рассчитан")
         return self.df
     
-    def load_fundamental_data(self, base_path='/Users/aeshef/Documents/GitHub/kursach/data/processed_data'):
+    def load_fundamental_data(self, base_path=f'{BASE_PATH}/data/processed_data'):
         """Загружает фундаментальные данные для всех тикеров с обработкой NO_DATA"""
         if 'ticker' not in self.df.columns:
             self.logger.error("Колонка 'ticker' не найдена в данных")
@@ -681,7 +689,7 @@ class SignalGenerator:
         return saved_paths
 
     
-    def run_pipeline(self, input_file=None, output_file=None, top_pct=0.3, output_dir='/Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations'):
+    def run_pipeline(self, input_file=None, output_file=None, top_pct=0.3, output_dir=f'{BASE_PATH}/data/signal_visualizations'):
         """
         Запускает полный пайплайн генерации сигналов с сохранением результатов в структурированном виде
         
@@ -777,12 +785,11 @@ def run_pipeline_signal_generator(
         weight_fundamental=0.2
     ):
 
-    signal_gen = SignalGenerator(
-        input_file="/Users/aeshef/Documents/GitHub/kursach/data/df.csv",
+    SignalGenerator(
+        input_file=f"{BASE_PATH}/data/df.csv",
         weight_tech=weight_tech,
         weight_sentiment=weight_sentiment,
         weight_fundamental=weight_fundamental
     ).run_pipeline(
-    output_file="/Users/aeshef/Documents/GitHub/kursach/data/signals.csv",
-    output_dir="/Users/aeshef/Documents/GitHub/kursach/data/signal_visualizations",
-)
+        output_file=f"{BASE_PATH}/data/signals.csv",
+        output_dir=f"{BASE_PATH}/data/signal_visualizations")

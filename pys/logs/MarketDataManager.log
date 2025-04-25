@@ -1,0 +1,179 @@
+2025-04-25 11:36:44 - MarketDataManager - INFO - MarketDataManager initialized
+2025-04-25 11:36:44 - MarketDataManager - INFO - Getting data for 16 tickers with 5 workers
+2025-04-25 11:36:44 - MarketDataManager - INFO - Getting data for SBER from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-25 11:36:44 - MarketDataManager - INFO - Getting data for GAZP from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-25 11:36:44 - MarketDataManager - INFO - Getting data for LKOH from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-25 11:36:44 - MarketDataManager - INFO - Getting data for GMKN from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-25 11:36:44 - MarketDataManager - INFO - Getting data for ROSN from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-25 11:36:44 - MarketDataManager - INFO - Found existing data for ROSN, checking for missing ranges
+2025-04-25 11:36:44 - MarketDataManager - INFO - Found existing data for LKOH, checking for missing ranges
+2025-04-25 11:36:44 - MarketDataManager - INFO - Found existing data for SBER, checking for missing ranges
+2025-04-25 11:36:44 - MarketDataManager - INFO - Found existing data for GAZP, checking for missing ranges
+2025-04-25 11:36:44 - MarketDataManager - INFO - Found existing data for GMKN, checking for missing ranges
+2025-04-25 11:36:44 - MarketDataManager - INFO - Downloading missing data for ROSN from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-25 11:36:44 - MarketDataManager - INFO - Downloading missing data for LKOH from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-25 11:36:44 - MarketDataManager - INFO - Downloading missing data for GAZP from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-25 11:36:44 - MarketDataManager - INFO - Downloading missing data for SBER from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-25 11:36:44 - MarketDataManager - INFO - Downloading missing data for GMKN from 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-25 11:37:01 - MarketDataManager - INFO - Downloading missing data for LKOH from 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-25 11:37:02 - MarketDataManager - INFO - Downloading missing data for ROSN from 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-25 11:37:04 - MarketDataManager - INFO - Downloading missing data for GMKN from 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-25 11:37:05 - MarketDataManager - INFO - Downloading missing data for GAZP from 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-25 11:37:06 - MarketDataManager - INFO - Downloading missing data for SBER from 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-25 11:38:04 - MarketDataManager - INFO - Merging 991 new rows with existing data for LKOH
+2025-04-25 11:38:04 - MarketDataManager - INFO - Filtered existing data to requested date range, got 378321 rows
+2025-04-25 11:38:04 - MarketDataManager - INFO - Getting data for TATN from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-25 11:38:04 - MarketDataManager - INFO - Found existing data for TATN, checking for missing ranges
+2025-04-25 11:38:04 - MarketDataManager - INFO - Downloading missing data for TATN from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-25 11:38:06 - MarketDataManager - INFO - Merging 992 new rows with existing data for ROSN
+2025-04-25 11:38:06 - MarketDataManager - INFO - Filtered existing data to requested date range, got 417181 rows
+2025-04-25 11:38:06 - MarketDataManager - INFO - Getting data for MTSS from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-25 11:38:06 - MarketDataManager - INFO - Found existing data for MTSS, checking for missing ranges
+2025-04-25 11:38:06 - MarketDataManager - INFO - Downloading missing data for MTSS from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-25 11:39:03 - MarketDataManager - INFO - Merging 988 new rows with existing data for GMKN
+2025-04-25 11:39:03 - MarketDataManager - INFO - Filtered existing data to requested date range, got 343876 rows
+2025-04-25 11:39:03 - MarketDataManager - INFO - Getting data for ALRS from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-25 11:39:03 - MarketDataManager - INFO - Found existing data for ALRS, checking for missing ranges
+2025-04-25 11:39:03 - MarketDataManager - INFO - Downloading missing data for ALRS from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-25 11:39:05 - MarketDataManager - INFO - Merging 1453 new rows with existing data for GAZP
+2025-04-25 11:39:05 - MarketDataManager - INFO - Filtered existing data to requested date range, got 411577 rows
+2025-04-25 11:39:05 - MarketDataManager - INFO - Getting data for SNGS from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-25 11:39:05 - MarketDataManager - INFO - Found existing data for SNGS, checking for missing ranges
+2025-04-25 11:39:05 - MarketDataManager - INFO - Downloading missing data for SNGS from 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-25 11:39:07 - MarketDataManager - INFO - Downloading missing data for TATN from 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-25 11:40:04 - MarketDataManager - INFO - Downloading missing data for ALRS from 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-25 11:40:06 - MarketDataManager - INFO - Downloading missing data for MTSS from 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-25 11:40:08 - MarketDataManager - INFO - Merging 1617 new rows with existing data for SBER
+2025-04-25 11:40:08 - MarketDataManager - INFO - Filtered existing data to requested date range, got 412126 rows
+2025-04-25 11:40:08 - MarketDataManager - INFO - Getting data for NVTK from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-25 11:40:08 - MarketDataManager - INFO - SBER data successfully retrieved:
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - Timeframe: 1min
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - Total rows: 412126
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - First date: 2024-01-02 07:16:00
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-25 11:40:08 - MarketDataManager - INFO - GAZP data successfully retrieved:
+2025-04-25 11:40:08 - MarketDataManager - INFO - Found existing data for NVTK, checking for missing ranges
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - Timeframe: 1min
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - Total rows: 411577
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - First date: 2024-01-02 07:16:00
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-25 11:40:08 - MarketDataManager - INFO - LKOH data successfully retrieved:
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - Timeframe: 1min
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - Total rows: 378321
+2025-04-25 11:40:08 - MarketDataManager - INFO - Downloading missing data for NVTK from 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - First date: 2024-01-02 07:16:00
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-25 11:40:08 - MarketDataManager - INFO - GMKN data successfully retrieved:
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - Timeframe: 1min
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - Total rows: 343876
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - First date: 2024-01-02 07:17:00
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-25 11:40:08 - MarketDataManager - INFO - ROSN data successfully retrieved:
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - Timeframe: 1min
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - Total rows: 417181
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - First date: 2024-01-02 07:16:00
+2025-04-25 11:40:08 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-25 11:40:10 - MarketDataManager - INFO - Downloading missing data for SNGS from 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-25 11:40:11 - MarketDataManager - INFO - Merging 979 new rows with existing data for TATN
+2025-04-25 11:40:11 - MarketDataManager - INFO - Filtered existing data to requested date range, got 381085 rows
+2025-04-25 11:40:11 - MarketDataManager - INFO - Getting data for MVID from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-25 11:40:11 - MarketDataManager - INFO - TATN data successfully retrieved:
+2025-04-25 11:40:11 - MarketDataManager - INFO -   - Timeframe: 1min
+2025-04-25 11:40:11 - MarketDataManager - INFO -   - Total rows: 381085
+2025-04-25 11:40:11 - MarketDataManager - INFO -   - First date: 2024-01-02 07:16:00
+2025-04-25 11:40:11 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-25 11:40:11 - MarketDataManager - INFO - Found existing data for MVID, checking for missing ranges
+2025-04-25 11:40:11 - MarketDataManager - INFO - Merging 989 new rows with existing data for ALRS
+2025-04-25 11:40:11 - MarketDataManager - INFO - Downloading missing data for MVID from 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-25 11:40:11 - MarketDataManager - INFO - Filtered existing data to requested date range, got 355639 rows
+2025-04-25 11:40:11 - MarketDataManager - INFO - Getting data for PHOR from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-25 11:40:11 - MarketDataManager - INFO - Found existing data for PHOR, checking for missing ranges
+2025-04-25 11:40:11 - MarketDataManager - INFO - Downloading missing data for PHOR from 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-25 11:41:03 - MarketDataManager - INFO - Merging 1147 new rows with existing data for MTSS
+2025-04-25 11:41:03 - MarketDataManager - INFO - Filtered existing data to requested date range, got 337661 rows
+2025-04-25 11:41:03 - MarketDataManager - INFO - Getting data for SIBN from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-25 11:41:03 - MarketDataManager - INFO - MTSS data successfully retrieved:
+2025-04-25 11:41:03 - MarketDataManager - INFO -   - Timeframe: 1min
+2025-04-25 11:41:03 - MarketDataManager - INFO -   - Total rows: 337661
+2025-04-25 11:41:03 - MarketDataManager - INFO -   - First date: 2024-01-02 07:16:00
+2025-04-25 11:41:03 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-25 11:41:03 - MarketDataManager - INFO - ALRS data successfully retrieved:
+2025-04-25 11:41:03 - MarketDataManager - INFO -   - Timeframe: 1min
+2025-04-25 11:41:03 - MarketDataManager - INFO - Found existing data for SIBN, checking for missing ranges
+2025-04-25 11:41:03 - MarketDataManager - INFO -   - Total rows: 355639
+2025-04-25 11:41:03 - MarketDataManager - INFO -   - First date: 2024-01-02 07:16:00
+2025-04-25 11:41:03 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-25 11:41:03 - MarketDataManager - INFO - Downloading missing data for SIBN from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-25 11:41:04 - MarketDataManager - INFO - Downloading missing data for NVTK from 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-25 11:41:07 - MarketDataManager - INFO - Merging 916 new rows with existing data for SNGS
+2025-04-25 11:41:07 - MarketDataManager - INFO - Filtered existing data to requested date range, got 306600 rows
+2025-04-25 11:41:07 - MarketDataManager - INFO - Getting data for AFKS from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-25 11:41:07 - MarketDataManager - INFO - SNGS data successfully retrieved:
+2025-04-25 11:41:07 - MarketDataManager - INFO -   - Timeframe: 1min
+2025-04-25 11:41:07 - MarketDataManager - INFO -   - Total rows: 306600
+2025-04-25 11:41:07 - MarketDataManager - INFO -   - First date: 2024-01-02 07:17:00
+2025-04-25 11:41:07 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-25 11:41:07 - MarketDataManager - INFO - Found existing data for AFKS, checking for missing ranges
+2025-04-25 11:41:07 - MarketDataManager - INFO - Downloading missing data for AFKS from 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-25 11:42:04 - MarketDataManager - INFO - Downloading missing data for SIBN from 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-25 11:42:08 - MarketDataManager - INFO - Downloading missing data for PHOR from 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-25 11:42:08 - MarketDataManager - INFO - Downloading missing data for MVID from 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-25 11:42:11 - MarketDataManager - INFO - Merging 990 new rows with existing data for NVTK
+2025-04-25 11:42:11 - MarketDataManager - INFO - Filtered existing data to requested date range, got 378827 rows
+2025-04-25 11:42:11 - MarketDataManager - INFO - Getting data for MAGN from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-25 11:42:11 - MarketDataManager - INFO - NVTK data successfully retrieved:
+2025-04-25 11:42:11 - MarketDataManager - INFO -   - Timeframe: 1min
+2025-04-25 11:42:11 - MarketDataManager - INFO -   - Total rows: 378827
+2025-04-25 11:42:11 - MarketDataManager - INFO -   - First date: 2024-01-02 07:17:00
+2025-04-25 11:42:11 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-25 11:42:11 - MarketDataManager - INFO - Found existing data for MAGN, checking for missing ranges
+2025-04-25 11:42:11 - MarketDataManager - INFO - Downloading missing data for MAGN from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-25 11:42:17 - MarketDataManager - INFO - Merging 941 new rows with existing data for SIBN
+2025-04-25 11:42:17 - MarketDataManager - INFO - Filtered existing data to requested date range, got 338380 rows
+2025-04-25 11:42:17 - MarketDataManager - INFO - Getting data for RUAL from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-25 11:42:17 - MarketDataManager - INFO - Found existing data for RUAL, checking for missing ranges
+2025-04-25 11:42:17 - MarketDataManager - INFO - Downloading missing data for RUAL from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-25 11:43:03 - MarketDataManager - INFO - Downloading missing data for MAGN from 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-25 11:43:04 - MarketDataManager - INFO - Merging 949 new rows with existing data for PHOR
+2025-04-25 11:43:04 - MarketDataManager - INFO - Filtered existing data to requested date range, got 283730 rows
+2025-04-25 11:43:05 - MarketDataManager - INFO - Merging 762 new rows with existing data for MVID
+2025-04-25 11:43:05 - MarketDataManager - INFO - Filtered existing data to requested date range, got 317240 rows
+2025-04-25 11:43:05 - MarketDataManager - INFO - MVID data successfully retrieved:
+2025-04-25 11:43:05 - MarketDataManager - INFO -   - Timeframe: 1min
+2025-04-25 11:43:05 - MarketDataManager - INFO -   - Total rows: 317240
+2025-04-25 11:43:05 - MarketDataManager - INFO -   - First date: 2024-01-02 07:17:00
+2025-04-25 11:43:05 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-25 11:43:05 - MarketDataManager - INFO - PHOR data successfully retrieved:
+2025-04-25 11:43:05 - MarketDataManager - INFO -   - Timeframe: 1min
+2025-04-25 11:43:05 - MarketDataManager - INFO -   - Total rows: 283730
+2025-04-25 11:43:05 - MarketDataManager - INFO -   - First date: 2024-01-02 07:17:00
+2025-04-25 11:43:05 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-25 11:43:05 - MarketDataManager - INFO - SIBN data successfully retrieved:
+2025-04-25 11:43:05 - MarketDataManager - INFO -   - Timeframe: 1min
+2025-04-25 11:43:05 - MarketDataManager - INFO -   - Total rows: 338380
+2025-04-25 11:43:05 - MarketDataManager - INFO -   - First date: 2024-01-02 07:16:00
+2025-04-25 11:43:05 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-25 11:43:05 - MarketDataManager - INFO - Downloading missing data for AFKS from 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-25 11:43:06 - MarketDataManager - INFO - Downloading missing data for RUAL from 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-25 11:43:07 - MarketDataManager - INFO - Merging 987 new rows with existing data for MAGN
+2025-04-25 11:43:07 - MarketDataManager - INFO - Filtered existing data to requested date range, got 375268 rows
+2025-04-25 11:43:11 - MarketDataManager - INFO - Merging 980 new rows with existing data for AFKS
+2025-04-25 11:43:11 - MarketDataManager - INFO - Filtered existing data to requested date range, got 320340 rows
+2025-04-25 11:43:11 - MarketDataManager - INFO - AFKS data successfully retrieved:
+2025-04-25 11:43:11 - MarketDataManager - INFO -   - Timeframe: 1min
+2025-04-25 11:43:11 - MarketDataManager - INFO -   - Total rows: 320340
+2025-04-25 11:43:11 - MarketDataManager - INFO -   - First date: 2024-01-02 07:17:00
+2025-04-25 11:43:11 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-25 11:43:11 - MarketDataManager - INFO - MAGN data successfully retrieved:
+2025-04-25 11:43:11 - MarketDataManager - INFO -   - Timeframe: 1min
+2025-04-25 11:43:11 - MarketDataManager - INFO -   - Total rows: 375268
+2025-04-25 11:43:11 - MarketDataManager - INFO -   - First date: 2024-01-02 07:16:00
+2025-04-25 11:43:11 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-25 11:43:12 - MarketDataManager - INFO - Merging 979 new rows with existing data for RUAL
+2025-04-25 11:43:12 - MarketDataManager - INFO - Filtered existing data to requested date range, got 335820 rows
+2025-04-25 11:43:12 - MarketDataManager - INFO - RUAL data successfully retrieved:
+2025-04-25 11:43:12 - MarketDataManager - INFO -   - Timeframe: 1min
+2025-04-25 11:43:12 - MarketDataManager - INFO -   - Total rows: 335820
+2025-04-25 11:43:12 - MarketDataManager - INFO -   - First date: 2024-01-02 07:16:00
+2025-04-25 11:43:12 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-25 11:43:12 - MarketDataManager - INFO - Completed data retrieval for 16 tickers

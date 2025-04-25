@@ -12,26 +12,24 @@ import traceback
 import argparse
 import json
 from typing import List, Dict, Optional, Any
-
 from telethon.sync import TelegramClient
 
-sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection/news_processor')
+from pys.data_collection.news_processor.news_preprocessor import NewsPreprocessor
+from pys.data_collection.news_processor.sentiment_analysis import SentimentAnalyzer
+from pys.data_collection.news_processor.news_feature_extractor import NewsFeatureExtractor
+from pys.data_collection.news_processor.event_detector import EventDetector
+from pys.data_collection.news_processor.news_visualizer import NewsVisualizer
+from pys.data_collection.news_processor.news_integration import NewsIntegration
 
-from news_processor.news_preprocessor import NewsPreprocessor
-from news_processor.sentiment_analysis import SentimentAnalyzer
-from news_processor.news_feature_extractor import NewsFeatureExtractor
-from news_processor.event_detector import EventDetector
-from news_processor.news_visualizer import NewsVisualizer
-from news_processor.news_integration import NewsIntegration
+# current_dir = os.path.dirname(os.path.abspath(__file__))
+# while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
+#     current_dir = os.path.dirname(current_dir)
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
-    current_dir = os.path.dirname(current_dir)
+# if current_dir not in sys.path:
+#     sys.path.insert(0, current_dir)
 
-if current_dir not in sys.path:
-    sys.path.insert(0, current_dir)
-
-from utils.logger import BaseLogger
+from pys.utils.logger import BaseLogger
+from pys.data_collection.private_info import BASE_PATH
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -126,13 +124,17 @@ def save_events_data(event_detector, combined_sentiment: pd.DataFrame, events_fi
     logging.info(f"Данные по событиям объединены и сохранены в {events_file}")
     return news_with_events
 
+sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
+
+from private_info import BASE_PATH
+
 class NewsPipeline(BaseLogger):
     """Единый пайплайн для сбора и анализа новостей"""
     
     def __init__(self):
         self.telegram_data = {}
         super().__init__('NewsPipeline')
-        self.base_dir='/Users/aeshef/Documents/GitHub/kursach'
+        self.base_dir=BASE_PATH
         
     # def _setup_logger(self):
     #     """Настройка логгера"""
@@ -820,7 +822,7 @@ class NewsPipeline(BaseLogger):
     
     def run_pipeline(
         self,
-        base_dir: str = '/Users/aeshef/Documents/GitHub/kursach',
+        base_dir: str = BASE_PATH,
         tickers: List[str] = None,
         collect_telegram: bool = False,
         telegram_api_id: Optional[int] = None,
@@ -835,14 +837,12 @@ class NewsPipeline(BaseLogger):
     ):
         """Запуск полного пайплайна анализа новостей"""
         
-        # Если включена очистка старых файлов
         if cleanup_old_files:
             self._cleanup_old_files(base_dir, tickers, max_history_days)
 
         self.logger.info(f"Запуск пайплайна анализа новостей для {len(tickers)} тикеров")
         self.logger.info(f"Диапазон дат: {start_date} - {end_date}")
         
-        # Инициализация компонентов
         preprocessor = NewsPreprocessor(base_dir)
         sentiment_analyzer = SentimentAnalyzer(language='russian')
         feature_extractor = NewsFeatureExtractor()

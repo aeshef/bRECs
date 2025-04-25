@@ -4,14 +4,19 @@ import os
 import logging
 import sys
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
-    current_dir = os.path.dirname(current_dir)
+# current_dir = os.path.dirname(os.path.abspath(__file__))
+# while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
+#     current_dir = os.path.dirname(current_dir)
 
-if current_dir not in sys.path:
-    sys.path.insert(0, current_dir)
+# if current_dir not in sys.path:
+#     sys.path.insert(0, current_dir)
 
-from utils.logger import BaseLogger
+# from utils.logger import BaseLogger
+# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
+# from private_info import BASE_PATH
+
+from pys.utils.logger import BaseLogger
+from pys.data_collection.private_info import BASE_PATH
 
 class DataIntegrator(BaseLogger):
     def __init__(self, base_path, nan_fill_method='median'):
@@ -23,7 +28,6 @@ class DataIntegrator(BaseLogger):
         super().__init__('DataIntegrator')
         self.base_path = base_path
         self.nan_fill_method = nan_fill_method
-        self.logger = self._setup_logger()
 
     def load_ticker_data(self, ticker):
         """
@@ -180,9 +184,10 @@ class DataIntegrator(BaseLogger):
             self.logger.info(f"Данные успешно объединены и сохранены в {output_path}")
             self.logger.info(f"Форма объединенного датасета: {combined_data.shape}")
             self.logger.info(f"Количество уникальных тикеров: {combined_data['ticker'].nunique()}")
-        
-def run_pipeline_integration(tickers, output_path="/Users/aeshef/Documents/GitHub/kursach/data/df.csv", method='zero'):
-    DataIntegrator(base_path="/Users/aeshef/Documents/GitHub/kursach/data/processed_data", nan_fill_method=method).run_pipeline(
+            
+    
+def run_pipeline_integration(tickers, output_path=f"{BASE_PATH}/data/df.csv", method='zero'):
+    DataIntegrator(base_path=f"{BASE_PATH}/data/processed_data", nan_fill_method=method).run_pipeline(
         tickers=tickers,
         output_path=output_path
     )

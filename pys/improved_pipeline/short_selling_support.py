@@ -1,8 +1,25 @@
-# short_selling_support.py
 import os
 import numpy as np
 import pandas as pd
 from scipy.optimize import minimize
+import sys
+
+# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
+# from private_info import BASE_PATH
+
+from pys.utils.logger import BaseLogger
+from pys.data_collection.private_info import BASE_PATH
+
+import importlib
+
+import pys.porfolio_optimization.signal_generator as signal_generator
+import pys.porfolio_optimization.portfolio_optimizer as portfolio_optimizer
+import pys.porfolio_optimization.backtester as backtester
+
+importlib.reload(signal_generator)
+importlib.reload(portfolio_optimizer)
+importlib.reload(backtester)
+
 
 def modify_signal_generator_for_shorts(signal_generator_class):
     """
@@ -251,18 +268,6 @@ def apply_short_selling_support():
     """
     Применяет поддержку коротких позиций ко всем классам
     """
-    import sys
-    sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/porfolio_optimization')
-
-    import signal_generator
-    import portfolio_optimizer
-    import backtester
-    import importlib
-    
-    importlib.reload(signal_generator)
-    importlib.reload(portfolio_optimizer)
-    importlib.reload(backtester)
-    
     SignalGenerator = modify_signal_generator_for_shorts(signal_generator.SignalGenerator)
     PortfolioOptimizer = modify_portfolio_optimizer_for_shorts(portfolio_optimizer.PortfolioOptimizer)
     Backtester = modify_backtester_for_shorts(backtester.Backtester)
@@ -270,8 +275,8 @@ def apply_short_selling_support():
     return SignalGenerator, PortfolioOptimizer, Backtester
 
 def run_short_selling_pipeline(
-    data_file="/Users/aeshef/Documents/GitHub/kursach/data/df.csv",
-    output_dir="/Users/aeshef/Documents/GitHub/kursach/data/short_selling_results",
+    data_file=f"{BASE_PATH}/data/df.csv",
+    output_dir=f"{BASE_PATH}/data/short_selling_results",
     risk_free_rate=0.075,
     period=('2024-01-01', '2025-04-15'),
     signal_params=None  # Новый параметр для настроек сигналов

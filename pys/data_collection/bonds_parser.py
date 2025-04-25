@@ -8,16 +8,18 @@ import shutil
 from typing import Dict, List, Optional, Any, Tuple, Union
 import sys
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
-    current_dir = os.path.dirname(current_dir)
-    if current_dir == os.path.dirname(current_dir):
-        break
+# current_dir = os.path.dirname(os.path.abspath(__file__))
+# while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
+#     current_dir = os.path.dirname(current_dir)
+#     if current_dir == os.path.dirname(current_dir):
+#         break
+# if current_dir not in sys.path:
+#     sys.path.insert(0, current_dir)
 
-if current_dir not in sys.path:
-    sys.path.insert(0, current_dir)
+from pys.utils.logger import BaseLogger
 
-from utils.logger import BaseLogger
+# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
+from pys.data_collection.private_info import BASE_PATH
 
 class MOEXBondHistoricalParser(BaseLogger):
     """
@@ -29,8 +31,8 @@ class MOEXBondHistoricalParser(BaseLogger):
     
     API_DELAY = 1.2
     
-    CACHE_DIR = "/Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/moex_cache"
-    BASE_DATA_DIR = "/Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex"
+    CACHE_DIR = f"{BASE_PATH}/data/processed_data/BONDS/moex/moex_cache"
+    BASE_DATA_DIR = f"{BASE_PATH}/data/processed_data/BONDS/moex"
     
     def __init__(self, use_cache=True, cache_ttl_days=7, verbose=False):
         """
@@ -768,7 +770,7 @@ class MOEXBondHistoricalParser(BaseLogger):
             
             self.logger.info(f"Результаты анализа сохранены в {analysis_dir}")
         
-        return continuous_bonds
+        return continuous_bonds, bond_stats
     
     def generate_complete_dataset(self, start_date, end_date, filter_continuous=True):
         """
@@ -930,9 +932,160 @@ class MOEXBondHistoricalParser(BaseLogger):
         
         if analyze_continuity and result:
             self.logger.info("Выполняем анализ непрерывности данных...")
-            continuous_bonds, _ = self.analyze_bonds_continuity(start_date, end_date)
+            continuous_bonds, bond_stats = self.analyze_bonds_continuity(start_date, end_date)
             
             self.logger.info("Создаем полный датасет...")
             self.generate_complete_dataset(start_date, end_date, filter_continuous=True)
         
         return result
+
+    def find_optimal_threshold(self, start_date, end_date, min_bonds=20, max_threshold=99):
+        """
+        Находит оптимальный порог непрерывности данных для создания датасета
+        
+        Args:
+            start_date: начало периода
+            end_date: конец периода
+            min_bonds: минимальное количество облигаций, которое должно быть в датасете
+            max_threshold: максимальный порог непрерывности (в процентах)
+            
+        Returns:
+            Оптимальный порог непрерывности (в процентах)
+        """
+        self.logger.info(f"Поиск оптимального порога непрерывности для периода с {start_date.strftime('%Y-%m-%d')} по {end_date.strftime('%Y-%m-%d')}")
+        
+        _, bond_stats = self.analyze_bonds_continuity(start_date, end_date, save_to_csv=True)
+        
+        if not bond_stats:
+            self.logger.warning("Не удалось получить статистику непрерывности")
+            return 100
+        
+        stats_data = []
+        for bond, stats in bond_stats.items():
+            row = {'secid': bond}
+            row.update(stats)
+            stats_data.append(row)
+        
+        stats_df = pd.DataFrame(stats_data)
+        
+        thresholds = range(max_threshold, 50, -1)
+        
+        for threshold in thresholds:
+            filtered_bonds = stats_df[stats_df['presence_percentage'] >= threshold]
+            bond_count = len(filtered_bonds)
+            
+            self.logger.info(f"При пороге {threshold}%: доступно {bond_count} облигаций")
+            
+            if bond_count >= min_bonds:
+                self.logger.info(f"Найден оптимальный порог: {threshold}%")
+                return threshold
+        
+        self.logger.warning(f"Не удалось найти порог, при котором доступно {min_bonds} облигаций. Максимум доступно: {len(stats_df[stats_df['presence_percentage'] >= 50])} облигаций при пороге 50%")
+        return 50
+
+    def generate_dataset_with_threshold(self, start_date, end_date, continuity_threshold=90):
+        """
+        Генерирует датасет с облигациями, имеющими указанный порог непрерывности
+        
+        Args:
+            start_date: начало периода
+            end_date: конец периода
+            continuity_threshold: порог непрерывности (в процентах)
+            
+        Returns:
+            DataFrame с данными или None в случае ошибки
+        """
+        self.logger.info(f"Генерация датасета с порогом непрерывности {continuity_threshold}% за период с {start_date.strftime('%Y-%m-%d')} по {end_date.strftime('%Y-%m-%d')}")
+        
+        _, bond_stats = self.analyze_bonds_continuity(start_date, end_date, save_to_csv=False)
+        
+        if not bond_stats:
+            self.logger.warning("Не удалось получить статистику непрерывности")
+            return None
+        
+        filtered_bonds = []
+        for bond, stats in bond_stats.items():
+            if stats['presence_percentage'] >= continuity_threshold:
+                filtered_bonds.append(bond)
+        
+        if not filtered_bonds:
+            self.logger.warning(f"Не найдено облигаций с порогом непрерывности {continuity_threshold}%")
+            return None
+        
+        self.logger.info(f"Найдено {len(filtered_bonds)} облигаций с порогом непрерывности не менее {continuity_threshold}%")
+        
+        trading_dates = []
+        current_date = start_date
+        while current_date <= end_date:
+            if current_date.weekday() < 5:
+                date_str = current_date.strftime('%Y-%m-%d')
+                date_dir = os.path.join(self.BASE_DATA_DIR, date_str)
+                all_csv_path = os.path.join(date_dir, "all.csv")
+                if os.path.exists(all_csv_path):
+                    trading_dates.append(date_str)
+            current_date += timedelta(days=1)
+        
+        if not trading_dates:
+            self.logger.warning("Нет данных для указанного периода")
+            return None
+        
+        all_data = []
+        
+        for date_str in trading_dates:
+            date_dir = os.path.join(self.BASE_DATA_DIR, date_str)
+            all_csv_path = os.path.join(date_dir, "all.csv")
+            
+            try:
+                df = pd.read_csv(all_csv_path)
+                df = df[df['secid'].isin(filtered_bonds)]
+                
+                if not df.empty:
+                    df['date'] = date_str
+                    all_data.append(df)
+                
+            except Exception as e:
+                self.logger.error(f"Ошибка при чтении данных за {date_str}: {e}")
+        
+        if not all_data:
+            self.logger.warning("Не удалось собрать данные")
+            return None
+        
+        full_df = pd.concat(all_data, ignore_index=True)
+        
+        # Сохраняем результаты
+        dataset_dir = os.path.join(
+            self.BASE_DATA_DIR, 
+            f"threshold_dataset_{start_date.strftime('%Y%m%d')}_{end_date.strftime('%Y%m%d')}_{continuity_threshold}"
+        )
+        os.makedirs(dataset_dir, exist_ok=True)
+        
+        full_df.to_csv(
+            os.path.join(dataset_dir, "bonds_dataset.csv"), 
+            index=False
+        )
+        
+        # Создаем сводные таблицы
+        pivot_df = full_df[['date', 'secid', 'price', 'yield']].copy()
+        
+        price_pivot = pivot_df.pivot_table(
+            values='price', 
+            index='date', 
+            columns='secid'
+        )
+        price_pivot.to_csv(
+            os.path.join(dataset_dir, "price_pivot.csv")
+        )
+        
+        yield_pivot = pivot_df.pivot_table(
+            values='yield', 
+            index='date', 
+            columns='secid'
+        )
+        yield_pivot.to_csv(
+            os.path.join(dataset_dir, "yield_pivot.csv")
+        )
+        
+        self.logger.info(f"Датасет с порогом непрерывности {continuity_threshold}% создан и сохранен в {dataset_dir}")
+        self.logger.info(f"Всего дат: {len(trading_dates)}, облигаций: {len(full_df['secid'].unique())}")
+        
+        return full_df

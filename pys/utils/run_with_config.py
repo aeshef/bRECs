@@ -5,11 +5,13 @@ import sys
 import datetime
 from typing import Any, Dict, List, Optional, Type, Union
 
+from pys.data_collection.private_info import BASE_PATH
+
 def run_with_config(
     script_path: str,
     class_or_function: Optional[str] = None,
     method: Optional[str] = None,
-    base_dir: str = '.',
+    base_dir: str = f'{BASE_PATH}/data/meta',
     config_filename: str = 'config.json',
     **kwargs
 ) -> int:

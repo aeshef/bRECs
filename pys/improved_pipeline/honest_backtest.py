@@ -8,23 +8,32 @@ from datetime import datetime
 import importlib
 import sys
 
-sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/porfolio_optimization')
+# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/porfolio_optimization')
 
-import signal_generator
-importlib.reload(signal_generator)
-from signal_generator import SignalGenerator, run_pipeline_signal_generator
+# import signal_generator
+# importlib.reload(signal_generator)
+# from signal_generator import SignalGenerator, run_pipeline_signal_generator
 
-import portfolio_optimizer
-importlib.reload(portfolio_optimizer)
-from portfolio_optimizer import PortfolioOptimizer
+# import portfolio_optimizer
+# importlib.reload(portfolio_optimizer)
+# from portfolio_optimizer import PortfolioOptimizer
 
-import backtester
-importlib.reload(backtester)
-from backtester import Backtester
+# import backtester
+# importlib.reload(backtester)
+# from backtester import Backtester
 
-sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys')
+from pys.porfolio_optimization.signal_generator import SignalGenerator, run_pipeline_signal_generator
+from pys.porfolio_optimization.portfolio_optimizer import PortfolioOptimizer
+from pys.porfolio_optimization.backtester import Backtester
 
-from utils.logger import BaseLogger
+# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys')
+# from utils.logger import BaseLogger
+
+# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
+# from private_info import BASE_PATH
+
+from pys.utils.logger import BaseLogger
+from pys.data_collection.private_info import BASE_PATH
 
 class HonestBacktester(BaseLogger):
     """
@@ -32,11 +41,11 @@ class HonestBacktester(BaseLogger):
     """
     
     def __init__(self, 
-                data_file="/Users/aeshef/Documents/GitHub/kursach/data/df.csv",
+                data_file=f"{BASE_PATH}/data/df.csv",
                 best_params_file=None,
                 train_period=('2024-01-01', '2024-12-31'),
                 test_period=('2025-01-01', '2025-06-30'),
-                output_dir="/Users/aeshef/Documents/GitHub/kursach/data/honest_backtest",
+                output_dir=f"{BASE_PATH}/data/honest_backtest",
                 risk_free_rate=0.075,
                 use_grid_search_params=True):
         """
@@ -297,12 +306,13 @@ class HonestBacktester(BaseLogger):
         return report
 
 
+
 def run_honest_backtest(
-    data_file="/Users/aeshef/Documents/GitHub/kursach/data/df.csv",
+    data_file=f"{BASE_PATH}/data/df.csv",
     best_params_file=None,
     train_period=('2024-01-01', '2024-12-31'),
     test_period=('2025-01-01', '2025-06-30'),
-    output_dir="/Users/aeshef/Documents/GitHub/kursach/data/honest_backtest",
+    output_dir=f"{BASE_PATH}/data/honest_backtest",
     risk_free_rate=0.075,
     use_grid_search_params=True
 ):

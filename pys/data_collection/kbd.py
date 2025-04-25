@@ -5,23 +5,27 @@ import sys
 from bs4 import BeautifulSoup
 from datetime import datetime
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
-    current_dir = os.path.dirname(current_dir)
-    if current_dir == os.path.dirname(current_dir):
-        break
+# current_dir = os.path.dirname(os.path.abspath(__file__))
+# while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
+#     current_dir = os.path.dirname(current_dir)
+#     if current_dir == os.path.dirname(current_dir):
+#         break
+# if current_dir not in sys.path:
+#     sys.path.insert(0, current_dir)
+# from utils.logger import BaseLogger
 
-if current_dir not in sys.path:
-    sys.path.insert(0, current_dir)
+# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
+# from private_info import BASE_PATH
 
-from utils.logger import BaseLogger
+from pys.utils.logger import BaseLogger
+from pys.data_collection.private_info import BASE_PATH
 
 class KBDDownloader(BaseLogger):
     """
     Класс для загрузки данных кривой бескупонной доходности (КБД) с сайта ЦБ РФ
     """
     
-    def __init__(self, output_dir='/Users/aeshef/Documents/GitHub/kursach/data/processed_data'):
+    def __init__(self, output_dir=f'{BASE_PATH}/data/processed_data'):
         """
         Инициализация загрузчика данных КБД
         
@@ -58,7 +62,6 @@ class KBDDownloader(BaseLogger):
                 table = soup.find('table', {'class': 'data spaced'})
                 
                 if table:
-                    # Извлекаем заголовки таблицы
                     headers = []
                     header_row = table.find_all('tr')[1]
                     header_columns = header_row.find_all('th')[1:]
@@ -67,7 +70,6 @@ class KBDDownloader(BaseLogger):
                     
                     self.logger.debug(f"Found table headers: {headers}")
                     
-                    # Извлекаем данные из строк таблицы
                     rows = table.find_all('tr')[2:]
                     data = []
                     
@@ -77,7 +79,6 @@ class KBDDownloader(BaseLogger):
                             date_str = cols[0].text.strip()
                             date_obj = datetime.strptime(date_str, '%d.%m.%Y')
                             
-                            # Фильтруем данные по дате
                             if start_date <= date_obj <= end_date:
                                 row_data = {'date': date_obj}
                                 
@@ -91,8 +92,7 @@ class KBDDownloader(BaseLogger):
                     
                     if data:
                         df = pd.DataFrame(data)
-                        
-                        # Создаем директорию, если она не существует
+
                         os.makedirs(self.output_dir, exist_ok=True)
                         file_path = os.path.join(self.output_dir, 'kbd.csv')
                         

@@ -11,19 +11,15 @@ import gc
 from tqdm import tqdm
 import concurrent.futures
 
-sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/porfolio_optimization')
+from pys.porfolio_optimization.signal_generator import SignalGenerator, run_pipeline_signal_generator
+from pys.porfolio_optimization.portfolio_optimizer import PortfolioOptimizer
+from pys.porfolio_optimization.backtester import Backtester
 
-import signal_generator
-importlib.reload(signal_generator)
-from signal_generator import SignalGenerator, run_pipeline_signal_generator
+# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
+# from private_info import BASE_PATH
 
-import portfolio_optimizer
-importlib.reload(portfolio_optimizer)
-from portfolio_optimizer import PortfolioOptimizer
-
-import backtester
-importlib.reload(backtester)
-from backtester import Backtester
+from pys.utils.logger import BaseLogger
+from pys.data_collection.private_info import BASE_PATH
 
 class GridSearch:
     def __init__(self, data_file, output_dir, log_level=logging.ERROR, n_jobs=1):
@@ -286,8 +282,8 @@ class GridSearch:
         return results_df, best_params
 
 def run_grid_search_pipeline(
-    data_file="/Users/aeshef/Documents/GitHub/kursach/data/df.csv",
-    output_dir="/Users/aeshef/Documents/GitHub/kursach/data/grid_search_results",
+    data_file=f"{BASE_PATH}/data/df.csv",
+    output_dir=f"{BASE_PATH}/data/grid_search_results",
     training_period=('2024-01-01', '2024-12-31'),
     n_jobs=4  # По умолчанию используем 4 потока
 ):

@@ -1,0 +1,60 @@
+2025-04-25 11:48:34,222 - portfolio_optimizer - INFO - Запуск пайплайна оптимизации портфеля
+2025-04-25 11:48:34,223 - portfolio_optimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-25 11:48:34,392 - portfolio_optimizer - INFO - Загружено 7471 строк данных
+2025-04-25 11:48:34,393 - portfolio_optimizer - INFO - Подготовка данных доходностей для оптимизации
+2025-04-25 11:48:34,397 - portfolio_optimizer - INFO - Отфильтровано 7030 строк по shortlist и сигналам
+2025-04-25 11:48:34,418 - portfolio_optimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-25 11:48:34,419 - portfolio_optimizer - INFO - Запуск оптимизации портфеля для 16 активов
+2025-04-25 11:48:34,449 - portfolio_optimizer - INFO - Оптимизация успешно завершена
+2025-04-25 11:48:34,449 - portfolio_optimizer - INFO - Расчет итогового портфеля с долей безрисковых активов 40.0%
+2025-04-25 11:48:34,451 - portfolio_optimizer - INFO - Ожидаемая доходность портфеля: 10.27%, волатильность: 13.42%, Шарп: -1.13
+2025-04-25 11:48:34,452 - portfolio_optimizer - INFO - Создание визуализации портфеля
+2025-04-25 11:48:34,493 - portfolio_optimizer - INFO - График весов сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/portfolio_weights_pie.png
+2025-04-25 11:48:34,494 - portfolio_optimizer - INFO - Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio
+2025-04-25 12:47:58,648 - portfolio_optimizer - INFO - Запуск пайплайна оптимизации портфеля
+2025-04-25 12:47:58,651 - portfolio_optimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-25 12:47:58,832 - portfolio_optimizer - INFO - Загружено 7471 строк данных
+2025-04-25 12:47:58,833 - portfolio_optimizer - INFO - Подготовка данных доходностей для оптимизации
+2025-04-25 12:47:58,840 - portfolio_optimizer - INFO - Отфильтровано 7030 строк по shortlist и сигналам
+2025-04-25 12:47:58,861 - portfolio_optimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-25 12:47:58,862 - portfolio_optimizer - INFO - Запуск оптимизации портфеля для 16 активов
+2025-04-25 12:47:58,889 - portfolio_optimizer - INFO - Оптимизация успешно завершена
+2025-04-25 12:47:58,890 - portfolio_optimizer - INFO - Расчет итогового портфеля с долей безрисковых активов 40.0%
+2025-04-25 12:47:58,891 - portfolio_optimizer - INFO - Ожидаемая доходность портфеля: 10.27%, волатильность: 13.42%, Шарп: -1.13
+2025-04-25 12:47:58,891 - portfolio_optimizer - INFO - Создание визуализации портфеля
+2025-04-25 12:47:58,934 - portfolio_optimizer - INFO - График весов сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/portfolio_weights_pie.png
+2025-04-25 12:47:58,936 - portfolio_optimizer - INFO - Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio
+2025-04-25 12:48:26,412 - portfolio_optimizer - INFO - Запуск пайплайна оптимизации портфеля
+2025-04-25 12:48:26,413 - portfolio_optimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-25 12:48:26,579 - portfolio_optimizer - INFO - Загружено 7471 строк данных
+2025-04-25 12:48:26,580 - portfolio_optimizer - INFO - Подготовка данных доходностей для оптимизации
+2025-04-25 12:48:26,584 - portfolio_optimizer - INFO - Отфильтровано 7030 строк по shortlist и сигналам
+2025-04-25 12:48:26,602 - portfolio_optimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-25 12:48:26,603 - portfolio_optimizer - INFO - Запуск оптимизации портфеля для 16 активов
+2025-04-25 12:48:26,630 - portfolio_optimizer - INFO - Оптимизация успешно завершена
+2025-04-25 12:48:26,631 - portfolio_optimizer - INFO - Расчет итогового портфеля с долей безрисковых активов 40.0%
+2025-04-25 12:48:26,632 - portfolio_optimizer - INFO - Ожидаемая доходность портфеля: 10.27%, волатильность: 13.42%, Шарп: -1.13
+2025-04-25 12:48:26,632 - portfolio_optimizer - INFO - Создание визуализации портфеля
+2025-04-25 12:48:26,670 - portfolio_optimizer - INFO - График весов сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/portfolio_weights_pie.png
+2025-04-25 12:48:26,671 - portfolio_optimizer - INFO - Генерация 1000 случайных портфелей для построения эффективной границы
+2025-04-25 12:48:27,049 - portfolio_optimizer - INFO - Создание графика эффективной границы
+2025-04-25 12:48:27,358 - portfolio_optimizer - INFO - График эффективной границы сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/efficient_frontier.png
+2025-04-25 12:48:27,358 - portfolio_optimizer - INFO - График эффективной границы успешно создан
+2025-04-25 12:48:27,360 - portfolio_optimizer - INFO - Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio
+2025-04-25 13:08:55,514 - portfolio_optimizer - INFO - Запуск пайплайна оптимизации портфеля
+2025-04-25 13:08:55,516 - portfolio_optimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-25 13:08:55,699 - portfolio_optimizer - INFO - Загружено 7471 строк данных
+2025-04-25 13:08:55,700 - portfolio_optimizer - INFO - Подготовка данных доходностей для оптимизации
+2025-04-25 13:08:55,704 - portfolio_optimizer - INFO - Отфильтровано 7030 строк по shortlist и сигналам
+2025-04-25 13:08:55,720 - portfolio_optimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-25 13:08:55,721 - portfolio_optimizer - INFO - Запуск оптимизации портфеля для 16 активов
+2025-04-25 13:08:55,746 - portfolio_optimizer - INFO - Оптимизация успешно завершена
+2025-04-25 13:08:55,747 - portfolio_optimizer - INFO - Расчет итогового портфеля с долей безрисковых активов 40.0%
+2025-04-25 13:08:55,748 - portfolio_optimizer - INFO - Ожидаемая доходность портфеля: 10.27%, волатильность: 13.42%, Шарп: -1.13
+2025-04-25 13:08:55,749 - portfolio_optimizer - INFO - Создание визуализации портфеля
+2025-04-25 13:08:55,788 - portfolio_optimizer - INFO - График весов сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/portfolio_weights_pie.png
+2025-04-25 13:08:55,788 - portfolio_optimizer - INFO - Генерация 5000 случайных портфелей для построения эффективной границы
+2025-04-25 13:08:57,452 - portfolio_optimizer - INFO - Создание улучшенного графика эффективной границы
+2025-04-25 13:08:58,126 - portfolio_optimizer - INFO - Улучшенный график эффективной границы сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/enhanced_efficient_frontier.png
+2025-04-25 13:08:58,128 - portfolio_optimizer - INFO - Улучшенный график эффективной границы успешно создан
+2025-04-25 13:08:58,130 - portfolio_optimizer - INFO - Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio

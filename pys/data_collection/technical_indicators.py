@@ -5,14 +5,17 @@ import sys
 import os
 import logging
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
-    current_dir = os.path.dirname(current_dir)
+# current_dir = os.path.dirname(os.path.abspath(__file__))
+# while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
+#     current_dir = os.path.dirname(current_dir)
 
-if current_dir not in sys.path:
-    sys.path.insert(0, current_dir)
+# if current_dir not in sys.path:
+#     sys.path.insert(0, current_dir)
 
-from utils.logger import BaseLogger
+# from utils.logger import BaseLogger
+
+from pys.utils.logger import BaseLogger
+from pys.data_collection.private_info import BASE_PATH
 
 class TechnicalIndicators(BaseLogger):
     def __init__(self, file_path, resample_rule="1D", sma_window=20, rsi_window=14):

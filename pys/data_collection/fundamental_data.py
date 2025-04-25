@@ -9,14 +9,17 @@ from datetime import datetime
 from collections import Counter
 import sys
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
-    current_dir = os.path.dirname(current_dir)
+# current_dir = os.path.dirname(os.path.abspath(__file__))
+# while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
+#     current_dir = os.path.dirname(current_dir)
 
-if current_dir not in sys.path:
-    sys.path.insert(0, current_dir)
+# if current_dir not in sys.path:
+#     sys.path.insert(0, current_dir)
 
-from utils.logger import BaseLogger
+# from utils.logger import BaseLogger
+
+from pys.utils.logger import BaseLogger
+from pys.data_collection.private_info import BASE_PATH
 
 class SmartLabYearlyParser(BaseLogger):
     def __init__(self, ticker, base_path='/Users/aeshef/Documents/GitHub/kursach/data/processed_data', needed_prc_per_year=0.9):
@@ -147,7 +150,7 @@ class FundamentalPipeline(BaseLogger):
         super().__init__('FundamentalPipeline')
         self.base_path = base_path
         self.needed_prc_per_year = needed_prc_per_year
-        self.logger = self._setup_logger()
+        # self.logger = self._setup_logger()
         self.ticker_data_dict = {}
         self.parser_objects = {}
         

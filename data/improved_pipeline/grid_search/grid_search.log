@@ -1,0 +1,55 @@
+2025-04-25 17:37:57,876 - GridSearch - INFO - GridSearch initialized with output directory: /Users/aeshef/Documents/GitHub/kursach/data/improved_pipeline/grid_search
+2025-04-25 17:37:57,879 - GridSearch - INFO - Запуск Grid Search: 432 комбинаций параметров
+2025-04-25 17:37:57,879 - GridSearch - INFO - Обработка чанка 1/22 (20 комбинаций)
+2025-04-25 17:37:57,880 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_2163108051425861148_7092693022303937636_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:57,880 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_2163108051425861148_-2606967420430360810_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:57,880 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_2163108051425861148_6052817518264534396_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:57,882 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_2163108051425861148_-9023268608642359032_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:57,931 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_3153119172003118295_-9023268608642359032_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:57,998 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_3153119172003118295_7092693022303937636_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,031 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_3153119172003118295_-2606967420430360810_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,063 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_3153119172003118295_6052817518264534396_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,064 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-1850802901883374829_-9023268608642359032_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,130 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-1850802901883374829_7092693022303937636_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,164 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-1850802901883374829_-2606967420430360810_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,216 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-1850802901883374829_6052817518264534396_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,249 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_4734706183121280827_-9023268608642359032_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,250 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_4734706183121280827_7092693022303937636_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,344 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_4734706183121280827_-2606967420430360810_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,344 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_4734706183121280827_6052817518264534396_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,425 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-8179208849826628528_-9023268608642359032_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,460 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-8179208849826628528_7092693022303937636_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,493 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-8179208849826628528_-2606967420430360810_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,494 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-8179208849826628528_6052817518264534396_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,660 - GridSearch - INFO - Обработка чанка 2/22 (20 комбинаций)
+2025-04-25 17:37:58,662 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_4811839439669927467_-9023268608642359032_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,696 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_4811839439669927467_7092693022303937636_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,696 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_4811839439669927467_-2606967420430360810_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,763 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_4811839439669927467_6052817518264534396_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,764 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-625378032401711422_-9023268608642359032_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,799 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-625378032401711422_7092693022303937636_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,838 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-625378032401711422_-2606967420430360810_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,880 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-625378032401711422_6052817518264534396_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,915 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-2258567544033852470_-9023268608642359032_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,915 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-2258567544033852470_7092693022303937636_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,948 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-2258567544033852470_-2606967420430360810_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,949 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-2258567544033852470_6052817518264534396_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:58,984 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_571935385103697823_-9023268608642359032_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,055 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_571935385103697823_7092693022303937636_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,056 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_571935385103697823_-2606967420430360810_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,130 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_571935385103697823_6052817518264534396_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,164 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-5758858728249468313_-9023268608642359032_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,199 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-5758858728249468313_7092693022303937636_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,235 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-5758858728249468313_-2606967420430360810_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,279 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-5758858728249468313_6052817518264534396_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,430 - GridSearch - INFO - Обработка чанка 3/22 (20 комбинаций)
+2025-04-25 17:37:59,431 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_385502792556213431_-9023268608642359032_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,432 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_385502792556213431_7092693022303937636_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,432 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_385502792556213431_-2606967420430360810_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,508 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_385502792556213431_6052817518264534396_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,544 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_557253267344098010_-9023268608642359032_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,580 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_557253267344098010_7092693022303937636_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,616 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_557253267344098010_-2606967420430360810_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,652 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_557253267344098010_6052817518264534396_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,652 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-3695438578567438818_-9023268608642359032_0.075): expected str, bytes or os.PathLike object, not NoneType
+2025-04-25 17:37:59,713 - GridSearch - ERROR - Ошибка при тестировании комбинации параметров (ID: 0_-3695438578567438818_7092693022303937636_0.075): expected str, bytes or os.PathLike object, not NoneType

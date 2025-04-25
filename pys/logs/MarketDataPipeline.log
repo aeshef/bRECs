@@ -1,0 +1,6 @@
+2025-04-25 11:36:41 - MarketDataPipeline - INFO - MarketDataPipeline initialized with base directory: /Users/aeshef/Documents/GitHub/kursach/data
+2025-04-25 11:36:41 - MarketDataPipeline - INFO - Starting market data pipeline for 16 tickers
+2025-04-25 11:36:41 - MarketDataPipeline - INFO - Date range: 2024-01-01 to 2025-04-15, timeframe: 1min
+2025-04-25 11:36:44 - MarketDataPipeline - INFO - Starting process: Data download
+2025-04-25 11:43:12 - MarketDataPipeline - INFO - Successfully completed: Data download
+2025-04-25 11:43:12 - MarketDataPipeline - INFO - Successfully downloaded data for 16 out of 16 tickers

@@ -4,8 +4,12 @@ import matplotlib.pyplot as plt
 import os
 import logging
 from datetime import datetime
+import sys
 
-class Backtester:
+from pys.utils.logger import BaseLogger
+from pys.data_collection.private_info import BASE_PATH
+
+class Backtester(BaseLogger):
     def __init__(self, input_file=None, portfolio_weights=None, start_date=None, end_date=None, log_level=logging.INFO):
         """
         Бэктестер для оценки эффективности стратегии
@@ -21,6 +25,7 @@ class Backtester:
         end_date : str, optional
             Дата окончания бэктеста в формате 'YYYY-MM-DD'
         """
+        super().__init__('Backtester')
         self.input_file = input_file
         self.portfolio_weights = portfolio_weights
         self.start_date = start_date
@@ -30,26 +35,26 @@ class Backtester:
         self.portfolio_returns = None
         self.metrics = None
         
-        # Настройка логгера
-        self.logger = logging.getLogger('backtester')
-        self.logger.setLevel(log_level)
+        # # Настройка логгера
+        # self.logger = logging.getLogger('backtester')
+        # self.logger.setLevel(log_level)
         
-        # Создаем обработчик для записи в файл
-        log_dir = 'logs'
-        os.makedirs(log_dir, exist_ok=True)
-        file_handler = logging.FileHandler(f'{log_dir}/backtester_{datetime.now().strftime("%Y%m%d")}.log')
+        # # Создаем обработчик для записи в файл
+        # log_dir = 'logs'
+        # os.makedirs(log_dir, exist_ok=True)
+        # file_handler = logging.FileHandler(f'{log_dir}/backtester_{datetime.now().strftime("%Y%m%d")}.log')
         
-        # Создаем форматтер
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-        file_handler.setFormatter(formatter)
+        # # Создаем форматтер
+        # formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        # file_handler.setFormatter(formatter)
         
-        # Добавляем обработчик к логгеру, если его еще нет
-        if not self.logger.handlers:
-            self.logger.addHandler(file_handler)
-            # Добавляем вывод в консоль
-            console_handler = logging.StreamHandler()
-            console_handler.setFormatter(formatter)
-            self.logger.addHandler(console_handler)
+        # # Добавляем обработчик к логгеру, если его еще нет
+        # if not self.logger.handlers:
+        #     self.logger.addHandler(file_handler)
+        #     # Добавляем вывод в консоль
+        #     console_handler = logging.StreamHandler()
+        #     console_handler.setFormatter(formatter)
+        #     self.logger.addHandler(console_handler)
     
     def load_data(self, input_file=None):
         """Загрузка данных для бэктестирования"""
@@ -366,7 +371,7 @@ class Backtester:
             self.logger.info(f"Метрики и данные сохранены в {output_dir}")
     
     def run_pipeline(self, input_file=None, portfolio_weights=None, 
-               start_date=None, end_date=None, output_dir="/Users/aeshef/Documents/GitHub/kursach/data/portfolio/results", 
+               start_date=None, end_date=None, output_dir=f"{BASE_PATH}/data/portfolio/results", 
                risk_free_rate=7.5):
         """
         Запускает полный пайплайн бэктестирования
@@ -392,7 +397,7 @@ class Backtester:
 
         # Устанавливаем путь к файлу по умолчанию, если не указан
         if input_file is None:
-            input_file = "/Users/aeshef/Documents/GitHub/kursach/data/signals.csv"
+            input_file = f"{BASE_PATH}/data/signals.csv"
         
         # Обновление параметров, если указаны
         if portfolio_weights is not None:

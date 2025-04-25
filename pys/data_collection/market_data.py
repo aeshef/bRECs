@@ -12,16 +12,19 @@ import numpy as np
 from concurrent.futures import ThreadPoolExecutor
 import sys
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
-    current_dir = os.path.dirname(current_dir)
-    if current_dir == os.path.dirname(current_dir):
-        break
+# current_dir = os.path.dirname(os.path.abspath(__file__))
+# while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
+#     current_dir = os.path.dirname(current_dir)
+#     if current_dir == os.path.dirname(current_dir):
+#         break
 
-if current_dir not in sys.path:
-    sys.path.insert(0, current_dir)
+# if current_dir not in sys.path:
+#     sys.path.insert(0, current_dir)
 
-from utils.logger import BaseLogger
+# from utils.logger import BaseLogger
+
+from pys.utils.logger import BaseLogger
+from pys.data_collection.private_info import BASE_PATH
 
 class DataStorage(BaseLogger):
     """Класс для управления хранением данных"""
@@ -556,18 +559,21 @@ class MarketDataManager(BaseLogger):
         
         self.logger.info(f"Completed data retrieval for {len(tickers)} tickers")
         return results
+    
+sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
+from private_info import BASE_PATH
 
 class MarketDataPipeline(BaseLogger):
     """Класс для запуска пайплайна загрузки рыночных данных"""
     
-    def __init__(self, base_directory="/Users/aeshef/Documents/GitHub/kursach/data"):
+    def __init__(self, base_directory=f"/{BASE_PATH}/data"):
         """Инициализация пайплайна с директорией для данных"""
         super().__init__('MarketDataPipeline')
         self.base_directory = base_directory
         self.logger.info(f"MarketDataPipeline initialized with base directory: {base_directory}")
     
     def run(self, tickers, start_date, end_date, token, timeframe="1min"):
-        """
+        """s
         Запускает пайплайн: настраивает логирование и загружает данные.
 
         Параметры:
