@@ -5,3 +5,5 @@ __pycache__/
 .ipynb_checkpoints/
 .idea/
 private_info.py
+news_pipeline_config.json
+telegram_session.session
