@@ -190,3 +190,415 @@
 2025-04-25 11:43:12 - DataStorage - INFO - Loaded 344232 rows from 483 CSV files
 2025-04-25 11:43:12 - DataStorage - INFO - Combined 979 new rows with 335820 existing rows for RUAL
 2025-04-25 11:43:12 - DataStorage - INFO - Saved processed data for RUAL to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/RUAL.parquet
+2025-04-26 12:08:42 - DataStorage - INFO - Loaded 417181 rows of processed data for ROSN
+2025-04-26 12:08:42 - DataStorage - INFO - Loaded 411577 rows of processed data for GAZP
+2025-04-26 12:08:42 - DataStorage - INFO - Loaded 412126 rows of processed data for SBER
+2025-04-26 12:08:42 - DataStorage - INFO - Loaded 343876 rows of processed data for GMKN
+2025-04-26 12:08:42 - DataStorage - INFO - Loaded 378321 rows of processed data for LKOH
+2025-04-26 12:08:42 - DataStorage - INFO - Loaded 412126 rows of processed data for SBER
+2025-04-26 12:08:42 - DataStorage - INFO - Loaded 378321 rows of processed data for LKOH
+2025-04-26 12:08:42 - DataStorage - INFO - Loaded 411577 rows of processed data for GAZP
+2025-04-26 12:08:42 - DataStorage - INFO - Loaded 343876 rows of processed data for GMKN
+2025-04-26 12:08:42 - DataStorage - INFO - Loaded 417181 rows of processed data for ROSN
+2025-04-26 12:08:42 - DataStorage - INFO - Missing date range for SBER: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 12:08:42 - DataStorage - INFO - Missing date range for LKOH: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 12:08:42 - DataStorage - INFO - Missing date range for GAZP: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 12:08:42 - DataStorage - INFO - Missing date range for SBER: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 12:08:42 - DataStorage - INFO - Missing date range for GMKN: 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-26 12:08:42 - DataStorage - INFO - Missing date range for LKOH: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 12:08:42 - DataStorage - INFO - Missing date range for GAZP: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 12:08:42 - DataStorage - INFO - Missing date range for ROSN: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 12:08:42 - DataStorage - INFO - Missing date range for GMKN: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 12:08:42 - DataStorage - INFO - Missing date range for ROSN: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 12:09:01 - DataStorage - INFO - Extracted 483 CSV files for LKOH
+2025-04-26 12:09:01 - DataStorage - INFO - Extracted 477 CSV files for GMKN
+2025-04-26 12:09:01 - DataStorage - INFO - Extracted 483 CSV files for ROSN
+2025-04-26 12:09:02 - DataStorage - INFO - Loaded 387807 rows from 483 CSV files
+2025-04-26 12:09:02 - DataStorage - INFO - Combined 0 new rows with 378321 existing rows for LKOH
+2025-04-26 12:09:02 - DataStorage - INFO - Saved processed data for LKOH to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/LKOH.parquet
+2025-04-26 12:09:03 - DataStorage - INFO - Loaded 353062 rows from 477 CSV files
+2025-04-26 12:09:03 - DataStorage - INFO - Combined 0 new rows with 343876 existing rows for GMKN
+2025-04-26 12:09:03 - DataStorage - INFO - Saved processed data for GMKN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/GMKN.parquet
+2025-04-26 12:09:03 - DataStorage - INFO - Extracted 828 CSV files for GAZP
+2025-04-26 12:09:04 - DataStorage - INFO - Extracted 828 CSV files for SBER
+2025-04-26 12:09:04 - DataStorage - INFO - Loaded 427506 rows from 483 CSV files
+2025-04-26 12:09:04 - DataStorage - INFO - Combined 0 new rows with 417181 existing rows for ROSN
+2025-04-26 12:09:04 - DataStorage - INFO - Saved processed data for ROSN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/ROSN.parquet
+2025-04-26 12:09:06 - DataStorage - INFO - Loaded 470067 rows from 828 CSV files
+2025-04-26 12:09:06 - DataStorage - INFO - Combined 0 new rows with 411577 existing rows for GAZP
+2025-04-26 12:09:06 - DataStorage - INFO - Saved processed data for GAZP to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/GAZP.parquet
+2025-04-26 12:09:07 - DataStorage - INFO - Loaded 513447 rows from 828 CSV files
+2025-04-26 12:09:07 - DataStorage - INFO - Combined 0 new rows with 412126 existing rows for SBER
+2025-04-26 12:09:07 - DataStorage - INFO - Saved processed data for SBER to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/SBER.parquet
+2025-04-26 12:13:33 - DataStorage - INFO - No processed data file found for SBER
+2025-04-26 12:13:33 - DataStorage - INFO - No processed data file found for GAZP
+2025-04-26 12:13:33 - DataStorage - INFO - No processed data file found for LKOH
+2025-04-26 12:13:33 - DataStorage - INFO - No processed data file found for GMKN
+2025-04-26 12:13:33 - DataStorage - INFO - No processed data file found for ROSN
+2025-04-26 12:15:00 - DataStorage - INFO - Extracted 478 CSV files for GMKN
+2025-04-26 12:15:01 - DataStorage - INFO - Extracted 484 CSV files for ROSN
+2025-04-26 12:15:02 - DataStorage - INFO - Loaded 354081 rows from 478 CSV files
+2025-04-26 12:15:02 - DataStorage - INFO - Created new dataset with 343888 rows for GMKN
+2025-04-26 12:15:02 - DataStorage - INFO - Saved processed data for GMKN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/GMKN.parquet
+2025-04-26 12:15:02 - DataStorage - INFO - No processed data file found for TATN
+2025-04-26 12:15:02 - DataStorage - INFO - Extracted 485 CSV files for LKOH
+2025-04-26 12:15:03 - DataStorage - INFO - Loaded 428546 rows from 484 CSV files
+2025-04-26 12:15:03 - DataStorage - INFO - Created new dataset with 417193 rows for ROSN
+2025-04-26 12:15:03 - DataStorage - INFO - Saved processed data for ROSN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/ROSN.parquet
+2025-04-26 12:15:03 - DataStorage - INFO - No processed data file found for MTSS
+2025-04-26 12:15:04 - DataStorage - INFO - Loaded 388831 rows from 485 CSV files
+2025-04-26 12:15:04 - DataStorage - INFO - Created new dataset with 378333 rows for LKOH
+2025-04-26 12:15:04 - DataStorage - INFO - Saved processed data for LKOH to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/LKOH.parquet
+2025-04-26 12:15:04 - DataStorage - INFO - No processed data file found for ALRS
+2025-04-26 12:17:03 - DataStorage - INFO - Extracted 828 CSV files for MTSS
+2025-04-26 12:17:03 - DataStorage - INFO - Extracted 484 CSV files for ALRS
+2025-04-26 12:17:04 - DataStorage - INFO - Loaded 367254 rows from 828 CSV files
+2025-04-26 12:17:04 - DataStorage - INFO - Created new dataset with 356853 rows for MTSS
+2025-04-26 12:17:04 - DataStorage - INFO - Saved processed data for MTSS to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/MTSS.parquet
+2025-04-26 12:17:04 - DataStorage - INFO - No processed data file found for SNGS
+2025-04-26 12:17:04 - DataStorage - INFO - Extracted 830 CSV files for GAZP
+2025-04-26 12:17:05 - DataStorage - INFO - Loaded 365453 rows from 484 CSV files
+2025-04-26 12:17:05 - DataStorage - INFO - Created new dataset with 355650 rows for ALRS
+2025-04-26 12:17:05 - DataStorage - INFO - Saved processed data for ALRS to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/ALRS.parquet
+2025-04-26 12:17:05 - DataStorage - INFO - No processed data file found for NVTK
+2025-04-26 12:17:06 - DataStorage - INFO - Extracted 830 CSV files for SBER
+2025-04-26 12:17:07 - DataStorage - INFO - Loaded 471619 rows from 830 CSV files
+2025-04-26 12:17:07 - DataStorage - INFO - Created new dataset with 456648 rows for GAZP
+2025-04-26 12:17:07 - DataStorage - INFO - Saved processed data for GAZP to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/GAZP.parquet
+2025-04-26 12:17:07 - DataStorage - INFO - No processed data file found for MVID
+2025-04-26 12:17:08 - DataStorage - INFO - Loaded 515194 rows from 830 CSV files
+2025-04-26 12:17:08 - DataStorage - INFO - Created new dataset with 498691 rows for SBER
+2025-04-26 12:17:08 - DataStorage - INFO - Saved processed data for SBER to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/SBER.parquet
+2025-04-26 12:17:08 - DataStorage - INFO - No processed data file found for PHOR
+2025-04-26 12:18:03 - DataStorage - INFO - Extracted 482 CSV files for TATN
+2025-04-26 12:18:04 - DataStorage - INFO - Loaded 391310 rows from 482 CSV files
+2025-04-26 12:18:04 - DataStorage - INFO - Created new dataset with 381094 rows for TATN
+2025-04-26 12:18:04 - DataStorage - INFO - Saved processed data for TATN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/TATN.parquet
+2025-04-26 12:18:04 - DataStorage - INFO - No processed data file found for SIBN
+2025-04-26 12:18:05 - DataStorage - INFO - Extracted 484 CSV files for PHOR
+2025-04-26 12:18:06 - DataStorage - INFO - Loaded 291589 rows from 484 CSV files
+2025-04-26 12:18:06 - DataStorage - INFO - Created new dataset with 283743 rows for PHOR
+2025-04-26 12:18:06 - DataStorage - INFO - Saved processed data for PHOR to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/PHOR.parquet
+2025-04-26 12:18:06 - DataStorage - INFO - No processed data file found for AFKS
+2025-04-26 12:19:03 - DataStorage - INFO - Extracted 485 CSV files for SNGS
+2025-04-26 12:19:04 - DataStorage - INFO - Loaded 315183 rows from 485 CSV files
+2025-04-26 12:19:04 - DataStorage - INFO - Created new dataset with 306612 rows for SNGS
+2025-04-26 12:19:04 - DataStorage - INFO - Saved processed data for SNGS to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/SNGS.parquet
+2025-04-26 12:19:04 - DataStorage - INFO - No processed data file found for MAGN
+2025-04-26 12:19:04 - DataStorage - INFO - Extracted 482 CSV files for NVTK
+2025-04-26 12:19:06 - DataStorage - INFO - Loaded 389389 rows from 482 CSV files
+2025-04-26 12:19:06 - DataStorage - INFO - Created new dataset with 378838 rows for NVTK
+2025-04-26 12:19:06 - DataStorage - INFO - Saved processed data for NVTK to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/NVTK.parquet
+2025-04-26 12:19:06 - DataStorage - INFO - No processed data file found for RUAL
+2025-04-26 12:19:06 - DataStorage - INFO - Extracted 484 CSV files for MVID
+2025-04-26 12:19:07 - DataStorage - INFO - Loaded 323878 rows from 484 CSV files
+2025-04-26 12:19:07 - DataStorage - INFO - Created new dataset with 317252 rows for MVID
+2025-04-26 12:19:07 - DataStorage - INFO - Saved processed data for MVID to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/MVID.parquet
+2025-04-26 12:20:02 - DataStorage - INFO - Extracted 480 CSV files for SIBN
+2025-04-26 12:20:03 - DataStorage - INFO - Loaded 348017 rows from 480 CSV files
+2025-04-26 12:20:03 - DataStorage - INFO - Created new dataset with 338391 rows for SIBN
+2025-04-26 12:20:03 - DataStorage - INFO - Saved processed data for SIBN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/SIBN.parquet
+2025-04-26 12:20:04 - DataStorage - INFO - Extracted 484 CSV files for AFKS
+2025-04-26 12:20:04 - DataStorage - INFO - Extracted 477 CSV files for MAGN
+2025-04-26 12:20:05 - DataStorage - INFO - Loaded 329889 rows from 484 CSV files
+2025-04-26 12:20:05 - DataStorage - INFO - Created new dataset with 320354 rows for AFKS
+2025-04-26 12:20:05 - DataStorage - INFO - Saved processed data for AFKS to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/AFKS.parquet
+2025-04-26 12:20:06 - DataStorage - INFO - Loaded 385621 rows from 477 CSV files
+2025-04-26 12:20:06 - DataStorage - INFO - Created new dataset with 375268 rows for MAGN
+2025-04-26 12:20:06 - DataStorage - INFO - Saved processed data for MAGN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/MAGN.parquet
+2025-04-26 12:20:07 - DataStorage - INFO - Extracted 484 CSV files for RUAL
+2025-04-26 12:20:08 - DataStorage - INFO - Loaded 345214 rows from 484 CSV files
+2025-04-26 12:20:08 - DataStorage - INFO - Created new dataset with 335833 rows for RUAL
+2025-04-26 12:20:08 - DataStorage - INFO - Saved processed data for RUAL to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/RUAL.parquet
+2025-04-26 12:34:29 - DataStorage - INFO - Loaded 378333 rows of processed data for LKOH
+2025-04-26 12:34:29 - DataStorage - INFO - Loaded 456648 rows of processed data for GAZP
+2025-04-26 12:34:29 - DataStorage - INFO - Loaded 343888 rows of processed data for GMKN
+2025-04-26 12:34:29 - DataStorage - INFO - Loaded 417193 rows of processed data for ROSN
+2025-04-26 12:34:29 - DataStorage - INFO - Loaded 498691 rows of processed data for SBER
+2025-04-26 12:34:29 - DataStorage - INFO - Loaded 343888 rows of processed data for GMKN
+2025-04-26 12:34:29 - DataStorage - INFO - Loaded 378333 rows of processed data for LKOH
+2025-04-26 12:34:29 - DataStorage - INFO - Loaded 417193 rows of processed data for ROSN
+2025-04-26 12:34:29 - DataStorage - INFO - Missing date range for GMKN: 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-26 12:34:29 - DataStorage - INFO - Loaded 456648 rows of processed data for GAZP
+2025-04-26 12:34:29 - DataStorage - INFO - Loaded 498691 rows of processed data for SBER
+2025-04-26 12:34:29 - DataStorage - INFO - Missing date range for LKOH: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 12:34:29 - DataStorage - INFO - Missing date range for GMKN: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 12:34:29 - DataStorage - INFO - Missing date range for ROSN: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 12:34:29 - DataStorage - INFO - Missing date range for LKOH: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 12:34:29 - DataStorage - INFO - Missing date range for GAZP: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 12:34:29 - DataStorage - INFO - Missing date range for ROSN: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 12:34:29 - DataStorage - INFO - Missing date range for SBER: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 12:34:29 - DataStorage - INFO - Missing date range for SBER: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 12:34:29 - DataStorage - INFO - Missing date range for GAZP: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 13:36:50 - DataStorage - INFO - No processed data file found for SBER
+2025-04-26 13:36:50 - DataStorage - INFO - No processed data file found for GAZP
+2025-04-26 13:36:50 - DataStorage - INFO - No processed data file found for LKOH
+2025-04-26 13:36:50 - DataStorage - INFO - No processed data file found for GMKN
+2025-04-26 13:36:50 - DataStorage - INFO - No processed data file found for ROSN
+2025-04-26 13:37:02 - DataStorage - INFO - Extracted 485 CSV files for LKOH
+2025-04-26 13:37:03 - DataStorage - INFO - Loaded 388831 rows from 485 CSV files
+2025-04-26 13:37:03 - DataStorage - INFO - Created new dataset with 378333 rows for LKOH
+2025-04-26 13:37:03 - DataStorage - INFO - Saved processed data for LKOH to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/LKOH.parquet
+2025-04-26 13:37:03 - DataStorage - INFO - No processed data file found for TATN
+2025-04-26 13:39:02 - DataStorage - INFO - Extracted 478 CSV files for GMKN
+2025-04-26 13:39:02 - DataStorage - INFO - Extracted 482 CSV files for TATN
+2025-04-26 13:39:03 - DataStorage - INFO - Extracted 484 CSV files for ROSN
+2025-04-26 13:39:04 - DataStorage - INFO - Loaded 354081 rows from 478 CSV files
+2025-04-26 13:39:04 - DataStorage - INFO - Created new dataset with 343888 rows for GMKN
+2025-04-26 13:39:04 - DataStorage - INFO - Saved processed data for GMKN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/GMKN.parquet
+2025-04-26 13:39:04 - DataStorage - INFO - No processed data file found for MTSS
+2025-04-26 13:39:05 - DataStorage - INFO - Loaded 391310 rows from 482 CSV files
+2025-04-26 13:39:05 - DataStorage - INFO - Created new dataset with 381094 rows for TATN
+2025-04-26 13:39:05 - DataStorage - INFO - Saved processed data for TATN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/TATN.parquet
+2025-04-26 13:39:05 - DataStorage - INFO - Extracted 830 CSV files for GAZP
+2025-04-26 13:39:05 - DataStorage - INFO - No processed data file found for ALRS
+2025-04-26 13:39:05 - DataStorage - INFO - Loaded 428546 rows from 484 CSV files
+2025-04-26 13:39:05 - DataStorage - INFO - Created new dataset with 417193 rows for ROSN
+2025-04-26 13:39:05 - DataStorage - INFO - Saved processed data for ROSN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/ROSN.parquet
+2025-04-26 13:39:05 - DataStorage - INFO - No processed data file found for SNGS
+2025-04-26 13:39:07 - DataStorage - INFO - Loaded 471619 rows from 830 CSV files
+2025-04-26 13:39:07 - DataStorage - INFO - Created new dataset with 456648 rows for GAZP
+2025-04-26 13:39:07 - DataStorage - INFO - Saved processed data for GAZP to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/GAZP.parquet
+2025-04-26 13:39:07 - DataStorage - INFO - No processed data file found for NVTK
+2025-04-26 13:40:03 - DataStorage - INFO - Extracted 830 CSV files for SBER
+2025-04-26 13:40:04 - DataStorage - INFO - Loaded 515194 rows from 830 CSV files
+2025-04-26 13:40:04 - DataStorage - INFO - Created new dataset with 498691 rows for SBER
+2025-04-26 13:40:04 - DataStorage - INFO - Saved processed data for SBER to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/SBER.parquet
+2025-04-26 13:40:04 - DataStorage - INFO - No processed data file found for MVID
+2025-04-26 13:41:04 - DataStorage - INFO - Extracted 485 CSV files for SNGS
+2025-04-26 13:41:05 - DataStorage - INFO - Loaded 315183 rows from 485 CSV files
+2025-04-26 13:41:05 - DataStorage - INFO - Created new dataset with 306612 rows for SNGS
+2025-04-26 13:41:05 - DataStorage - INFO - Saved processed data for SNGS to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/SNGS.parquet
+2025-04-26 13:41:05 - DataStorage - INFO - No processed data file found for PHOR
+2025-04-26 13:42:03 - DataStorage - INFO - Extracted 482 CSV files for NVTK
+2025-04-26 13:42:04 - DataStorage - INFO - Extracted 828 CSV files for MTSS
+2025-04-26 13:42:05 - DataStorage - INFO - Loaded 389389 rows from 482 CSV files
+2025-04-26 13:42:05 - DataStorage - INFO - Created new dataset with 378838 rows for NVTK
+2025-04-26 13:42:05 - DataStorage - INFO - Extracted 484 CSV files for ALRS
+2025-04-26 13:42:05 - DataStorage - INFO - Extracted 484 CSV files for MVID
+2025-04-26 13:42:05 - DataStorage - INFO - Saved processed data for NVTK to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/NVTK.parquet
+2025-04-26 13:42:05 - DataStorage - INFO - No processed data file found for SIBN
+2025-04-26 13:42:06 - DataStorage - INFO - Loaded 367254 rows from 828 CSV files
+2025-04-26 13:42:06 - DataStorage - INFO - Created new dataset with 356853 rows for MTSS
+2025-04-26 13:42:06 - DataStorage - INFO - Saved processed data for MTSS to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/MTSS.parquet
+2025-04-26 13:42:06 - DataStorage - INFO - No processed data file found for AFKS
+2025-04-26 13:42:07 - DataStorage - INFO - Loaded 323878 rows from 484 CSV files
+2025-04-26 13:42:08 - DataStorage - INFO - Created new dataset with 317252 rows for MVID
+2025-04-26 13:42:08 - DataStorage - INFO - Loaded 365453 rows from 484 CSV files
+2025-04-26 13:42:08 - DataStorage - INFO - Created new dataset with 355650 rows for ALRS
+2025-04-26 13:42:08 - DataStorage - INFO - Saved processed data for MVID to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/MVID.parquet
+2025-04-26 13:42:08 - DataStorage - INFO - No processed data file found for MAGN
+2025-04-26 13:42:08 - DataStorage - INFO - Saved processed data for ALRS to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/ALRS.parquet
+2025-04-26 13:42:08 - DataStorage - INFO - No processed data file found for RUAL
+2025-04-26 13:43:04 - DataStorage - INFO - Extracted 480 CSV files for SIBN
+2025-04-26 13:43:04 - DataStorage - INFO - Extracted 477 CSV files for MAGN
+2025-04-26 13:43:05 - DataStorage - INFO - Loaded 348017 rows from 480 CSV files
+2025-04-26 13:43:05 - DataStorage - INFO - Created new dataset with 338391 rows for SIBN
+2025-04-26 13:43:05 - DataStorage - INFO - Saved processed data for SIBN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/SIBN.parquet
+2025-04-26 13:43:05 - DataStorage - INFO - Extracted 484 CSV files for AFKS
+2025-04-26 13:43:06 - DataStorage - INFO - Loaded 385621 rows from 477 CSV files
+2025-04-26 13:43:06 - DataStorage - INFO - Created new dataset with 375268 rows for MAGN
+2025-04-26 13:43:06 - DataStorage - INFO - Saved processed data for MAGN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/MAGN.parquet
+2025-04-26 13:43:06 - DataStorage - INFO - Extracted 484 CSV files for RUAL
+2025-04-26 13:43:07 - DataStorage - INFO - Loaded 329889 rows from 484 CSV files
+2025-04-26 13:43:07 - DataStorage - INFO - Created new dataset with 320354 rows for AFKS
+2025-04-26 13:43:07 - DataStorage - INFO - Extracted 119 CSV files for PHOR
+2025-04-26 13:43:07 - DataStorage - INFO - Saved processed data for AFKS to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/AFKS.parquet
+2025-04-26 13:43:07 - DataStorage - INFO - Loaded 81703 rows from 119 CSV files
+2025-04-26 13:43:07 - DataStorage - INFO - Created new dataset with 73857 rows for PHOR
+2025-04-26 13:43:07 - DataStorage - INFO - Saved processed data for PHOR to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/PHOR.parquet
+2025-04-26 13:43:08 - DataStorage - INFO - Loaded 345214 rows from 484 CSV files
+2025-04-26 13:43:08 - DataStorage - INFO - Created new dataset with 335833 rows for RUAL
+2025-04-26 13:43:08 - DataStorage - INFO - Saved processed data for RUAL to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/RUAL.parquet
+2025-04-26 18:45:05 - DataStorage - INFO - Loaded 378333 rows of processed data for LKOH
+2025-04-26 18:45:05 - DataStorage - INFO - Loaded 456648 rows of processed data for GAZP
+2025-04-26 18:45:05 - DataStorage - INFO - Loaded 498691 rows of processed data for SBER
+2025-04-26 18:45:05 - DataStorage - INFO - Loaded 417193 rows of processed data for ROSN
+2025-04-26 18:45:05 - DataStorage - INFO - Loaded 343888 rows of processed data for GMKN
+2025-04-26 18:45:05 - DataStorage - INFO - Loaded 378333 rows of processed data for LKOH
+2025-04-26 18:45:05 - DataStorage - INFO - Loaded 456648 rows of processed data for GAZP
+2025-04-26 18:45:05 - DataStorage - INFO - Loaded 417193 rows of processed data for ROSN
+2025-04-26 18:45:05 - DataStorage - INFO - Loaded 343888 rows of processed data for GMKN
+2025-04-26 18:45:05 - DataStorage - INFO - Missing date range for LKOH: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 18:45:05 - DataStorage - INFO - Missing date range for GAZP: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 18:45:05 - DataStorage - INFO - Loaded 498691 rows of processed data for SBER
+2025-04-26 18:45:05 - DataStorage - INFO - Missing date range for LKOH: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 18:45:05 - DataStorage - INFO - Missing date range for GAZP: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 18:45:05 - DataStorage - INFO - Missing date range for GMKN: 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-26 18:45:05 - DataStorage - INFO - Missing date range for ROSN: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 18:45:05 - DataStorage - INFO - Missing date range for SBER: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 18:45:05 - DataStorage - INFO - Missing date range for GMKN: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 18:45:05 - DataStorage - INFO - Missing date range for ROSN: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 18:45:05 - DataStorage - INFO - Missing date range for SBER: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 18:46:04 - DataStorage - INFO - Extracted 478 CSV files for GMKN
+2025-04-26 18:46:05 - DataStorage - INFO - Extracted 484 CSV files for ROSN
+2025-04-26 18:46:05 - DataStorage - INFO - Extracted 485 CSV files for LKOH
+2025-04-26 18:46:06 - DataStorage - INFO - Loaded 354081 rows from 478 CSV files
+2025-04-26 18:46:06 - DataStorage - INFO - Combined 0 new rows with 343888 existing rows for GMKN
+2025-04-26 18:46:06 - DataStorage - INFO - Saved processed data for GMKN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/GMKN.parquet
+2025-04-26 18:46:06 - DataStorage - INFO - Extracted 830 CSV files for GAZP
+2025-04-26 18:46:08 - DataStorage - INFO - Loaded 428546 rows from 484 CSV files
+2025-04-26 18:46:08 - DataStorage - INFO - Loaded 388831 rows from 485 CSV files
+2025-04-26 18:46:08 - DataStorage - INFO - Combined 0 new rows with 417193 existing rows for ROSN
+2025-04-26 18:46:08 - DataStorage - INFO - Combined 0 new rows with 378333 existing rows for LKOH
+2025-04-26 18:46:08 - DataStorage - INFO - Saved processed data for LKOH to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/LKOH.parquet
+2025-04-26 18:46:08 - DataStorage - INFO - Saved processed data for ROSN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/ROSN.parquet
+2025-04-26 18:46:08 - DataStorage - INFO - Extracted 830 CSV files for SBER
+2025-04-26 18:46:10 - DataStorage - INFO - Loaded 471619 rows from 830 CSV files
+2025-04-26 18:46:10 - DataStorage - INFO - Combined 0 new rows with 456648 existing rows for GAZP
+2025-04-26 18:46:10 - DataStorage - INFO - Saved processed data for GAZP to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/GAZP.parquet
+2025-04-26 18:46:11 - DataStorage - INFO - Loaded 515194 rows from 830 CSV files
+2025-04-26 18:46:11 - DataStorage - INFO - Combined 0 new rows with 498691 existing rows for SBER
+2025-04-26 18:46:11 - DataStorage - INFO - Saved processed data for SBER to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/SBER.parquet
+2025-04-26 18:47:01 - DataStorage - INFO - Extracted 478 CSV files for GMKN
+2025-04-26 18:47:02 - DataStorage - INFO - Loaded 354081 rows from 478 CSV files
+2025-04-26 18:47:02 - DataStorage - INFO - Combined 988 new rows with 343880 existing rows for GMKN
+2025-04-26 18:47:02 - DataStorage - INFO - Saved processed data for GMKN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/GMKN.parquet
+2025-04-26 18:47:02 - DataStorage - INFO - Loaded 381094 rows of processed data for TATN
+2025-04-26 18:47:02 - DataStorage - INFO - Loaded 381094 rows of processed data for TATN
+2025-04-26 18:47:02 - DataStorage - INFO - Missing date range for TATN: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 18:47:02 - DataStorage - INFO - Missing date range for TATN: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 18:47:04 - DataStorage - INFO - Extracted 485 CSV files for LKOH
+2025-04-26 18:47:04 - DataStorage - INFO - Extracted 484 CSV files for ROSN
+2025-04-26 18:47:05 - DataStorage - INFO - Loaded 388831 rows from 485 CSV files
+2025-04-26 18:47:06 - DataStorage - INFO - Combined 991 new rows with 378326 existing rows for LKOH
+2025-04-26 18:47:06 - DataStorage - INFO - Loaded 428546 rows from 484 CSV files
+2025-04-26 18:47:06 - DataStorage - INFO - Combined 992 new rows with 417184 existing rows for ROSN
+2025-04-26 18:47:06 - DataStorage - INFO - Saved processed data for LKOH to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/LKOH.parquet
+2025-04-26 18:47:06 - DataStorage - INFO - Loaded 356853 rows of processed data for MTSS
+2025-04-26 18:47:06 - DataStorage - INFO - Loaded 356853 rows of processed data for MTSS
+2025-04-26 18:47:06 - DataStorage - INFO - Missing date range for MTSS: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 18:47:06 - DataStorage - INFO - Missing date range for MTSS: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 18:47:06 - DataStorage - INFO - Saved processed data for ROSN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/ROSN.parquet
+2025-04-26 18:47:06 - DataStorage - INFO - Loaded 355650 rows of processed data for ALRS
+2025-04-26 18:47:06 - DataStorage - INFO - Loaded 355650 rows of processed data for ALRS
+2025-04-26 18:47:06 - DataStorage - INFO - Missing date range for ALRS: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 18:47:06 - DataStorage - INFO - Missing date range for ALRS: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 18:48:01 - DataStorage - INFO - Extracted 482 CSV files for TATN
+2025-04-26 18:48:03 - DataStorage - INFO - Loaded 391310 rows from 482 CSV files
+2025-04-26 18:48:03 - DataStorage - INFO - Combined 0 new rows with 381094 existing rows for TATN
+2025-04-26 18:48:03 - DataStorage - INFO - Saved processed data for TATN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/TATN.parquet
+2025-04-26 18:48:05 - DataStorage - INFO - Extracted 482 CSV files for TATN
+2025-04-26 18:48:06 - DataStorage - INFO - Loaded 391310 rows from 482 CSV files
+2025-04-26 18:48:06 - DataStorage - INFO - Combined 979 new rows with 381088 existing rows for TATN
+2025-04-26 18:48:06 - DataStorage - INFO - Saved processed data for TATN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/TATN.parquet
+2025-04-26 18:48:06 - DataStorage - INFO - Loaded 306612 rows of processed data for SNGS
+2025-04-26 18:48:06 - DataStorage - INFO - Loaded 306612 rows of processed data for SNGS
+2025-04-26 18:48:06 - DataStorage - INFO - Missing date range for SNGS: 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-26 18:48:06 - DataStorage - INFO - Missing date range for SNGS: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 18:49:03 - DataStorage - INFO - Extracted 830 CSV files for GAZP
+2025-04-26 18:49:03 - DataStorage - INFO - Extracted 830 CSV files for SBER
+2025-04-26 18:49:06 - DataStorage - INFO - Loaded 471619 rows from 830 CSV files
+2025-04-26 18:49:06 - DataStorage - INFO - Combined 1453 new rows with 411925 existing rows for GAZP
+2025-04-26 18:49:06 - DataStorage - INFO - Saved processed data for GAZP to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/GAZP.parquet
+2025-04-26 18:49:06 - DataStorage - INFO - Loaded 378838 rows of processed data for NVTK
+2025-04-26 18:49:06 - DataStorage - INFO - Loaded 378838 rows of processed data for NVTK
+2025-04-26 18:49:06 - DataStorage - INFO - Missing date range for NVTK: 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-26 18:49:06 - DataStorage - INFO - Missing date range for NVTK: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 18:49:07 - DataStorage - INFO - Extracted 828 CSV files for MTSS
+2025-04-26 18:49:07 - DataStorage - INFO - Loaded 515194 rows from 830 CSV files
+2025-04-26 18:49:07 - DataStorage - INFO - Combined 1617 new rows with 412938 existing rows for SBER
+2025-04-26 18:49:07 - DataStorage - INFO - Extracted 485 CSV files for SNGS
+2025-04-26 18:49:07 - DataStorage - INFO - Saved processed data for SBER to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/SBER.parquet
+2025-04-26 18:49:07 - DataStorage - INFO - Loaded 317252 rows of processed data for MVID
+2025-04-26 18:49:07 - DataStorage - INFO - Loaded 317252 rows of processed data for MVID
+2025-04-26 18:49:07 - DataStorage - INFO - Missing date range for MVID: 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-26 18:49:07 - DataStorage - INFO - Missing date range for MVID: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 18:49:08 - DataStorage - INFO - Loaded 315183 rows from 485 CSV files
+2025-04-26 18:49:08 - DataStorage - INFO - Combined 0 new rows with 306612 existing rows for SNGS
+2025-04-26 18:49:08 - DataStorage - INFO - Saved processed data for SNGS to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/SNGS.parquet
+2025-04-26 18:49:09 - DataStorage - INFO - Loaded 367254 rows from 828 CSV files
+2025-04-26 18:49:09 - DataStorage - INFO - Combined 0 new rows with 356853 existing rows for MTSS
+2025-04-26 18:49:09 - DataStorage - INFO - Saved processed data for MTSS to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/MTSS.parquet
+2025-04-26 18:50:02 - DataStorage - INFO - Extracted 482 CSV files for NVTK
+2025-04-26 18:50:02 - DataStorage - INFO - Extracted 484 CSV files for MVID
+2025-04-26 18:50:03 - DataStorage - INFO - Loaded 389389 rows from 482 CSV files
+2025-04-26 18:50:03 - DataStorage - INFO - Combined 0 new rows with 378838 existing rows for NVTK
+2025-04-26 18:50:03 - DataStorage - INFO - Saved processed data for NVTK to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/NVTK.parquet
+2025-04-26 18:50:04 - DataStorage - INFO - Loaded 323878 rows from 484 CSV files
+2025-04-26 18:50:04 - DataStorage - INFO - Combined 0 new rows with 317252 existing rows for MVID
+2025-04-26 18:50:04 - DataStorage - INFO - Saved processed data for MVID to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/MVID.parquet
+2025-04-26 18:50:04 - DataStorage - INFO - Extracted 485 CSV files for SNGS
+2025-04-26 18:50:05 - DataStorage - INFO - Extracted 828 CSV files for MTSS
+2025-04-26 18:50:06 - DataStorage - INFO - Loaded 315183 rows from 485 CSV files
+2025-04-26 18:50:06 - DataStorage - INFO - Combined 916 new rows with 306606 existing rows for SNGS
+2025-04-26 18:50:06 - DataStorage - INFO - Saved processed data for SNGS to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/SNGS.parquet
+2025-04-26 18:50:06 - DataStorage - INFO - Extracted 482 CSV files for NVTK
+2025-04-26 18:50:06 - DataStorage - INFO - Loaded 73857 rows of processed data for PHOR
+2025-04-26 18:50:06 - DataStorage - INFO - Loaded 73857 rows of processed data for PHOR
+2025-04-26 18:50:06 - DataStorage - INFO - Missing date range for PHOR: 2024-01-01 00:00:00 to 2024-03-22 06:04:00
+2025-04-26 18:50:06 - DataStorage - INFO - Missing date range for PHOR: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 18:50:06 - DataStorage - INFO - Extracted 484 CSV files for MVID
+2025-04-26 18:50:07 - DataStorage - INFO - Loaded 367254 rows from 828 CSV files
+2025-04-26 18:50:08 - DataStorage - INFO - Loaded 389389 rows from 482 CSV files
+2025-04-26 18:50:08 - DataStorage - INFO - Combined 1147 new rows with 338167 existing rows for MTSS
+2025-04-26 18:50:08 - DataStorage - INFO - Combined 990 new rows with 378830 existing rows for NVTK
+2025-04-26 18:50:08 - DataStorage - INFO - Saved processed data for MTSS to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/MTSS.parquet
+2025-04-26 18:50:08 - DataStorage - INFO - Saved processed data for NVTK to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/NVTK.parquet
+2025-04-26 18:50:08 - DataStorage - INFO - Loaded 338391 rows of processed data for SIBN
+2025-04-26 18:50:08 - DataStorage - INFO - Loaded 338391 rows of processed data for SIBN
+2025-04-26 18:50:08 - DataStorage - INFO - Missing date range for SIBN: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 18:50:08 - DataStorage - INFO - Missing date range for SIBN: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 18:50:08 - DataStorage - INFO - Loaded 320354 rows of processed data for AFKS
+2025-04-26 18:50:08 - DataStorage - INFO - Loaded 320354 rows of processed data for AFKS
+2025-04-26 18:50:08 - DataStorage - INFO - Missing date range for AFKS: 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-26 18:50:08 - DataStorage - INFO - Missing date range for AFKS: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 18:50:09 - DataStorage - INFO - Loaded 323878 rows from 484 CSV files
+2025-04-26 18:50:09 - DataStorage - INFO - Combined 762 new rows with 317243 existing rows for MVID
+2025-04-26 18:50:09 - DataStorage - INFO - Saved processed data for MVID to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/MVID.parquet
+2025-04-26 18:50:09 - DataStorage - INFO - Loaded 375268 rows of processed data for MAGN
+2025-04-26 18:50:09 - DataStorage - INFO - Loaded 375268 rows of processed data for MAGN
+2025-04-26 18:50:09 - DataStorage - INFO - Missing date range for MAGN: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 18:50:09 - DataStorage - INFO - Missing date range for MAGN: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 18:50:18 - DataStorage - INFO - Extracted 484 CSV files for ALRS
+2025-04-26 18:50:20 - DataStorage - INFO - Loaded 365453 rows from 484 CSV files
+2025-04-26 18:50:20 - DataStorage - INFO - Combined 0 new rows with 355650 existing rows for ALRS
+2025-04-26 18:50:20 - DataStorage - INFO - Saved processed data for ALRS to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/ALRS.parquet
+2025-04-26 18:51:03 - DataStorage - INFO - Extracted 477 CSV files for MAGN
+2025-04-26 18:51:04 - DataStorage - INFO - Extracted 484 CSV files for AFKS
+2025-04-26 18:51:04 - DataStorage - INFO - Extracted 480 CSV files for SIBN
+2025-04-26 18:51:04 - DataStorage - INFO - Extracted 484 CSV files for ALRS
+2025-04-26 18:51:05 - DataStorage - INFO - Extracted 484 CSV files for PHOR
+2025-04-26 18:51:05 - DataStorage - INFO - Loaded 385621 rows from 477 CSV files
+2025-04-26 18:51:05 - DataStorage - INFO - Combined 0 new rows with 375268 existing rows for MAGN
+2025-04-26 18:51:05 - DataStorage - INFO - Saved processed data for MAGN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/MAGN.parquet
+2025-04-26 18:51:06 - DataStorage - INFO - Loaded 329889 rows from 484 CSV files
+2025-04-26 18:51:06 - DataStorage - INFO - Combined 0 new rows with 320354 existing rows for AFKS
+2025-04-26 18:51:06 - DataStorage - INFO - Saved processed data for AFKS to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/AFKS.parquet
+2025-04-26 18:51:07 - DataStorage - INFO - Loaded 348017 rows from 480 CSV files
+2025-04-26 18:51:07 - DataStorage - INFO - Combined 0 new rows with 338391 existing rows for SIBN
+2025-04-26 18:51:07 - DataStorage - INFO - Saved processed data for SIBN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/SIBN.parquet
+2025-04-26 18:51:08 - DataStorage - INFO - Loaded 291589 rows from 484 CSV files
+2025-04-26 18:51:08 - DataStorage - INFO - Combined 42786 new rows with 73857 existing rows for PHOR
+2025-04-26 18:51:08 - DataStorage - INFO - Saved processed data for PHOR to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/PHOR.parquet
+2025-04-26 18:51:08 - DataStorage - INFO - Loaded 365453 rows from 484 CSV files
+2025-04-26 18:51:08 - DataStorage - INFO - Combined 989 new rows with 355645 existing rows for ALRS
+2025-04-26 18:51:08 - DataStorage - INFO - Saved processed data for ALRS to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/ALRS.parquet
+2025-04-26 18:51:08 - DataStorage - INFO - Loaded 335833 rows of processed data for RUAL
+2025-04-26 18:51:08 - DataStorage - INFO - Loaded 335833 rows of processed data for RUAL
+2025-04-26 18:51:08 - DataStorage - INFO - Missing date range for RUAL: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-26 18:51:08 - DataStorage - INFO - Missing date range for RUAL: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-26 18:52:01 - DataStorage - INFO - Extracted 484 CSV files for AFKS
+2025-04-26 18:52:02 - DataStorage - INFO - Loaded 329889 rows from 484 CSV files
+2025-04-26 18:52:02 - DataStorage - INFO - Combined 980 new rows with 320345 existing rows for AFKS
+2025-04-26 18:52:02 - DataStorage - INFO - Saved processed data for AFKS to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/AFKS.parquet
+2025-04-26 18:52:03 - DataStorage - INFO - Extracted 484 CSV files for PHOR
+2025-04-26 18:52:04 - DataStorage - INFO - Extracted 484 CSV files for RUAL
+2025-04-26 18:52:04 - DataStorage - INFO - Loaded 291589 rows from 484 CSV files
+2025-04-26 18:52:04 - DataStorage - INFO - Combined 949 new rows with 116640 existing rows for PHOR
+2025-04-26 18:52:04 - DataStorage - INFO - Saved processed data for PHOR to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/PHOR.parquet
+2025-04-26 18:52:05 - DataStorage - INFO - Extracted 477 CSV files for MAGN
+2025-04-26 18:52:05 - DataStorage - INFO - Loaded 345214 rows from 484 CSV files
+2025-04-26 18:52:05 - DataStorage - INFO - Combined 0 new rows with 335833 existing rows for RUAL
+2025-04-26 18:52:05 - DataStorage - INFO - Saved processed data for RUAL to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/RUAL.parquet
+2025-04-26 18:52:06 - DataStorage - INFO - Loaded 385621 rows from 477 CSV files
+2025-04-26 18:52:06 - DataStorage - INFO - Combined 987 new rows with 375268 existing rows for MAGN
+2025-04-26 18:52:06 - DataStorage - INFO - Saved processed data for MAGN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/MAGN.parquet
+2025-04-26 18:52:06 - DataStorage - INFO - Extracted 480 CSV files for SIBN
+2025-04-26 18:52:07 - DataStorage - INFO - Loaded 348017 rows from 480 CSV files
+2025-04-26 18:52:08 - DataStorage - INFO - Combined 941 new rows with 338386 existing rows for SIBN
+2025-04-26 18:52:08 - DataStorage - INFO - Extracted 484 CSV files for RUAL
+2025-04-26 18:52:08 - DataStorage - INFO - Saved processed data for SIBN to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/SIBN.parquet
+2025-04-26 18:52:08 - DataStorage - INFO - Loaded 345214 rows from 484 CSV files
+2025-04-26 18:52:08 - DataStorage - INFO - Combined 979 new rows with 335826 existing rows for RUAL
+2025-04-26 18:52:09 - DataStorage - INFO - Saved processed data for RUAL to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/RUAL.parquet

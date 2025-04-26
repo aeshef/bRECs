@@ -1,0 +1,117 @@
+
+        <html>
+        <head>
+            <title>Отчет по выбору облигаций с учетом КБД</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                h1, h2, h3 { color: #2c3e50; }
+                table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+                th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+                th { background-color: #f2f2f2; }
+                .stats { background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+                .highlight { background-color: #e8f4f8; }
+                .changes { background-color: #fff8e8; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+                .charts { display: flex; flex-wrap: wrap; justify-content: space-between; }
+                .chart { margin-bottom: 20px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
+            </style>
+        </head>
+        <body>
+            <h1>Отчет по выбору облигаций с учетом КБД</h1>
+            <p>Дата формирования: 26.04.2025 16:35</p>
+            <p>ID запуска: 20250426_163536</p>
+            
+            <h2>Текущие рыночные условия</h2>
+            <div class="stats">
+                <p><strong>Состояние рынка:</strong> inverted</p>
+                <p><strong>Дата КБД:</strong> 2024-12-30 00:00:00</p>
+                <p><strong>Ключевые точки КБД:</strong></p>
+                <ul>
+        <li>Доходность на 0.5Y: 18.75%</li><li>Доходность на 0.75Y: 18.68%</li><li>Доходность на 1Y: 18.58%</li><li>Доходность на 2Y: 18.06%</li><li>Доходность на 3Y: 17.48%</li><li>Доходность на 5Y: 16.53%</li><li>Доходность на 7Y: 15.87%</li><li>Доходность на 10Y: 15.22%</li><li>Доходность на 15Y: 14.57%</li><li>Доходность на 20Y: 14.22%</li><li>Доходность на 30Y: 13.90%</li>
+                </ul>
+            </div>
+            
+            <h2>Параметры выбора облигаций</h2>
+            <div class="stats">
+                <p><strong>Целевая доходность:</strong> 21.58%</p>
+                <p><strong>Оптимальная дюрация:</strong> 0.1 - 2.0 лет</p>
+            </div>
+        
+            <h3>Стратегия взвешивания облигаций</h3>
+            <div class="stats">
+                <p><strong>Рекомендованная стратегия:</strong> equal</p>
+                <p><strong>Обоснование:</strong> Равное взвешивание для защиты от инверсии кривой доходности</p>
+            </div>
+            
+            <h3>Адаптация параметров для обеспечения диверсификации</h3>
+            <div class="changes">
+                <p>Для обеспечения достаточной диверсификации портфеля были адаптированы следующие параметры:</p>
+                <table>
+                    <tr>
+                        <th>Параметр</th>
+                        <th>Начальное значение</th>
+                        <th>Итоговое значение</th>
+                    </tr>
+            
+                    <tr>
+                        <td>min_yield</td>
+                        <td>21.58</td>
+                        <td>18.58</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>max_yield</td>
+                        <td>37.58</td>
+                        <td>56.58</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>min_duration</td>
+                        <td>0.10</td>
+                        <td>0.08</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>max_duration</td>
+                        <td>2.00</td>
+                        <td>2.97</td>
+                    </tr>
+                    
+                </table>
+            </div>
+            
+            <h2>Выбранный портфель облигаций</h2>
+            <table>
+                <tr>
+                    <th>Код</th>
+                    <th>Название</th>
+                    <th>Доходность, %</th>
+                    <th>Дюрация, лет</th>
+                    <th>Вес, %</th>
+                </tr>
+        <tr><td>RU000A105EW9</td><td>Сегежа3P1R</td><td>21.33</td><td>0.56</td><td>20.00</td></tr><tr><td>RU000A0JSGV0</td><td>РЖД-32 обл</td><td>21.48</td><td>1.16</td><td>20.00</td></tr><tr><td>KG000A3LSJ06</td><td>Кыргыз. 02</td><td>20.85</td><td>0.68</td><td>20.00</td></tr><tr><td>RU000A0JUAH8</td><td>РЖД-30 обл</td><td>20.66</td><td>0.53</td><td>20.00</td></tr><tr><td>RU000A0JS4Z7</td><td>ВЭБ.РФ 21</td><td>18.58</td><td>1.99</td><td>20.00</td></tr>
+            </table>
+            
+            <h2>Характеристики портфеля</h2>
+            <div class="stats">
+                <p><strong>Средневзвешенная доходность:</strong> 20.58%</p>
+                <p><strong>Средневзвешенная дюрация:</strong> 0.98 лет</p>
+                <p><strong>Количество облигаций:</strong> 5</p>
+            </div>
+            
+            <h2>Графики</h2>
+            <div class="charts">
+        
+                <div class="chart">
+                    <h3>Кривая бескупонной доходности</h3>
+                    <img src="../viz/kbd_curve_20250426_163536.png" alt="Кривая бескупонной доходности" style="max-width: 100%;">
+                </div>
+            
+                <div class="chart">
+                    <h3>Карта облигаций (доходность/дюрация)</h3>
+                    <img src="../portfolios/bond_universe_20250426.png" alt="Карта облигаций" style="max-width: 100%;">
+                </div>
+            
+            </div>
+        </body>
+        </html>
+        

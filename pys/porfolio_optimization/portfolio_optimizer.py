@@ -6,27 +6,27 @@ import os
 import logging
 from datetime import datetime
 import sys
+import json
 
 from pys.utils.logger import BaseLogger
 from pys.data_collection.private_info import BASE_PATH
 
 class PortfolioOptimizer(BaseLogger):
     def __init__(self, input_file=None, max_weight=0.2, risk_free_rate=0.06, min_rf_allocation=0.25, 
-                max_rf_allocation=0.35, log_level=logging.INFO):
+                max_rf_allocation=0.35, optimization='markowitz', tau=0.05, 
+                views=None, view_confidences=None, market_caps=None, log_level=logging.INFO, risk_free_portfolio_file=None,
+                include_short_selling=False):
         """
-        Оптимизатор портфеля с использованием модели Марковица
+        Оптимизатор портфеля с использованием модели Марковица или Блэка-Литермана
         
         Parameters:
         -----------
-        input_file : str, optional
-            Путь к файлу с данными для оптимизации
-        risk_free_rate : float
-            Безрисковая ставка (в десятичном формате, например 0.06 = 6%)
-        min_rf_allocation : float
-            Минимальная доля безрисковых активов в портфеле
-        max_rf_allocation : float
-            Максимальная доля безрисковых активов в портфеле
+        ...
+        market_caps : dict, optional
+            Рыночные капитализации активов для модели Блэка-Литермана
+        ...
         """
+        import pandas as pd 
         super().__init__('PortfolioOptimizer')
         self.input_file = input_file
         self.risk_free_rate = risk_free_rate
@@ -38,27 +38,72 @@ class PortfolioOptimizer(BaseLogger):
         self.portfolio_performance = None
         self.max_weight = max_weight
         
-        # # Настройка логгера
-        # self.logger = logging.getLogger('portfolio_optimizer')
-        # self.logger.setLevel(log_level)
+        self.risk_free_portfolio_file = risk_free_portfolio_file
+        self.risk_free_portfolio = None  # Будет хранить DataFrame с деталями облигаций
+
+        # Параметры модели оптимизации
+        self.optimization = optimization.lower()
+        self.tau = tau  # параметр неуверенности в равновесных доходностях
+        self.market_caps = market_caps  # <-- Добавлено присваивание параметра
+        self.views = views  # субъективные прогнозы
+        self.view_confidences = view_confidences  # уверенность в прогнозах
         
-        # # Создаем обработчик для записи в файл
-        # log_dir = 'logs'
-        # os.makedirs(log_dir, exist_ok=True)
-        # file_handler = logging.FileHandler(f'{log_dir}/portfolio_optimizer_{datetime.now().strftime("%Y%m%d")}.log')
+        # Дополнительные атрибуты для Блэка-Литермана
+        self.market_weights = None  # веса рыночного портфеля
+        self.implied_returns = None  # равновесные доходности
+        self.posterior_returns = None  # апостериорные доходности
+
+        # сука костыль
+        self.include_short_selling = include_short_selling
         
-        # # Создаем форматтер
-        # formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-        # file_handler.setFormatter(formatter)
+        # Проверка выбранной модели оптимизации
+        if self.optimization not in ['markowitz', 'black_litterman']:
+            self.logger.warning(f"Неизвестная модель оптимизации: {optimization}. Будет использована модель Марковица.")
+            self.optimization = 'markowitz'
+            
+        self.logger.info(f"Инициализирован оптимизатор портфеля с моделью {self.optimization.upper()}")
+
+
+    def load_risk_free_portfolio(self):
+        """
+        Загружает данные о портфеле облигаций для безрисковой части
+        """
+        if not self.risk_free_portfolio_file:
+            self.logger.info("Файл с портфелем облигаций не указан, используется обобщенная безрисковая ставка")
+            return None
+            
+        if not os.path.exists(self.risk_free_portfolio_file):
+            self.logger.warning(f"Файл с портфелем облигаций не найден: {self.risk_free_portfolio_file}")
+            return None
+            
+        try:
+            self.logger.info(f"Загрузка портфеля облигаций из {self.risk_free_portfolio_file}")
+            bonds_df = pd.read_csv(self.risk_free_portfolio_file)
+            
+            # Проверяем наличие необходимых колонок
+            required_columns = ['security_code', 'full_name', 'weight']
+            if not all(col in bonds_df.columns for col in required_columns):
+                self.logger.warning(f"В файле с облигациями отсутствуют необходимые колонки: {required_columns}")
+                return None
+                
+            # Нормализуем веса, если они представлены в процентах (0-100)
+            if bonds_df['weight'].max() > 1:
+                bonds_df['weight'] = bonds_df['weight'] / 100
+                
+            # Проверяем, что сумма весов примерно равна 1
+            total_weight = bonds_df['weight'].sum()
+            if not 0.99 <= total_weight <= 1.01:
+                self.logger.warning(f"Сумма весов облигаций ({total_weight}) не равна 1. Выполняем нормализацию.")
+                bonds_df['weight'] = bonds_df['weight'] / total_weight
+                
+            self.risk_free_portfolio = bonds_df
+            self.logger.info(f"Загружен портфель из {len(bonds_df)} облигаций")
+            return bonds_df
+        except Exception as e:
+            self.logger.error(f"Ошибка при загрузке портфеля облигаций: {e}")
+            return None
+
         
-        # # Добавляем обработчик к логгеру, если его еще нет
-        # if not self.logger.handlers:
-        #     self.logger.addHandler(file_handler)
-        #     # Добавляем вывод в консоль
-        #     console_handler = logging.StreamHandler()
-        #     console_handler.setFormatter(formatter)
-        #     self.logger.addHandler(console_handler)
-    
     def load_data(self, input_file=None, df=None):
         """Загрузка данных для оптимизации"""
         if df is not None:
@@ -88,8 +133,15 @@ class PortfolioOptimizer(BaseLogger):
         else:
             self.logger.error("Не указан источник данных")
             return None
-    
+        
     def prepare_returns(self):
+        """Выбирает метод подготовки доходностей в зависимости от флага"""
+        if self.include_short_selling:
+            return self.prepare_returns_with_shorts()
+        else:
+            return self.prepare_returns_standard()
+    
+    def prepare_returns_standard(self):
         """Подготовка доходностей для оптимизации"""
         if self.df is None:
             self.logger.error("Данные не загружены")
@@ -137,6 +189,409 @@ class PortfolioOptimizer(BaseLogger):
         except Exception as e:
             self.logger.error(f"Ошибка при подготовке доходностей: {e}")
             return None
+        
+    def prepare_returns_with_shorts(self):
+        """Подготовка доходностей с учетом коротких позиций"""
+        if self.df is None:
+            self.logger.error("Данные не загружены")
+            return None
+            
+        self.logger.info("Подготовка данных доходностей для оптимизации с учетом шортов")
+        
+        try:
+            # Фильтрация только по shortlist, без фильтрации по неотрицательным сигналам
+            filtered_df = self.df
+            
+            if 'in_shortlist' in self.df.columns:
+                filtered_df = self.df[self.df['in_shortlist'] == True]
+                self.logger.info(f"Отфильтровано {len(filtered_df)} строк по shortlist")
+
+            # Если есть колонка ticker, группируем по тикерам
+            if 'ticker' in filtered_df.columns:
+                # Для каждого тикера анализируем сигналы
+                returns_dict = {}
+                
+                for ticker, ticker_data in filtered_df.groupby('ticker'):
+                    ticker_data = ticker_data.sort_index()
+                    
+                    # Проверяем, есть ли колонка signal
+                    if 'signal' in ticker_data.columns:
+                        # Подсчитываем частоту различных сигналов
+                        signal_counts = ticker_data['signal'].value_counts()
+                        
+                        # Проверяем, что есть хотя бы один сигнал
+                        if len(signal_counts) > 0:
+                            # Берем сигнал с наибольшей частотой
+                            predominant_signal = signal_counts.idxmax()
+                            
+                            # Проверяем, что есть колонка close
+                            if 'close' in ticker_data.columns:
+                                returns = ticker_data['close'].pct_change().dropna()
+                                
+                                # Для коротких позиций инвертируем доходность
+                                if predominant_signal < 0:
+                                    returns = -returns
+                                    self.logger.info(f"Тикер {ticker} добавлен с КОРОТКОЙ позицией")
+                                else:
+                                    self.logger.info(f"Тикер {ticker} добавлен с ДЛИННОЙ позицией")
+                                
+                                returns_dict[ticker] = returns
+                        else:
+                            self.logger.info(f"Тикер {ticker} пропущен: нет преобладающего сигнала")
+                    else:
+                        self.logger.info(f"Тикер {ticker} пропущен: нет колонки signal")
+                        
+                # Объединение всех доходностей в одну таблицу
+                if returns_dict:
+                    self.returns = pd.DataFrame(returns_dict)
+                    self.logger.info(f"Рассчитаны доходности для {len(returns_dict)} тикеров")
+                else:
+                    self.logger.warning("Нет подходящих тикеров для создания портфеля")
+                    return None
+            else:
+                self.logger.error("Колонка 'ticker' не найдена в данных")
+                return None
+                
+            return self.returns
+                
+        except Exception as e:
+            self.logger.error(f"Ошибка при подготовке доходностей с учетом шортов: {e}")
+            return None
+    
+    def load_market_caps(self):
+        """
+        Загружает реальные данные о рыночной капитализации для тикеров
+        из {BASE_PATH}/data/processed_data/{ticker}/market_cap/cap.csv
+        """
+        if self.returns is None:
+            self.logger.error("Доходности не рассчитаны, невозможно загрузить рыночные капитализации")
+            return None
+        
+        self.logger.info("Загрузка данных о рыночной капитализации")
+        market_caps = {}
+        
+        for ticker in self.returns.columns:
+            cap_file = f"{BASE_PATH}/data/processed_data/{ticker}/market_cap/cap.csv"
+            
+            try:
+                if os.path.exists(cap_file):
+                    # Загружаем файл с капитализацией
+                    cap_data = pd.read_csv(cap_file)
+                    
+                    # Используем последнее доступное значение
+                    if len(cap_data) > 0:
+                        # Предполагаем, что у нас есть колонки 'date' и 'market_cap'
+                        if 'date' in cap_data.columns and 'market_cap' in cap_data.columns:
+                            # Сортируем по дате и берем последнюю
+                            cap_data = cap_data.sort_values('date', ascending=False)
+                            market_cap = cap_data.iloc[0]['market_cap']
+                            
+                            # Преобразуем текстовое представление в число
+                            if isinstance(market_cap, str):
+                                if "трлн" in market_cap:
+                                    value = float(market_cap.replace("трлн", "").strip()) * 1000
+                                elif "млрд" in market_cap:
+                                    value = float(market_cap.replace("млрд", "").strip())
+                                elif "млн" in market_cap:
+                                    value = float(market_cap.replace("млн", "").strip()) / 1000
+                                else:
+                                    value = float(market_cap)
+                            else:
+                                value = float(market_cap)
+                                
+                            market_caps[ticker] = value
+                            self.logger.info(f"Загружена капитализация для {ticker}: {value} млрд")
+                        else:
+                            self.logger.warning(f"Некорректный формат файла {cap_file}")
+            except Exception as e:
+                self.logger.warning(f"Ошибка при загрузке капитализации для {ticker}: {e}")
+        
+        # Если не удалось загрузить ни одной капитализации, создаем синтетические
+        if not market_caps:
+            self.logger.warning("Не удалось загрузить реальные данные о капитализации, создаем синтетические")
+            # Создаем синтетические данные на основе композитного скора, если он есть
+            if self.df is not None and 'ticker' in self.df.columns and 'composite_score' in self.df.columns:
+                # Группируем по тикерам и берем среднее значение композитного скора
+                ticker_scores = self.df.groupby('ticker')['composite_score'].mean()
+                
+                for ticker in self.returns.columns:
+                    if ticker in ticker_scores.index:
+                        # Базовая капитализация 1000 млрд + премия за композитный скор
+                        base_cap = 1000
+                        score = ticker_scores[ticker]
+                        score_premium = (score + 1) * 500  # Премия от 0 до 1000 млрд
+                        market_caps[ticker] = base_cap + score_premium
+                    else:
+                        # Для тикеров без скора используем среднее значение
+                        market_caps[ticker] = 1000
+            else:
+                # Если нет композитного скора, используем равные капитализации
+                for ticker in self.returns.columns:
+                    market_caps[ticker] = 1000
+        
+        self.market_caps = market_caps
+        return market_caps
+    
+    def prepare_views_from_signals(self):
+        """
+        Подготавливает прогнозы (views) и уверенность в них на основе сигналов
+        """
+        if self.df is None or 'ticker' not in self.df.columns:
+            self.logger.error("Нет данных с тикерами для создания прогнозов")
+            return None, None
+        
+        self.logger.info("Подготовка прогнозов на основе сигналов")
+        
+        # Прогнозы и уверенность в них
+        views = {}
+        view_confidences = {}
+        
+        # Фильтруем только последние данные для каждого тикера, если есть дата
+        if 'date' in self.df.columns or isinstance(self.df.index, pd.DatetimeIndex):
+            # Определяем максимальную дату
+            if 'date' in self.df.columns:
+                latest_date = self.df['date'].max()
+                latest_data = self.df[self.df['date'] == latest_date]
+            else:
+                latest_date = self.df.index.max()
+                latest_data = self.df[self.df.index == latest_date]
+        else:
+            latest_data = self.df
+        
+        # Фильтруем только те, что в шортлисте (если есть такая колонка)
+        if 'in_shortlist' in latest_data.columns:
+            filtered_data = latest_data[latest_data['in_shortlist'] == True]
+        else:
+            filtered_data = latest_data
+        
+        # Используем только тикеры, для которых у нас есть исторические доходности
+        if self.returns is not None:
+            available_tickers = set(self.returns.columns)
+            filtered_data = filtered_data[filtered_data['ticker'].isin(available_tickers)]
+        
+        # Создаем прогнозы на основе композитного скора
+        for _, row in filtered_data.iterrows():
+            ticker = row['ticker']
+            
+            # Базовая ожидаемая доходность рынка (10%)
+            market_return = 0.10
+            
+            # Используем композитный скор для создания прогноза
+            composite_score = row.get('composite_score', 0)
+            
+            # Масштабируем скор [-1, 1] в премию [-10%, +20%]
+            score_premium = composite_score * (0.20 if composite_score > 0 else 0.10)
+            
+            # Итоговый прогноз доходности (не меньше безрисковой ставки)
+            expected_return = max(self.risk_free_rate, market_return + score_premium)
+            
+            views[ticker] = expected_return
+            
+            # Рассчитываем уверенность на основе силы сигнала и фундаментального скора
+            signal_confidence = 0.5  # Базовая уверенность
+            
+            # Если есть сигнал покупки, увеличиваем уверенность
+            if 'signal' in row and row['signal'] == 1:
+                signal_confidence += 0.2
+            
+            # Если есть сильный фундаментальный скор, также увеличиваем уверенность
+            if 'fundamental_score' in row:
+                fund_score = row['fundamental_score']
+                fund_confidence = 0.3 * abs(fund_score) if fund_score > 0 else 0
+                signal_confidence += fund_confidence
+            
+            # Ограничиваем уверенность в диапазоне [0.3, 0.9]
+            view_confidences[ticker] = min(0.9, max(0.3, signal_confidence))
+        
+        self.views = views
+        self.view_confidences = view_confidences
+        
+        return views, view_confidences
+    
+    def calculate_market_weights(self):
+        """
+        Рассчитывает рыночные веса на основе капитализации для модели Блэка-Литермана
+        """
+        if self.returns is None:
+            self.logger.error("Доходности не рассчитаны")
+            return None
+        
+        # Если капитализации не загружены, загружаем их
+        if self.market_caps is None:
+            self.load_market_caps()
+        
+        # Если все еще нет капитализаций, используем равные веса
+        if not self.market_caps:
+            self.logger.warning("Не удалось загрузить рыночные капитализации, используются равные веса")
+            n_assets = len(self.returns.columns)
+            self.market_weights = pd.Series(
+                [1/n_assets] * n_assets, 
+                index=self.returns.columns
+            )
+            return self.market_weights
+        
+        try:
+            # Создаем Series с капитализациями для тикеров из доходностей
+            market_caps_series = pd.Series({
+                ticker: self.market_caps.get(ticker, 0) 
+                for ticker in self.returns.columns
+            })
+            
+            # Проверяем, что у всех тикеров есть капитализация
+            missing_tickers = market_caps_series[market_caps_series == 0].index
+            if len(missing_tickers) > 0:
+                self.logger.warning(f"Отсутствует капитализация для {len(missing_tickers)} тикеров: {missing_tickers}")
+                
+                # Для отсутствующих тикеров берем среднюю капитализацию
+                mean_cap = market_caps_series[market_caps_series > 0].mean()
+                for ticker in missing_tickers:
+                    market_caps_series[ticker] = mean_cap
+            
+            # Рассчитываем веса на основе капитализации
+            self.market_weights = market_caps_series / market_caps_series.sum()
+            
+            self.logger.info(f"Рассчитаны рыночные веса на основе капитализации для {len(self.market_weights)} активов")
+            return self.market_weights
+            
+        except Exception as e:
+            self.logger.error(f"Ошибка при расчете рыночных весов: {e}")
+            # Используем равные веса как запасной вариант
+            n_assets = len(self.returns.columns)
+            self.market_weights = pd.Series([1/n_assets] * n_assets, index=self.returns.columns)
+            return self.market_weights
+    
+    def calculate_implied_returns(self):
+        """
+        Рассчитывает равновесные доходности на основе CAPM для модели Блэка-Литермана
+        """
+        if self.returns is None:
+            self.logger.error("Доходности не рассчитаны")
+            return None
+            
+        if self.market_weights is None:
+            self.calculate_market_weights()
+            
+        self.logger.info("Расчет равновесных доходностей на основе CAPM")
+        
+        try:
+            # Годовая ковариационная матрица доходностей
+            cov_matrix = self.returns.cov() * 252
+            
+            # Используем формулу равновесных доходностей: π = δΣw
+            # где δ - коэффициент неприятия риска (можно использовать коэффициент Шарпа рынка)
+            # Σ - ковариационная матрица, w - веса рыночного портфеля
+            
+            # Рассчитаем приближенное значение коэффициента неприятия риска
+            market_volatility = np.sqrt(self.market_weights.dot(cov_matrix).dot(self.market_weights))
+            risk_aversion = (self.risk_free_rate + 0.05) / market_volatility  # Используем рыночную премию 5%
+            
+            # Рассчитываем равновесные доходности
+            self.implied_returns = risk_aversion * cov_matrix.dot(self.market_weights)
+            
+            self.logger.info(f"Рассчитаны равновесные доходности для {len(self.implied_returns)} активов")
+            return self.implied_returns
+            
+        except Exception as e:
+            self.logger.error(f"Ошибка при расчете равновесных доходностей: {e}")
+            return None
+            
+    def incorporate_views(self):
+        """
+        Включает субъективные прогнозы в модель Блэка-Литермана
+        """
+        if self.implied_returns is None:
+            self.logger.error("Равновесные доходности не рассчитаны")
+            return None
+        
+        # Если прогнозы не предоставлены, пытаемся создать их из сигналов
+        if self.views is None:
+            self.prepare_views_from_signals()
+            
+        if self.views is None or len(self.views) == 0:
+            self.logger.warning("Не удалось создать прогнозы, используются только равновесные доходности")
+            self.posterior_returns = self.implied_returns.copy()
+            return self.posterior_returns
+            
+        self.logger.info("Включение субъективных прогнозов в модель")
+        
+        try:
+            # Преобразуем views в словарь, если это список
+            views_dict = self.views
+            if isinstance(self.views, list):
+                views_dict = {ticker: return_value for ticker, return_value in self.views}
+                
+            # Преобразуем view_confidences в словарь, если это список
+            confidences_dict = self.view_confidences or {}
+            if isinstance(self.view_confidences, list):
+                confidences_dict = {ticker: conf for ticker, conf in self.view_confidences}
+                
+            # Фильтруем только те активы, которые есть в наших доходностях
+            views_filtered = {ticker: return_value for ticker, return_value in views_dict.items() 
+                             if ticker in self.returns.columns}
+            
+            if len(views_filtered) < len(views_dict):
+                missing_tickers = set(views_dict.keys()) - set(self.returns.columns)
+                self.logger.warning(f"Игнорируются прогнозы для {len(missing_tickers)} тикеров: {missing_tickers}")
+            
+            # Если нет прогнозов для наших активов, используем равновесные доходности
+            if not views_filtered:
+                self.logger.warning("Не найдены применимые прогнозы, используются только равновесные доходности")
+                self.posterior_returns = self.implied_returns.copy()
+                return self.posterior_returns
+            
+            # Годовая ковариационная матрица доходностей
+            cov_matrix = self.returns.cov() * 252
+            
+            # Создаем матрицу выборки P для представления прогнозов
+            tickers = self.returns.columns
+            P = np.zeros((len(views_filtered), len(tickers)))
+            q = np.zeros(len(views_filtered))
+            omega = np.zeros((len(views_filtered), len(views_filtered)))
+            
+            # Заполняем матрицы для каждого прогноза
+            for i, (ticker, expected_return) in enumerate(views_filtered.items()):
+                ticker_idx = list(tickers).index(ticker)
+                P[i, ticker_idx] = 1  # Абсолютный прогноз для конкретного актива
+                q[i] = expected_return
+                
+                # Уверенность в прогнозе (по умолчанию 0.5 - средняя уверенность)
+                confidence = confidences_dict.get(ticker, 0.5)
+                # Диагональные элементы omega - обратно пропорциональны уверенности
+                omega[i, i] = (1 - confidence) * (P[i] @ cov_matrix @ P[i].T)
+            
+            # Формула Блэка-Литермана для апостериорных доходностей
+            # E[R] = [(τΣ)^(-1) + P'Ω^(-1)P]^(-1) × [(τΣ)^(-1)π + P'Ω^(-1)q]
+            
+            # Инвертируем матрицы, обрабатывая возможные ошибки
+            try:
+                tau_sigma_inv = np.linalg.inv(self.tau * cov_matrix.values)
+                omega_inv = np.linalg.inv(omega)
+            except np.linalg.LinAlgError:
+                self.logger.warning("Не удалось инвертировать матрицы, используем псевдообратную матрицу")
+                tau_sigma_inv = np.linalg.pinv(self.tau * cov_matrix.values)
+                omega_inv = np.linalg.pinv(omega)
+            
+            # Рассчитываем апостериорные доходности
+            term1 = tau_sigma_inv + P.T @ omega_inv @ P
+            term2 = tau_sigma_inv @ self.implied_returns.values + P.T @ omega_inv @ q
+            
+            try:
+                posterior_returns_values = np.linalg.inv(term1) @ term2
+            except np.linalg.LinAlgError:
+                self.logger.warning("Не удалось инвертировать term1, используем псевдообратную матрицу")
+                posterior_returns_values = np.linalg.pinv(term1) @ term2
+            
+            # Создаем Series с апостериорными доходностями
+            self.posterior_returns = pd.Series(posterior_returns_values, index=tickers)
+            
+            self.logger.info(f"Рассчитаны апостериорные доходности с учетом {len(views_filtered)} прогнозов")
+            return self.posterior_returns
+            
+        except Exception as e:
+            self.logger.error(f"Ошибка при включении прогнозов: {e}")
+            # В случае ошибки используем равновесные доходности
+            self.posterior_returns = self.implied_returns.copy()
+            return self.posterior_returns
     
     def calculate_portfolio_performance(self, weights, returns=None):
         """
@@ -175,17 +630,17 @@ class PortfolioOptimizer(BaseLogger):
         if risk_free_rate is None:
             risk_free_rate = self.risk_free_rate
 
+        n = len(returns.columns)
+        
         if bounds is None and constrained:
             bounds = tuple((0, self.max_weight) for _ in range(n))
             
-        self.logger.info(f"Запуск оптимизации портфеля для {returns.shape[1]} активов")
-        
-        n = len(returns.columns)
+        self.logger.info(f"Запуск оптимизации портфеля для {returns.shape[1]} активов с моделью {self.optimization.upper()}")
         
         # Ограничения: сумма весов = 1
         constraints = ({'type': 'eq', 'fun': lambda x: np.sum(x) - 1})
         
-        # Границы весов: от 0 до 1 для каждого актива
+        # Границы весов: от 0 до max_weight для каждого актива
         if bounds is None:
             bounds = tuple((0, 1) for _ in range(n))
         
@@ -193,13 +648,52 @@ class PortfolioOptimizer(BaseLogger):
         init_weights = np.array([1/n] * n)
         
         try:
-            # Оптимизация
-            results = minimize(self.negative_sharpe_ratio, 
-                               init_weights, 
-                               args=(returns, risk_free_rate),
-                               method='SLSQP', 
-                               bounds=bounds if constrained else None,
-                               constraints=constraints)
+            # Для модели Блэка-Литермана используем рассчитанные апостериорные доходности
+            if self.optimization == 'black_litterman':
+                self.logger.info("Применение модели Блэка-Литермана")
+                
+                # Расчет равновесных доходностей
+                if self.implied_returns is None:
+                    self.calculate_implied_returns()
+                
+                # Включение прогнозов
+                if self.posterior_returns is None:
+                    self.incorporate_views()
+                
+                # Для оптимизации используем апостериорные ожидаемые доходности
+                # вместо средних исторических доходностей
+                
+                # Создаем копию исторических доходностей
+                bl_returns = returns.copy()
+                
+                # Заменяем средние исторические доходности на апостериорные
+                expected_returns_annualized = self.posterior_returns / 252
+                
+                # Оптимизация с использованием апостериорных доходностей
+                # Создаем функцию для минимизации с учетом апостериорных доходностей
+                def bl_objective(weights):
+                    # Годовая доходность на основе апостериорных ожиданий
+                    portfolio_return = np.sum(self.posterior_returns * weights)
+                    # Годовая волатильность на основе исторической ковариации
+                    portfolio_vol = np.sqrt(np.dot(weights.T, np.dot(returns.cov() * 252, weights)))
+                    # Отрицательный коэффициент Шарпа
+                    sharpe = (portfolio_return - risk_free_rate) / portfolio_vol
+                    return -sharpe
+                
+                # Оптимизация
+                results = minimize(bl_objective, 
+                                   init_weights, 
+                                   method='SLSQP', 
+                                   bounds=bounds if constrained else None,
+                                   constraints=constraints)
+            else:
+                # Стандартная оптимизация Марковица
+                results = minimize(self.negative_sharpe_ratio, 
+                                   init_weights, 
+                                   args=(returns, risk_free_rate),
+                                   method='SLSQP', 
+                                   bounds=bounds if constrained else None,
+                                   constraints=constraints)
             
             if results['success']:
                 self.optimal_weights = results['x']
@@ -221,11 +715,11 @@ class PortfolioOptimizer(BaseLogger):
         if self.optimal_weights is None or self.returns is None:
             self.logger.error("Оптимальные веса не рассчитаны")
             return None
-            
+                
         # Если доля безрисковых активов не указана, берем среднее из диапазона
         if rf_allocation is None:
             rf_allocation = (self.min_rf_allocation + self.max_rf_allocation) / 2
-            
+                
         self.logger.info(f"Расчет итогового портфеля с долей безрисковых активов {rf_allocation*100:.1f}%")
         
         # Создание словаря с весами
@@ -235,11 +729,42 @@ class PortfolioOptimizer(BaseLogger):
         # Пересчет весов с учетом безрисковой части
         final_weights = {ticker: weight * (1 - rf_allocation) for ticker, weight in risky_weights.items()}
         
-        # Добавление безрисковой части в веса
-        final_weights['RISK_FREE'] = rf_allocation
+        # Загружаем детализированный портфель облигаций, если еще не загружен
+        if self.risk_free_portfolio is None and self.risk_free_portfolio_file:
+            self.load_risk_free_portfolio()
         
-        # Расчет ожидаемой доходности и волатильности оптимального портфеля
-        expected_return, expected_volatility = self.calculate_portfolio_performance(self.optimal_weights)
+        # Детальная информация о безрисковой части
+        rf_details = {}
+        
+        # Добавление безрисковой части в веса
+        if self.risk_free_portfolio is not None:
+            # Если есть детализированный портфель облигаций, добавляем каждую облигацию
+            for _, bond in self.risk_free_portfolio.iterrows():
+                bond_name = bond['full_name']
+                bond_weight = bond['weight'] * rf_allocation
+                # Добавляем информацию об облигациях, но не в основную структуру весов
+                rf_details[bond_name] = {
+                    'security_code': bond['security_code'],
+                    'weight': bond_weight,
+                    'original_weight': bond['weight'],
+                    'yield': bond.get('yield', self.risk_free_rate * 100)
+                }
+            
+            # В основные веса добавляем только общую безрисковую часть
+            final_weights['RISK_FREE'] = rf_allocation
+        else:
+            # Иначе добавляем общую безрисковую часть
+            final_weights['RISK_FREE'] = rf_allocation
+        
+        # Расчет ожидаемой доходности и волатильности
+        if self.optimization == 'black_litterman' and self.posterior_returns is not None:
+            # Для модели Блэка-Литермана используем апостериорные доходности
+            expected_return = np.sum(self.posterior_returns * self.optimal_weights)
+            expected_volatility = np.sqrt(np.dot(self.optimal_weights.T, 
+                                    np.dot(self.returns.cov() * 252, self.optimal_weights)))
+        else:
+            # Для модели Марковица - стандартный расчет
+            expected_return, expected_volatility = self.calculate_portfolio_performance(self.optimal_weights)
         
         # Расчет общей ожидаемой доходности с учетом безрисковой части
         total_expected_return = expected_return * (1 - rf_allocation) + self.risk_free_rate * rf_allocation
@@ -253,14 +778,17 @@ class PortfolioOptimizer(BaseLogger):
             'expected_volatility': total_expected_volatility,
             'sharpe_ratio': sharpe_ratio,
             'risk_free_rate': self.risk_free_rate,
-            'rf_allocation': rf_allocation
+            'rf_allocation': rf_allocation,
+            'optimization_model': self.optimization,
+            'rf_details': rf_details  # Добавляем детали по облигациям
         }
         
         self.logger.info(f"Ожидаемая доходность портфеля: {total_expected_return*100:.2f}%, " + 
-                         f"волатильность: {total_expected_volatility*100:.2f}%, " + 
-                         f"Шарп: {sharpe_ratio:.2f}")
+                        f"волатильность: {total_expected_volatility*100:.2f}%, " + 
+                        f"Шарп: {sharpe_ratio:.2f}")
         
         return self.portfolio_performance
+
     
     def generate_efficient_frontier(self, num_portfolios=1000):
         """
@@ -628,7 +1156,7 @@ class PortfolioOptimizer(BaseLogger):
             )
         
         # Настройка основного графика
-        ax1.set_title('Эффективная граница и оптимальные портфели', fontsize=16)
+        ax1.set_title(f'Эффективная граница и оптимальные портфели ({self.optimization.upper()})', fontsize=16)
         ax1.set_xlabel('Ожидаемая волатильность (годовая)', fontsize=12)
         ax1.set_ylabel('Ожидаемая доходность (годовая)', fontsize=12)
         ax1.grid(True, alpha=0.3)
@@ -749,7 +1277,7 @@ class PortfolioOptimizer(BaseLogger):
             explode=[0.05] * len(significant_weights)  # Небольшое смещение всех сегментов
         )
         plt.axis('equal')  # Обеспечивает круглую форму
-        plt.title('Оптимальные веса портфеля')
+        plt.title(f'Оптимальные веса портфеля ({self.optimization.upper()})')
         
         if output_dir:
             plt.savefig(os.path.join(output_dir, 'portfolio_weights_pie.png'))
@@ -757,16 +1285,47 @@ class PortfolioOptimizer(BaseLogger):
         else:
             plt.show()
             
-        # Обязательно закрываем фигуру после создания
         plt.close()
         
-        # Создание улучшенного графика эффективной границы
+        # Если есть детали по облигациям, создаем отдельный график для них
+        rf_details = self.portfolio_performance.get('rf_details', {})
+        if rf_details:
+            plt.figure(figsize=(12, 8))
+            
+            # Подготавливаем данные для графика облигаций
+            bond_names = []
+            bond_weights = []
+            
+            for name, details in rf_details.items():
+                bond_names.append(name)
+                bond_weights.append(details['weight'])
+            
+            # Создаем круговую диаграмму для облигаций
+            plt.pie(
+                bond_weights, 
+                labels=bond_names,
+                autopct='%1.1f%%',
+                startangle=90,
+                shadow=False,
+                explode=[0.05] * len(bond_names)
+            )
+            plt.axis('equal')
+            plt.title(f'Структура безрисковой части портфеля ({self.optimization.upper()})')
+            
+            if output_dir:
+                plt.savefig(os.path.join(output_dir, 'bond_weights_pie.png'))
+                self.logger.info(f"График весов облигаций сохранен в {output_dir}/bond_weights_pie.png")
+            else:
+                plt.show()
+            
+            plt.close()
+        
+        # Создание улучшенного графика эффективной границы (без изменений)
         try:
             self.plot_enhanced_efficient_frontier(output_dir=output_dir)
             self.logger.info("Улучшенный график эффективной границы успешно создан")
         except Exception as e:
             self.logger.error(f"Ошибка при создании улучшенного графика эффективной границы: {e}")
-            # В случае ошибки пробуем создать обычный график
             try:
                 self.plot_efficient_frontier(output_dir=output_dir)
                 self.logger.info("Стандартный график эффективной границы успешно создан")
@@ -774,23 +1333,78 @@ class PortfolioOptimizer(BaseLogger):
                 self.logger.error(f"Ошибка при создании стандартного графика эффективной границы: {e2}")
         
         if output_dir:
+            # Сохраняем основные веса портфеля
             weights_df = pd.DataFrame(list(weights.items()), columns=['Ticker', 'Weight'])
             weights_df.to_csv(os.path.join(output_dir, 'portfolio_weights.csv'), index=False)
             
+            # Если есть детали по облигациям, сохраняем их в отдельный файл
+            if rf_details:
+                # Создаем DataFrame с деталями облигаций
+                bond_data = []
+                for name, details in rf_details.items():
+                    bond_data.append({
+                        'Bond': name,
+                        'Security_Code': details['security_code'],
+                        'Weight_In_Portfolio': details['weight'],
+                        'Weight_In_Bond_Part': details['original_weight'],
+                        'Yield': details.get('yield', self.risk_free_rate * 100)
+                    })
+                
+                bond_df = pd.DataFrame(bond_data)
+                bond_df.to_csv(os.path.join(output_dir, 'bond_details.csv'), index=False)
+                self.logger.info(f"Детали облигаций сохранены в {output_dir}/bond_details.csv")
+            
+            # Сохраняем текстовый отчет
             with open(os.path.join(output_dir, 'portfolio_summary.txt'), 'w') as f:
                 f.write(f"Ожидаемая годовая доходность: {self.portfolio_performance['expected_return']*100:.2f}%\n")
                 f.write(f"Ожидаемая годовая волатильность: {self.portfolio_performance['expected_volatility']*100:.2f}%\n")
                 f.write(f"Коэффициент Шарпа: {self.portfolio_performance['sharpe_ratio']:.2f}\n")
                 f.write(f"Безрисковая ставка: {self.portfolio_performance['risk_free_rate']*100:.2f}%\n")
                 f.write(f"Доля безрисковых активов: {self.portfolio_performance['rf_allocation']*100:.2f}%\n")
-                    
+                f.write(f"Модель оптимизации: {self.optimization.upper()}\n\n")
+                
+                # Добавляем детали по облигациям, если они есть
+                if rf_details:
+                    f.write("ДЕТАЛИ БЕЗРИСКОВОЙ ЧАСТИ ПОРТФЕЛЯ:\n")
+                    f.write("---------------------------------------\n")
+                    for name, details in rf_details.items():
+                        f.write(f"{name} ({details['security_code']}):\n")
+                        f.write(f"  - Доля в портфеле: {details['weight']*100:.2f}%\n")
+                        f.write(f"  - Доля в безрисковой части: {details['original_weight']*100:.2f}%\n")
+                        f.write(f"  - Доходность: {details.get('yield', self.risk_free_rate*100):.2f}%\n")
+            
             self.logger.info(f"Результаты сохранены в {output_dir}")
-
-
+            
+            # Сохраняем дополнительную информацию для модели Блэка-Литермана (без изменений)
+            if self.optimization == 'black_litterman':
+                bl_info = {
+                    'market_weights': self.market_weights.to_dict() if self.market_weights is not None else None,
+                    'implied_returns': self.implied_returns.to_dict() if self.implied_returns is not None else None,
+                    'posterior_returns': self.posterior_returns.to_dict() if self.posterior_returns is not None else None,
+                    'views': self.views,
+                    'view_confidences': self.view_confidences,
+                    'tau': self.tau
+                }
+                
+                # Преобразуем все значения в нормальный json-совместимый формат
+                bl_info_json = {}
+                for key, value in bl_info.items():
+                    if isinstance(value, dict):
+                        bl_info_json[key] = {str(k): float(v) for k, v in value.items()}
+                    elif value is None:
+                        bl_info_json[key] = None
+                    else:
+                        bl_info_json[key] = value
+                
+                with open(os.path.join(output_dir, 'bl_parameters.json'), 'w') as f:
+                    json.dump(bl_info_json, f, indent=4)
+                
+                self.logger.info(f"Параметры модели Блэка-Литермана сохранены в {output_dir}/bl_parameters.json")
 
     
     def run_pipeline(self, input_file=None, output_dir=f"{BASE_PATH}/data",
-              risk_free_rate=None, min_rf_allocation=None, max_rf_allocation=None, max_weight=None):
+              risk_free_rate=None, min_rf_allocation=None, max_rf_allocation=None, max_weight=None,
+              views=None, view_confidences=None, optimization=None):
         """
         Запускает полный пайплайн оптимизации портфеля
         
@@ -808,6 +1422,12 @@ class PortfolioOptimizer(BaseLogger):
             Максимальная доля безрисковых активов
         max_weight : float, optional
             Максимальный вес одной бумаги в портфеле (для диверсификации)
+        views : dict or list, optional
+            Субъективные прогнозы для модели Блэка-Литермана
+        view_confidences : dict or list, optional
+            Уверенность в прогнозах для модели Блэка-Литермана
+        optimization : str, optional
+            Модель оптимизации: 'markowitz' или 'black_litterman'
         
         Returns:
         --------
@@ -827,7 +1447,18 @@ class PortfolioOptimizer(BaseLogger):
             self.max_rf_allocation = max_rf_allocation
         if max_weight is not None:
             self.max_weight = max_weight
-            self.logger.info(f"Максимальный вес одной бумаги: {self.max_weight}")
+        if views is not None:
+            self.views = views
+        if view_confidences is not None:
+            self.view_confidences = view_confidences
+        if optimization is not None:
+            self.optimization = optimization.lower()
+            if self.optimization not in ['markowitz', 'black_litterman']:
+                self.logger.warning(f"Неизвестная модель оптимизации: {optimization}. Будет использована модель Марковица.")
+                self.optimization = 'markowitz'
+            
+        self.logger.info(f"Максимальный вес одной бумаги: {self.max_weight}")
+        self.logger.info(f"Используется модель оптимизации: {self.optimization.upper()}")
             
         # Использование input_file если не указан, берем значение по умолчанию
         if input_file is None:
@@ -847,6 +1478,14 @@ class PortfolioOptimizer(BaseLogger):
             self.logger.error("Не удалось рассчитать доходности")
             return None
             
+        # Для модели Блэка-Литермана выполняем предварительные расчеты
+        if self.optimization == 'black_litterman':
+            self.load_market_caps()
+            self.calculate_market_weights()
+            self.calculate_implied_returns()
+            self.prepare_views_from_signals()
+            self.incorporate_views()
+            
         # Оптимизация портфеля с учетом max_weight
         self.optimize_portfolio(constrained=True, 
                             bounds=tuple((0, self.max_weight) for _ in range(len(self.returns.columns))))
@@ -858,17 +1497,181 @@ class PortfolioOptimizer(BaseLogger):
         # Расчет итогового портфеля с безрисковой частью
         portfolio = self.calculate_final_portfolio()
         
+        # Создаем подпапку в зависимости от модели оптимизации
+        model_subdir = 'markowitz' if self.optimization == 'markowitz' else 'black_litterman'
+        model_output_dir = os.path.join(output_dir, 'portfolio', model_subdir)
+        os.makedirs(model_output_dir, exist_ok=True)
+        
         # Визуализация результатов
-        if output_dir:
-            # Добавляем подпапку "portfolio" к указанной директории
-            output_dir = os.path.join(output_dir, 'portfolio')
-            # Убедимся, что все графики закрываются после создания
-            try:
-                self.visualize_portfolio(output_dir)
-            except Exception as e:
-                self.logger.error(f"Ошибка при визуализации: {e}")
-            finally:
-                # Дополнительно закрываем все фигуры после визуализации
-                plt.close('all')
+        try:
+            self.visualize_portfolio(model_output_dir)
+        except Exception as e:
+            self.logger.error(f"Ошибка при визуализации: {e}")
+        finally:
+            # Дополнительно закрываем все фигуры после визуализации
+            plt.close('all')
                 
         return portfolio
+
+def run_all_optimization_models(
+    base_path,
+    tickers_list,
+    risk_free_rate=0.1,
+    min_rf_allocation=0.3,
+    max_rf_allocation=0.5,
+    max_weight=0.15,
+    input_file=None,
+    risk_free_portfolio_file="/Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/portfolios/bond_portfolio_20250426.csv",
+    include_short_selling=False
+):
+    """
+    Запускает последовательно все модели оптимизации портфеля
+    
+    Parameters:
+    -----------
+    base_path : str
+        Базовый путь проекта
+    tickers_list : list
+        Список тикеров для анализа
+    risk_free_rate : float
+        Безрисковая ставка
+    min_rf_allocation : float
+        Минимальная доля безрисковых активов
+    max_rf_allocation : float
+        Максимальная доля безрисковых активов
+    max_weight : float
+        Максимальный вес одной бумаги в портфеле
+    input_file : str, optional
+        Путь к файлу с сигналами (если None, используется стандартный путь)
+    risk_free_portfolio_file : str, optional
+        Путь к файлу с оптимальным портфелем облигаций
+        
+    Returns:
+    --------
+    dict
+        Словарь с результатами оптимизации для обеих моделей
+    """
+    from pys.utils.logger import BaseLogger
+    from pys.data_collection.market_cap import run_pipeline_market_cap
+    logger = BaseLogger('OptimizationPipeline').logger
+    import pandas as pd 
+    
+    # Задаем пути к файлам
+    if input_file is None:
+        input_file = f"{base_path}/data/signals.csv"
+        
+    output_dir = f"{base_path}/data"
+    
+    # Запустим парсер капитализаций для модели Блэка-Литермана
+    logger.info("Запуск парсера капитализаций для модели Блэка-Литермана")
+
+    market_caps_df = run_pipeline_market_cap(
+        base_path=base_path,
+        tickers=tickers_list
+    )
+    
+    # Подготовим данные для модели Блэка-Литермана
+    market_caps = dict(zip(market_caps_df['ticker'], market_caps_df['market_cap']))
+    
+    # Результаты будем хранить в словаре
+    results = {}
+    
+    # 1. Запуск модели Марковица
+    logger.info("Запуск оптимизации по модели Марковица")
+    optimizer_markowitz = PortfolioOptimizer(
+        risk_free_rate=risk_free_rate,
+        min_rf_allocation=min_rf_allocation,
+        max_rf_allocation=max_rf_allocation,
+        max_weight=max_weight,
+        optimization='markowitz',
+        risk_free_portfolio_file=risk_free_portfolio_file,
+        include_short_selling=include_short_selling
+    )
+    
+    results['markowitz'] = optimizer_markowitz.run_pipeline(
+        input_file=input_file,
+        output_dir=output_dir
+    )
+    
+    # 2. Запуск модели Блэка-Литермана
+    logger.info("Запуск оптимизации по модели Блэка-Литермана")
+    optimizer_bl = PortfolioOptimizer(
+        risk_free_rate=risk_free_rate,
+        min_rf_allocation=min_rf_allocation,
+        max_rf_allocation=max_rf_allocation,
+        max_weight=max_weight,
+        optimization='black_litterman',
+        market_caps=market_caps,
+        risk_free_portfolio_file=risk_free_portfolio_file,
+        include_short_selling=include_short_selling
+    )
+    
+    results['black_litterman'] = optimizer_bl.run_pipeline(
+        input_file=input_file,
+        output_dir=output_dir
+    )
+    
+    # Подготовка сравнительной таблицы результатов (без изменений)
+    try:
+        import pandas as pd
+        import matplotlib.pyplot as plt
+        
+        # Создаем сравнительную таблицу
+        comparison = pd.DataFrame({
+            'Марковиц': results['markowitz']['weights'],
+            'Блэк-Литерман': results['black_litterman']['weights']
+        })
+        
+        # Удаляем строки с нулевыми весами в обеих моделях
+        comparison = comparison[(comparison['Марковиц'] > 0) | (comparison['Блэк-Литерман'] > 0)]
+        comparison = comparison.sort_values(by='Марковиц', ascending=False)
+        
+        # Сохраняем таблицу
+        comparison_path = f"{output_dir}/portfolio/comparison.csv"
+        comparison.to_csv(comparison_path)
+        logger.info(f"Сравнительная таблица сохранена в {comparison_path}")
+        
+        # Создаем сравнительный график
+        plt.figure(figsize=(12, 8))
+        comparison.plot(kind='bar', figsize=(12, 8))
+        plt.title('Сравнение весов портфелей: Марковиц vs Блэк-Литерман')
+        plt.xlabel('Тикер')
+        plt.ylabel('Вес в портфеле')
+        plt.grid(True, linestyle='--', alpha=0.6)
+        plt.xticks(rotation=45)
+        plt.tight_layout()
+        
+        # Сохраняем график
+        comparison_plot_path = f"{output_dir}/portfolio/comparison_plot.png"
+        plt.savefig(comparison_plot_path)
+        plt.close()
+        logger.info(f"Сравнительный график сохранен в {comparison_plot_path}")
+        
+        # Добавляем подробности о портфеле облигаций в сравнительный отчет
+        if os.path.exists(risk_free_portfolio_file):
+            try:
+                bonds_df = pd.read_csv(risk_free_portfolio_file)
+                bonds_summary_path = f"{output_dir}/portfolio/bonds_summary.csv"
+                bonds_df.to_csv(bonds_summary_path, index=False)
+                logger.info(f"Информация о портфеле облигаций сохранена в {bonds_summary_path}")
+                
+                # Создаем текстовый отчет с деталями о портфеле облигаций
+                with open(f"{output_dir}/portfolio/bonds_details.txt", 'w') as f:
+                    f.write("ДЕТАЛИ ПОРТФЕЛЯ ОБЛИГАЦИЙ\n")
+                    f.write("==========================\n\n")
+                    f.write(f"Доля безрисковых активов в портфеле: {min_rf_allocation*100:.1f}% - {max_rf_allocation*100:.1f}%\n")
+                    f.write(f"Используемая безрисковая ставка: {risk_free_rate*100:.2f}%\n\n")
+                    
+                    f.write("Структура портфеля облигаций:\n")
+                    for _, row in bonds_df.iterrows():
+                        f.write(f"- {row['full_name']} ({row['security_code']})\n")
+                        f.write(f"  Доходность: {row.get('yield', 'Н/Д')}%\n")
+                        f.write(f"  Дюрация: {row.get('duration_years', 'Н/Д')} лет\n")
+                        f.write(f"  Доля в безрисковой части: {row['weight']}%\n\n")
+            except Exception as e:
+                logger.error(f"Ошибка при создании отчета о портфеле облигаций: {e}")
+        
+    except Exception as e:
+        logger.error(f"Ошибка при создании сравнительных материалов: {e}")
+    
+    return results

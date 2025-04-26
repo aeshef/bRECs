@@ -85,3 +85,256 @@
 2025-04-25 11:46:15 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_MACD.png
 2025-04-25 11:46:15 - TechAnalysisPipeline - INFO - Сводный отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/tech_analysis_summary.txt
 2025-04-25 11:46:15 - TechAnalysisPipeline - INFO - === ТЕХНИЧЕСКИЙ АНАЛИЗ ЗАВЕРШЕН ===
+2025-04-26 12:42:17 - TechAnalysisPipeline - INFO - === НАЧАЛО ТЕХНИЧЕСКОГО АНАЛИЗА ===
+2025-04-26 12:42:17 - TechAnalysisPipeline - INFO - Обработка тикера: GAZP
+2025-04-26 12:42:17 - TechAnalysisPipeline - INFO - Используем файл: GAZP.parquet
+2025-04-26 12:42:18 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_tech_indicators.csv
+2025-04-26 12:42:18 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_price_indicators.png
+2025-04-26 12:42:18 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_MACD.png
+2025-04-26 12:42:18 - TechAnalysisPipeline - INFO - Обработка тикера: SBER
+2025-04-26 12:42:18 - TechAnalysisPipeline - INFO - Используем файл: SBER.parquet
+2025-04-26 12:42:18 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_tech_indicators.csv
+2025-04-26 12:42:18 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_price_indicators.png
+2025-04-26 12:42:18 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_MACD.png
+2025-04-26 12:42:18 - TechAnalysisPipeline - INFO - Обработка тикера: LKOH
+2025-04-26 12:42:18 - TechAnalysisPipeline - INFO - Используем файл: LKOH.parquet
+2025-04-26 12:42:18 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_tech_indicators.csv
+2025-04-26 12:42:18 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_price_indicators.png
+2025-04-26 12:42:19 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_MACD.png
+2025-04-26 12:42:19 - TechAnalysisPipeline - INFO - Обработка тикера: GMKN
+2025-04-26 12:42:19 - TechAnalysisPipeline - INFO - Используем файл: GMKN.parquet
+2025-04-26 12:42:19 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_tech_indicators.csv
+2025-04-26 12:42:19 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_price_indicators.png
+2025-04-26 12:42:19 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_MACD.png
+2025-04-26 12:42:19 - TechAnalysisPipeline - INFO - Обработка тикера: ROSN
+2025-04-26 12:42:19 - TechAnalysisPipeline - INFO - Используем файл: ROSN.parquet
+2025-04-26 12:42:19 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_tech_indicators.csv
+2025-04-26 12:42:19 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_price_indicators.png
+2025-04-26 12:42:19 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_MACD.png
+2025-04-26 12:42:19 - TechAnalysisPipeline - INFO - Обработка тикера: TATN
+2025-04-26 12:42:19 - TechAnalysisPipeline - INFO - Используем файл: TATN.parquet
+2025-04-26 12:42:19 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_tech_indicators.csv
+2025-04-26 12:42:19 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_price_indicators.png
+2025-04-26 12:42:20 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_MACD.png
+2025-04-26 12:42:20 - TechAnalysisPipeline - INFO - Обработка тикера: MTSS
+2025-04-26 12:42:20 - TechAnalysisPipeline - INFO - Используем файл: MTSS.parquet
+2025-04-26 12:42:20 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_tech_indicators.csv
+2025-04-26 12:42:20 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_price_indicators.png
+2025-04-26 12:42:20 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_MACD.png
+2025-04-26 12:42:20 - TechAnalysisPipeline - INFO - Обработка тикера: ALRS
+2025-04-26 12:42:20 - TechAnalysisPipeline - INFO - Используем файл: ALRS.parquet
+2025-04-26 12:42:20 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_tech_indicators.csv
+2025-04-26 12:42:20 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_price_indicators.png
+2025-04-26 12:42:20 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_MACD.png
+2025-04-26 12:42:20 - TechAnalysisPipeline - INFO - Обработка тикера: SNGS
+2025-04-26 12:42:20 - TechAnalysisPipeline - INFO - Используем файл: SNGS.parquet
+2025-04-26 12:42:20 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_tech_indicators.csv
+2025-04-26 12:42:21 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_price_indicators.png
+2025-04-26 12:42:21 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_MACD.png
+2025-04-26 12:42:21 - TechAnalysisPipeline - INFO - Обработка тикера: VTBR
+2025-04-26 12:42:21 - TechAnalysisPipeline - WARNING - Директория для тикера VTBR не найдена. Пропускаем!
+2025-04-26 12:42:21 - TechAnalysisPipeline - INFO - Обработка тикера: NVTK
+2025-04-26 12:42:21 - TechAnalysisPipeline - INFO - Используем файл: NVTK.parquet
+2025-04-26 12:42:21 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_tech_indicators.csv
+2025-04-26 12:42:21 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_price_indicators.png
+2025-04-26 12:42:21 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_MACD.png
+2025-04-26 12:42:21 - TechAnalysisPipeline - INFO - Обработка тикера: POLY
+2025-04-26 12:42:21 - TechAnalysisPipeline - WARNING - Директория для тикера POLY не найдена. Пропускаем!
+2025-04-26 12:42:21 - TechAnalysisPipeline - INFO - Обработка тикера: MVID
+2025-04-26 12:42:21 - TechAnalysisPipeline - INFO - Используем файл: MVID.parquet
+2025-04-26 12:42:21 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_tech_indicators.csv
+2025-04-26 12:42:21 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_price_indicators.png
+2025-04-26 12:42:21 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_MACD.png
+2025-04-26 12:42:21 - TechAnalysisPipeline - INFO - Обработка тикера: PHOR
+2025-04-26 12:42:21 - TechAnalysisPipeline - INFO - Используем файл: PHOR.parquet
+2025-04-26 12:42:22 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_tech_indicators.csv
+2025-04-26 12:42:22 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_price_indicators.png
+2025-04-26 12:42:22 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_MACD.png
+2025-04-26 12:42:22 - TechAnalysisPipeline - INFO - Обработка тикера: SIBN
+2025-04-26 12:42:22 - TechAnalysisPipeline - INFO - Используем файл: SIBN.parquet
+2025-04-26 12:42:22 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_tech_indicators.csv
+2025-04-26 12:42:22 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_price_indicators.png
+2025-04-26 12:42:22 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_MACD.png
+2025-04-26 12:42:22 - TechAnalysisPipeline - INFO - Обработка тикера: AFKS
+2025-04-26 12:42:22 - TechAnalysisPipeline - INFO - Используем файл: AFKS.parquet
+2025-04-26 12:42:22 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_tech_indicators.csv
+2025-04-26 12:42:22 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_price_indicators.png
+2025-04-26 12:42:22 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_MACD.png
+2025-04-26 12:42:22 - TechAnalysisPipeline - INFO - Обработка тикера: MAGN
+2025-04-26 12:42:22 - TechAnalysisPipeline - INFO - Используем файл: MAGN.parquet
+2025-04-26 12:42:23 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_tech_indicators.csv
+2025-04-26 12:42:23 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_price_indicators.png
+2025-04-26 12:42:23 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_MACD.png
+2025-04-26 12:42:23 - TechAnalysisPipeline - INFO - Обработка тикера: RUAL
+2025-04-26 12:42:23 - TechAnalysisPipeline - INFO - Используем файл: RUAL.parquet
+2025-04-26 12:42:23 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_tech_indicators.csv
+2025-04-26 12:42:23 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_price_indicators.png
+2025-04-26 12:42:23 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_MACD.png
+2025-04-26 12:42:23 - TechAnalysisPipeline - INFO - Сводный отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/tech_analysis_summary.txt
+2025-04-26 12:42:23 - TechAnalysisPipeline - INFO - === ТЕХНИЧЕСКИЙ АНАЛИЗ ЗАВЕРШЕН ===
+2025-04-26 12:50:28 - TechAnalysisPipeline - INFO - === НАЧАЛО ТЕХНИЧЕСКОГО АНАЛИЗА ===
+2025-04-26 12:50:28 - TechAnalysisPipeline - INFO - Обработка тикера: SBER
+2025-04-26 12:50:28 - TechAnalysisPipeline - INFO - Используем файл: SBER.parquet
+2025-04-26 12:50:28 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_tech_indicators.csv
+2025-04-26 12:50:28 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_price_indicators.png
+2025-04-26 12:50:28 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_MACD.png
+2025-04-26 12:50:28 - TechAnalysisPipeline - INFO - Обработка тикера: GAZP
+2025-04-26 12:50:28 - TechAnalysisPipeline - INFO - Используем файл: GAZP.parquet
+2025-04-26 12:50:28 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_tech_indicators.csv
+2025-04-26 12:50:28 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_price_indicators.png
+2025-04-26 12:50:28 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_MACD.png
+2025-04-26 12:50:28 - TechAnalysisPipeline - INFO - Обработка тикера: LKOH
+2025-04-26 12:50:28 - TechAnalysisPipeline - INFO - Используем файл: LKOH.parquet
+2025-04-26 12:50:29 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_tech_indicators.csv
+2025-04-26 12:50:29 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_price_indicators.png
+2025-04-26 12:50:29 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_MACD.png
+2025-04-26 12:50:29 - TechAnalysisPipeline - INFO - Обработка тикера: GMKN
+2025-04-26 12:50:29 - TechAnalysisPipeline - INFO - Используем файл: GMKN.parquet
+2025-04-26 12:50:29 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_tech_indicators.csv
+2025-04-26 12:50:29 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_price_indicators.png
+2025-04-26 12:50:29 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_MACD.png
+2025-04-26 12:50:29 - TechAnalysisPipeline - INFO - Обработка тикера: ROSN
+2025-04-26 12:50:29 - TechAnalysisPipeline - INFO - Используем файл: ROSN.parquet
+2025-04-26 12:50:29 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_tech_indicators.csv
+2025-04-26 12:50:29 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_price_indicators.png
+2025-04-26 12:50:29 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_MACD.png
+2025-04-26 12:50:29 - TechAnalysisPipeline - INFO - Обработка тикера: TATN
+2025-04-26 12:50:29 - TechAnalysisPipeline - INFO - Используем файл: TATN.parquet
+2025-04-26 12:50:30 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_tech_indicators.csv
+2025-04-26 12:50:30 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_price_indicators.png
+2025-04-26 12:50:30 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_MACD.png
+2025-04-26 12:50:30 - TechAnalysisPipeline - INFO - Обработка тикера: MTSS
+2025-04-26 12:50:30 - TechAnalysisPipeline - INFO - Используем файл: MTSS.parquet
+2025-04-26 12:50:30 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_tech_indicators.csv
+2025-04-26 12:50:30 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_price_indicators.png
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_MACD.png
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Обработка тикера: ALRS
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Используем файл: ALRS.parquet
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_tech_indicators.csv
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_price_indicators.png
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_MACD.png
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Обработка тикера: SNGS
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Используем файл: SNGS.parquet
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_tech_indicators.csv
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_price_indicators.png
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_MACD.png
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Обработка тикера: NVTK
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Используем файл: NVTK.parquet
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_tech_indicators.csv
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_price_indicators.png
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_MACD.png
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Обработка тикера: MVID
+2025-04-26 12:50:31 - TechAnalysisPipeline - INFO - Используем файл: MVID.parquet
+2025-04-26 12:50:32 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_tech_indicators.csv
+2025-04-26 12:50:32 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_price_indicators.png
+2025-04-26 12:50:32 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_MACD.png
+2025-04-26 12:50:32 - TechAnalysisPipeline - INFO - Обработка тикера: PHOR
+2025-04-26 12:50:32 - TechAnalysisPipeline - INFO - Используем файл: PHOR.parquet
+2025-04-26 12:50:32 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_tech_indicators.csv
+2025-04-26 12:50:32 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_price_indicators.png
+2025-04-26 12:50:32 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_MACD.png
+2025-04-26 12:50:32 - TechAnalysisPipeline - INFO - Обработка тикера: SIBN
+2025-04-26 12:50:32 - TechAnalysisPipeline - INFO - Используем файл: SIBN.parquet
+2025-04-26 12:50:32 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_tech_indicators.csv
+2025-04-26 12:50:32 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_price_indicators.png
+2025-04-26 12:50:33 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_MACD.png
+2025-04-26 12:50:33 - TechAnalysisPipeline - INFO - Обработка тикера: AFKS
+2025-04-26 12:50:33 - TechAnalysisPipeline - INFO - Используем файл: AFKS.parquet
+2025-04-26 12:50:33 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_tech_indicators.csv
+2025-04-26 12:50:33 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_price_indicators.png
+2025-04-26 12:50:33 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_MACD.png
+2025-04-26 12:50:33 - TechAnalysisPipeline - INFO - Обработка тикера: MAGN
+2025-04-26 12:50:33 - TechAnalysisPipeline - INFO - Используем файл: MAGN.parquet
+2025-04-26 12:50:33 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_tech_indicators.csv
+2025-04-26 12:50:33 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_price_indicators.png
+2025-04-26 12:50:33 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_MACD.png
+2025-04-26 12:50:33 - TechAnalysisPipeline - INFO - Обработка тикера: RUAL
+2025-04-26 12:50:33 - TechAnalysisPipeline - INFO - Используем файл: RUAL.parquet
+2025-04-26 12:50:33 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_tech_indicators.csv
+2025-04-26 12:50:33 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_price_indicators.png
+2025-04-26 12:50:34 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_MACD.png
+2025-04-26 12:50:34 - TechAnalysisPipeline - INFO - Сводный отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/summaries/tech_analysis_summary.txt
+2025-04-26 12:50:34 - TechAnalysisPipeline - INFO - === ТЕХНИЧЕСКИЙ АНАЛИЗ ЗАВЕРШЕН ===
+2025-04-26 13:43:14 - TechAnalysisPipeline - INFO - === НАЧАЛО ТЕХНИЧЕСКОГО АНАЛИЗА ===
+2025-04-26 13:43:14 - TechAnalysisPipeline - INFO - Обработка тикера: SBER
+2025-04-26 13:43:14 - TechAnalysisPipeline - INFO - Используем файл: SBER.parquet
+2025-04-26 13:43:14 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_tech_indicators.csv
+2025-04-26 13:43:14 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_price_indicators.png
+2025-04-26 13:43:14 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_MACD.png
+2025-04-26 13:43:14 - TechAnalysisPipeline - INFO - Обработка тикера: GAZP
+2025-04-26 13:43:14 - TechAnalysisPipeline - INFO - Используем файл: GAZP.parquet
+2025-04-26 13:43:14 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_tech_indicators.csv
+2025-04-26 13:43:14 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_price_indicators.png
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_MACD.png
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Обработка тикера: LKOH
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Используем файл: LKOH.parquet
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_tech_indicators.csv
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_price_indicators.png
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_MACD.png
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Обработка тикера: GMKN
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Используем файл: GMKN.parquet
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_tech_indicators.csv
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_price_indicators.png
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_MACD.png
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Обработка тикера: ROSN
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Используем файл: ROSN.parquet
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_tech_indicators.csv
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_price_indicators.png
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_MACD.png
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Обработка тикера: TATN
+2025-04-26 13:43:15 - TechAnalysisPipeline - INFO - Используем файл: TATN.parquet
+2025-04-26 13:43:16 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_tech_indicators.csv
+2025-04-26 13:43:16 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_price_indicators.png
+2025-04-26 13:43:16 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_MACD.png
+2025-04-26 13:43:16 - TechAnalysisPipeline - INFO - Обработка тикера: MTSS
+2025-04-26 13:43:16 - TechAnalysisPipeline - INFO - Используем файл: MTSS.parquet
+2025-04-26 13:43:16 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_tech_indicators.csv
+2025-04-26 13:43:16 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_price_indicators.png
+2025-04-26 13:43:16 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_MACD.png
+2025-04-26 13:43:16 - TechAnalysisPipeline - INFO - Обработка тикера: ALRS
+2025-04-26 13:43:16 - TechAnalysisPipeline - INFO - Используем файл: ALRS.parquet
+2025-04-26 13:43:16 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_tech_indicators.csv
+2025-04-26 13:43:16 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_price_indicators.png
+2025-04-26 13:43:16 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_MACD.png
+2025-04-26 13:43:16 - TechAnalysisPipeline - INFO - Обработка тикера: SNGS
+2025-04-26 13:43:16 - TechAnalysisPipeline - INFO - Используем файл: SNGS.parquet
+2025-04-26 13:43:17 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_tech_indicators.csv
+2025-04-26 13:43:17 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_price_indicators.png
+2025-04-26 13:43:17 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_MACD.png
+2025-04-26 13:43:17 - TechAnalysisPipeline - INFO - Обработка тикера: NVTK
+2025-04-26 13:43:17 - TechAnalysisPipeline - INFO - Используем файл: NVTK.parquet
+2025-04-26 13:43:17 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_tech_indicators.csv
+2025-04-26 13:43:17 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_price_indicators.png
+2025-04-26 13:43:17 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_MACD.png
+2025-04-26 13:43:17 - TechAnalysisPipeline - INFO - Обработка тикера: MVID
+2025-04-26 13:43:17 - TechAnalysisPipeline - INFO - Используем файл: MVID.parquet
+2025-04-26 13:43:17 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_tech_indicators.csv
+2025-04-26 13:43:17 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_price_indicators.png
+2025-04-26 13:43:17 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_MACD.png
+2025-04-26 13:43:17 - TechAnalysisPipeline - INFO - Обработка тикера: PHOR
+2025-04-26 13:43:17 - TechAnalysisPipeline - INFO - Используем файл: PHOR.parquet
+2025-04-26 13:43:17 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_tech_indicators.csv
+2025-04-26 13:43:18 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_price_indicators.png
+2025-04-26 13:43:18 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_MACD.png
+2025-04-26 13:43:18 - TechAnalysisPipeline - INFO - Обработка тикера: SIBN
+2025-04-26 13:43:18 - TechAnalysisPipeline - INFO - Используем файл: SIBN.parquet
+2025-04-26 13:43:18 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_tech_indicators.csv
+2025-04-26 13:43:18 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_price_indicators.png
+2025-04-26 13:43:18 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_MACD.png
+2025-04-26 13:43:18 - TechAnalysisPipeline - INFO - Обработка тикера: AFKS
+2025-04-26 13:43:18 - TechAnalysisPipeline - INFO - Используем файл: AFKS.parquet
+2025-04-26 13:43:18 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_tech_indicators.csv
+2025-04-26 13:43:18 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_price_indicators.png
+2025-04-26 13:43:18 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_MACD.png
+2025-04-26 13:43:18 - TechAnalysisPipeline - INFO - Обработка тикера: MAGN
+2025-04-26 13:43:18 - TechAnalysisPipeline - INFO - Используем файл: MAGN.parquet
+2025-04-26 13:43:18 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_tech_indicators.csv
+2025-04-26 13:43:18 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_price_indicators.png
+2025-04-26 13:43:19 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_MACD.png
+2025-04-26 13:43:19 - TechAnalysisPipeline - INFO - Обработка тикера: RUAL
+2025-04-26 13:43:19 - TechAnalysisPipeline - INFO - Используем файл: RUAL.parquet
+2025-04-26 13:43:19 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_tech_indicators.csv
+2025-04-26 13:43:19 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_price_indicators.png
+2025-04-26 13:43:19 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_MACD.png
+2025-04-26 13:43:19 - TechAnalysisPipeline - INFO - Сводный отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/summaries/tech_analysis_summary.txt
+2025-04-26 13:43:19 - TechAnalysisPipeline - INFO - === ТЕХНИЧЕСКИЙ АНАЛИЗ ЗАВЕРШЕН ===

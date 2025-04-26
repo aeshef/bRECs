@@ -558,3 +558,236 @@ TypeError: cannot subtract DatetimeArray from ndarray
 2025-04-26 01:25:25 - BondsProcessor - INFO - Portfolio formed with 5 bonds
 2025-04-26 01:25:26 - BondsProcessor - INFO - Visualization saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/portfolios/bond_universe_20250426.png
 2025-04-26 01:25:26 - BondsProcessor - INFO - Portfolio analysis generated successfully
+2025-04-26 15:26:52 - BondsProcessor - INFO - Loading direct data from /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/bonds_2024-01-01_2025-04-25/threshold_79/bonds_dataset.csv
+2025-04-26 15:26:52 - BondsProcessor - INFO - Renamed columns: {'secid': 'security_code', 'name': 'full_name', 'price': 'price_pct', 'duration': 'duration_months', 'maturity_date': 'expiration_date', 'volume': 'trading_volume', 'value': 'trading_value'}
+2025-04-26 15:26:52 - BondsProcessor - INFO - Created duration_years column from duration_months
+2025-04-26 15:26:52 - BondsProcessor - INFO - Created snapshot_date from date column
+2025-04-26 15:26:52 - BondsProcessor - INFO - Filtered data to use only latest snapshot: 2025-04-25 00:00:00
+2025-04-26 15:26:52 - BondsProcessor - INFO - Starting filters with 12 bonds
+2025-04-26 15:26:52 - BondsProcessor - INFO - After min_yield filter: 3 bonds
+2025-04-26 15:26:52 - BondsProcessor - INFO - After max_yield filter: 3 bonds
+2025-04-26 15:26:52 - BondsProcessor - INFO - After duration filter: 3 bonds
+2025-04-26 15:26:52 - BondsProcessor - INFO - After excluded_issuers filter: 3 bonds (-0)
+2025-04-26 15:26:52 - BondsProcessor - INFO - After removing duplicates: 3 bonds
+2025-04-26 15:26:52 - BondsProcessor - INFO - Removed 0 bonds with missing yield
+2025-04-26 15:26:52 - BondsProcessor - INFO - Removed 0 bonds with missing duration_years
+2025-04-26 15:26:52 - BondsProcessor - INFO - Removed 0 bonds with missing price_pct
+2025-04-26 15:26:52 - BondsProcessor - INFO - Final filtered dataset: 3 bonds from initial 12
+2025-04-26 15:26:52 - BondsProcessor - INFO - Calculated metrics for 3 bonds
+2025-04-26 15:26:52 - BondsProcessor - INFO - Processed 3 bonds from direct data
+2025-04-26 15:26:52 - BondsProcessor - INFO - Detected market condition: high_rate
+2025-04-26 15:26:52 - BondsProcessor - INFO - Available 3 bonds for portfolio formation
+2025-04-26 15:26:52 - BondsProcessor - INFO - No previous recommendations - using only current data
+2025-04-26 15:26:52 - BondsProcessor - INFO - Calculated weights using 'equal' strategy
+2025-04-26 15:26:52 - BondsProcessor - INFO - Current recommendations saved for future use
+2025-04-26 15:26:52 - BondsProcessor - INFO - Portfolio formed with 3 bonds
+2025-04-26 15:26:52 - BondsProcessor - INFO - Visualization saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/portfolios/bond_universe_20250426.png
+2025-04-26 15:26:52 - BondsProcessor - INFO - Portfolio analysis generated successfully
+2025-04-26 16:27:25 - BondsProcessor - INFO - Loaded previous recommendations from 2025-04-26
+2025-04-26 16:27:25 - BondsProcessor - INFO - Loading direct data from /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/bonds_2024-01-01_2025-04-15/threshold_91/bonds_dataset.csv
+2025-04-26 16:27:25 - BondsProcessor - INFO - Renamed columns: {'secid': 'security_code', 'name': 'full_name', 'price': 'price_pct', 'duration': 'duration_months', 'maturity_date': 'expiration_date', 'volume': 'trading_volume', 'value': 'trading_value'}
+2025-04-26 16:27:25 - BondsProcessor - INFO - Created duration_years column from duration_months
+2025-04-26 16:27:26 - BondsProcessor - INFO - Created snapshot_date from date column
+2025-04-26 16:27:26 - BondsProcessor - INFO - Filtered data to use only latest snapshot: 2025-04-15 00:00:00
+2025-04-26 16:27:26 - BondsProcessor - INFO - Starting filters with 18 bonds
+2025-04-26 16:27:26 - BondsProcessor - INFO - After min_yield filter: 5 bonds
+2025-04-26 16:27:26 - BondsProcessor - INFO - After max_yield filter: 5 bonds
+2025-04-26 16:27:26 - BondsProcessor - INFO - After duration filter: 5 bonds
+2025-04-26 16:27:26 - BondsProcessor - INFO - After excluded_issuers filter: 5 bonds (-0)
+2025-04-26 16:27:26 - BondsProcessor - INFO - After removing duplicates: 5 bonds
+2025-04-26 16:27:26 - BondsProcessor - INFO - Removed 0 bonds with missing yield
+2025-04-26 16:27:26 - BondsProcessor - INFO - Removed 0 bonds with missing duration_years
+2025-04-26 16:27:26 - BondsProcessor - INFO - Removed 0 bonds with missing price_pct
+2025-04-26 16:27:26 - BondsProcessor - INFO - Final filtered dataset: 5 bonds from initial 18
+2025-04-26 16:27:26 - BondsProcessor - INFO - Calculated metrics for 5 bonds
+2025-04-26 16:27:26 - BondsProcessor - INFO - Processed 5 bonds from direct data
+2025-04-26 16:27:26 - BondsProcessor - INFO - Detected market condition: high_rate
+2025-04-26 16:27:26 - BondsProcessor - INFO - Available 5 bonds for portfolio formation
+2025-04-26 16:27:26 - BondsProcessor - INFO - Kept 3 bonds from previous portfolio, added 2 new ones
+2025-04-26 16:27:26 - BondsProcessor - INFO - Calculated weights using 'equal' strategy
+2025-04-26 16:27:26 - BondsProcessor - INFO - Current recommendations saved for future use
+2025-04-26 16:27:26 - BondsProcessor - INFO - Portfolio formed with 5 bonds
+2025-04-26 16:27:26 - BondsProcessor - INFO - Visualization saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/portfolios/bond_universe_20250426.png
+2025-04-26 16:27:26 - BondsProcessor - INFO - Portfolio analysis generated successfully
+2025-04-26 16:34:02 - BondsProcessor - INFO - Loaded previous recommendations from 2025-04-26
+2025-04-26 16:34:02 - BondsProcessor - INFO - Loading direct data from /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/bonds_2024-01-01_2025-04-15/threshold_91/bonds_dataset.csv
+2025-04-26 16:34:02 - BondsProcessor - INFO - Renamed columns: {'secid': 'security_code', 'name': 'full_name', 'price': 'price_pct', 'duration': 'duration_months', 'maturity_date': 'expiration_date', 'volume': 'trading_volume', 'value': 'trading_value'}
+2025-04-26 16:34:02 - BondsProcessor - INFO - Created duration_years column from duration_months
+2025-04-26 16:34:02 - BondsProcessor - INFO - Created snapshot_date from date column
+2025-04-26 16:34:02 - BondsProcessor - INFO - Filtered data to use only latest snapshot: 2025-04-15 00:00:00
+2025-04-26 16:34:02 - BondsProcessor - INFO - Starting filters with 18 bonds
+2025-04-26 16:34:02 - BondsProcessor - INFO - After min_yield filter: 5 bonds
+2025-04-26 16:34:02 - BondsProcessor - INFO - After max_yield filter: 5 bonds
+2025-04-26 16:34:02 - BondsProcessor - INFO - After duration filter: 5 bonds
+2025-04-26 16:34:02 - BondsProcessor - INFO - After excluded_issuers filter: 5 bonds (-0)
+2025-04-26 16:34:02 - BondsProcessor - INFO - After removing duplicates: 5 bonds
+2025-04-26 16:34:02 - BondsProcessor - INFO - Removed 0 bonds with missing yield
+2025-04-26 16:34:02 - BondsProcessor - INFO - Removed 0 bonds with missing duration_years
+2025-04-26 16:34:02 - BondsProcessor - INFO - Removed 0 bonds with missing price_pct
+2025-04-26 16:34:02 - BondsProcessor - INFO - Final filtered dataset: 5 bonds from initial 18
+2025-04-26 16:34:02 - BondsProcessor - INFO - Calculated metrics for 5 bonds
+2025-04-26 16:34:02 - BondsProcessor - INFO - Processed 5 bonds from direct data
+2025-04-26 16:34:02 - BondsProcessor - INFO - Detected market condition: high_rate
+2025-04-26 16:34:02 - BondsProcessor - INFO - Available 5 bonds for portfolio formation
+2025-04-26 16:34:02 - BondsProcessor - INFO - Kept 3 bonds from previous portfolio, added 2 new ones
+2025-04-26 16:34:02 - BondsProcessor - INFO - Calculated weights using 'equal' strategy
+2025-04-26 16:34:02 - BondsProcessor - INFO - Current recommendations saved for future use
+2025-04-26 16:34:02 - BondsProcessor - INFO - Portfolio formed with 5 bonds
+2025-04-26 16:34:02 - BondsProcessor - INFO - Visualization saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/portfolios/bond_universe_20250426.png
+2025-04-26 16:34:03 - BondsProcessor - INFO - Portfolio analysis generated successfully
+2025-04-26 16:34:12 - BondsProcessor - INFO - Loaded previous recommendations from 2025-04-26
+2025-04-26 16:34:12 - BondsProcessor - INFO - Loading direct data from /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/bonds_2024-01-01_2025-04-15/threshold_91/bonds_dataset.csv
+2025-04-26 16:34:12 - BondsProcessor - INFO - Renamed columns: {'secid': 'security_code', 'name': 'full_name', 'price': 'price_pct', 'duration': 'duration_months', 'maturity_date': 'expiration_date', 'volume': 'trading_volume', 'value': 'trading_value'}
+2025-04-26 16:34:12 - BondsProcessor - INFO - Created duration_years column from duration_months
+2025-04-26 16:34:12 - BondsProcessor - INFO - Created snapshot_date from date column
+2025-04-26 16:34:12 - BondsProcessor - INFO - Filtered data to use only latest snapshot: 2025-04-15 00:00:00
+2025-04-26 16:34:12 - BondsProcessor - INFO - Starting filters with 18 bonds
+2025-04-26 16:34:12 - BondsProcessor - INFO - After min_yield filter: 5 bonds
+2025-04-26 16:34:12 - BondsProcessor - INFO - After max_yield filter: 5 bonds
+2025-04-26 16:34:12 - BondsProcessor - INFO - After duration filter: 5 bonds
+2025-04-26 16:34:12 - BondsProcessor - INFO - After excluded_issuers filter: 5 bonds (-0)
+2025-04-26 16:34:12 - BondsProcessor - INFO - After removing duplicates: 5 bonds
+2025-04-26 16:34:12 - BondsProcessor - INFO - Removed 0 bonds with missing yield
+2025-04-26 16:34:12 - BondsProcessor - INFO - Removed 0 bonds with missing duration_years
+2025-04-26 16:34:12 - BondsProcessor - INFO - Removed 0 bonds with missing price_pct
+2025-04-26 16:34:12 - BondsProcessor - INFO - Final filtered dataset: 5 bonds from initial 18
+2025-04-26 16:34:12 - BondsProcessor - INFO - Calculated metrics for 5 bonds
+2025-04-26 16:34:12 - BondsProcessor - INFO - Processed 5 bonds from direct data
+2025-04-26 16:34:12 - BondsProcessor - INFO - Detected market condition: high_rate
+2025-04-26 16:34:12 - BondsProcessor - INFO - Available 5 bonds for portfolio formation
+2025-04-26 16:34:12 - BondsProcessor - INFO - Kept 3 bonds from previous portfolio, added 2 new ones
+2025-04-26 16:34:12 - BondsProcessor - INFO - Calculated weights using 'equal' strategy
+2025-04-26 16:34:12 - BondsProcessor - INFO - Current recommendations saved for future use
+2025-04-26 16:34:12 - BondsProcessor - INFO - Portfolio formed with 5 bonds
+2025-04-26 16:34:13 - BondsProcessor - INFO - Visualization saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/portfolios/bond_universe_20250426.png
+2025-04-26 16:34:13 - BondsProcessor - INFO - Portfolio analysis generated successfully
+2025-04-26 16:35:37 - BondsProcessor - INFO - Loaded previous recommendations from 2025-04-26
+2025-04-26 16:35:37 - BondsProcessor - INFO - Loading direct data from /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/bonds_2024-01-01_2025-04-15/threshold_91/bonds_dataset.csv
+2025-04-26 16:35:37 - BondsProcessor - INFO - Renamed columns: {'secid': 'security_code', 'name': 'full_name', 'price': 'price_pct', 'duration': 'duration_months', 'maturity_date': 'expiration_date', 'volume': 'trading_volume', 'value': 'trading_value'}
+2025-04-26 16:35:37 - BondsProcessor - INFO - Created duration_years column from duration_months
+2025-04-26 16:35:37 - BondsProcessor - INFO - Created snapshot_date from date column
+2025-04-26 16:35:37 - BondsProcessor - INFO - Filtered data to use only latest snapshot: 2025-04-15 00:00:00
+2025-04-26 16:35:37 - BondsProcessor - INFO - Starting filters with 18 bonds
+2025-04-26 16:35:37 - BondsProcessor - INFO - After min_yield filter: 5 bonds
+2025-04-26 16:35:37 - BondsProcessor - INFO - After max_yield filter: 5 bonds
+2025-04-26 16:35:37 - BondsProcessor - INFO - After duration filter: 5 bonds
+2025-04-26 16:35:37 - BondsProcessor - INFO - After excluded_issuers filter: 5 bonds (-0)
+2025-04-26 16:35:37 - BondsProcessor - INFO - After removing duplicates: 5 bonds
+2025-04-26 16:35:37 - BondsProcessor - INFO - Removed 0 bonds with missing yield
+2025-04-26 16:35:37 - BondsProcessor - INFO - Removed 0 bonds with missing duration_years
+2025-04-26 16:35:37 - BondsProcessor - INFO - Removed 0 bonds with missing price_pct
+2025-04-26 16:35:37 - BondsProcessor - INFO - Final filtered dataset: 5 bonds from initial 18
+2025-04-26 16:35:37 - BondsProcessor - INFO - Calculated metrics for 5 bonds
+2025-04-26 16:35:37 - BondsProcessor - INFO - Processed 5 bonds from direct data
+2025-04-26 16:35:37 - BondsProcessor - INFO - Detected market condition: high_rate
+2025-04-26 16:35:37 - BondsProcessor - INFO - Available 5 bonds for portfolio formation
+2025-04-26 16:35:37 - BondsProcessor - INFO - Kept 3 bonds from previous portfolio, added 2 new ones
+2025-04-26 16:35:37 - BondsProcessor - INFO - Calculated weights using 'equal' strategy
+2025-04-26 16:35:37 - BondsProcessor - INFO - Current recommendations saved for future use
+2025-04-26 16:35:37 - BondsProcessor - INFO - Portfolio formed with 5 bonds
+2025-04-26 16:35:37 - BondsProcessor - INFO - Visualization saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/portfolios/bond_universe_20250426.png
+2025-04-26 16:35:37 - BondsProcessor - INFO - Portfolio analysis generated successfully
+2025-04-26 18:58:08 - BondsProcessor - INFO - Loaded previous recommendations from 2025-04-26
+2025-04-26 18:58:08 - BondsProcessor - INFO - Loading direct data from /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/bonds_2024-01-01_2025-04-15/threshold_91/bonds_dataset.csv
+2025-04-26 18:58:08 - BondsProcessor - INFO - Renamed columns: {'secid': 'security_code', 'name': 'full_name', 'price': 'price_pct', 'duration': 'duration_months', 'maturity_date': 'expiration_date', 'volume': 'trading_volume', 'value': 'trading_value'}
+2025-04-26 18:58:08 - BondsProcessor - INFO - Created duration_years column from duration_months
+2025-04-26 18:58:08 - BondsProcessor - INFO - Created snapshot_date from date column
+2025-04-26 18:58:08 - BondsProcessor - INFO - Filtered data to use only latest snapshot: 2025-04-15 00:00:00
+2025-04-26 18:58:08 - BondsProcessor - INFO - Starting filters with 18 bonds
+2025-04-26 18:58:08 - BondsProcessor - INFO - After min_yield filter: 5 bonds
+2025-04-26 18:58:08 - BondsProcessor - INFO - After max_yield filter: 5 bonds
+2025-04-26 18:58:08 - BondsProcessor - INFO - After duration filter: 5 bonds
+2025-04-26 18:58:08 - BondsProcessor - INFO - After excluded_issuers filter: 5 bonds (-0)
+2025-04-26 18:58:08 - BondsProcessor - INFO - After removing duplicates: 5 bonds
+2025-04-26 18:58:08 - BondsProcessor - INFO - Removed 0 bonds with missing yield
+2025-04-26 18:58:08 - BondsProcessor - INFO - Removed 0 bonds with missing duration_years
+2025-04-26 18:58:08 - BondsProcessor - INFO - Removed 0 bonds with missing price_pct
+2025-04-26 18:58:08 - BondsProcessor - INFO - Final filtered dataset: 5 bonds from initial 18
+2025-04-26 18:58:08 - BondsProcessor - INFO - Calculated metrics for 5 bonds
+2025-04-26 18:58:08 - BondsProcessor - INFO - Processed 5 bonds from direct data
+2025-04-26 18:58:08 - BondsProcessor - INFO - Detected market condition: high_rate
+2025-04-26 18:58:08 - BondsProcessor - INFO - Available 5 bonds for portfolio formation
+2025-04-26 18:58:08 - BondsProcessor - INFO - Kept 3 bonds from previous portfolio, added 2 new ones
+2025-04-26 18:58:08 - BondsProcessor - INFO - Calculated weights using 'equal' strategy
+2025-04-26 18:58:08 - BondsProcessor - INFO - Current recommendations saved for future use
+2025-04-26 18:58:08 - BondsProcessor - INFO - Portfolio formed with 5 bonds
+2025-04-26 18:58:08 - BondsProcessor - INFO - Visualization saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/portfolios/bond_universe_20250426.png
+2025-04-26 18:58:08 - BondsProcessor - INFO - Portfolio analysis generated successfully
+2025-04-26 19:21:29 - BondsProcessor - INFO - Loaded previous recommendations from 2025-04-26
+2025-04-26 19:21:29 - BondsProcessor - INFO - Loading direct data from /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/bonds_2024-01-01_2025-04-15/threshold_91/bonds_dataset.csv
+2025-04-26 19:21:29 - BondsProcessor - INFO - Renamed columns: {'secid': 'security_code', 'name': 'full_name', 'price': 'price_pct', 'duration': 'duration_months', 'maturity_date': 'expiration_date', 'volume': 'trading_volume', 'value': 'trading_value'}
+2025-04-26 19:21:29 - BondsProcessor - INFO - Created duration_years column from duration_months
+2025-04-26 19:21:29 - BondsProcessor - INFO - Created snapshot_date from date column
+2025-04-26 19:21:29 - BondsProcessor - INFO - Filtered data to use only latest snapshot: 2025-04-15 00:00:00
+2025-04-26 19:21:29 - BondsProcessor - INFO - Starting filters with 18 bonds
+2025-04-26 19:21:29 - BondsProcessor - INFO - After min_yield filter: 5 bonds
+2025-04-26 19:21:29 - BondsProcessor - INFO - After max_yield filter: 5 bonds
+2025-04-26 19:21:29 - BondsProcessor - INFO - After duration filter: 5 bonds
+2025-04-26 19:21:29 - BondsProcessor - INFO - After excluded_issuers filter: 5 bonds (-0)
+2025-04-26 19:21:29 - BondsProcessor - INFO - After removing duplicates: 5 bonds
+2025-04-26 19:21:29 - BondsProcessor - INFO - Removed 0 bonds with missing yield
+2025-04-26 19:21:29 - BondsProcessor - INFO - Removed 0 bonds with missing duration_years
+2025-04-26 19:21:29 - BondsProcessor - INFO - Removed 0 bonds with missing price_pct
+2025-04-26 19:21:29 - BondsProcessor - INFO - Final filtered dataset: 5 bonds from initial 18
+2025-04-26 19:21:29 - BondsProcessor - INFO - Calculated metrics for 5 bonds
+2025-04-26 19:21:29 - BondsProcessor - INFO - Processed 5 bonds from direct data
+2025-04-26 19:21:29 - BondsProcessor - INFO - Detected market condition: high_rate
+2025-04-26 19:21:29 - BondsProcessor - INFO - Available 5 bonds for portfolio formation
+2025-04-26 19:21:29 - BondsProcessor - INFO - Kept 3 bonds from previous portfolio, added 2 new ones
+2025-04-26 19:21:29 - BondsProcessor - INFO - Calculated weights using 'equal' strategy
+2025-04-26 19:21:29 - BondsProcessor - INFO - Current recommendations saved for future use
+2025-04-26 19:21:29 - BondsProcessor - INFO - Portfolio formed with 5 bonds
+2025-04-26 19:21:30 - BondsProcessor - INFO - Visualization saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/portfolios/bond_universe_20250426.png
+2025-04-26 19:21:30 - BondsProcessor - INFO - Portfolio analysis generated successfully
+2025-04-26 19:43:19 - BondsProcessor - INFO - Loaded previous recommendations from 2025-04-26
+2025-04-26 19:43:19 - BondsProcessor - INFO - Loading direct data from /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/bonds_2024-01-01_2025-04-15/threshold_91/bonds_dataset.csv
+2025-04-26 19:43:19 - BondsProcessor - INFO - Renamed columns: {'secid': 'security_code', 'name': 'full_name', 'price': 'price_pct', 'duration': 'duration_months', 'maturity_date': 'expiration_date', 'volume': 'trading_volume', 'value': 'trading_value'}
+2025-04-26 19:43:19 - BondsProcessor - INFO - Created duration_years column from duration_months
+2025-04-26 19:43:19 - BondsProcessor - INFO - Created snapshot_date from date column
+2025-04-26 19:43:19 - BondsProcessor - INFO - Filtered data to use only latest snapshot: 2025-04-15 00:00:00
+2025-04-26 19:43:19 - BondsProcessor - INFO - Starting filters with 18 bonds
+2025-04-26 19:43:19 - BondsProcessor - INFO - After min_yield filter: 5 bonds
+2025-04-26 19:43:19 - BondsProcessor - INFO - After max_yield filter: 5 bonds
+2025-04-26 19:43:19 - BondsProcessor - INFO - After duration filter: 5 bonds
+2025-04-26 19:43:19 - BondsProcessor - INFO - After excluded_issuers filter: 5 bonds (-0)
+2025-04-26 19:43:19 - BondsProcessor - INFO - After removing duplicates: 5 bonds
+2025-04-26 19:43:19 - BondsProcessor - INFO - Removed 0 bonds with missing yield
+2025-04-26 19:43:19 - BondsProcessor - INFO - Removed 0 bonds with missing duration_years
+2025-04-26 19:43:19 - BondsProcessor - INFO - Removed 0 bonds with missing price_pct
+2025-04-26 19:43:19 - BondsProcessor - INFO - Final filtered dataset: 5 bonds from initial 18
+2025-04-26 19:43:19 - BondsProcessor - INFO - Calculated metrics for 5 bonds
+2025-04-26 19:43:19 - BondsProcessor - INFO - Processed 5 bonds from direct data
+2025-04-26 19:43:19 - BondsProcessor - INFO - Detected market condition: high_rate
+2025-04-26 19:43:19 - BondsProcessor - INFO - Available 5 bonds for portfolio formation
+2025-04-26 19:43:19 - BondsProcessor - INFO - Kept 3 bonds from previous portfolio, added 2 new ones
+2025-04-26 19:43:19 - BondsProcessor - INFO - Calculated weights using 'equal' strategy
+2025-04-26 19:43:19 - BondsProcessor - INFO - Current recommendations saved for future use
+2025-04-26 19:43:19 - BondsProcessor - INFO - Portfolio formed with 5 bonds
+2025-04-26 19:43:20 - BondsProcessor - INFO - Visualization saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/portfolios/bond_universe_20250426.png
+2025-04-26 19:43:20 - BondsProcessor - INFO - Portfolio analysis generated successfully
+2025-04-26 19:44:55 - BondsProcessor - INFO - Loaded previous recommendations from 2025-04-26
+2025-04-26 19:44:55 - BondsProcessor - INFO - Loading direct data from /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/bonds_2024-01-01_2025-04-15/threshold_91/bonds_dataset.csv
+2025-04-26 19:44:55 - BondsProcessor - INFO - Renamed columns: {'secid': 'security_code', 'name': 'full_name', 'price': 'price_pct', 'duration': 'duration_months', 'maturity_date': 'expiration_date', 'volume': 'trading_volume', 'value': 'trading_value'}
+2025-04-26 19:44:55 - BondsProcessor - INFO - Created duration_years column from duration_months
+2025-04-26 19:44:55 - BondsProcessor - INFO - Created snapshot_date from date column
+2025-04-26 19:44:55 - BondsProcessor - INFO - Filtered data to use only latest snapshot: 2025-04-15 00:00:00
+2025-04-26 19:44:55 - BondsProcessor - INFO - Starting filters with 18 bonds
+2025-04-26 19:44:55 - BondsProcessor - INFO - After min_yield filter: 5 bonds
+2025-04-26 19:44:55 - BondsProcessor - INFO - After max_yield filter: 5 bonds
+2025-04-26 19:44:55 - BondsProcessor - INFO - After duration filter: 5 bonds
+2025-04-26 19:44:55 - BondsProcessor - INFO - After excluded_issuers filter: 5 bonds (-0)
+2025-04-26 19:44:55 - BondsProcessor - INFO - After removing duplicates: 5 bonds
+2025-04-26 19:44:55 - BondsProcessor - INFO - Removed 0 bonds with missing yield
+2025-04-26 19:44:55 - BondsProcessor - INFO - Removed 0 bonds with missing duration_years
+2025-04-26 19:44:55 - BondsProcessor - INFO - Removed 0 bonds with missing price_pct
+2025-04-26 19:44:55 - BondsProcessor - INFO - Final filtered dataset: 5 bonds from initial 18
+2025-04-26 19:44:55 - BondsProcessor - INFO - Calculated metrics for 5 bonds
+2025-04-26 19:44:55 - BondsProcessor - INFO - Processed 5 bonds from direct data
+2025-04-26 19:44:55 - BondsProcessor - INFO - Detected market condition: high_rate
+2025-04-26 19:44:55 - BondsProcessor - INFO - Available 5 bonds for portfolio formation
+2025-04-26 19:44:55 - BondsProcessor - INFO - Kept 3 bonds from previous portfolio, added 2 new ones
+2025-04-26 19:44:55 - BondsProcessor - INFO - Calculated weights using 'equal' strategy
+2025-04-26 19:44:55 - BondsProcessor - INFO - Current recommendations saved for future use
+2025-04-26 19:44:55 - BondsProcessor - INFO - Portfolio formed with 5 bonds
+2025-04-26 19:44:55 - BondsProcessor - INFO - Visualization saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/portfolios/bond_universe_20250426.png
+2025-04-26 19:44:55 - BondsProcessor - INFO - Portfolio analysis generated successfully

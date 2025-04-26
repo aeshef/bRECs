@@ -1,0 +1,125 @@
+2025-04-26 17:46:37 - PortfolioBuilder - INFO - Запуск проверки с HonestBacktester
+2025-04-26 17:47:05 - PortfolioBuilder - ERROR - Ошибка при построении портфеля: Wedge sizes 'x' must be non negative values
+2025-04-26 17:47:05 - PortfolioBuilder - ERROR - Traceback (most recent call last):
+  File "/var/folders/nw/llc46wfj5c9949v347qls2040000gn/T/ipykernel_73966/4166993540.py", line 67, in build_production_portfolio
+    honest_results = backtester.run()
+  File "/Users/aeshef/Documents/GitHub/kursach/pys/improved_pipeline/honest_backtest.py", line 202, in run
+    test_results = backtester_obj.run_pipeline(
+        output_dir=os.path.join(self.output_dir, 'test_backtest'),
+        risk_free_rate=self.risk_free_rate
+    )
+  File "/Users/aeshef/Documents/GitHub/kursach/pys/porfolio_optimization/backtester.py", line 774, in run_pipeline
+    # Добавляем значения в ячейки
+  File "/Users/aeshef/Documents/GitHub/kursach/pys/porfolio_optimization/backtester.py", line 644, in visualize_results
+        other_weights[ticker] = weight
+    # Явно помеченные SHORT/LONG в названии тикера
+    elif '_SHORT' in ticker:
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/_api/deprecation.py", line 453, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/pyplot.py", line 3795, in pie
+    return gca().pie(
+           ~~~~~~~~~^
+        x,
+        ^^
+    ...<17 lines>...
+        **({"data": data} if data is not None else {}),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/_api/deprecation.py", line 453, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/__init__.py", line 1521, in inner
+    return func(
+        ax,
+        *map(cbook.sanitize_sequence, args),
+        **{k: cbook.sanitize_sequence(v) for k, v in kwargs.items()})
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/axes/_axes.py", line 3360, in pie
+    raise ValueError("Wedge sizes 'x' must be non negative values")
+ValueError: Wedge sizes 'x' must be non negative values
+
+2025-04-26 17:56:33 - PortfolioBuilder - INFO - Запуск проверки с HonestBacktester
+2025-04-26 17:57:01 - PortfolioBuilder - ERROR - Ошибка при построении портфеля: Wedge sizes 'x' must be non negative values
+2025-04-26 17:57:01 - PortfolioBuilder - ERROR - Traceback (most recent call last):
+  File "/var/folders/nw/llc46wfj5c9949v347qls2040000gn/T/ipykernel_73966/4166993540.py", line 67, in build_production_portfolio
+    honest_results = backtester.run()
+  File "/Users/aeshef/Documents/GitHub/kursach/pys/improved_pipeline/honest_backtest.py", line 202, in run
+    test_results = backtester_obj.run_pipeline(
+        output_dir=os.path.join(self.output_dir, 'test_backtest'),
+        risk_free_rate=self.risk_free_rate
+    )
+  File "/Users/aeshef/Documents/GitHub/kursach/pys/porfolio_optimization/backtester.py", line 774, in run_pipeline
+    fontsize=12, color='red')
+  File "/Users/aeshef/Documents/GitHub/kursach/pys/porfolio_optimization/backtester.py", line 644, in visualize_results
+    short_weights = {}
+    other_weights = {}
+    
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/_api/deprecation.py", line 453, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/pyplot.py", line 3795, in pie
+    return gca().pie(
+           ~~~~~~~~~^
+        x,
+        ^^
+    ...<17 lines>...
+        **({"data": data} if data is not None else {}),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/_api/deprecation.py", line 453, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/__init__.py", line 1521, in inner
+    return func(
+        ax,
+        *map(cbook.sanitize_sequence, args),
+        **{k: cbook.sanitize_sequence(v) for k, v in kwargs.items()})
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/axes/_axes.py", line 3360, in pie
+    raise ValueError("Wedge sizes 'x' must be non negative values")
+ValueError: Wedge sizes 'x' must be non negative values
+
+2025-04-26 17:57:38 - PortfolioBuilder - INFO - Запуск проверки с HonestBacktester
+2025-04-26 17:58:06 - PortfolioBuilder - INFO - Результаты честного бэктеста:
+2025-04-26 17:58:06 - PortfolioBuilder - INFO - Доходность в тесте: -3.96%
+2025-04-26 17:58:06 - PortfolioBuilder - INFO - Шарп в тесте: -1.93
+2025-04-26 17:58:06 - PortfolioBuilder - WARNING - Низкий коэффициент Шарпа в тестовом периоде! Стратегия может быть неэффективна.
+2025-04-26 17:58:06 - PortfolioBuilder - INFO - Построение финального портфеля на всех данных
+2025-04-26 17:58:20 - PortfolioBuilder - ERROR - Ошибка при построении портфеля: 'NoneType' object is not subscriptable
+2025-04-26 17:58:20 - PortfolioBuilder - ERROR - Traceback (most recent call last):
+  File "/var/folders/nw/llc46wfj5c9949v347qls2040000gn/T/ipykernel_87157/4166993540.py", line 156, in build_production_portfolio
+    portfolio_weights=final_portfolio['weights']
+                      ~~~~~~~~~~~~~~~^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+2025-04-26 18:14:39 - PortfolioBuilder - INFO - Запуск проверки с HonestBacktester
+2025-04-26 18:14:53 - PortfolioBuilder - INFO - Построение финального портфеля на всех данных с поддержкой коротких позиций
+2025-04-26 18:15:07 - PortfolioBuilder - INFO - Используется оптимизатор с поддержкой коротких позиций
+2025-04-26 18:15:07 - PortfolioBuilder - ERROR - Ошибка при построении портфеля: PortfolioOptimizer.__init__() got an unexpected keyword argument 'include_short_selling'
+2025-04-26 18:15:07 - PortfolioBuilder - ERROR - Traceback (most recent call last):
+  File "/var/folders/nw/llc46wfj5c9949v347qls2040000gn/T/ipykernel_87157/2088887603.py", line 131, in build_production_portfolio
+    portfolio_opt = PortfolioOptimizer(
+        input_file=signals_file,
+    ...<2 lines>...
+        **portfolio_params
+    )
+TypeError: PortfolioOptimizer.__init__() got an unexpected keyword argument 'include_short_selling'
+
+2025-04-26 18:15:24 - PortfolioBuilder - INFO - Запуск проверки с HonestBacktester
+2025-04-26 18:15:38 - PortfolioBuilder - INFO - Построение финального портфеля на всех данных с поддержкой коротких позиций
+2025-04-26 18:15:52 - PortfolioBuilder - INFO - Используется оптимизатор с поддержкой коротких позиций
+2025-04-26 18:15:52 - PortfolioBuilder - ERROR - Ошибка при построении портфеля: PortfolioOptimizer.__init__() got an unexpected keyword argument 'include_short_selling'
+2025-04-26 18:15:52 - PortfolioBuilder - ERROR - Traceback (most recent call last):
+  File "/var/folders/nw/llc46wfj5c9949v347qls2040000gn/T/ipykernel_87157/2088887603.py", line 131, in build_production_portfolio
+    portfolio_opt = PortfolioOptimizer(
+        input_file=signals_file,
+    ...<2 lines>...
+        **portfolio_params
+    )
+TypeError: PortfolioOptimizer.__init__() got an unexpected keyword argument 'include_short_selling'
+
+2025-04-26 18:16:34 - PortfolioBuilder - INFO - Запуск проверки с HonestBacktester
+2025-04-26 18:17:02 - PortfolioBuilder - INFO - Результаты честного бэктеста:
+2025-04-26 18:17:02 - PortfolioBuilder - INFO - Доходность в тесте: -3.96%
+2025-04-26 18:17:02 - PortfolioBuilder - INFO - Шарп в тесте: -1.93
+2025-04-26 18:17:02 - PortfolioBuilder - WARNING - Низкий коэффициент Шарпа в тестовом периоде! Стратегия может быть неэффективна.
+2025-04-26 18:17:02 - PortfolioBuilder - INFO - Построение финального портфеля на всех данных с поддержкой коротких позиций
+2025-04-26 18:17:16 - PortfolioBuilder - INFO - Используется оптимизатор с поддержкой коротких позиций
+2025-04-26 18:17:19 - PortfolioBuilder - INFO - Итоговый отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/final_portfolio/production_summary.md

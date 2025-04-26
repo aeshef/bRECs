@@ -1,0 +1,19 @@
+{
+  "yield_range": [
+    0,
+    100
+  ],
+  "price_range": [
+    0,
+    100
+  ],
+  "duration_range": [
+    0,
+    7200
+  ],
+  "period_start": "2024-01-01",
+  "period_end": "2025-04-25",
+  "total_dates": 479,
+  "total_bonds": 23537,
+  "include_non_trading_days": true
+}

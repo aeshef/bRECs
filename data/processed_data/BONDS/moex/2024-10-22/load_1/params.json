@@ -1,0 +1,25 @@
+{
+  "yield_range": [
+    0,
+    100
+  ],
+  "price_range": [
+    0,
+    100
+  ],
+  "duration_range": [
+    0,
+    7200
+  ],
+  "volume_threshold": 2000,
+  "bond_volume_threshold": 60000,
+  "is_qualified_investors": null,
+  "coupon_type": null,
+  "emitent": null,
+  "issue_year_range": null,
+  "known_coupon_payments": true,
+  "date": "2024-10-22",
+  "total_bonds": 189,
+  "filtered_bonds": 47,
+  "load_number": 1
+}

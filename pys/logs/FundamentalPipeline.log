@@ -90,3 +90,507 @@
 2025-04-25 11:45:42 - FundamentalPipeline - INFO -       * Чистый долг, млрд руб (found in 13 tickers)
 2025-04-25 11:45:42 - FundamentalPipeline - INFO - Process completed. Created all.csv and common.csv files for each year and ticker.
 2025-04-25 11:45:42 - FundamentalPipeline - INFO - Used 'NO_DATA' token for missing indicators.
+2025-04-26 12:25:36 - FundamentalPipeline - INFO - Processing tickers: ['SBER', 'GAZP', 'LKOH', 'GMKN', 'ROSN', 'TATN', 'MTSS', 'ALRS', 'SNGS', 'NVTK', 'MVID', 'PHOR', 'SIBN', 'AFKS', 'MAGN', 'RUAL']
+2025-04-26 12:25:36 - FundamentalPipeline - INFO - Fetching data for SBER
+2025-04-26 12:25:37 - FundamentalPipeline - WARNING - No tables found for SBER
+2025-04-26 12:25:37 - FundamentalPipeline - INFO - Fetching data for GAZP
+2025-04-26 12:25:37 - FundamentalPipeline - WARNING - No tables found for GAZP
+2025-04-26 12:25:37 - FundamentalPipeline - INFO - Fetching data for LKOH
+2025-04-26 12:25:37 - FundamentalPipeline - WARNING - No tables found for LKOH
+2025-04-26 12:25:37 - FundamentalPipeline - INFO - Fetching data for GMKN
+2025-04-26 12:25:38 - FundamentalPipeline - WARNING - No tables found for GMKN
+2025-04-26 12:25:38 - FundamentalPipeline - INFO - Fetching data for ROSN
+2025-04-26 12:25:38 - FundamentalPipeline - WARNING - No tables found for ROSN
+2025-04-26 12:25:38 - FundamentalPipeline - INFO - Fetching data for TATN
+2025-04-26 12:25:39 - FundamentalPipeline - WARNING - No tables found for TATN
+2025-04-26 12:25:39 - FundamentalPipeline - INFO - Fetching data for MTSS
+2025-04-26 12:25:39 - FundamentalPipeline - WARNING - No tables found for MTSS
+2025-04-26 12:25:39 - FundamentalPipeline - INFO - Fetching data for ALRS
+2025-04-26 12:25:39 - FundamentalPipeline - WARNING - No tables found for ALRS
+2025-04-26 12:25:39 - FundamentalPipeline - INFO - Fetching data for SNGS
+2025-04-26 12:25:40 - FundamentalPipeline - WARNING - No tables found for SNGS
+2025-04-26 12:25:40 - FundamentalPipeline - INFO - Fetching data for NVTK
+2025-04-26 12:25:40 - FundamentalPipeline - WARNING - No tables found for NVTK
+2025-04-26 12:25:40 - FundamentalPipeline - INFO - Fetching data for MVID
+2025-04-26 12:25:40 - FundamentalPipeline - WARNING - No tables found for MVID
+2025-04-26 12:25:40 - FundamentalPipeline - INFO - Fetching data for PHOR
+2025-04-26 12:25:41 - FundamentalPipeline - WARNING - No tables found for PHOR
+2025-04-26 12:25:41 - FundamentalPipeline - INFO - Fetching data for SIBN
+2025-04-26 12:25:41 - FundamentalPipeline - WARNING - No tables found for SIBN
+2025-04-26 12:25:41 - FundamentalPipeline - INFO - Fetching data for AFKS
+2025-04-26 12:25:41 - FundamentalPipeline - WARNING - No tables found for AFKS
+2025-04-26 12:25:41 - FundamentalPipeline - INFO - Fetching data for MAGN
+2025-04-26 12:25:42 - FundamentalPipeline - WARNING - No tables found for MAGN
+2025-04-26 12:25:42 - FundamentalPipeline - INFO - Fetching data for RUAL
+2025-04-26 12:25:42 - FundamentalPipeline - WARNING - No tables found for RUAL
+2025-04-26 12:25:42 - FundamentalPipeline - INFO - Results by year:
+2025-04-26 12:25:42 - FundamentalPipeline - INFO - Process completed. Created all.csv and common.csv files for each year and ticker.
+2025-04-26 12:25:42 - FundamentalPipeline - INFO - Used 'NO_DATA' token for missing indicators.
+2025-04-26 12:31:29 - FundamentalPipeline - INFO - Processing tickers: ['SBER', 'GAZP', 'LKOH', 'GMKN', 'ROSN', 'TATN', 'MTSS', 'ALRS', 'SNGS', 'NVTK', 'MVID', 'PHOR', 'SIBN', 'AFKS', 'MAGN', 'RUAL']
+2025-04-26 12:31:29 - FundamentalPipeline - INFO - Fetching data for SBER
+2025-04-26 12:31:30 - FundamentalPipeline - WARNING - No tables found for SBER
+2025-04-26 12:31:30 - FundamentalPipeline - INFO - Fetching data for GAZP
+2025-04-26 12:31:30 - FundamentalPipeline - WARNING - No tables found for GAZP
+2025-04-26 12:31:30 - FundamentalPipeline - INFO - Fetching data for LKOH
+2025-04-26 12:31:31 - FundamentalPipeline - WARNING - No tables found for LKOH
+2025-04-26 12:31:31 - FundamentalPipeline - INFO - Fetching data for GMKN
+2025-04-26 12:31:31 - FundamentalPipeline - WARNING - No tables found for GMKN
+2025-04-26 12:31:31 - FundamentalPipeline - INFO - Fetching data for ROSN
+2025-04-26 12:31:31 - FundamentalPipeline - WARNING - No tables found for ROSN
+2025-04-26 12:31:31 - FundamentalPipeline - INFO - Fetching data for TATN
+2025-04-26 12:31:31 - FundamentalPipeline - WARNING - No tables found for TATN
+2025-04-26 12:31:31 - FundamentalPipeline - INFO - Fetching data for MTSS
+2025-04-26 12:31:37 - FundamentalPipeline - INFO - Processing tickers: ['SBER', 'GAZP', 'LKOH', 'GMKN', 'ROSN', 'TATN', 'MTSS', 'ALRS', 'SNGS', 'NVTK', 'MVID', 'PHOR', 'SIBN', 'AFKS', 'MAGN', 'RUAL']
+2025-04-26 12:31:37 - FundamentalPipeline - INFO - Fetching data for SBER
+2025-04-26 12:31:37 - FundamentalPipeline - WARNING - No tables found for SBER
+2025-04-26 12:31:37 - FundamentalPipeline - INFO - Fetching data for GAZP
+2025-04-26 12:31:38 - FundamentalPipeline - WARNING - No tables found for GAZP
+2025-04-26 12:31:38 - FundamentalPipeline - INFO - Fetching data for LKOH
+2025-04-26 12:31:38 - FundamentalPipeline - WARNING - No tables found for LKOH
+2025-04-26 12:31:38 - FundamentalPipeline - INFO - Fetching data for GMKN
+2025-04-26 12:31:38 - FundamentalPipeline - WARNING - No tables found for GMKN
+2025-04-26 12:31:38 - FundamentalPipeline - INFO - Fetching data for ROSN
+2025-04-26 12:31:38 - FundamentalPipeline - WARNING - No tables found for ROSN
+2025-04-26 12:31:38 - FundamentalPipeline - INFO - Fetching data for TATN
+2025-04-26 12:31:38 - FundamentalPipeline - WARNING - No tables found for TATN
+2025-04-26 12:31:38 - FundamentalPipeline - INFO - Fetching data for MTSS
+2025-04-26 12:31:39 - FundamentalPipeline - WARNING - No tables found for MTSS
+2025-04-26 12:31:39 - FundamentalPipeline - INFO - Fetching data for ALRS
+2025-04-26 12:31:39 - FundamentalPipeline - WARNING - No tables found for ALRS
+2025-04-26 12:31:39 - FundamentalPipeline - INFO - Fetching data for SNGS
+2025-04-26 12:31:39 - FundamentalPipeline - WARNING - No tables found for SNGS
+2025-04-26 12:31:39 - FundamentalPipeline - INFO - Fetching data for NVTK
+2025-04-26 12:31:40 - FundamentalPipeline - WARNING - No tables found for NVTK
+2025-04-26 12:31:40 - FundamentalPipeline - INFO - Fetching data for MVID
+2025-04-26 12:31:40 - FundamentalPipeline - WARNING - No tables found for MVID
+2025-04-26 12:31:40 - FundamentalPipeline - INFO - Fetching data for PHOR
+2025-04-26 12:31:40 - FundamentalPipeline - WARNING - No tables found for PHOR
+2025-04-26 12:31:40 - FundamentalPipeline - INFO - Fetching data for SIBN
+2025-04-26 12:31:40 - FundamentalPipeline - WARNING - No tables found for SIBN
+2025-04-26 12:31:40 - FundamentalPipeline - INFO - Fetching data for AFKS
+2025-04-26 12:31:41 - FundamentalPipeline - WARNING - No tables found for AFKS
+2025-04-26 12:31:41 - FundamentalPipeline - INFO - Fetching data for MAGN
+2025-04-26 12:33:05 - FundamentalPipeline - INFO - Processing tickers: ['SBER', 'GAZP', 'LKOH', 'GMKN', 'ROSN', 'TATN', 'MTSS', 'ALRS', 'SNGS', 'NVTK', 'MVID', 'PHOR', 'SIBN', 'AFKS', 'MAGN', 'RUAL']
+2025-04-26 12:33:05 - FundamentalPipeline - INFO - Fetching data for SBER
+2025-04-26 12:33:05 - FundamentalPipeline - WARNING - No tables found for SBER
+2025-04-26 12:33:05 - FundamentalPipeline - INFO - Fetching data for GAZP
+2025-04-26 12:33:05 - FundamentalPipeline - WARNING - No tables found for GAZP
+2025-04-26 12:33:05 - FundamentalPipeline - INFO - Fetching data for LKOH
+2025-04-26 12:33:05 - FundamentalPipeline - WARNING - No tables found for LKOH
+2025-04-26 12:33:05 - FundamentalPipeline - INFO - Fetching data for GMKN
+2025-04-26 12:33:06 - FundamentalPipeline - WARNING - No tables found for GMKN
+2025-04-26 12:33:06 - FundamentalPipeline - INFO - Fetching data for ROSN
+2025-04-26 12:33:06 - FundamentalPipeline - WARNING - No tables found for ROSN
+2025-04-26 12:33:06 - FundamentalPipeline - INFO - Fetching data for TATN
+2025-04-26 12:33:06 - FundamentalPipeline - WARNING - No tables found for TATN
+2025-04-26 12:33:06 - FundamentalPipeline - INFO - Fetching data for MTSS
+2025-04-26 12:33:06 - FundamentalPipeline - WARNING - No tables found for MTSS
+2025-04-26 12:33:06 - FundamentalPipeline - INFO - Fetching data for ALRS
+2025-04-26 12:33:06 - FundamentalPipeline - WARNING - No tables found for ALRS
+2025-04-26 12:33:06 - FundamentalPipeline - INFO - Fetching data for SNGS
+2025-04-26 12:33:06 - FundamentalPipeline - WARNING - No tables found for SNGS
+2025-04-26 12:33:06 - FundamentalPipeline - INFO - Fetching data for NVTK
+2025-04-26 12:33:07 - FundamentalPipeline - WARNING - No tables found for NVTK
+2025-04-26 12:33:07 - FundamentalPipeline - INFO - Fetching data for MVID
+2025-04-26 12:33:07 - FundamentalPipeline - WARNING - No tables found for MVID
+2025-04-26 12:33:07 - FundamentalPipeline - INFO - Fetching data for PHOR
+2025-04-26 12:33:07 - FundamentalPipeline - WARNING - No tables found for PHOR
+2025-04-26 12:33:07 - FundamentalPipeline - INFO - Fetching data for SIBN
+2025-04-26 12:33:07 - FundamentalPipeline - WARNING - No tables found for SIBN
+2025-04-26 12:33:07 - FundamentalPipeline - INFO - Fetching data for AFKS
+2025-04-26 12:33:07 - FundamentalPipeline - WARNING - No tables found for AFKS
+2025-04-26 12:33:07 - FundamentalPipeline - INFO - Fetching data for MAGN
+2025-04-26 12:33:08 - FundamentalPipeline - WARNING - No tables found for MAGN
+2025-04-26 12:33:08 - FundamentalPipeline - INFO - Fetching data for RUAL
+2025-04-26 12:33:08 - FundamentalPipeline - WARNING - No tables found for RUAL
+2025-04-26 12:33:08 - FundamentalPipeline - INFO - Results by year:
+2025-04-26 12:33:08 - FundamentalPipeline - INFO - Process completed. Created all.csv and common.csv files for each year and ticker.
+2025-04-26 12:33:08 - FundamentalPipeline - INFO - Used 'NO_DATA' token for missing indicators.
+2025-04-26 12:34:05 - FundamentalPipeline - INFO - Processing tickers: ['SBER', 'GAZP', 'LKOH', 'GMKN', 'ROSN', 'TATN', 'MTSS', 'ALRS', 'SNGS', 'NVTK', 'MVID', 'PHOR', 'SIBN', 'AFKS', 'MAGN', 'RUAL']
+2025-04-26 12:34:05 - FundamentalPipeline - INFO - Fetching data for SBER
+2025-04-26 12:34:05 - FundamentalPipeline - WARNING - No tables found for SBER
+2025-04-26 12:34:05 - FundamentalPipeline - INFO - Fetching data for GAZP
+2025-04-26 12:34:05 - FundamentalPipeline - WARNING - No tables found for GAZP
+2025-04-26 12:34:05 - FundamentalPipeline - INFO - Fetching data for LKOH
+2025-04-26 12:34:05 - FundamentalPipeline - WARNING - No tables found for LKOH
+2025-04-26 12:34:05 - FundamentalPipeline - INFO - Fetching data for GMKN
+2025-04-26 12:34:06 - FundamentalPipeline - WARNING - No tables found for GMKN
+2025-04-26 12:34:06 - FundamentalPipeline - INFO - Fetching data for ROSN
+2025-04-26 12:34:07 - FundamentalPipeline - WARNING - No tables found for ROSN
+2025-04-26 12:34:07 - FundamentalPipeline - INFO - Fetching data for TATN
+2025-04-26 12:34:07 - FundamentalPipeline - WARNING - No tables found for TATN
+2025-04-26 12:34:07 - FundamentalPipeline - INFO - Fetching data for MTSS
+2025-04-26 12:34:07 - FundamentalPipeline - WARNING - No tables found for MTSS
+2025-04-26 12:34:07 - FundamentalPipeline - INFO - Fetching data for ALRS
+2025-04-26 12:34:07 - FundamentalPipeline - WARNING - No tables found for ALRS
+2025-04-26 12:34:07 - FundamentalPipeline - INFO - Fetching data for SNGS
+2025-04-26 12:34:08 - FundamentalPipeline - WARNING - No tables found for SNGS
+2025-04-26 12:34:08 - FundamentalPipeline - INFO - Fetching data for NVTK
+2025-04-26 12:34:08 - FundamentalPipeline - WARNING - No tables found for NVTK
+2025-04-26 12:34:08 - FundamentalPipeline - INFO - Fetching data for MVID
+2025-04-26 12:34:08 - FundamentalPipeline - WARNING - No tables found for MVID
+2025-04-26 12:34:08 - FundamentalPipeline - INFO - Fetching data for PHOR
+2025-04-26 12:34:08 - FundamentalPipeline - WARNING - No tables found for PHOR
+2025-04-26 12:34:08 - FundamentalPipeline - INFO - Fetching data for SIBN
+2025-04-26 12:34:23 - FundamentalPipeline - INFO - Processing tickers: ['SBER', 'GAZP', 'LKOH', 'GMKN', 'ROSN', 'TATN', 'MTSS', 'ALRS', 'SNGS', 'NVTK', 'MVID', 'PHOR', 'SIBN', 'AFKS', 'MAGN', 'RUAL']
+2025-04-26 12:34:23 - FundamentalPipeline - INFO - Fetching data for SBER
+2025-04-26 12:34:23 - FundamentalPipeline - WARNING - No tables found for SBER
+2025-04-26 12:34:23 - FundamentalPipeline - INFO - Fetching data for GAZP
+2025-04-26 12:34:24 - FundamentalPipeline - WARNING - No tables found for GAZP
+2025-04-26 12:34:24 - FundamentalPipeline - INFO - Fetching data for LKOH
+2025-04-26 12:34:24 - FundamentalPipeline - WARNING - No tables found for LKOH
+2025-04-26 12:34:24 - FundamentalPipeline - INFO - Fetching data for GMKN
+2025-04-26 12:34:24 - FundamentalPipeline - WARNING - No tables found for GMKN
+2025-04-26 12:34:24 - FundamentalPipeline - INFO - Fetching data for ROSN
+2025-04-26 12:34:24 - FundamentalPipeline - WARNING - No tables found for ROSN
+2025-04-26 12:34:24 - FundamentalPipeline - INFO - Fetching data for TATN
+2025-04-26 12:34:24 - FundamentalPipeline - WARNING - No tables found for TATN
+2025-04-26 12:34:24 - FundamentalPipeline - INFO - Fetching data for MTSS
+2025-04-26 12:34:24 - FundamentalPipeline - WARNING - No tables found for MTSS
+2025-04-26 12:34:24 - FundamentalPipeline - INFO - Fetching data for ALRS
+2025-04-26 12:34:24 - FundamentalPipeline - WARNING - No tables found for ALRS
+2025-04-26 12:34:24 - FundamentalPipeline - INFO - Fetching data for SNGS
+2025-04-26 12:34:25 - FundamentalPipeline - WARNING - No tables found for SNGS
+2025-04-26 12:34:25 - FundamentalPipeline - INFO - Fetching data for NVTK
+2025-04-26 12:34:25 - FundamentalPipeline - WARNING - No tables found for NVTK
+2025-04-26 12:34:25 - FundamentalPipeline - INFO - Fetching data for MVID
+2025-04-26 12:34:25 - FundamentalPipeline - WARNING - No tables found for MVID
+2025-04-26 12:34:25 - FundamentalPipeline - INFO - Fetching data for PHOR
+2025-04-26 12:34:25 - FundamentalPipeline - WARNING - No tables found for PHOR
+2025-04-26 12:34:25 - FundamentalPipeline - INFO - Fetching data for SIBN
+2025-04-26 12:34:25 - FundamentalPipeline - WARNING - No tables found for SIBN
+2025-04-26 12:34:25 - FundamentalPipeline - INFO - Fetching data for AFKS
+2025-04-26 12:34:25 - FundamentalPipeline - WARNING - No tables found for AFKS
+2025-04-26 12:34:25 - FundamentalPipeline - INFO - Fetching data for MAGN
+2025-04-26 12:34:26 - FundamentalPipeline - WARNING - No tables found for MAGN
+2025-04-26 12:34:26 - FundamentalPipeline - INFO - Fetching data for RUAL
+2025-04-26 12:34:26 - FundamentalPipeline - WARNING - No tables found for RUAL
+2025-04-26 12:34:26 - FundamentalPipeline - INFO - Results by year:
+2025-04-26 12:34:26 - FundamentalPipeline - INFO - Process completed. Created all.csv and common.csv files for each year and ticker.
+2025-04-26 12:34:26 - FundamentalPipeline - INFO - Used 'NO_DATA' token for missing indicators.
+2025-04-26 12:36:00 - FundamentalPipeline - INFO - Processing tickers: ['SBER', 'GAZP', 'LKOH', 'GMKN', 'ROSN', 'TATN', 'MTSS', 'ALRS', 'SNGS', 'NVTK', 'MVID', 'PHOR', 'SIBN', 'AFKS', 'MAGN', 'RUAL']
+2025-04-26 12:36:00 - FundamentalPipeline - INFO - Fetching data for SBER
+2025-04-26 12:36:00 - FundamentalPipeline - WARNING - No tables found for SBER
+2025-04-26 12:36:00 - FundamentalPipeline - INFO - Fetching data for GAZP
+2025-04-26 12:36:00 - FundamentalPipeline - WARNING - No tables found for GAZP
+2025-04-26 12:36:00 - FundamentalPipeline - INFO - Fetching data for LKOH
+2025-04-26 12:36:00 - FundamentalPipeline - WARNING - No tables found for LKOH
+2025-04-26 12:36:00 - FundamentalPipeline - INFO - Fetching data for GMKN
+2025-04-26 12:36:00 - FundamentalPipeline - WARNING - No tables found for GMKN
+2025-04-26 12:36:00 - FundamentalPipeline - INFO - Fetching data for ROSN
+2025-04-26 12:36:01 - FundamentalPipeline - WARNING - No tables found for ROSN
+2025-04-26 12:36:01 - FundamentalPipeline - INFO - Fetching data for TATN
+2025-04-26 12:36:01 - FundamentalPipeline - WARNING - No tables found for TATN
+2025-04-26 12:36:01 - FundamentalPipeline - INFO - Fetching data for MTSS
+2025-04-26 12:36:01 - FundamentalPipeline - WARNING - No tables found for MTSS
+2025-04-26 12:36:01 - FundamentalPipeline - INFO - Fetching data for ALRS
+2025-04-26 12:36:01 - FundamentalPipeline - WARNING - No tables found for ALRS
+2025-04-26 12:36:01 - FundamentalPipeline - INFO - Fetching data for SNGS
+2025-04-26 12:36:01 - FundamentalPipeline - WARNING - No tables found for SNGS
+2025-04-26 12:36:01 - FundamentalPipeline - INFO - Fetching data for NVTK
+2025-04-26 12:36:01 - FundamentalPipeline - WARNING - No tables found for NVTK
+2025-04-26 12:36:01 - FundamentalPipeline - INFO - Fetching data for MVID
+2025-04-26 12:36:02 - FundamentalPipeline - WARNING - No tables found for MVID
+2025-04-26 12:36:02 - FundamentalPipeline - INFO - Fetching data for PHOR
+2025-04-26 12:36:02 - FundamentalPipeline - WARNING - No tables found for PHOR
+2025-04-26 12:36:02 - FundamentalPipeline - INFO - Fetching data for SIBN
+2025-04-26 12:36:02 - FundamentalPipeline - WARNING - No tables found for SIBN
+2025-04-26 12:36:02 - FundamentalPipeline - INFO - Fetching data for AFKS
+2025-04-26 12:36:02 - FundamentalPipeline - WARNING - No tables found for AFKS
+2025-04-26 12:36:02 - FundamentalPipeline - INFO - Fetching data for MAGN
+2025-04-26 12:36:02 - FundamentalPipeline - WARNING - No tables found for MAGN
+2025-04-26 12:36:02 - FundamentalPipeline - INFO - Fetching data for RUAL
+2025-04-26 12:36:03 - FundamentalPipeline - WARNING - No tables found for RUAL
+2025-04-26 12:36:03 - FundamentalPipeline - INFO - Results by year:
+2025-04-26 12:36:03 - FundamentalPipeline - INFO - Process completed. Created all.csv and common.csv files for each year and ticker.
+2025-04-26 12:36:03 - FundamentalPipeline - INFO - Used 'NO_DATA' token for missing indicators.
+2025-04-26 12:37:54 - FundamentalPipeline - INFO - Processing tickers: ['SBER', 'GAZP', 'LKOH', 'GMKN', 'ROSN', 'TATN', 'MTSS', 'ALRS', 'SNGS', 'NVTK', 'MVID', 'PHOR', 'SIBN', 'AFKS', 'MAGN', 'RUAL']
+2025-04-26 12:37:54 - FundamentalPipeline - INFO - Fetching data for SBER
+2025-04-26 12:37:55 - FundamentalPipeline - INFO - Successfully processed SBER
+2025-04-26 12:37:55 - FundamentalPipeline - INFO - Fetching data for GAZP
+2025-04-26 12:37:55 - FundamentalPipeline - INFO - Successfully processed GAZP
+2025-04-26 12:37:55 - FundamentalPipeline - INFO - Fetching data for LKOH
+2025-04-26 12:37:55 - FundamentalPipeline - INFO - Successfully processed LKOH
+2025-04-26 12:37:55 - FundamentalPipeline - INFO - Fetching data for GMKN
+2025-04-26 12:37:56 - FundamentalPipeline - INFO - Successfully processed GMKN
+2025-04-26 12:37:56 - FundamentalPipeline - INFO - Fetching data for ROSN
+2025-04-26 12:37:56 - FundamentalPipeline - INFO - Successfully processed ROSN
+2025-04-26 12:37:56 - FundamentalPipeline - INFO - Fetching data for TATN
+2025-04-26 12:37:56 - FundamentalPipeline - INFO - Successfully processed TATN
+2025-04-26 12:37:56 - FundamentalPipeline - INFO - Fetching data for MTSS
+2025-04-26 12:37:56 - FundamentalPipeline - INFO - Successfully processed MTSS
+2025-04-26 12:37:56 - FundamentalPipeline - INFO - Fetching data for ALRS
+2025-04-26 12:37:57 - FundamentalPipeline - INFO - Successfully processed ALRS
+2025-04-26 12:37:57 - FundamentalPipeline - INFO - Fetching data for SNGS
+2025-04-26 12:37:57 - FundamentalPipeline - INFO - Successfully processed SNGS
+2025-04-26 12:37:57 - FundamentalPipeline - INFO - Fetching data for NVTK
+2025-04-26 12:37:57 - FundamentalPipeline - INFO - Successfully processed NVTK
+2025-04-26 12:37:57 - FundamentalPipeline - INFO - Fetching data for MVID
+2025-04-26 12:37:57 - FundamentalPipeline - INFO - Successfully processed MVID
+2025-04-26 12:37:57 - FundamentalPipeline - INFO - Fetching data for PHOR
+2025-04-26 12:37:58 - FundamentalPipeline - INFO - Successfully processed PHOR
+2025-04-26 12:37:58 - FundamentalPipeline - INFO - Fetching data for SIBN
+2025-04-26 12:37:58 - FundamentalPipeline - INFO - Successfully processed SIBN
+2025-04-26 12:37:58 - FundamentalPipeline - INFO - Fetching data for AFKS
+2025-04-26 12:37:58 - FundamentalPipeline - INFO - Successfully processed AFKS
+2025-04-26 12:37:58 - FundamentalPipeline - INFO - Fetching data for MAGN
+2025-04-26 12:37:59 - FundamentalPipeline - INFO - Successfully processed MAGN
+2025-04-26 12:37:59 - FundamentalPipeline - INFO - Fetching data for RUAL
+2025-04-26 12:37:59 - FundamentalPipeline - INFO - Successfully processed RUAL
+2025-04-26 12:37:59 - FundamentalPipeline - INFO - Results by year:
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -   Year 2023:
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -     - Data available for 16 out of 16 tickers
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -     - 13 common indicators (for most tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * EPS, руб (found in 16 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * EV, млрд руб (found in 16 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * P/E (found in 16 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * ROA, % (found in 16 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * ROE, % (found in 16 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Див доход, ао, % (found in 16 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Дивиденды/прибыль, % (found in 16 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Капитализация, млрд руб (found in 16 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Опер. расходы, млрд руб (found in 16 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Цена акции ао, руб (found in 16 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Число акций ао, млн (found in 16 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Чистая прибыль, млрд руб (found in 16 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Чистый долг, млрд руб (found in 16 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -   Year 2024:
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -     - Data available for 13 out of 16 tickers
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -     - 37 common indicators (for most tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * BV/акцию, руб (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * CAPEX, млрд руб (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * CAPEX/Выручка, % (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * EBITDA, млрд руб (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * EPS, руб (found in 13 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * EV, млрд руб (found in 13 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * EV/EBITDA (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * FCF, млрд руб (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * FCF/акцию, руб (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * P/BV (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * P/E (found in 13 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * P/FCF (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * P/S (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * R&D/CAPEX, % (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * ROA, % (found in 13 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * ROE, % (found in 13 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Активы, млрд руб (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Амортизация, млрд руб (found in 11 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Баланс стоимость, млрд руб (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Выручка, млрд руб (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Див доход, ао, % (found in 13 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Дивиденды/прибыль, % (found in 13 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Долг, млрд руб (found in 11 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Долг/EBITDA (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Доходность FCF, % (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Капитализация, млрд руб (found in 13 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Наличность, млрд руб (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Опер. расходы, млрд руб (found in 13 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Опер.денежный поток, млрд руб (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Операционная прибыль, млрд руб (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Рентаб EBITDA, % (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Цена акции ао, руб (found in 13 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Число акций ао, млн (found in 13 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Чистая прибыль, млрд руб (found in 13 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Чистая рентаб, % (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Чистые активы, млрд руб (found in 12 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO -       * Чистый долг, млрд руб (found in 13 tickers)
+2025-04-26 12:37:59 - FundamentalPipeline - INFO - Process completed. Created all.csv and common.csv files for each year and ticker.
+2025-04-26 12:37:59 - FundamentalPipeline - INFO - Used 'NO_DATA' token for missing indicators.
+2025-04-26 13:43:09 - FundamentalPipeline - INFO - Processing tickers: ['SBER', 'GAZP', 'LKOH', 'GMKN', 'ROSN', 'TATN', 'MTSS', 'ALRS', 'SNGS', 'NVTK', 'MVID', 'PHOR', 'SIBN', 'AFKS', 'MAGN', 'RUAL']
+2025-04-26 13:43:09 - FundamentalPipeline - INFO - Fetching data for SBER
+2025-04-26 13:43:09 - FundamentalPipeline - INFO - Successfully processed SBER
+2025-04-26 13:43:09 - FundamentalPipeline - INFO - Fetching data for GAZP
+2025-04-26 13:43:09 - FundamentalPipeline - INFO - Successfully processed GAZP
+2025-04-26 13:43:09 - FundamentalPipeline - INFO - Fetching data for LKOH
+2025-04-26 13:43:10 - FundamentalPipeline - INFO - Successfully processed LKOH
+2025-04-26 13:43:10 - FundamentalPipeline - INFO - Fetching data for GMKN
+2025-04-26 13:43:10 - FundamentalPipeline - INFO - Successfully processed GMKN
+2025-04-26 13:43:10 - FundamentalPipeline - INFO - Fetching data for ROSN
+2025-04-26 13:43:10 - FundamentalPipeline - INFO - Successfully processed ROSN
+2025-04-26 13:43:10 - FundamentalPipeline - INFO - Fetching data for TATN
+2025-04-26 13:43:11 - FundamentalPipeline - INFO - Successfully processed TATN
+2025-04-26 13:43:11 - FundamentalPipeline - INFO - Fetching data for MTSS
+2025-04-26 13:43:11 - FundamentalPipeline - INFO - Successfully processed MTSS
+2025-04-26 13:43:11 - FundamentalPipeline - INFO - Fetching data for ALRS
+2025-04-26 13:43:11 - FundamentalPipeline - INFO - Successfully processed ALRS
+2025-04-26 13:43:11 - FundamentalPipeline - INFO - Fetching data for SNGS
+2025-04-26 13:43:12 - FundamentalPipeline - INFO - Successfully processed SNGS
+2025-04-26 13:43:12 - FundamentalPipeline - INFO - Fetching data for NVTK
+2025-04-26 13:43:12 - FundamentalPipeline - INFO - Successfully processed NVTK
+2025-04-26 13:43:12 - FundamentalPipeline - INFO - Fetching data for MVID
+2025-04-26 13:43:12 - FundamentalPipeline - INFO - Successfully processed MVID
+2025-04-26 13:43:12 - FundamentalPipeline - INFO - Fetching data for PHOR
+2025-04-26 13:43:12 - FundamentalPipeline - INFO - Successfully processed PHOR
+2025-04-26 13:43:12 - FundamentalPipeline - INFO - Fetching data for SIBN
+2025-04-26 13:43:13 - FundamentalPipeline - INFO - Successfully processed SIBN
+2025-04-26 13:43:13 - FundamentalPipeline - INFO - Fetching data for AFKS
+2025-04-26 13:43:13 - FundamentalPipeline - INFO - Successfully processed AFKS
+2025-04-26 13:43:13 - FundamentalPipeline - INFO - Fetching data for MAGN
+2025-04-26 13:43:13 - FundamentalPipeline - INFO - Successfully processed MAGN
+2025-04-26 13:43:13 - FundamentalPipeline - INFO - Fetching data for RUAL
+2025-04-26 13:43:14 - FundamentalPipeline - INFO - Successfully processed RUAL
+2025-04-26 13:43:14 - FundamentalPipeline - INFO - Results by year:
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -   Year 2023:
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -     - Data available for 16 out of 16 tickers
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -     - 13 common indicators (for most tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * EPS, руб (found in 16 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * EV, млрд руб (found in 16 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * P/E (found in 16 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * ROA, % (found in 16 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * ROE, % (found in 16 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Див доход, ао, % (found in 16 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Дивиденды/прибыль, % (found in 16 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Капитализация, млрд руб (found in 16 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Опер. расходы, млрд руб (found in 16 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Цена акции ао, руб (found in 16 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Число акций ао, млн (found in 16 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Чистая прибыль, млрд руб (found in 16 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Чистый долг, млрд руб (found in 16 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -   Year 2024:
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -     - Data available for 13 out of 16 tickers
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -     - 37 common indicators (for most tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * BV/акцию, руб (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * CAPEX, млрд руб (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * CAPEX/Выручка, % (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * EBITDA, млрд руб (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * EPS, руб (found in 13 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * EV, млрд руб (found in 13 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * EV/EBITDA (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * FCF, млрд руб (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * FCF/акцию, руб (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * P/BV (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * P/E (found in 13 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * P/FCF (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * P/S (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * R&D/CAPEX, % (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * ROA, % (found in 13 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * ROE, % (found in 13 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Активы, млрд руб (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Амортизация, млрд руб (found in 11 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Баланс стоимость, млрд руб (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Выручка, млрд руб (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Див доход, ао, % (found in 13 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Дивиденды/прибыль, % (found in 13 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Долг, млрд руб (found in 11 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Долг/EBITDA (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Доходность FCF, % (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Капитализация, млрд руб (found in 13 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Наличность, млрд руб (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Опер. расходы, млрд руб (found in 13 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Опер.денежный поток, млрд руб (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Операционная прибыль, млрд руб (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Рентаб EBITDA, % (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Цена акции ао, руб (found in 13 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Число акций ао, млн (found in 13 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Чистая прибыль, млрд руб (found in 13 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Чистая рентаб, % (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Чистые активы, млрд руб (found in 12 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO -       * Чистый долг, млрд руб (found in 13 tickers)
+2025-04-26 13:43:14 - FundamentalPipeline - INFO - Process completed. Created all.csv and common.csv files for each year and ticker.
+2025-04-26 13:43:14 - FundamentalPipeline - INFO - Used 'NO_DATA' token for missing indicators.
+2025-04-26 18:52:09 - FundamentalPipeline - INFO - Processing tickers: ['SBER', 'GAZP', 'LKOH', 'GMKN', 'ROSN', 'TATN', 'MTSS', 'ALRS', 'SNGS', 'NVTK', 'MVID', 'PHOR', 'SIBN', 'AFKS', 'MAGN', 'RUAL']
+2025-04-26 18:52:09 - FundamentalPipeline - INFO - Fetching data for SBER
+2025-04-26 18:52:09 - FundamentalPipeline - INFO - Successfully processed SBER
+2025-04-26 18:52:09 - FundamentalPipeline - INFO - Fetching data for GAZP
+2025-04-26 18:52:10 - FundamentalPipeline - INFO - Successfully processed GAZP
+2025-04-26 18:52:10 - FundamentalPipeline - INFO - Fetching data for LKOH
+2025-04-26 18:52:10 - FundamentalPipeline - INFO - Successfully processed LKOH
+2025-04-26 18:52:10 - FundamentalPipeline - INFO - Fetching data for GMKN
+2025-04-26 18:52:10 - FundamentalPipeline - INFO - Successfully processed GMKN
+2025-04-26 18:52:10 - FundamentalPipeline - INFO - Fetching data for ROSN
+2025-04-26 18:52:11 - FundamentalPipeline - INFO - Successfully processed ROSN
+2025-04-26 18:52:11 - FundamentalPipeline - INFO - Fetching data for TATN
+2025-04-26 18:52:11 - FundamentalPipeline - INFO - Successfully processed TATN
+2025-04-26 18:52:11 - FundamentalPipeline - INFO - Fetching data for MTSS
+2025-04-26 18:52:18 - FundamentalPipeline - INFO - Processing tickers: ['SBER', 'GAZP', 'LKOH', 'GMKN', 'ROSN', 'TATN', 'MTSS', 'ALRS', 'SNGS', 'NVTK', 'MVID', 'PHOR', 'SIBN', 'AFKS', 'MAGN', 'RUAL']
+2025-04-26 18:52:18 - FundamentalPipeline - INFO - Fetching data for SBER
+2025-04-26 18:52:18 - FundamentalPipeline - INFO - Successfully processed SBER
+2025-04-26 18:52:18 - FundamentalPipeline - INFO - Fetching data for GAZP
+2025-04-26 18:52:19 - FundamentalPipeline - INFO - Successfully processed GAZP
+2025-04-26 18:52:19 - FundamentalPipeline - INFO - Fetching data for LKOH
+2025-04-26 18:52:19 - FundamentalPipeline - INFO - Successfully processed LKOH
+2025-04-26 18:52:19 - FundamentalPipeline - INFO - Fetching data for GMKN
+2025-04-26 18:52:19 - FundamentalPipeline - INFO - Successfully processed GMKN
+2025-04-26 18:52:19 - FundamentalPipeline - INFO - Fetching data for ROSN
+2025-04-26 18:52:19 - FundamentalPipeline - INFO - Successfully processed ROSN
+2025-04-26 18:52:19 - FundamentalPipeline - INFO - Fetching data for TATN
+2025-04-26 18:52:20 - FundamentalPipeline - INFO - Successfully processed TATN
+2025-04-26 18:52:20 - FundamentalPipeline - INFO - Fetching data for MTSS
+2025-04-26 18:52:20 - FundamentalPipeline - INFO - Successfully processed MTSS
+2025-04-26 18:52:20 - FundamentalPipeline - INFO - Fetching data for ALRS
+2025-04-26 18:52:20 - FundamentalPipeline - INFO - Successfully processed ALRS
+2025-04-26 18:52:20 - FundamentalPipeline - INFO - Fetching data for SNGS
+2025-04-26 18:52:21 - FundamentalPipeline - INFO - Successfully processed SNGS
+2025-04-26 18:52:21 - FundamentalPipeline - INFO - Fetching data for NVTK
+2025-04-26 18:52:21 - FundamentalPipeline - INFO - Successfully processed NVTK
+2025-04-26 18:52:21 - FundamentalPipeline - INFO - Fetching data for MVID
+2025-04-26 18:52:22 - FundamentalPipeline - INFO - Successfully processed MVID
+2025-04-26 18:52:22 - FundamentalPipeline - INFO - Fetching data for PHOR
+2025-04-26 18:52:22 - FundamentalPipeline - INFO - Successfully processed PHOR
+2025-04-26 18:52:22 - FundamentalPipeline - INFO - Fetching data for SIBN
+2025-04-26 18:52:22 - FundamentalPipeline - INFO - Successfully processed SIBN
+2025-04-26 18:52:22 - FundamentalPipeline - INFO - Fetching data for AFKS
+2025-04-26 18:52:23 - FundamentalPipeline - INFO - Successfully processed AFKS
+2025-04-26 18:52:23 - FundamentalPipeline - INFO - Fetching data for MAGN
+2025-04-26 18:52:23 - FundamentalPipeline - INFO - Successfully processed MAGN
+2025-04-26 18:52:23 - FundamentalPipeline - INFO - Fetching data for RUAL
+2025-04-26 18:52:24 - FundamentalPipeline - INFO - Successfully processed RUAL
+2025-04-26 18:52:24 - FundamentalPipeline - INFO - Results by year:
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -   Year 2023:
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -     - Data available for 16 out of 16 tickers
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -     - 13 common indicators (for most tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * EPS, руб (found in 16 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * EV, млрд руб (found in 16 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * P/E (found in 16 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * ROA, % (found in 16 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * ROE, % (found in 16 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Див доход, ао, % (found in 16 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Дивиденды/прибыль, % (found in 16 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Капитализация, млрд руб (found in 16 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Опер. расходы, млрд руб (found in 16 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Цена акции ао, руб (found in 16 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Число акций ао, млн (found in 16 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Чистая прибыль, млрд руб (found in 16 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Чистый долг, млрд руб (found in 16 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -   Year 2024:
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -     - Data available for 13 out of 16 tickers
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -     - 37 common indicators (for most tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * BV/акцию, руб (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * CAPEX, млрд руб (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * CAPEX/Выручка, % (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * EBITDA, млрд руб (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * EPS, руб (found in 13 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * EV, млрд руб (found in 13 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * EV/EBITDA (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * FCF, млрд руб (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * FCF/акцию, руб (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * P/BV (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * P/E (found in 13 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * P/FCF (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * P/S (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * R&D/CAPEX, % (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * ROA, % (found in 13 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * ROE, % (found in 13 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Активы, млрд руб (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Амортизация, млрд руб (found in 11 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Баланс стоимость, млрд руб (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Выручка, млрд руб (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Див доход, ао, % (found in 13 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Дивиденды/прибыль, % (found in 13 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Долг, млрд руб (found in 11 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Долг/EBITDA (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Доходность FCF, % (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Капитализация, млрд руб (found in 13 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Наличность, млрд руб (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Опер. расходы, млрд руб (found in 13 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Опер.денежный поток, млрд руб (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Операционная прибыль, млрд руб (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Рентаб EBITDA, % (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Цена акции ао, руб (found in 13 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Число акций ао, млн (found in 13 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Чистая прибыль, млрд руб (found in 13 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Чистая рентаб, % (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Чистые активы, млрд руб (found in 12 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO -       * Чистый долг, млрд руб (found in 13 tickers)
+2025-04-26 18:52:24 - FundamentalPipeline - INFO - Process completed. Created all.csv and common.csv files for each year and ticker.
+2025-04-26 18:52:24 - FundamentalPipeline - INFO - Used 'NO_DATA' token for missing indicators.

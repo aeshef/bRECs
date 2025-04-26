@@ -72,17 +72,18 @@ class MOEXBondHistoricalParser(BaseLogger):
         return self.get_available_bonds(date=last_trading_day, **filter_params)
     
     def get_available_bonds(self, date=None, 
-                           yield_range=(0, 100),
-                           price_range=(0, 200), 
-                           duration_range=(0, 360),
-                           volume_threshold=2000,
-                           bond_volume_threshold=60000,
-                           is_qualified_investors=None,
-                           coupon_type=None,
-                           emitent=None,
-                           issue_year_range=None,
-                           known_coupon_payments=True,
-                           use_existing_data=True):
+                        yield_range=(0, 100),
+                        price_range=(0, 200), 
+                        duration_range=(0, 360),
+                        volume_threshold=2000,
+                        bond_volume_threshold=60000,
+                        is_qualified_investors=None,
+                        coupon_type=None,
+                        emitent=None,
+                        issue_year_range=None,
+                        known_coupon_payments=True,
+                        use_existing_data=True,
+                        load_all_csv=True):
         """
         Получить доступные облигации на указанную дату с применением фильтров
         
@@ -99,6 +100,7 @@ class MOEXBondHistoricalParser(BaseLogger):
             issue_year_range: диапазон годов выпуска
             known_coupon_payments: требуется ли наличие всех известных купонных выплат
             use_existing_data: использовать существующие CSV-данные если доступны
+            load_all_csv: загружать ли все облигации в all.csv
             
         Returns:
             Список словарей с информацией об облигациях
@@ -126,18 +128,14 @@ class MOEXBondHistoricalParser(BaseLogger):
         
         if all_bonds is None:
             all_bonds = self._get_all_bonds_for_date(date)
-            if all_bonds:
+            if all_bonds and load_all_csv:
                 all_bonds_df = pd.DataFrame(all_bonds)
                 all_bonds_df.to_csv(all_bonds_path, index=False, encoding='utf-8-sig')
                 self.logger.info(f"Сохранены все облигации ({len(all_bonds)}) в {all_bonds_path}")
         
-        filter_folder_name = self._create_filter_folder_name(
-            yield_range, price_range, duration_range, volume_threshold, 
-            bond_volume_threshold, is_qualified_investors, coupon_type, 
-            emitent, issue_year_range, known_coupon_payments
-        )
-        
-        filter_dir = os.path.join(date_dir, filter_folder_name)
+        # Получаем следующий номер загрузки
+        next_load_number = self._get_next_load_number(date_dir)
+        filter_dir = os.path.join(date_dir, f"load_{next_load_number}")
         os.makedirs(filter_dir, exist_ok=True)
         
         filtered_bonds = self._apply_filters(
@@ -174,13 +172,14 @@ class MOEXBondHistoricalParser(BaseLogger):
             "known_coupon_payments": known_coupon_payments,
             "date": date_str,
             "total_bonds": len(all_bonds),
-            "filtered_bonds": len(filtered_bonds)
+            "filtered_bonds": len(filtered_bonds),
+            "load_number": next_load_number
         }
         
         with open(os.path.join(filter_dir, "params.json"), 'w', encoding='utf-8') as f:
             json.dump(filter_params, f, ensure_ascii=False, indent=2)
         
-        self.logger.info(f"Найдено {len(filtered_bonds)} облигаций после фильтрации")
+        self.logger.info(f"Найдено {len(filtered_bonds)} облигаций после фильтрации (загрузка #{next_load_number})")
         
         return filtered_bonds
     
@@ -213,7 +212,7 @@ class MOEXBondHistoricalParser(BaseLogger):
             except Exception as e:
                 self.logger.error(f"Ошибка при копировании данных: {e}")
         
-    def get_bonds_for_period(self, start_date, end_date, include_non_trading_days=True, **filter_params):
+    def get_bonds_for_period(self, start_date, end_date, include_non_trading_days=True, load_all_csv=True, **filter_params):
         """
         Получить облигации за указанный период с применением фильтров
         
@@ -266,7 +265,11 @@ class MOEXBondHistoricalParser(BaseLogger):
             self.logger.info(f"Обработка даты: {date_key} ({'рабочий день' if is_trading_day else 'выходной'})")
             
             if is_trading_day:
-                bonds = self.get_available_bonds(date=current_date, **filter_params)
+                bonds = self.get_available_bonds(
+                    date=current_date,
+                    load_all_csv=load_all_csv,
+                    **filter_params
+                )
                 
                 if bonds:
                     result[date_key] = bonds
@@ -669,9 +672,10 @@ class MOEXBondHistoricalParser(BaseLogger):
         for date_str in trading_dates:
             date_dir = os.path.join(self.BASE_DATA_DIR, date_str)
             all_csv_path = os.path.join(date_dir, "all.csv")
-            
+
             if os.path.exists(all_csv_path):
                 available_dates.append(date_str)
+
         
         self.logger.info(f"Найдено {len(available_dates)} дней с доступными данными")
         
@@ -771,6 +775,114 @@ class MOEXBondHistoricalParser(BaseLogger):
             self.logger.info(f"Результаты анализа сохранены в {analysis_dir}")
         
         return continuous_bonds, bond_stats
+    
+    def analyze_continuity_from_consolidated(dataset_path, save_to_csv=True):
+        """
+        Analyzes bond continuity from a consolidated dataset file
+        
+        Args:
+            dataset_path: Path to the period_data.csv file
+            save_to_csv: Whether to save results to CSV
+            
+        Returns:
+            Tuple of (continuous_bonds, bond_stats)
+        """
+        print(f"Analyzing continuity from consolidated dataset: {dataset_path}")
+        
+        # Load the dataset
+        df = pd.read_csv(dataset_path)
+        
+        # Get unique dates and secids
+        all_dates = sorted(df['date'].unique())
+        all_bonds = sorted(df['secid'].unique())
+        
+        print(f"Found {len(all_dates)} trading days and {len(all_bonds)} unique bonds")
+        
+        # Create a pivot table to check which bonds exist on which dates
+        presence_df = pd.pivot_table(
+            df, 
+            values='price',  # Any numeric column will do
+            index='date', 
+            columns='secid',
+            aggfunc='count'  # Just count presence
+        ).notna()
+        
+        # Calculate statistics for each bond
+        bond_stats = {}
+        continuous_bonds = []
+        
+        for bond in all_bonds:
+            if bond in presence_df.columns:
+                days_present = presence_df[bond].sum()
+                presence_percentage = (days_present / len(all_dates)) * 100
+                is_continuous = (days_present == len(all_dates))
+                
+                bond_stats[bond] = {
+                    'days_present': days_present,
+                    'total_days': len(all_dates),
+                    'presence_percentage': presence_percentage,
+                    'is_continuous': is_continuous
+                }
+                
+                if is_continuous:
+                    continuous_bonds.append(bond)
+        
+        print(f"Found {len(continuous_bonds)} bonds with continuous data ({len(continuous_bonds)/len(all_bonds)*100:.2f}%)")
+        
+        # Save results if requested
+        if save_to_csv:
+            output_dir = os.path.dirname(dataset_path)
+            
+            # Save continuous bonds
+            continuous_df = pd.DataFrame({'secid': continuous_bonds})
+            continuous_df.to_csv(os.path.join(output_dir, "continuous_bonds.csv"), index=False)
+            
+            # Save bond stats
+            stats_data = []
+            for bond, stats in bond_stats.items():
+                row = {'secid': bond}
+                row.update(stats)
+                stats_data.append(row)
+            
+            stats_df = pd.DataFrame(stats_data)
+            stats_df = stats_df.sort_values(by=['presence_percentage', 'days_present'], ascending=False)
+            stats_df.to_csv(os.path.join(output_dir, "bond_presence_stats.csv"), index=False)
+        
+        return continuous_bonds, bond_stats
+    
+    def find_optimal_threshold_from_consolidated(dataset_path, min_bonds=20, max_threshold=99):
+        """
+        Find optimal continuity threshold from consolidated dataset
+        """
+        _, bond_stats = analyze_continuity_from_consolidated(dataset_path, save_to_csv=True)
+        
+        if not bond_stats:
+            print("Could not get continuity statistics")
+            return 100
+        
+        stats_data = []
+        for bond, stats in bond_stats.items():
+            row = {'secid': bond}
+            row.update(stats)
+            stats_data.append(row)
+        
+        stats_df = pd.DataFrame(stats_data)
+        
+        thresholds = range(max_threshold, 50, -1)
+        
+        for threshold in thresholds:
+            filtered_bonds = stats_df[stats_df['presence_percentage'] >= threshold]
+            bond_count = len(filtered_bonds)
+            
+            print(f"With threshold {threshold}%: {bond_count} bonds available")
+            
+            if bond_count >= min_bonds:
+                print(f"Found optimal threshold: {threshold}%")
+                return threshold
+        
+        print(f"Could not find threshold with {min_bonds} bonds. Maximum available: {len(stats_df[stats_df['presence_percentage'] >= 50])} bonds at 50% threshold")
+        return 50
+
     
     def generate_complete_dataset(self, start_date, end_date, filter_continuous=True):
         """
@@ -886,6 +998,38 @@ class MOEXBondHistoricalParser(BaseLogger):
         except Exception as e:
             self.logger.error(f"Ошибка при чтении из кэша: {e}")
             return None
+        
+
+    def _clear_previous_loads(self, start_date, end_date):
+        """
+        Удаляет предыдущие загрузки для указанного периода
+        
+        Args:
+            start_date: начало периода
+            end_date: конец периода
+        """
+        current_date = start_date
+        while current_date <= end_date:
+            date_str = current_date.strftime('%Y-%m-%d')
+            date_dir = os.path.join(self.BASE_DATA_DIR, date_str)
+            
+            if os.path.exists(date_dir):
+                # Находим и удаляем все директории load_*
+                load_dirs = [d for d in os.listdir(date_dir) 
+                            if os.path.isdir(os.path.join(date_dir, d)) and d.startswith('load_')]
+                
+                for load_dir in load_dirs:
+                    load_path = os.path.join(date_dir, load_dir)
+                    try:
+                        shutil.rmtree(load_path)
+                        self.logger.info(f"Удалена директория {load_path}")
+                    except Exception as e:
+                        self.logger.error(f"Ошибка при удалении директории {load_path}: {e}")
+            
+            current_date += timedelta(days=1)
+        
+        self.logger.info(f"Очищены все предыдущие загрузки для периода с {start_date.strftime('%Y-%m-%d')} по {end_date.strftime('%Y-%m-%d')}")
+
     
     def _save_to_cache(self, key, data):
         """Сохранить данные в кэш"""
@@ -905,28 +1049,75 @@ class MOEXBondHistoricalParser(BaseLogger):
         if isinstance(obj, datetime):
             return obj.strftime('%Y-%m-%d')
         raise TypeError(f"Type {type(obj)} not serializable")
+    
 
-    def parse_from_2024_to_now(self, include_non_trading_days=True, analyze_continuity=True, **filter_params):
+    def _get_next_load_number(self, date_dir):
         """
-        Парсить данные с начала 2024 года по текущий день
+        Определяет следующий номер загрузки для указанной даты
         
         Args:
+            date_dir: путь к директории даты
+            
+        Returns:
+            Следующий номер загрузки
+        """
+        if not os.path.exists(date_dir):
+            return 1
+            
+        # Ищем существующие директории с шаблоном load_*
+        load_dirs = [d for d in os.listdir(date_dir) 
+                    if os.path.isdir(os.path.join(date_dir, d)) and d.startswith('load_')]
+        
+        # Извлекаем номера из имен папок
+        load_numbers = []
+        for d in load_dirs:
+            try:
+                num = int(d.split('_')[1])
+                load_numbers.append(num)
+            except (IndexError, ValueError):
+                continue
+                
+        # Возвращаем следующий номер
+        return max(load_numbers, default=0) + 1
+
+    def parse_interval(self, start_date=None, end_date=None, include_non_trading_days=True, 
+                  analyze_continuity=True, load_all_csv=False, clear_previous_loads=False, **filter_params):
+        """
+        Парсить данные за указанный интервал
+        
+        Args:
+            start_date: начальная дата интервала (по умолчанию 1 января 2024)
+            end_date: конечная дата интервала (по умолчанию текущий торговый день)
             include_non_trading_days: включать ли нерабочие дни
             analyze_continuity: выполнять ли анализ непрерывности данных
+            load_all_csv: загружать ли все облигации в all.csv (по умолчанию False)
+            clear_previous_loads: удалить предыдущие загрузки (по умолчанию False)
             **filter_params: параметры фильтрации
             
         Returns:
             Словарь с датами и списками облигаций
         """
-        start_date = datetime(2024, 1, 1)
-        end_date = self._get_last_trading_day()
+        if start_date is None:
+            start_date = datetime(2024, 1, 1)
+        elif isinstance(start_date, str):
+            start_date = datetime.strptime(start_date, '%Y-%m-%d')
         
-        self.logger.info(f"Запуск массового парсинга данных с {start_date.strftime('%Y-%m-%d')} по {end_date.strftime('%Y-%m-%d')}")
+        if end_date is None:
+            end_date = self._get_last_trading_day()
+        elif isinstance(end_date, str):
+            end_date = datetime.strptime(end_date, '%Y-%m-%d')
+        
+        self.logger.info(f"Запуск парсинга облигаций за период с {start_date.strftime('%Y-%m-%d')} по {end_date.strftime('%Y-%m-%d')}")
+        
+        # Если нужно удалить предыдущие загрузки
+        if clear_previous_loads:
+            self._clear_previous_loads(start_date, end_date)
         
         result = self.get_bonds_for_period(
             start_date=start_date,
             end_date=end_date,
             include_non_trading_days=include_non_trading_days,
+            load_all_csv=load_all_csv,
             **filter_params
         )
         
@@ -952,6 +1143,9 @@ class MOEXBondHistoricalParser(BaseLogger):
         Returns:
             Оптимальный порог непрерывности (в процентах)
         """
+        start_date = datetime.strptime(start_date, "%Y-%m-%d")
+        end_date = datetime.strptime(end_date, "%Y-%m-%d")
+
         self.logger.info(f"Поиск оптимального порога непрерывности для периода с {start_date.strftime('%Y-%m-%d')} по {end_date.strftime('%Y-%m-%d')}")
         
         _, bond_stats = self.analyze_bonds_continuity(start_date, end_date, save_to_csv=True)
@@ -1089,3 +1283,164 @@ class MOEXBondHistoricalParser(BaseLogger):
         self.logger.info(f"Всего дат: {len(trading_dates)}, облигаций: {len(full_df['secid'].unique())}")
         
         return full_df
+    
+
+def run_bond_pipeline(
+    base_path,
+    start_date,
+    end_date=None,
+    force_reparse=False,
+    min_bonds=20,
+    max_threshold=99,
+    **filter_params
+):
+    """
+    Comprehensive bond analysis pipeline that's resilient to restarts
+    """
+    # Initialize parser
+    bond_parser = MOEXBondHistoricalParser()
+    
+    # Standardize dates
+    if isinstance(start_date, str):
+        start_date = datetime.strptime(start_date, '%Y-%m-%d')
+    
+    if end_date is None:
+        end_date = datetime.now()
+    elif isinstance(end_date, str):
+        end_date = datetime.strptime(end_date, '%Y-%m-%d')
+    
+    start_date_str = start_date.strftime('%Y-%m-%d')
+    end_date_str = end_date.strftime('%Y-%m-%d')
+    
+    print(f"Running bond analysis for period {start_date_str} to {end_date_str}")
+    
+    # Step 1: Check for existing data to avoid reparsing
+    moex_path = os.path.join(base_path, "data/processed_data/BONDS/moex")
+    period_path = os.path.join(moex_path, f"period_{start_date_str}_{end_date_str}")
+    
+    # Look for consolidated dataset
+    dataset_path = None
+    if not force_reparse and os.path.exists(period_path):
+        for root, dirs, files in os.walk(period_path):
+            if "period_data.csv" in files:
+                dataset_path = os.path.join(root, "period_data.csv")
+                print(f"Found existing dataset: {dataset_path}")
+                break
+    
+    # Step 2: Parse data only if needed
+    if dataset_path is None or force_reparse:
+        print("Parsing bond data (this may take up to an hour)...")
+        result = bond_parser.parse_interval(
+            start_date=start_date_str,
+            end_date=end_date_str,
+            include_non_trading_days=True,
+            analyze_continuity=False,  # We'll handle this separately
+            load_all_csv=True,
+            clear_previous_loads=False,  # Don't delete existing data
+            **filter_params
+        )
+        
+        # Find newly created dataset
+        for root, dirs, files in os.walk(period_path):
+            if "period_data.csv" in files:
+                dataset_path = os.path.join(root, "period_data.csv")
+                print(f"Created new dataset: {dataset_path}")
+                break
+    
+    # Step 3: Verify we have data to work with
+    if dataset_path is None or not os.path.exists(dataset_path):
+        print("ERROR: No valid dataset found")
+        return {"success": False, "error": "No dataset available"}
+    
+    # Step 4: Analyze continuity from consolidated file
+    print("Analyzing bond data continuity...")
+    
+    # Load dataset directly
+    df = pd.read_csv(dataset_path)
+    
+    # Create a pivot table to check date coverage
+    presence_pivot = pd.pivot_table(
+        df, values='price', index='date', columns='secid', aggfunc='count'
+    ).notna()
+    
+    all_dates = sorted(df['date'].unique())
+    all_bonds = sorted(df['secid'].unique())
+    
+    # Calculate continuity for each bond
+    bond_stats = {}
+    continuous_bonds = []
+    
+    for bond in all_bonds:
+        days_present = presence_pivot[bond].sum() if bond in presence_pivot else 0
+        presence_pct = (days_present / len(all_dates)) * 100
+        is_continuous = (days_present == len(all_dates))
+        
+        bond_stats[bond] = {
+            'days_present': days_present,
+            'total_days': len(all_dates),
+            'presence_percentage': presence_pct,
+            'is_continuous': is_continuous
+        }
+        
+        if is_continuous:
+            continuous_bonds.append(bond)
+    
+    # Save stats to dataset directory
+    stats_dir = os.path.dirname(dataset_path)
+    stats_df = pd.DataFrame([{'secid': k, **v} for k, v in bond_stats.items()])
+    stats_df.to_csv(os.path.join(stats_dir, "bond_presence_stats.csv"), index=False)
+    
+    # Step 5: Find optimal threshold
+    thresholds = range(max_threshold, 50, -1)
+    optimal_threshold = 50
+    
+    for threshold in thresholds:
+        filtered_bonds = [bond for bond, stats in bond_stats.items() 
+                         if stats['presence_percentage'] >= threshold]
+        
+        print(f"Threshold {threshold}%: {len(filtered_bonds)} bonds available")
+        
+        if len(filtered_bonds) >= min_bonds:
+            optimal_threshold = threshold
+            break
+    
+    print(f"Optimal threshold: {optimal_threshold}%")
+    
+    # Step 6: Create filtered dataset
+    filtered_bonds = [bond for bond, stats in bond_stats.items() 
+                     if stats['presence_percentage'] >= optimal_threshold]
+    
+    filtered_df = df[df['secid'].isin(filtered_bonds)]
+    
+    # Create cleaner output directory structure
+    clean_dir = os.path.join(moex_path, f"bonds_{start_date_str}_{end_date_str}")
+    os.makedirs(clean_dir, exist_ok=True)
+    
+    threshold_dir = os.path.join(clean_dir, f"threshold_{optimal_threshold}")
+    os.makedirs(threshold_dir, exist_ok=True)
+    
+    filtered_path = os.path.join(threshold_dir, "bonds_dataset.csv")
+    filtered_df.to_csv(filtered_path, index=False)
+    
+    # Also save as pivot tables for easier use
+    price_pivot = filtered_df.pivot_table(values='price', index='date', columns='secid')
+    price_pivot.to_csv(os.path.join(threshold_dir, "price_pivot.csv"))
+    
+    yield_pivot = filtered_df.pivot_table(values='yield', index='date', columns='secid')
+    yield_pivot.to_csv(os.path.join(threshold_dir, "yield_pivot.csv"))
+    
+    print(f"Created filtered dataset with {len(filtered_bonds)} bonds and {len(all_dates)} dates")
+    
+    # Return results
+    return {
+        "success": True,
+        "dataset_path": filtered_path,
+        "optimal_threshold": optimal_threshold,
+        "bond_count": len(filtered_bonds),
+        "date_count": len(all_dates),
+        "period": {
+            "start_date": start_date_str,
+            "end_date": end_date_str
+        }
+    }
+

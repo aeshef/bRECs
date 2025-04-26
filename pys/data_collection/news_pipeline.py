@@ -31,6 +31,13 @@ from pys.data_collection.news_processor.news_integration import NewsIntegration
 from pys.utils.logger import BaseLogger
 from pys.data_collection.private_info import BASE_PATH
 
+# Импорт и применение патча
+try:
+    from pys.utils.monkey_patch import apply_patch
+    apply_patch()
+except ImportError:
+    pass
+
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -915,7 +922,11 @@ class NewsPipeline(BaseLogger):
             
         # Шаг 4: Создание сводного отчета
         self.logger.info("\n=== СОЗДАНИЕ СВОДНОГО ОТЧЕТА ===")
-        summary_file = os.path.join(base_dir, 'data', 'news_analysis_summary.txt')
+        summary_dir = os.path.join(base_dir, 'data', 'summaries')
+        os.makedirs(summary_dir, exist_ok=True)
+
+        summary_file = os.path.join(base_dir, 'data', 'summaries', 'news_analysis_summary.txt')
+        
         with open(summary_file, 'w') as f:
             f.write("=== СВОДНЫЙ ОТЧЕТ ПО АНАЛИЗУ НОВОСТЕЙ ===\n\n")
             f.write(f"Дата анализа: {datetime.datetime.now()}\n")

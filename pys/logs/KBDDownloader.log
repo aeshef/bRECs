@@ -332,3 +332,84 @@ ValueError: 1 columns passed, passed data had 14 columns
 2025-04-26 01:25:25 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-01-03 00:00:00
 2025-04-26 01:25:25 - KBDDownloader - INFO - Processed MOEX data: 256 rows with 12 tenors
 2025-04-26 01:25:25 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 256 rows
+2025-04-26 15:26:51 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 15:26:51 - KBDDownloader - INFO - Fetching KBD data from 2024-04-26 15:26:51.806001 to 2025-04-26 15:26:51.806001
+2025-04-26 15:26:52 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-04-26_to_2025-04-26.csv
+2025-04-26 15:26:52 - KBDDownloader - INFO - Raw file contains 181 lines
+2025-04-26 15:26:52 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 15:26:52 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 15:26:52 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-04-26 00:00:00
+2025-04-26 15:26:52 - KBDDownloader - INFO - Processed MOEX data: 176 rows with 12 tenors
+2025-04-26 15:26:52 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 176 rows
+2025-04-26 16:27:25 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 16:27:25 - KBDDownloader - INFO - Fetching KBD data from 2024-04-26 16:27:25.491066 to 2025-04-26 16:27:25.491066
+2025-04-26 16:27:25 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-04-26_to_2025-04-26.csv
+2025-04-26 16:27:25 - KBDDownloader - INFO - Raw file contains 181 lines
+2025-04-26 16:27:25 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 16:27:25 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 16:27:25 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-04-26 00:00:00
+2025-04-26 16:27:25 - KBDDownloader - INFO - Processed MOEX data: 176 rows with 12 tenors
+2025-04-26 16:27:25 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 176 rows
+2025-04-26 16:34:02 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 16:34:02 - KBDDownloader - INFO - Fetching KBD data from 2024-04-26 16:34:02.090861 to 2025-04-26 16:34:02.090861
+2025-04-26 16:34:02 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-04-26_to_2025-04-26.csv
+2025-04-26 16:34:02 - KBDDownloader - INFO - Raw file contains 181 lines
+2025-04-26 16:34:02 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 16:34:02 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 16:34:02 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-04-26 00:00:00
+2025-04-26 16:34:02 - KBDDownloader - INFO - Processed MOEX data: 176 rows with 12 tenors
+2025-04-26 16:34:02 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 176 rows
+2025-04-26 16:34:12 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 16:34:12 - KBDDownloader - INFO - Fetching KBD data from 2024-04-26 16:34:12.482233 to 2025-04-26 16:34:12.482233
+2025-04-26 16:34:12 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-04-26_to_2025-04-26.csv
+2025-04-26 16:34:12 - KBDDownloader - INFO - Raw file contains 181 lines
+2025-04-26 16:34:12 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 16:34:12 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 16:34:12 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-04-26 00:00:00
+2025-04-26 16:34:12 - KBDDownloader - INFO - Processed MOEX data: 176 rows with 12 tenors
+2025-04-26 16:34:12 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 176 rows
+2025-04-26 16:35:36 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 16:35:36 - KBDDownloader - INFO - Fetching KBD data from 2024-04-26 16:35:36.536992 to 2025-04-26 16:35:36.536992
+2025-04-26 16:35:36 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-04-26_to_2025-04-26.csv
+2025-04-26 16:35:36 - KBDDownloader - INFO - Raw file contains 181 lines
+2025-04-26 16:35:36 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 16:35:36 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 16:35:36 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-04-26 00:00:00
+2025-04-26 16:35:36 - KBDDownloader - INFO - Processed MOEX data: 176 rows with 12 tenors
+2025-04-26 16:35:36 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 176 rows
+2025-04-26 18:58:07 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 18:58:07 - KBDDownloader - INFO - Fetching KBD data from 2024-04-26 18:58:07.588947 to 2025-04-26 18:58:07.588947
+2025-04-26 18:58:07 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-04-26_to_2025-04-26.csv
+2025-04-26 18:58:07 - KBDDownloader - INFO - Raw file contains 181 lines
+2025-04-26 18:58:07 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 18:58:07 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 18:58:07 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-04-26 00:00:00
+2025-04-26 18:58:07 - KBDDownloader - INFO - Processed MOEX data: 176 rows with 12 tenors
+2025-04-26 18:58:07 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 176 rows
+2025-04-26 19:21:29 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 19:21:29 - KBDDownloader - INFO - Fetching KBD data from 2024-04-26 19:21:29.271370 to 2025-04-26 19:21:29.271370
+2025-04-26 19:21:29 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-04-26_to_2025-04-26.csv
+2025-04-26 19:21:29 - KBDDownloader - INFO - Raw file contains 181 lines
+2025-04-26 19:21:29 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 19:21:29 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 19:21:29 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-04-26 00:00:00
+2025-04-26 19:21:29 - KBDDownloader - INFO - Processed MOEX data: 176 rows with 12 tenors
+2025-04-26 19:21:29 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 176 rows
+2025-04-26 19:43:18 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 19:43:18 - KBDDownloader - INFO - Fetching KBD data from 2024-04-26 19:43:18.475861 to 2025-04-26 19:43:18.475861
+2025-04-26 19:43:19 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-04-26_to_2025-04-26.csv
+2025-04-26 19:43:19 - KBDDownloader - INFO - Raw file contains 181 lines
+2025-04-26 19:43:19 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 19:43:19 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 19:43:19 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-04-26 00:00:00
+2025-04-26 19:43:19 - KBDDownloader - INFO - Processed MOEX data: 176 rows with 12 tenors
+2025-04-26 19:43:19 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 176 rows
+2025-04-26 19:44:54 - KBDDownloader - INFO - KBDDownloader initialized
+2025-04-26 19:44:54 - KBDDownloader - INFO - Fetching KBD data from 2024-04-26 19:44:54.631101 to 2025-04-26 19:44:54.631101
+2025-04-26 19:44:54 - KBDDownloader - INFO - Raw KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/raw/raw_kbd_data_2024-04-26_to_2025-04-26.csv
+2025-04-26 19:44:54 - KBDDownloader - INFO - Raw file contains 181 lines
+2025-04-26 19:44:54 - KBDDownloader - INFO - First line contains 'zcyc', skipping it
+2025-04-26 19:44:54 - KBDDownloader - INFO - Parsed CSV with columns: ['tradedate', 'tradetime', 'period_0.25', 'period_0.5', 'period_0.75', 'period_1.0', 'period_2.0', 'period_3.0', 'period_5.0', 'period_7.0', 'period_10.0', 'period_15.0', 'period_20.0', 'period_30.0']
+2025-04-26 19:44:54 - KBDDownloader - INFO - Successfully parsed dates, first date: 2024-04-26 00:00:00
+2025-04-26 19:44:54 - KBDDownloader - INFO - Processed MOEX data: 176 rows with 12 tenors
+2025-04-26 19:44:54 - KBDDownloader - INFO - Processed KBD data saved to /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/data/kbd_data.csv with 176 rows

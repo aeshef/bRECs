@@ -1,0 +1,222 @@
+2025-04-26 18:58:39 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250426_185839_standard_with_shorts
+2025-04-26 18:58:39 - PipelineExecutor - INFO - Запуск полного пайплайна с ID: run_20250426_185839_standard_with_shorts
+2025-04-26 18:58:39 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_185839_standard_with_shorts/bond_portfolio.csv
+2025-04-26 18:58:39 - PipelineExecutor - INFO - Запуск генерации сигналов с параметрами: {'weight_tech': 0.5, 'weight_sentiment': 0.3, 'weight_fundamental': 0.2}
+2025-04-26 19:03:36 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250426_190336_standard_with_shorts
+2025-04-26 19:03:36 - PipelineExecutor - INFO - Запуск полного пайплайна с ID: run_20250426_190336_standard_with_shorts
+2025-04-26 19:03:36 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_190336_standard_with_shorts/bond_portfolio.csv
+2025-04-26 19:03:36 - PipelineExecutor - INFO - Запуск генерации сигналов с параметрами: {'weight_tech': 0.5, 'weight_sentiment': 0.3, 'weight_fundamental': 0.2}
+2025-04-26 19:03:44 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250426_190344_standard_with_shorts
+2025-04-26 19:03:44 - PipelineExecutor - INFO - Запуск полного пайплайна с ID: run_20250426_190344_standard_with_shorts
+2025-04-26 19:03:44 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_190344_standard_with_shorts/bond_portfolio.csv
+2025-04-26 19:03:44 - PipelineExecutor - INFO - Запуск генерации сигналов с параметрами: {'weight_tech': 0.5, 'weight_sentiment': 0.3, 'weight_fundamental': 0.2}
+2025-04-26 19:03:58 - PipelineExecutor - INFO - Скопированы сигналы: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_190344_standard_with_shorts/signals/signals.csv
+2025-04-26 19:03:58 - PipelineExecutor - INFO - Запуск оптимизации стандартного портфеля с параметрами: {'risk_free_rate': 0.1, 'min_rf_allocation': 0.3, 'max_rf_allocation': 0.5, 'max_weight': 0.15}
+2025-04-26 19:04:03 - PipelineExecutor - INFO - Портфель успешно оптимизирован и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_190344_standard_with_shorts/portfolio
+2025-04-26 19:04:03 - PipelineExecutor - INFO - Запуск создания портфеля с короткими позициями с параметрами: {'risk_free_rate': 0.075, 'train_period': ('2024-01-01', '2024-12-31'), 'test_period': ('2025-01-01', '2025-06-30')}
+2025-04-26 19:04:03 - PipelineExecutor - ERROR - Ошибка при создании портфеля с короткими позициями: name 'build_production_portfolio' is not defined
+2025-04-26 19:04:03 - PipelineExecutor - ERROR - Traceback (most recent call last):
+  File "/Users/aeshef/Documents/GitHub/kursach/pys/porfolio_optimization/executor.py", line 291, in create_short_portfolio
+    portfolio_results = build_production_portfolio(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'build_production_portfolio' is not defined
+
+2025-04-26 19:04:03 - PipelineExecutor - INFO - Создание итогового отчета о запуске
+2025-04-26 19:04:03 - PipelineExecutor - INFO - Итоговый отчет создан: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_190344_standard_with_shorts/pipeline_summary.md
+2025-04-26 19:04:03 - PipelineExecutor - INFO - Выполнение пайплайна завершено. Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_190344_standard_with_shorts
+2025-04-26 19:11:57 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250426_191157_standard_with_shorts
+2025-04-26 19:11:57 - PipelineExecutor - INFO - Запуск полного пайплайна с ID: run_20250426_191157_standard_with_shorts
+2025-04-26 19:11:57 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191157_standard_with_shorts/bond_portfolio.csv
+2025-04-26 19:11:57 - PipelineExecutor - INFO - Запуск генерации сигналов с параметрами: {'weight_tech': 0.5, 'weight_sentiment': 0.3, 'weight_fundamental': 0.2}
+2025-04-26 19:12:34 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250426_191234_standard_with_shorts
+2025-04-26 19:12:34 - PipelineExecutor - INFO - Запуск полного пайплайна с ID: run_20250426_191234_standard_with_shorts
+2025-04-26 19:12:34 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191234_standard_with_shorts/bond_portfolio.csv
+2025-04-26 19:12:34 - PipelineExecutor - INFO - Запуск генерации сигналов с параметрами: {'weight_tech': 0.5, 'weight_sentiment': 0.3, 'weight_fundamental': 0.2}
+2025-04-26 19:12:48 - PipelineExecutor - INFO - Скопированы сигналы: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191234_standard_with_shorts/signals/signals.csv
+2025-04-26 19:12:48 - PipelineExecutor - INFO - Запуск оптимизации стандартного портфеля с параметрами: {'risk_free_rate': 0.1, 'min_rf_allocation': 0.3, 'max_rf_allocation': 0.5, 'max_weight': 0.15}
+2025-04-26 19:12:53 - PipelineExecutor - INFO - Портфель успешно оптимизирован и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191234_standard_with_shorts/portfolio
+2025-04-26 19:12:53 - PipelineExecutor - INFO - Запуск создания портфеля с короткими позициями с параметрами: {'risk_free_rate': 0.075, 'train_period': ('2024-01-01', '2024-12-31'), 'test_period': ('2025-01-01', '2025-06-30')}
+2025-04-26 19:12:53 - PipelineExecutor - INFO - Запуск проверки с HonestBacktester
+2025-04-26 19:13:21 - PipelineExecutor - INFO - Результаты честного бэктеста:
+2025-04-26 19:13:21 - PipelineExecutor - INFO - Доходность в тесте: -3.96%
+2025-04-26 19:13:21 - PipelineExecutor - INFO - Шарп в тесте: -1.93
+2025-04-26 19:13:21 - PipelineExecutor - WARNING - Низкий коэффициент Шарпа в тестовом периоде! Стратегия может быть неэффективна.
+2025-04-26 19:13:21 - PipelineExecutor - INFO - Построение финального портфеля на всех данных с поддержкой коротких позиций
+2025-04-26 19:13:36 - PipelineExecutor - INFO - Используется оптимизатор с поддержкой коротких позиций
+2025-04-26 19:13:39 - PipelineExecutor - INFO - Итоговый отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191234_standard_with_shorts/shorts_portfolio/production_summary.md
+2025-04-26 19:13:39 - PipelineExecutor - INFO - Портфель с короткими позициями успешно создан и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191234_standard_with_shorts/shorts_portfolio
+2025-04-26 19:13:39 - PipelineExecutor - INFO - Создание итогового отчета о запуске
+2025-04-26 19:13:39 - PipelineExecutor - INFO - Итоговый отчет создан: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191234_standard_with_shorts/pipeline_summary.md
+2025-04-26 19:13:39 - PipelineExecutor - INFO - Выполнение пайплайна завершено. Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191234_standard_with_shorts
+2025-04-26 19:19:00 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250426_191900_standard_with_shorts
+2025-04-26 19:19:00 - PipelineExecutor - INFO - Запуск полного пайплайна с ID: run_20250426_191900_standard_with_shorts
+2025-04-26 19:19:00 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191900_standard_with_shorts/bond_portfolio.csv
+2025-04-26 19:19:00 - PipelineExecutor - INFO - Запуск генерации сигналов с параметрами: {'weight_tech': 0.5, 'weight_sentiment': 0.3, 'weight_fundamental': 0.2}
+2025-04-26 19:19:15 - PipelineExecutor - INFO - Скопированы сигналы: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191900_standard_with_shorts/signals/signals.csv
+2025-04-26 19:19:15 - PipelineExecutor - INFO - Запуск оптимизации стандартного портфеля с параметрами: {'risk_free_rate': 0.1, 'min_rf_allocation': 0.3, 'max_rf_allocation': 0.5, 'max_weight': 0.15}
+2025-04-26 19:19:20 - PipelineExecutor - INFO - Портфель успешно оптимизирован и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191900_standard_with_shorts/portfolio
+2025-04-26 19:19:20 - PipelineExecutor - INFO - Запуск создания портфеля с короткими позициями с параметрами: {'risk_free_rate': 0.075, 'train_period': ('2024-01-01', '2024-12-31'), 'test_period': ('2025-01-01', '2025-06-30')}
+2025-04-26 19:19:20 - PipelineExecutor - INFO - Запуск проверки с HonestBacktester
+2025-04-26 19:19:48 - PipelineExecutor - ERROR - Ошибка при построении портфеля: [Errno 2] No such file or directory: '/Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191900_standard_with_shorts/shorts_portfolio/honest_backtest/test_backtest/portfolio_structure_error.png'
+2025-04-26 19:19:48 - PipelineExecutor - ERROR - Traceback (most recent call last):
+  File "/Users/aeshef/Documents/GitHub/kursach/pys/porfolio_optimization/backtester.py", line 765, in visualize_results
+    plt.savefig(os.path.join(output_dir, 'portfolio_structure.png'))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/pyplot.py", line 1243, in savefig
+    res = fig.savefig(*args, **kwargs)  # type: ignore[func-returns-value]
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/figure.py", line 3490, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/backend_bases.py", line 2184, in print_figure
+    result = print_method(
+        filename,
+    ...<3 lines>...
+        bbox_inches_restore=_bbox_inches_restore,
+        **kwargs)
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/backend_bases.py", line 2040, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+                                                                 ~~~~^
+        *args, **{k: v for k, v in kwargs.items() if k not in skip}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/backends/backend_agg.py", line 481, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/backends/backend_agg.py", line 430, in _print_pil
+    mpl.image.imsave(
+    ~~~~~~~~~~~~~~~~^
+        filename_or_obj, self.buffer_rgba(), format=fmt, origin="upper",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dpi=self.figure.dpi, metadata=metadata, pil_kwargs=pil_kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/image.py", line 1644, in imsave
+    image.save(fname, **pil_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/PIL/Image.py", line 2576, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191900_standard_with_shorts/shorts_portfolio/honest_backtest/test_backtest/portfolio_structure.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 40, in build_production_portfolio
+  File "/Users/aeshef/Documents/GitHub/kursach/pys/improved_pipeline/honest_backtest.py", line 202, in run
+    test_results = backtester_obj.run_pipeline(
+        output_dir=os.path.join(self.output_dir, 'test_backtest'),
+        risk_free_rate=self.risk_free_rate
+    )
+  File "/Users/aeshef/Documents/GitHub/kursach/pys/porfolio_optimization/backtester.py", line 948, in run_pipeline
+    self.visualize_results(output_dir)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Users/aeshef/Documents/GitHub/kursach/pys/porfolio_optimization/backtester.py", line 776, in visualize_results
+    plt.savefig(os.path.join(output_dir, 'portfolio_structure_error.png'))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/pyplot.py", line 1243, in savefig
+    res = fig.savefig(*args, **kwargs)  # type: ignore[func-returns-value]
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/figure.py", line 3490, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/backend_bases.py", line 2184, in print_figure
+    result = print_method(
+        filename,
+    ...<3 lines>...
+        bbox_inches_restore=_bbox_inches_restore,
+        **kwargs)
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/backend_bases.py", line 2040, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+                                                                 ~~~~^
+        *args, **{k: v for k, v in kwargs.items() if k not in skip}))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/backends/backend_agg.py", line 481, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/backends/backend_agg.py", line 430, in _print_pil
+    mpl.image.imsave(
+    ~~~~~~~~~~~~~~~~^
+        filename_or_obj, self.buffer_rgba(), format=fmt, origin="upper",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dpi=self.figure.dpi, metadata=metadata, pil_kwargs=pil_kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/matplotlib/image.py", line 1644, in imsave
+    image.save(fname, **pil_kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aeshef/Documents/GitHub/kursach/.venv/lib/python3.13/site-packages/PIL/Image.py", line 2576, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191900_standard_with_shorts/shorts_portfolio/honest_backtest/test_backtest/portfolio_structure_error.png'
+
+2025-04-26 19:19:48 - PipelineExecutor - ERROR - Ошибка при создании портфеля с короткими позициями: [Errno 2] No such file or directory: '/Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191900_standard_with_shorts/shorts_portfolio/short_portfolio_params.json'
+2025-04-26 19:19:48 - PipelineExecutor - ERROR - Traceback (most recent call last):
+  File "<string>", line 29, in create_short_portfolio
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191900_standard_with_shorts/shorts_portfolio/short_portfolio_params.json'
+
+2025-04-26 19:19:48 - PipelineExecutor - INFO - Создание итогового отчета о запуске
+2025-04-26 19:19:48 - PipelineExecutor - ERROR - Ошибка при создании итогового отчета: [Errno 2] No such file or directory: '/Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191900_standard_with_shorts/pipeline_summary.md'
+2025-04-26 19:19:48 - PipelineExecutor - INFO - Выполнение пайплайна завершено. Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191900_standard_with_shorts
+2025-04-26 19:20:17 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250426_192017_standard_with_shorts
+2025-04-26 19:20:17 - PipelineExecutor - INFO - Запуск полного пайплайна с ID: run_20250426_192017_standard_with_shorts
+2025-04-26 19:20:17 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_192017_standard_with_shorts/bond_portfolio.csv
+2025-04-26 19:20:17 - PipelineExecutor - INFO - Запуск генерации сигналов с параметрами: {'weight_tech': 0.5, 'weight_sentiment': 0.3, 'weight_fundamental': 0.2}
+2025-04-26 19:20:31 - PipelineExecutor - INFO - Скопированы сигналы: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_192017_standard_with_shorts/signals/signals.csv
+2025-04-26 19:20:31 - PipelineExecutor - INFO - Запуск оптимизации стандартного портфеля с параметрами: {'risk_free_rate': 0.1, 'min_rf_allocation': 0.3, 'max_rf_allocation': 0.5, 'max_weight': 0.15}
+2025-04-26 19:20:36 - PipelineExecutor - INFO - Портфель успешно оптимизирован и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_192017_standard_with_shorts/portfolio
+2025-04-26 19:20:36 - PipelineExecutor - INFO - Запуск создания портфеля с короткими позициями с параметрами: {'risk_free_rate': 0.075, 'train_period': ('2024-01-01', '2024-12-31'), 'test_period': ('2025-01-01', '2025-06-30')}
+2025-04-26 19:20:36 - PipelineExecutor - INFO - Запуск проверки с HonestBacktester
+2025-04-26 19:21:32 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250426_192132_standard_with_shorts
+2025-04-26 19:21:32 - PipelineExecutor - INFO - Запуск полного пайплайна с ID: run_20250426_192132_standard_with_shorts
+2025-04-26 19:21:32 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_192132_standard_with_shorts/bond_portfolio.csv
+2025-04-26 19:21:32 - PipelineExecutor - INFO - Запуск генерации сигналов с параметрами: {'weight_tech': 0.5, 'weight_sentiment': 0.3, 'weight_fundamental': 0.2}
+2025-04-26 19:21:46 - PipelineExecutor - INFO - Скопированы сигналы: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_192132_standard_with_shorts/signals/signals.csv
+2025-04-26 19:21:46 - PipelineExecutor - INFO - Запуск оптимизации стандартного портфеля с параметрами: {'risk_free_rate': 0.1, 'min_rf_allocation': 0.3, 'max_rf_allocation': 0.5, 'max_weight': 0.15}
+2025-04-26 19:21:51 - PipelineExecutor - INFO - Портфель успешно оптимизирован и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_192132_standard_with_shorts/portfolio
+2025-04-26 19:21:51 - PipelineExecutor - INFO - Запуск создания портфеля с короткими позициями с параметрами: {'risk_free_rate': 0.075, 'train_period': ('2024-01-01', '2024-12-31'), 'test_period': ('2025-01-01', '2025-06-30')}
+2025-04-26 19:21:51 - PipelineExecutor - INFO - Запуск проверки с HonestBacktester
+2025-04-26 19:22:20 - PipelineExecutor - INFO - Результаты честного бэктеста:
+2025-04-26 19:22:20 - PipelineExecutor - INFO - Доходность в тесте: -3.96%
+2025-04-26 19:22:20 - PipelineExecutor - INFO - Шарп в тесте: -1.93
+2025-04-26 19:22:20 - PipelineExecutor - WARNING - Низкий коэффициент Шарпа в тестовом периоде! Стратегия может быть неэффективна.
+2025-04-26 19:22:20 - PipelineExecutor - INFO - Построение финального портфеля на всех данных с поддержкой коротких позиций
+2025-04-26 19:22:34 - PipelineExecutor - INFO - Используется оптимизатор с поддержкой коротких позиций
+2025-04-26 19:22:37 - PipelineExecutor - INFO - Итоговый отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_192132_standard_with_shorts/shorts_portfolio/production_summary.md
+2025-04-26 19:22:37 - PipelineExecutor - INFO - Портфель с короткими позициями успешно создан и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_192132_standard_with_shorts/shorts_portfolio
+2025-04-26 19:22:37 - PipelineExecutor - INFO - Создание итогового отчета о запуске
+2025-04-26 19:22:37 - PipelineExecutor - INFO - Итоговый отчет создан: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_192132_standard_with_shorts/pipeline_summary.md
+2025-04-26 19:22:37 - PipelineExecutor - INFO - Выполнение пайплайна завершено. Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_192132_standard_with_shorts
+2025-04-26 19:43:20 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250426_194320_standard_with_shorts
+2025-04-26 19:43:20 - PipelineExecutor - INFO - Запуск полного пайплайна с ID: run_20250426_194320_standard_with_shorts
+2025-04-26 19:43:20 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194320_standard_with_shorts/bond_portfolio.csv
+2025-04-26 19:43:20 - PipelineExecutor - INFO - Запуск генерации сигналов с параметрами: {'weight_tech': 0.5, 'weight_sentiment': 0.3, 'weight_fundamental': 0.2}
+2025-04-26 19:43:34 - PipelineExecutor - INFO - Скопированы сигналы: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194320_standard_with_shorts/signals/signals.csv
+2025-04-26 19:43:34 - PipelineExecutor - INFO - Запуск оптимизации стандартного портфеля с параметрами: {'risk_free_rate': 0.1, 'min_rf_allocation': 0.3, 'max_rf_allocation': 0.5, 'max_weight': 0.15}
+2025-04-26 19:43:39 - PipelineExecutor - INFO - Портфель успешно оптимизирован и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194320_standard_with_shorts/portfolio
+2025-04-26 19:43:39 - PipelineExecutor - INFO - Запуск создания портфеля с короткими позициями с параметрами: {'risk_free_rate': 0.075, 'train_period': ('2024-01-01', '2024-12-31'), 'test_period': ('2025-01-01', '2025-06-30')}
+2025-04-26 19:43:39 - PipelineExecutor - INFO - Запуск проверки с HonestBacktester
+2025-04-26 19:44:07 - PipelineExecutor - INFO - Результаты честного бэктеста:
+2025-04-26 19:44:07 - PipelineExecutor - INFO - Доходность в тесте: -3.96%
+2025-04-26 19:44:07 - PipelineExecutor - INFO - Шарп в тесте: -1.93
+2025-04-26 19:44:07 - PipelineExecutor - WARNING - Низкий коэффициент Шарпа в тестовом периоде! Стратегия может быть неэффективна.
+2025-04-26 19:44:07 - PipelineExecutor - INFO - Построение финального портфеля на всех данных с поддержкой коротких позиций
+2025-04-26 19:44:21 - PipelineExecutor - INFO - Используется оптимизатор с поддержкой коротких позиций
+2025-04-26 19:44:24 - PipelineExecutor - INFO - Итоговый отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194320_standard_with_shorts/shorts_portfolio/production_summary.md
+2025-04-26 19:44:24 - PipelineExecutor - INFO - Портфель с короткими позициями успешно создан и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194320_standard_with_shorts/shorts_portfolio
+2025-04-26 19:44:24 - PipelineExecutor - INFO - Создание итогового отчета о запуске
+2025-04-26 19:44:24 - PipelineExecutor - INFO - Итоговый отчет создан: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194320_standard_with_shorts/pipeline_summary.md
+2025-04-26 19:44:24 - PipelineExecutor - INFO - Выполнение пайплайна завершено. Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194320_standard_with_shorts
+2025-04-26 19:44:55 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250426_194455_standard_with_shorts
+2025-04-26 19:44:55 - PipelineExecutor - INFO - Запуск полного пайплайна с ID: run_20250426_194455_standard_with_shorts
+2025-04-26 19:44:55 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194455_standard_with_shorts/bond_portfolio.csv
+2025-04-26 19:44:55 - PipelineExecutor - INFO - Запуск генерации сигналов с параметрами: {'weight_tech': 0.5, 'weight_sentiment': 0.3, 'weight_fundamental': 0.2}
+2025-04-26 19:45:09 - PipelineExecutor - INFO - Скопированы сигналы: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194455_standard_with_shorts/signals/signals.csv
+2025-04-26 19:45:09 - PipelineExecutor - INFO - Запуск оптимизации стандартного портфеля с параметрами: {'risk_free_rate': 0.1, 'min_rf_allocation': 0.3, 'max_rf_allocation': 0.5, 'max_weight': 0.15}
+2025-04-26 19:45:14 - PipelineExecutor - INFO - Портфель успешно оптимизирован и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194455_standard_with_shorts/portfolio
+2025-04-26 19:45:14 - PipelineExecutor - INFO - Запуск создания портфеля с короткими позициями с параметрами: {'risk_free_rate': 0.075, 'train_period': ('2024-01-01', '2024-12-31'), 'test_period': ('2025-01-01', '2025-06-30')}
+2025-04-26 19:45:14 - PipelineExecutor - INFO - Запуск проверки с HonestBacktester
+2025-04-26 19:45:41 - PipelineExecutor - INFO - Результаты честного бэктеста:
+2025-04-26 19:45:41 - PipelineExecutor - INFO - Доходность в тесте: -3.96%
+2025-04-26 19:45:41 - PipelineExecutor - INFO - Шарп в тесте: -1.93
+2025-04-26 19:45:41 - PipelineExecutor - WARNING - Низкий коэффициент Шарпа в тестовом периоде! Стратегия может быть неэффективна.
+2025-04-26 19:45:41 - PipelineExecutor - INFO - Построение финального портфеля на всех данных с поддержкой коротких позиций
+2025-04-26 19:45:55 - PipelineExecutor - INFO - Используется оптимизатор с поддержкой коротких позиций
+2025-04-26 19:45:58 - PipelineExecutor - INFO - Итоговый отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194455_standard_with_shorts/shorts_portfolio/production_summary.md
+2025-04-26 19:45:58 - PipelineExecutor - INFO - Портфель с короткими позициями успешно создан и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194455_standard_with_shorts/shorts_portfolio
+2025-04-26 19:45:58 - PipelineExecutor - INFO - Создание итогового отчета о запуске
+2025-04-26 19:45:58 - PipelineExecutor - INFO - Итоговый отчет создан: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194455_standard_with_shorts/pipeline_summary.md
+2025-04-26 19:45:58 - PipelineExecutor - INFO - Выполнение пайплайна завершено. Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194455_standard_with_shorts

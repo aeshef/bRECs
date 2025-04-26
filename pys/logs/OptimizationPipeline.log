@@ -1,0 +1,61 @@
+2025-04-26 16:00:57 - OptimizationPipeline - INFO - Запуск парсера капитализаций для модели Блэка-Литермана
+2025-04-26 16:02:03 - OptimizationPipeline - INFO - Запуск парсера капитализаций для модели Блэка-Литермана
+2025-04-26 16:02:03 - OptimizationPipeline - INFO - Запуск оптимизации по модели Марковица
+2025-04-26 16:02:05 - OptimizationPipeline - INFO - Запуск оптимизации по модели Блэка-Литермана
+2025-04-26 16:08:30 - OptimizationPipeline - INFO - Запуск парсера капитализаций для модели Блэка-Литермана
+2025-04-26 16:10:05 - OptimizationPipeline - INFO - Запуск парсера капитализаций для модели Блэка-Литермана
+2025-04-26 16:10:05 - OptimizationPipeline - INFO - Запуск оптимизации по модели Марковица
+2025-04-26 16:10:08 - OptimizationPipeline - INFO - Запуск оптимизации по модели Блэка-Литермана
+2025-04-26 16:10:10 - OptimizationPipeline - INFO - Сравнительная таблица сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison.csv
+2025-04-26 16:10:10 - OptimizationPipeline - INFO - Сравнительный график сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison_plot.png
+2025-04-26 16:36:47 - OptimizationPipeline - INFO - Запуск парсера капитализаций для модели Блэка-Литермана
+2025-04-26 16:38:13 - OptimizationPipeline - INFO - Запуск парсера капитализаций для модели Блэка-Литермана
+2025-04-26 16:38:25 - OptimizationPipeline - INFO - Запуск парсера капитализаций для модели Блэка-Литермана
+2025-04-26 16:40:39 - OptimizationPipeline - INFO - Запуск парсера капитализаций для модели Блэка-Литермана
+2025-04-26 16:40:40 - OptimizationPipeline - INFO - Запуск оптимизации по модели Марковица
+2025-04-26 16:40:42 - OptimizationPipeline - INFO - Запуск оптимизации по модели Блэка-Литермана
+2025-04-26 16:40:44 - OptimizationPipeline - INFO - Сравнительная таблица сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison.csv
+2025-04-26 16:40:44 - OptimizationPipeline - INFO - Сравнительный график сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison_plot.png
+2025-04-26 16:40:44 - OptimizationPipeline - INFO - Информация о портфеле облигаций сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/bonds_summary.csv
+2025-04-26 19:03:58 - OptimizationPipeline - INFO - Запуск парсера капитализаций для модели Блэка-Литермана
+2025-04-26 19:03:58 - OptimizationPipeline - INFO - Запуск оптимизации по модели Марковица
+2025-04-26 19:04:00 - OptimizationPipeline - INFO - Запуск оптимизации по модели Блэка-Литермана
+2025-04-26 19:04:02 - OptimizationPipeline - INFO - Сравнительная таблица сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison.csv
+2025-04-26 19:04:03 - OptimizationPipeline - INFO - Сравнительный график сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison_plot.png
+2025-04-26 19:04:03 - OptimizationPipeline - INFO - Информация о портфеле облигаций сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/bonds_summary.csv
+2025-04-26 19:12:48 - OptimizationPipeline - INFO - Запуск парсера капитализаций для модели Блэка-Литермана
+2025-04-26 19:12:48 - OptimizationPipeline - INFO - Запуск оптимизации по модели Марковица
+2025-04-26 19:12:50 - OptimizationPipeline - INFO - Запуск оптимизации по модели Блэка-Литермана
+2025-04-26 19:12:52 - OptimizationPipeline - INFO - Сравнительная таблица сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison.csv
+2025-04-26 19:12:53 - OptimizationPipeline - INFO - Сравнительный график сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison_plot.png
+2025-04-26 19:12:53 - OptimizationPipeline - INFO - Информация о портфеле облигаций сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/bonds_summary.csv
+2025-04-26 19:19:15 - OptimizationPipeline - INFO - Запуск парсера капитализаций для модели Блэка-Литермана
+2025-04-26 19:19:15 - OptimizationPipeline - INFO - Запуск оптимизации по модели Марковица
+2025-04-26 19:19:17 - OptimizationPipeline - INFO - Запуск оптимизации по модели Блэка-Литермана
+2025-04-26 19:19:20 - OptimizationPipeline - INFO - Сравнительная таблица сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison.csv
+2025-04-26 19:19:20 - OptimizationPipeline - INFO - Сравнительный график сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison_plot.png
+2025-04-26 19:19:20 - OptimizationPipeline - INFO - Информация о портфеле облигаций сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/bonds_summary.csv
+2025-04-26 19:20:31 - OptimizationPipeline - INFO - Запуск парсера капитализаций для модели Блэка-Литермана
+2025-04-26 19:20:32 - OptimizationPipeline - INFO - Запуск оптимизации по модели Марковица
+2025-04-26 19:20:34 - OptimizationPipeline - INFO - Запуск оптимизации по модели Блэка-Литермана
+2025-04-26 19:20:36 - OptimizationPipeline - INFO - Сравнительная таблица сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison.csv
+2025-04-26 19:20:36 - OptimizationPipeline - INFO - Сравнительный график сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison_plot.png
+2025-04-26 19:20:36 - OptimizationPipeline - INFO - Информация о портфеле облигаций сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/bonds_summary.csv
+2025-04-26 19:21:46 - OptimizationPipeline - INFO - Запуск парсера капитализаций для модели Блэка-Литермана
+2025-04-26 19:21:47 - OptimizationPipeline - INFO - Запуск оптимизации по модели Марковица
+2025-04-26 19:21:49 - OptimizationPipeline - INFO - Запуск оптимизации по модели Блэка-Литермана
+2025-04-26 19:21:51 - OptimizationPipeline - INFO - Сравнительная таблица сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison.csv
+2025-04-26 19:21:51 - OptimizationPipeline - INFO - Сравнительный график сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison_plot.png
+2025-04-26 19:21:51 - OptimizationPipeline - INFO - Информация о портфеле облигаций сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/bonds_summary.csv
+2025-04-26 19:43:34 - OptimizationPipeline - INFO - Запуск парсера капитализаций для модели Блэка-Литермана
+2025-04-26 19:43:34 - OptimizationPipeline - INFO - Запуск оптимизации по модели Марковица
+2025-04-26 19:43:37 - OptimizationPipeline - INFO - Запуск оптимизации по модели Блэка-Литермана
+2025-04-26 19:43:39 - OptimizationPipeline - INFO - Сравнительная таблица сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison.csv
+2025-04-26 19:43:39 - OptimizationPipeline - INFO - Сравнительный график сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison_plot.png
+2025-04-26 19:43:39 - OptimizationPipeline - INFO - Информация о портфеле облигаций сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/bonds_summary.csv
+2025-04-26 19:45:09 - OptimizationPipeline - INFO - Запуск парсера капитализаций для модели Блэка-Литермана
+2025-04-26 19:45:09 - OptimizationPipeline - INFO - Запуск оптимизации по модели Марковица
+2025-04-26 19:45:11 - OptimizationPipeline - INFO - Запуск оптимизации по модели Блэка-Литермана
+2025-04-26 19:45:14 - OptimizationPipeline - INFO - Сравнительная таблица сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison.csv
+2025-04-26 19:45:14 - OptimizationPipeline - INFO - Сравнительный график сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/comparison_plot.png
+2025-04-26 19:45:14 - OptimizationPipeline - INFO - Информация о портфеле облигаций сохранена в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/bonds_summary.csv

@@ -25,15 +25,21 @@ from pys.data_collection.private_info import BASE_PATH
 class TechAnalysisPipeline(BaseLogger):
     def __init__(self,
                  base_dir: str = BASE_PATH,
-                 tickers: List[str] = [
-                     "GAZP", "SBER", "LKOH", "GMKN", "ROSN", "TATN", "MTSS",
-                     "ALRS", "SNGS", "VTBR", "NVTK", "POLY", "MVID", "PHOR",
-                     "SIBN", "AFKS", "MAGN", "RUAL"
-                 ]):
+                 tickers: List[str] = None):
+        
         super().__init__('TechAnalysisPipeline')
         self.base_dir = base_dir
-        self.tickers = tickers
+        if tickers is None:
+            self.tickers = [
+                        "GAZP", "SBER", "LKOH", "GMKN", "ROSN", "TATN", "MTSS",
+                        "ALRS", "SNGS", "VTBR", "NVTK", "POLY", "MVID", "PHOR",
+                        "SIBN", "AFKS", "MAGN", "RUAL"
+                    ]
+        else:
+            self.tickers = tickers
+
         self.results = {} 
+
 
     def run_pipeline(self):
         self.logger.info("=== НАЧАЛО ТЕХНИЧЕСКОГО АНАЛИЗА ===")
@@ -176,13 +182,20 @@ class TechAnalysisPipeline(BaseLogger):
                 missing = stats.get("missing_values", 0)
                 total = stats.get("total_rows", 0)
                 param_info = stats.get("parameter_info", "N/A")
-                summary_lines.append(f"  {indicator} -> {param_info} | Пропущено: {missing} из {total} записей")
+                summary_lines.append(f"  {indicator} -&gt; {param_info} | Пропущено: {missing} из {total} записей")
             summary_lines.append("-" * 50)
 
-        report_path = os.path.join(self.base_dir, "data", "processed_data", "tech_analysis_summary.txt")
+        # Создаем директорию summaries, если она не существует
+        summary_dir = os.path.join(self.base_dir, "data", "summaries")
+        os.makedirs(summary_dir, exist_ok=True)
+        
+        # Формируем путь к файлу в новой директории
+        report_path = os.path.join(summary_dir, "tech_analysis_summary.txt")
+        
         with open(report_path, "w", encoding="utf-8") as f:
             f.write("\n".join(summary_lines))
         self.logger.info(f"Сводный отчет сохранен в {report_path}")
 
-def run_pipeline_technical():
-    TechAnalysisPipeline(base_dir=BASE_PATH).run_pipeline()
+
+def run_pipeline_technical(tickers, base_dir=BASE_PATH):
+    TechAnalysisPipeline(base_dir=base_dir, tickers=tickers).run_pipeline()

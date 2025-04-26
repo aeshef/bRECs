@@ -362,7 +362,8 @@ def run_bond_selection_with_kbd(
                 'report': bond_results.get('report_path'),
                 'kbd_chart': kbd_results.get('kbd_chart_path'),
                 'portfolio_viz': bond_results.get('visualization_path'),
-                'results_summary': results_path
+                'results_summary': results_path,
+                'portfolio_path' : bond_results.get('portfolio_path')
             }
         })
     elif output_format == 'portfolio':

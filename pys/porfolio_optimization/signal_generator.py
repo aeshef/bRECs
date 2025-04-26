@@ -9,9 +9,6 @@ import matplotlib.dates as mdates
 import shutil
 import sys
 
-# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
-# from private_info import BASE_PATH
-
 from pys.utils.logger import BaseLogger
 from pys.data_collection.private_info import BASE_PATH
 
@@ -40,28 +37,7 @@ class SignalGenerator(BaseLogger):
         self.threshold_buy = threshold_buy
         self.threshold_sell = threshold_sell
         self.df = None
-        
-        # # Настройка логгера
-        # self.logger = logging.getLogger('signal_generator')
-        # self.logger.setLevel(log_level)
-        
-        # # Создаем обработчик для записи в файл
-        # log_dir = 'logs'
-        # os.makedirs(log_dir, exist_ok=True)
-        # file_handler = logging.FileHandler(f'{log_dir}/signal_generator_{datetime.now().strftime("%Y%m%d")}.log')
-        
-        # # Создаем форматтер
-        # formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-        # file_handler.setFormatter(formatter)
-        
-        # # Добавляем обработчик к логгеру, если его еще нет
-        # if not self.logger.handlers:
-        #     self.logger.addHandler(file_handler)
-        #     # Добавляем вывод в консоль
-        #     console_handler = logging.StreamHandler()
-        #     console_handler.setFormatter(formatter)
-        #     self.logger.addHandler(console_handler)
-    
+
     def load_data(self, input_file=None):
         """Загрузка данных для анализа"""
         if input_file:
@@ -144,55 +120,90 @@ class SignalGenerator(BaseLogger):
         
         # НОВЫЙ КОД: Расчет фундаментального скора
         self.logger.info("Расчет фундаментального скора")
-        
-        # Загружаем фундаментальные данные и рассчитываем квантили
-        fund_data = self.load_fundamental_data()
-        quantiles = self.calculate_quantiles(fund_data)
-        
-        # Создаем отчет о доступности данных
-        self.logger.info("Доступность фундаментальных показателей:")
-        for year in ['2023', '2024']:
-            for indicator, stats in quantiles[year].items():
-                data_ratio = stats.get('data_ratio', 0) * 100
-                self.logger.info(f"  {year} - {indicator}: {data_ratio:.1f}% компаний")
-        
+    
         # Инициализируем фундаментальный скор
         self.df['fundamental_score'] = 0.0
         
+        fund_data = self.load_fundamental_data()
+    
+        # Проверка наличия загруженных данных
+        if not any(fund_data.values()):
+            self.logger.warning("Фундаментальные данные не найдены или не загружены!")
+            return self.df
+            
+        quantiles = self.calculate_quantiles(fund_data)
+        
+        # Создаем словарь фундаментальных скоров для кэширования
+        ticker_scores = {'2023': {}, '2024': {}}
+        ticker_cache_status = {'loaded': 0, 'calculated': 0, 'missing': 0}
+        
         # Для каждого тикера и даты определяем фундаментальный скор
         if 'ticker' in self.df.columns:
-            # Создаем словарь фундаментальных скоров для кэширования
-            ticker_scores = {'2023': {}, '2024': {}}
+            tickers = self.df['ticker'].unique()
             
+            # Заблаговременно рассчитываем скоры для всех тикеров
             for year in ['2023', '2024']:
-                for ticker in fund_data[year]:
-                    ticker_scores[year][ticker] = self.calculate_ticker_fundamental_score(
-                        ticker, year, fund_data, quantiles
-                    )
+                for ticker in tickers:
+                    if ticker in fund_data[year]:
+                        ticker_cache_status['loaded'] += 1
+                        ticker_scores[year][ticker] = self.calculate_ticker_fundamental_score(
+                            ticker, year, fund_data, quantiles
+                        )
+                        ticker_cache_status['calculated'] += 1
+                        self.logger.debug(f"Рассчитан фундаментальный скор для {ticker} за {year}: {ticker_scores[year][ticker]}")
+                    else:
+                        ticker_cache_status['missing'] += 1
+                        self.logger.debug(f"Нет фундаментальных данных для {ticker} за {year}")
+            
+            self.logger.info(f"Статус загрузки фундаментальных данных: загружено {ticker_cache_status['loaded']}, "
+                            f"рассчитано {ticker_cache_status['calculated']}, отсутствует {ticker_cache_status['missing']}")
+            
+            # Отчет о наличии данных по годам
+            for year in ['2023', '2024']:
+                available_tickers = sum(1 for ticker in tickers if ticker in ticker_scores[year])
+                self.logger.info(f"Фундаментальные данные за {year}: доступны для {available_tickers} из {len(tickers)} тикеров")
             
             # Применяем скоры к DataFrame
-            ticker_year_scores = {}  # для отчетности
+            data_year_counts = {'2023': 0, '2024': 0, 'unknown': 0}
             
             for index, row in self.df.iterrows():
                 ticker = row['ticker']
                 date = index if isinstance(index, pd.Timestamp) else pd.to_datetime(index)
                 
-                # Используем данные предыдущего года
-                if date.year == 2024 and ticker in ticker_scores['2023']:
-                    score = ticker_scores['2023'][ticker]
-                    self.df.loc[index, 'fundamental_score'] = score
-                    ticker_year_scores.setdefault(ticker, {})['2023'] = score
+                # Примечание: визуализируем какой год данных используется для каждой даты
+                if date.year == 2024:
+                    # Используем 2023 данные для 2024 года (предыдущий финансовый год)
+                    if ticker in ticker_scores['2023']:
+                        score = ticker_scores['2023'][ticker]
+                        self.df.loc[index, 'fundamental_score'] = score
+                        data_year_counts['2023'] += 1
+                    else:
+                        # Если нет данных 2023 года, пробуем использовать более старые
+                        self.df.loc[index, 'fundamental_score'] = 0
+                        data_year_counts['unknown'] += 1
                 
-                elif date.year == 2025 and ticker in ticker_scores['2024']:
-                    score = ticker_scores['2024'][ticker]
-                    self.df.loc[index, 'fundamental_score'] = score
-                    ticker_year_scores.setdefault(ticker, {})['2024'] = score
-            
-            # Отчет по фундаментальным скорам
-            self.logger.info("Фундаментальные скоры по тикерам:")
-            for ticker, years in ticker_year_scores.items():
-                scores_str = ", ".join([f"{y}: {s:.3f}" for y, s in years.items()])
-                self.logger.info(f"  {ticker}: {scores_str}")
+                elif date.year == 2025:
+                    # Используем 2024 данные для 2025 года (предыдущий финансовый год)
+                    if ticker in ticker_scores['2024']:
+                        score = ticker_scores['2024'][ticker]
+                        self.df.loc[index, 'fundamental_score'] = score
+                        data_year_counts['2024'] += 1
+                    else:
+                        # Если 2024 данных нет, используем 2023
+                        if ticker in ticker_scores['2023']:
+                            score = ticker_scores['2023'][ticker]
+                            self.df.loc[index, 'fundamental_score'] = score
+                            data_year_counts['2023'] += 1
+                        else:
+                            self.df.loc[index, 'fundamental_score'] = 0
+                            data_year_counts['unknown'] += 1
+                else:
+                    # Для других лет просто используем ноль
+                    self.df.loc[index, 'fundamental_score'] = 0
+                    data_year_counts['unknown'] += 1
+        
+            self.logger.info(f"Использование фундаментальных данных: данные 2023 - {data_year_counts['2023']}, "
+                            f"данные 2024 - {data_year_counts['2024']}, нет данных - {data_year_counts['unknown']}")
         
         # Композитный скор на основе весов
         self.df['composite_score'] = (
@@ -202,13 +213,21 @@ class SignalGenerator(BaseLogger):
         )
         
         self.logger.info("Композитный скор рассчитан")
+        
+        # Выводим пример разных скоров для проверки
+        sample_tickers = self.df['ticker'].unique()[:5] if len(self.df['ticker'].unique()) > 5 else self.df['ticker'].unique()
+        for ticker in sample_tickers:
+            values = self.df[self.df['ticker'] == ticker].iloc[-1]
+            self.logger.info(f"Пример скоров для {ticker}: fundamental={values['fundamental_score']:.4f}, "
+                            f"tech={values['tech_score']:.4f}, sentiment={values['sentiment_score']:.4f}")
+        
         return self.df
     
     def load_fundamental_data(self, base_path=f'{BASE_PATH}/data/processed_data'):
         """Загружает фундаментальные данные для всех тикеров с обработкой NO_DATA"""
         if 'ticker' not in self.df.columns:
             self.logger.error("Колонка 'ticker' не найдена в данных")
-            return {}
+            return {'2023': {}, '2024': {}}
             
         # Получаем список уникальных тикеров
         tickers = self.df['ticker'].unique()
@@ -216,33 +235,45 @@ class SignalGenerator(BaseLogger):
         
         # Хранилище для данных по годам
         fund_data = {'2023': {}, '2024': {}}
+        missing_files = []
         
         # Загружаем данные для всех тикеров
         for ticker in tickers:
             for year in ['2023', '2024']:
                 # Обновленный путь к файлу
                 file_path = os.path.join(base_path, ticker, 'fundamental_analysis', year, 'common.csv')
+                
                 if os.path.exists(file_path):
                     try:
                         data = pd.read_csv(file_path)
-                        
-                        # Преобразуем значения NO_DATA в NaN
-                        data['value_float'] = data['value_float'].apply(
-                            lambda x: np.nan if x == 'NO_DATA' else float(x) 
-                            if isinstance(x, (int, float)) or (isinstance(x, str) and x.replace('.', '', 1).isdigit())
-                            else np.nan
-                        )
-                        
-                        fund_data[year][ticker] = data
-                        valid_count = data['value_float'].notna().sum()
-                        missing_count = data['value_float'].isna().sum()
-                        self.logger.info(f"Загружены данные {ticker} за {year}: {valid_count} показателей, {missing_count} отсутствует")
+                        if len(data) > 0:
+                            # Преобразуем значения NO_DATA в NaN
+                            data['value_float'] = data['value_float'].apply(
+                                lambda x: np.nan if x == 'NO_DATA' else float(x) 
+                                if isinstance(x, (int, float)) or (isinstance(x, str) and x.replace('.', '', 1).isdigit())
+                                else np.nan
+                            )
+                            
+                            fund_data[year][ticker] = data
+                            valid_count = data['value_float'].notna().sum()
+                            missing_count = data['value_float'].isna().sum()
+                            self.logger.info(f"Загружены данные {ticker} за {year}: {valid_count} показателей, {missing_count} отсутствует")
+                        else:
+                            self.logger.warning(f"Файл пуст для {ticker} за {year}")
+                            missing_files.append(f"{ticker}_{year}")
                     except Exception as e:
                         self.logger.warning(f"Ошибка загрузки {ticker} за {year}: {e}")
+                        missing_files.append(f"{ticker}_{year}")
                 else:
                     self.logger.warning(f"Файл не найден: {file_path}")
+                    missing_files.append(f"{ticker}_{year}")
+        
+        if missing_files:
+            self.logger.warning(f"Отсутствуют данные для {len(missing_files)} комбинаций тикер-год: {', '.join(missing_files[:10])}" + 
+                            (f" и еще {len(missing_files)-10}" if len(missing_files) > 10 else ""))
         
         return fund_data
+
     
     def calculate_quantiles(self, fund_data):
         """Рассчитывает квантили для каждого показателя, учитывая только реальные данные"""
@@ -500,10 +531,16 @@ class SignalGenerator(BaseLogger):
             
         return shortlist_df[output_columns]
     
-    def visualize_signals(self, output_dir=None):
+    def visualize_signals(self, output_dir=None, save_to_ticker_dirs=True):
         """
-        Визуализирует график котировок с отмеченными сигналами покупки и продажи 
-        для каждого тикера в отдельной папке
+        Визуализирует графики сигналов для каждого тикера
+        
+        Parameters:
+        -----------
+        output_dir : str, optional
+            Директория для сохранения визуализаций (если None, то в директории тикеров)
+        save_to_ticker_dirs : bool
+            Сохранять ли визуализации в директории тикеров
         """
         if self.df is None or 'signal' not in self.df.columns:
             self.logger.error("Нет данных с сигналами для визуализации")
@@ -511,33 +548,37 @@ class SignalGenerator(BaseLogger):
             
         self.logger.info("Визуализация графиков котировок с торговыми сигналами")
         
-        # Если директория для сохранения не указана, используем стандартную
-        if output_dir is None:
-            output_dir = 'signal_visualizations'
-            
-        # Создаем основную директорию
-        os.makedirs(output_dir, exist_ok=True)
-        
         saved_paths = []
         
-        # Проверяем наличие колонки ticker
         if 'ticker' not in self.df.columns:
-            self.logger.error("Колонка 'ticker' не найдена, невозможно визуализировать по тикерам")
+            self.logger.error("Колонка 'ticker' не найдена")
             return None
             
-        # Получаем список уникальных тикеров
         tickers = self.df['ticker'].unique()
             
         for ticker in tickers:
-            # Создаем папку для тикера
-            ticker_dir = os.path.join(output_dir, ticker)
+            # Определяем директорию сохранения
+            if save_to_ticker_dirs:
+                # Сохраняем в директорию тикера
+                ticker_dir = os.path.join(
+                    BASE_PATH, 
+                    'data', 
+                    'processed_data', 
+                    ticker, 
+                    'signal_visualizations'
+                )
+            elif output_dir:
+                # Сохраняем в указанную директорию, с подпапкой для тикера
+                ticker_dir = os.path.join(output_dir, 'ticker_visualizations', ticker)
+            else:
+                # Если директория не указана и не сохраняем в директории тикеров, пропускаем
+                continue
+                
             os.makedirs(ticker_dir, exist_ok=True)
             
-            # Фильтруем данные для тикера
             ticker_data = self.df[self.df['ticker'] == ticker].copy()
             
             if len(ticker_data) == 0:
-                self.logger.warning(f"Нет данных для тикера {ticker}")
                 continue
                 
             # Создаем визуализацию сигналов
@@ -570,19 +611,25 @@ class SignalGenerator(BaseLogger):
             plt.xticks(rotation=45)
             ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
             plt.tight_layout()
-            
-            # Сохранение файла signals.png
+
             file_path = os.path.join(ticker_dir, 'signals.png')
             plt.savefig(file_path, dpi=300)
             plt.close()
             self.logger.info(f"График сигналов для {ticker} сохранен в {file_path}")
             saved_paths.append(file_path)
-                
+                    
         return saved_paths
     
-    def visualize_composite_scores(self, output_dir=None):
+    def visualize_composite_scores(self, output_dir=None, save_to_ticker_dirs=True):
         """
-        Визуализирует графики композитных скоров для каждого тикера в отдельной папке
+        Визуализирует графики композитных скоров для каждого тикера
+        
+        Parameters:
+        -----------
+        output_dir : str, optional
+            Директория для сохранения визуализаций (если None, то в директории тикеров)
+        save_to_ticker_dirs : bool
+            Сохранять ли визуализации в директории тикеров
         """
         if self.df is None or 'composite_score' not in self.df.columns:
             self.logger.error("Нет данных со скорами для визуализации")
@@ -590,29 +637,34 @@ class SignalGenerator(BaseLogger):
             
         self.logger.info("Визуализация компонентов композитного скора")
         
-        # Если директория для сохранения не указана, используем стандартную
-        if output_dir is None:
-            output_dir = 'signal_visualizations'
-            
-        # Создаем основную директорию
-        os.makedirs(output_dir, exist_ok=True)
-        
         saved_paths = []
         
-        # Проверяем наличие колонки ticker
         if 'ticker' not in self.df.columns:
-            self.logger.error("Колонка 'ticker' не найдена, невозможно визуализировать по тикерам")
+            self.logger.error("Колонка 'ticker' не найдена")
             return None
             
-        # Получаем список уникальных тикеров
         tickers = self.df['ticker'].unique()
             
         for ticker in tickers:
-            # Создаем папку для тикера
-            ticker_dir = os.path.join(output_dir, ticker)
+            # Определяем директорию сохранения
+            if save_to_ticker_dirs:
+                # Сохраняем в директорию тикера
+                ticker_dir = os.path.join(
+                    BASE_PATH,
+                    'data',
+                    'processed_data',
+                    ticker,
+                    'signal_visualizations'
+                )
+            elif output_dir:
+                # Сохраняем в указанную директорию, с подпапкой для тикера
+                ticker_dir = os.path.join(output_dir, 'ticker_visualizations', ticker)
+            else:
+                # Если директория не указана и не сохраняем в директории тикеров, пропускаем
+                continue
+                
             os.makedirs(ticker_dir, exist_ok=True)
             
-            # Фильтруем данные для тикера
             ticker_data = self.df[self.df['ticker'] == ticker].copy()
             
             if len(ticker_data) == 0:
@@ -620,22 +672,26 @@ class SignalGenerator(BaseLogger):
                 continue
                 
             # Создаем визуализацию с двумя подграфиками
-            fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(14, 10), sharex=True, gridspec_kw={'height_ratios': [2, 1]})
+            fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(14, 10), sharex=True, 
+                                        gridspec_kw={'height_ratios': [2, 1]})
             
             # Верхний график: цена и сигналы
-            ax1.plot(ticker_data.index, ticker_data['close'], label='Цена закрытия', color='blue', alpha=0.7)
+            ax1.plot(ticker_data.index, ticker_data['close'], 
+                    label='Цена закрытия', color='blue', alpha=0.7)
             
             # Отмечаем сигналы покупки (Buy)
             buy_signals = ticker_data[ticker_data['signal'] == 1]
             if len(buy_signals) > 0:
-                ax1.scatter(buy_signals.index, buy_signals['close'], color='green', marker='^', s=100, 
-                           label='Покупка', zorder=5)
+                ax1.scatter(buy_signals.index, buy_signals['close'], 
+                        color='green', marker='^', s=100, 
+                        label='Покупка', zorder=5)
             
             # Отмечаем сигналы продажи (Sell)
             sell_signals = ticker_data[ticker_data['signal'] == -1]
             if len(sell_signals) > 0:
-                ax1.scatter(sell_signals.index, sell_signals['close'], color='red', marker='v', s=100, 
-                           label='Продажа', zorder=5)
+                ax1.scatter(sell_signals.index, sell_signals['close'], 
+                        color='red', marker='v', s=100, 
+                        label='Продажа', zorder=5)
             
             current_date = datetime.now().strftime('%Y-%m-%d')
             ax1.set_title(f'Котировки и сигналы: {ticker} (обновлено {current_date})')
@@ -660,13 +716,14 @@ class SignalGenerator(BaseLogger):
                 colors.append('brown')
             
             for i, score in enumerate(scores):
-                ax2.plot(ticker_data.index, ticker_data[score], label=score, color=colors[i])
+                ax2.plot(ticker_data.index, ticker_data[score], 
+                        label=score, color=colors[i])
             
-            # Добавляем горизонтальные линии для пороговых значений сигналов
-            ax2.axhline(y=self.threshold_buy, color='green', linestyle='--', alpha=0.7, 
-                       label=f'Порог покупки ({self.threshold_buy})')
-            ax2.axhline(y=self.threshold_sell, color='red', linestyle='--', alpha=0.7, 
-                       label=f'Порог продажи ({self.threshold_sell})')
+            # Добавляем горизонтальные линии для пороговых значений
+            ax2.axhline(y=self.threshold_buy, color='green', linestyle='--', alpha=0.7,
+                    label=f'Порог покупки ({self.threshold_buy})')
+            ax2.axhline(y=self.threshold_sell, color='red', linestyle='--', alpha=0.7,
+                    label=f'Порог продажи ({self.threshold_sell})')
             ax2.axhline(y=0, color='gray', linestyle='-', alpha=0.5)
             
             ax2.set_xlabel('Дата')
@@ -679,7 +736,7 @@ class SignalGenerator(BaseLogger):
             ax2.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
             plt.tight_layout()
             
-            # Сохранение файла scores.png
+            # Сохранение файла в папку тикера
             file_path = os.path.join(ticker_dir, 'scores.png')
             plt.savefig(file_path, dpi=300)
             plt.close()
@@ -688,8 +745,10 @@ class SignalGenerator(BaseLogger):
                 
         return saved_paths
 
+
     
-    def run_pipeline(self, input_file=None, output_file=None, top_pct=0.3, output_dir=f'{BASE_PATH}/data/signal_visualizations'):
+    def run_pipeline(self, input_file=None, output_file=None, top_pct=0.3, output_dir=f'{BASE_PATH}/data/signal_visualizations',
+        save_ticker_visualizations=False):
         """
         Запускает полный пайплайн генерации сигналов с сохранением результатов в структурированном виде
         
@@ -735,11 +794,11 @@ class SignalGenerator(BaseLogger):
         self.save_shortlist(output_dir)
         
         # Визуализация сигналов
-        self.visualize_signals(output_dir)
+        self.visualize_signals(output_dir=output_dir, save_to_ticker_dirs=save_ticker_visualizations)
         
         # Визуализация компонентов скора
-        self.visualize_composite_scores(output_dir)
-        
+        self.visualize_composite_scores(output_dir=output_dir, save_to_ticker_dirs=save_ticker_visualizations)
+
         # Сохранение полных результатов
         today = datetime.now().strftime('%Y%m%d')
 
@@ -782,7 +841,9 @@ class SignalGenerator(BaseLogger):
 def run_pipeline_signal_generator(
         weight_tech=0.5,
         weight_sentiment=0.3,
-        weight_fundamental=0.2
+        weight_fundamental=0.2,
+        output_dir=f"{BASE_PATH}/data/signal_visualizations",
+        save_ticker_visualizations=False
     ):
 
     SignalGenerator(
@@ -792,4 +853,5 @@ def run_pipeline_signal_generator(
         weight_fundamental=weight_fundamental
     ).run_pipeline(
         output_file=f"{BASE_PATH}/data/signals.csv",
-        output_dir=f"{BASE_PATH}/data/signal_visualizations")
+        output_dir=output_dir,
+        save_ticker_visualizations=save_ticker_visualizations)

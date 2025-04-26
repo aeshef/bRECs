@@ -22,7 +22,7 @@ from pys.utils.logger import BaseLogger
 from pys.data_collection.private_info import BASE_PATH
 
 class SmartLabYearlyParser(BaseLogger):
-    def __init__(self, ticker, base_path='/Users/aeshef/Documents/GitHub/kursach/data/processed_data', needed_prc_per_year=0.9):
+    def __init__(self, ticker, base_path=f'/{BASE_PATH}/data/processed_data', needed_prc_per_year=0.9):
         super().__init__('SmartLabYearlyParser')
         self.ticker = ticker.upper()
         self.url = f"https://smart-lab.ru/q/{self.ticker}/f/y/"
@@ -32,46 +32,68 @@ class SmartLabYearlyParser(BaseLogger):
 
     def fetch_page(self):
         headers = {
-            "User-Agent": (
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/115.0 Safari/537.36"
-            ),
-            "Accept-Language": "ru-RU,ru;q=0.9"
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+            "Connection": "keep-alive",
+            "Upgrade-Insecure-Requests": "1",
+            "Cache-Control": "max-age=0"
         }
+
         
         try:
+            self.logger.debug(f"Sending request to {self.url}")
             response = requests.get(self.url, headers=headers)
+            self.logger.debug(f"Response status code: {response.status_code}")
+            
             if response.status_code == 200:
-                return BeautifulSoup(response.text, "html.parser")
+                soup = BeautifulSoup(response.text, "html.parser")
+                # Проверяем содержимое страницы
+                self.logger.debug(f"Page title: {soup.title.string if soup.title else 'No title'}")
+                all_tables = soup.find_all("table")
+                self.logger.debug(f"Found {len(all_tables)} table elements in HTML")
+                return soup
             self.logger.error(f"Failed to fetch data: HTTP {response.status_code}")
             return None
         except Exception as e:
             self.logger.error(f"Error during request: {e}")
             return None
 
+
     def parse_yearly_tables(self, soup):
         if soup is None:
             return pd.DataFrame()
 
         tables = soup.find_all("table")
+        self.logger.debug(f"Found {len(tables)} tables in HTML")
+        
         if not tables:
             self.logger.warning("No tables found on the page")
+            # Проверим, есть ли какие-то другие элементы, которые могут содержать данные
+            divs = soup.find_all("div", class_="table")
+            self.logger.debug(f"Found {len(divs)} div elements with class 'table'")
             return pd.DataFrame()
 
         dataframes = []
-        for table in tables:
+        for i, table in enumerate(tables):
             try:
+                self.logger.debug(f"Attempting to parse table #{i+1}")
+                # Выведем первые 100 символов HTML таблицы для диагностики
+                self.logger.debug(f"Table HTML snippet: {str(table)[:100]}...")
                 df_list = pd.read_html(str(table), header=None, decimal=',')
                 if df_list:
+                    self.logger.debug(f"Successfully parsed table #{i+1} into DataFrame with shape {df_list[0].shape}")
                     dataframes.append(df_list[0])
+                else:
+                    self.logger.debug(f"pd.read_html returned empty list for table #{i+1}")
             except Exception as e:
-                self.logger.debug(f"Failed to parse a table: {e}")
+                self.logger.debug(f"Failed to parse table #{i+1}: {e}")
                 continue
 
         if dataframes:
             return pd.concat(dataframes, ignore_index=True, sort=False)
         return pd.DataFrame()
+
 
     @staticmethod
     def to_float(x):
@@ -145,7 +167,7 @@ class SmartLabYearlyParser(BaseLogger):
 
 
 class FundamentalPipeline(BaseLogger):
-    def __init__(self, base_path='/Users/aeshef/Documents/GitHub/kursach/data/processed_data', needed_prc_per_year=0.9):
+    def __init__(self, base_path=f'{BASE_PATH}/data/processed_data', needed_prc_per_year=0.9):
         """Initialize the pipeline with base path and percentage threshold"""
         super().__init__('FundamentalPipeline')
         self.base_path = base_path
@@ -304,7 +326,7 @@ class FundamentalPipeline(BaseLogger):
         self.logger.info("Used 'NO_DATA' token for missing indicators.")
 
 
-def run_pipeline_fundamental(ticker_list, base_path='/Users/aeshef/Documents/GitHub/kursach/data/processed_data'):
+def run_pipeline_fundamental(ticker_list, base_path=f'{BASE_PATH}/data/processed_data'):
     pipeline = FundamentalPipeline(base_path)
     pipeline.process_tickers(ticker_list)
     all_years, common_indicators_by_year, _ = pipeline.analyze_common_indicators()

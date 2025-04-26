@@ -116,3 +116,124 @@
 2025-04-24 18:57:24 - HonestBacktester - INFO - Создание сравнительной визуализации
 2025-04-24 18:57:24 - HonestBacktester - INFO - Создание сводного отчета
 2025-04-24 18:57:24 - HonestBacktester - INFO - Отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/improved_pipeline/honest_backtest
+2025-04-26 17:16:37 - HonestBacktester - INFO - HonestBacktester initialized
+2025-04-26 17:16:37 - HonestBacktester - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-26 17:16:38 - HonestBacktester - INFO - Данные разделены: 5462 строк для обучения, 1648 строк для тестирования
+2025-04-26 17:16:39 - HonestBacktester - INFO - Использование параметров по умолчанию
+2025-04-26 17:16:39 - HonestBacktester - INFO - Запуск генерации сигналов на тренировочных данных
+2025-04-26 17:16:52 - HonestBacktester - INFO - Запуск оптимизации портфеля на тренировочных данных
+2025-04-26 17:16:54 - HonestBacktester - INFO - Запуск генерации сигналов на тестовых данных
+2025-04-26 17:17:05 - HonestBacktester - INFO - Запуск бэктеста на тестовых данных
+2025-04-26 17:46:37 - HonestBacktester - INFO - HonestBacktester initialized
+2025-04-26 17:46:37 - HonestBacktester - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-26 17:46:37 - HonestBacktester - INFO - Данные разделены: 5462 строк для обучения, 1648 строк для тестирования
+2025-04-26 17:46:38 - HonestBacktester - INFO - Использование параметров по умолчанию
+2025-04-26 17:46:38 - HonestBacktester - INFO - Запуск генерации сигналов на тренировочных данных
+2025-04-26 17:46:51 - HonestBacktester - INFO - Запуск оптимизации портфеля на тренировочных данных
+2025-04-26 17:46:53 - HonestBacktester - INFO - Запуск генерации сигналов на тестовых данных
+2025-04-26 17:47:04 - HonestBacktester - INFO - Запуск бэктеста на тестовых данных
+2025-04-26 17:56:33 - HonestBacktester - INFO - HonestBacktester initialized
+2025-04-26 17:56:33 - HonestBacktester - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-26 17:56:33 - HonestBacktester - INFO - Данные разделены: 5462 строк для обучения, 1648 строк для тестирования
+2025-04-26 17:56:34 - HonestBacktester - INFO - Использование параметров по умолчанию
+2025-04-26 17:56:34 - HonestBacktester - INFO - Запуск генерации сигналов на тренировочных данных
+2025-04-26 17:56:47 - HonestBacktester - INFO - Запуск оптимизации портфеля на тренировочных данных
+2025-04-26 17:56:49 - HonestBacktester - INFO - Запуск генерации сигналов на тестовых данных
+2025-04-26 17:57:00 - HonestBacktester - INFO - Запуск бэктеста на тестовых данных
+2025-04-26 17:57:38 - HonestBacktester - INFO - HonestBacktester initialized
+2025-04-26 17:57:38 - HonestBacktester - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-26 17:57:39 - HonestBacktester - INFO - Данные разделены: 5462 строк для обучения, 1648 строк для тестирования
+2025-04-26 17:57:40 - HonestBacktester - INFO - Использование параметров по умолчанию
+2025-04-26 17:57:40 - HonestBacktester - INFO - Запуск генерации сигналов на тренировочных данных
+2025-04-26 17:57:52 - HonestBacktester - INFO - Запуск оптимизации портфеля на тренировочных данных
+2025-04-26 17:57:54 - HonestBacktester - INFO - Запуск генерации сигналов на тестовых данных
+2025-04-26 17:58:05 - HonestBacktester - INFO - Запуск бэктеста на тестовых данных
+2025-04-26 17:58:06 - HonestBacktester - INFO - Запуск бэктеста на тренировочных данных для сравнения
+2025-04-26 17:58:06 - HonestBacktester - INFO - Создание сравнительной визуализации
+2025-04-26 17:58:06 - HonestBacktester - INFO - Создание сводного отчета
+2025-04-26 17:58:06 - HonestBacktester - INFO - Отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/final_portfolio/honest_backtest
+2025-04-26 18:14:39 - HonestBacktester - INFO - HonestBacktester initialized
+2025-04-26 18:14:39 - HonestBacktester - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-26 18:14:39 - HonestBacktester - INFO - Данные разделены: 5462 строк для обучения, 1648 строк для тестирования
+2025-04-26 18:14:40 - HonestBacktester - INFO - Использование параметров по умолчанию
+2025-04-26 18:14:40 - HonestBacktester - INFO - Запуск генерации сигналов на тренировочных данных
+2025-04-26 18:14:53 - HonestBacktester - INFO - Запуск оптимизации портфеля на тренировочных данных
+2025-04-26 18:14:53 - HonestBacktester - ERROR - Ошибка оптимизации портфеля на тренировочных данных
+2025-04-26 18:15:24 - HonestBacktester - INFO - HonestBacktester initialized
+2025-04-26 18:15:24 - HonestBacktester - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-26 18:15:24 - HonestBacktester - INFO - Данные разделены: 5462 строк для обучения, 1648 строк для тестирования
+2025-04-26 18:15:25 - HonestBacktester - INFO - Использование параметров по умолчанию
+2025-04-26 18:15:25 - HonestBacktester - INFO - Запуск генерации сигналов на тренировочных данных
+2025-04-26 18:15:38 - HonestBacktester - INFO - Запуск оптимизации портфеля на тренировочных данных
+2025-04-26 18:15:38 - HonestBacktester - ERROR - Ошибка оптимизации портфеля на тренировочных данных
+2025-04-26 18:16:34 - HonestBacktester - INFO - HonestBacktester initialized
+2025-04-26 18:16:34 - HonestBacktester - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-26 18:16:34 - HonestBacktester - INFO - Данные разделены: 5462 строк для обучения, 1648 строк для тестирования
+2025-04-26 18:16:35 - HonestBacktester - INFO - Использование параметров по умолчанию
+2025-04-26 18:16:35 - HonestBacktester - INFO - Запуск генерации сигналов на тренировочных данных
+2025-04-26 18:16:48 - HonestBacktester - INFO - Запуск оптимизации портфеля на тренировочных данных
+2025-04-26 18:16:50 - HonestBacktester - INFO - Запуск генерации сигналов на тестовых данных
+2025-04-26 18:17:01 - HonestBacktester - INFO - Запуск бэктеста на тестовых данных
+2025-04-26 18:17:01 - HonestBacktester - INFO - Запуск бэктеста на тренировочных данных для сравнения
+2025-04-26 18:17:02 - HonestBacktester - INFO - Создание сравнительной визуализации
+2025-04-26 18:17:02 - HonestBacktester - INFO - Создание сводного отчета
+2025-04-26 18:17:02 - HonestBacktester - INFO - Отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/final_portfolio/honest_backtest
+2025-04-26 19:12:53 - HonestBacktester - INFO - HonestBacktester initialized
+2025-04-26 19:12:53 - HonestBacktester - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-26 19:12:53 - HonestBacktester - INFO - Данные разделены: 5462 строк для обучения, 1648 строк для тестирования
+2025-04-26 19:12:54 - HonestBacktester - INFO - Использование параметров по умолчанию
+2025-04-26 19:12:54 - HonestBacktester - INFO - Запуск генерации сигналов на тренировочных данных
+2025-04-26 19:13:06 - HonestBacktester - INFO - Запуск оптимизации портфеля на тренировочных данных
+2025-04-26 19:13:09 - HonestBacktester - INFO - Запуск генерации сигналов на тестовых данных
+2025-04-26 19:13:20 - HonestBacktester - INFO - Запуск бэктеста на тестовых данных
+2025-04-26 19:13:20 - HonestBacktester - INFO - Запуск бэктеста на тренировочных данных для сравнения
+2025-04-26 19:13:21 - HonestBacktester - INFO - Создание сравнительной визуализации
+2025-04-26 19:13:21 - HonestBacktester - INFO - Создание сводного отчета
+2025-04-26 19:13:21 - HonestBacktester - INFO - Отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_191234_standard_with_shorts/shorts_portfolio/honest_backtest
+2025-04-26 19:19:20 - HonestBacktester - INFO - HonestBacktester initialized
+2025-04-26 19:19:20 - HonestBacktester - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-26 19:19:20 - HonestBacktester - INFO - Данные разделены: 5462 строк для обучения, 1648 строк для тестирования
+2025-04-26 19:19:21 - HonestBacktester - INFO - Использование параметров по умолчанию
+2025-04-26 19:19:21 - HonestBacktester - INFO - Запуск генерации сигналов на тренировочных данных
+2025-04-26 19:19:34 - HonestBacktester - INFO - Запуск оптимизации портфеля на тренировочных данных
+2025-04-26 19:19:36 - HonestBacktester - INFO - Запуск генерации сигналов на тестовых данных
+2025-04-26 19:19:48 - HonestBacktester - INFO - Запуск бэктеста на тестовых данных
+2025-04-26 19:20:36 - HonestBacktester - INFO - HonestBacktester initialized
+2025-04-26 19:20:36 - HonestBacktester - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-26 19:20:36 - HonestBacktester - INFO - Данные разделены: 5462 строк для обучения, 1648 строк для тестирования
+2025-04-26 19:21:51 - HonestBacktester - INFO - HonestBacktester initialized
+2025-04-26 19:21:51 - HonestBacktester - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-26 19:21:52 - HonestBacktester - INFO - Данные разделены: 5462 строк для обучения, 1648 строк для тестирования
+2025-04-26 19:21:53 - HonestBacktester - INFO - Использование параметров по умолчанию
+2025-04-26 19:21:53 - HonestBacktester - INFO - Запуск генерации сигналов на тренировочных данных
+2025-04-26 19:22:05 - HonestBacktester - INFO - Запуск оптимизации портфеля на тренировочных данных
+2025-04-26 19:22:08 - HonestBacktester - INFO - Запуск генерации сигналов на тестовых данных
+2025-04-26 19:22:19 - HonestBacktester - INFO - Запуск бэктеста на тестовых данных
+2025-04-26 19:22:19 - HonestBacktester - INFO - Запуск бэктеста на тренировочных данных для сравнения
+2025-04-26 19:22:20 - HonestBacktester - INFO - Создание сравнительной визуализации
+2025-04-26 19:22:20 - HonestBacktester - INFO - Создание сводного отчета
+2025-04-26 19:22:20 - HonestBacktester - INFO - Отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_192132_standard_with_shorts/shorts_portfolio/honest_backtest
+2025-04-26 19:43:39 - HonestBacktester - INFO - HonestBacktester initialized
+2025-04-26 19:43:39 - HonestBacktester - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-26 19:43:39 - HonestBacktester - INFO - Данные разделены: 5462 строк для обучения, 1648 строк для тестирования
+2025-04-26 19:43:40 - HonestBacktester - INFO - Использование параметров по умолчанию
+2025-04-26 19:43:40 - HonestBacktester - INFO - Запуск генерации сигналов на тренировочных данных
+2025-04-26 19:43:53 - HonestBacktester - INFO - Запуск оптимизации портфеля на тренировочных данных
+2025-04-26 19:43:55 - HonestBacktester - INFO - Запуск генерации сигналов на тестовых данных
+2025-04-26 19:44:06 - HonestBacktester - INFO - Запуск бэктеста на тестовых данных
+2025-04-26 19:44:07 - HonestBacktester - INFO - Запуск бэктеста на тренировочных данных для сравнения
+2025-04-26 19:44:07 - HonestBacktester - INFO - Создание сравнительной визуализации
+2025-04-26 19:44:07 - HonestBacktester - INFO - Создание сводного отчета
+2025-04-26 19:44:07 - HonestBacktester - INFO - Отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194320_standard_with_shorts/shorts_portfolio/honest_backtest
+2025-04-26 19:45:14 - HonestBacktester - INFO - HonestBacktester initialized
+2025-04-26 19:45:14 - HonestBacktester - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-26 19:45:14 - HonestBacktester - INFO - Данные разделены: 5462 строк для обучения, 1648 строк для тестирования
+2025-04-26 19:45:15 - HonestBacktester - INFO - Использование параметров по умолчанию
+2025-04-26 19:45:15 - HonestBacktester - INFO - Запуск генерации сигналов на тренировочных данных
+2025-04-26 19:45:27 - HonestBacktester - INFO - Запуск оптимизации портфеля на тренировочных данных
+2025-04-26 19:45:29 - HonestBacktester - INFO - Запуск генерации сигналов на тестовых данных
+2025-04-26 19:45:40 - HonestBacktester - INFO - Запуск бэктеста на тестовых данных
+2025-04-26 19:45:41 - HonestBacktester - INFO - Запуск бэктеста на тренировочных данных для сравнения
+2025-04-26 19:45:41 - HonestBacktester - INFO - Создание сравнительной визуализации
+2025-04-26 19:45:41 - HonestBacktester - INFO - Создание сводного отчета
+2025-04-26 19:45:41 - HonestBacktester - INFO - Отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194455_standard_with_shorts/shorts_portfolio/honest_backtest
