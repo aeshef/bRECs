@@ -17,7 +17,6 @@ pys/data_collection/kbd_analyzer.py
 pys/data_collection/market_cap.py
 pys/data_collection/market_data.py
 pys/data_collection/news_pipeline.py
-pys/data_collection/private_info.py
 pys/data_collection/tech_analysis.py
 pys/data_collection/technical_indicators.py
 pys/data_collection/news_processor/__init__.py
