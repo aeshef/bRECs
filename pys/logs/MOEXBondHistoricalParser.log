@@ -13239,3 +13239,75 @@
 2025-04-27 16:12:25 - MOEXBondHistoricalParser - INFO - MOEX Bond Parser initialized
 2025-04-27 16:41:05 - MOEXBondHistoricalParser - INFO - MOEX Bond Parser initialized
 2025-04-27 16:50:46 - MOEXBondHistoricalParser - INFO - MOEX Bond Parser initialized
+2025-04-27 17:43:45 - MOEXBondHistoricalParser - INFO - MOEX Bond Parser initialized
+2025-04-27 17:43:45 - MOEXBondHistoricalParser - INFO - Запуск парсинга облигаций за период с 2023-01-01 по 2025-06-30
+2025-04-27 17:43:45 - MOEXBondHistoricalParser - INFO - Запрошен период с 2023-01-01 по 2025-06-30
+2025-04-27 17:43:45 - MOEXBondHistoricalParser - WARNING - Скорректирована конечная дата на 2025-04-25
+2025-04-27 17:43:45 - MOEXBondHistoricalParser - INFO - Получение облигаций за период с 2023-01-01 по 2025-04-25
+2025-04-27 17:43:45 - MOEXBondHistoricalParser - INFO - Обработка даты: 2023-01-01 (выходной)
+2025-04-27 17:43:45 - MOEXBondHistoricalParser - INFO - Обработка даты: 2023-01-02 (рабочий день)
+2025-04-27 17:43:45 - MOEXBondHistoricalParser - INFO - Получение списка облигаций на 2023-01-02
+2025-04-27 17:43:54 - MOEXBondHistoricalParser - INFO - Результаты парсинга облигаций на 2023-01-02:
+2025-04-27 17:43:54 - MOEXBondHistoricalParser - INFO -   Группа 58: 0 облигаций
+2025-04-27 17:43:54 - MOEXBondHistoricalParser - INFO -   Группа 193: 0 облигаций
+2025-04-27 17:43:54 - MOEXBondHistoricalParser - INFO -   Группа 105: 0 облигаций
+2025-04-27 17:43:54 - MOEXBondHistoricalParser - INFO -   Группа 77: 0 облигаций
+2025-04-27 17:43:54 - MOEXBondHistoricalParser - INFO -   Группа 207: 0 облигаций
+2025-04-27 17:43:54 - MOEXBondHistoricalParser - INFO -   Группа 167: 0 облигаций
+2025-04-27 17:43:54 - MOEXBondHistoricalParser - INFO -   Группа 245: 0 облигаций
+2025-04-27 17:43:54 - MOEXBondHistoricalParser - INFO -   Всего: 0 облигаций
+2025-04-27 17:43:54 - MOEXBondHistoricalParser - WARNING - Нет облигаций для применения фильтров
+2025-04-27 17:43:54 - MOEXBondHistoricalParser - INFO - Найдено 0 облигаций после фильтрации (загрузка #1)
+2025-04-27 17:43:54 - MOEXBondHistoricalParser - WARNING - На 2023-01-02 облигаций не найдено, возможно праздник или выходной
+2025-04-27 17:43:54 - MOEXBondHistoricalParser - INFO - Обработка даты: 2023-01-03 (рабочий день)
+2025-04-27 17:43:54 - MOEXBondHistoricalParser - INFO - Получение списка облигаций на 2023-01-03
+2025-04-27 17:44:03 - MOEXBondHistoricalParser - INFO - Результаты парсинга облигаций на 2023-01-03:
+2025-04-27 17:44:03 - MOEXBondHistoricalParser - INFO -   Группа 58: 100 облигаций
+2025-04-27 17:44:03 - MOEXBondHistoricalParser - INFO -   Группа 193: 100 облигаций
+2025-04-27 17:44:03 - MOEXBondHistoricalParser - INFO -   Группа 105: 0 облигаций
+2025-04-27 17:44:03 - MOEXBondHistoricalParser - INFO -   Группа 77: 0 облигаций
+2025-04-27 17:44:03 - MOEXBondHistoricalParser - INFO -   Группа 207: 27 облигаций
+2025-04-27 17:44:03 - MOEXBondHistoricalParser - INFO -   Группа 167: 0 облигаций
+2025-04-27 17:44:03 - MOEXBondHistoricalParser - INFO -   Группа 245: 16 облигаций
+2025-04-27 17:44:03 - MOEXBondHistoricalParser - INFO -   Всего: 243 облигаций
+2025-04-27 17:44:03 - MOEXBondHistoricalParser - INFO - Сохранены все облигации (243) в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/2023-01-03/all.csv
+2025-04-27 17:44:03 - MOEXBondHistoricalParser - INFO - Отфильтровано по базовым параметрам: 30 облигаций
+2025-04-27 17:44:03 - MOEXBondHistoricalParser - INFO - Сохранены отфильтрованные облигации (30) в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/2023-01-03/load_1/filtered.csv
+2025-04-27 17:44:03 - MOEXBondHistoricalParser - INFO - Найдено 30 облигаций после фильтрации (загрузка #1)
+2025-04-27 17:44:03 - MOEXBondHistoricalParser - INFO - На 2023-01-03 найдено 30 облигаций
+2025-04-27 17:44:03 - MOEXBondHistoricalParser - INFO - Обработка даты: 2023-01-04 (рабочий день)
+2025-04-27 17:44:03 - MOEXBondHistoricalParser - INFO - Получение списка облигаций на 2023-01-04
+2025-04-27 17:44:12 - MOEXBondHistoricalParser - INFO - Результаты парсинга облигаций на 2023-01-04:
+2025-04-27 17:44:12 - MOEXBondHistoricalParser - INFO -   Группа 58: 100 облигаций
+2025-04-27 17:44:12 - MOEXBondHistoricalParser - INFO -   Группа 193: 100 облигаций
+2025-04-27 17:44:12 - MOEXBondHistoricalParser - INFO -   Группа 105: 0 облигаций
+2025-04-27 17:44:12 - MOEXBondHistoricalParser - INFO -   Группа 77: 0 облигаций
+2025-04-27 17:44:12 - MOEXBondHistoricalParser - INFO -   Группа 207: 27 облигаций
+2025-04-27 17:44:12 - MOEXBondHistoricalParser - INFO -   Группа 167: 0 облигаций
+2025-04-27 17:44:12 - MOEXBondHistoricalParser - INFO -   Группа 245: 16 облигаций
+2025-04-27 17:44:12 - MOEXBondHistoricalParser - INFO -   Всего: 243 облигаций
+2025-04-27 17:44:12 - MOEXBondHistoricalParser - INFO - Сохранены все облигации (243) в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/2023-01-04/all.csv
+2025-04-27 17:44:12 - MOEXBondHistoricalParser - INFO - Отфильтровано по базовым параметрам: 23 облигаций
+2025-04-27 17:44:12 - MOEXBondHistoricalParser - INFO - Сохранены отфильтрованные облигации (23) в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/2023-01-04/load_1/filtered.csv
+2025-04-27 17:44:12 - MOEXBondHistoricalParser - INFO - Найдено 23 облигаций после фильтрации (загрузка #1)
+2025-04-27 17:44:12 - MOEXBondHistoricalParser - INFO - На 2023-01-04 найдено 23 облигаций
+2025-04-27 17:44:12 - MOEXBondHistoricalParser - INFO - Обработка даты: 2023-01-05 (рабочий день)
+2025-04-27 17:44:12 - MOEXBondHistoricalParser - INFO - Получение списка облигаций на 2023-01-05
+2025-04-27 17:44:21 - MOEXBondHistoricalParser - INFO - Результаты парсинга облигаций на 2023-01-05:
+2025-04-27 17:44:21 - MOEXBondHistoricalParser - INFO -   Группа 58: 100 облигаций
+2025-04-27 17:44:21 - MOEXBondHistoricalParser - INFO -   Группа 193: 100 облигаций
+2025-04-27 17:44:21 - MOEXBondHistoricalParser - INFO -   Группа 105: 0 облигаций
+2025-04-27 17:44:21 - MOEXBondHistoricalParser - INFO -   Группа 77: 0 облигаций
+2025-04-27 17:44:21 - MOEXBondHistoricalParser - INFO -   Группа 207: 27 облигаций
+2025-04-27 17:44:21 - MOEXBondHistoricalParser - INFO -   Группа 167: 0 облигаций
+2025-04-27 17:44:21 - MOEXBondHistoricalParser - INFO -   Группа 245: 16 облигаций
+2025-04-27 17:44:21 - MOEXBondHistoricalParser - INFO -   Всего: 243 облигаций
+2025-04-27 17:44:21 - MOEXBondHistoricalParser - INFO - Сохранены все облигации (243) в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/2023-01-05/all.csv
+2025-04-27 17:44:21 - MOEXBondHistoricalParser - INFO - Отфильтровано по базовым параметрам: 26 облигаций
+2025-04-27 17:44:21 - MOEXBondHistoricalParser - INFO - Сохранены отфильтрованные облигации (26) в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/moex/2023-01-05/load_1/filtered.csv
+2025-04-27 17:44:21 - MOEXBondHistoricalParser - INFO - Найдено 26 облигаций после фильтрации (загрузка #1)
+2025-04-27 17:44:21 - MOEXBondHistoricalParser - INFO - На 2023-01-05 найдено 26 облигаций
+2025-04-27 17:44:21 - MOEXBondHistoricalParser - INFO - Обработка даты: 2023-01-06 (рабочий день)
+2025-04-27 17:44:21 - MOEXBondHistoricalParser - INFO - Получение списка облигаций на 2023-01-06
+2025-04-27 17:47:05 - MOEXBondHistoricalParser - INFO - MOEX Bond Parser initialized
+2025-04-27 18:13:48 - MOEXBondHistoricalParser - INFO - MOEX Bond Parser initialized

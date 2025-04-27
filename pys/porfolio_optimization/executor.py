@@ -101,7 +101,12 @@ class PipelineExecutor(BaseLogger):
     
     def process_bond_pipeline(self, start_date, end_date, min_bonds=20, max_threshold=99, 
                          strategy_profile=None, kbd_yield_adjustment=-3.0, 
-                         update_kbd_data=True, excluded_issuers=None, n_bonds=5, kbd_data=None):
+                         update_kbd_data=True, excluded_issuers=None, n_bonds=5, kbd_data=None,
+                         # Добавляем недостающие параметры, которые нужны для run_bond_selection_with_kbd
+                         weighting_strategy=None, portfolio_stability=0.7,
+                         use_kbd_recommendations=True, override_params=None,
+                         kbd_duration_flexibility=1.5, max_adjustment_iterations=3,
+                         output_format='all'):
         """
         Запускает полный цикл обработки облигаций - от парсинга до создания портфеля.
         
@@ -185,13 +190,20 @@ class PipelineExecutor(BaseLogger):
                 dataset_path=self.bond_dataset_path,
                 n_bonds=n_bonds,
                 min_bonds=min_bonds,
-                weighting_strategy=None,
+                weighting_strategy=weighting_strategy,
+                portfolio_stability=portfolio_stability,
+                use_kbd_recommendations=use_kbd_recommendations,
+                override_params=override_params,
+                start_date=start_date,
+                end_date=end_date,
+                update_kbd_data=update_kbd_data,
                 strategy_profile=strategy_profile,
                 kbd_yield_adjustment=kbd_yield_adjustment,
-                update_kbd_data=update_kbd_data,
+                kbd_duration_flexibility=kbd_duration_flexibility,
+                max_adjustment_iterations=max_adjustment_iterations,
                 excluded_issuers=excluded_issuers,
+                output_format=output_format,
                 kbd_data=kbd_data,
-                # Новые пути для сохранения в пайплайне
                 output_dirs={
                     'portfolios': bonds_portfolio_dir,
                     'analysis': bonds_analysis_dir,
@@ -292,7 +304,9 @@ class PipelineExecutor(BaseLogger):
         
         return bond_portfolio_copy
     
-    def generate_signals(self, weight_tech=0.5, weight_sentiment=0.3, weight_fundamental=0.2):
+    def generate_signals(self, weight_tech=0.5, weight_sentiment=0.3, weight_fundamental=0.2,
+                     threshold_buy=0.5, threshold_sell=-0.5, top_pct=0.3, 
+                     save_ticker_visualizations=False):
         """
         Запускает генерацию сигналов.
         
@@ -315,17 +329,21 @@ class PipelineExecutor(BaseLogger):
         self.signal_params = {
             "weight_tech": weight_tech,
             "weight_sentiment": weight_sentiment,
-            "weight_fundamental": weight_fundamental
-        }
+            "weight_fundamental": weight_fundamental,
+            "threshold_buy": threshold_buy,
+            "threshold_sell": threshold_sell,
+            "top_pct": top_pct
+        }   
         
         self.logger.info(f"Запуск генерации сигналов с параметрами: {self.signal_params}")
         
         # Запускаем генерацию сигналов
         signals = run_pipeline_signal_generator(
-            weight_tech=weight_tech,
-            weight_sentiment=weight_sentiment,
-            weight_fundamental=weight_fundamental,
-            output_dir=self.signals_dir  # Указываем директорию для визуализаций
+        weight_tech=weight_tech,
+        weight_sentiment=weight_sentiment,
+        weight_fundamental=weight_fundamental,
+        output_dir=self.signals_dir,  # Указываем директорию для визуализаций
+        save_ticker_visualizations=save_ticker_visualizations
         )
         
         # Получаем путь к сгенерированным сигналам
@@ -352,7 +370,8 @@ class PipelineExecutor(BaseLogger):
         return signals
     
     def optimize_standard_portfolio(self, tickers_list, risk_free_rate=None, min_rf_allocation=None, 
-                                    max_rf_allocation=None, max_weight=None):
+                                    max_rf_allocation=None, max_weight=None, include_short_selling=False,
+                                    optimization='markowitz'):
         """
         Запускает оптимизацию стандартного портфеля (только длинные позиции).
         
@@ -385,7 +404,8 @@ class PipelineExecutor(BaseLogger):
             "min_rf_allocation": min_rf_allocation,
             "max_rf_allocation": max_rf_allocation,
             "max_weight": max_weight,
-            "include_short_selling": False
+            "include_short_selling": include_short_selling,
+            "optimization": optimization  # Add this parameter
         }
         
         self.logger.info(f"Запуск оптимизации стандартного портфеля с параметрами: {self.portfolio_params}")
@@ -407,7 +427,8 @@ class PipelineExecutor(BaseLogger):
                 max_rf_allocation=max_rf_allocation,
                 max_weight=max_weight,
                 risk_free_portfolio_file=bond_portfolio_path,
-                include_short_selling=False
+                include_short_selling=include_short_selling,
+                optimization=optimization  # Add this parameter
             )
             
             # Копируем результаты после выполнения
@@ -446,7 +467,7 @@ class PipelineExecutor(BaseLogger):
             return None
     
     def create_short_portfolio(self, risk_free_rate=None, train_period=('2024-01-01', '2024-12-31'), 
-                           test_period=('2025-01-01', '2025-06-30'), best_params_file=None):
+                           test_period=('2025-01-01', '2025-06-30'), best_params_file=None, verify_with_honest_backtest=True):
         """
         Создает портфель с короткими позициями.
         
@@ -471,7 +492,8 @@ class PipelineExecutor(BaseLogger):
             "risk_free_rate": risk_free_rate,
             "train_period": train_period,
             "test_period": test_period,
-            "include_short_selling": True
+            "include_short_selling": True,
+            "verify_with_honest_backtest" : verify_with_honest_backtest
         }
         
         self.logger.info(f"Запуск создания портфеля с короткими позициями с параметрами: {self.short_params}")
@@ -492,7 +514,7 @@ class PipelineExecutor(BaseLogger):
                 risk_free_rate=risk_free_rate,
                 best_params_file=best_params_file,
                 include_short_selling=True,
-                verify_with_honest_backtest=True,
+                verify_with_honest_backtest=verify_with_honest_backtest,
                 train_period=train_period,
                 test_period=test_period
             )
@@ -520,7 +542,8 @@ class PipelineExecutor(BaseLogger):
             return None
     
     def create_combined_portfolio(self, tickers_list, risk_free_rate=None, min_rf_allocation=None, 
-                            max_rf_allocation=None, max_weight=None, long_ratio=0.7):
+                        max_rf_allocation=None, max_weight=None, long_ratio=0.7,
+                        include_short_selling=True):
         """
         Создает комбинированный портфель с длинными и короткими позициями.
         """
@@ -538,7 +561,7 @@ class PipelineExecutor(BaseLogger):
             "max_rf_allocation": max_rf_allocation,
             "max_weight": max_weight,
             "long_ratio": long_ratio,
-            "include_short_selling": True
+            "include_short_selling": include_short_selling  # Use the parameter instead of hardcoded True
         }
         
         self.logger.info(f"Запуск создания комбинированного портфеля с параметрами: {self.combined_params}")
@@ -558,17 +581,18 @@ class PipelineExecutor(BaseLogger):
                     self.logger.error("Не найден файл с сигналами для оптимизации портфеля")
                     return None
             
-            # Создаем оптимизатор с поддержкой коротких позиций
+            # Create optimizer with short positions support
             optimizer = PortfolioOptimizer(
                 input_file=input_file,
                 risk_free_rate=risk_free_rate,
                 min_rf_allocation=min_rf_allocation,
                 max_rf_allocation=max_rf_allocation,
                 max_weight=max_weight,
-                optimization='markowitz',
+                optimization='markowitz', ## поч
                 risk_free_portfolio_file=bond_portfolio_path,
-                include_short_selling=True
+                include_short_selling=include_short_selling  # Use the parameter instead of hardcoded True
             )
+
             
             # Загружаем данные
             optimizer.load_data()
@@ -927,10 +951,21 @@ class PipelineExecutor(BaseLogger):
             for ticker, weight in sorted(short_positions.items(), key=lambda x: x[1], reverse=True):
                 f.write(f"- {ticker}: {-weight*100:.2f}%\n")
     
-    def select_best_portfolio(self):
+    def select_best_portfolio(self, metrics_priority=None, min_sharpe=0, prefer_standard=False, force_portfolio_type=None):
         """
         Выбирает лучший портфель на основе метрик и стратегии риска.
         Копирует выбранный портфель в директорию final_portfolio.
+        
+        Parameters:
+        -----------
+        metrics_priority : list, optional
+            Приоритет метрик для выбора ['sharpe', 'return', 'volatility']
+        min_sharpe : float, optional
+            Минимальный допустимый коэффициент Шарпа
+        prefer_standard : bool, optional
+            Предпочитать ли стандартный портфель при прочих равных
+        force_portfolio_type : str, optional
+            Принудительно выбрать тип портфеля ('standard', 'short', 'combined')
         
         Returns:
         --------
@@ -997,54 +1032,94 @@ class PipelineExecutor(BaseLogger):
             self.logger.error("Не найдено ни одного портфеля для выбора")
             return None
         
-        # Выбор портфеля в зависимости от стратегии
+        # Выбор портфеля - новая логика с использованием параметров
         best_portfolio = None
         best_portfolio_name = None
         
-        if self.strategy_profile == 'aggressive':
-            # Предоставляем все варианты, но выбираем портфель с максимальной доходностью
-            max_return = -float('inf')
+        # 1. Принудительный выбор типа портфеля, если указан
+        if force_portfolio_type and force_portfolio_type in available_portfolios:
+            best_portfolio = available_portfolios[force_portfolio_type]
+            best_portfolio_name = force_portfolio_type
+            self.logger.info(f"Принудительно выбран портфель типа '{force_portfolio_type}'")
+        
+        # 2. Выбор на основе приоритета метрик, если указан
+        elif metrics_priority:
+            best_score = -float('inf')
             for name, portfolio_info in available_portfolios.items():
-                if portfolio_info['metrics']['expected_return'] > max_return:
-                    max_return = portfolio_info['metrics']['expected_return']
+                # Пропускаем портфели с Шарпом ниже минимального
+                if min_sharpe > 0 and portfolio_info['metrics']['sharpe_ratio'] < min_sharpe:
+                    continue
+                    
+                # Пропускаем не-стандартные портфели при prefer_standard=True
+                if prefer_standard and 'standard' in available_portfolios and name != 'standard':
+                    continue
+                    
+                # Рассчитываем оценку на основе приоритета метрик
+                score = 0
+                for i, metric in enumerate(metrics_priority):
+                    weight = len(metrics_priority) - i  # Более приоритетные метрики получают больший вес
+                    if metric == 'sharpe':
+                        score += weight * portfolio_info['metrics']['sharpe_ratio']
+                    elif metric == 'return':
+                        score += weight * portfolio_info['metrics']['expected_return']
+                    elif metric == 'volatility':
+                        # Меньшая волатильность лучше, поэтому инвертируем
+                        score += weight * (1 / (portfolio_info['metrics']['expected_volatility'] or 0.0001))
+                        
+                if score > best_score:
+                    best_score = score
                     best_portfolio = portfolio_info
                     best_portfolio_name = name
-            
-            self.logger.info(f"Агрессивная стратегия: выбран портфель '{best_portfolio_name}' с максимальной доходностью {max_return*100:.2f}%")
+                    
+            if best_portfolio:
+                self.logger.info(f"Выбран портфель '{best_portfolio_name}' на основе приоритета метрик {metrics_priority}")
         
-        elif self.strategy_profile == 'moderate':
-            # Выбираем между комбинированным и длинным с лучшим Шарпом
-            moderate_portfolios = {name: info for name, info in available_portfolios.items() 
-                                 if name in ['standard', 'combined']}
-            
-            if not moderate_portfolios and 'short' in available_portfolios:
-                moderate_portfolios = {'short': available_portfolios['short']}
-            
-            max_sharpe = -float('inf')
-            for name, portfolio_info in moderate_portfolios.items():
-                if portfolio_info['metrics']['sharpe_ratio'] > max_sharpe:
-                    max_sharpe = portfolio_info['metrics']['sharpe_ratio']
-                    best_portfolio = portfolio_info
-                    best_portfolio_name = name
-            
-            self.logger.info(f"Умеренная стратегия: выбран портфель '{best_portfolio_name}' с лучшим Шарпом {max_sharpe:.2f}")
-        
-        else:  # conservative
-            # Только длинный портфель с большей долей безрисковой части
-            if 'standard' in available_portfolios:
-                best_portfolio = available_portfolios['standard']
-                best_portfolio_name = 'standard'
-                self.logger.info(f"Консервативная стратегия: выбран стандартный портфель с Шарпом {best_portfolio['metrics']['sharpe_ratio']:.2f}")
-            else:
-                # Если нет стандартного, берем любой доступный с наименьшей волатильностью
-                min_vol = float('inf')
+        # 3. Если выбор еще не сделан, используем логику на основе профиля стратегии
+        if best_portfolio is None:
+            if self.strategy_profile == 'aggressive':
+                # Предоставляем все варианты, но выбираем портфель с максимальной доходностью
+                max_return = -float('inf')
                 for name, portfolio_info in available_portfolios.items():
-                    if portfolio_info['metrics']['expected_volatility'] < min_vol:
-                        min_vol = portfolio_info['metrics']['expected_volatility']
+                    if portfolio_info['metrics']['expected_return'] > max_return:
+                        max_return = portfolio_info['metrics']['expected_return']
                         best_portfolio = portfolio_info
                         best_portfolio_name = name
                 
-                self.logger.info(f"Консервативная стратегия: выбран портфель '{best_portfolio_name}' с минимальной волатильностью {min_vol*100:.2f}%")
+                self.logger.info(f"Агрессивная стратегия: выбран портфель '{best_portfolio_name}' с максимальной доходностью {max_return*100:.2f}%")
+            
+            elif self.strategy_profile == 'moderate':
+                # Выбираем между комбинированным и длинным с лучшим Шарпом
+                moderate_portfolios = {name: info for name, info in available_portfolios.items() 
+                                    if name in ['standard', 'combined']}
+                
+                if not moderate_portfolios and 'short' in available_portfolios:
+                    moderate_portfolios = {'short': available_portfolios['short']}
+                
+                max_sharpe = -float('inf')
+                for name, portfolio_info in moderate_portfolios.items():
+                    if portfolio_info['metrics']['sharpe_ratio'] > max_sharpe:
+                        max_sharpe = portfolio_info['metrics']['sharpe_ratio']
+                        best_portfolio = portfolio_info
+                        best_portfolio_name = name
+                
+                self.logger.info(f"Умеренная стратегия: выбран портфель '{best_portfolio_name}' с лучшим Шарпом {max_sharpe:.2f}")
+            
+            else:  # conservative
+                # Только длинный портфель с большей долей безрисковой части
+                if 'standard' in available_portfolios:
+                    best_portfolio = available_portfolios['standard']
+                    best_portfolio_name = 'standard'
+                    self.logger.info(f"Консервативная стратегия: выбран стандартный портфель с Шарпом {best_portfolio['metrics']['sharpe_ratio']:.2f}")
+                else:
+                    # Если нет стандартного, берем любой доступный с наименьшей волатильностью
+                    min_vol = float('inf')
+                    for name, portfolio_info in available_portfolios.items():
+                        if portfolio_info['metrics']['expected_volatility'] < min_vol:
+                            min_vol = portfolio_info['metrics']['expected_volatility']
+                            best_portfolio = portfolio_info
+                            best_portfolio_name = name
+                    
+                    self.logger.info(f"Консервативная стратегия: выбран портфель '{best_portfolio_name}' с минимальной волатильностью {min_vol*100:.2f}%")
         
         if best_portfolio is None:
             self.logger.error("Не удалось выбрать лучший портфель")
@@ -1075,7 +1150,16 @@ class PipelineExecutor(BaseLogger):
                 f.write(f"- Коэффициент Шарпа: {best_portfolio['metrics']['sharpe_ratio']:.2f}\n\n")
                 
                 f.write("## Объяснение выбора\n\n")
-                if self.strategy_profile == 'aggressive':
+                if force_portfolio_type:
+                    f.write(f"Портфель выбран принудительно (force_portfolio_type='{force_portfolio_type}').\n\n")
+                elif metrics_priority:
+                    f.write(f"Портфель выбран на основе приоритета метрик: {', '.join(metrics_priority)}.\n")
+                    if min_sharpe > 0:
+                        f.write(f"Применен фильтр минимального коэффициента Шарпа: {min_sharpe}.\n")
+                    if prefer_standard:
+                        f.write("Применено предпочтение стандартного портфеля.\n")
+                    f.write("\n")
+                elif self.strategy_profile == 'aggressive':
                     f.write("Для агрессивного профиля выбран портфель с максимальной ожидаемой доходностью. ")
                     f.write("Этот портфель может иметь более высокий риск, но предлагает потенциально более высокую доходность.\n\n")
                 elif self.strategy_profile == 'moderate':
@@ -1110,8 +1194,9 @@ class PipelineExecutor(BaseLogger):
             import traceback
             self.logger.error(traceback.format_exc())
             return None
+
     
-    def create_summary_report(self):
+    def create_summary_report(self, include_charts=True, include_metrics=True, include_weights=True, report_format='md'):
         """
         Создает итоговый отчет о запуске.
         
@@ -1158,70 +1243,97 @@ class PipelineExecutor(BaseLogger):
                         f.write(f"- {key}: {value}\n")
                     f.write("\n")
                 
-                # Результаты
-                f.write("## Результаты\n\n")
-                
-                # Стандартный портфель
-                standard_portfolio = self.results.get('standard_portfolio')
-                if standard_portfolio and 'markowitz' in standard_portfolio:
-                    markowitz_data = standard_portfolio['markowitz']
-                    f.write("### Стандартный портфель (Markowitz)\n\n")
-                    if 'expected_return' in markowitz_data:
-                        f.write(f"- Ожидаемая доходность: {markowitz_data['expected_return']*100:.2f}%\n")
-                    if 'expected_volatility' in markowitz_data:
-                        f.write(f"- Ожидаемая волатильность: {markowitz_data['expected_volatility']*100:.2f}%\n")
-                    if 'sharpe_ratio' in markowitz_data:
-                        f.write(f"- Коэффициент Шарпа: {markowitz_data['sharpe_ratio']:.2f}\n\n")
-                
-                # Портфель с короткими позициями
-                short_portfolio = self.results.get('short_portfolio')
-                if short_portfolio and 'production_backtest' in short_portfolio:
-                    short_metrics = short_portfolio['production_backtest']['metrics']
-                    f.write("### Портфель с короткими позициями\n\n")
-                    if 'annual_return' in short_metrics:
-                        f.write(f"- Годовая доходность: {short_metrics['annual_return']*100:.2f}%\n")
-                    if 'sharpe_ratio' in short_metrics:
-                        f.write(f"- Коэффициент Шарпа: {short_metrics['sharpe_ratio']:.2f}\n")
-                    if 'max_drawdown' in short_metrics:
-                        f.write(f"- Максимальная просадка: {short_metrics['max_drawdown']*100:.2f}%\n\n")
-                
-                # Комбинированный портфель
-                combined_portfolio = self.results.get('combined_portfolio')
-                if combined_portfolio:
-                    f.write("### Комбинированный портфель\n\n")
-                    if 'expected_return' in combined_portfolio:
-                        f.write(f"- Ожидаемая доходность: {combined_portfolio['expected_return']*100:.2f}%\n")
-                    if 'expected_volatility' in combined_portfolio:
-                        f.write(f"- Ожидаемая волатильность: {combined_portfolio['expected_volatility']*100:.2f}%\n")
-                    if 'sharpe_ratio' in combined_portfolio:
-                        f.write(f"- Коэффициент Шарпа: {combined_portfolio['sharpe_ratio']:.2f}\n\n")
-                
-                # Лучший портфель
-                best_portfolio = self.results.get('best_portfolio')
-                if best_portfolio:
-                    f.write("### ЛУЧШИЙ ПОРТФЕЛЬ\n\n")
-                    f.write(f"**Тип портфеля: {best_portfolio['type'].upper()}**\n\n")
-                    metrics = best_portfolio['metrics']
-                    f.write(f"- Ожидаемая доходность: {metrics['expected_return']*100:.2f}%\n")
-                    f.write(f"- Ожидаемая волатильность: {metrics['expected_volatility']*100:.2f}%\n")
-                    f.write(f"- Коэффициент Шарпа: {metrics['sharpe_ratio']:.2f}\n\n")
-                
-                # Расположение результатов
-                f.write("## Расположение результатов\n\n")
-                f.write(f"Все результаты этого запуска сохранены в директории:\n")
-                f.write(f"`{self.run_dir}`\n\n")
-                
-                f.write("### Структура директорий\n\n")
-                f.write("```\n")
-                f.write(f"{self.run_id}/\n")
-                f.write("├── signals/            # Сигналы для акций\n")
-                f.write("├── portfolio/          # Стандартный портфель (Markowitz/Black-Litterman)\n")
-                f.write("├── shorts_portfolio/   # Портфель с короткими позициями\n")
-                f.write("├── combined_portfolio/ # Комбинированный портфель (длинные и короткие позиции)\n")
-                f.write("├── backtest/           # Результаты бэктестов\n")
-                f.write("├── final_portfolio/    # Лучший выбранный портфель\n")
-                f.write("└── bond_portfolio.csv  # Портфель облигаций\n")
-                f.write("```\n")
+                if include_metrics:
+                    f.write("## Результаты\n\n")
+                    
+                    # Стандартный портфель
+                    standard_portfolio = self.results.get('standard_portfolio')
+                    if standard_portfolio and 'markowitz' in standard_portfolio:
+                        markowitz_data = standard_portfolio['markowitz']
+                        f.write("### Стандартный портфель (Markowitz)\n\n")
+                        if 'expected_return' in markowitz_data:
+                            f.write(f"- Ожидаемая доходность: {markowitz_data['expected_return']*100:.2f}%\n")
+                        if 'expected_volatility' in markowitz_data:
+                            f.write(f"- Ожидаемая волатильность: {markowitz_data['expected_volatility']*100:.2f}%\n")
+                        if 'sharpe_ratio' in markowitz_data:
+                            f.write(f"- Коэффициент Шарпа: {markowitz_data['sharpe_ratio']:.2f}\n\n")
+                    
+                    # Портфель с короткими позициями
+                    short_portfolio = self.results.get('short_portfolio')
+                    if short_portfolio and 'production_backtest' in short_portfolio:
+                        short_metrics = short_portfolio['production_backtest']['metrics']
+                        f.write("### Портфель с короткими позициями\n\n")
+                        if 'annual_return' in short_metrics:
+                            f.write(f"- Годовая доходность: {short_metrics['annual_return']*100:.2f}%\n")
+                        if 'sharpe_ratio' in short_metrics:
+                            f.write(f"- Коэффициент Шарпа: {short_metrics['sharpe_ratio']:.2f}\n")
+                        if 'max_drawdown' in short_metrics:
+                            f.write(f"- Максимальная просадка: {short_metrics['max_drawdown']*100:.2f}%\n\n")
+                    
+                    # Комбинированный портфель
+                    combined_portfolio = self.results.get('combined_portfolio')
+                    if combined_portfolio:
+                        f.write("### Комбинированный портфель\n\n")
+                        if 'expected_return' in combined_portfolio:
+                            f.write(f"- Ожидаемая доходность: {combined_portfolio['expected_return']*100:.2f}%\n")
+                        if 'expected_volatility' in combined_portfolio:
+                            f.write(f"- Ожидаемая волатильность: {combined_portfolio['expected_volatility']*100:.2f}%\n")
+                        if 'sharpe_ratio' in combined_portfolio:
+                            f.write(f"- Коэффициент Шарпа: {combined_portfolio['sharpe_ratio']:.2f}\n\n")
+                    
+                    # Лучший портфель
+                    best_portfolio = self.results.get('best_portfolio')
+                    if best_portfolio:
+                        f.write("### ЛУЧШИЙ ПОРТФЕЛЬ\n\n")
+                        f.write(f"**Тип портфеля: {best_portfolio['type'].upper()}**\n\n")
+                        metrics = best_portfolio['metrics']
+                        f.write(f"- Ожидаемая доходность: {metrics['expected_return']*100:.2f}%\n")
+                        f.write(f"- Ожидаемая волатильность: {metrics['expected_volatility']*100:.2f}%\n")
+                        f.write(f"- Коэффициент Шарпа: {metrics['sharpe_ratio']:.2f}\n\n")
+
+                # Weights section - conditionally included
+                if include_weights and self.results.get('best_portfolio'):
+                    f.write("## Веса в итоговом портфеле\n\n")
+                    best_portfolio = self.results['best_portfolio']['portfolio']
+                    if 'weights' in best_portfolio:
+                        f.write("| Актив | Вес |\n")
+                        f.write("|-------|-----|\n")
+                        
+                        for ticker, weight in sorted(best_portfolio['weights'].items(), key=lambda x: abs(x[1]), reverse=True):
+                            if ticker != 'rf_details':
+                                direction = "" if weight >= 0 or ticker == 'RISK_FREE' else " (SHORT)"
+                                f.write(f"| {ticker}{direction} | {weight*100:.2f}% |\n")
+                        f.write("\n")
+            
+                # Charts section - conditionally included
+                if include_charts:
+                    f.write("## Графики\n\n")
+                    # Reference to charts in the final portfolio directory
+                    f.write("Визуализации доступны в директории финального портфеля:\n")
+                    f.write(f"`{self.final_dir}`\n\n")
+                    
+                    # Расположение результатов
+                    f.write("## Расположение результатов\n\n")
+                    f.write(f"Все результаты этого запуска сохранены в директории:\n")
+                    f.write(f"`{self.run_dir}`\n\n")
+                    
+                    f.write("### Структура директорий\n\n")
+                    f.write("```\n")
+                    f.write(f"{self.run_id}/\n")
+                    f.write("├── signals/            # Сигналы для акций\n")
+                    f.write("├── portfolio/          # Стандартный портфель (Markowitz/Black-Litterman)\n")
+                    f.write("├── shorts_portfolio/   # Портфель с короткими позициями\n")
+                    f.write("├── combined_portfolio/ # Комбинированный портфель (длинные и короткие позиции)\n")
+                    f.write("├── backtest/           # Результаты бэктестов\n")
+                    f.write("├── final_portfolio/    # Лучший выбранный портфель\n")
+                    f.write("└── bond_portfolio.csv  # Портфель облигаций\n")
+                    f.write("```\n")
+
+                if report_format == 'html':
+                    # This would require additional implementation to convert MD to HTML
+                    # For now, just add a note
+                    html_path = os.path.join(self.run_dir, "pipeline_summary.html")
+                    self.logger.info(f"HTML format requested but not implemented yet. Using Markdown format.")
             
             self.logger.info(f"Итоговый отчет создан: {summary_path}")
             return summary_path
@@ -1506,9 +1618,15 @@ class PipelineExecutor(BaseLogger):
 
     
 
-    def run_pipeline(self, tickers_list, bond_results=None, strategy_profile=None):
+    def run_pipeline(self, tickers_list, bond_results=None, strategy_profile=None,
+               signal_params=None, standard_portfolio_params=None, 
+               short_portfolio_params=None, combined_portfolio_params=None,
+               portfolio_controls=None, backtest_params=None,
+               # Дополнительные параметры для детальной настройки
+               select_portfolio_params=None, report_params=None,
+               optimization_params=None, visualization_params=None):
         """
-        Запускает все этапы пайплайна последовательно в соответствии с профилем риска.
+        Запускает все этапы пайплайна последовательно с полной настройкой параметров.
         
         Parameters:
         -----------
@@ -1518,7 +1636,87 @@ class PipelineExecutor(BaseLogger):
             Результаты выполнения run_bond_selection_with_kbd
         strategy_profile : str, optional
             Профиль стратегии ('aggressive', 'moderate', 'conservative')
-        
+            
+        # Параметры для разных этапов
+        signal_params : dict, optional
+            Параметры для генерации сигналов:
+            - weight_tech (float): вес технических сигналов
+            - weight_sentiment (float): вес сентимент-сигналов
+            - weight_fundamental (float): вес фундаментальных сигналов
+            - threshold_buy (float): порог для сигнала покупки
+            - threshold_sell (float): порог для сигнала продажи
+            - top_pct (float): процент лучших акций для shortlist
+            - save_ticker_visualizations (bool): сохранять визуализации по тикерам
+            
+        standard_portfolio_params : dict, optional
+            Параметры для стандартного портфеля:
+            - risk_free_rate (float): безрисковая ставка
+            - min_rf_allocation (float): минимальная доля безрисковых активов
+            - max_rf_allocation (float): максимальная доля безрисковых активов
+            - max_weight (float): максимальный вес одной позиции
+            - include_short_selling (bool): включать ли короткие позиции
+            
+        short_portfolio_params : dict, optional
+            Параметры для портфеля с короткими позициями:
+            - risk_free_rate (float): безрисковая ставка
+            - train_period (tuple): период обучения (начало, конец)
+            - test_period (tuple): период тестирования (начало, конец)
+            - best_params_file (str): путь к файлу с лучшими параметрами
+            - verify_with_honest_backtest (bool): проверять с честным бэктестом
+            
+        combined_portfolio_params : dict, optional
+            Параметры для комбинированного портфеля:
+            - risk_free_rate (float): безрисковая ставка
+            - min_rf_allocation (float): минимальная доля безрисковых активов
+            - max_rf_allocation (float): максимальная доля безрисковых активов
+            - max_weight (float): максимальный вес одной позиции
+            - long_ratio (float): соотношение длинных/коротких позиций
+            - include_short_selling (bool): включать ли короткие позиции
+            
+        portfolio_controls : dict, optional
+            Контроль запуска различных портфелей:
+            - run_standard_portfolio (bool): запускать стандартный портфель
+            - run_short_portfolio (bool): запускать портфель с короткими позициями
+            - run_combined_portfolio (bool): запускать комбинированный портфель
+            - override_risk_profile (bool): игнорировать профиль риска
+            
+        backtest_params : dict, optional
+            Параметры для бэктестирования:
+            - train_period (tuple): период обучения (начало, конец)
+            - test_period (tuple): период тестирования (начало, конец)
+            - risk_free_rate (float): безрисковая ставка
+            - use_grid_search_params (bool): использовать параметры из Grid Search
+            
+        select_portfolio_params : dict, optional
+            Параметры для выбора лучшего портфеля:
+            - metrics_priority (list): приоритет метрик ['sharpe', 'return', 'volatility']
+            - min_sharpe (float): минимальный допустимый коэффициент Шарпа
+            - prefer_standard (bool): предпочитать стандартный портфель
+            - force_portfolio_type (str): принудительно выбрать тип портфеля
+            
+        report_params : dict, optional
+            Параметры для создания отчета:
+            - include_charts (bool): включать графики в отчет
+            - include_metrics (bool): включать метрики в отчет
+            - include_weights (bool): включать веса в отчет
+            - report_format (str): формат отчета ('md', 'html')
+            
+        optimization_params : dict, optional
+            Параметры оптимизации портфеля:
+            - optimization (str): модель оптимизации ('markowitz', 'black_litterman')
+            - tau (float): параметр неуверенности для Black-Litterman
+            - views (dict): субъективные прогнозы 
+            - view_confidences (dict): уверенность в прогнозах
+            - market_caps (dict): рыночные капитализации
+            
+        visualization_params : dict, optional
+            Параметры визуализации:
+            - plot_style (str): стиль графиков ('seaborn', 'ggplot', etc.)
+            - chart_size (tuple): размер графиков в дюймах
+            - dpi (int): разрешение графиков
+            - color_scheme (str): цветовая схема
+            - save_formats (list): форматы сохранения графиков ['png', 'svg', 'pdf']
+            
         Returns:
         --------
         dict
@@ -1529,33 +1727,99 @@ class PipelineExecutor(BaseLogger):
             
         self.logger.info(f"Запуск пайплайна (ID: {self.run_id}, профиль: {self.strategy_profile})")
         
+        # Применяем визуализационные параметры, если переданы
+        if visualization_params:
+            if 'plot_style' in visualization_params:
+                plt.style.use(visualization_params['plot_style'])
+            # Другие параметры визуализации можно применить аналогично
+        
+        # Настройки запуска портфелей по умолчанию в зависимости от профиля риска
+        default_controls = {
+            'run_standard_portfolio': True,
+            'run_short_portfolio': self.strategy_profile == 'aggressive',
+            'run_combined_portfolio': self.strategy_profile in ['moderate', 'aggressive'],
+            'override_risk_profile': False
+        }
+        
+        # Обновляем настройки запуска, если они предоставлены
+        controls = default_controls.copy()
+        if portfolio_controls:
+            controls.update(portfolio_controls)
+        
         # 1. Копируем портфель облигаций
         self.copy_bond_portfolio(bond_results)
         
-        # 2. Генерируем сигналы
-        self.generate_signals()
+        # 2. Генерируем сигналы с параметрами
+        signal_args = {}
+        if signal_params:
+            # Извлекаем все параметры для generate_signals
+            for param in ['weight_tech', 'weight_sentiment', 'weight_fundamental', 
+                        'threshold_buy', 'threshold_sell', 'top_pct']:
+                if param in signal_params:
+                    signal_args[param] = signal_params[param]
+                    
+        self.generate_signals(**signal_args)
         
-        # 3. Создаем портфели согласно профилю риска
-        if self.strategy_profile in ['conservative', 'moderate', 'aggressive']:
-            # Для всех профилей создаем стандартный портфель
+        # 3. Создаем портфели в соответствии с настройками
+        if controls['run_standard_portfolio']:
             self.logger.info(f"Профиль {self.strategy_profile}: создание стандартного портфеля")
-            self.optimize_standard_portfolio(tickers_list)
+            standard_args = {}
+            if standard_portfolio_params:
+                # Извлекаем все параметры для optimize_standard_portfolio
+                for param in ['risk_free_rate', 'min_rf_allocation', 'max_rf_allocation', 
+                            'max_weight', 'include_short_selling']:
+                    if param in standard_portfolio_params:
+                        standard_args[param] = standard_portfolio_params[param]
+                        
+            # Передаем параметры оптимизации, если они переданы
+            if optimization_params and 'optimization' in optimization_params:
+                standard_args['optimization'] = optimization_params['optimization']
+                
+            self.optimize_standard_portfolio(tickers_list, **standard_args)
         
-        # Для умеренного и агрессивного профилей добавляем комбинированный портфель
-        if self.strategy_profile in ['moderate', 'aggressive']:
+        if controls['run_combined_portfolio']:
             self.logger.info(f"Профиль {self.strategy_profile}: создание комбинированного портфеля")
-            self.create_combined_portfolio(tickers_list)
+            combined_args = {}
+            if combined_portfolio_params:
+                # Извлекаем все параметры для create_combined_portfolio
+                for param in ['risk_free_rate', 'min_rf_allocation', 'max_rf_allocation', 
+                            'max_weight', 'long_ratio', 'include_short_selling']:
+                    if param in combined_portfolio_params:
+                        combined_args[param] = combined_portfolio_params[param]
+                        
+            self.create_combined_portfolio(tickers_list, **combined_args)
         
-        # Только для агрессивного профиля добавляем портфель с короткими позициями
-        if self.strategy_profile == 'aggressive':
+        if controls['run_short_portfolio']:
             self.logger.info(f"Профиль {self.strategy_profile}: создание портфеля с короткими позициями")
-            self.create_short_portfolio()
+            short_args = {}
+            if short_portfolio_params:
+                # Извлекаем все параметры для create_short_portfolio
+                for param in ['risk_free_rate', 'train_period', 'test_period', 'best_params_file', 
+                            'verify_with_honest_backtest']:
+                    if param in short_portfolio_params:
+                        short_args[param] = short_portfolio_params[param]
+                        
+            self.create_short_portfolio(**short_args)
         
-        # 4. Выбираем лучший портфель в зависимости от стратегии
-        self.select_best_portfolio()
+        # 4. Выбираем лучший портфель
+        select_args = {}
+        if select_portfolio_params:
+            # Параметры для select_best_portfolio
+            for param in ['metrics_priority', 'min_sharpe', 'prefer_standard', 'force_portfolio_type']:
+                if param in select_portfolio_params:
+                    select_args[param] = select_portfolio_params[param]
+                    
+        self.select_best_portfolio(**select_args)
         
         # 5. Создаем итоговый отчет
-        report_path = self.create_summary_report()
+        report_args = {}
+        if report_params:
+            # Параметры для create_summary_report
+            for param in ['include_charts', 'include_metrics', 'include_weights', 'report_format']:
+                if param in report_params:
+                    report_args[param] = report_params[param]
+                    
+        report_path = self.create_summary_report(**report_args)
         
         # Собираем все результаты
         pipeline_results = {
@@ -1563,6 +1827,18 @@ class PipelineExecutor(BaseLogger):
             'run_dir': self.run_dir,
             'report_path': report_path,
             'strategy_profile': self.strategy_profile,
+            'used_parameters': {
+                'signal_params': signal_params,
+                'standard_portfolio_params': standard_portfolio_params,
+                'short_portfolio_params': short_portfolio_params,
+                'combined_portfolio_params': combined_portfolio_params,
+                'portfolio_controls': controls,
+                'backtest_params': backtest_params,
+                'optimization_params': optimization_params,
+                'select_portfolio_params': select_portfolio_params,
+                'report_params': report_params,
+                'visualization_params': visualization_params
+            },
             **self.results
         }
         

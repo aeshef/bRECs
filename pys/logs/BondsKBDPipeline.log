@@ -361,3 +361,33 @@
 2025-04-27 16:50:48 - BondsKBDPipeline - INFO - Скорректированные параметры для итерации 4: {'min_yield': np.float64(13.579999999999998), 'max_yield': np.float64(46.58), 'min_duration': 0.1, 'max_duration': 5.475, 'market_condition': 'inverted', 'excluded_issuers': ['ВТБ', 'Мечел']}
 2025-04-27 16:50:48 - BondsKBDPipeline - INFO - Сводка результатов сохранена в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/results/bonds_results_20250427_165046.json
 2025-04-27 16:50:48 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-27 17:47:05 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-27 17:47:05 - BondsKBDPipeline - INFO - Используем предоставленные данные КБД: 256 записей
+2025-04-27 17:47:05 - BondsKBDPipeline - INFO - Данные КБД доступны: 256 записей
+2025-04-27 17:47:05 - BondsKBDPipeline - INFO - Копия данных КБД сохранена в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/results/kbd_data_20250427_174705.csv
+2025-04-27 17:47:05 - BondsKBDPipeline - INFO - Результаты анализа КБД сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_174651_balanced_portfolio_0427_1746/bonds/analysis/kbd_analysis_20250427_174705.json
+2025-04-27 17:47:05 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендуемая стратегия взвешивания: equal (inverted_curve)
+2025-04-27 17:47:05 - BondsKBDPipeline - INFO - Используется рекомендованная КБД стратегия взвешивания: equal
+2025-04-27 17:47:06 - BondsKBDPipeline - WARNING - Итерация 1: Сформировано только 4 облигаций (минимум 5)
+2025-04-27 17:47:06 - BondsKBDPipeline - INFO - Скорректированные параметры для итерации 2: {'min_yield': np.float64(17.58), 'max_yield': np.float64(46.58), 'min_duration': 0.1, 'max_duration': 3.4749999999999996, 'market_condition': 'inverted', 'excluded_issuers': ['ВТБ', 'Мечел']}
+2025-04-27 17:47:06 - BondsKBDPipeline - WARNING - Итерация 2: Сформировано только 4 облигаций (минимум 5)
+2025-04-27 17:47:06 - BondsKBDPipeline - INFO - Скорректированные параметры для итерации 3: {'min_yield': np.float64(15.579999999999998), 'max_yield': np.float64(46.58), 'min_duration': 0.1, 'max_duration': 4.475, 'market_condition': 'inverted', 'excluded_issuers': ['ВТБ', 'Мечел']}
+2025-04-27 17:47:08 - BondsKBDPipeline - WARNING - Итерация 3: Сформировано только 4 облигаций (минимум 5)
+2025-04-27 17:47:08 - BondsKBDPipeline - INFO - Скорректированные параметры для итерации 4: {'min_yield': np.float64(13.579999999999998), 'max_yield': np.float64(46.58), 'min_duration': 0.1, 'max_duration': 5.475, 'market_condition': 'inverted', 'excluded_issuers': ['ВТБ', 'Мечел']}
+2025-04-27 17:47:08 - BondsKBDPipeline - INFO - Сводка результатов сохранена в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/results/bonds_results_20250427_174705.json
+2025-04-27 17:47:08 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
+2025-04-27 18:13:48 - BondsKBDPipeline - INFO - Запуск пайплайна выбора облигаций с учетом КБД
+2025-04-27 18:13:48 - BondsKBDPipeline - INFO - Используем предоставленные данные КБД: 256 записей
+2025-04-27 18:13:48 - BondsKBDPipeline - INFO - Данные КБД доступны: 256 записей
+2025-04-27 18:13:48 - BondsKBDPipeline - INFO - Копия данных КБД сохранена в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/results/kbd_data_20250427_181348.csv
+2025-04-27 18:13:48 - BondsKBDPipeline - INFO - Результаты анализа КБД сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_181346_balanced_portfolio_0427_1813/bonds/analysis/kbd_analysis_20250427_181348.json
+2025-04-27 18:13:48 - BondsKBDPipeline - INFO - КБД анализ выполнен успешно. Рекомендуемая стратегия взвешивания: equal (inverted_curve)
+2025-04-27 18:13:48 - BondsKBDPipeline - INFO - Используется рекомендованная КБД стратегия взвешивания: equal
+2025-04-27 18:13:49 - BondsKBDPipeline - WARNING - Итерация 1: Сформировано только 4 облигаций (минимум 5)
+2025-04-27 18:13:49 - BondsKBDPipeline - INFO - Скорректированные параметры для итерации 2: {'min_yield': np.float64(17.58), 'max_yield': np.float64(46.58), 'min_duration': 0.1, 'max_duration': 3.4749999999999996, 'market_condition': 'inverted', 'excluded_issuers': ['ВТБ', 'Мечел']}
+2025-04-27 18:13:49 - BondsKBDPipeline - WARNING - Итерация 2: Сформировано только 4 облигаций (минимум 5)
+2025-04-27 18:13:49 - BondsKBDPipeline - INFO - Скорректированные параметры для итерации 3: {'min_yield': np.float64(15.579999999999998), 'max_yield': np.float64(46.58), 'min_duration': 0.1, 'max_duration': 4.475, 'market_condition': 'inverted', 'excluded_issuers': ['ВТБ', 'Мечел']}
+2025-04-27 18:13:50 - BondsKBDPipeline - WARNING - Итерация 3: Сформировано только 4 облигаций (минимум 5)
+2025-04-27 18:13:50 - BondsKBDPipeline - INFO - Скорректированные параметры для итерации 4: {'min_yield': np.float64(13.579999999999998), 'max_yield': np.float64(46.58), 'min_duration': 0.1, 'max_duration': 5.475, 'market_condition': 'inverted', 'excluded_issuers': ['ВТБ', 'Мечел']}
+2025-04-27 18:13:50 - BondsKBDPipeline - INFO - Сводка результатов сохранена в /Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/results/bonds_results_20250427_181348.json
+2025-04-27 18:13:50 - BondsKBDPipeline - INFO - Пайплайн выбора облигаций с учетом КБД завершен
