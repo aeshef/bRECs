@@ -173,7 +173,7 @@ class KBDDownloader(BaseLogger):
             self.logger.error(traceback.format_exc())
             return None
     
-def load_kbd_data(base_path=BASE_PATH, start_date=None, end_date=None, update_data=True):
+def run_pipeline_kbd_parser(base_path=BASE_PATH, start_date=None, end_date=None, update_data=True):
     """
     Загружает данные КБД и возвращает их в виде DataFrame
     

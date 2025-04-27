@@ -388,3 +388,31 @@ TypeError: run_all_optimization_models() got an unexpected keyword argument 'opt
 2025-04-27 18:16:07 - PipelineExecutor - INFO - Создание итогового отчета о запуске
 2025-04-27 18:16:07 - PipelineExecutor - INFO - Итоговый отчет создан: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_181346_balanced_portfolio_0427_1813/pipeline_summary.md
 2025-04-27 18:16:07 - PipelineExecutor - INFO - Выполнение пайплайна завершено. Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_181346_balanced_portfolio_0427_1813
+2025-04-27 18:19:52 - PipelineExecutor - INFO - Запуск пайплайна (ID: run_20250427_181346_balanced_portfolio_0427_1813, профиль: moderate)
+2025-04-27 18:19:52 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_181346_balanced_portfolio_0427_1813/bond_portfolio.csv
+2025-04-27 18:19:52 - PipelineExecutor - INFO - Запуск генерации сигналов с параметрами: {'weight_tech': 0.5, 'weight_sentiment': 0.3, 'weight_fundamental': 0.2, 'threshold_buy': 0.5, 'threshold_sell': -0.5, 'top_pct': 0.3}
+2025-04-27 18:20:12 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250427_182012_balanced_portfolio_0427_1820
+2025-04-27 18:20:12 - PipelineExecutor - INFO - Запуск полного цикла обработки облигаций
+2025-04-27 18:20:12 - PipelineExecutor - INFO - Создана структура директорий для облигаций в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_182012_balanced_portfolio_0427_1820/bonds
+2025-04-27 18:20:12 - PipelineExecutor - INFO - Датасет облигаций скопирован в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_182012_balanced_portfolio_0427_1820/bonds/bonds_dataset.csv
+2025-04-27 18:20:12 - PipelineExecutor - INFO - Обработка облигаций: оптимальный порог 99%
+2025-04-27 18:20:14 - PipelineExecutor - INFO - Портфель облигаций дополнительно скопирован в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_182012_balanced_portfolio_0427_1820/bond_portfolio.csv
+2025-04-27 18:20:14 - PipelineExecutor - INFO - Запуск пайплайна (ID: run_20250427_182012_balanced_portfolio_0427_1820, профиль: moderate)
+2025-04-27 18:20:14 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_182012_balanced_portfolio_0427_1820/bond_portfolio.csv
+2025-04-27 18:20:14 - PipelineExecutor - INFO - Запуск генерации сигналов с параметрами: {'weight_tech': 0.5, 'weight_sentiment': 0.3, 'weight_fundamental': 0.2, 'threshold_buy': 0.5, 'threshold_sell': -0.5, 'top_pct': 0.3}
+2025-04-27 18:20:28 - PipelineExecutor - INFO - Скопированы сигналы: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_182012_balanced_portfolio_0427_1820/signals/signals.csv
+2025-04-27 18:20:28 - PipelineExecutor - INFO - Профиль moderate: создание стандартного портфеля
+2025-04-27 18:20:28 - PipelineExecutor - INFO - Запуск оптимизации стандартного портфеля с параметрами: {'risk_free_rate': 0.1, 'min_rf_allocation': 0.3, 'max_rf_allocation': 0.5, 'max_weight': 0.15, 'include_short_selling': False, 'optimization': 'markowitz'}
+2025-04-27 18:20:28 - PipelineExecutor - ERROR - Ошибка при оптимизации стандартного портфеля: run_all_optimization_models() got an unexpected keyword argument 'optimization'
+2025-04-27 18:20:28 - PipelineExecutor - ERROR - Traceback (most recent call last):
+  File "<string>", line 34, in optimize_standard_portfolio
+TypeError: run_all_optimization_models() got an unexpected keyword argument 'optimization'
+
+2025-04-27 18:20:28 - PipelineExecutor - INFO - Профиль moderate: создание комбинированного портфеля
+2025-04-27 18:20:28 - PipelineExecutor - INFO - Запуск создания комбинированного портфеля с параметрами: {'risk_free_rate': 0.1, 'min_rf_allocation': 0.3, 'max_rf_allocation': 0.5, 'max_weight': 0.15, 'long_ratio': 0.7, 'include_short_selling': True}
+2025-04-27 18:20:28 - PipelineExecutor - INFO - Комбинированный портфель успешно создан и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_182012_balanced_portfolio_0427_1820/combined_portfolio
+2025-04-27 18:20:28 - PipelineExecutor - INFO - Выбран портфель 'combined' на основе приоритета метрик ['sharpe', 'return', 'volatility']
+2025-04-27 18:20:28 - PipelineExecutor - INFO - Лучший портфель (combined) скопирован в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_182012_balanced_portfolio_0427_1820/final_portfolio
+2025-04-27 18:20:28 - PipelineExecutor - INFO - Создание итогового отчета о запуске
+2025-04-27 18:20:28 - PipelineExecutor - INFO - Итоговый отчет создан: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_182012_balanced_portfolio_0427_1820/pipeline_summary.md
+2025-04-27 18:20:28 - PipelineExecutor - INFO - Выполнение пайплайна завершено. Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_182012_balanced_portfolio_0427_1820

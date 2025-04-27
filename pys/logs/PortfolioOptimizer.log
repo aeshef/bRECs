@@ -1537,3 +1537,31 @@
 2025-04-27 18:16:07 - PortfolioOptimizer - INFO - Загрузка портфеля облигаций из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_181346_balanced_portfolio_0427_1813/bond_portfolio.csv
 2025-04-27 18:16:07 - PortfolioOptimizer - INFO - Загружен портфель из 4 облигаций
 2025-04-27 18:16:07 - PortfolioOptimizer - INFO - Ожидаемая доходность портфеля: 7.69%, волатильность: 15.41%, Шарп: -0.15
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Инициализирован оптимизатор портфеля с моделью MARKOWITZ
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Загружено 7110 строк данных
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Подготовка данных доходностей для оптимизации с учетом шортов
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Отфильтровано 7110 строк по shortlist
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Тикер AFKS добавлен с ДЛИННОЙ позицией
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Тикер ALRS добавлен с ДЛИННОЙ позицией
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Тикер GAZP добавлен с ДЛИННОЙ позицией
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Тикер GMKN добавлен с ДЛИННОЙ позицией
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Тикер LKOH добавлен с ДЛИННОЙ позицией
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Тикер MAGN добавлен с ДЛИННОЙ позицией
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Тикер MTSS добавлен с ДЛИННОЙ позицией
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Тикер MVID добавлен с ДЛИННОЙ позицией
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Тикер NVTK добавлен с ДЛИННОЙ позицией
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Тикер PHOR добавлен с ДЛИННОЙ позицией
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Тикер ROSN добавлен с ДЛИННОЙ позицией
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Тикер RUAL добавлен с ДЛИННОЙ позицией
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Тикер SBER добавлен с ДЛИННОЙ позицией
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Тикер SIBN добавлен с ДЛИННОЙ позицией
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Тикер SNGS добавлен с ДЛИННОЙ позицией
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Тикер TATN добавлен с ДЛИННОЙ позицией
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Запуск оптимизации портфеля для 16 активов с моделью MARKOWITZ
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Оптимизация успешно завершена
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Расчет итогового портфеля с долей безрисковых активов 40.0%
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Загрузка портфеля облигаций из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_182012_balanced_portfolio_0427_1820/bond_portfolio.csv
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Загружен портфель из 4 облигаций
+2025-04-27 18:20:28 - PortfolioOptimizer - INFO - Ожидаемая доходность портфеля: 7.69%, волатильность: 15.41%, Шарп: -0.15
