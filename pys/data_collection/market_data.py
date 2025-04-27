@@ -559,9 +559,6 @@ class MarketDataManager(BaseLogger):
         
         self.logger.info(f"Completed data retrieval for {len(tickers)} tickers")
         return results
-    
-sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
-from private_info import BASE_PATH
 
 class MarketDataPipeline(BaseLogger):
     """Класс для запуска пайплайна загрузки рыночных данных"""
