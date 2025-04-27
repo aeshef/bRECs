@@ -1,0 +1,37 @@
+{
+    "weight_tech": 0.5,
+    "weight_sentiment": 0.3,
+    "weight_fundamental": 0.2,
+    "threshold_buy": 0.5,
+    "threshold_sell": -0.5,
+    "top_pct": 0.3,
+    "tech_indicators": [
+        "RSI_14",
+        "MACD_diff",
+        "Stoch_%K",
+        "CCI_20",
+        "Williams_%R_14",
+        "ROC_10"
+    ],
+    "sentiment_indicators": [
+        "sentiment_compound_median",
+        "sentiment_direction",
+        "sentiment_ma_7d",
+        "sentiment_ratio",
+        "sentiment_zscore_7d"
+    ],
+    "fund_weights": {
+        "\u0427\u0438\u0441\u0442\u0430\u044f \u043f\u0440\u0438\u0431\u044b\u043b\u044c, \u043c\u043b\u0440\u0434 \u0440\u0443\u0431": 0.1,
+        "\u0414\u0438\u0432 \u0434\u043e\u0445\u043e\u0434, \u0430\u043e, %": 0.1,
+        "\u0414\u0438\u0432\u0438\u0434\u0435\u043d\u0434\u044b/\u043f\u0440\u0438\u0431\u044b\u043b\u044c, %": 0.05,
+        "EBITDA, \u043c\u043b\u0440\u0434 \u0440\u0443\u0431": 0.08,
+        "FCF, \u043c\u043b\u0440\u0434 \u0440\u0443\u0431": 0.1,
+        "\u0420\u0435\u043d\u0442\u0430\u0431 EBITDA, %": 0.08,
+        "\u0427\u0438\u0441\u0442\u044b\u0439 \u0434\u043e\u043b\u0433, \u043c\u043b\u0440\u0434 \u0440\u0443\u0431": 0.08,
+        "\u0414\u043e\u043b\u0433/EBITDA": 0.07,
+        "EPS, \u0440\u0443\u0431": 0.07,
+        "ROE, %": 0.1,
+        "ROA, %": 0.08,
+        "P/E": 0.09
+    }
+}

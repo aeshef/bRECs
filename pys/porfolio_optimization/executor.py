@@ -306,7 +306,11 @@ class PipelineExecutor(BaseLogger):
     
     def generate_signals(self, weight_tech=0.5, weight_sentiment=0.3, weight_fundamental=0.2,
                      threshold_buy=0.5, threshold_sell=-0.5, top_pct=0.3, 
-                     save_ticker_visualizations=False):
+                     save_ticker_visualizations=False, 
+                     tech_indicators=['RSI_14', 'MACD_diff', 'Stoch_%K', 'CCI_20', 'Williams_%R_14', 'ROC_10'], 
+                     sentiment_indicators=['sentiment_compound_median', 'sentiment_direction', 'sentiment_ma_7d', 'sentiment_ratio', 'sentiment_zscore_7d'],
+                     fund_weights=None
+                     ):
         """
         Запускает генерацию сигналов.
         
@@ -332,18 +336,24 @@ class PipelineExecutor(BaseLogger):
             "weight_fundamental": weight_fundamental,
             "threshold_buy": threshold_buy,
             "threshold_sell": threshold_sell,
-            "top_pct": top_pct
+            "top_pct": top_pct,
+            "tech_indicators" : tech_indicators,
+            "sentiment_indicators" : sentiment_indicators,
+            'fund_weights': fund_weights
         }   
         
         self.logger.info(f"Запуск генерации сигналов с параметрами: {self.signal_params}")
         
         # Запускаем генерацию сигналов
         signals = run_pipeline_signal_generator(
-        weight_tech=weight_tech,
-        weight_sentiment=weight_sentiment,
-        weight_fundamental=weight_fundamental,
-        output_dir=self.signals_dir,  # Указываем директорию для визуализаций
-        save_ticker_visualizations=save_ticker_visualizations
+            weight_tech=weight_tech,
+            weight_sentiment=weight_sentiment,
+            weight_fundamental=weight_fundamental,
+            output_dir=self.signals_dir,  # Указываем директорию для визуализаций
+            save_ticker_visualizations=save_ticker_visualizations,
+            tech_indicators=tech_indicators,
+            sentiment_indicators=sentiment_indicators,
+            fund_weights=fund_weights
         )
         
         # Получаем путь к сгенерированным сигналам
@@ -370,8 +380,7 @@ class PipelineExecutor(BaseLogger):
         return signals
     
     def optimize_standard_portfolio(self, tickers_list, risk_free_rate=None, min_rf_allocation=None, 
-                                    max_rf_allocation=None, max_weight=None, include_short_selling=False,
-                                    optimization='markowitz'):
+                                    max_rf_allocation=None, max_weight=None, include_short_selling=False):
         """
         Запускает оптимизацию стандартного портфеля (только длинные позиции).
         
@@ -405,7 +414,6 @@ class PipelineExecutor(BaseLogger):
             "max_rf_allocation": max_rf_allocation,
             "max_weight": max_weight,
             "include_short_selling": include_short_selling,
-            "optimization": optimization  # Add this parameter
         }
         
         self.logger.info(f"Запуск оптимизации стандартного портфеля с параметрами: {self.portfolio_params}")
@@ -427,8 +435,7 @@ class PipelineExecutor(BaseLogger):
                 max_rf_allocation=max_rf_allocation,
                 max_weight=max_weight,
                 risk_free_portfolio_file=bond_portfolio_path,
-                include_short_selling=include_short_selling,
-                optimization=optimization  # Add this parameter
+                include_short_selling=include_short_selling
             )
             
             # Копируем результаты после выполнения
@@ -593,7 +600,6 @@ class PipelineExecutor(BaseLogger):
                 include_short_selling=include_short_selling  # Use the parameter instead of hardcoded True
             )
 
-            
             # Загружаем данные
             optimizer.load_data()
             
@@ -1754,7 +1760,8 @@ class PipelineExecutor(BaseLogger):
         if signal_params:
             # Извлекаем все параметры для generate_signals
             for param in ['weight_tech', 'weight_sentiment', 'weight_fundamental', 
-                        'threshold_buy', 'threshold_sell', 'top_pct']:
+                        'threshold_buy', 'threshold_sell', 'top_pct', "tech_indicators",
+                        "sentiment_indicators", 'fund_weights']:
                 if param in signal_params:
                     signal_args[param] = signal_params[param]
                     

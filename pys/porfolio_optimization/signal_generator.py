@@ -59,18 +59,17 @@ class SignalGenerator(BaseLogger):
             self.logger.error(f"Ошибка при загрузке данных: {e}")
             return None
     
-    def calculate_composite_score(self):
+    def calculate_composite_score(self, tech_indicators, sentiment_indicators, fund_weights):
         """Рассчитывает композитный скор с учетом фундаментальных данных"""
         if self.df is None:
             self.logger.error("Данные не загружены")
             return None
             
         # Технические индикаторы для скоринга
-        tech_indicators = ['RSI_14', 'MACD_diff', 'Stoch_%K', 'CCI_20', 'Williams_%R_14', 'ROC_10']
+        tech_indicators = tech_indicators
         
         # Сентимент-индикаторы
-        sentiment_indicators = ['sentiment_compound_median', 'sentiment_direction', 
-                               'sentiment_ma_7d', 'sentiment_ratio', 'sentiment_zscore_7d']
+        sentiment_indicators = sentiment_indicators
         
         self.logger.info("Расчет композитного скора")
         
@@ -147,16 +146,11 @@ class SignalGenerator(BaseLogger):
                     if ticker in fund_data[year]:
                         ticker_cache_status['loaded'] += 1
                         ticker_scores[year][ticker] = self.calculate_ticker_fundamental_score(
-                            ticker, year, fund_data, quantiles
+                            ticker, year, fund_data, quantiles, fund_weights
                         )
                         ticker_cache_status['calculated'] += 1
-                        self.logger.debug(f"Рассчитан фундаментальный скор для {ticker} за {year}: {ticker_scores[year][ticker]}")
                     else:
                         ticker_cache_status['missing'] += 1
-                        self.logger.debug(f"Нет фундаментальных данных для {ticker} за {year}")
-            
-            self.logger.info(f"Статус загрузки фундаментальных данных: загружено {ticker_cache_status['loaded']}, "
-                            f"рассчитано {ticker_cache_status['calculated']}, отсутствует {ticker_cache_status['missing']}")
             
             # Отчет о наличии данных по годам
             for year in ['2023', '2024']:
@@ -165,45 +159,49 @@ class SignalGenerator(BaseLogger):
             
             # Применяем скоры к DataFrame
             data_year_counts = {'2023': 0, '2024': 0, 'unknown': 0}
-            
+
+            fundamental_scores = {}
+            for year in ['2023', '2024']:
+                for ticker in tickers:
+                    if ticker in ticker_scores[year]:
+                        fundamental_scores[(ticker, year)] = ticker_scores[year][ticker]
+
             for index, row in self.df.iterrows():
+                # Логируем общую информацию ещё до вычисления:
                 ticker = row['ticker']
+                # Если в индексе имеется дату, проверяем её
                 date = index if isinstance(index, pd.Timestamp) else pd.to_datetime(index)
-                
-                # Примечание: визуализируем какой год данных используется для каждой даты
+
+                # Определяем, данные какого года использовать
                 if date.year == 2024:
-                    # Используем 2023 данные для 2024 года (предыдущий финансовый год)
-                    if ticker in ticker_scores['2023']:
-                        score = ticker_scores['2023'][ticker]
-                        self.df.loc[index, 'fundamental_score'] = score
-                        data_year_counts['2023'] += 1
-                    else:
-                        # Если нет данных 2023 года, пробуем использовать более старые
-                        self.df.loc[index, 'fundamental_score'] = 0
-                        data_year_counts['unknown'] += 1
-                
+                    data_year = '2023'
                 elif date.year == 2025:
-                    # Используем 2024 данные для 2025 года (предыдущий финансовый год)
-                    if ticker in ticker_scores['2024']:
-                        score = ticker_scores['2024'][ticker]
-                        self.df.loc[index, 'fundamental_score'] = score
-                        data_year_counts['2024'] += 1
+                    data_year = '2024'
+                else:
+                    data_year = None
+
+                # Перед присвоением смотрим, нет ли уже значения в DataFrame
+                current_score_in_df = row.get('fundamental_score', None)
+
+                # Начинаем с нуля
+                score = 0.0
+
+                if data_year:
+                    if (ticker, data_year) in fundamental_scores:
+                        score = fundamental_scores[(ticker, data_year)]
+                        data_year_counts[data_year] += 1
                     else:
-                        # Если 2024 данных нет, используем 2023
-                        if ticker in ticker_scores['2023']:
-                            score = ticker_scores['2023'][ticker]
-                            self.df.loc[index, 'fundamental_score'] = score
-                            data_year_counts['2023'] += 1
+                        prev_year = '2023' if data_year == '2024' else None
+                        if prev_year and (ticker, prev_year) in fundamental_scores:
+                            score = fundamental_scores[(ticker, prev_year)]
+                            data_year_counts[prev_year] += 1
                         else:
-                            self.df.loc[index, 'fundamental_score'] = 0
                             data_year_counts['unknown'] += 1
                 else:
-                    # Для других лет просто используем ноль
-                    self.df.loc[index, 'fundamental_score'] = 0
                     data_year_counts['unknown'] += 1
-        
-            self.logger.info(f"Использование фундаментальных данных: данные 2023 - {data_year_counts['2023']}, "
-                            f"данные 2024 - {data_year_counts['2024']}, нет данных - {data_year_counts['unknown']}")
+
+                mask = (self.df.index == index) & (self.df['ticker'] == ticker)
+                self.df.loc[mask, 'fundamental_score'] = score
         
         # Композитный скор на основе весов
         self.df['composite_score'] = (
@@ -215,12 +213,16 @@ class SignalGenerator(BaseLogger):
         self.logger.info("Композитный скор рассчитан")
         
         # Выводим пример разных скоров для проверки
-        sample_tickers = self.df['ticker'].unique()[:5] if len(self.df['ticker'].unique()) > 5 else self.df['ticker'].unique()
+        sample_tickers = self.df['ticker'].unique()[:10] if len(self.df['ticker'].unique()) > 5 else self.df['ticker'].unique()
         for ticker in sample_tickers:
-            values = self.df[self.df['ticker'] == ticker].iloc[-1]
-            self.logger.info(f"Пример скоров для {ticker}: fundamental={values['fundamental_score']:.4f}, "
-                            f"tech={values['tech_score']:.4f}, sentiment={values['sentiment_score']:.4f}")
-        
+            ticker_data = self.df[self.df['ticker'] == ticker]
+            if not ticker_data.empty:
+                last_date = ticker_data.index[-1]
+                values = ticker_data.loc[last_date]
+                self.logger.info(f"Пример скоров для {ticker} на дату {last_date}: "
+                                f"fundamental={values['fundamental_score']:.4f}, "
+                                f"tech={values['tech_score']:.4f}, sentiment={values['sentiment_score']:.4f}")
+                
         return self.df
     
     def load_fundamental_data(self, base_path=f'{BASE_PATH}/data/processed_data'):
@@ -318,7 +320,7 @@ class SignalGenerator(BaseLogger):
             
         return quantiles
     
-    def calculate_ticker_fundamental_score(self, ticker, year, fund_data, quantiles):
+    def calculate_ticker_fundamental_score(self, ticker, year, fund_data, quantiles, fund_weights):
         """Рассчитывает общий фундаментальный скор для тикера за определенный год"""
         if ticker not in fund_data[year]:
             return 0
@@ -326,20 +328,22 @@ class SignalGenerator(BaseLogger):
         data = fund_data[year][ticker]
         
         # Веса показателей
-        weights = {
-            "Чистая прибыль, млрд руб": 0.10,
-            "Див доход, ао, %": 0.10,
-            "Дивиденды/прибыль, %": 0.05,
-            "EBITDA, млрд руб": 0.08,
-            "FCF, млрд руб": 0.10,
-            "Рентаб EBITDA, %": 0.08,
-            "Чистый долг, млрд руб": 0.08,
-            "Долг/EBITDA": 0.07,
-            "EPS, руб": 0.07,
-            "ROE, %": 0.10,
-            "ROA, %": 0.08,
-            "P/E": 0.09
-        }
+        # weights = {
+        #     "Чистая прибыль, млрд руб": 0.10,
+        #     "Див доход, ао, %": 0.10,
+        #     "Дивиденды/прибыль, %": 0.05,
+        #     "EBITDA, млрд руб": 0.08,
+        #     "FCF, млрд руб": 0.10,
+        #     "Рентаб EBITDA, %": 0.08,
+        #     "Чистый долг, млрд руб": 0.08,
+        #     "Долг/EBITDA": 0.07,
+        #     "EPS, руб": 0.07,
+        #     "ROE, %": 0.10,
+        #     "ROA, %": 0.08,
+        #     "P/E": 0.09
+        # }
+
+        weights = fund_weights
         
         indicator_scores = []
         indicator_weights = []
@@ -376,6 +380,9 @@ class SignalGenerator(BaseLogger):
         # Учитываем количество доступных показателей в общей оценке
         coverage_ratio = valid_indicators / max(1, total_indicators)
         confidence_factor = min(1.0, coverage_ratio * 1.5)  # Максимум 1.0, при покрытии 67%+
+
+        self.logger.info(f"weighted_score для {ticker} за {year}: {weighted_score}")
+        self.logger.info(f"confidence_factor для {ticker} за {year}: {confidence_factor}")
         
         return weighted_score * confidence_factor
     
@@ -406,7 +413,6 @@ class SignalGenerator(BaseLogger):
         
         q_data = quantiles[year][indicator]
         
-        # Z-скор для нормализации
         if q_data['std'] > 0:
             z_score = (value - q_data['mean']) / q_data['std']
             # Ограничиваем z-скор в пределах [-3, 3]
@@ -748,7 +754,10 @@ class SignalGenerator(BaseLogger):
 
     
     def run_pipeline(self, input_file=None, output_file=None, top_pct=0.3, output_dir=f'{BASE_PATH}/data/signal_visualizations',
-        save_ticker_visualizations=False):
+        save_ticker_visualizations=False, 
+        tech_indicators=['RSI_14', 'MACD_diff', 'Stoch_%K', 'CCI_20', 'Williams_%R_14', 'ROC_10'], 
+        sentiment_indicators=['sentiment_compound_median', 'sentiment_direction', 'sentiment_ma_7d', 'sentiment_ratio', 'sentiment_zscore_7d'],
+        fund_weights=None):
         """
         Запускает полный пайплайн генерации сигналов с сохранением результатов в структурированном виде
         
@@ -782,7 +791,7 @@ class SignalGenerator(BaseLogger):
             return None
             
         # Расчет композитного скора
-        self.calculate_composite_score()
+        self.calculate_composite_score(tech_indicators=tech_indicators, sentiment_indicators=sentiment_indicators, fund_weights=fund_weights)
         
         # Генерация сигналов
         self.generate_signals()
@@ -843,7 +852,10 @@ def run_pipeline_signal_generator(
         weight_sentiment=0.3,
         weight_fundamental=0.2,
         output_dir=f"{BASE_PATH}/data/signal_visualizations",
-        save_ticker_visualizations=False
+        save_ticker_visualizations=False,
+        tech_indicators=['RSI_14', 'MACD_diff', 'Stoch_%K', 'CCI_20', 'Williams_%R_14', 'ROC_10'], 
+        sentiment_indicators=['sentiment_compound_median', 'sentiment_direction', 'sentiment_ma_7d', 'sentiment_ratio', 'sentiment_zscore_7d'],
+        fund_weights=None
     ):
 
     SignalGenerator(
@@ -854,4 +866,7 @@ def run_pipeline_signal_generator(
     ).run_pipeline(
         output_file=f"{BASE_PATH}/data/signals.csv",
         output_dir=output_dir,
-        save_ticker_visualizations=save_ticker_visualizations)
+        save_ticker_visualizations=save_ticker_visualizations, 
+        tech_indicators=tech_indicators, 
+        sentiment_indicators=sentiment_indicators, 
+        fund_weights=fund_weights)

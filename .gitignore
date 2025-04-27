@@ -7,3 +7,4 @@ __pycache__/
 private_info.py
 news_pipeline_config.json
 telegram_session.session.vscode/
+telegram_session.session

@@ -269,6 +269,7 @@ class PortfolioOptimizer(BaseLogger):
         
         self.logger.info("Загрузка данных о рыночной капитализации")
         market_caps = {}
+        missing_files = []
         
         for ticker in self.returns.columns:
             cap_file = f"{BASE_PATH}/data/processed_data/{ticker}/market_cap/cap.csv"
@@ -278,33 +279,46 @@ class PortfolioOptimizer(BaseLogger):
                     # Загружаем файл с капитализацией
                     cap_data = pd.read_csv(cap_file)
                     
-                    # Используем последнее доступное значение
-                    if len(cap_data) > 0:
-                        # Предполагаем, что у нас есть колонки 'date' и 'market_cap'
-                        if 'date' in cap_data.columns and 'market_cap' in cap_data.columns:
-                            # Сортируем по дате и берем последнюю
-                            cap_data = cap_data.sort_values('date', ascending=False)
-                            market_cap = cap_data.iloc[0]['market_cap']
-                            
-                            # Преобразуем текстовое представление в число
-                            if isinstance(market_cap, str):
-                                if "трлн" in market_cap:
-                                    value = float(market_cap.replace("трлн", "").strip()) * 1000
-                                elif "млрд" in market_cap:
-                                    value = float(market_cap.replace("млрд", "").strip())
-                                elif "млн" in market_cap:
-                                    value = float(market_cap.replace("млн", "").strip()) / 1000
-                                else:
-                                    value = float(market_cap)
+                    # Проверяем формат файла для нового формата
+                    if 'ticker' in cap_data.columns and 'market_cap' in cap_data.columns:
+                        # Новый формат: ticker,market_cap
+                        for _, row in cap_data.iterrows():
+                            if row['ticker'] == ticker:
+                                market_caps[ticker] = float(row['market_cap'])
+                                self.logger.info(f"Загружена капитализация для {ticker}: {market_caps[ticker]}")
+                                break
+                    elif 'date' in cap_data.columns and 'market_cap' in cap_data.columns:
+                        # Старый формат с датой
+                        cap_data = cap_data.sort_values('date', ascending=False)
+                        market_cap = cap_data.iloc[0]['market_cap']
+                        
+                        # Преобразуем текстовое представление в число если нужно
+                        if isinstance(market_cap, str):
+                            if "трлн" in market_cap:
+                                value = float(market_cap.replace("трлн", "").strip()) * 1000
+                            elif "млрд" in market_cap:
+                                value = float(market_cap.replace("млрд", "").strip())
+                            elif "млн" in market_cap:
+                                value = float(market_cap.replace("млн", "").strip()) / 1000
                             else:
                                 value = float(market_cap)
-                                
-                            market_caps[ticker] = value
-                            self.logger.info(f"Загружена капитализация для {ticker}: {value} млрд")
                         else:
-                            self.logger.warning(f"Некорректный формат файла {cap_file}")
+                            value = float(market_cap)
+                            
+                        market_caps[ticker] = value
+                        self.logger.info(f"Загружена капитализация для {ticker}: {value} млрд")
+                    else:
+                        self.logger.warning(f"Некорректный формат файла {cap_file}")
+                        missing_files.append(ticker)
+                else:
+                    missing_files.append(ticker)
             except Exception as e:
                 self.logger.warning(f"Ошибка при загрузке капитализации для {ticker}: {e}")
+                missing_files.append(ticker)
+
+        # Если есть пропущенные файлы, вывести общий список
+        if missing_files:
+            self.logger.warning(f"Не удалось загрузить капитализацию для {len(missing_files)} тикеров: {', '.join(missing_files)}")
         
         # Если не удалось загрузить ни одной капитализации, создаем синтетические
         if not market_caps:

@@ -2065,3 +2065,1620 @@
 2025-04-27 16:51:51 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/backtest/portfolio_structure.png
 2025-04-27 16:51:51 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/backtest/monthly_returns_calendar.png
 2025-04-27 16:51:51 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/backtest
+2025-04-27 20:57:06 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 20:57:06 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/honest_backtest/test_signals_20250427_205639.csv
+2025-04-27 20:57:06 - Backtester - INFO - Загружено 1648 строк данных по акциям
+2025-04-27 20:57:06 - Backtester - INFO - Период бэктеста: 2025-01-02 - 2025-04-14
+2025-04-27 20:57:06 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 20:57:06 - Backtester - INFO - Анализ сигналов в данных: {0: 1420, 1: 150, -1: 78}
+2025-04-27 20:57:06 - Backtester - INFO - Сигналы для AFKS: {0: 96, -1: 4, 1: 3}
+2025-04-27 20:57:06 - Backtester - INFO - Сигналы для ALRS: {0: 98, -1: 5}
+2025-04-27 20:57:06 - Backtester - INFO - Сигналы для GAZP: {0: 85, 1: 11, -1: 7}
+2025-04-27 20:57:06 - Backtester - INFO - Сигналы для GMKN: {0: 99, 1: 3, -1: 1}
+2025-04-27 20:57:06 - Backtester - INFO - Сигналы для LKOH: {0: 68, -1: 23, 1: 12}
+2025-04-27 20:57:06 - Backtester - INFO - Сигналы для MAGN: {0: 96, -1: 5, 1: 2}
+2025-04-27 20:57:06 - Backtester - INFO - Сигналы для MTSS: {0: 96, 1: 5, -1: 2}
+2025-04-27 20:57:06 - Backtester - INFO - Сигналы для MVID: {0: 95, 1: 8}
+2025-04-27 20:57:06 - Backtester - INFO - Сигналы для NVTK: {0: 77, 1: 24, -1: 2}
+2025-04-27 20:57:06 - Backtester - INFO - Сигналы для PHOR: {0: 75, -1: 22, 1: 6}
+2025-04-27 20:57:06 - Backtester - INFO - Сигналы для ROSN: {0: 82, 1: 20, -1: 1}
+2025-04-27 20:57:06 - Backtester - INFO - Сигналы для RUAL: {0: 94, 1: 6, -1: 3}
+2025-04-27 20:57:06 - Backtester - INFO - Сигналы для SBER: {0: 97, 1: 5, -1: 1}
+2025-04-27 20:57:06 - Backtester - INFO - Сигналы для SIBN: {0: 86, 1: 16, -1: 1}
+2025-04-27 20:57:06 - Backtester - INFO - Сигналы для SNGS: {0: 96, 1: 6, -1: 1}
+2025-04-27 20:57:06 - Backtester - INFO - Сигналы для TATN: {0: 80, 1: 23}
+2025-04-27 20:57:06 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 20:57:06 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 20:57:06 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 20:57:06 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999996696), 'ALRS': np.float64(2.3214489129579327e-14), 'GAZP': np.float64(1.3591489045339243e-13), 'GMKN': np.float64(2.6619149925659963e-14), 'LKOH': np.float64(0.1399999999995929), 'MAGN': np.float64(2.738315148886591e-14), 'MTSS': np.float64(2.161676167046478e-13), 'MVID': np.float64(3.228940268445648e-14), 'NVTK': np.float64(6.600953237533437e-14), 'PHOR': np.float64(0.0), 'ROSN': np.float64(1.9026736718379105e-14), 'RUAL': np.float64(0.13999999999995347), 'SBER': np.float64(0.13999999999994991), 'SIBN': np.float64(1.891318710312052e-14), 'SNGS': np.float64(2.3521930784338394e-14), 'TATN': np.float64(0.13999999999995144)}
+2025-04-27 20:57:06 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 20:57:06 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 20:57:06 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 20:57:06 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 20:57:06 - Backtester - INFO -   AFKS: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 20:57:06 - Backtester - INFO -   ALRS: 5/103 ненулевых сигналов (4.9%)
+2025-04-27 20:57:06 - Backtester - INFO -   GAZP: 18/103 ненулевых сигналов (17.5%)
+2025-04-27 20:57:06 - Backtester - INFO -   GMKN: 4/103 ненулевых сигналов (3.9%)
+2025-04-27 20:57:06 - Backtester - INFO -   LKOH: 35/103 ненулевых сигналов (34.0%)
+2025-04-27 20:57:06 - Backtester - INFO -   MAGN: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 20:57:06 - Backtester - INFO -   MTSS: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 20:57:06 - Backtester - INFO -   MVID: 8/103 ненулевых сигналов (7.8%)
+2025-04-27 20:57:06 - Backtester - INFO -   NVTK: 26/103 ненулевых сигналов (25.2%)
+2025-04-27 20:57:06 - Backtester - INFO -   PHOR: 28/103 ненулевых сигналов (27.2%)
+2025-04-27 20:57:06 - Backtester - INFO -   ROSN: 21/103 ненулевых сигналов (20.4%)
+2025-04-27 20:57:06 - Backtester - INFO -   RUAL: 9/103 ненулевых сигналов (8.7%)
+2025-04-27 20:57:06 - Backtester - INFO -   SBER: 6/103 ненулевых сигналов (5.8%)
+2025-04-27 20:57:06 - Backtester - INFO -   SIBN: 17/103 ненулевых сигналов (16.5%)
+2025-04-27 20:57:06 - Backtester - INFO -   SNGS: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 20:57:06 - Backtester - INFO -   TATN: 23/103 ненулевых сигналов (22.3%)
+2025-04-27 20:57:06 - Backtester - INFO - Тикер AFKS: 8/103 ненулевых strategy_return
+2025-04-27 20:57:06 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0, -0.0, -0.0, 0.0]
+2025-04-27 20:57:06 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 20:57:06 - Backtester - INFO - Тикер LKOH: 35/103 ненулевых strategy_return
+2025-04-27 20:57:06 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, -0.0264633479212254, -0.0009131137177775805, -0.0, 0.0]
+2025-04-27 20:57:06 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 20:57:06 - Backtester - INFO - Тикер RUAL: 10/103 ненулевых strategy_return
+2025-04-27 20:57:06 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.0, -0.0, -0.0, -0.0]
+2025-04-27 20:57:06 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 20:57:06 - Backtester - INFO - Тикер SBER: 7/103 ненулевых strategy_return
+2025-04-27 20:57:06 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.0, -0.0, -0.0, 0.0]
+2025-04-27 20:57:06 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 20:57:06 - Backtester - INFO - Тикер TATN: 22/103 ненулевых strategy_return
+2025-04-27 20:57:06 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.0, -0.0007477194556602118, -0.0, -0.0]
+2025-04-27 20:57:06 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 20:57:06 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 20:57:06 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 20:57:06 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 20:57:06 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 20:57:06 - Backtester - INFO - Портфельная доходность: 103/103 ненулевых значений
+2025-04-27 20:57:06 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.0036187603278794423, -0.00014640826319954278, 8.61083810813401e-05, 8.61083810813401e-05]
+2025-04-27 20:57:06 - Backtester - INFO - Рассчитана доходность портфеля за 103 дней
+2025-04-27 20:57:06 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 20:57:06 - Backtester - INFO - Кумулятивная доходность: -1.64%, Годовая доходность: -3.96%, Шарп: -1.93, Макс. просадка: -3.23%
+2025-04-27 20:57:06 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 20:57:07 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/honest_backtest/test_backtest/cumulative_return.png
+2025-04-27 20:57:07 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/honest_backtest/test_backtest/drawdown.png
+2025-04-27 20:57:07 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/honest_backtest/test_backtest/returns_distribution.png
+2025-04-27 20:57:07 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/honest_backtest/test_backtest/portfolio_structure.png
+2025-04-27 20:57:07 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/honest_backtest/test_backtest/monthly_returns_calendar.png
+2025-04-27 20:57:07 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/honest_backtest/test_backtest
+2025-04-27 20:57:07 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 20:57:07 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/honest_backtest/train_signals_20250427_205639.csv
+2025-04-27 20:57:07 - Backtester - INFO - Загружено 5462 строк данных по акциям
+2025-04-27 20:57:07 - Backtester - INFO - Период бэктеста: 2024-01-02 - 2024-12-31
+2025-04-27 20:57:07 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 20:57:07 - Backtester - INFO - Анализ сигналов в данных: {0: 4669, 1: 451, -1: 342}
+2025-04-27 20:57:07 - Backtester - INFO - Сигналы для AFKS: {0: 329, -1: 23, 1: 13}
+2025-04-27 20:57:07 - Backtester - INFO - Сигналы для ALRS: {0: 341, -1: 17, 1: 7}
+2025-04-27 20:57:07 - Backtester - INFO - Сигналы для GAZP: {0: 318, -1: 24, 1: 23}
+2025-04-27 20:57:07 - Backtester - INFO - Сигналы для GMKN: {0: 341, -1: 14, 1: 4}
+2025-04-27 20:57:07 - Backtester - INFO - Сигналы для LKOH: {0: 239, -1: 63, 1: 63}
+2025-04-27 20:57:07 - Backtester - INFO - Сигналы для MAGN: {0: 329, -1: 26, 1: 8}
+2025-04-27 20:57:07 - Backtester - INFO - Сигналы для MTSS: {0: 328, 1: 21, -1: 16}
+2025-04-27 20:57:07 - Backtester - INFO - Сигналы для MVID: {0: 334, -1: 26, 1: 5}
+2025-04-27 20:57:07 - Backtester - INFO - Сигналы для NVTK: {0: 290, 1: 52, -1: 20}
+2025-04-27 20:57:07 - Backtester - INFO - Сигналы для PHOR: {-1: 4}
+2025-04-27 20:57:07 - Backtester - INFO - Сигналы для ROSN: {0: 274, 1: 75, -1: 16}
+2025-04-27 20:57:07 - Backtester - INFO - Сигналы для RUAL: {0: 335, -1: 16, 1: 14}
+2025-04-27 20:57:07 - Backtester - INFO - Сигналы для SBER: {0: 315, -1: 25, 1: 25}
+2025-04-27 20:57:07 - Backtester - INFO - Сигналы для SIBN: {0: 291, 1: 48, -1: 22}
+2025-04-27 20:57:07 - Backtester - INFO - Сигналы для SNGS: {0: 327, 1: 24, -1: 14}
+2025-04-27 20:57:07 - Backtester - INFO - Сигналы для TATN: {0: 278, 1: 69, -1: 16}
+2025-04-27 20:57:07 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 20:57:07 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 20:57:07 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 20:57:07 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999996696), 'ALRS': np.float64(2.3214489129579327e-14), 'GAZP': np.float64(1.3591489045339243e-13), 'GMKN': np.float64(2.6619149925659963e-14), 'LKOH': np.float64(0.1399999999995929), 'MAGN': np.float64(2.738315148886591e-14), 'MTSS': np.float64(2.161676167046478e-13), 'MVID': np.float64(3.228940268445648e-14), 'NVTK': np.float64(6.600953237533437e-14), 'PHOR': np.float64(0.0), 'ROSN': np.float64(1.9026736718379105e-14), 'RUAL': np.float64(0.13999999999995347), 'SBER': np.float64(0.13999999999994991), 'SIBN': np.float64(1.891318710312052e-14), 'SNGS': np.float64(2.3521930784338394e-14), 'TATN': np.float64(0.13999999999995144)}
+2025-04-27 20:57:07 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 20:57:07 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 20:57:07 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 20:57:07 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 20:57:07 - Backtester - INFO -   AFKS: 36/365 ненулевых сигналов (9.9%)
+2025-04-27 20:57:07 - Backtester - INFO -   ALRS: 24/365 ненулевых сигналов (6.6%)
+2025-04-27 20:57:07 - Backtester - INFO -   GAZP: 47/365 ненулевых сигналов (12.9%)
+2025-04-27 20:57:07 - Backtester - INFO -   GMKN: 18/359 ненулевых сигналов (5.0%)
+2025-04-27 20:57:07 - Backtester - INFO -   LKOH: 126/365 ненулевых сигналов (34.5%)
+2025-04-27 20:57:07 - Backtester - INFO -   MAGN: 34/363 ненулевых сигналов (9.4%)
+2025-04-27 20:57:07 - Backtester - INFO -   MTSS: 37/365 ненулевых сигналов (10.1%)
+2025-04-27 20:57:07 - Backtester - INFO -   MVID: 31/365 ненулевых сигналов (8.5%)
+2025-04-27 20:57:07 - Backtester - INFO -   NVTK: 72/362 ненулевых сигналов (19.9%)
+2025-04-27 20:57:07 - Backtester - INFO -   PHOR: 4/4 ненулевых сигналов (100.0%)
+2025-04-27 20:57:07 - Backtester - INFO -   ROSN: 91/365 ненулевых сигналов (24.9%)
+2025-04-27 20:57:07 - Backtester - INFO -   RUAL: 30/365 ненулевых сигналов (8.2%)
+2025-04-27 20:57:07 - Backtester - INFO -   SBER: 50/365 ненулевых сигналов (13.7%)
+2025-04-27 20:57:07 - Backtester - INFO -   SIBN: 70/361 ненулевых сигналов (19.4%)
+2025-04-27 20:57:07 - Backtester - INFO -   SNGS: 38/365 ненулевых сигналов (10.4%)
+2025-04-27 20:57:07 - Backtester - INFO -   TATN: 85/363 ненулевых сигналов (23.4%)
+2025-04-27 20:57:07 - Backtester - INFO - Тикер AFKS: 37/365 ненулевых strategy_return
+2025-04-27 20:57:07 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0017792502607520966, -0.0052670259676630415, 0.0062751309857439486, -0.0003065415976948316]
+2025-04-27 20:57:07 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 20:57:07 - Backtester - INFO - Тикер LKOH: 126/365 ненулевых strategy_return
+2025-04-27 20:57:07 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, -0.010095761264939496, 0.004776953038877041, -0.0013291980505094614, -0.00022123893805314765]
+2025-04-27 20:57:07 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 20:57:07 - Backtester - INFO - Тикер RUAL: 31/365 ненулевых strategy_return
+2025-04-27 20:57:07 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.011363636363636465, -0.011235955056179803, 0.005413105413105579, -0.000716127184188009]
+2025-04-27 20:57:07 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 20:57:07 - Backtester - INFO - Тикер SBER: 51/365 ненулевых strategy_return
+2025-04-27 20:57:07 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.013735046521931915, 0.0016025641025640969, 0.0018240186779512335, -0.0009867699729551038]
+2025-04-27 20:57:07 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 20:57:07 - Backtester - INFO - Тикер TATN: 85/363 ненулевых strategy_return
+2025-04-27 20:57:07 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.0043187517414322585, -0.006935774726036792, 0.00123984019837442, nan]
+2025-04-27 20:57:07 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 20:57:07 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 20:57:07 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 20:57:07 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 20:57:07 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 20:57:07 - Backtester - INFO - Портфельная доходность: 365/365 ненулевых значений
+2025-04-27 20:57:07 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.005694834080289977, -0.002302185024101041, 0.001965313992534471, -0.00022618649592322986]
+2025-04-27 20:57:07 - Backtester - INFO - Рассчитана доходность портфеля за 365 дней
+2025-04-27 20:57:07 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 20:57:07 - Backtester - INFO - Кумулятивная доходность: -2.03%, Годовая доходность: -1.41%, Шарп: -2.28, Макс. просадка: -6.44%
+2025-04-27 20:57:07 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 20:57:07 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/honest_backtest/train_backtest/cumulative_return.png
+2025-04-27 20:57:07 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/honest_backtest/train_backtest/drawdown.png
+2025-04-27 20:57:07 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/honest_backtest/train_backtest/returns_distribution.png
+2025-04-27 20:57:07 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/honest_backtest/train_backtest/portfolio_structure.png
+2025-04-27 20:57:08 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/honest_backtest/train_backtest/monthly_returns_calendar.png
+2025-04-27 20:57:08 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/honest_backtest/train_backtest
+2025-04-27 20:57:23 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 20:57:23 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/production_portfolio/signals/production_signals.csv
+2025-04-27 20:57:24 - Backtester - INFO - Загружено 7110 строк данных по акциям
+2025-04-27 20:57:24 - Backtester - INFO - Период бэктеста: 2024-01-02 - 2025-04-14
+2025-04-27 20:57:24 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 20:57:24 - Backtester - INFO - Анализ сигналов в данных: {0: 6090, 1: 605, -1: 415}
+2025-04-27 20:57:24 - Backtester - INFO - Сигналы для AFKS: {0: 420, -1: 30, 1: 18}
+2025-04-27 20:57:24 - Backtester - INFO - Сигналы для ALRS: {0: 442, -1: 20, 1: 6}
+2025-04-27 20:57:24 - Backtester - INFO - Сигналы для GAZP: {0: 404, 1: 34, -1: 30}
+2025-04-27 20:57:24 - Backtester - INFO - Сигналы для GMKN: {0: 441, -1: 15, 1: 6}
+2025-04-27 20:57:24 - Backtester - INFO - Сигналы для LKOH: {0: 316, -1: 83, 1: 69}
+2025-04-27 20:57:24 - Backtester - INFO - Сигналы для MAGN: {0: 425, -1: 31, 1: 10}
+2025-04-27 20:57:24 - Backtester - INFO - Сигналы для MTSS: {0: 425, 1: 26, -1: 17}
+2025-04-27 20:57:24 - Backtester - INFO - Сигналы для MVID: {0: 428, -1: 26, 1: 14}
+2025-04-27 20:57:24 - Backtester - INFO - Сигналы для NVTK: {0: 368, 1: 75, -1: 22}
+2025-04-27 20:57:24 - Backtester - INFO - Сигналы для PHOR: {0: 73, -1: 27, 1: 7}
+2025-04-27 20:57:24 - Backtester - INFO - Сигналы для ROSN: {0: 355, 1: 96, -1: 17}
+2025-04-27 20:57:24 - Backtester - INFO - Сигналы для RUAL: {0: 428, -1: 20, 1: 20}
+2025-04-27 20:57:24 - Backtester - INFO - Сигналы для SBER: {0: 410, 1: 33, -1: 25}
+2025-04-27 20:57:24 - Backtester - INFO - Сигналы для SIBN: {0: 378, 1: 65, -1: 21}
+2025-04-27 20:57:24 - Backtester - INFO - Сигналы для SNGS: {0: 421, 1: 32, -1: 15}
+2025-04-27 20:57:24 - Backtester - INFO - Сигналы для TATN: {0: 356, 1: 94, -1: 16}
+2025-04-27 20:57:24 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 20:57:24 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 20:57:24 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 20:57:24 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999983115), 'ALRS': np.float64(9.338918213096684e-14), 'GAZP': np.float64(2.0561199003783698e-13), 'GMKN': np.float64(1.0803822921431682e-13), 'LKOH': np.float64(0.13999999999870055), 'MAGN': np.float64(1.0066799461899719e-13), 'MTSS': np.float64(5.424737915815658e-13), 'MVID': np.float64(1.1921521971557745e-13), 'NVTK': np.float64(1.0162158393816819e-13), 'PHOR': np.float64(2.7075325145732113e-13), 'ROSN': np.float64(7.465190222223277e-14), 'RUAL': np.float64(0.13999999999979384), 'SBER': np.float64(0.1399999999997655), 'SIBN': np.float64(6.485885045481381e-14), 'SNGS': np.float64(5.678912280001135e-13), 'TATN': np.float64(0.1399999999996597)}
+2025-04-27 20:57:24 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 20:57:24 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 20:57:24 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 20:57:24 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 20:57:24 - Backtester - INFO -   AFKS: 48/468 ненулевых сигналов (10.3%)
+2025-04-27 20:57:24 - Backtester - INFO -   ALRS: 26/468 ненулевых сигналов (5.6%)
+2025-04-27 20:57:24 - Backtester - INFO -   GAZP: 64/468 ненулевых сигналов (13.7%)
+2025-04-27 20:57:24 - Backtester - INFO -   GMKN: 21/462 ненулевых сигналов (4.5%)
+2025-04-27 20:57:24 - Backtester - INFO -   LKOH: 152/468 ненулевых сигналов (32.5%)
+2025-04-27 20:57:24 - Backtester - INFO -   MAGN: 41/466 ненулевых сигналов (8.8%)
+2025-04-27 20:57:24 - Backtester - INFO -   MTSS: 43/468 ненулевых сигналов (9.2%)
+2025-04-27 20:57:24 - Backtester - INFO -   MVID: 40/468 ненулевых сигналов (8.5%)
+2025-04-27 20:57:24 - Backtester - INFO -   NVTK: 97/465 ненулевых сигналов (20.9%)
+2025-04-27 20:57:24 - Backtester - INFO -   PHOR: 34/107 ненулевых сигналов (31.8%)
+2025-04-27 20:57:24 - Backtester - INFO -   ROSN: 113/468 ненулевых сигналов (24.1%)
+2025-04-27 20:57:24 - Backtester - INFO -   RUAL: 40/468 ненулевых сигналов (8.5%)
+2025-04-27 20:57:24 - Backtester - INFO -   SBER: 58/468 ненулевых сигналов (12.4%)
+2025-04-27 20:57:24 - Backtester - INFO -   SIBN: 86/464 ненулевых сигналов (18.5%)
+2025-04-27 20:57:24 - Backtester - INFO -   SNGS: 47/468 ненулевых сигналов (10.0%)
+2025-04-27 20:57:24 - Backtester - INFO -   TATN: 110/466 ненулевых сигналов (23.6%)
+2025-04-27 20:57:24 - Backtester - INFO - Тикер AFKS: 49/468 ненулевых strategy_return
+2025-04-27 20:57:24 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0017792502607520966, -0.0052670259676630415, 0.0062751309857439486, -0.0003065415976948316]
+2025-04-27 20:57:24 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 20:57:24 - Backtester - INFO - Тикер LKOH: 152/468 ненулевых strategy_return
+2025-04-27 20:57:24 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, -0.010095761264939496, 0.004776953038877041, -0.0013291980505094614, -0.00022123893805314765]
+2025-04-27 20:57:24 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 20:57:24 - Backtester - INFO - Тикер RUAL: 41/468 ненулевых strategy_return
+2025-04-27 20:57:24 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.011363636363636465, -0.011235955056179803, 0.005413105413105579, -0.000716127184188009]
+2025-04-27 20:57:24 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 20:57:24 - Backtester - INFO - Тикер SBER: 59/468 ненулевых strategy_return
+2025-04-27 20:57:24 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.013735046521931915, 0.0016025641025640969, 0.0018240186779512335, -0.0009867699729551038]
+2025-04-27 20:57:24 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 20:57:24 - Backtester - INFO - Тикер TATN: 109/466 ненулевых strategy_return
+2025-04-27 20:57:24 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.0043187517414322585, -0.006935774726036792, 0.00123984019837442, nan]
+2025-04-27 20:57:24 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 20:57:24 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 20:57:24 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 20:57:24 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 20:57:24 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 20:57:24 - Backtester - INFO - Портфельная доходность: 468/468 ненулевых значений
+2025-04-27 20:57:24 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.005694834080275119, -0.0023021850241010666, 0.001965313992533243, -0.00022618649592269453]
+2025-04-27 20:57:24 - Backtester - INFO - Рассчитана доходность портфеля за 468 дней
+2025-04-27 20:57:24 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 20:57:24 - Backtester - INFO - Кумулятивная доходность: -3.40%, Годовая доходность: -1.85%, Шарп: -2.12, Макс. просадка: -6.42%
+2025-04-27 20:57:24 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 20:57:24 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/production_portfolio/backtest/cumulative_return.png
+2025-04-27 20:57:24 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/production_portfolio/backtest/drawdown.png
+2025-04-27 20:57:24 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/production_portfolio/backtest/returns_distribution.png
+2025-04-27 20:57:24 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/production_portfolio/backtest/portfolio_structure.png
+2025-04-27 20:57:24 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/production_portfolio/backtest/monthly_returns_calendar.png
+2025-04-27 20:57:24 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_205618_balanced_portfolio_0427_2056/shorts_portfolio/production_portfolio/backtest
+2025-04-27 21:32:59 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 21:32:59 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_signals_20250427_213232.csv
+2025-04-27 21:32:59 - Backtester - INFO - Загружено 1648 строк данных по акциям
+2025-04-27 21:32:59 - Backtester - INFO - Период бэктеста: 2025-01-02 - 2025-04-14
+2025-04-27 21:32:59 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 21:32:59 - Backtester - INFO - Анализ сигналов в данных: {0: 1420, 1: 150, -1: 78}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для AFKS: {0: 96, -1: 4, 1: 3}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для ALRS: {0: 98, -1: 5}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для GAZP: {0: 85, 1: 11, -1: 7}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для GMKN: {0: 99, 1: 3, -1: 1}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для LKOH: {0: 68, -1: 23, 1: 12}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для MAGN: {0: 96, -1: 5, 1: 2}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для MTSS: {0: 96, 1: 5, -1: 2}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для MVID: {0: 95, 1: 8}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для NVTK: {0: 77, 1: 24, -1: 2}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для PHOR: {0: 75, -1: 22, 1: 6}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для ROSN: {0: 82, 1: 20, -1: 1}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для RUAL: {0: 94, 1: 6, -1: 3}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для SBER: {0: 97, 1: 5, -1: 1}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для SIBN: {0: 86, 1: 16, -1: 1}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для SNGS: {0: 96, 1: 6, -1: 1}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для TATN: {0: 80, 1: 23}
+2025-04-27 21:32:59 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 21:32:59 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 21:32:59 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 21:32:59 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999996696), 'ALRS': np.float64(2.3214489129579327e-14), 'GAZP': np.float64(1.3591489045339243e-13), 'GMKN': np.float64(2.6619149925659963e-14), 'LKOH': np.float64(0.1399999999995929), 'MAGN': np.float64(2.738315148886591e-14), 'MTSS': np.float64(2.161676167046478e-13), 'MVID': np.float64(3.228940268445648e-14), 'NVTK': np.float64(6.600953237533437e-14), 'PHOR': np.float64(0.0), 'ROSN': np.float64(1.9026736718379105e-14), 'RUAL': np.float64(0.13999999999995347), 'SBER': np.float64(0.13999999999994991), 'SIBN': np.float64(1.891318710312052e-14), 'SNGS': np.float64(2.3521930784338394e-14), 'TATN': np.float64(0.13999999999995144)}
+2025-04-27 21:32:59 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 21:32:59 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 21:32:59 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 21:32:59 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 21:32:59 - Backtester - INFO -   AFKS: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 21:32:59 - Backtester - INFO -   ALRS: 5/103 ненулевых сигналов (4.9%)
+2025-04-27 21:32:59 - Backtester - INFO -   GAZP: 18/103 ненулевых сигналов (17.5%)
+2025-04-27 21:32:59 - Backtester - INFO -   GMKN: 4/103 ненулевых сигналов (3.9%)
+2025-04-27 21:32:59 - Backtester - INFO -   LKOH: 35/103 ненулевых сигналов (34.0%)
+2025-04-27 21:32:59 - Backtester - INFO -   MAGN: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 21:32:59 - Backtester - INFO -   MTSS: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 21:32:59 - Backtester - INFO -   MVID: 8/103 ненулевых сигналов (7.8%)
+2025-04-27 21:32:59 - Backtester - INFO -   NVTK: 26/103 ненулевых сигналов (25.2%)
+2025-04-27 21:32:59 - Backtester - INFO -   PHOR: 28/103 ненулевых сигналов (27.2%)
+2025-04-27 21:32:59 - Backtester - INFO -   ROSN: 21/103 ненулевых сигналов (20.4%)
+2025-04-27 21:32:59 - Backtester - INFO -   RUAL: 9/103 ненулевых сигналов (8.7%)
+2025-04-27 21:32:59 - Backtester - INFO -   SBER: 6/103 ненулевых сигналов (5.8%)
+2025-04-27 21:32:59 - Backtester - INFO -   SIBN: 17/103 ненулевых сигналов (16.5%)
+2025-04-27 21:32:59 - Backtester - INFO -   SNGS: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 21:32:59 - Backtester - INFO -   TATN: 23/103 ненулевых сигналов (22.3%)
+2025-04-27 21:32:59 - Backtester - INFO - Тикер AFKS: 8/103 ненулевых strategy_return
+2025-04-27 21:32:59 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0, -0.0, -0.0, 0.0]
+2025-04-27 21:32:59 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:32:59 - Backtester - INFO - Тикер LKOH: 35/103 ненулевых strategy_return
+2025-04-27 21:32:59 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, -0.0264633479212254, -0.0009131137177775805, -0.0, 0.0]
+2025-04-27 21:32:59 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:32:59 - Backtester - INFO - Тикер RUAL: 10/103 ненулевых strategy_return
+2025-04-27 21:32:59 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.0, -0.0, -0.0, -0.0]
+2025-04-27 21:32:59 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:32:59 - Backtester - INFO - Тикер SBER: 7/103 ненулевых strategy_return
+2025-04-27 21:32:59 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.0, -0.0, -0.0, 0.0]
+2025-04-27 21:32:59 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:32:59 - Backtester - INFO - Тикер TATN: 22/103 ненулевых strategy_return
+2025-04-27 21:32:59 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.0, -0.0007477194556602118, -0.0, -0.0]
+2025-04-27 21:32:59 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:32:59 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 21:32:59 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 21:32:59 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 21:32:59 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 21:32:59 - Backtester - INFO - Портфельная доходность: 103/103 ненулевых значений
+2025-04-27 21:32:59 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.0036187603278794423, -0.00014640826319954278, 8.61083810813401e-05, 8.61083810813401e-05]
+2025-04-27 21:32:59 - Backtester - INFO - Рассчитана доходность портфеля за 103 дней
+2025-04-27 21:32:59 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 21:32:59 - Backtester - INFO - Кумулятивная доходность: -1.64%, Годовая доходность: -3.96%, Шарп: -1.93, Макс. просадка: -3.23%
+2025-04-27 21:32:59 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 21:32:59 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/cumulative_return.png
+2025-04-27 21:32:59 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/drawdown.png
+2025-04-27 21:32:59 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/returns_distribution.png
+2025-04-27 21:32:59 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/portfolio_structure.png
+2025-04-27 21:32:59 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/monthly_returns_calendar.png
+2025-04-27 21:32:59 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest
+2025-04-27 21:32:59 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 21:32:59 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_signals_20250427_213232.csv
+2025-04-27 21:32:59 - Backtester - INFO - Загружено 5462 строк данных по акциям
+2025-04-27 21:32:59 - Backtester - INFO - Период бэктеста: 2024-01-02 - 2024-12-31
+2025-04-27 21:32:59 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 21:32:59 - Backtester - INFO - Анализ сигналов в данных: {0: 4669, 1: 451, -1: 342}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для AFKS: {0: 329, -1: 23, 1: 13}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для ALRS: {0: 341, -1: 17, 1: 7}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для GAZP: {0: 318, -1: 24, 1: 23}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для GMKN: {0: 341, -1: 14, 1: 4}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для LKOH: {0: 239, -1: 63, 1: 63}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для MAGN: {0: 329, -1: 26, 1: 8}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для MTSS: {0: 328, 1: 21, -1: 16}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для MVID: {0: 334, -1: 26, 1: 5}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для NVTK: {0: 290, 1: 52, -1: 20}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для PHOR: {-1: 4}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для ROSN: {0: 274, 1: 75, -1: 16}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для RUAL: {0: 335, -1: 16, 1: 14}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для SBER: {0: 315, -1: 25, 1: 25}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для SIBN: {0: 291, 1: 48, -1: 22}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для SNGS: {0: 327, 1: 24, -1: 14}
+2025-04-27 21:32:59 - Backtester - INFO - Сигналы для TATN: {0: 278, 1: 69, -1: 16}
+2025-04-27 21:32:59 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 21:32:59 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 21:32:59 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 21:32:59 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999996696), 'ALRS': np.float64(2.3214489129579327e-14), 'GAZP': np.float64(1.3591489045339243e-13), 'GMKN': np.float64(2.6619149925659963e-14), 'LKOH': np.float64(0.1399999999995929), 'MAGN': np.float64(2.738315148886591e-14), 'MTSS': np.float64(2.161676167046478e-13), 'MVID': np.float64(3.228940268445648e-14), 'NVTK': np.float64(6.600953237533437e-14), 'PHOR': np.float64(0.0), 'ROSN': np.float64(1.9026736718379105e-14), 'RUAL': np.float64(0.13999999999995347), 'SBER': np.float64(0.13999999999994991), 'SIBN': np.float64(1.891318710312052e-14), 'SNGS': np.float64(2.3521930784338394e-14), 'TATN': np.float64(0.13999999999995144)}
+2025-04-27 21:32:59 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 21:32:59 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 21:32:59 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 21:32:59 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 21:32:59 - Backtester - INFO -   AFKS: 36/365 ненулевых сигналов (9.9%)
+2025-04-27 21:32:59 - Backtester - INFO -   ALRS: 24/365 ненулевых сигналов (6.6%)
+2025-04-27 21:32:59 - Backtester - INFO -   GAZP: 47/365 ненулевых сигналов (12.9%)
+2025-04-27 21:32:59 - Backtester - INFO -   GMKN: 18/359 ненулевых сигналов (5.0%)
+2025-04-27 21:32:59 - Backtester - INFO -   LKOH: 126/365 ненулевых сигналов (34.5%)
+2025-04-27 21:32:59 - Backtester - INFO -   MAGN: 34/363 ненулевых сигналов (9.4%)
+2025-04-27 21:32:59 - Backtester - INFO -   MTSS: 37/365 ненулевых сигналов (10.1%)
+2025-04-27 21:32:59 - Backtester - INFO -   MVID: 31/365 ненулевых сигналов (8.5%)
+2025-04-27 21:32:59 - Backtester - INFO -   NVTK: 72/362 ненулевых сигналов (19.9%)
+2025-04-27 21:32:59 - Backtester - INFO -   PHOR: 4/4 ненулевых сигналов (100.0%)
+2025-04-27 21:32:59 - Backtester - INFO -   ROSN: 91/365 ненулевых сигналов (24.9%)
+2025-04-27 21:32:59 - Backtester - INFO -   RUAL: 30/365 ненулевых сигналов (8.2%)
+2025-04-27 21:32:59 - Backtester - INFO -   SBER: 50/365 ненулевых сигналов (13.7%)
+2025-04-27 21:32:59 - Backtester - INFO -   SIBN: 70/361 ненулевых сигналов (19.4%)
+2025-04-27 21:32:59 - Backtester - INFO -   SNGS: 38/365 ненулевых сигналов (10.4%)
+2025-04-27 21:32:59 - Backtester - INFO -   TATN: 85/363 ненулевых сигналов (23.4%)
+2025-04-27 21:32:59 - Backtester - INFO - Тикер AFKS: 37/365 ненулевых strategy_return
+2025-04-27 21:32:59 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0017792502607520966, -0.0052670259676630415, 0.0062751309857439486, -0.0003065415976948316]
+2025-04-27 21:32:59 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:32:59 - Backtester - INFO - Тикер LKOH: 126/365 ненулевых strategy_return
+2025-04-27 21:32:59 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, -0.010095761264939496, 0.004776953038877041, -0.0013291980505094614, -0.00022123893805314765]
+2025-04-27 21:32:59 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:32:59 - Backtester - INFO - Тикер RUAL: 31/365 ненулевых strategy_return
+2025-04-27 21:32:59 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.011363636363636465, -0.011235955056179803, 0.005413105413105579, -0.000716127184188009]
+2025-04-27 21:32:59 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:32:59 - Backtester - INFO - Тикер SBER: 51/365 ненулевых strategy_return
+2025-04-27 21:32:59 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.013735046521931915, 0.0016025641025640969, 0.0018240186779512335, -0.0009867699729551038]
+2025-04-27 21:32:59 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:32:59 - Backtester - INFO - Тикер TATN: 85/363 ненулевых strategy_return
+2025-04-27 21:32:59 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.0043187517414322585, -0.006935774726036792, 0.00123984019837442, nan]
+2025-04-27 21:32:59 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:32:59 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 21:32:59 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 21:32:59 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 21:32:59 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 21:32:59 - Backtester - INFO - Портфельная доходность: 365/365 ненулевых значений
+2025-04-27 21:32:59 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.005694834080289977, -0.002302185024101041, 0.001965313992534471, -0.00022618649592322986]
+2025-04-27 21:32:59 - Backtester - INFO - Рассчитана доходность портфеля за 365 дней
+2025-04-27 21:32:59 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 21:32:59 - Backtester - INFO - Кумулятивная доходность: -2.03%, Годовая доходность: -1.41%, Шарп: -2.28, Макс. просадка: -6.44%
+2025-04-27 21:32:59 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 21:32:59 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/cumulative_return.png
+2025-04-27 21:32:59 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/drawdown.png
+2025-04-27 21:32:59 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/returns_distribution.png
+2025-04-27 21:32:59 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/portfolio_structure.png
+2025-04-27 21:33:00 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/monthly_returns_calendar.png
+2025-04-27 21:33:00 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest
+2025-04-27 21:33:15 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 21:33:15 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/signals/production_signals.csv
+2025-04-27 21:33:16 - Backtester - INFO - Загружено 7110 строк данных по акциям
+2025-04-27 21:33:16 - Backtester - INFO - Период бэктеста: 2024-01-02 - 2025-04-14
+2025-04-27 21:33:16 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 21:33:16 - Backtester - INFO - Анализ сигналов в данных: {0: 6090, 1: 605, -1: 415}
+2025-04-27 21:33:16 - Backtester - INFO - Сигналы для AFKS: {0: 420, -1: 30, 1: 18}
+2025-04-27 21:33:16 - Backtester - INFO - Сигналы для ALRS: {0: 442, -1: 20, 1: 6}
+2025-04-27 21:33:16 - Backtester - INFO - Сигналы для GAZP: {0: 404, 1: 34, -1: 30}
+2025-04-27 21:33:16 - Backtester - INFO - Сигналы для GMKN: {0: 441, -1: 15, 1: 6}
+2025-04-27 21:33:16 - Backtester - INFO - Сигналы для LKOH: {0: 316, -1: 83, 1: 69}
+2025-04-27 21:33:16 - Backtester - INFO - Сигналы для MAGN: {0: 425, -1: 31, 1: 10}
+2025-04-27 21:33:16 - Backtester - INFO - Сигналы для MTSS: {0: 425, 1: 26, -1: 17}
+2025-04-27 21:33:16 - Backtester - INFO - Сигналы для MVID: {0: 428, -1: 26, 1: 14}
+2025-04-27 21:33:16 - Backtester - INFO - Сигналы для NVTK: {0: 368, 1: 75, -1: 22}
+2025-04-27 21:33:16 - Backtester - INFO - Сигналы для PHOR: {0: 73, -1: 27, 1: 7}
+2025-04-27 21:33:16 - Backtester - INFO - Сигналы для ROSN: {0: 355, 1: 96, -1: 17}
+2025-04-27 21:33:16 - Backtester - INFO - Сигналы для RUAL: {0: 428, -1: 20, 1: 20}
+2025-04-27 21:33:16 - Backtester - INFO - Сигналы для SBER: {0: 410, 1: 33, -1: 25}
+2025-04-27 21:33:16 - Backtester - INFO - Сигналы для SIBN: {0: 378, 1: 65, -1: 21}
+2025-04-27 21:33:16 - Backtester - INFO - Сигналы для SNGS: {0: 421, 1: 32, -1: 15}
+2025-04-27 21:33:16 - Backtester - INFO - Сигналы для TATN: {0: 356, 1: 94, -1: 16}
+2025-04-27 21:33:16 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 21:33:16 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 21:33:16 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 21:33:16 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999983115), 'ALRS': np.float64(9.338918213096684e-14), 'GAZP': np.float64(2.0561199003783698e-13), 'GMKN': np.float64(1.0803822921431682e-13), 'LKOH': np.float64(0.13999999999870055), 'MAGN': np.float64(1.0066799461899719e-13), 'MTSS': np.float64(5.424737915815658e-13), 'MVID': np.float64(1.1921521971557745e-13), 'NVTK': np.float64(1.0162158393816819e-13), 'PHOR': np.float64(2.7075325145732113e-13), 'ROSN': np.float64(7.465190222223277e-14), 'RUAL': np.float64(0.13999999999979384), 'SBER': np.float64(0.1399999999997655), 'SIBN': np.float64(6.485885045481381e-14), 'SNGS': np.float64(5.678912280001135e-13), 'TATN': np.float64(0.1399999999996597)}
+2025-04-27 21:33:16 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 21:33:16 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 21:33:16 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 21:33:16 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 21:33:16 - Backtester - INFO -   AFKS: 48/468 ненулевых сигналов (10.3%)
+2025-04-27 21:33:16 - Backtester - INFO -   ALRS: 26/468 ненулевых сигналов (5.6%)
+2025-04-27 21:33:16 - Backtester - INFO -   GAZP: 64/468 ненулевых сигналов (13.7%)
+2025-04-27 21:33:16 - Backtester - INFO -   GMKN: 21/462 ненулевых сигналов (4.5%)
+2025-04-27 21:33:16 - Backtester - INFO -   LKOH: 152/468 ненулевых сигналов (32.5%)
+2025-04-27 21:33:16 - Backtester - INFO -   MAGN: 41/466 ненулевых сигналов (8.8%)
+2025-04-27 21:33:16 - Backtester - INFO -   MTSS: 43/468 ненулевых сигналов (9.2%)
+2025-04-27 21:33:16 - Backtester - INFO -   MVID: 40/468 ненулевых сигналов (8.5%)
+2025-04-27 21:33:16 - Backtester - INFO -   NVTK: 97/465 ненулевых сигналов (20.9%)
+2025-04-27 21:33:16 - Backtester - INFO -   PHOR: 34/107 ненулевых сигналов (31.8%)
+2025-04-27 21:33:16 - Backtester - INFO -   ROSN: 113/468 ненулевых сигналов (24.1%)
+2025-04-27 21:33:16 - Backtester - INFO -   RUAL: 40/468 ненулевых сигналов (8.5%)
+2025-04-27 21:33:16 - Backtester - INFO -   SBER: 58/468 ненулевых сигналов (12.4%)
+2025-04-27 21:33:16 - Backtester - INFO -   SIBN: 86/464 ненулевых сигналов (18.5%)
+2025-04-27 21:33:16 - Backtester - INFO -   SNGS: 47/468 ненулевых сигналов (10.0%)
+2025-04-27 21:33:16 - Backtester - INFO -   TATN: 110/466 ненулевых сигналов (23.6%)
+2025-04-27 21:33:16 - Backtester - INFO - Тикер AFKS: 49/468 ненулевых strategy_return
+2025-04-27 21:33:16 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0017792502607520966, -0.0052670259676630415, 0.0062751309857439486, -0.0003065415976948316]
+2025-04-27 21:33:16 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:33:16 - Backtester - INFO - Тикер LKOH: 152/468 ненулевых strategy_return
+2025-04-27 21:33:16 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, -0.010095761264939496, 0.004776953038877041, -0.0013291980505094614, -0.00022123893805314765]
+2025-04-27 21:33:16 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:33:16 - Backtester - INFO - Тикер RUAL: 41/468 ненулевых strategy_return
+2025-04-27 21:33:16 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.011363636363636465, -0.011235955056179803, 0.005413105413105579, -0.000716127184188009]
+2025-04-27 21:33:16 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:33:16 - Backtester - INFO - Тикер SBER: 59/468 ненулевых strategy_return
+2025-04-27 21:33:16 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.013735046521931915, 0.0016025641025640969, 0.0018240186779512335, -0.0009867699729551038]
+2025-04-27 21:33:16 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:33:16 - Backtester - INFO - Тикер TATN: 109/466 ненулевых strategy_return
+2025-04-27 21:33:16 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.0043187517414322585, -0.006935774726036792, 0.00123984019837442, nan]
+2025-04-27 21:33:16 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:33:16 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 21:33:16 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 21:33:16 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 21:33:16 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 21:33:16 - Backtester - INFO - Портфельная доходность: 468/468 ненулевых значений
+2025-04-27 21:33:16 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.005694834080275119, -0.0023021850241010666, 0.001965313992533243, -0.00022618649592269453]
+2025-04-27 21:33:16 - Backtester - INFO - Рассчитана доходность портфеля за 468 дней
+2025-04-27 21:33:16 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 21:33:16 - Backtester - INFO - Кумулятивная доходность: -3.40%, Годовая доходность: -1.85%, Шарп: -2.12, Макс. просадка: -6.42%
+2025-04-27 21:33:16 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 21:33:16 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/cumulative_return.png
+2025-04-27 21:33:16 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/drawdown.png
+2025-04-27 21:33:16 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/returns_distribution.png
+2025-04-27 21:33:16 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/portfolio_structure.png
+2025-04-27 21:33:16 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/monthly_returns_calendar.png
+2025-04-27 21:33:16 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest
+2025-04-27 21:35:44 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 21:35:44 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_signals_20250427_213516.csv
+2025-04-27 21:35:44 - Backtester - INFO - Загружено 1648 строк данных по акциям
+2025-04-27 21:35:44 - Backtester - INFO - Период бэктеста: 2025-01-02 - 2025-04-14
+2025-04-27 21:35:44 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 21:35:44 - Backtester - INFO - Анализ сигналов в данных: {0: 1420, 1: 150, -1: 78}
+2025-04-27 21:35:44 - Backtester - INFO - Сигналы для AFKS: {0: 96, -1: 4, 1: 3}
+2025-04-27 21:35:44 - Backtester - INFO - Сигналы для ALRS: {0: 98, -1: 5}
+2025-04-27 21:35:44 - Backtester - INFO - Сигналы для GAZP: {0: 85, 1: 11, -1: 7}
+2025-04-27 21:35:44 - Backtester - INFO - Сигналы для GMKN: {0: 99, 1: 3, -1: 1}
+2025-04-27 21:35:44 - Backtester - INFO - Сигналы для LKOH: {0: 68, -1: 23, 1: 12}
+2025-04-27 21:35:44 - Backtester - INFO - Сигналы для MAGN: {0: 96, -1: 5, 1: 2}
+2025-04-27 21:35:44 - Backtester - INFO - Сигналы для MTSS: {0: 96, 1: 5, -1: 2}
+2025-04-27 21:35:44 - Backtester - INFO - Сигналы для MVID: {0: 95, 1: 8}
+2025-04-27 21:35:44 - Backtester - INFO - Сигналы для NVTK: {0: 77, 1: 24, -1: 2}
+2025-04-27 21:35:44 - Backtester - INFO - Сигналы для PHOR: {0: 75, -1: 22, 1: 6}
+2025-04-27 21:35:44 - Backtester - INFO - Сигналы для ROSN: {0: 82, 1: 20, -1: 1}
+2025-04-27 21:35:44 - Backtester - INFO - Сигналы для RUAL: {0: 94, 1: 6, -1: 3}
+2025-04-27 21:35:44 - Backtester - INFO - Сигналы для SBER: {0: 97, 1: 5, -1: 1}
+2025-04-27 21:35:44 - Backtester - INFO - Сигналы для SIBN: {0: 86, 1: 16, -1: 1}
+2025-04-27 21:35:44 - Backtester - INFO - Сигналы для SNGS: {0: 96, 1: 6, -1: 1}
+2025-04-27 21:35:44 - Backtester - INFO - Сигналы для TATN: {0: 80, 1: 23}
+2025-04-27 21:35:44 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 21:35:44 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 21:35:44 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 21:35:44 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999996696), 'ALRS': np.float64(2.3214489129579327e-14), 'GAZP': np.float64(1.3591489045339243e-13), 'GMKN': np.float64(2.6619149925659963e-14), 'LKOH': np.float64(0.1399999999995929), 'MAGN': np.float64(2.738315148886591e-14), 'MTSS': np.float64(2.161676167046478e-13), 'MVID': np.float64(3.228940268445648e-14), 'NVTK': np.float64(6.600953237533437e-14), 'PHOR': np.float64(0.0), 'ROSN': np.float64(1.9026736718379105e-14), 'RUAL': np.float64(0.13999999999995347), 'SBER': np.float64(0.13999999999994991), 'SIBN': np.float64(1.891318710312052e-14), 'SNGS': np.float64(2.3521930784338394e-14), 'TATN': np.float64(0.13999999999995144)}
+2025-04-27 21:35:44 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 21:35:45 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 21:35:45 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 21:35:45 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 21:35:45 - Backtester - INFO -   AFKS: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 21:35:45 - Backtester - INFO -   ALRS: 5/103 ненулевых сигналов (4.9%)
+2025-04-27 21:35:45 - Backtester - INFO -   GAZP: 18/103 ненулевых сигналов (17.5%)
+2025-04-27 21:35:45 - Backtester - INFO -   GMKN: 4/103 ненулевых сигналов (3.9%)
+2025-04-27 21:35:45 - Backtester - INFO -   LKOH: 35/103 ненулевых сигналов (34.0%)
+2025-04-27 21:35:45 - Backtester - INFO -   MAGN: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 21:35:45 - Backtester - INFO -   MTSS: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 21:35:45 - Backtester - INFO -   MVID: 8/103 ненулевых сигналов (7.8%)
+2025-04-27 21:35:45 - Backtester - INFO -   NVTK: 26/103 ненулевых сигналов (25.2%)
+2025-04-27 21:35:45 - Backtester - INFO -   PHOR: 28/103 ненулевых сигналов (27.2%)
+2025-04-27 21:35:45 - Backtester - INFO -   ROSN: 21/103 ненулевых сигналов (20.4%)
+2025-04-27 21:35:45 - Backtester - INFO -   RUAL: 9/103 ненулевых сигналов (8.7%)
+2025-04-27 21:35:45 - Backtester - INFO -   SBER: 6/103 ненулевых сигналов (5.8%)
+2025-04-27 21:35:45 - Backtester - INFO -   SIBN: 17/103 ненулевых сигналов (16.5%)
+2025-04-27 21:35:45 - Backtester - INFO -   SNGS: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 21:35:45 - Backtester - INFO -   TATN: 23/103 ненулевых сигналов (22.3%)
+2025-04-27 21:35:45 - Backtester - INFO - Тикер AFKS: 8/103 ненулевых strategy_return
+2025-04-27 21:35:45 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0, -0.0, -0.0, 0.0]
+2025-04-27 21:35:45 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:35:45 - Backtester - INFO - Тикер LKOH: 35/103 ненулевых strategy_return
+2025-04-27 21:35:45 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, -0.0264633479212254, -0.0009131137177775805, -0.0, 0.0]
+2025-04-27 21:35:45 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:35:45 - Backtester - INFO - Тикер RUAL: 10/103 ненулевых strategy_return
+2025-04-27 21:35:45 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.0, -0.0, -0.0, -0.0]
+2025-04-27 21:35:45 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:35:45 - Backtester - INFO - Тикер SBER: 7/103 ненулевых strategy_return
+2025-04-27 21:35:45 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.0, -0.0, -0.0, 0.0]
+2025-04-27 21:35:45 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:35:45 - Backtester - INFO - Тикер TATN: 22/103 ненулевых strategy_return
+2025-04-27 21:35:45 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.0, -0.0007477194556602118, -0.0, -0.0]
+2025-04-27 21:35:45 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:35:45 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 21:35:45 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 21:35:45 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 21:35:45 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 21:35:45 - Backtester - INFO - Портфельная доходность: 103/103 ненулевых значений
+2025-04-27 21:35:45 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.0036187603278794423, -0.00014640826319954278, 8.61083810813401e-05, 8.61083810813401e-05]
+2025-04-27 21:35:45 - Backtester - INFO - Рассчитана доходность портфеля за 103 дней
+2025-04-27 21:35:45 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 21:35:45 - Backtester - INFO - Кумулятивная доходность: -1.64%, Годовая доходность: -3.96%, Шарп: -1.93, Макс. просадка: -3.23%
+2025-04-27 21:35:45 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 21:35:45 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/cumulative_return.png
+2025-04-27 21:35:45 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/drawdown.png
+2025-04-27 21:35:45 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/returns_distribution.png
+2025-04-27 21:35:45 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/portfolio_structure.png
+2025-04-27 21:35:45 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/monthly_returns_calendar.png
+2025-04-27 21:35:45 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest
+2025-04-27 21:35:45 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 21:35:45 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_signals_20250427_213516.csv
+2025-04-27 21:35:45 - Backtester - INFO - Загружено 5462 строк данных по акциям
+2025-04-27 21:35:45 - Backtester - INFO - Период бэктеста: 2024-01-02 - 2024-12-31
+2025-04-27 21:35:45 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 21:35:45 - Backtester - INFO - Анализ сигналов в данных: {0: 4669, 1: 451, -1: 342}
+2025-04-27 21:35:45 - Backtester - INFO - Сигналы для AFKS: {0: 329, -1: 23, 1: 13}
+2025-04-27 21:35:45 - Backtester - INFO - Сигналы для ALRS: {0: 341, -1: 17, 1: 7}
+2025-04-27 21:35:45 - Backtester - INFO - Сигналы для GAZP: {0: 318, -1: 24, 1: 23}
+2025-04-27 21:35:45 - Backtester - INFO - Сигналы для GMKN: {0: 341, -1: 14, 1: 4}
+2025-04-27 21:35:45 - Backtester - INFO - Сигналы для LKOH: {0: 239, -1: 63, 1: 63}
+2025-04-27 21:35:45 - Backtester - INFO - Сигналы для MAGN: {0: 329, -1: 26, 1: 8}
+2025-04-27 21:35:45 - Backtester - INFO - Сигналы для MTSS: {0: 328, 1: 21, -1: 16}
+2025-04-27 21:35:45 - Backtester - INFO - Сигналы для MVID: {0: 334, -1: 26, 1: 5}
+2025-04-27 21:35:45 - Backtester - INFO - Сигналы для NVTK: {0: 290, 1: 52, -1: 20}
+2025-04-27 21:35:45 - Backtester - INFO - Сигналы для PHOR: {-1: 4}
+2025-04-27 21:35:45 - Backtester - INFO - Сигналы для ROSN: {0: 274, 1: 75, -1: 16}
+2025-04-27 21:35:45 - Backtester - INFO - Сигналы для RUAL: {0: 335, -1: 16, 1: 14}
+2025-04-27 21:35:45 - Backtester - INFO - Сигналы для SBER: {0: 315, -1: 25, 1: 25}
+2025-04-27 21:35:45 - Backtester - INFO - Сигналы для SIBN: {0: 291, 1: 48, -1: 22}
+2025-04-27 21:35:45 - Backtester - INFO - Сигналы для SNGS: {0: 327, 1: 24, -1: 14}
+2025-04-27 21:35:45 - Backtester - INFO - Сигналы для TATN: {0: 278, 1: 69, -1: 16}
+2025-04-27 21:35:45 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 21:35:45 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 21:35:45 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 21:35:45 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999996696), 'ALRS': np.float64(2.3214489129579327e-14), 'GAZP': np.float64(1.3591489045339243e-13), 'GMKN': np.float64(2.6619149925659963e-14), 'LKOH': np.float64(0.1399999999995929), 'MAGN': np.float64(2.738315148886591e-14), 'MTSS': np.float64(2.161676167046478e-13), 'MVID': np.float64(3.228940268445648e-14), 'NVTK': np.float64(6.600953237533437e-14), 'PHOR': np.float64(0.0), 'ROSN': np.float64(1.9026736718379105e-14), 'RUAL': np.float64(0.13999999999995347), 'SBER': np.float64(0.13999999999994991), 'SIBN': np.float64(1.891318710312052e-14), 'SNGS': np.float64(2.3521930784338394e-14), 'TATN': np.float64(0.13999999999995144)}
+2025-04-27 21:35:45 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 21:35:45 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 21:35:45 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 21:35:45 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 21:35:45 - Backtester - INFO -   AFKS: 36/365 ненулевых сигналов (9.9%)
+2025-04-27 21:35:45 - Backtester - INFO -   ALRS: 24/365 ненулевых сигналов (6.6%)
+2025-04-27 21:35:45 - Backtester - INFO -   GAZP: 47/365 ненулевых сигналов (12.9%)
+2025-04-27 21:35:45 - Backtester - INFO -   GMKN: 18/359 ненулевых сигналов (5.0%)
+2025-04-27 21:35:45 - Backtester - INFO -   LKOH: 126/365 ненулевых сигналов (34.5%)
+2025-04-27 21:35:45 - Backtester - INFO -   MAGN: 34/363 ненулевых сигналов (9.4%)
+2025-04-27 21:35:45 - Backtester - INFO -   MTSS: 37/365 ненулевых сигналов (10.1%)
+2025-04-27 21:35:45 - Backtester - INFO -   MVID: 31/365 ненулевых сигналов (8.5%)
+2025-04-27 21:35:45 - Backtester - INFO -   NVTK: 72/362 ненулевых сигналов (19.9%)
+2025-04-27 21:35:45 - Backtester - INFO -   PHOR: 4/4 ненулевых сигналов (100.0%)
+2025-04-27 21:35:45 - Backtester - INFO -   ROSN: 91/365 ненулевых сигналов (24.9%)
+2025-04-27 21:35:45 - Backtester - INFO -   RUAL: 30/365 ненулевых сигналов (8.2%)
+2025-04-27 21:35:45 - Backtester - INFO -   SBER: 50/365 ненулевых сигналов (13.7%)
+2025-04-27 21:35:45 - Backtester - INFO -   SIBN: 70/361 ненулевых сигналов (19.4%)
+2025-04-27 21:35:45 - Backtester - INFO -   SNGS: 38/365 ненулевых сигналов (10.4%)
+2025-04-27 21:35:45 - Backtester - INFO -   TATN: 85/363 ненулевых сигналов (23.4%)
+2025-04-27 21:35:45 - Backtester - INFO - Тикер AFKS: 37/365 ненулевых strategy_return
+2025-04-27 21:35:45 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0017792502607520966, -0.0052670259676630415, 0.0062751309857439486, -0.0003065415976948316]
+2025-04-27 21:35:45 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:35:45 - Backtester - INFO - Тикер LKOH: 126/365 ненулевых strategy_return
+2025-04-27 21:35:45 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, -0.010095761264939496, 0.004776953038877041, -0.0013291980505094614, -0.00022123893805314765]
+2025-04-27 21:35:45 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:35:45 - Backtester - INFO - Тикер RUAL: 31/365 ненулевых strategy_return
+2025-04-27 21:35:45 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.011363636363636465, -0.011235955056179803, 0.005413105413105579, -0.000716127184188009]
+2025-04-27 21:35:45 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:35:45 - Backtester - INFO - Тикер SBER: 51/365 ненулевых strategy_return
+2025-04-27 21:35:45 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.013735046521931915, 0.0016025641025640969, 0.0018240186779512335, -0.0009867699729551038]
+2025-04-27 21:35:45 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:35:45 - Backtester - INFO - Тикер TATN: 85/363 ненулевых strategy_return
+2025-04-27 21:35:45 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.0043187517414322585, -0.006935774726036792, 0.00123984019837442, nan]
+2025-04-27 21:35:45 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:35:45 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 21:35:45 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 21:35:45 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 21:35:45 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 21:35:45 - Backtester - INFO - Портфельная доходность: 365/365 ненулевых значений
+2025-04-27 21:35:45 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.005694834080289977, -0.002302185024101041, 0.001965313992534471, -0.00022618649592322986]
+2025-04-27 21:35:45 - Backtester - INFO - Рассчитана доходность портфеля за 365 дней
+2025-04-27 21:35:45 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 21:35:45 - Backtester - INFO - Кумулятивная доходность: -2.03%, Годовая доходность: -1.41%, Шарп: -2.28, Макс. просадка: -6.44%
+2025-04-27 21:35:45 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 21:35:45 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/cumulative_return.png
+2025-04-27 21:35:45 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/drawdown.png
+2025-04-27 21:35:45 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/returns_distribution.png
+2025-04-27 21:35:45 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/portfolio_structure.png
+2025-04-27 21:35:45 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/monthly_returns_calendar.png
+2025-04-27 21:35:45 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest
+2025-04-27 21:36:01 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 21:36:01 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/signals/production_signals.csv
+2025-04-27 21:36:02 - Backtester - INFO - Загружено 7110 строк данных по акциям
+2025-04-27 21:36:02 - Backtester - INFO - Период бэктеста: 2024-01-02 - 2025-04-14
+2025-04-27 21:36:02 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 21:36:02 - Backtester - INFO - Анализ сигналов в данных: {0: 6090, 1: 605, -1: 415}
+2025-04-27 21:36:02 - Backtester - INFO - Сигналы для AFKS: {0: 420, -1: 30, 1: 18}
+2025-04-27 21:36:02 - Backtester - INFO - Сигналы для ALRS: {0: 442, -1: 20, 1: 6}
+2025-04-27 21:36:02 - Backtester - INFO - Сигналы для GAZP: {0: 404, 1: 34, -1: 30}
+2025-04-27 21:36:02 - Backtester - INFO - Сигналы для GMKN: {0: 441, -1: 15, 1: 6}
+2025-04-27 21:36:02 - Backtester - INFO - Сигналы для LKOH: {0: 316, -1: 83, 1: 69}
+2025-04-27 21:36:02 - Backtester - INFO - Сигналы для MAGN: {0: 425, -1: 31, 1: 10}
+2025-04-27 21:36:02 - Backtester - INFO - Сигналы для MTSS: {0: 425, 1: 26, -1: 17}
+2025-04-27 21:36:02 - Backtester - INFO - Сигналы для MVID: {0: 428, -1: 26, 1: 14}
+2025-04-27 21:36:02 - Backtester - INFO - Сигналы для NVTK: {0: 368, 1: 75, -1: 22}
+2025-04-27 21:36:02 - Backtester - INFO - Сигналы для PHOR: {0: 73, -1: 27, 1: 7}
+2025-04-27 21:36:02 - Backtester - INFO - Сигналы для ROSN: {0: 355, 1: 96, -1: 17}
+2025-04-27 21:36:02 - Backtester - INFO - Сигналы для RUAL: {0: 428, -1: 20, 1: 20}
+2025-04-27 21:36:02 - Backtester - INFO - Сигналы для SBER: {0: 410, 1: 33, -1: 25}
+2025-04-27 21:36:02 - Backtester - INFO - Сигналы для SIBN: {0: 378, 1: 65, -1: 21}
+2025-04-27 21:36:02 - Backtester - INFO - Сигналы для SNGS: {0: 421, 1: 32, -1: 15}
+2025-04-27 21:36:02 - Backtester - INFO - Сигналы для TATN: {0: 356, 1: 94, -1: 16}
+2025-04-27 21:36:02 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 21:36:02 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 21:36:02 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 21:36:02 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999983115), 'ALRS': np.float64(9.338918213096684e-14), 'GAZP': np.float64(2.0561199003783698e-13), 'GMKN': np.float64(1.0803822921431682e-13), 'LKOH': np.float64(0.13999999999870055), 'MAGN': np.float64(1.0066799461899719e-13), 'MTSS': np.float64(5.424737915815658e-13), 'MVID': np.float64(1.1921521971557745e-13), 'NVTK': np.float64(1.0162158393816819e-13), 'PHOR': np.float64(2.7075325145732113e-13), 'ROSN': np.float64(7.465190222223277e-14), 'RUAL': np.float64(0.13999999999979384), 'SBER': np.float64(0.1399999999997655), 'SIBN': np.float64(6.485885045481381e-14), 'SNGS': np.float64(5.678912280001135e-13), 'TATN': np.float64(0.1399999999996597)}
+2025-04-27 21:36:02 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 21:36:02 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 21:36:02 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 21:36:02 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 21:36:02 - Backtester - INFO -   AFKS: 48/468 ненулевых сигналов (10.3%)
+2025-04-27 21:36:02 - Backtester - INFO -   ALRS: 26/468 ненулевых сигналов (5.6%)
+2025-04-27 21:36:02 - Backtester - INFO -   GAZP: 64/468 ненулевых сигналов (13.7%)
+2025-04-27 21:36:02 - Backtester - INFO -   GMKN: 21/462 ненулевых сигналов (4.5%)
+2025-04-27 21:36:02 - Backtester - INFO -   LKOH: 152/468 ненулевых сигналов (32.5%)
+2025-04-27 21:36:02 - Backtester - INFO -   MAGN: 41/466 ненулевых сигналов (8.8%)
+2025-04-27 21:36:02 - Backtester - INFO -   MTSS: 43/468 ненулевых сигналов (9.2%)
+2025-04-27 21:36:02 - Backtester - INFO -   MVID: 40/468 ненулевых сигналов (8.5%)
+2025-04-27 21:36:02 - Backtester - INFO -   NVTK: 97/465 ненулевых сигналов (20.9%)
+2025-04-27 21:36:02 - Backtester - INFO -   PHOR: 34/107 ненулевых сигналов (31.8%)
+2025-04-27 21:36:02 - Backtester - INFO -   ROSN: 113/468 ненулевых сигналов (24.1%)
+2025-04-27 21:36:02 - Backtester - INFO -   RUAL: 40/468 ненулевых сигналов (8.5%)
+2025-04-27 21:36:02 - Backtester - INFO -   SBER: 58/468 ненулевых сигналов (12.4%)
+2025-04-27 21:36:02 - Backtester - INFO -   SIBN: 86/464 ненулевых сигналов (18.5%)
+2025-04-27 21:36:02 - Backtester - INFO -   SNGS: 47/468 ненулевых сигналов (10.0%)
+2025-04-27 21:36:02 - Backtester - INFO -   TATN: 110/466 ненулевых сигналов (23.6%)
+2025-04-27 21:36:02 - Backtester - INFO - Тикер AFKS: 49/468 ненулевых strategy_return
+2025-04-27 21:36:02 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0017792502607520966, -0.0052670259676630415, 0.0062751309857439486, -0.0003065415976948316]
+2025-04-27 21:36:02 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:36:02 - Backtester - INFO - Тикер LKOH: 152/468 ненулевых strategy_return
+2025-04-27 21:36:02 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, -0.010095761264939496, 0.004776953038877041, -0.0013291980505094614, -0.00022123893805314765]
+2025-04-27 21:36:02 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:36:02 - Backtester - INFO - Тикер RUAL: 41/468 ненулевых strategy_return
+2025-04-27 21:36:02 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.011363636363636465, -0.011235955056179803, 0.005413105413105579, -0.000716127184188009]
+2025-04-27 21:36:02 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:36:02 - Backtester - INFO - Тикер SBER: 59/468 ненулевых strategy_return
+2025-04-27 21:36:02 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.013735046521931915, 0.0016025641025640969, 0.0018240186779512335, -0.0009867699729551038]
+2025-04-27 21:36:02 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:36:02 - Backtester - INFO - Тикер TATN: 109/466 ненулевых strategy_return
+2025-04-27 21:36:02 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.0043187517414322585, -0.006935774726036792, 0.00123984019837442, nan]
+2025-04-27 21:36:02 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:36:02 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 21:36:02 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 21:36:02 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 21:36:02 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 21:36:02 - Backtester - INFO - Портфельная доходность: 468/468 ненулевых значений
+2025-04-27 21:36:02 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.005694834080275119, -0.0023021850241010666, 0.001965313992533243, -0.00022618649592269453]
+2025-04-27 21:36:02 - Backtester - INFO - Рассчитана доходность портфеля за 468 дней
+2025-04-27 21:36:02 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 21:36:02 - Backtester - INFO - Кумулятивная доходность: -3.40%, Годовая доходность: -1.85%, Шарп: -2.12, Макс. просадка: -6.42%
+2025-04-27 21:36:02 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 21:36:02 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/cumulative_return.png
+2025-04-27 21:36:02 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/drawdown.png
+2025-04-27 21:36:02 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/returns_distribution.png
+2025-04-27 21:36:02 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/portfolio_structure.png
+2025-04-27 21:36:02 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/monthly_returns_calendar.png
+2025-04-27 21:36:02 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest
+2025-04-27 21:39:27 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 21:39:27 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_signals_20250427_213859.csv
+2025-04-27 21:39:27 - Backtester - INFO - Загружено 1648 строк данных по акциям
+2025-04-27 21:39:27 - Backtester - INFO - Период бэктеста: 2025-01-02 - 2025-04-14
+2025-04-27 21:39:27 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 21:39:27 - Backtester - INFO - Анализ сигналов в данных: {0: 1405, 1: 192, -1: 51}
+2025-04-27 21:39:27 - Backtester - INFO - Сигналы для AFKS: {0: 93, 1: 7, -1: 3}
+2025-04-27 21:39:27 - Backtester - INFO - Сигналы для ALRS: {0: 101, -1: 2}
+2025-04-27 21:39:27 - Backtester - INFO - Сигналы для GAZP: {0: 81, 1: 17, -1: 5}
+2025-04-27 21:39:27 - Backtester - INFO - Сигналы для GMKN: {0: 98, 1: 4, -1: 1}
+2025-04-27 21:39:27 - Backtester - INFO - Сигналы для LKOH: {0: 71, -1: 19, 1: 13}
+2025-04-27 21:39:27 - Backtester - INFO - Сигналы для MAGN: {0: 100, 1: 3}
+2025-04-27 21:39:27 - Backtester - INFO - Сигналы для MTSS: {0: 96, 1: 7}
+2025-04-27 21:39:27 - Backtester - INFO - Сигналы для MVID: {0: 92, 1: 11}
+2025-04-27 21:39:27 - Backtester - INFO - Сигналы для NVTK: {0: 75, 1: 28}
+2025-04-27 21:39:27 - Backtester - INFO - Сигналы для PHOR: {0: 79, -1: 17, 1: 7}
+2025-04-27 21:39:27 - Backtester - INFO - Сигналы для ROSN: {0: 81, 1: 21, -1: 1}
+2025-04-27 21:39:27 - Backtester - INFO - Сигналы для RUAL: {0: 96, 1: 6, -1: 1}
+2025-04-27 21:39:27 - Backtester - INFO - Сигналы для SBER: {0: 93, 1: 10}
+2025-04-27 21:39:27 - Backtester - INFO - Сигналы для SIBN: {0: 82, 1: 20, -1: 1}
+2025-04-27 21:39:27 - Backtester - INFO - Сигналы для SNGS: {0: 89, 1: 13, -1: 1}
+2025-04-27 21:39:27 - Backtester - INFO - Сигналы для TATN: {0: 78, 1: 25}
+2025-04-27 21:39:27 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 21:39:27 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 21:39:27 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 21:39:27 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999974322), 'ALRS': np.float64(1.34003061075084e-13), 'GAZP': np.float64(2.1667604051378038e-13), 'GMKN': np.float64(1.6256631863083725e-13), 'LKOH': np.float64(0.1399999999879096), 'MAGN': np.float64(1.4366988304583374e-13), 'MTSS': np.float64(1.0612824508093865e-11), 'MVID': np.float64(1.7443060959851827e-13), 'NVTK': np.float64(1.5457156003701248e-13), 'PHOR': np.float64(1.7588420480620431e-13), 'ROSN': np.float64(1.1849885041732735e-13), 'RUAL': np.float64(0.1399999999996986), 'SBER': np.float64(0.13999999999967125), 'SIBN': np.float64(9.855862179911259e-14), 'SNGS': np.float64(1.3116877272439176e-12), 'TATN': np.float64(0.13999999999967397)}
+2025-04-27 21:39:27 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 21:39:27 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 21:39:27 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 21:39:27 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 21:39:27 - Backtester - INFO -   AFKS: 10/103 ненулевых сигналов (9.7%)
+2025-04-27 21:39:27 - Backtester - INFO -   ALRS: 2/103 ненулевых сигналов (1.9%)
+2025-04-27 21:39:27 - Backtester - INFO -   GAZP: 22/103 ненулевых сигналов (21.4%)
+2025-04-27 21:39:27 - Backtester - INFO -   GMKN: 5/103 ненулевых сигналов (4.9%)
+2025-04-27 21:39:27 - Backtester - INFO -   LKOH: 32/103 ненулевых сигналов (31.1%)
+2025-04-27 21:39:27 - Backtester - INFO -   MAGN: 3/103 ненулевых сигналов (2.9%)
+2025-04-27 21:39:27 - Backtester - INFO -   MTSS: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 21:39:27 - Backtester - INFO -   MVID: 11/103 ненулевых сигналов (10.7%)
+2025-04-27 21:39:27 - Backtester - INFO -   NVTK: 28/103 ненулевых сигналов (27.2%)
+2025-04-27 21:39:27 - Backtester - INFO -   PHOR: 24/103 ненулевых сигналов (23.3%)
+2025-04-27 21:39:27 - Backtester - INFO -   ROSN: 22/103 ненулевых сигналов (21.4%)
+2025-04-27 21:39:27 - Backtester - INFO -   RUAL: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 21:39:27 - Backtester - INFO -   SBER: 10/103 ненулевых сигналов (9.7%)
+2025-04-27 21:39:27 - Backtester - INFO -   SIBN: 21/103 ненулевых сигналов (20.4%)
+2025-04-27 21:39:27 - Backtester - INFO -   SNGS: 14/103 ненулевых сигналов (13.6%)
+2025-04-27 21:39:27 - Backtester - INFO -   TATN: 25/103 ненулевых сигналов (24.3%)
+2025-04-27 21:39:27 - Backtester - INFO - Тикер AFKS: 11/103 ненулевых strategy_return
+2025-04-27 21:39:27 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0, -0.0, -0.0, 0.0]
+2025-04-27 21:39:27 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:39:27 - Backtester - INFO - Тикер LKOH: 32/103 ненулевых strategy_return
+2025-04-27 21:39:27 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, -0.0264633479212254, -0.0009131137177775805, -0.0, 0.0]
+2025-04-27 21:39:27 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:39:27 - Backtester - INFO - Тикер RUAL: 8/103 ненулевых strategy_return
+2025-04-27 21:39:27 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.0, -0.0, -0.0, -0.0]
+2025-04-27 21:39:27 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:39:27 - Backtester - INFO - Тикер SBER: 11/103 ненулевых strategy_return
+2025-04-27 21:39:27 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.0, -0.0, -0.0, 0.0]
+2025-04-27 21:39:27 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:39:27 - Backtester - INFO - Тикер TATN: 24/103 ненулевых strategy_return
+2025-04-27 21:39:27 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.033810143042912855, -0.0007477194556602118, -0.0, -0.0]
+2025-04-27 21:39:27 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:39:27 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 21:39:27 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 21:39:27 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 21:39:27 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 21:39:27 - Backtester - INFO - Портфельная доходность: 103/103 ненулевых значений
+2025-04-27 21:39:27 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.00835218035356704, -0.00014640826318866715, 8.61083810813401e-05, 8.61083810813401e-05]
+2025-04-27 21:39:27 - Backtester - INFO - Рассчитана доходность портфеля за 103 дней
+2025-04-27 21:39:27 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 21:39:27 - Backtester - INFO - Кумулятивная доходность: -1.94%, Годовая доходность: -4.67%, Шарп: -2.17, Макс. просадка: -3.96%
+2025-04-27 21:39:27 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 21:39:27 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/cumulative_return.png
+2025-04-27 21:39:27 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/drawdown.png
+2025-04-27 21:39:27 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/returns_distribution.png
+2025-04-27 21:39:27 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/portfolio_structure.png
+2025-04-27 21:39:28 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/monthly_returns_calendar.png
+2025-04-27 21:39:28 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest
+2025-04-27 21:39:28 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 21:39:28 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_signals_20250427_213859.csv
+2025-04-27 21:39:28 - Backtester - INFO - Загружено 5462 строк данных по акциям
+2025-04-27 21:39:28 - Backtester - INFO - Период бэктеста: 2024-01-02 - 2024-12-31
+2025-04-27 21:39:28 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 21:39:28 - Backtester - INFO - Анализ сигналов в данных: {0: 4741, 1: 633, -1: 88}
+2025-04-27 21:39:28 - Backtester - INFO - Сигналы для AFKS: {0: 323, 1: 40, -1: 2}
+2025-04-27 21:39:28 - Backtester - INFO - Сигналы для ALRS: {0: 351, 1: 13, -1: 1}
+2025-04-27 21:39:28 - Backtester - INFO - Сигналы для GAZP: {0: 322, 1: 36, -1: 7}
+2025-04-27 21:39:28 - Backtester - INFO - Сигналы для GMKN: {0: 352, 1: 7}
+2025-04-27 21:39:28 - Backtester - INFO - Сигналы для LKOH: {0: 245, 1: 85, -1: 35}
+2025-04-27 21:39:28 - Backtester - INFO - Сигналы для MAGN: {0: 341, 1: 15, -1: 7}
+2025-04-27 21:39:28 - Backtester - INFO - Сигналы для MTSS: {0: 330, 1: 30, -1: 5}
+2025-04-27 21:39:28 - Backtester - INFO - Сигналы для MVID: {0: 347, 1: 9, -1: 9}
+2025-04-27 21:39:28 - Backtester - INFO - Сигналы для NVTK: {0: 297, 1: 63, -1: 2}
+2025-04-27 21:39:28 - Backtester - INFO - Сигналы для PHOR: {0: 3, -1: 1}
+2025-04-27 21:39:28 - Backtester - INFO - Сигналы для ROSN: {0: 268, 1: 97}
+2025-04-27 21:39:28 - Backtester - INFO - Сигналы для RUAL: {0: 334, 1: 29, -1: 2}
+2025-04-27 21:39:28 - Backtester - INFO - Сигналы для SBER: {0: 324, 1: 32, -1: 9}
+2025-04-27 21:39:28 - Backtester - INFO - Сигналы для SIBN: {0: 290, 1: 67, -1: 4}
+2025-04-27 21:39:28 - Backtester - INFO - Сигналы для SNGS: {0: 332, 1: 30, -1: 3}
+2025-04-27 21:39:28 - Backtester - INFO - Сигналы для TATN: {0: 282, 1: 80, -1: 1}
+2025-04-27 21:39:28 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 21:39:28 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 21:39:28 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 21:39:28 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999974322), 'ALRS': np.float64(1.34003061075084e-13), 'GAZP': np.float64(2.1667604051378038e-13), 'GMKN': np.float64(1.6256631863083725e-13), 'LKOH': np.float64(0.1399999999879096), 'MAGN': np.float64(1.4366988304583374e-13), 'MTSS': np.float64(1.0612824508093865e-11), 'MVID': np.float64(1.7443060959851827e-13), 'NVTK': np.float64(1.5457156003701248e-13), 'PHOR': np.float64(1.7588420480620431e-13), 'ROSN': np.float64(1.1849885041732735e-13), 'RUAL': np.float64(0.1399999999996986), 'SBER': np.float64(0.13999999999967125), 'SIBN': np.float64(9.855862179911259e-14), 'SNGS': np.float64(1.3116877272439176e-12), 'TATN': np.float64(0.13999999999967397)}
+2025-04-27 21:39:28 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 21:39:28 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 21:39:28 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 21:39:28 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 21:39:28 - Backtester - INFO -   AFKS: 42/365 ненулевых сигналов (11.5%)
+2025-04-27 21:39:28 - Backtester - INFO -   ALRS: 14/365 ненулевых сигналов (3.8%)
+2025-04-27 21:39:28 - Backtester - INFO -   GAZP: 43/365 ненулевых сигналов (11.8%)
+2025-04-27 21:39:28 - Backtester - INFO -   GMKN: 7/359 ненулевых сигналов (1.9%)
+2025-04-27 21:39:28 - Backtester - INFO -   LKOH: 120/365 ненулевых сигналов (32.9%)
+2025-04-27 21:39:28 - Backtester - INFO -   MAGN: 22/363 ненулевых сигналов (6.1%)
+2025-04-27 21:39:28 - Backtester - INFO -   MTSS: 35/365 ненулевых сигналов (9.6%)
+2025-04-27 21:39:28 - Backtester - INFO -   MVID: 18/365 ненулевых сигналов (4.9%)
+2025-04-27 21:39:28 - Backtester - INFO -   NVTK: 65/362 ненулевых сигналов (18.0%)
+2025-04-27 21:39:28 - Backtester - INFO -   PHOR: 1/4 ненулевых сигналов (25.0%)
+2025-04-27 21:39:28 - Backtester - INFO -   ROSN: 97/365 ненулевых сигналов (26.6%)
+2025-04-27 21:39:28 - Backtester - INFO -   RUAL: 31/365 ненулевых сигналов (8.5%)
+2025-04-27 21:39:28 - Backtester - INFO -   SBER: 41/365 ненулевых сигналов (11.2%)
+2025-04-27 21:39:28 - Backtester - INFO -   SIBN: 71/361 ненулевых сигналов (19.7%)
+2025-04-27 21:39:28 - Backtester - INFO -   SNGS: 33/365 ненулевых сигналов (9.0%)
+2025-04-27 21:39:28 - Backtester - INFO -   TATN: 81/363 ненулевых сигналов (22.3%)
+2025-04-27 21:39:28 - Backtester - INFO - Тикер AFKS: 42/365 ненулевых strategy_return
+2025-04-27 21:39:28 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, 0.0, 0.0, -0.0, 0.0]
+2025-04-27 21:39:28 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:39:28 - Backtester - INFO - Тикер LKOH: 120/365 ненулевых strategy_return
+2025-04-27 21:39:28 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, 0.0, -0.0, 0.0, 0.0]
+2025-04-27 21:39:28 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:39:28 - Backtester - INFO - Тикер RUAL: 31/365 ненулевых strategy_return
+2025-04-27 21:39:28 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, 0.0, 0.0, -0.0, 0.0]
+2025-04-27 21:39:28 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:39:28 - Backtester - INFO - Тикер SBER: 42/365 ненулевых strategy_return
+2025-04-27 21:39:28 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, 0.0, -0.0, -0.0, 0.0]
+2025-04-27 21:39:28 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:39:28 - Backtester - INFO - Тикер TATN: 81/363 ненулевых strategy_return
+2025-04-27 21:39:28 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, 0.0, 0.0, -0.0, nan]
+2025-04-27 21:39:28 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:39:28 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 21:39:28 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 21:39:28 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 21:39:28 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 21:39:28 - Backtester - INFO - Портфельная доходность: 365/365 ненулевых значений
+2025-04-27 21:39:28 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, 8.61083810813401e-05, 8.61083810813401e-05, 8.61083810813401e-05, 8.61083810813401e-05]
+2025-04-27 21:39:28 - Backtester - INFO - Рассчитана доходность портфеля за 365 дней
+2025-04-27 21:39:28 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 21:39:28 - Backtester - INFO - Кумулятивная доходность: 10.34%, Годовая доходность: 7.03%, Шарп: -0.09, Макс. просадка: -3.04%
+2025-04-27 21:39:28 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 21:39:28 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/cumulative_return.png
+2025-04-27 21:39:28 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/drawdown.png
+2025-04-27 21:39:28 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/returns_distribution.png
+2025-04-27 21:39:28 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/portfolio_structure.png
+2025-04-27 21:39:28 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/monthly_returns_calendar.png
+2025-04-27 21:39:28 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest
+2025-04-27 21:39:45 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 21:39:45 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/signals/production_signals.csv
+2025-04-27 21:39:45 - Backtester - INFO - Загружено 7110 строк данных по акциям
+2025-04-27 21:39:45 - Backtester - INFO - Период бэктеста: 2024-01-02 - 2025-04-14
+2025-04-27 21:39:45 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 21:39:45 - Backtester - INFO - Анализ сигналов в данных: {0: 6150, 1: 827, -1: 133}
+2025-04-27 21:39:45 - Backtester - INFO - Сигналы для AFKS: {0: 417, 1: 47, -1: 4}
+2025-04-27 21:39:45 - Backtester - INFO - Сигналы для ALRS: {0: 451, 1: 14, -1: 3}
+2025-04-27 21:39:45 - Backtester - INFO - Сигналы для GAZP: {0: 405, 1: 52, -1: 11}
+2025-04-27 21:39:45 - Backtester - INFO - Сигналы для GMKN: {0: 448, 1: 13, -1: 1}
+2025-04-27 21:39:45 - Backtester - INFO - Сигналы для LKOH: {0: 321, 1: 95, -1: 52}
+2025-04-27 21:39:45 - Backtester - INFO - Сигналы для MAGN: {0: 441, 1: 18, -1: 7}
+2025-04-27 21:39:45 - Backtester - INFO - Сигналы для MTSS: {0: 427, 1: 37, -1: 4}
+2025-04-27 21:39:45 - Backtester - INFO - Сигналы для MVID: {0: 440, 1: 20, -1: 8}
+2025-04-27 21:39:45 - Backtester - INFO - Сигналы для NVTK: {0: 368, 1: 94, -1: 3}
+2025-04-27 21:39:45 - Backtester - INFO - Сигналы для PHOR: {0: 85, -1: 13, 1: 9}
+2025-04-27 21:39:45 - Backtester - INFO - Сигналы для ROSN: {0: 347, 1: 119, -1: 2}
+2025-04-27 21:39:45 - Backtester - INFO - Сигналы для RUAL: {0: 431, 1: 34, -1: 3}
+2025-04-27 21:39:45 - Backtester - INFO - Сигналы для SBER: {0: 418, 1: 41, -1: 9}
+2025-04-27 21:39:45 - Backtester - INFO - Сигналы для SIBN: {0: 373, 1: 86, -1: 5}
+2025-04-27 21:39:45 - Backtester - INFO - Сигналы для SNGS: {0: 419, 1: 45, -1: 4}
+2025-04-27 21:39:45 - Backtester - INFO - Сигналы для TATN: {0: 359, 1: 103, -1: 4}
+2025-04-27 21:39:45 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 21:39:45 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 21:39:45 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 21:39:45 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999983115), 'ALRS': np.float64(9.338918213096684e-14), 'GAZP': np.float64(2.0561199003783698e-13), 'GMKN': np.float64(1.0803822921431682e-13), 'LKOH': np.float64(0.13999999999870055), 'MAGN': np.float64(1.0066799461899719e-13), 'MTSS': np.float64(5.424737915815658e-13), 'MVID': np.float64(1.1921521971557745e-13), 'NVTK': np.float64(1.0162158393816819e-13), 'PHOR': np.float64(2.7075325145732113e-13), 'ROSN': np.float64(7.465190222223277e-14), 'RUAL': np.float64(0.13999999999979384), 'SBER': np.float64(0.1399999999997655), 'SIBN': np.float64(6.485885045481381e-14), 'SNGS': np.float64(5.678912280001135e-13), 'TATN': np.float64(0.1399999999996597)}
+2025-04-27 21:39:45 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 21:39:45 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 21:39:45 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 21:39:45 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 21:39:45 - Backtester - INFO -   AFKS: 51/468 ненулевых сигналов (10.9%)
+2025-04-27 21:39:45 - Backtester - INFO -   ALRS: 17/468 ненулевых сигналов (3.6%)
+2025-04-27 21:39:45 - Backtester - INFO -   GAZP: 63/468 ненулевых сигналов (13.5%)
+2025-04-27 21:39:45 - Backtester - INFO -   GMKN: 14/462 ненулевых сигналов (3.0%)
+2025-04-27 21:39:45 - Backtester - INFO -   LKOH: 147/468 ненулевых сигналов (31.4%)
+2025-04-27 21:39:45 - Backtester - INFO -   MAGN: 25/466 ненулевых сигналов (5.4%)
+2025-04-27 21:39:45 - Backtester - INFO -   MTSS: 41/468 ненулевых сигналов (8.8%)
+2025-04-27 21:39:45 - Backtester - INFO -   MVID: 28/468 ненулевых сигналов (6.0%)
+2025-04-27 21:39:45 - Backtester - INFO -   NVTK: 97/465 ненулевых сигналов (20.9%)
+2025-04-27 21:39:45 - Backtester - INFO -   PHOR: 22/107 ненулевых сигналов (20.6%)
+2025-04-27 21:39:45 - Backtester - INFO -   ROSN: 121/468 ненулевых сигналов (25.9%)
+2025-04-27 21:39:45 - Backtester - INFO -   RUAL: 37/468 ненулевых сигналов (7.9%)
+2025-04-27 21:39:45 - Backtester - INFO -   SBER: 50/468 ненулевых сигналов (10.7%)
+2025-04-27 21:39:45 - Backtester - INFO -   SIBN: 91/464 ненулевых сигналов (19.6%)
+2025-04-27 21:39:45 - Backtester - INFO -   SNGS: 49/468 ненулевых сигналов (10.5%)
+2025-04-27 21:39:45 - Backtester - INFO -   TATN: 107/466 ненулевых сигналов (23.0%)
+2025-04-27 21:39:45 - Backtester - INFO - Тикер AFKS: 51/468 ненулевых strategy_return
+2025-04-27 21:39:45 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, 0.0, 0.0, -0.0, 0.0]
+2025-04-27 21:39:45 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:39:45 - Backtester - INFO - Тикер LKOH: 147/468 ненулевых strategy_return
+2025-04-27 21:39:45 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, 0.0, -0.0, 0.0, 0.0]
+2025-04-27 21:39:45 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:39:45 - Backtester - INFO - Тикер RUAL: 38/468 ненулевых strategy_return
+2025-04-27 21:39:45 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, 0.0, 0.0, -0.0, 0.0]
+2025-04-27 21:39:45 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:39:45 - Backtester - INFO - Тикер SBER: 51/468 ненулевых strategy_return
+2025-04-27 21:39:45 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, 0.0, -0.0, -0.0, 0.0]
+2025-04-27 21:39:45 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:39:45 - Backtester - INFO - Тикер TATN: 106/466 ненулевых strategy_return
+2025-04-27 21:39:45 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, 0.0, 0.0, -0.0, nan]
+2025-04-27 21:39:45 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:39:45 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 21:39:45 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 21:39:45 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 21:39:45 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 21:39:45 - Backtester - INFO - Портфельная доходность: 468/468 ненулевых значений
+2025-04-27 21:39:45 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, 8.61083810813401e-05, 8.61083810813401e-05, 8.61083810813401e-05, 8.61083810813401e-05]
+2025-04-27 21:39:45 - Backtester - INFO - Рассчитана доходность портфеля за 468 дней
+2025-04-27 21:39:45 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 21:39:45 - Backtester - INFO - Кумулятивная доходность: 6.46%, Годовая доходность: 3.43%, Шарп: -0.80, Макс. просадка: -3.70%
+2025-04-27 21:39:45 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 21:39:45 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/cumulative_return.png
+2025-04-27 21:39:45 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/drawdown.png
+2025-04-27 21:39:45 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/returns_distribution.png
+2025-04-27 21:39:45 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/portfolio_structure.png
+2025-04-27 21:39:45 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/monthly_returns_calendar.png
+2025-04-27 21:39:45 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest
+2025-04-27 21:46:17 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 21:46:17 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_signals_20250427_214550.csv
+2025-04-27 21:46:17 - Backtester - INFO - Загружено 1648 строк данных по акциям
+2025-04-27 21:46:17 - Backtester - INFO - Период бэктеста: 2025-01-02 - 2025-04-14
+2025-04-27 21:46:17 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 21:46:17 - Backtester - INFO - Анализ сигналов в данных: {0: 1405, 1: 192, -1: 51}
+2025-04-27 21:46:17 - Backtester - INFO - Сигналы для AFKS: {0: 93, 1: 7, -1: 3}
+2025-04-27 21:46:17 - Backtester - INFO - Сигналы для ALRS: {0: 101, -1: 2}
+2025-04-27 21:46:17 - Backtester - INFO - Сигналы для GAZP: {0: 81, 1: 17, -1: 5}
+2025-04-27 21:46:17 - Backtester - INFO - Сигналы для GMKN: {0: 98, 1: 4, -1: 1}
+2025-04-27 21:46:17 - Backtester - INFO - Сигналы для LKOH: {0: 71, -1: 19, 1: 13}
+2025-04-27 21:46:17 - Backtester - INFO - Сигналы для MAGN: {0: 100, 1: 3}
+2025-04-27 21:46:17 - Backtester - INFO - Сигналы для MTSS: {0: 96, 1: 7}
+2025-04-27 21:46:17 - Backtester - INFO - Сигналы для MVID: {0: 92, 1: 11}
+2025-04-27 21:46:17 - Backtester - INFO - Сигналы для NVTK: {0: 75, 1: 28}
+2025-04-27 21:46:17 - Backtester - INFO - Сигналы для PHOR: {0: 79, -1: 17, 1: 7}
+2025-04-27 21:46:17 - Backtester - INFO - Сигналы для ROSN: {0: 81, 1: 21, -1: 1}
+2025-04-27 21:46:17 - Backtester - INFO - Сигналы для RUAL: {0: 96, 1: 6, -1: 1}
+2025-04-27 21:46:17 - Backtester - INFO - Сигналы для SBER: {0: 93, 1: 10}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для SIBN: {0: 82, 1: 20, -1: 1}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для SNGS: {0: 89, 1: 13, -1: 1}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для TATN: {0: 78, 1: 25}
+2025-04-27 21:46:18 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 21:46:18 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 21:46:18 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 21:46:18 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999974322), 'ALRS': np.float64(1.34003061075084e-13), 'GAZP': np.float64(2.1667604051378038e-13), 'GMKN': np.float64(1.6256631863083725e-13), 'LKOH': np.float64(0.1399999999879096), 'MAGN': np.float64(1.4366988304583374e-13), 'MTSS': np.float64(1.0612824508093865e-11), 'MVID': np.float64(1.7443060959851827e-13), 'NVTK': np.float64(1.5457156003701248e-13), 'PHOR': np.float64(1.7588420480620431e-13), 'ROSN': np.float64(1.1849885041732735e-13), 'RUAL': np.float64(0.1399999999996986), 'SBER': np.float64(0.13999999999967125), 'SIBN': np.float64(9.855862179911259e-14), 'SNGS': np.float64(1.3116877272439176e-12), 'TATN': np.float64(0.13999999999967397)}
+2025-04-27 21:46:18 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 21:46:18 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 21:46:18 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 21:46:18 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 21:46:18 - Backtester - INFO -   AFKS: 10/103 ненулевых сигналов (9.7%)
+2025-04-27 21:46:18 - Backtester - INFO -   ALRS: 2/103 ненулевых сигналов (1.9%)
+2025-04-27 21:46:18 - Backtester - INFO -   GAZP: 22/103 ненулевых сигналов (21.4%)
+2025-04-27 21:46:18 - Backtester - INFO -   GMKN: 5/103 ненулевых сигналов (4.9%)
+2025-04-27 21:46:18 - Backtester - INFO -   LKOH: 32/103 ненулевых сигналов (31.1%)
+2025-04-27 21:46:18 - Backtester - INFO -   MAGN: 3/103 ненулевых сигналов (2.9%)
+2025-04-27 21:46:18 - Backtester - INFO -   MTSS: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 21:46:18 - Backtester - INFO -   MVID: 11/103 ненулевых сигналов (10.7%)
+2025-04-27 21:46:18 - Backtester - INFO -   NVTK: 28/103 ненулевых сигналов (27.2%)
+2025-04-27 21:46:18 - Backtester - INFO -   PHOR: 24/103 ненулевых сигналов (23.3%)
+2025-04-27 21:46:18 - Backtester - INFO -   ROSN: 22/103 ненулевых сигналов (21.4%)
+2025-04-27 21:46:18 - Backtester - INFO -   RUAL: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 21:46:18 - Backtester - INFO -   SBER: 10/103 ненулевых сигналов (9.7%)
+2025-04-27 21:46:18 - Backtester - INFO -   SIBN: 21/103 ненулевых сигналов (20.4%)
+2025-04-27 21:46:18 - Backtester - INFO -   SNGS: 14/103 ненулевых сигналов (13.6%)
+2025-04-27 21:46:18 - Backtester - INFO -   TATN: 25/103 ненулевых сигналов (24.3%)
+2025-04-27 21:46:18 - Backtester - INFO - Тикер AFKS: 11/103 ненулевых strategy_return
+2025-04-27 21:46:18 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0, -0.0, -0.0, 0.0]
+2025-04-27 21:46:18 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:46:18 - Backtester - INFO - Тикер LKOH: 32/103 ненулевых strategy_return
+2025-04-27 21:46:18 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, -0.0264633479212254, -0.0009131137177775805, -0.0, 0.0]
+2025-04-27 21:46:18 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:46:18 - Backtester - INFO - Тикер RUAL: 8/103 ненулевых strategy_return
+2025-04-27 21:46:18 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.0, -0.0, -0.0, -0.0]
+2025-04-27 21:46:18 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:46:18 - Backtester - INFO - Тикер SBER: 11/103 ненулевых strategy_return
+2025-04-27 21:46:18 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.0, -0.0, -0.0, 0.0]
+2025-04-27 21:46:18 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:46:18 - Backtester - INFO - Тикер TATN: 24/103 ненулевых strategy_return
+2025-04-27 21:46:18 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.033810143042912855, -0.0007477194556602118, -0.0, -0.0]
+2025-04-27 21:46:18 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:46:18 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 21:46:18 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 21:46:18 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 21:46:18 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 21:46:18 - Backtester - INFO - Портфельная доходность: 103/103 ненулевых значений
+2025-04-27 21:46:18 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.00835218035356704, -0.00014640826318866715, 8.61083810813401e-05, 8.61083810813401e-05]
+2025-04-27 21:46:18 - Backtester - INFO - Рассчитана доходность портфеля за 103 дней
+2025-04-27 21:46:18 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 21:46:18 - Backtester - INFO - Кумулятивная доходность: -1.94%, Годовая доходность: -4.67%, Шарп: -2.17, Макс. просадка: -3.96%
+2025-04-27 21:46:18 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 21:46:18 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/cumulative_return.png
+2025-04-27 21:46:18 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/drawdown.png
+2025-04-27 21:46:18 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/returns_distribution.png
+2025-04-27 21:46:18 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/portfolio_structure.png
+2025-04-27 21:46:18 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest/monthly_returns_calendar.png
+2025-04-27 21:46:18 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/test_backtest
+2025-04-27 21:46:18 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 21:46:18 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_signals_20250427_214550.csv
+2025-04-27 21:46:18 - Backtester - INFO - Загружено 5462 строк данных по акциям
+2025-04-27 21:46:18 - Backtester - INFO - Период бэктеста: 2024-01-02 - 2024-12-31
+2025-04-27 21:46:18 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 21:46:18 - Backtester - INFO - Анализ сигналов в данных: {0: 4741, 1: 633, -1: 88}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для AFKS: {0: 323, 1: 40, -1: 2}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для ALRS: {0: 351, 1: 13, -1: 1}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для GAZP: {0: 322, 1: 36, -1: 7}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для GMKN: {0: 352, 1: 7}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для LKOH: {0: 245, 1: 85, -1: 35}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для MAGN: {0: 341, 1: 15, -1: 7}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для MTSS: {0: 330, 1: 30, -1: 5}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для MVID: {0: 347, 1: 9, -1: 9}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для NVTK: {0: 297, 1: 63, -1: 2}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для PHOR: {0: 3, -1: 1}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для ROSN: {0: 268, 1: 97}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для RUAL: {0: 334, 1: 29, -1: 2}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для SBER: {0: 324, 1: 32, -1: 9}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для SIBN: {0: 290, 1: 67, -1: 4}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для SNGS: {0: 332, 1: 30, -1: 3}
+2025-04-27 21:46:18 - Backtester - INFO - Сигналы для TATN: {0: 282, 1: 80, -1: 1}
+2025-04-27 21:46:18 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 21:46:18 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 21:46:18 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 21:46:18 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999974322), 'ALRS': np.float64(1.34003061075084e-13), 'GAZP': np.float64(2.1667604051378038e-13), 'GMKN': np.float64(1.6256631863083725e-13), 'LKOH': np.float64(0.1399999999879096), 'MAGN': np.float64(1.4366988304583374e-13), 'MTSS': np.float64(1.0612824508093865e-11), 'MVID': np.float64(1.7443060959851827e-13), 'NVTK': np.float64(1.5457156003701248e-13), 'PHOR': np.float64(1.7588420480620431e-13), 'ROSN': np.float64(1.1849885041732735e-13), 'RUAL': np.float64(0.1399999999996986), 'SBER': np.float64(0.13999999999967125), 'SIBN': np.float64(9.855862179911259e-14), 'SNGS': np.float64(1.3116877272439176e-12), 'TATN': np.float64(0.13999999999967397)}
+2025-04-27 21:46:18 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 21:46:18 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 21:46:18 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 21:46:18 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 21:46:18 - Backtester - INFO -   AFKS: 42/365 ненулевых сигналов (11.5%)
+2025-04-27 21:46:18 - Backtester - INFO -   ALRS: 14/365 ненулевых сигналов (3.8%)
+2025-04-27 21:46:18 - Backtester - INFO -   GAZP: 43/365 ненулевых сигналов (11.8%)
+2025-04-27 21:46:18 - Backtester - INFO -   GMKN: 7/359 ненулевых сигналов (1.9%)
+2025-04-27 21:46:18 - Backtester - INFO -   LKOH: 120/365 ненулевых сигналов (32.9%)
+2025-04-27 21:46:18 - Backtester - INFO -   MAGN: 22/363 ненулевых сигналов (6.1%)
+2025-04-27 21:46:18 - Backtester - INFO -   MTSS: 35/365 ненулевых сигналов (9.6%)
+2025-04-27 21:46:18 - Backtester - INFO -   MVID: 18/365 ненулевых сигналов (4.9%)
+2025-04-27 21:46:18 - Backtester - INFO -   NVTK: 65/362 ненулевых сигналов (18.0%)
+2025-04-27 21:46:18 - Backtester - INFO -   PHOR: 1/4 ненулевых сигналов (25.0%)
+2025-04-27 21:46:18 - Backtester - INFO -   ROSN: 97/365 ненулевых сигналов (26.6%)
+2025-04-27 21:46:18 - Backtester - INFO -   RUAL: 31/365 ненулевых сигналов (8.5%)
+2025-04-27 21:46:18 - Backtester - INFO -   SBER: 41/365 ненулевых сигналов (11.2%)
+2025-04-27 21:46:18 - Backtester - INFO -   SIBN: 71/361 ненулевых сигналов (19.7%)
+2025-04-27 21:46:18 - Backtester - INFO -   SNGS: 33/365 ненулевых сигналов (9.0%)
+2025-04-27 21:46:18 - Backtester - INFO -   TATN: 81/363 ненулевых сигналов (22.3%)
+2025-04-27 21:46:18 - Backtester - INFO - Тикер AFKS: 42/365 ненулевых strategy_return
+2025-04-27 21:46:18 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, 0.0, 0.0, -0.0, 0.0]
+2025-04-27 21:46:18 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:46:18 - Backtester - INFO - Тикер LKOH: 120/365 ненулевых strategy_return
+2025-04-27 21:46:18 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, 0.0, -0.0, 0.0, 0.0]
+2025-04-27 21:46:18 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:46:18 - Backtester - INFO - Тикер RUAL: 31/365 ненулевых strategy_return
+2025-04-27 21:46:18 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, 0.0, 0.0, -0.0, 0.0]
+2025-04-27 21:46:18 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:46:18 - Backtester - INFO - Тикер SBER: 42/365 ненулевых strategy_return
+2025-04-27 21:46:18 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, 0.0, -0.0, -0.0, 0.0]
+2025-04-27 21:46:18 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:46:18 - Backtester - INFO - Тикер TATN: 81/363 ненулевых strategy_return
+2025-04-27 21:46:18 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, 0.0, 0.0, -0.0, nan]
+2025-04-27 21:46:18 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:46:18 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 21:46:18 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 21:46:18 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 21:46:18 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 21:46:18 - Backtester - INFO - Портфельная доходность: 365/365 ненулевых значений
+2025-04-27 21:46:18 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, 8.61083810813401e-05, 8.61083810813401e-05, 8.61083810813401e-05, 8.61083810813401e-05]
+2025-04-27 21:46:18 - Backtester - INFO - Рассчитана доходность портфеля за 365 дней
+2025-04-27 21:46:18 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 21:46:18 - Backtester - INFO - Кумулятивная доходность: 10.34%, Годовая доходность: 7.03%, Шарп: -0.09, Макс. просадка: -3.04%
+2025-04-27 21:46:18 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 21:46:18 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/cumulative_return.png
+2025-04-27 21:46:18 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/drawdown.png
+2025-04-27 21:46:18 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/returns_distribution.png
+2025-04-27 21:46:18 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/portfolio_structure.png
+2025-04-27 21:46:19 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest/monthly_returns_calendar.png
+2025-04-27 21:46:19 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/honest_backtest/train_backtest
+2025-04-27 21:46:35 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 21:46:35 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/signals/production_signals.csv
+2025-04-27 21:46:35 - Backtester - INFO - Загружено 7110 строк данных по акциям
+2025-04-27 21:46:35 - Backtester - INFO - Период бэктеста: 2024-01-02 - 2025-04-14
+2025-04-27 21:46:35 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 21:46:35 - Backtester - INFO - Анализ сигналов в данных: {0: 6150, 1: 827, -1: 133}
+2025-04-27 21:46:35 - Backtester - INFO - Сигналы для AFKS: {0: 417, 1: 47, -1: 4}
+2025-04-27 21:46:35 - Backtester - INFO - Сигналы для ALRS: {0: 451, 1: 14, -1: 3}
+2025-04-27 21:46:35 - Backtester - INFO - Сигналы для GAZP: {0: 405, 1: 52, -1: 11}
+2025-04-27 21:46:35 - Backtester - INFO - Сигналы для GMKN: {0: 448, 1: 13, -1: 1}
+2025-04-27 21:46:35 - Backtester - INFO - Сигналы для LKOH: {0: 321, 1: 95, -1: 52}
+2025-04-27 21:46:35 - Backtester - INFO - Сигналы для MAGN: {0: 441, 1: 18, -1: 7}
+2025-04-27 21:46:35 - Backtester - INFO - Сигналы для MTSS: {0: 427, 1: 37, -1: 4}
+2025-04-27 21:46:35 - Backtester - INFO - Сигналы для MVID: {0: 440, 1: 20, -1: 8}
+2025-04-27 21:46:35 - Backtester - INFO - Сигналы для NVTK: {0: 368, 1: 94, -1: 3}
+2025-04-27 21:46:35 - Backtester - INFO - Сигналы для PHOR: {0: 85, -1: 13, 1: 9}
+2025-04-27 21:46:35 - Backtester - INFO - Сигналы для ROSN: {0: 347, 1: 119, -1: 2}
+2025-04-27 21:46:35 - Backtester - INFO - Сигналы для RUAL: {0: 431, 1: 34, -1: 3}
+2025-04-27 21:46:35 - Backtester - INFO - Сигналы для SBER: {0: 418, 1: 41, -1: 9}
+2025-04-27 21:46:35 - Backtester - INFO - Сигналы для SIBN: {0: 373, 1: 86, -1: 5}
+2025-04-27 21:46:35 - Backtester - INFO - Сигналы для SNGS: {0: 419, 1: 45, -1: 4}
+2025-04-27 21:46:35 - Backtester - INFO - Сигналы для TATN: {0: 359, 1: 103, -1: 4}
+2025-04-27 21:46:35 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 21:46:35 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 21:46:35 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 21:46:35 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999983115), 'ALRS': np.float64(9.338918213096684e-14), 'GAZP': np.float64(2.0561199003783698e-13), 'GMKN': np.float64(1.0803822921431682e-13), 'LKOH': np.float64(0.13999999999870055), 'MAGN': np.float64(1.0066799461899719e-13), 'MTSS': np.float64(5.424737915815658e-13), 'MVID': np.float64(1.1921521971557745e-13), 'NVTK': np.float64(1.0162158393816819e-13), 'PHOR': np.float64(2.7075325145732113e-13), 'ROSN': np.float64(7.465190222223277e-14), 'RUAL': np.float64(0.13999999999979384), 'SBER': np.float64(0.1399999999997655), 'SIBN': np.float64(6.485885045481381e-14), 'SNGS': np.float64(5.678912280001135e-13), 'TATN': np.float64(0.1399999999996597)}
+2025-04-27 21:46:35 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 21:46:35 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 21:46:35 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 21:46:35 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 21:46:35 - Backtester - INFO -   AFKS: 51/468 ненулевых сигналов (10.9%)
+2025-04-27 21:46:35 - Backtester - INFO -   ALRS: 17/468 ненулевых сигналов (3.6%)
+2025-04-27 21:46:35 - Backtester - INFO -   GAZP: 63/468 ненулевых сигналов (13.5%)
+2025-04-27 21:46:35 - Backtester - INFO -   GMKN: 14/462 ненулевых сигналов (3.0%)
+2025-04-27 21:46:35 - Backtester - INFO -   LKOH: 147/468 ненулевых сигналов (31.4%)
+2025-04-27 21:46:35 - Backtester - INFO -   MAGN: 25/466 ненулевых сигналов (5.4%)
+2025-04-27 21:46:35 - Backtester - INFO -   MTSS: 41/468 ненулевых сигналов (8.8%)
+2025-04-27 21:46:35 - Backtester - INFO -   MVID: 28/468 ненулевых сигналов (6.0%)
+2025-04-27 21:46:35 - Backtester - INFO -   NVTK: 97/465 ненулевых сигналов (20.9%)
+2025-04-27 21:46:35 - Backtester - INFO -   PHOR: 22/107 ненулевых сигналов (20.6%)
+2025-04-27 21:46:35 - Backtester - INFO -   ROSN: 121/468 ненулевых сигналов (25.9%)
+2025-04-27 21:46:35 - Backtester - INFO -   RUAL: 37/468 ненулевых сигналов (7.9%)
+2025-04-27 21:46:35 - Backtester - INFO -   SBER: 50/468 ненулевых сигналов (10.7%)
+2025-04-27 21:46:35 - Backtester - INFO -   SIBN: 91/464 ненулевых сигналов (19.6%)
+2025-04-27 21:46:35 - Backtester - INFO -   SNGS: 49/468 ненулевых сигналов (10.5%)
+2025-04-27 21:46:35 - Backtester - INFO -   TATN: 107/466 ненулевых сигналов (23.0%)
+2025-04-27 21:46:35 - Backtester - INFO - Тикер AFKS: 51/468 ненулевых strategy_return
+2025-04-27 21:46:35 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, 0.0, 0.0, -0.0, 0.0]
+2025-04-27 21:46:35 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:46:35 - Backtester - INFO - Тикер LKOH: 147/468 ненулевых strategy_return
+2025-04-27 21:46:35 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, 0.0, -0.0, 0.0, 0.0]
+2025-04-27 21:46:35 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:46:35 - Backtester - INFO - Тикер RUAL: 38/468 ненулевых strategy_return
+2025-04-27 21:46:35 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, 0.0, 0.0, -0.0, 0.0]
+2025-04-27 21:46:35 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:46:35 - Backtester - INFO - Тикер SBER: 51/468 ненулевых strategy_return
+2025-04-27 21:46:35 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, 0.0, -0.0, -0.0, 0.0]
+2025-04-27 21:46:35 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:46:35 - Backtester - INFO - Тикер TATN: 106/466 ненулевых strategy_return
+2025-04-27 21:46:35 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, 0.0, 0.0, -0.0, nan]
+2025-04-27 21:46:35 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 21:46:35 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 21:46:35 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 21:46:35 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 21:46:35 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 21:46:35 - Backtester - INFO - Портфельная доходность: 468/468 ненулевых значений
+2025-04-27 21:46:35 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, 8.61083810813401e-05, 8.61083810813401e-05, 8.61083810813401e-05, 8.61083810813401e-05]
+2025-04-27 21:46:35 - Backtester - INFO - Рассчитана доходность портфеля за 468 дней
+2025-04-27 21:46:35 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 21:46:35 - Backtester - INFO - Кумулятивная доходность: 6.46%, Годовая доходность: 3.43%, Шарп: -0.80, Макс. просадка: -3.70%
+2025-04-27 21:46:35 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 21:46:35 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/cumulative_return.png
+2025-04-27 21:46:35 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/drawdown.png
+2025-04-27 21:46:35 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/returns_distribution.png
+2025-04-27 21:46:36 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/portfolio_structure.png
+2025-04-27 21:46:36 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest/monthly_returns_calendar.png
+2025-04-27 21:46:36 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_213211_balanced_portfolio_0427_2131/shorts_portfolio/production_portfolio/backtest
+2025-04-27 23:05:02 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 23:05:02 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/test_signals_20250427_230432.csv
+2025-04-27 23:05:02 - Backtester - INFO - Загружено 1648 строк данных по акциям
+2025-04-27 23:05:02 - Backtester - INFO - Период бэктеста: 2025-01-02 - 2025-04-14
+2025-04-27 23:05:02 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 23:05:02 - Backtester - INFO - Анализ сигналов в данных: {0: 1398, 1: 142, -1: 108}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для AFKS: {0: 92, -1: 8, 1: 3}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для ALRS: {0: 88, -1: 15}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для GAZP: {0: 86, 1: 9, -1: 8}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для GMKN: {0: 95, -1: 6, 1: 2}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для LKOH: {0: 70, -1: 21, 1: 12}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для MAGN: {0: 94, -1: 8, 1: 1}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для MTSS: {0: 94, 1: 5, -1: 4}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для MVID: {0: 97, 1: 6}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для NVTK: {0: 78, 1: 23, -1: 2}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для PHOR: {0: 73, -1: 24, 1: 6}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для ROSN: {0: 81, 1: 21, -1: 1}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для RUAL: {0: 91, -1: 7, 1: 5}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для SBER: {0: 96, 1: 6, -1: 1}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для SIBN: {0: 88, 1: 14, -1: 1}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для SNGS: {0: 95, 1: 6, -1: 2}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для TATN: {0: 80, 1: 23}
+2025-04-27 23:05:02 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 23:05:02 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 23:05:02 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 23:05:02 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999997065), 'ALRS': np.float64(2.1325625774905215e-14), 'GAZP': np.float64(6.033937238747455e-13), 'GMKN': np.float64(2.3629162335080485e-14), 'LKOH': np.float64(0.13999999999930002), 'MAGN': np.float64(2.263488806193734e-14), 'MTSS': np.float64(4.0939416795416135e-14), 'MVID': np.float64(2.7161475063137382e-14), 'NVTK': np.float64(7.058986024390214e-14), 'PHOR': np.float64(0.0), 'ROSN': np.float64(1.595345209564517e-14), 'RUAL': np.float64(0.13999999999995869), 'SBER': np.float64(0.13999999999995652), 'SIBN': np.float64(1.534904192340231e-14), 'SNGS': np.float64(1.9209164446190905e-14), 'TATN': np.float64(0.13999999999995835)}
+2025-04-27 23:05:02 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 23:05:02 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 23:05:02 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 23:05:02 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 23:05:02 - Backtester - INFO -   AFKS: 11/103 ненулевых сигналов (10.7%)
+2025-04-27 23:05:02 - Backtester - INFO -   ALRS: 15/103 ненулевых сигналов (14.6%)
+2025-04-27 23:05:02 - Backtester - INFO -   GAZP: 17/103 ненулевых сигналов (16.5%)
+2025-04-27 23:05:02 - Backtester - INFO -   GMKN: 8/103 ненулевых сигналов (7.8%)
+2025-04-27 23:05:02 - Backtester - INFO -   LKOH: 33/103 ненулевых сигналов (32.0%)
+2025-04-27 23:05:02 - Backtester - INFO -   MAGN: 9/103 ненулевых сигналов (8.7%)
+2025-04-27 23:05:02 - Backtester - INFO -   MTSS: 9/103 ненулевых сигналов (8.7%)
+2025-04-27 23:05:02 - Backtester - INFO -   MVID: 6/103 ненулевых сигналов (5.8%)
+2025-04-27 23:05:02 - Backtester - INFO -   NVTK: 25/103 ненулевых сигналов (24.3%)
+2025-04-27 23:05:02 - Backtester - INFO -   PHOR: 30/103 ненулевых сигналов (29.1%)
+2025-04-27 23:05:02 - Backtester - INFO -   ROSN: 22/103 ненулевых сигналов (21.4%)
+2025-04-27 23:05:02 - Backtester - INFO -   RUAL: 12/103 ненулевых сигналов (11.7%)
+2025-04-27 23:05:02 - Backtester - INFO -   SBER: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 23:05:02 - Backtester - INFO -   SIBN: 15/103 ненулевых сигналов (14.6%)
+2025-04-27 23:05:02 - Backtester - INFO -   SNGS: 8/103 ненулевых сигналов (7.8%)
+2025-04-27 23:05:02 - Backtester - INFO -   TATN: 23/103 ненулевых сигналов (22.3%)
+2025-04-27 23:05:02 - Backtester - INFO - Тикер AFKS: 12/103 ненулевых strategy_return
+2025-04-27 23:05:02 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0, -0.0, -0.0, 0.0]
+2025-04-27 23:05:02 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:05:02 - Backtester - INFO - Тикер LKOH: 33/103 ненулевых strategy_return
+2025-04-27 23:05:02 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, -0.0264633479212254, -0.0009131137177775805, -0.0, 0.0]
+2025-04-27 23:05:02 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:05:02 - Backtester - INFO - Тикер RUAL: 13/103 ненулевых strategy_return
+2025-04-27 23:05:02 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.0, -0.0, -0.0, -0.0]
+2025-04-27 23:05:02 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:05:02 - Backtester - INFO - Тикер SBER: 8/103 ненулевых strategy_return
+2025-04-27 23:05:02 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.0, -0.0, -0.0, 0.0]
+2025-04-27 23:05:02 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:05:02 - Backtester - INFO - Тикер TATN: 22/103 ненулевых strategy_return
+2025-04-27 23:05:02 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.0, -0.0007477194556602118, -0.0, -0.0]
+2025-04-27 23:05:02 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:05:02 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 23:05:02 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 23:05:02 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 23:05:02 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 23:05:02 - Backtester - INFO - Портфельная доходность: 103/103 ненулевых значений
+2025-04-27 23:05:02 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.003618760327871692, -0.0001464082631992805, 8.61083810813401e-05, 8.61083810813401e-05]
+2025-04-27 23:05:02 - Backtester - INFO - Рассчитана доходность портфеля за 103 дней
+2025-04-27 23:05:02 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 23:05:02 - Backtester - INFO - Кумулятивная доходность: -1.92%, Годовая доходность: -4.63%, Шарп: -1.80, Макс. просадка: -3.27%
+2025-04-27 23:05:02 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 23:05:02 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/test_backtest/cumulative_return.png
+2025-04-27 23:05:02 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/test_backtest/drawdown.png
+2025-04-27 23:05:02 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/test_backtest/returns_distribution.png
+2025-04-27 23:05:02 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/test_backtest/portfolio_structure.png
+2025-04-27 23:05:02 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/test_backtest/monthly_returns_calendar.png
+2025-04-27 23:05:02 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/test_backtest
+2025-04-27 23:05:02 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 23:05:02 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/train_signals_20250427_230432.csv
+2025-04-27 23:05:02 - Backtester - INFO - Загружено 5462 строк данных по акциям
+2025-04-27 23:05:02 - Backtester - INFO - Период бэктеста: 2024-01-02 - 2024-12-31
+2025-04-27 23:05:02 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 23:05:02 - Backtester - INFO - Анализ сигналов в данных: {0: 4653, 1: 437, -1: 372}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для AFKS: {0: 323, -1: 34, 1: 8}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для ALRS: {0: 342, -1: 18, 1: 5}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для GAZP: {0: 316, -1: 34, 1: 15}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для GMKN: {0: 340, -1: 16, 1: 3}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для LKOH: {0: 246, 1: 74, -1: 45}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для MAGN: {0: 327, -1: 28, 1: 8}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для MTSS: {0: 325, -1: 21, 1: 19}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для MVID: {0: 333, -1: 28, 1: 4}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для NVTK: {0: 290, 1: 49, -1: 23}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для PHOR: {-1: 4}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для ROSN: {0: 273, 1: 75, -1: 17}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для RUAL: {0: 329, -1: 28, 1: 8}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для SBER: {0: 315, 1: 26, -1: 24}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для SIBN: {0: 291, 1: 48, -1: 22}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для SNGS: {0: 325, 1: 26, -1: 14}
+2025-04-27 23:05:02 - Backtester - INFO - Сигналы для TATN: {0: 278, 1: 69, -1: 16}
+2025-04-27 23:05:02 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 23:05:02 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 23:05:02 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 23:05:02 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999997065), 'ALRS': np.float64(2.1325625774905215e-14), 'GAZP': np.float64(6.033937238747455e-13), 'GMKN': np.float64(2.3629162335080485e-14), 'LKOH': np.float64(0.13999999999930002), 'MAGN': np.float64(2.263488806193734e-14), 'MTSS': np.float64(4.0939416795416135e-14), 'MVID': np.float64(2.7161475063137382e-14), 'NVTK': np.float64(7.058986024390214e-14), 'PHOR': np.float64(0.0), 'ROSN': np.float64(1.595345209564517e-14), 'RUAL': np.float64(0.13999999999995869), 'SBER': np.float64(0.13999999999995652), 'SIBN': np.float64(1.534904192340231e-14), 'SNGS': np.float64(1.9209164446190905e-14), 'TATN': np.float64(0.13999999999995835)}
+2025-04-27 23:05:02 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 23:05:02 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 23:05:02 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 23:05:03 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 23:05:03 - Backtester - INFO -   AFKS: 42/365 ненулевых сигналов (11.5%)
+2025-04-27 23:05:03 - Backtester - INFO -   ALRS: 23/365 ненулевых сигналов (6.3%)
+2025-04-27 23:05:03 - Backtester - INFO -   GAZP: 49/365 ненулевых сигналов (13.4%)
+2025-04-27 23:05:03 - Backtester - INFO -   GMKN: 19/359 ненулевых сигналов (5.3%)
+2025-04-27 23:05:03 - Backtester - INFO -   LKOH: 119/365 ненулевых сигналов (32.6%)
+2025-04-27 23:05:03 - Backtester - INFO -   MAGN: 36/363 ненулевых сигналов (9.9%)
+2025-04-27 23:05:03 - Backtester - INFO -   MTSS: 40/365 ненулевых сигналов (11.0%)
+2025-04-27 23:05:03 - Backtester - INFO -   MVID: 32/365 ненулевых сигналов (8.8%)
+2025-04-27 23:05:03 - Backtester - INFO -   NVTK: 72/362 ненулевых сигналов (19.9%)
+2025-04-27 23:05:03 - Backtester - INFO -   PHOR: 4/4 ненулевых сигналов (100.0%)
+2025-04-27 23:05:03 - Backtester - INFO -   ROSN: 92/365 ненулевых сигналов (25.2%)
+2025-04-27 23:05:03 - Backtester - INFO -   RUAL: 36/365 ненулевых сигналов (9.9%)
+2025-04-27 23:05:03 - Backtester - INFO -   SBER: 50/365 ненулевых сигналов (13.7%)
+2025-04-27 23:05:03 - Backtester - INFO -   SIBN: 70/361 ненулевых сигналов (19.4%)
+2025-04-27 23:05:03 - Backtester - INFO -   SNGS: 40/365 ненулевых сигналов (11.0%)
+2025-04-27 23:05:03 - Backtester - INFO -   TATN: 85/363 ненулевых сигналов (23.4%)
+2025-04-27 23:05:03 - Backtester - INFO - Тикер AFKS: 43/365 ненулевых strategy_return
+2025-04-27 23:05:03 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0017792502607520966, -0.0052670259676630415, 0.0062751309857439486, -0.0003065415976948316]
+2025-04-27 23:05:03 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:05:03 - Backtester - INFO - Тикер LKOH: 119/365 ненулевых strategy_return
+2025-04-27 23:05:03 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, 0.0, -0.0, 0.0, 0.0]
+2025-04-27 23:05:03 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:05:03 - Backtester - INFO - Тикер RUAL: 37/365 ненулевых strategy_return
+2025-04-27 23:05:03 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.011363636363636465, -0.011235955056179803, 0.005413105413105579, -0.000716127184188009]
+2025-04-27 23:05:03 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:05:03 - Backtester - INFO - Тикер SBER: 51/365 ненулевых strategy_return
+2025-04-27 23:05:03 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.013735046521931915, 0.0016025641025640969, 0.0018240186779512335, -0.0009867699729551038]
+2025-04-27 23:05:03 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:05:03 - Backtester - INFO - Тикер TATN: 85/363 ненулевых strategy_return
+2025-04-27 23:05:03 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.0043187517414322585, -0.006935774726036792, 0.00123984019837442, nan]
+2025-04-27 23:05:03 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:05:03 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 23:05:03 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 23:05:03 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 23:05:03 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 23:05:03 - Backtester - INFO - Портфельная доходность: 365/365 ненулевых значений
+2025-04-27 23:05:03 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.004281427503202744, -0.002970958449541997, 0.002151401719605327, -0.00019521304459589064]
+2025-04-27 23:05:03 - Backtester - INFO - Рассчитана доходность портфеля за 365 дней
+2025-04-27 23:05:03 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 23:05:03 - Backtester - INFO - Кумулятивная доходность: -0.76%, Годовая доходность: -0.53%, Шарп: -2.09, Макс. просадка: -6.34%
+2025-04-27 23:05:03 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 23:05:03 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/train_backtest/cumulative_return.png
+2025-04-27 23:05:03 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/train_backtest/drawdown.png
+2025-04-27 23:05:03 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/train_backtest/returns_distribution.png
+2025-04-27 23:05:03 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/train_backtest/portfolio_structure.png
+2025-04-27 23:05:03 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/train_backtest/monthly_returns_calendar.png
+2025-04-27 23:05:03 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/train_backtest
+2025-04-27 23:05:22 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 23:05:22 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/production_portfolio/signals/production_signals.csv
+2025-04-27 23:05:22 - Backtester - INFO - Загружено 7110 строк данных по акциям
+2025-04-27 23:05:22 - Backtester - INFO - Период бэктеста: 2024-01-02 - 2025-04-14
+2025-04-27 23:05:22 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 23:05:22 - Backtester - INFO - Анализ сигналов в данных: {0: 6065, 1: 585, -1: 460}
+2025-04-27 23:05:22 - Backtester - INFO - Сигналы для AFKS: {0: 418, -1: 39, 1: 11}
+2025-04-27 23:05:22 - Backtester - INFO - Сигналы для ALRS: {0: 434, -1: 29, 1: 5}
+2025-04-27 23:05:22 - Backtester - INFO - Сигналы для GAZP: {0: 400, -1: 41, 1: 27}
+2025-04-27 23:05:22 - Backtester - INFO - Сигналы для GMKN: {0: 440, -1: 18, 1: 4}
+2025-04-27 23:05:22 - Backtester - INFO - Сигналы для LKOH: {0: 319, 1: 80, -1: 69}
+2025-04-27 23:05:22 - Backtester - INFO - Сигналы для MAGN: {0: 423, -1: 33, 1: 10}
+2025-04-27 23:05:22 - Backtester - INFO - Сигналы для MTSS: {0: 419, -1: 25, 1: 24}
+2025-04-27 23:05:22 - Backtester - INFO - Сигналы для MVID: {0: 427, -1: 29, 1: 12}
+2025-04-27 23:05:22 - Backtester - INFO - Сигналы для NVTK: {0: 368, 1: 74, -1: 23}
+2025-04-27 23:05:22 - Backtester - INFO - Сигналы для PHOR: {0: 73, -1: 27, 1: 7}
+2025-04-27 23:05:22 - Backtester - INFO - Сигналы для ROSN: {0: 356, 1: 94, -1: 18}
+2025-04-27 23:05:22 - Backtester - INFO - Сигналы для RUAL: {0: 422, -1: 32, 1: 14}
+2025-04-27 23:05:22 - Backtester - INFO - Сигналы для SBER: {0: 409, 1: 34, -1: 25}
+2025-04-27 23:05:22 - Backtester - INFO - Сигналы для SIBN: {0: 379, 1: 64, -1: 21}
+2025-04-27 23:05:22 - Backtester - INFO - Сигналы для SNGS: {0: 422, 1: 31, -1: 15}
+2025-04-27 23:05:22 - Backtester - INFO - Сигналы для TATN: {0: 356, 1: 94, -1: 16}
+2025-04-27 23:05:22 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 23:05:22 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 23:05:22 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 23:05:22 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999983115), 'ALRS': np.float64(9.338918213096684e-14), 'GAZP': np.float64(2.0561199003783698e-13), 'GMKN': np.float64(1.0803822921431682e-13), 'LKOH': np.float64(0.13999999999870055), 'MAGN': np.float64(1.0066799461899719e-13), 'MTSS': np.float64(5.424737915815658e-13), 'MVID': np.float64(1.1921521971557745e-13), 'NVTK': np.float64(1.0162158393816819e-13), 'PHOR': np.float64(2.7075325145732113e-13), 'ROSN': np.float64(7.465190222223277e-14), 'RUAL': np.float64(0.13999999999979384), 'SBER': np.float64(0.1399999999997655), 'SIBN': np.float64(6.485885045481381e-14), 'SNGS': np.float64(5.678912280001135e-13), 'TATN': np.float64(0.1399999999996597)}
+2025-04-27 23:05:22 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 23:05:22 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 23:05:22 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 23:05:22 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 23:05:22 - Backtester - INFO -   AFKS: 50/468 ненулевых сигналов (10.7%)
+2025-04-27 23:05:22 - Backtester - INFO -   ALRS: 34/468 ненулевых сигналов (7.3%)
+2025-04-27 23:05:22 - Backtester - INFO -   GAZP: 68/468 ненулевых сигналов (14.5%)
+2025-04-27 23:05:22 - Backtester - INFO -   GMKN: 22/462 ненулевых сигналов (4.8%)
+2025-04-27 23:05:22 - Backtester - INFO -   LKOH: 149/468 ненулевых сигналов (31.8%)
+2025-04-27 23:05:22 - Backtester - INFO -   MAGN: 43/466 ненулевых сигналов (9.2%)
+2025-04-27 23:05:22 - Backtester - INFO -   MTSS: 49/468 ненулевых сигналов (10.5%)
+2025-04-27 23:05:22 - Backtester - INFO -   MVID: 41/468 ненулевых сигналов (8.8%)
+2025-04-27 23:05:22 - Backtester - INFO -   NVTK: 97/465 ненулевых сигналов (20.9%)
+2025-04-27 23:05:22 - Backtester - INFO -   PHOR: 34/107 ненулевых сигналов (31.8%)
+2025-04-27 23:05:22 - Backtester - INFO -   ROSN: 112/468 ненулевых сигналов (23.9%)
+2025-04-27 23:05:22 - Backtester - INFO -   RUAL: 46/468 ненулевых сигналов (9.8%)
+2025-04-27 23:05:22 - Backtester - INFO -   SBER: 59/468 ненулевых сигналов (12.6%)
+2025-04-27 23:05:22 - Backtester - INFO -   SIBN: 85/464 ненулевых сигналов (18.3%)
+2025-04-27 23:05:22 - Backtester - INFO -   SNGS: 46/468 ненулевых сигналов (9.8%)
+2025-04-27 23:05:22 - Backtester - INFO -   TATN: 110/466 ненулевых сигналов (23.6%)
+2025-04-27 23:05:22 - Backtester - INFO - Тикер AFKS: 51/468 ненулевых strategy_return
+2025-04-27 23:05:22 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0017792502607520966, -0.0052670259676630415, 0.0062751309857439486, -0.0003065415976948316]
+2025-04-27 23:05:22 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:05:22 - Backtester - INFO - Тикер LKOH: 149/468 ненулевых strategy_return
+2025-04-27 23:05:22 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, -0.010095761264939496, 0.004776953038877041, -0.0013291980505094614, -0.00022123893805314765]
+2025-04-27 23:05:22 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:05:22 - Backtester - INFO - Тикер RUAL: 47/468 ненулевых strategy_return
+2025-04-27 23:05:22 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.011363636363636465, -0.011235955056179803, 0.005413105413105579, -0.000716127184188009]
+2025-04-27 23:05:22 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:05:22 - Backtester - INFO - Тикер SBER: 60/468 ненулевых strategy_return
+2025-04-27 23:05:22 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.013735046521931915, 0.0016025641025640969, 0.0018240186779512335, -0.0009867699729551038]
+2025-04-27 23:05:22 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:05:22 - Backtester - INFO - Тикер TATN: 109/466 ненулевых strategy_return
+2025-04-27 23:05:22 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.0043187517414322585, -0.006935774726036792, 0.00123984019837442, nan]
+2025-04-27 23:05:22 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:05:22 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 23:05:22 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 23:05:22 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 23:05:22 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 23:05:22 - Backtester - INFO - Портфельная доходность: 468/468 ненулевых значений
+2025-04-27 23:05:22 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.005694834080275119, -0.0023021850241010666, 0.001965313992533243, -0.00022618649592269453]
+2025-04-27 23:05:22 - Backtester - INFO - Рассчитана доходность портфеля за 468 дней
+2025-04-27 23:05:22 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 23:05:22 - Backtester - INFO - Кумулятивная доходность: -1.80%, Годовая доходность: -0.97%, Шарп: -1.94, Макс. просадка: -6.35%
+2025-04-27 23:05:22 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 23:05:22 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/production_portfolio/backtest/cumulative_return.png
+2025-04-27 23:05:22 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/production_portfolio/backtest/drawdown.png
+2025-04-27 23:05:22 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/production_portfolio/backtest/returns_distribution.png
+2025-04-27 23:05:22 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/production_portfolio/backtest/portfolio_structure.png
+2025-04-27 23:05:22 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/production_portfolio/backtest/monthly_returns_calendar.png
+2025-04-27 23:05:22 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/production_portfolio/backtest
+2025-04-27 23:10:10 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 23:10:10 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/test_signals_20250427_230940.csv
+2025-04-27 23:10:10 - Backtester - INFO - Загружено 1648 строк данных по акциям
+2025-04-27 23:10:10 - Backtester - INFO - Период бэктеста: 2025-01-02 - 2025-04-14
+2025-04-27 23:10:10 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 23:10:10 - Backtester - INFO - Анализ сигналов в данных: {0: 1398, 1: 142, -1: 108}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для AFKS: {0: 92, -1: 8, 1: 3}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для ALRS: {0: 88, -1: 15}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для GAZP: {0: 86, 1: 9, -1: 8}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для GMKN: {0: 95, -1: 6, 1: 2}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для LKOH: {0: 70, -1: 21, 1: 12}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для MAGN: {0: 94, -1: 8, 1: 1}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для MTSS: {0: 94, 1: 5, -1: 4}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для MVID: {0: 97, 1: 6}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для NVTK: {0: 78, 1: 23, -1: 2}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для PHOR: {0: 73, -1: 24, 1: 6}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для ROSN: {0: 81, 1: 21, -1: 1}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для RUAL: {0: 91, -1: 7, 1: 5}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для SBER: {0: 96, 1: 6, -1: 1}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для SIBN: {0: 88, 1: 14, -1: 1}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для SNGS: {0: 95, 1: 6, -1: 2}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для TATN: {0: 80, 1: 23}
+2025-04-27 23:10:10 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 23:10:10 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 23:10:10 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 23:10:10 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999997065), 'ALRS': np.float64(2.1325625774905215e-14), 'GAZP': np.float64(6.033937238747455e-13), 'GMKN': np.float64(2.3629162335080485e-14), 'LKOH': np.float64(0.13999999999930002), 'MAGN': np.float64(2.263488806193734e-14), 'MTSS': np.float64(4.0939416795416135e-14), 'MVID': np.float64(2.7161475063137382e-14), 'NVTK': np.float64(7.058986024390214e-14), 'PHOR': np.float64(0.0), 'ROSN': np.float64(1.595345209564517e-14), 'RUAL': np.float64(0.13999999999995869), 'SBER': np.float64(0.13999999999995652), 'SIBN': np.float64(1.534904192340231e-14), 'SNGS': np.float64(1.9209164446190905e-14), 'TATN': np.float64(0.13999999999995835)}
+2025-04-27 23:10:10 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 23:10:10 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 23:10:10 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 23:10:10 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 23:10:10 - Backtester - INFO -   AFKS: 11/103 ненулевых сигналов (10.7%)
+2025-04-27 23:10:10 - Backtester - INFO -   ALRS: 15/103 ненулевых сигналов (14.6%)
+2025-04-27 23:10:10 - Backtester - INFO -   GAZP: 17/103 ненулевых сигналов (16.5%)
+2025-04-27 23:10:10 - Backtester - INFO -   GMKN: 8/103 ненулевых сигналов (7.8%)
+2025-04-27 23:10:10 - Backtester - INFO -   LKOH: 33/103 ненулевых сигналов (32.0%)
+2025-04-27 23:10:10 - Backtester - INFO -   MAGN: 9/103 ненулевых сигналов (8.7%)
+2025-04-27 23:10:10 - Backtester - INFO -   MTSS: 9/103 ненулевых сигналов (8.7%)
+2025-04-27 23:10:10 - Backtester - INFO -   MVID: 6/103 ненулевых сигналов (5.8%)
+2025-04-27 23:10:10 - Backtester - INFO -   NVTK: 25/103 ненулевых сигналов (24.3%)
+2025-04-27 23:10:10 - Backtester - INFO -   PHOR: 30/103 ненулевых сигналов (29.1%)
+2025-04-27 23:10:10 - Backtester - INFO -   ROSN: 22/103 ненулевых сигналов (21.4%)
+2025-04-27 23:10:10 - Backtester - INFO -   RUAL: 12/103 ненулевых сигналов (11.7%)
+2025-04-27 23:10:10 - Backtester - INFO -   SBER: 7/103 ненулевых сигналов (6.8%)
+2025-04-27 23:10:10 - Backtester - INFO -   SIBN: 15/103 ненулевых сигналов (14.6%)
+2025-04-27 23:10:10 - Backtester - INFO -   SNGS: 8/103 ненулевых сигналов (7.8%)
+2025-04-27 23:10:10 - Backtester - INFO -   TATN: 23/103 ненулевых сигналов (22.3%)
+2025-04-27 23:10:10 - Backtester - INFO - Тикер AFKS: 12/103 ненулевых strategy_return
+2025-04-27 23:10:10 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0, -0.0, -0.0, 0.0]
+2025-04-27 23:10:10 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:10:10 - Backtester - INFO - Тикер LKOH: 33/103 ненулевых strategy_return
+2025-04-27 23:10:10 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, -0.0264633479212254, -0.0009131137177775805, -0.0, 0.0]
+2025-04-27 23:10:10 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:10:10 - Backtester - INFO - Тикер RUAL: 13/103 ненулевых strategy_return
+2025-04-27 23:10:10 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.0, -0.0, -0.0, -0.0]
+2025-04-27 23:10:10 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:10:10 - Backtester - INFO - Тикер SBER: 8/103 ненулевых strategy_return
+2025-04-27 23:10:10 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.0, -0.0, -0.0, 0.0]
+2025-04-27 23:10:10 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:10:10 - Backtester - INFO - Тикер TATN: 22/103 ненулевых strategy_return
+2025-04-27 23:10:10 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.0, -0.0007477194556602118, -0.0, -0.0]
+2025-04-27 23:10:10 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:10:10 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 23:10:10 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 23:10:10 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 23:10:10 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 23:10:10 - Backtester - INFO - Портфельная доходность: 103/103 ненулевых значений
+2025-04-27 23:10:10 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.003618760327871692, -0.0001464082631992805, 8.61083810813401e-05, 8.61083810813401e-05]
+2025-04-27 23:10:10 - Backtester - INFO - Рассчитана доходность портфеля за 103 дней
+2025-04-27 23:10:10 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 23:10:10 - Backtester - INFO - Кумулятивная доходность: -1.92%, Годовая доходность: -4.63%, Шарп: -1.80, Макс. просадка: -3.27%
+2025-04-27 23:10:10 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 23:10:10 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/test_backtest/cumulative_return.png
+2025-04-27 23:10:10 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/test_backtest/drawdown.png
+2025-04-27 23:10:10 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/test_backtest/returns_distribution.png
+2025-04-27 23:10:10 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/test_backtest/portfolio_structure.png
+2025-04-27 23:10:10 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/test_backtest/monthly_returns_calendar.png
+2025-04-27 23:10:10 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/test_backtest
+2025-04-27 23:10:10 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 23:10:10 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/train_signals_20250427_230940.csv
+2025-04-27 23:10:10 - Backtester - INFO - Загружено 5462 строк данных по акциям
+2025-04-27 23:10:10 - Backtester - INFO - Период бэктеста: 2024-01-02 - 2024-12-31
+2025-04-27 23:10:10 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 23:10:10 - Backtester - INFO - Анализ сигналов в данных: {0: 4653, 1: 437, -1: 372}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для AFKS: {0: 323, -1: 34, 1: 8}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для ALRS: {0: 342, -1: 18, 1: 5}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для GAZP: {0: 316, -1: 34, 1: 15}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для GMKN: {0: 340, -1: 16, 1: 3}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для LKOH: {0: 246, 1: 74, -1: 45}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для MAGN: {0: 327, -1: 28, 1: 8}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для MTSS: {0: 325, -1: 21, 1: 19}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для MVID: {0: 333, -1: 28, 1: 4}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для NVTK: {0: 290, 1: 49, -1: 23}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для PHOR: {-1: 4}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для ROSN: {0: 273, 1: 75, -1: 17}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для RUAL: {0: 329, -1: 28, 1: 8}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для SBER: {0: 315, 1: 26, -1: 24}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для SIBN: {0: 291, 1: 48, -1: 22}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для SNGS: {0: 325, 1: 26, -1: 14}
+2025-04-27 23:10:10 - Backtester - INFO - Сигналы для TATN: {0: 278, 1: 69, -1: 16}
+2025-04-27 23:10:10 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 23:10:10 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 23:10:10 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 23:10:10 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999997065), 'ALRS': np.float64(2.1325625774905215e-14), 'GAZP': np.float64(6.033937238747455e-13), 'GMKN': np.float64(2.3629162335080485e-14), 'LKOH': np.float64(0.13999999999930002), 'MAGN': np.float64(2.263488806193734e-14), 'MTSS': np.float64(4.0939416795416135e-14), 'MVID': np.float64(2.7161475063137382e-14), 'NVTK': np.float64(7.058986024390214e-14), 'PHOR': np.float64(0.0), 'ROSN': np.float64(1.595345209564517e-14), 'RUAL': np.float64(0.13999999999995869), 'SBER': np.float64(0.13999999999995652), 'SIBN': np.float64(1.534904192340231e-14), 'SNGS': np.float64(1.9209164446190905e-14), 'TATN': np.float64(0.13999999999995835)}
+2025-04-27 23:10:10 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 23:10:10 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 23:10:10 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 23:10:10 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 23:10:10 - Backtester - INFO -   AFKS: 42/365 ненулевых сигналов (11.5%)
+2025-04-27 23:10:10 - Backtester - INFO -   ALRS: 23/365 ненулевых сигналов (6.3%)
+2025-04-27 23:10:10 - Backtester - INFO -   GAZP: 49/365 ненулевых сигналов (13.4%)
+2025-04-27 23:10:10 - Backtester - INFO -   GMKN: 19/359 ненулевых сигналов (5.3%)
+2025-04-27 23:10:10 - Backtester - INFO -   LKOH: 119/365 ненулевых сигналов (32.6%)
+2025-04-27 23:10:10 - Backtester - INFO -   MAGN: 36/363 ненулевых сигналов (9.9%)
+2025-04-27 23:10:10 - Backtester - INFO -   MTSS: 40/365 ненулевых сигналов (11.0%)
+2025-04-27 23:10:10 - Backtester - INFO -   MVID: 32/365 ненулевых сигналов (8.8%)
+2025-04-27 23:10:10 - Backtester - INFO -   NVTK: 72/362 ненулевых сигналов (19.9%)
+2025-04-27 23:10:10 - Backtester - INFO -   PHOR: 4/4 ненулевых сигналов (100.0%)
+2025-04-27 23:10:10 - Backtester - INFO -   ROSN: 92/365 ненулевых сигналов (25.2%)
+2025-04-27 23:10:10 - Backtester - INFO -   RUAL: 36/365 ненулевых сигналов (9.9%)
+2025-04-27 23:10:10 - Backtester - INFO -   SBER: 50/365 ненулевых сигналов (13.7%)
+2025-04-27 23:10:10 - Backtester - INFO -   SIBN: 70/361 ненулевых сигналов (19.4%)
+2025-04-27 23:10:10 - Backtester - INFO -   SNGS: 40/365 ненулевых сигналов (11.0%)
+2025-04-27 23:10:10 - Backtester - INFO -   TATN: 85/363 ненулевых сигналов (23.4%)
+2025-04-27 23:10:10 - Backtester - INFO - Тикер AFKS: 43/365 ненулевых strategy_return
+2025-04-27 23:10:10 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0017792502607520966, -0.0052670259676630415, 0.0062751309857439486, -0.0003065415976948316]
+2025-04-27 23:10:10 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:10:10 - Backtester - INFO - Тикер LKOH: 119/365 ненулевых strategy_return
+2025-04-27 23:10:10 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, 0.0, -0.0, 0.0, 0.0]
+2025-04-27 23:10:10 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:10:10 - Backtester - INFO - Тикер RUAL: 37/365 ненулевых strategy_return
+2025-04-27 23:10:10 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.011363636363636465, -0.011235955056179803, 0.005413105413105579, -0.000716127184188009]
+2025-04-27 23:10:10 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:10:10 - Backtester - INFO - Тикер SBER: 51/365 ненулевых strategy_return
+2025-04-27 23:10:10 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.013735046521931915, 0.0016025641025640969, 0.0018240186779512335, -0.0009867699729551038]
+2025-04-27 23:10:10 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:10:10 - Backtester - INFO - Тикер TATN: 85/363 ненулевых strategy_return
+2025-04-27 23:10:10 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.0043187517414322585, -0.006935774726036792, 0.00123984019837442, nan]
+2025-04-27 23:10:10 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:10:10 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 23:10:10 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 23:10:10 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 23:10:10 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 23:10:10 - Backtester - INFO - Портфельная доходность: 365/365 ненулевых значений
+2025-04-27 23:10:10 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.004281427503202744, -0.002970958449541997, 0.002151401719605327, -0.00019521304459589064]
+2025-04-27 23:10:10 - Backtester - INFO - Рассчитана доходность портфеля за 365 дней
+2025-04-27 23:10:10 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 23:10:10 - Backtester - INFO - Кумулятивная доходность: -0.76%, Годовая доходность: -0.53%, Шарп: -2.09, Макс. просадка: -6.34%
+2025-04-27 23:10:10 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 23:10:10 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/train_backtest/cumulative_return.png
+2025-04-27 23:10:11 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/train_backtest/drawdown.png
+2025-04-27 23:10:11 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/train_backtest/returns_distribution.png
+2025-04-27 23:10:11 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/train_backtest/portfolio_structure.png
+2025-04-27 23:10:11 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/train_backtest/monthly_returns_calendar.png
+2025-04-27 23:10:11 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/honest_backtest/train_backtest
+2025-04-27 23:10:30 - Backtester - INFO - Запуск пайплайна бэктестирования
+2025-04-27 23:10:30 - Backtester - INFO - Загрузка данных по акциям из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/production_portfolio/signals/production_signals.csv
+2025-04-27 23:10:30 - Backtester - INFO - Загружено 7110 строк данных по акциям
+2025-04-27 23:10:30 - Backtester - INFO - Период бэктеста: 2024-01-02 - 2025-04-14
+2025-04-27 23:10:30 - Backtester - INFO - Расчет доходностей по тикерам
+2025-04-27 23:10:30 - Backtester - INFO - Анализ сигналов в данных: {0: 6065, 1: 585, -1: 460}
+2025-04-27 23:10:30 - Backtester - INFO - Сигналы для AFKS: {0: 418, -1: 39, 1: 11}
+2025-04-27 23:10:30 - Backtester - INFO - Сигналы для ALRS: {0: 434, -1: 29, 1: 5}
+2025-04-27 23:10:30 - Backtester - INFO - Сигналы для GAZP: {0: 400, -1: 41, 1: 27}
+2025-04-27 23:10:30 - Backtester - INFO - Сигналы для GMKN: {0: 440, -1: 18, 1: 4}
+2025-04-27 23:10:30 - Backtester - INFO - Сигналы для LKOH: {0: 319, 1: 80, -1: 69}
+2025-04-27 23:10:30 - Backtester - INFO - Сигналы для MAGN: {0: 423, -1: 33, 1: 10}
+2025-04-27 23:10:30 - Backtester - INFO - Сигналы для MTSS: {0: 419, -1: 25, 1: 24}
+2025-04-27 23:10:30 - Backtester - INFO - Сигналы для MVID: {0: 427, -1: 29, 1: 12}
+2025-04-27 23:10:30 - Backtester - INFO - Сигналы для NVTK: {0: 368, 1: 74, -1: 23}
+2025-04-27 23:10:30 - Backtester - INFO - Сигналы для PHOR: {0: 73, -1: 27, 1: 7}
+2025-04-27 23:10:30 - Backtester - INFO - Сигналы для ROSN: {0: 356, 1: 94, -1: 18}
+2025-04-27 23:10:30 - Backtester - INFO - Сигналы для RUAL: {0: 422, -1: 32, 1: 14}
+2025-04-27 23:10:30 - Backtester - INFO - Сигналы для SBER: {0: 409, 1: 34, -1: 25}
+2025-04-27 23:10:30 - Backtester - INFO - Сигналы для SIBN: {0: 379, 1: 64, -1: 21}
+2025-04-27 23:10:30 - Backtester - INFO - Сигналы для SNGS: {0: 422, 1: 31, -1: 15}
+2025-04-27 23:10:30 - Backtester - INFO - Сигналы для TATN: {0: 356, 1: 94, -1: 16}
+2025-04-27 23:10:30 - Backtester - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 23:10:30 - Backtester - INFO - Расчет доходности портфеля
+2025-04-27 23:10:30 - Backtester - INFO - Анализ структуры портфельных весов:
+2025-04-27 23:10:30 - Backtester - INFO - Веса акций: {'AFKS': np.float64(0.13999999999983115), 'ALRS': np.float64(9.338918213096684e-14), 'GAZP': np.float64(2.0561199003783698e-13), 'GMKN': np.float64(1.0803822921431682e-13), 'LKOH': np.float64(0.13999999999870055), 'MAGN': np.float64(1.0066799461899719e-13), 'MTSS': np.float64(5.424737915815658e-13), 'MVID': np.float64(1.1921521971557745e-13), 'NVTK': np.float64(1.0162158393816819e-13), 'PHOR': np.float64(2.7075325145732113e-13), 'ROSN': np.float64(7.465190222223277e-14), 'RUAL': np.float64(0.13999999999979384), 'SBER': np.float64(0.1399999999997655), 'SIBN': np.float64(6.485885045481381e-14), 'SNGS': np.float64(5.678912280001135e-13), 'TATN': np.float64(0.1399999999996597)}
+2025-04-27 23:10:30 - Backtester - INFO - Доступно тикеров в данных: 16
+2025-04-27 23:10:30 - Backtester - INFO - Тикеров в весах портфеля: 16
+2025-04-27 23:10:30 - Backtester - INFO - Совпадающих тикеров: 16
+2025-04-27 23:10:30 - Backtester - INFO - Статистика сигналов в данных:
+2025-04-27 23:10:30 - Backtester - INFO -   AFKS: 50/468 ненулевых сигналов (10.7%)
+2025-04-27 23:10:30 - Backtester - INFO -   ALRS: 34/468 ненулевых сигналов (7.3%)
+2025-04-27 23:10:30 - Backtester - INFO -   GAZP: 68/468 ненулевых сигналов (14.5%)
+2025-04-27 23:10:30 - Backtester - INFO -   GMKN: 22/462 ненулевых сигналов (4.8%)
+2025-04-27 23:10:30 - Backtester - INFO -   LKOH: 149/468 ненулевых сигналов (31.8%)
+2025-04-27 23:10:30 - Backtester - INFO -   MAGN: 43/466 ненулевых сигналов (9.2%)
+2025-04-27 23:10:30 - Backtester - INFO -   MTSS: 49/468 ненулевых сигналов (10.5%)
+2025-04-27 23:10:30 - Backtester - INFO -   MVID: 41/468 ненулевых сигналов (8.8%)
+2025-04-27 23:10:30 - Backtester - INFO -   NVTK: 97/465 ненулевых сигналов (20.9%)
+2025-04-27 23:10:30 - Backtester - INFO -   PHOR: 34/107 ненулевых сигналов (31.8%)
+2025-04-27 23:10:30 - Backtester - INFO -   ROSN: 112/468 ненулевых сигналов (23.9%)
+2025-04-27 23:10:30 - Backtester - INFO -   RUAL: 46/468 ненулевых сигналов (9.8%)
+2025-04-27 23:10:30 - Backtester - INFO -   SBER: 59/468 ненулевых сигналов (12.6%)
+2025-04-27 23:10:30 - Backtester - INFO -   SIBN: 85/464 ненулевых сигналов (18.3%)
+2025-04-27 23:10:30 - Backtester - INFO -   SNGS: 46/468 ненулевых сигналов (9.8%)
+2025-04-27 23:10:30 - Backtester - INFO -   TATN: 110/466 ненулевых сигналов (23.6%)
+2025-04-27 23:10:30 - Backtester - INFO - Тикер AFKS: 51/468 ненулевых strategy_return
+2025-04-27 23:10:30 - Backtester - INFO - Первые 5 значений strategy_return для AFKS: [nan, -0.0017792502607520966, -0.0052670259676630415, 0.0062751309857439486, -0.0003065415976948316]
+2025-04-27 23:10:30 - Backtester - INFO - Добавлен тикер AFKS с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:10:30 - Backtester - INFO - Тикер LKOH: 149/468 ненулевых strategy_return
+2025-04-27 23:10:30 - Backtester - INFO - Первые 5 значений strategy_return для LKOH: [nan, -0.010095761264939496, 0.004776953038877041, -0.0013291980505094614, -0.00022123893805314765]
+2025-04-27 23:10:30 - Backtester - INFO - Добавлен тикер LKOH с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:10:30 - Backtester - INFO - Тикер RUAL: 47/468 ненулевых strategy_return
+2025-04-27 23:10:30 - Backtester - INFO - Первые 5 значений strategy_return для RUAL: [nan, -0.011363636363636465, -0.011235955056179803, 0.005413105413105579, -0.000716127184188009]
+2025-04-27 23:10:30 - Backtester - INFO - Добавлен тикер RUAL с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:10:30 - Backtester - INFO - Тикер SBER: 60/468 ненулевых strategy_return
+2025-04-27 23:10:30 - Backtester - INFO - Первые 5 значений strategy_return для SBER: [nan, -0.013735046521931915, 0.0016025641025640969, 0.0018240186779512335, -0.0009867699729551038]
+2025-04-27 23:10:30 - Backtester - INFO - Добавлен тикер SBER с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:10:30 - Backtester - INFO - Тикер TATN: 109/466 ненулевых strategy_return
+2025-04-27 23:10:30 - Backtester - INFO - Первые 5 значений strategy_return для TATN: [nan, -0.0043187517414322585, -0.006935774726036792, 0.00123984019837442, nan]
+2025-04-27 23:10:30 - Backtester - INFO - Добавлен тикер TATN с ДЛИННОЙ позицией, вес: 0.1400
+2025-04-27 23:10:30 - Backtester - INFO - Всего добавлено 5 акций в портфель
+2025-04-27 23:10:30 - Backtester - INFO - Найдена безрисковая часть с весом 0.3000 без детализации
+2025-04-27 23:10:30 - Backtester - INFO - Добавлена безрисковая часть с весом 0.3000 и ставкой 7.50% годовых
+2025-04-27 23:10:30 - Backtester - INFO - Всего добавлено 1 облигаций в портфель
+2025-04-27 23:10:30 - Backtester - INFO - Портфельная доходность: 468/468 ненулевых значений
+2025-04-27 23:10:30 - Backtester - INFO - Первые 5 значений portfolio_return: [8.61083810813401e-05, -0.005694834080275119, -0.0023021850241010666, 0.001965313992533243, -0.00022618649592269453]
+2025-04-27 23:10:30 - Backtester - INFO - Рассчитана доходность портфеля за 468 дней
+2025-04-27 23:10:30 - Backtester - INFO - Расчет метрик эффективности
+2025-04-27 23:10:30 - Backtester - INFO - Кумулятивная доходность: -1.80%, Годовая доходность: -0.97%, Шарп: -1.94, Макс. просадка: -6.35%
+2025-04-27 23:10:30 - Backtester - INFO - Создание визуализации результатов бэктеста
+2025-04-27 23:10:30 - Backtester - INFO - График кумулятивной доходности сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/production_portfolio/backtest/cumulative_return.png
+2025-04-27 23:10:30 - Backtester - INFO - График просадок сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/production_portfolio/backtest/drawdown.png
+2025-04-27 23:10:30 - Backtester - INFO - График распределения доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/production_portfolio/backtest/returns_distribution.png
+2025-04-27 23:10:30 - Backtester - INFO - График структуры портфеля сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/production_portfolio/backtest/portfolio_structure.png
+2025-04-27 23:10:30 - Backtester - INFO - Календарь месячных доходностей сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/production_portfolio/backtest/monthly_returns_calendar.png
+2025-04-27 23:10:30 - Backtester - INFO - Метрики и данные сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_230408_balanced_portfolio_0427_2304/shorts_portfolio/production_portfolio/backtest

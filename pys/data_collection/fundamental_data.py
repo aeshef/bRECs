@@ -8,6 +8,8 @@ import numpy as np
 from datetime import datetime
 from collections import Counter
 import sys
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # current_dir = os.path.dirname(os.path.abspath(__file__))
 # while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
@@ -269,6 +271,68 @@ class FundamentalPipeline(BaseLogger):
             for ind in sorted(common_inds):
                 freq = indicators_frequency_by_year[year][ind]
                 self.logger.info(f"      * {ind} (found in {freq} tickers)")
+
+    def visualize_common_indicators(self, all_years, common_indicators_by_year):
+        """Create visualizations for common indicators across tickers by year"""
+        viz_path = os.path.join(os.path.dirname(self.base_path), 'fundamental_viz')
+        for year in all_years:
+            year_viz_path = os.path.join(viz_path, year)
+            os.makedirs(year_viz_path, exist_ok=True)
+
+            common_indicators = common_indicators_by_year[year]
+            data = []
+
+            for ticker in self.ticker_data_dict:
+                if year in self.ticker_data_dict[ticker]:
+                    df_year = self.ticker_data_dict[ticker][year]
+                    df_filtered = df_year[df_year['Показатель'].isin(common_indicators)]
+                    df_filtered['Ticker'] = ticker
+                    data.append(df_filtered)
+
+            if data:
+                full_df = pd.concat(data)
+                full_df['value_float'] = pd.to_numeric(full_df['value_float'], errors='coerce')
+                full_df = full_df.dropna(subset=['value_float'])
+
+                plots = [
+                    ('P/E', 'ROE, %'),
+                    ('P/BV', 'ROA, %'),
+                    ('Див доход, ао, %', 'P/E'),
+                    ('Капитализация, млрд руб', 'Чистая прибыль, млрд руб'),
+                    ('EV/EBITDA', 'Рентаб EBITDA, %')
+                ]
+
+                for x_axis, y_axis in plots:
+                    if x_axis in common_indicators and y_axis in common_indicators:
+                        plt.figure(figsize=(12, 8))
+                        plot_df = full_df.pivot_table(index='Ticker', columns='Показатель', values='value_float').reset_index()
+                        sns.scatterplot(data=plot_df, x=x_axis, y=y_axis, hue='Ticker', s=200, palette='tab20', legend='full')
+                        plt.title(f'{x_axis} vs {y_axis} for {year}')
+                        plt.xlabel(x_axis)
+                        plt.ylabel(y_axis)
+                        plt.grid(True, alpha=0.3)
+                        plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+                        for line in range(plot_df.shape[0]):
+                            plt.text(plot_df[x_axis][line], plot_df[y_axis][line], plot_df['Ticker'][line], fontsize=8)
+                        plt.savefig(os.path.join(year_viz_path, f'{x_axis.replace("/", "_").replace("%", "")}_vs_{y_axis.replace("/", "_").replace("%", "")}.png'), bbox_inches='tight', dpi=300)
+                        plt.close()
+
+                for metric in common_indicators:
+                    plt.figure(figsize=(14, 8))
+                    plot_df = full_df[full_df['Показатель'] == metric].sort_values('value_float')
+                    if not plot_df.empty:
+                        sns.barplot(data=plot_df, x='value_float', y='Ticker', palette='viridis')
+                        plt.title(f'{metric} - {year}')
+                        plt.xlabel('Значение')
+                        plt.ylabel('Компании')
+                        plt.grid(axis='x', alpha=0.3)
+                        for p in plt.gca().patches:
+                            width = p.get_width()
+                            plt.text(width + 0.01, p.get_y() + p.get_height()/2, f'{width:.1f}', va='center')
+                        plt.savefig(os.path.join(year_viz_path, f'{metric.replace("/", "_").replace("%", "")}.png'), bbox_inches='tight', dpi=300)
+                        plt.close()
+
+        self.logger.info(f"Визуализации сохранены в: {viz_path}")
                 
     def save_data(self, all_years, common_indicators_by_year):
         """Save processed data to files for each ticker and year"""
@@ -331,3 +395,4 @@ def run_pipeline_fundamental(ticker_list, base_path=f'{BASE_PATH}/data/processed
     pipeline.process_tickers(ticker_list)
     all_years, common_indicators_by_year, _ = pipeline.analyze_common_indicators()
     pipeline.save_data(all_years, common_indicators_by_year)
+    pipeline.visualize_common_indicators(all_years, common_indicators_by_year)
