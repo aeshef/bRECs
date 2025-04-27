@@ -1252,6 +1252,12 @@ class PortfolioOptimizer(BaseLogger):
                 
         self.logger.info("Создание визуализации портфеля")
         
+        # Добавляем модель в имя файла
+        model_suffix = self.optimization.lower()
+        
+        # Закрываем все предыдущие фигуры перед созданием новых
+        plt.close('all')
+        
         # График весов в виде круговой диаграммы (пай-чарт)
         plt.figure(figsize=(12, 8))
         weights = self.portfolio_performance['weights']
@@ -1280,11 +1286,13 @@ class PortfolioOptimizer(BaseLogger):
         plt.title(f'Оптимальные веса портфеля ({self.optimization.upper()})')
         
         if output_dir:
-            plt.savefig(os.path.join(output_dir, 'portfolio_weights_pie.png'))
-            self.logger.info(f"График весов сохранен в {output_dir}/portfolio_weights_pie.png")
+            # Добавляем модель в имя файла!
+            filename = f'portfolio_weights_pie_{model_suffix}.png'
+            plt.savefig(os.path.join(output_dir, filename))
+            self.logger.info(f"График весов сохранен в {output_dir}/{filename}")
         else:
             plt.show()
-            
+                
         plt.close()
         
         # Если есть детали по облигациям, создаем отдельный график для них
@@ -1313,13 +1321,15 @@ class PortfolioOptimizer(BaseLogger):
             plt.title(f'Структура безрисковой части портфеля ({self.optimization.upper()})')
             
             if output_dir:
-                plt.savefig(os.path.join(output_dir, 'bond_weights_pie.png'))
-                self.logger.info(f"График весов облигаций сохранен в {output_dir}/bond_weights_pie.png")
+                # Также добавляем модель в имя файла!
+                bond_filename = f'bond_weights_pie_{model_suffix}.png'
+                plt.savefig(os.path.join(output_dir, bond_filename))
+                self.logger.info(f"График весов облигаций сохранен в {output_dir}/{bond_filename}")
             else:
                 plt.show()
             
             plt.close()
-        
+ 
         # Создание улучшенного графика эффективной границы (без изменений)
         try:
             self.plot_enhanced_efficient_frontier(output_dir=output_dir)

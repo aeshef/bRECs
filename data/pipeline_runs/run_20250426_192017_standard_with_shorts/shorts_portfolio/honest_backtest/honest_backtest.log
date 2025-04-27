@@ -1,3 +1,0 @@
-2025-04-26 19:20:36,760 - HonestBacktester - INFO - HonestBacktester initialized
-2025-04-26 19:20:36,761 - HonestBacktester - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
-2025-04-26 19:20:36,923 - HonestBacktester - INFO - Данные разделены: 5462 строк для обучения, 1648 строк для тестирования

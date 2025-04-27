@@ -1,5 +1,5 @@
 {
-  "date": "2025-04-26",
+  "date": "2025-04-27",
   "market_condition": "high_rate",
   "bonds": [
     {
@@ -8,9 +8,9 @@
       "yield": 21.33,
       "duration_years": 0.5583333333333333,
       "risk_adjusted_yield": 38.20298507462686,
-      "bond_score": 0.9585250957456575,
+      "bond_score": 0.959418477854617,
       "price_pct": 91.9,
-      "weight": 0.2
+      "weight": 0.25
     },
     {
       "security_code": "RU000A0JSGV0",
@@ -18,9 +18,9 @@
       "yield": 21.48,
       "duration_years": 1.1558333333333333,
       "risk_adjusted_yield": 18.58399423215573,
-      "bond_score": 0.7450069875610189,
+      "bond_score": 0.8749210640992907,
       "price_pct": 89.0,
-      "weight": 0.2
+      "weight": 0.25
     },
     {
       "security_code": "KG000A3LSJ06",
@@ -28,9 +28,9 @@
       "yield": 20.85,
       "duration_years": 0.6775000000000001,
       "risk_adjusted_yield": 30.77490774907749,
-      "bond_score": 0.6584406266918229,
+      "bond_score": 0.24646778662699195,
       "price_pct": 96.68,
-      "weight": 0.2
+      "weight": 0.25
     },
     {
       "security_code": "RU000A0JUAH8",
@@ -38,19 +38,9 @@
       "yield": 20.66,
       "duration_years": 0.5308333333333334,
       "risk_adjusted_yield": 38.919937205651486,
-      "bond_score": 0.599411713954758,
+      "bond_score": 0.024012660946132747,
       "price_pct": 101.39,
-      "weight": 0.2
-    },
-    {
-      "security_code": "RU000A0JS4Z7",
-      "full_name": "\u0412\u042d\u0411.\u0420\u0424 21",
-      "yield": 18.58,
-      "duration_years": 1.9916666666666665,
-      "risk_adjusted_yield": 9.328870292887029,
-      "bond_score": -0.7059368193634694,
-      "price_pct": 102.46,
-      "weight": 0.2
+      "weight": 0.25
     }
   ]
 }

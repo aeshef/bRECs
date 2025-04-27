@@ -6115,3 +6115,579 @@
 2025-04-26 19:45:55 - SignalGenerator - INFO - Создано сигналов: Buy - 605, Hold - 6090, Sell - 415
 2025-04-26 19:45:55 - SignalGenerator - INFO - В шортлист включено 7110 записей
 2025-04-26 19:45:55 - SignalGenerator - INFO - Все результаты сохранены в каталоге: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194455_standard_with_shorts/shorts_portfolio/production_portfolio/signals
+2025-04-27 16:12:30 - SignalGenerator - INFO - Запуск пайплайна генерации торговых сигналов
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружено 7110 строк данных
+2025-04-27 16:12:30 - SignalGenerator - INFO - Расчет композитного скора
+2025-04-27 16:12:30 - SignalGenerator - INFO - Технический скор рассчитан на основе 6 индикаторов
+2025-04-27 16:12:30 - SignalGenerator - INFO - Сентимент-скор рассчитан на основе 5 индикаторов
+2025-04-27 16:12:30 - SignalGenerator - INFO - Расчет фундаментального скора
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загрузка фундаментальных данных для 16 тикеров
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные AFKS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные AFKS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные ALRS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные ALRS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные GAZP за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные GAZP за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные GMKN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные GMKN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные LKOH за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные LKOH за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные MAGN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные MAGN за 2024: 34 показателей, 3 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные MTSS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные MTSS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные MVID за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные MVID за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные NVTK за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные NVTK за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные PHOR за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные PHOR за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные ROSN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные ROSN за 2024: 35 показателей, 2 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные RUAL за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные RUAL за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные SBER за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные SBER за 2024: 13 показателей, 24 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные SIBN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные SIBN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные SNGS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные SNGS за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные TATN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Загружены данные TATN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:12:30 - SignalGenerator - INFO - Статус загрузки фундаментальных данных: загружено 32, рассчитано 32, отсутствует 0
+2025-04-27 16:12:30 - SignalGenerator - INFO - Фундаментальные данные за 2023: доступны для 16 из 16 тикеров
+2025-04-27 16:12:30 - SignalGenerator - INFO - Фундаментальные данные за 2024: доступны для 16 из 16 тикеров
+2025-04-27 16:12:31 - SignalGenerator - INFO - Использование фундаментальных данных: данные 2023 - 5462, данные 2024 - 1648, нет данных - 0
+2025-04-27 16:12:31 - SignalGenerator - INFO - Композитный скор рассчитан
+2025-04-27 16:12:31 - SignalGenerator - INFO - Пример скоров для AFKS: fundamental=0.1433, tech=-0.2089, sentiment=-0.2908
+2025-04-27 16:12:31 - SignalGenerator - INFO - Пример скоров для ALRS: fundamental=0.1433, tech=-0.1965, sentiment=-0.4147
+2025-04-27 16:12:31 - SignalGenerator - INFO - Пример скоров для GAZP: fundamental=0.1433, tech=0.0907, sentiment=0.3591
+2025-04-27 16:12:31 - SignalGenerator - INFO - Пример скоров для GMKN: fundamental=0.1433, tech=0.0292, sentiment=-0.2908
+2025-04-27 16:12:31 - SignalGenerator - INFO - Пример скоров для LKOH: fundamental=0.1433, tech=-0.0257, sentiment=-0.8666
+2025-04-27 16:12:31 - SignalGenerator - INFO - Сгенерировано сигналов: Buy - 605, Hold - 6090, Sell - 415
+2025-04-27 16:12:31 - SignalGenerator - INFO - Создан shortlist из 7110 записей (топ 30.0%)
+2025-04-27 16:12:31 - SignalGenerator - INFO - Шортлист сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/shortlists/shortlist_20250414.csv
+2025-04-27 16:12:31 - SignalGenerator - INFO - Актуальный шортлист сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/results.csv
+2025-04-27 16:12:31 - SignalGenerator - INFO - Визуализация графиков котировок с торговыми сигналами
+2025-04-27 16:12:32 - SignalGenerator - INFO - График сигналов для AFKS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/AFKS/signals.png
+2025-04-27 16:12:32 - SignalGenerator - INFO - График сигналов для ALRS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/ALRS/signals.png
+2025-04-27 16:12:32 - SignalGenerator - INFO - График сигналов для GAZP сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/GAZP/signals.png
+2025-04-27 16:12:32 - SignalGenerator - INFO - График сигналов для GMKN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/GMKN/signals.png
+2025-04-27 16:12:33 - SignalGenerator - INFO - График сигналов для LKOH сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/LKOH/signals.png
+2025-04-27 16:12:33 - SignalGenerator - INFO - График сигналов для MAGN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/MAGN/signals.png
+2025-04-27 16:12:33 - SignalGenerator - INFO - График сигналов для MTSS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/MTSS/signals.png
+2025-04-27 16:12:33 - SignalGenerator - INFO - График сигналов для MVID сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/MVID/signals.png
+2025-04-27 16:12:34 - SignalGenerator - INFO - График сигналов для NVTK сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/NVTK/signals.png
+2025-04-27 16:12:34 - SignalGenerator - INFO - График сигналов для PHOR сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/PHOR/signals.png
+2025-04-27 16:12:34 - SignalGenerator - INFO - График сигналов для ROSN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/ROSN/signals.png
+2025-04-27 16:12:34 - SignalGenerator - INFO - График сигналов для RUAL сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/RUAL/signals.png
+2025-04-27 16:12:35 - SignalGenerator - INFO - График сигналов для SBER сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/SBER/signals.png
+2025-04-27 16:12:35 - SignalGenerator - INFO - График сигналов для SIBN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/SIBN/signals.png
+2025-04-27 16:12:35 - SignalGenerator - INFO - График сигналов для SNGS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/SNGS/signals.png
+2025-04-27 16:12:35 - SignalGenerator - INFO - График сигналов для TATN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/TATN/signals.png
+2025-04-27 16:12:35 - SignalGenerator - INFO - Визуализация компонентов композитного скора
+2025-04-27 16:12:36 - SignalGenerator - INFO - График скоров для AFKS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/AFKS/scores.png
+2025-04-27 16:12:36 - SignalGenerator - INFO - График скоров для ALRS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/ALRS/scores.png
+2025-04-27 16:12:36 - SignalGenerator - INFO - График скоров для GAZP сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/GAZP/scores.png
+2025-04-27 16:12:37 - SignalGenerator - INFO - График скоров для GMKN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/GMKN/scores.png
+2025-04-27 16:12:37 - SignalGenerator - INFO - График скоров для LKOH сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/LKOH/scores.png
+2025-04-27 16:12:38 - SignalGenerator - INFO - График скоров для MAGN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/MAGN/scores.png
+2025-04-27 16:12:38 - SignalGenerator - INFO - График скоров для MTSS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/MTSS/scores.png
+2025-04-27 16:12:38 - SignalGenerator - INFO - График скоров для MVID сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/MVID/scores.png
+2025-04-27 16:12:39 - SignalGenerator - INFO - График скоров для NVTK сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/NVTK/scores.png
+2025-04-27 16:12:39 - SignalGenerator - INFO - График скоров для PHOR сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/PHOR/scores.png
+2025-04-27 16:12:40 - SignalGenerator - INFO - График скоров для ROSN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/ROSN/scores.png
+2025-04-27 16:12:40 - SignalGenerator - INFO - График скоров для RUAL сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/RUAL/scores.png
+2025-04-27 16:12:40 - SignalGenerator - INFO - График скоров для SBER сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/SBER/scores.png
+2025-04-27 16:12:41 - SignalGenerator - INFO - График скоров для SIBN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/SIBN/scores.png
+2025-04-27 16:12:41 - SignalGenerator - INFO - График скоров для SNGS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/SNGS/scores.png
+2025-04-27 16:12:42 - SignalGenerator - INFO - График скоров для TATN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/ticker_visualizations/TATN/scores.png
+2025-04-27 16:12:43 - SignalGenerator - INFO - Исторические сигналы сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/signals/signals_20250427.csv
+2025-04-27 16:12:44 - SignalGenerator - INFO - Полные результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-27 16:12:44 - SignalGenerator - INFO - Пайплайн выполнен за 13.76 секунд
+2025-04-27 16:12:44 - SignalGenerator - INFO - Обработано 7110 строк данных
+2025-04-27 16:12:44 - SignalGenerator - INFO - Обработано 16 тикеров
+2025-04-27 16:12:44 - SignalGenerator - INFO - Создано сигналов: Buy - 605, Hold - 6090, Sell - 415
+2025-04-27 16:12:44 - SignalGenerator - INFO - В шортлист включено 7110 записей
+2025-04-27 16:12:44 - SignalGenerator - INFO - Все результаты сохранены в каталоге: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals
+2025-04-27 16:41:06 - SignalGenerator - INFO - Запуск пайплайна генерации торговых сигналов
+2025-04-27 16:41:06 - SignalGenerator - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружено 7110 строк данных
+2025-04-27 16:41:07 - SignalGenerator - INFO - Расчет композитного скора
+2025-04-27 16:41:07 - SignalGenerator - INFO - Технический скор рассчитан на основе 6 индикаторов
+2025-04-27 16:41:07 - SignalGenerator - INFO - Сентимент-скор рассчитан на основе 5 индикаторов
+2025-04-27 16:41:07 - SignalGenerator - INFO - Расчет фундаментального скора
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загрузка фундаментальных данных для 16 тикеров
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные AFKS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные AFKS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные ALRS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные ALRS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные GAZP за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные GAZP за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные GMKN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные GMKN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные LKOH за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные LKOH за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные MAGN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные MAGN за 2024: 34 показателей, 3 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные MTSS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные MTSS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные MVID за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные MVID за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные NVTK за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные NVTK за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные PHOR за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные PHOR за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные ROSN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные ROSN за 2024: 35 показателей, 2 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные RUAL за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные RUAL за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные SBER за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные SBER за 2024: 13 показателей, 24 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные SIBN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные SIBN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные SNGS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные SNGS за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные TATN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Загружены данные TATN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:41:07 - SignalGenerator - INFO - Статус загрузки фундаментальных данных: загружено 32, рассчитано 32, отсутствует 0
+2025-04-27 16:41:07 - SignalGenerator - INFO - Фундаментальные данные за 2023: доступны для 16 из 16 тикеров
+2025-04-27 16:41:07 - SignalGenerator - INFO - Фундаментальные данные за 2024: доступны для 16 из 16 тикеров
+2025-04-27 16:41:07 - SignalGenerator - INFO - Использование фундаментальных данных: данные 2023 - 5462, данные 2024 - 1648, нет данных - 0
+2025-04-27 16:41:07 - SignalGenerator - INFO - Композитный скор рассчитан
+2025-04-27 16:41:07 - SignalGenerator - INFO - Пример скоров для AFKS: fundamental=0.1433, tech=-0.2089, sentiment=-0.2908
+2025-04-27 16:41:07 - SignalGenerator - INFO - Пример скоров для ALRS: fundamental=0.1433, tech=-0.1965, sentiment=-0.4147
+2025-04-27 16:41:07 - SignalGenerator - INFO - Пример скоров для GAZP: fundamental=0.1433, tech=0.0907, sentiment=0.3591
+2025-04-27 16:41:07 - SignalGenerator - INFO - Пример скоров для GMKN: fundamental=0.1433, tech=0.0292, sentiment=-0.2908
+2025-04-27 16:41:07 - SignalGenerator - INFO - Пример скоров для LKOH: fundamental=0.1433, tech=-0.0257, sentiment=-0.8666
+2025-04-27 16:41:07 - SignalGenerator - INFO - Сгенерировано сигналов: Buy - 605, Hold - 6090, Sell - 415
+2025-04-27 16:41:07 - SignalGenerator - INFO - Создан shortlist из 7110 записей (топ 30.0%)
+2025-04-27 16:41:07 - SignalGenerator - INFO - Шортлист сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/shortlists/shortlist_20250414.csv
+2025-04-27 16:41:08 - SignalGenerator - INFO - Актуальный шортлист сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/results.csv
+2025-04-27 16:41:08 - SignalGenerator - INFO - Визуализация графиков котировок с торговыми сигналами
+2025-04-27 16:41:08 - SignalGenerator - INFO - График сигналов для AFKS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/AFKS/signals.png
+2025-04-27 16:41:08 - SignalGenerator - INFO - График сигналов для ALRS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/ALRS/signals.png
+2025-04-27 16:41:08 - SignalGenerator - INFO - График сигналов для GAZP сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/GAZP/signals.png
+2025-04-27 16:41:09 - SignalGenerator - INFO - График сигналов для GMKN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/GMKN/signals.png
+2025-04-27 16:41:09 - SignalGenerator - INFO - График сигналов для LKOH сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/LKOH/signals.png
+2025-04-27 16:41:09 - SignalGenerator - INFO - График сигналов для MAGN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/MAGN/signals.png
+2025-04-27 16:41:09 - SignalGenerator - INFO - График сигналов для MTSS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/MTSS/signals.png
+2025-04-27 16:41:10 - SignalGenerator - INFO - График сигналов для MVID сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/MVID/signals.png
+2025-04-27 16:41:10 - SignalGenerator - INFO - График сигналов для NVTK сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/NVTK/signals.png
+2025-04-27 16:41:10 - SignalGenerator - INFO - График сигналов для PHOR сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/PHOR/signals.png
+2025-04-27 16:41:10 - SignalGenerator - INFO - График сигналов для ROSN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/ROSN/signals.png
+2025-04-27 16:41:11 - SignalGenerator - INFO - График сигналов для RUAL сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/RUAL/signals.png
+2025-04-27 16:41:11 - SignalGenerator - INFO - График сигналов для SBER сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/SBER/signals.png
+2025-04-27 16:41:11 - SignalGenerator - INFO - График сигналов для SIBN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/SIBN/signals.png
+2025-04-27 16:41:11 - SignalGenerator - INFO - График сигналов для SNGS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/SNGS/signals.png
+2025-04-27 16:41:12 - SignalGenerator - INFO - График сигналов для TATN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/TATN/signals.png
+2025-04-27 16:41:12 - SignalGenerator - INFO - Визуализация компонентов композитного скора
+2025-04-27 16:41:12 - SignalGenerator - INFO - График скоров для AFKS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/AFKS/scores.png
+2025-04-27 16:41:12 - SignalGenerator - INFO - График скоров для ALRS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/ALRS/scores.png
+2025-04-27 16:41:13 - SignalGenerator - INFO - График скоров для GAZP сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/GAZP/scores.png
+2025-04-27 16:41:13 - SignalGenerator - INFO - График скоров для GMKN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/GMKN/scores.png
+2025-04-27 16:41:14 - SignalGenerator - INFO - График скоров для LKOH сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/LKOH/scores.png
+2025-04-27 16:41:14 - SignalGenerator - INFO - График скоров для MAGN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/MAGN/scores.png
+2025-04-27 16:41:14 - SignalGenerator - INFO - График скоров для MTSS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/MTSS/scores.png
+2025-04-27 16:41:15 - SignalGenerator - INFO - График скоров для MVID сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/MVID/scores.png
+2025-04-27 16:41:15 - SignalGenerator - INFO - График скоров для NVTK сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/NVTK/scores.png
+2025-04-27 16:41:16 - SignalGenerator - INFO - График скоров для PHOR сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/PHOR/scores.png
+2025-04-27 16:41:16 - SignalGenerator - INFO - График скоров для ROSN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/ROSN/scores.png
+2025-04-27 16:41:16 - SignalGenerator - INFO - График скоров для RUAL сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/RUAL/scores.png
+2025-04-27 16:41:17 - SignalGenerator - INFO - График скоров для SBER сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/SBER/scores.png
+2025-04-27 16:41:17 - SignalGenerator - INFO - График скоров для SIBN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/SIBN/scores.png
+2025-04-27 16:41:18 - SignalGenerator - INFO - График скоров для SNGS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/SNGS/scores.png
+2025-04-27 16:41:18 - SignalGenerator - INFO - График скоров для TATN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/ticker_visualizations/TATN/scores.png
+2025-04-27 16:41:19 - SignalGenerator - INFO - Исторические сигналы сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/signals/signals_20250427.csv
+2025-04-27 16:41:20 - SignalGenerator - INFO - Полные результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-27 16:41:20 - SignalGenerator - INFO - Пайплайн выполнен за 13.86 секунд
+2025-04-27 16:41:20 - SignalGenerator - INFO - Обработано 7110 строк данных
+2025-04-27 16:41:20 - SignalGenerator - INFO - Обработано 16 тикеров
+2025-04-27 16:41:20 - SignalGenerator - INFO - Создано сигналов: Buy - 605, Hold - 6090, Sell - 415
+2025-04-27 16:41:20 - SignalGenerator - INFO - В шортлист включено 7110 записей
+2025-04-27 16:41:20 - SignalGenerator - INFO - Все результаты сохранены в каталоге: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals
+2025-04-27 16:50:48 - SignalGenerator - INFO - Запуск пайплайна генерации торговых сигналов
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружено 7110 строк данных
+2025-04-27 16:50:48 - SignalGenerator - INFO - Расчет композитного скора
+2025-04-27 16:50:48 - SignalGenerator - INFO - Технический скор рассчитан на основе 6 индикаторов
+2025-04-27 16:50:48 - SignalGenerator - INFO - Сентимент-скор рассчитан на основе 5 индикаторов
+2025-04-27 16:50:48 - SignalGenerator - INFO - Расчет фундаментального скора
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загрузка фундаментальных данных для 16 тикеров
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные AFKS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные AFKS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные ALRS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные ALRS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные GAZP за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные GAZP за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные GMKN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные GMKN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные LKOH за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные LKOH за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные MAGN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные MAGN за 2024: 34 показателей, 3 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные MTSS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные MTSS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные MVID за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные MVID за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные NVTK за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные NVTK за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные PHOR за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные PHOR за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные ROSN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные ROSN за 2024: 35 показателей, 2 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные RUAL за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные RUAL за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные SBER за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные SBER за 2024: 13 показателей, 24 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные SIBN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные SIBN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные SNGS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные SNGS за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные TATN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Загружены данные TATN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:50:48 - SignalGenerator - INFO - Статус загрузки фундаментальных данных: загружено 32, рассчитано 32, отсутствует 0
+2025-04-27 16:50:48 - SignalGenerator - INFO - Фундаментальные данные за 2023: доступны для 16 из 16 тикеров
+2025-04-27 16:50:48 - SignalGenerator - INFO - Фундаментальные данные за 2024: доступны для 16 из 16 тикеров
+2025-04-27 16:50:49 - SignalGenerator - INFO - Использование фундаментальных данных: данные 2023 - 5462, данные 2024 - 1648, нет данных - 0
+2025-04-27 16:50:49 - SignalGenerator - INFO - Композитный скор рассчитан
+2025-04-27 16:50:49 - SignalGenerator - INFO - Пример скоров для AFKS: fundamental=0.1433, tech=-0.2089, sentiment=-0.2908
+2025-04-27 16:50:49 - SignalGenerator - INFO - Пример скоров для ALRS: fundamental=0.1433, tech=-0.1965, sentiment=-0.4147
+2025-04-27 16:50:49 - SignalGenerator - INFO - Пример скоров для GAZP: fundamental=0.1433, tech=0.0907, sentiment=0.3591
+2025-04-27 16:50:49 - SignalGenerator - INFO - Пример скоров для GMKN: fundamental=0.1433, tech=0.0292, sentiment=-0.2908
+2025-04-27 16:50:49 - SignalGenerator - INFO - Пример скоров для LKOH: fundamental=0.1433, tech=-0.0257, sentiment=-0.8666
+2025-04-27 16:50:49 - SignalGenerator - INFO - Сгенерировано сигналов: Buy - 605, Hold - 6090, Sell - 415
+2025-04-27 16:50:49 - SignalGenerator - INFO - Создан shortlist из 7110 записей (топ 30.0%)
+2025-04-27 16:50:49 - SignalGenerator - INFO - Шортлист сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/shortlists/shortlist_20250414.csv
+2025-04-27 16:50:49 - SignalGenerator - INFO - Актуальный шортлист сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/results.csv
+2025-04-27 16:50:49 - SignalGenerator - INFO - Визуализация графиков котировок с торговыми сигналами
+2025-04-27 16:50:49 - SignalGenerator - INFO - График сигналов для AFKS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/AFKS/signals.png
+2025-04-27 16:50:49 - SignalGenerator - INFO - График сигналов для ALRS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/ALRS/signals.png
+2025-04-27 16:50:50 - SignalGenerator - INFO - График сигналов для GAZP сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/GAZP/signals.png
+2025-04-27 16:50:50 - SignalGenerator - INFO - График сигналов для GMKN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/GMKN/signals.png
+2025-04-27 16:50:50 - SignalGenerator - INFO - График сигналов для LKOH сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/LKOH/signals.png
+2025-04-27 16:50:50 - SignalGenerator - INFO - График сигналов для MAGN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/MAGN/signals.png
+2025-04-27 16:50:51 - SignalGenerator - INFO - График сигналов для MTSS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/MTSS/signals.png
+2025-04-27 16:50:51 - SignalGenerator - INFO - График сигналов для MVID сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/MVID/signals.png
+2025-04-27 16:50:51 - SignalGenerator - INFO - График сигналов для NVTK сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/NVTK/signals.png
+2025-04-27 16:50:51 - SignalGenerator - INFO - График сигналов для PHOR сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/PHOR/signals.png
+2025-04-27 16:50:52 - SignalGenerator - INFO - График сигналов для ROSN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/ROSN/signals.png
+2025-04-27 16:50:52 - SignalGenerator - INFO - График сигналов для RUAL сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/RUAL/signals.png
+2025-04-27 16:50:52 - SignalGenerator - INFO - График сигналов для SBER сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/SBER/signals.png
+2025-04-27 16:50:52 - SignalGenerator - INFO - График сигналов для SIBN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/SIBN/signals.png
+2025-04-27 16:50:53 - SignalGenerator - INFO - График сигналов для SNGS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/SNGS/signals.png
+2025-04-27 16:50:53 - SignalGenerator - INFO - График сигналов для TATN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/TATN/signals.png
+2025-04-27 16:50:53 - SignalGenerator - INFO - Визуализация компонентов композитного скора
+2025-04-27 16:50:53 - SignalGenerator - INFO - График скоров для AFKS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/AFKS/scores.png
+2025-04-27 16:50:54 - SignalGenerator - INFO - График скоров для ALRS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/ALRS/scores.png
+2025-04-27 16:50:54 - SignalGenerator - INFO - График скоров для GAZP сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/GAZP/scores.png
+2025-04-27 16:50:55 - SignalGenerator - INFO - График скоров для GMKN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/GMKN/scores.png
+2025-04-27 16:50:55 - SignalGenerator - INFO - График скоров для LKOH сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/LKOH/scores.png
+2025-04-27 16:50:55 - SignalGenerator - INFO - График скоров для MAGN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/MAGN/scores.png
+2025-04-27 16:50:56 - SignalGenerator - INFO - График скоров для MTSS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/MTSS/scores.png
+2025-04-27 16:50:56 - SignalGenerator - INFO - График скоров для MVID сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/MVID/scores.png
+2025-04-27 16:50:57 - SignalGenerator - INFO - График скоров для NVTK сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/NVTK/scores.png
+2025-04-27 16:50:57 - SignalGenerator - INFO - График скоров для PHOR сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/PHOR/scores.png
+2025-04-27 16:50:57 - SignalGenerator - INFO - График скоров для ROSN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/ROSN/scores.png
+2025-04-27 16:50:58 - SignalGenerator - INFO - График скоров для RUAL сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/RUAL/scores.png
+2025-04-27 16:50:58 - SignalGenerator - INFO - График скоров для SBER сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/SBER/scores.png
+2025-04-27 16:50:59 - SignalGenerator - INFO - График скоров для SIBN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/SIBN/scores.png
+2025-04-27 16:50:59 - SignalGenerator - INFO - График скоров для SNGS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/SNGS/scores.png
+2025-04-27 16:50:59 - SignalGenerator - INFO - График скоров для TATN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/ticker_visualizations/TATN/scores.png
+2025-04-27 16:51:01 - SignalGenerator - INFO - Исторические сигналы сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/signals/signals_20250427.csv
+2025-04-27 16:51:02 - SignalGenerator - INFO - Полные результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-27 16:51:02 - SignalGenerator - INFO - Пайплайн выполнен за 13.93 секунд
+2025-04-27 16:51:02 - SignalGenerator - INFO - Обработано 7110 строк данных
+2025-04-27 16:51:02 - SignalGenerator - INFO - Обработано 16 тикеров
+2025-04-27 16:51:02 - SignalGenerator - INFO - Создано сигналов: Buy - 605, Hold - 6090, Sell - 415
+2025-04-27 16:51:02 - SignalGenerator - INFO - В шортлист включено 7110 записей
+2025-04-27 16:51:02 - SignalGenerator - INFO - Все результаты сохранены в каталоге: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals
+2025-04-27 16:51:08 - SignalGenerator - INFO - Запуск пайплайна генерации торговых сигналов
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_data_20250427_165107.csv
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружено 5462 строк данных
+2025-04-27 16:51:08 - SignalGenerator - INFO - Расчет композитного скора
+2025-04-27 16:51:08 - SignalGenerator - INFO - Технический скор рассчитан на основе 6 индикаторов
+2025-04-27 16:51:08 - SignalGenerator - INFO - Сентимент-скор рассчитан на основе 5 индикаторов
+2025-04-27 16:51:08 - SignalGenerator - INFO - Расчет фундаментального скора
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загрузка фундаментальных данных для 16 тикеров
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные AFKS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные AFKS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные ALRS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные ALRS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные GAZP за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные GAZP за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные GMKN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные GMKN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные LKOH за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные LKOH за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные MAGN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные MAGN за 2024: 34 показателей, 3 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные MTSS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные MTSS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные MVID за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные MVID за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные NVTK за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные NVTK за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные PHOR за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные PHOR за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные ROSN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные ROSN за 2024: 35 показателей, 2 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные RUAL за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные RUAL за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные SBER за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные SBER за 2024: 13 показателей, 24 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные SIBN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные SIBN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные SNGS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные SNGS за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные TATN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Загружены данные TATN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:08 - SignalGenerator - INFO - Статус загрузки фундаментальных данных: загружено 32, рассчитано 32, отсутствует 0
+2025-04-27 16:51:08 - SignalGenerator - INFO - Фундаментальные данные за 2023: доступны для 16 из 16 тикеров
+2025-04-27 16:51:08 - SignalGenerator - INFO - Фундаментальные данные за 2024: доступны для 16 из 16 тикеров
+2025-04-27 16:51:08 - SignalGenerator - INFO - Использование фундаментальных данных: данные 2023 - 5462, данные 2024 - 0, нет данных - 0
+2025-04-27 16:51:08 - SignalGenerator - INFO - Композитный скор рассчитан
+2025-04-27 16:51:08 - SignalGenerator - INFO - Пример скоров для AFKS: fundamental=0.0819, tech=0.9555, sentiment=-0.3476
+2025-04-27 16:51:08 - SignalGenerator - INFO - Пример скоров для ALRS: fundamental=0.0819, tech=0.9836, sentiment=-0.2943
+2025-04-27 16:51:08 - SignalGenerator - INFO - Пример скоров для GAZP: fundamental=0.0819, tech=0.9772, sentiment=-0.3224
+2025-04-27 16:51:08 - SignalGenerator - INFO - Пример скоров для GMKN: fundamental=0.0819, tech=0.8125, sentiment=-0.2943
+2025-04-27 16:51:08 - SignalGenerator - INFO - Пример скоров для LKOH: fundamental=0.0819, tech=2.2513, sentiment=-0.4104
+2025-04-27 16:51:08 - SignalGenerator - INFO - Сгенерировано сигналов: Buy - 451, Hold - 4669, Sell - 342
+2025-04-27 16:51:09 - SignalGenerator - INFO - Создан shortlist из 5462 записей (топ 30.0%)
+2025-04-27 16:51:09 - SignalGenerator - INFO - Шортлист сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/shortlists/shortlist_20241231.csv
+2025-04-27 16:51:09 - SignalGenerator - INFO - Актуальный шортлист сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/results.csv
+2025-04-27 16:51:09 - SignalGenerator - INFO - Визуализация графиков котировок с торговыми сигналами
+2025-04-27 16:51:09 - SignalGenerator - INFO - График сигналов для AFKS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/AFKS/signals.png
+2025-04-27 16:51:09 - SignalGenerator - INFO - График сигналов для ALRS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/ALRS/signals.png
+2025-04-27 16:51:09 - SignalGenerator - INFO - График сигналов для GAZP сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/GAZP/signals.png
+2025-04-27 16:51:10 - SignalGenerator - INFO - График сигналов для GMKN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/GMKN/signals.png
+2025-04-27 16:51:10 - SignalGenerator - INFO - График сигналов для LKOH сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/LKOH/signals.png
+2025-04-27 16:51:10 - SignalGenerator - INFO - График сигналов для MAGN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/MAGN/signals.png
+2025-04-27 16:51:10 - SignalGenerator - INFO - График сигналов для MTSS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/MTSS/signals.png
+2025-04-27 16:51:11 - SignalGenerator - INFO - График сигналов для MVID сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/MVID/signals.png
+2025-04-27 16:51:11 - SignalGenerator - INFO - График сигналов для NVTK сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/NVTK/signals.png
+2025-04-27 16:51:11 - SignalGenerator - INFO - График сигналов для PHOR сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/PHOR/signals.png
+2025-04-27 16:51:11 - SignalGenerator - INFO - График сигналов для ROSN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/ROSN/signals.png
+2025-04-27 16:51:12 - SignalGenerator - INFO - График сигналов для RUAL сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/RUAL/signals.png
+2025-04-27 16:51:12 - SignalGenerator - INFO - График сигналов для SBER сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/SBER/signals.png
+2025-04-27 16:51:12 - SignalGenerator - INFO - График сигналов для SIBN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/SIBN/signals.png
+2025-04-27 16:51:12 - SignalGenerator - INFO - График сигналов для SNGS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/SNGS/signals.png
+2025-04-27 16:51:12 - SignalGenerator - INFO - График сигналов для TATN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/TATN/signals.png
+2025-04-27 16:51:12 - SignalGenerator - INFO - Визуализация компонентов композитного скора
+2025-04-27 16:51:13 - SignalGenerator - INFO - График скоров для AFKS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/AFKS/scores.png
+2025-04-27 16:51:13 - SignalGenerator - INFO - График скоров для ALRS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/ALRS/scores.png
+2025-04-27 16:51:14 - SignalGenerator - INFO - График скоров для GAZP сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/GAZP/scores.png
+2025-04-27 16:51:14 - SignalGenerator - INFO - График скоров для GMKN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/GMKN/scores.png
+2025-04-27 16:51:14 - SignalGenerator - INFO - График скоров для LKOH сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/LKOH/scores.png
+2025-04-27 16:51:15 - SignalGenerator - INFO - График скоров для MAGN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/MAGN/scores.png
+2025-04-27 16:51:15 - SignalGenerator - INFO - График скоров для MTSS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/MTSS/scores.png
+2025-04-27 16:51:16 - SignalGenerator - INFO - График скоров для MVID сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/MVID/scores.png
+2025-04-27 16:51:16 - SignalGenerator - INFO - График скоров для NVTK сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/NVTK/scores.png
+2025-04-27 16:51:16 - SignalGenerator - INFO - График скоров для PHOR сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/PHOR/scores.png
+2025-04-27 16:51:17 - SignalGenerator - INFO - График скоров для ROSN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/ROSN/scores.png
+2025-04-27 16:51:17 - SignalGenerator - INFO - График скоров для RUAL сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/RUAL/scores.png
+2025-04-27 16:51:17 - SignalGenerator - INFO - График скоров для SBER сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/SBER/scores.png
+2025-04-27 16:51:18 - SignalGenerator - INFO - График скоров для SIBN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/SIBN/scores.png
+2025-04-27 16:51:18 - SignalGenerator - INFO - График скоров для SNGS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/SNGS/scores.png
+2025-04-27 16:51:19 - SignalGenerator - INFO - График скоров для TATN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/ticker_visualizations/TATN/scores.png
+2025-04-27 16:51:19 - SignalGenerator - INFO - Исторические сигналы сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results/signals/signals_20250427.csv
+2025-04-27 16:51:20 - SignalGenerator - INFO - Полные результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_signals_20250427_165107.csv
+2025-04-27 16:51:20 - SignalGenerator - INFO - Пайплайн выполнен за 12.33 секунд
+2025-04-27 16:51:20 - SignalGenerator - INFO - Обработано 5462 строк данных
+2025-04-27 16:51:20 - SignalGenerator - INFO - Обработано 16 тикеров
+2025-04-27 16:51:20 - SignalGenerator - INFO - Создано сигналов: Buy - 451, Hold - 4669, Sell - 342
+2025-04-27 16:51:20 - SignalGenerator - INFO - В шортлист включено 5462 записей
+2025-04-27 16:51:20 - SignalGenerator - INFO - Все результаты сохранены в каталоге: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_results
+2025-04-27 16:51:22 - SignalGenerator - INFO - Запуск пайплайна генерации торговых сигналов
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_data_20250427_165107.csv
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружено 1648 строк данных
+2025-04-27 16:51:22 - SignalGenerator - INFO - Расчет композитного скора
+2025-04-27 16:51:22 - SignalGenerator - INFO - Технический скор рассчитан на основе 6 индикаторов
+2025-04-27 16:51:22 - SignalGenerator - INFO - Сентимент-скор рассчитан на основе 5 индикаторов
+2025-04-27 16:51:22 - SignalGenerator - INFO - Расчет фундаментального скора
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загрузка фундаментальных данных для 16 тикеров
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные AFKS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные AFKS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные ALRS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные ALRS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные GAZP за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные GAZP за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные GMKN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные GMKN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные LKOH за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные LKOH за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные MAGN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные MAGN за 2024: 34 показателей, 3 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные MTSS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные MTSS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные MVID за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные MVID за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные NVTK за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные NVTK за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные PHOR за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные PHOR за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные ROSN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные ROSN за 2024: 35 показателей, 2 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные RUAL за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные RUAL за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные SBER за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные SBER за 2024: 13 показателей, 24 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные SIBN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные SIBN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные SNGS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные SNGS за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные TATN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Загружены данные TATN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:22 - SignalGenerator - INFO - Статус загрузки фундаментальных данных: загружено 32, рассчитано 32, отсутствует 0
+2025-04-27 16:51:22 - SignalGenerator - INFO - Фундаментальные данные за 2023: доступны для 16 из 16 тикеров
+2025-04-27 16:51:22 - SignalGenerator - INFO - Фундаментальные данные за 2024: доступны для 16 из 16 тикеров
+2025-04-27 16:51:23 - SignalGenerator - INFO - Использование фундаментальных данных: данные 2023 - 0, данные 2024 - 1648, нет данных - 0
+2025-04-27 16:51:23 - SignalGenerator - INFO - Композитный скор рассчитан
+2025-04-27 16:51:23 - SignalGenerator - INFO - Пример скоров для AFKS: fundamental=0.1433, tech=-0.2972, sentiment=-0.2809
+2025-04-27 16:51:23 - SignalGenerator - INFO - Пример скоров для ALRS: fundamental=0.1433, tech=-0.3011, sentiment=-0.3890
+2025-04-27 16:51:23 - SignalGenerator - INFO - Пример скоров для GAZP: fundamental=0.1433, tech=-0.0331, sentiment=0.3558
+2025-04-27 16:51:23 - SignalGenerator - INFO - Пример скоров для GMKN: fundamental=0.1433, tech=-0.0759, sentiment=-0.2809
+2025-04-27 16:51:23 - SignalGenerator - INFO - Пример скоров для LKOH: fundamental=0.1433, tech=-0.1543, sentiment=-0.8272
+2025-04-27 16:51:23 - SignalGenerator - INFO - Сгенерировано сигналов: Buy - 150, Hold - 1420, Sell - 78
+2025-04-27 16:51:23 - SignalGenerator - INFO - Создан shortlist из 1648 записей (топ 30.0%)
+2025-04-27 16:51:23 - SignalGenerator - INFO - Шортлист сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/shortlists/shortlist_20250414.csv
+2025-04-27 16:51:23 - SignalGenerator - INFO - Актуальный шортлист сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/results.csv
+2025-04-27 16:51:23 - SignalGenerator - INFO - Визуализация графиков котировок с торговыми сигналами
+2025-04-27 16:51:23 - SignalGenerator - INFO - График сигналов для AFKS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/AFKS/signals.png
+2025-04-27 16:51:23 - SignalGenerator - INFO - График сигналов для ALRS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/ALRS/signals.png
+2025-04-27 16:51:23 - SignalGenerator - INFO - График сигналов для GAZP сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/GAZP/signals.png
+2025-04-27 16:51:24 - SignalGenerator - INFO - График сигналов для GMKN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/GMKN/signals.png
+2025-04-27 16:51:24 - SignalGenerator - INFO - График сигналов для LKOH сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/LKOH/signals.png
+2025-04-27 16:51:24 - SignalGenerator - INFO - График сигналов для MAGN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/MAGN/signals.png
+2025-04-27 16:51:24 - SignalGenerator - INFO - График сигналов для MTSS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/MTSS/signals.png
+2025-04-27 16:51:24 - SignalGenerator - INFO - График сигналов для MVID сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/MVID/signals.png
+2025-04-27 16:51:25 - SignalGenerator - INFO - График сигналов для NVTK сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/NVTK/signals.png
+2025-04-27 16:51:25 - SignalGenerator - INFO - График сигналов для PHOR сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/PHOR/signals.png
+2025-04-27 16:51:25 - SignalGenerator - INFO - График сигналов для ROSN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/ROSN/signals.png
+2025-04-27 16:51:25 - SignalGenerator - INFO - График сигналов для RUAL сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/RUAL/signals.png
+2025-04-27 16:51:26 - SignalGenerator - INFO - График сигналов для SBER сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/SBER/signals.png
+2025-04-27 16:51:26 - SignalGenerator - INFO - График сигналов для SIBN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/SIBN/signals.png
+2025-04-27 16:51:26 - SignalGenerator - INFO - График сигналов для SNGS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/SNGS/signals.png
+2025-04-27 16:51:26 - SignalGenerator - INFO - График сигналов для TATN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/TATN/signals.png
+2025-04-27 16:51:26 - SignalGenerator - INFO - Визуализация компонентов композитного скора
+2025-04-27 16:51:27 - SignalGenerator - INFO - График скоров для AFKS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/AFKS/scores.png
+2025-04-27 16:51:27 - SignalGenerator - INFO - График скоров для ALRS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/ALRS/scores.png
+2025-04-27 16:51:27 - SignalGenerator - INFO - График скоров для GAZP сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/GAZP/scores.png
+2025-04-27 16:51:28 - SignalGenerator - INFO - График скоров для GMKN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/GMKN/scores.png
+2025-04-27 16:51:28 - SignalGenerator - INFO - График скоров для LKOH сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/LKOH/scores.png
+2025-04-27 16:51:29 - SignalGenerator - INFO - График скоров для MAGN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/MAGN/scores.png
+2025-04-27 16:51:29 - SignalGenerator - INFO - График скоров для MTSS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/MTSS/scores.png
+2025-04-27 16:51:30 - SignalGenerator - INFO - График скоров для MVID сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/MVID/scores.png
+2025-04-27 16:51:30 - SignalGenerator - INFO - График скоров для NVTK сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/NVTK/scores.png
+2025-04-27 16:51:30 - SignalGenerator - INFO - График скоров для PHOR сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/PHOR/scores.png
+2025-04-27 16:51:31 - SignalGenerator - INFO - График скоров для ROSN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/ROSN/scores.png
+2025-04-27 16:51:31 - SignalGenerator - INFO - График скоров для RUAL сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/RUAL/scores.png
+2025-04-27 16:51:31 - SignalGenerator - INFO - График скоров для SBER сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/SBER/scores.png
+2025-04-27 16:51:32 - SignalGenerator - INFO - График скоров для SIBN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/SIBN/scores.png
+2025-04-27 16:51:32 - SignalGenerator - INFO - График скоров для SNGS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/SNGS/scores.png
+2025-04-27 16:51:33 - SignalGenerator - INFO - График скоров для TATN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/ticker_visualizations/TATN/scores.png
+2025-04-27 16:51:33 - SignalGenerator - INFO - Исторические сигналы сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results/signals/signals_20250427.csv
+2025-04-27 16:51:33 - SignalGenerator - INFO - Полные результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_signals_20250427_165107.csv
+2025-04-27 16:51:33 - SignalGenerator - INFO - Пайплайн выполнен за 10.91 секунд
+2025-04-27 16:51:33 - SignalGenerator - INFO - Обработано 1648 строк данных
+2025-04-27 16:51:33 - SignalGenerator - INFO - Обработано 16 тикеров
+2025-04-27 16:51:33 - SignalGenerator - INFO - Создано сигналов: Buy - 150, Hold - 1420, Sell - 78
+2025-04-27 16:51:33 - SignalGenerator - INFO - В шортлист включено 1648 записей
+2025-04-27 16:51:33 - SignalGenerator - INFO - Все результаты сохранены в каталоге: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/test_results
+2025-04-27 16:51:34 - SignalGenerator - INFO - Запуск пайплайна генерации торговых сигналов
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/df.csv
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружено 7110 строк данных
+2025-04-27 16:51:34 - SignalGenerator - INFO - Расчет композитного скора
+2025-04-27 16:51:34 - SignalGenerator - INFO - Технический скор рассчитан на основе 6 индикаторов
+2025-04-27 16:51:34 - SignalGenerator - INFO - Сентимент-скор рассчитан на основе 5 индикаторов
+2025-04-27 16:51:34 - SignalGenerator - INFO - Расчет фундаментального скора
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загрузка фундаментальных данных для 16 тикеров
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные AFKS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные AFKS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные ALRS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные ALRS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные GAZP за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные GAZP за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные GMKN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные GMKN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные LKOH за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные LKOH за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные MAGN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные MAGN за 2024: 34 показателей, 3 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные MTSS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные MTSS за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные MVID за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные MVID за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные NVTK за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные NVTK за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные PHOR за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные PHOR за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные ROSN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные ROSN за 2024: 35 показателей, 2 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные RUAL за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные RUAL за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные SBER за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные SBER за 2024: 13 показателей, 24 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные SIBN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные SIBN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные SNGS за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные SNGS за 2024: 0 показателей, 37 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные TATN за 2023: 13 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Загружены данные TATN за 2024: 37 показателей, 0 отсутствует
+2025-04-27 16:51:34 - SignalGenerator - INFO - Статус загрузки фундаментальных данных: загружено 32, рассчитано 32, отсутствует 0
+2025-04-27 16:51:34 - SignalGenerator - INFO - Фундаментальные данные за 2023: доступны для 16 из 16 тикеров
+2025-04-27 16:51:34 - SignalGenerator - INFO - Фундаментальные данные за 2024: доступны для 16 из 16 тикеров
+2025-04-27 16:51:35 - SignalGenerator - INFO - Использование фундаментальных данных: данные 2023 - 5462, данные 2024 - 1648, нет данных - 0
+2025-04-27 16:51:35 - SignalGenerator - INFO - Композитный скор рассчитан
+2025-04-27 16:51:35 - SignalGenerator - INFO - Пример скоров для AFKS: fundamental=0.1433, tech=-0.2089, sentiment=-0.2908
+2025-04-27 16:51:35 - SignalGenerator - INFO - Пример скоров для ALRS: fundamental=0.1433, tech=-0.1965, sentiment=-0.4147
+2025-04-27 16:51:35 - SignalGenerator - INFO - Пример скоров для GAZP: fundamental=0.1433, tech=0.0907, sentiment=0.3591
+2025-04-27 16:51:35 - SignalGenerator - INFO - Пример скоров для GMKN: fundamental=0.1433, tech=0.0292, sentiment=-0.2908
+2025-04-27 16:51:35 - SignalGenerator - INFO - Пример скоров для LKOH: fundamental=0.1433, tech=-0.0257, sentiment=-0.8666
+2025-04-27 16:51:35 - SignalGenerator - INFO - Сгенерировано сигналов: Buy - 605, Hold - 6090, Sell - 415
+2025-04-27 16:51:35 - SignalGenerator - INFO - Создан shortlist из 7110 записей (топ 30.0%)
+2025-04-27 16:51:35 - SignalGenerator - INFO - Шортлист сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/shortlists/shortlist_20250414.csv
+2025-04-27 16:51:35 - SignalGenerator - INFO - Актуальный шортлист сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/results.csv
+2025-04-27 16:51:35 - SignalGenerator - INFO - Визуализация графиков котировок с торговыми сигналами
+2025-04-27 16:51:36 - SignalGenerator - INFO - График сигналов для AFKS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/AFKS/signals.png
+2025-04-27 16:51:36 - SignalGenerator - INFO - График сигналов для ALRS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/ALRS/signals.png
+2025-04-27 16:51:36 - SignalGenerator - INFO - График сигналов для GAZP сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/GAZP/signals.png
+2025-04-27 16:51:36 - SignalGenerator - INFO - График сигналов для GMKN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/GMKN/signals.png
+2025-04-27 16:51:37 - SignalGenerator - INFO - График сигналов для LKOH сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/LKOH/signals.png
+2025-04-27 16:51:37 - SignalGenerator - INFO - График сигналов для MAGN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/MAGN/signals.png
+2025-04-27 16:51:37 - SignalGenerator - INFO - График сигналов для MTSS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/MTSS/signals.png
+2025-04-27 16:51:37 - SignalGenerator - INFO - График сигналов для MVID сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/MVID/signals.png
+2025-04-27 16:51:37 - SignalGenerator - INFO - График сигналов для NVTK сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/NVTK/signals.png
+2025-04-27 16:51:38 - SignalGenerator - INFO - График сигналов для PHOR сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/PHOR/signals.png
+2025-04-27 16:51:38 - SignalGenerator - INFO - График сигналов для ROSN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/ROSN/signals.png
+2025-04-27 16:51:38 - SignalGenerator - INFO - График сигналов для RUAL сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/RUAL/signals.png
+2025-04-27 16:51:38 - SignalGenerator - INFO - График сигналов для SBER сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/SBER/signals.png
+2025-04-27 16:51:39 - SignalGenerator - INFO - График сигналов для SIBN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/SIBN/signals.png
+2025-04-27 16:51:39 - SignalGenerator - INFO - График сигналов для SNGS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/SNGS/signals.png
+2025-04-27 16:51:39 - SignalGenerator - INFO - График сигналов для TATN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/TATN/signals.png
+2025-04-27 16:51:39 - SignalGenerator - INFO - Визуализация компонентов композитного скора
+2025-04-27 16:51:40 - SignalGenerator - INFO - График скоров для AFKS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/AFKS/scores.png
+2025-04-27 16:51:40 - SignalGenerator - INFO - График скоров для ALRS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/ALRS/scores.png
+2025-04-27 16:51:41 - SignalGenerator - INFO - График скоров для GAZP сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/GAZP/scores.png
+2025-04-27 16:51:41 - SignalGenerator - INFO - График скоров для GMKN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/GMKN/scores.png
+2025-04-27 16:51:41 - SignalGenerator - INFO - График скоров для LKOH сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/LKOH/scores.png
+2025-04-27 16:51:42 - SignalGenerator - INFO - График скоров для MAGN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/MAGN/scores.png
+2025-04-27 16:51:42 - SignalGenerator - INFO - График скоров для MTSS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/MTSS/scores.png
+2025-04-27 16:51:42 - SignalGenerator - INFO - График скоров для MVID сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/MVID/scores.png
+2025-04-27 16:51:43 - SignalGenerator - INFO - График скоров для NVTK сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/NVTK/scores.png
+2025-04-27 16:51:43 - SignalGenerator - INFO - График скоров для PHOR сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/PHOR/scores.png
+2025-04-27 16:51:44 - SignalGenerator - INFO - График скоров для ROSN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/ROSN/scores.png
+2025-04-27 16:51:44 - SignalGenerator - INFO - График скоров для RUAL сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/RUAL/scores.png
+2025-04-27 16:51:44 - SignalGenerator - INFO - График скоров для SBER сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/SBER/scores.png
+2025-04-27 16:51:45 - SignalGenerator - INFO - График скоров для SIBN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/SIBN/scores.png
+2025-04-27 16:51:45 - SignalGenerator - INFO - График скоров для SNGS сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/SNGS/scores.png
+2025-04-27 16:51:46 - SignalGenerator - INFO - График скоров для TATN сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/ticker_visualizations/TATN/scores.png
+2025-04-27 16:51:47 - SignalGenerator - INFO - Исторические сигналы сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/signals/signals_20250427.csv
+2025-04-27 16:51:48 - SignalGenerator - INFO - Полные результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals/production_signals.csv
+2025-04-27 16:51:48 - SignalGenerator - INFO - Пайплайн выполнен за 13.77 секунд
+2025-04-27 16:51:48 - SignalGenerator - INFO - Обработано 7110 строк данных
+2025-04-27 16:51:48 - SignalGenerator - INFO - Обработано 16 тикеров
+2025-04-27 16:51:48 - SignalGenerator - INFO - Создано сигналов: Buy - 605, Hold - 6090, Sell - 415
+2025-04-27 16:51:48 - SignalGenerator - INFO - В шортлист включено 7110 записей
+2025-04-27 16:51:48 - SignalGenerator - INFO - Все результаты сохранены в каталоге: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/signals

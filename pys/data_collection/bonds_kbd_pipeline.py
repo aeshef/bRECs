@@ -28,7 +28,9 @@ def run_bond_selection_with_kbd(
     kbd_duration_flexibility=1.5,  # Множитель для расширения диапазона дюрации
     max_adjustment_iterations=3,   # Максимальное число итераций адаптивной настройки
     excluded_issuers=None,         # Исключаемые эмитенты
-    output_format='all'            # 'all', 'portfolio', 'metrics', 'viz'
+    output_format='all',           # 'all', 'portfolio', 'metrics', 'viz'
+    kbd_data=None,                  # Предварительно загруженные данные КБД
+    output_dirs=None
 ):
     """
     Полный пайплайн для выбора облигаций с учетом кривой бескупонной доходности
@@ -51,6 +53,7 @@ def run_bond_selection_with_kbd(
         max_adjustment_iterations: максимальное число итераций адаптивной настройки
         excluded_issuers: список исключаемых эмитентов
         output_format: формат выходных данных
+        kbd_data: предварительно загруженные данные КБД (DataFrame)
         
     Returns:
         dict: результаты работы пайплайна
@@ -64,13 +67,12 @@ def run_bond_selection_with_kbd(
     # Установка базовой директории для KBD
     kbd_dir = f"{base_path}/data/processed_data/BONDS/kbd"
     
-    # Установка директорий для разных типов данных
-    data_dir = os.path.join(kbd_dir, 'data')
-    results_dir = os.path.join(kbd_dir, 'results')
-    viz_dir = os.path.join(kbd_dir, 'viz')
-    analysis_dir = os.path.join(kbd_dir, 'analysis')
-    portfolios_dir = os.path.join(kbd_dir, 'portfolios')
-    reports_dir = os.path.join(kbd_dir, 'reports')
+    data_dir = output_dirs.get('data', os.path.join(kbd_dir, 'data'))
+    results_dir = output_dirs.get('results', os.path.join(kbd_dir, 'results'))
+    viz_dir = output_dirs.get('viz', os.path.join(kbd_dir, 'viz'))
+    analysis_dir = output_dirs.get('analysis', os.path.join(kbd_dir, 'analysis'))
+    portfolios_dir = output_dirs.get('portfolios', os.path.join(kbd_dir, 'portfolios'))
+    reports_dir = output_dirs.get('reports', os.path.join(kbd_dir, 'reports'))
     
     # Создаем все нужные директории
     for dir_path in [kbd_dir, data_dir, results_dir, viz_dir, analysis_dir, portfolios_dir, reports_dir]:
@@ -79,152 +81,149 @@ def run_bond_selection_with_kbd(
     # Установка дат для КБД, если не указаны
     if end_date is None:
         end_date = datetime.now()
+    elif isinstance(end_date, str):
+        end_date = datetime.strptime(end_date, '%Y-%m-%d')
+        
     if start_date is None:
         start_date = end_date - timedelta(days=365)
+    elif isinstance(start_date, str):
+        start_date = datetime.strptime(start_date, '%Y-%m-%d')
+
+    if output_dirs is None:
+        output_dirs = {}    
     
     # Применяем настройки для выбранного профиля стратегии
     strategy_settings = _get_strategy_profile_settings(strategy_profile)
     
-    # Загрузка данных КБД
-    kbd_data = None
-    kbd_data_path = os.path.join(data_dir, 'kbd_data.csv')
-    
-    try:
-        # Импортируем KBDDownloader напрямую
-        from pys.data_collection.kbd import KBDDownloader
-        
-        downloader = KBDDownloader(output_dir=kbd_dir)
-        
-        if update_kbd_data:
-            # Загружаем актуальные данные с MOEX API
-            logger.info(f"Загружаем данные КБД с {start_date.strftime('%Y-%m-%d')} по {end_date.strftime('%Y-%m-%d')}")
-            kbd_data = downloader.get_kbd(start_date, end_date)
-            
-            if kbd_data is None or kbd_data.empty:
-                logger.warning("Не удалось загрузить актуальные данные КБД, пробуем использовать локальные")
-                if os.path.exists(kbd_data_path):
-                    kbd_data = downloader.load_kbd_data()
-                    print(f"Загружены сохраненные данные КБД: {len(kbd_data) if kbd_data is not None else 0} записей")
-                else:
-                    print("Локальные данные КБД отсутствуют")
-            else:
-                print(f"Успешно загружены актуальные данные КБД: {len(kbd_data)} записей")
-        else:
-            # Загружаем сохраненные данные
-            logger.info("Загружаем локальные данные КБД")
-            if os.path.exists(kbd_data_path):
-                kbd_data = downloader.load_kbd_data()
-                print(f"Загружены сохраненные данные КБД: {len(kbd_data) if kbd_data is not None else 0} записей")
-            else:
-                print("Локальные данные КБД отсутствуют")
-        
-        if kbd_data is not None:
-            logger.info(f"Данные КБД доступны: {len(kbd_data)} записей")
-            
-            # Сохраняем копию используемых данных КБД в директорию results
-            result_kbd_path = os.path.join(results_dir, f'kbd_data_{run_id}.csv')
-            kbd_data.to_csv(result_kbd_path, index=False)
-            logger.info(f"Копия данных КБД сохранена в {result_kbd_path}")
-        else:
-            logger.warning("Данные КБД недоступны")
-            
-    except Exception as e:
-        logger.error(f"Ошибка при работе с данными КБД: {e}")
-        logger.error(traceback.format_exc())
-        print("Внимание: Проблема при загрузке данных КБД")
-    
-    # Шаг 1: Анализ КБД и получение рекомендаций
+    # Шаг 1: Загрузка данных КБД
     kbd_results = {}
     filter_params = {}
     recommended_weighting = None
     
-    if use_kbd_recommendations and kbd_data is not None and not kbd_data.empty:
+    if use_kbd_recommendations:
         try:
-            from pys.data_collection.kbd_analyzer import KBDAnalyzer
-            
-            kbd_analyzer = KBDAnalyzer(kbd_data=kbd_data, output_dir=kbd_dir)
-            
-            # Визуализация КБД
-            kbd_chart_path = kbd_analyzer.visualize_kbd(
-                save_path=os.path.join(viz_dir, f'kbd_curve_{run_id}.png')
-            )
-            
-            # Получение комплексных рекомендаций для выбора облигаций
-            comprehensive_recommendations = kbd_analyzer.get_comprehensive_recommendations()
-            
-            # Выделяем параметры фильтрации и стратегию взвешивания
-            filter_params = {k: v for k, v in comprehensive_recommendations.items() 
-                            if k in ['min_yield', 'max_yield', 'min_duration', 'max_duration', 
-                                     'market_condition', 'excluded_issuers']}
-                                    
-            # Сохраняем рекомендуемую стратегию взвешивания
-            recommended_weighting = comprehensive_recommendations.get('weighting_strategy')
-            weighting_reason = comprehensive_recommendations.get('strategy_reason')
-            
-            # Применяем корректировки на основе выбранной стратегии
-            if 'min_yield' in filter_params:
-                # Корректируем минимальную доходность
-                adjusted_min_yield = filter_params['min_yield'] + kbd_yield_adjustment
-                filter_params['min_yield'] = max(3.0, adjusted_min_yield)  # Не менее 3%
+            # Проверяем, предоставлены ли данные КБД извне
+            if kbd_data is not None and not kbd_data.empty:
+                logger.info(f"Используем предоставленные данные КБД: {len(kbd_data)} записей")
+            else:
+                # Загружаем данные КБД если они не предоставлены
+                from pys.data_collection.kbd import KBDDownloader
                 
-                # Пропорционально корректируем максимальную доходность
-                if 'max_yield' in filter_params:
-                    yield_range = filter_params['max_yield'] - filter_params['min_yield']
-                    filter_params['max_yield'] = filter_params['min_yield'] + yield_range * strategy_settings['yield_range_factor']
-            
-            # Корректируем дюрацию с учетом гибкости и профиля стратегии
-            if 'min_duration' in filter_params and 'max_duration' in filter_params:
-                mid_duration = (filter_params['min_duration'] + filter_params['max_duration']) / 2
-                duration_range = filter_params['max_duration'] - filter_params['min_duration']
+                downloader = KBDDownloader(output_dir=kbd_dir)
                 
-                # Увеличиваем диапазон дюрации для большей гибкости
-                filter_params['min_duration'] = max(0.1, mid_duration - (duration_range * kbd_duration_flexibility / 2))
-                filter_params['max_duration'] = mid_duration + (duration_range * kbd_duration_flexibility / 2)
+                if update_kbd_data:
+                    # Загружаем актуальные данные с MOEX API
+                    logger.info(f"Загружаем данные КБД с {start_date.strftime('%Y-%m-%d')} по {end_date.strftime('%Y-%m-%d')}")
+                    kbd_data = downloader.get_kbd(start_date, end_date)
+                    
+                    if kbd_data is None or kbd_data.empty:
+                        logger.warning("Не удалось загрузить актуальные данные КБД, пробуем использовать локальные")
+                        kbd_data = downloader.load_kbd_data()
+                        print(f"Загружены сохраненные данные КБД: {len(kbd_data) if kbd_data is not None else 0} записей")
+                else:
+                    # Загружаем сохраненные данные
+                    logger.info("Загружаем локальные данные КБД")
+                    kbd_data = downloader.load_kbd_data()
+                    print(f"Загружены сохраненные данные КБД: {len(kbd_data) if kbd_data is not None else 0} записей")
+            
+            if kbd_data is not None:
+                logger.info(f"Данные КБД доступны: {len(kbd_data)} записей")
                 
-                # Дополнительно корректируем в зависимости от профиля стратегии
-                filter_params['min_duration'] *= strategy_settings['duration_min_factor']
-                filter_params['max_duration'] *= strategy_settings['duration_max_factor']
-            
-            kbd_results = {
-                'kbd_metrics': kbd_analyzer.get_latest_kbd_metrics(),
-                'kbd_chart_path': kbd_chart_path,
-                'recommendations': comprehensive_recommendations,
-                'adjusted_recommendations': filter_params.copy(),  # Копия для отслеживания изменений
-                'weighting_recommendation': {
-                    'strategy': recommended_weighting,
-                    'reason': weighting_reason,
-                    'description': comprehensive_recommendations.get('strategy_description', '')
-                }
-            }
-            
-            # Сохраняем результаты анализа КБД в директорию analysis
-            analysis_path = os.path.join(analysis_dir, f'kbd_analysis_{run_id}.json')
-            with open(analysis_path, 'w', encoding='utf-8') as f:
-                import json
-                json.dump(
-                    {
-                        'kbd_metrics': {k: str(v) if isinstance(v, (pd.Timestamp, datetime)) else v 
-                                       for k, v in kbd_results['kbd_metrics'].items()},
-                        'recommendations': kbd_results['recommendations'],
-                        'adjusted_recommendations': kbd_results['adjusted_recommendations'],
-                        'weighting_recommendation': kbd_results['weighting_recommendation']
-                    }, 
-                    f, 
-                    indent=2
+                # Сохраняем копию используемых данных КБД в директорию results
+                result_kbd_path = os.path.join(results_dir, f'kbd_data_{run_id}.csv')
+                kbd_data.to_csv(result_kbd_path, index=False)
+                logger.info(f"Копия данных КБД сохранена в {result_kbd_path}")
+                
+                # Шаг 2: Анализ КБД и получение рекомендаций
+                from pys.data_collection.kbd_analyzer import KBDAnalyzer
+                
+                kbd_analyzer = KBDAnalyzer(kbd_data=kbd_data, output_dir=kbd_dir)
+                
+                # Визуализация КБД
+                kbd_chart_path = kbd_analyzer.visualize_kbd(
+                    save_path=os.path.join(viz_dir, f'kbd_curve_{run_id}.png')
                 )
-            logger.info(f"Результаты анализа КБД сохранены в {analysis_path}")
-            
-            logger.info(f"КБД анализ выполнен успешно. Рекомендуемая стратегия взвешивания: {recommended_weighting} ({weighting_reason})")
-            print(f"КБД визуализация сохранена в: {kbd_chart_path}")
-            print(f"Рекомендуемая стратегия взвешивания: {recommended_weighting} - {comprehensive_recommendations.get('strategy_description', '')}")
-            
+                
+                # Получение комплексных рекомендаций для выбора облигаций
+                comprehensive_recommendations = kbd_analyzer.get_comprehensive_recommendations()
+                
+                # Выделяем параметры фильтрации и стратегию взвешивания
+                filter_params = {k: v for k, v in comprehensive_recommendations.items() 
+                                if k in ['min_yield', 'max_yield', 'min_duration', 'max_duration', 
+                                         'market_condition', 'excluded_issuers']}
+                                        
+                # Сохраняем рекомендуемую стратегию взвешивания
+                recommended_weighting = comprehensive_recommendations.get('weighting_strategy')
+                weighting_reason = comprehensive_recommendations.get('strategy_reason')
+                
+                # Применяем корректировки на основе выбранной стратегии
+                if 'min_yield' in filter_params:
+                    # Корректируем минимальную доходность
+                    adjusted_min_yield = filter_params['min_yield'] + kbd_yield_adjustment
+                    filter_params['min_yield'] = max(3.0, adjusted_min_yield)  # Не менее 3%
+                    
+                    # Пропорционально корректируем максимальную доходность
+                    if 'max_yield' in filter_params:
+                        yield_range = filter_params['max_yield'] - filter_params['min_yield']
+                        filter_params['max_yield'] = filter_params['min_yield'] + yield_range * strategy_settings['yield_range_factor']
+                
+                # Корректируем дюрацию с учетом гибкости и профиля стратегии
+                if 'min_duration' in filter_params and 'max_duration' in filter_params:
+                    mid_duration = (filter_params['min_duration'] + filter_params['max_duration']) / 2
+                    duration_range = filter_params['max_duration'] - filter_params['min_duration']
+                    
+                    # Увеличиваем диапазон дюрации для большей гибкости
+                    filter_params['min_duration'] = max(0.1, mid_duration - (duration_range * kbd_duration_flexibility / 2))
+                    filter_params['max_duration'] = mid_duration + (duration_range * kbd_duration_flexibility / 2)
+                    
+                    # Дополнительно корректируем в зависимости от профиля стратегии
+                    filter_params['min_duration'] *= strategy_settings['duration_min_factor']
+                    filter_params['max_duration'] *= strategy_settings['duration_max_factor']
+                
+                kbd_results = {
+                    'kbd_metrics': kbd_analyzer.get_latest_kbd_metrics(),
+                    'kbd_chart_path': kbd_chart_path,
+                    'recommendations': comprehensive_recommendations,
+                    'adjusted_recommendations': filter_params.copy(),  # Копия для отслеживания изменений
+                    'weighting_recommendation': {
+                        'strategy': recommended_weighting,
+                        'reason': weighting_reason,
+                        'description': comprehensive_recommendations.get('strategy_description', '')
+                    }
+                }
+                
+                # Сохраняем результаты анализа КБД в директорию analysis
+                analysis_path = os.path.join(analysis_dir, f'kbd_analysis_{run_id}.json')
+                with open(analysis_path, 'w', encoding='utf-8') as f:
+                    import json
+                    json.dump(
+                        {
+                            'kbd_metrics': {k: str(v) if isinstance(v, (pd.Timestamp, datetime)) else v 
+                                           for k, v in kbd_results['kbd_metrics'].items()},
+                            'recommendations': kbd_results['recommendations'],
+                            'adjusted_recommendations': kbd_results['adjusted_recommendations'],
+                            'weighting_recommendation': kbd_results['weighting_recommendation']
+                        }, 
+                        f, 
+                        indent=2
+                    )
+                logger.info(f"Результаты анализа КБД сохранены в {analysis_path}")
+                
+                logger.info(f"КБД анализ выполнен успешно. Рекомендуемая стратегия взвешивания: {recommended_weighting} ({weighting_reason})")
+                print(f"КБД визуализация сохранена в: {kbd_chart_path}")
+                print(f"Рекомендуемая стратегия взвешивания: {recommended_weighting} - {comprehensive_recommendations.get('strategy_description', '')}")
+            else:
+                logger.warning("Данные КБД недоступны")
+                filter_params = _get_default_filter_params(strategy_profile)
+                print("Внимание: Данные КБД недоступны, используются стандартные параметры")
+                
         except Exception as e:
             logger.error(f"Ошибка при анализе КБД: {e}")
             logger.error(traceback.format_exc())
             filter_params = _get_default_filter_params(strategy_profile)
             print("Внимание: Ошибка при анализе КБД, используются стандартные параметры")
     else:
-        # Если нет данных КБД или не требуется их использование
+        # Если не требуется использование КБД
         filter_params = _get_default_filter_params(strategy_profile)
         logger.info("КБД анализ пропущен, используются стандартные параметры")
         print("Внимание: Используются стандартные параметры фильтрации")
@@ -258,7 +257,7 @@ def run_bond_selection_with_kbd(
     current_params = filter_params.copy()
     
     for iteration in range(max_adjustment_iterations):
-        # Шаг 2: Запуск выбора облигаций с текущими параметрами
+        # Шаг 3: Запуск выбора облигаций с текущими параметрами
         bond_results = run_pipeline_bonds_processor(
             base_path=base_path,
             dataset_path=dataset_path,
@@ -315,7 +314,7 @@ def run_bond_selection_with_kbd(
     if kbd_results:
         kbd_results['final_recommendations'] = final_params
     
-    # Сохраняем результаты в директорию results (НОВОЕ)
+    # Сохраняем результаты в директорию results
     results_summary = {
         'run_id': run_id,
         'run_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
@@ -333,14 +332,14 @@ def run_bond_selection_with_kbd(
         json.dump(results_summary, f, indent=2)
     logger.info(f"Сводка результатов сохранена в {results_path}")
     
-    # Шаг 3: Создание отчета с объединенными результатами
+    # Шаг 4: Создание отчета с объединенными результатами
     if bond_results.get('success', False):
         report_path = create_combined_report(bond_results, kbd_results, reports_dir, run_id)
         # Добавляем путь к отчету в результаты
         if report_path:
             bond_results['report_path'] = report_path
     
-    # Шаг 4: Возвращаем объединенные результаты (в соответствии с output_format)
+    # Шаг 5: Возвращаем объединенные результаты (в соответствии с output_format)
     
     # Базовые результаты всегда включены
     results = {

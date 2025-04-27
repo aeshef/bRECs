@@ -1151,3 +1151,361 @@
 2025-04-26 19:45:58 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194455_standard_with_shorts/shorts_portfolio/production_portfolio/portfolio/portfolio/markowitz/enhanced_efficient_frontier.png
 2025-04-26 19:45:58 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы успешно создан
 2025-04-26 19:45:58 - PortfolioOptimizer - INFO - Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194455_standard_with_shorts/shorts_portfolio/production_portfolio/portfolio/portfolio/markowitz
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Инициализирован оптимизатор портфеля с моделью MARKOWITZ
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Запуск пайплайна оптимизации портфеля
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Максимальный вес одной бумаги: 0.15
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Используется модель оптимизации: MARKOWITZ
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Загружено 7110 строк данных
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Подготовка данных доходностей для оптимизации
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Отфильтровано 6695 строк по shortlist и сигналам
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Запуск оптимизации портфеля для 16 активов с моделью MARKOWITZ
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Оптимизация успешно завершена
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Расчет итогового портфеля с долей безрисковых активов 40.0%
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Загрузка портфеля облигаций из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/bond_portfolio.csv
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Загружен портфель из 4 облигаций
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Ожидаемая доходность портфеля: 3.38%, волатильность: 12.09%, Шарп: -0.55
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Создание визуализации портфеля
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - График весов сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/markowitz/portfolio_weights_pie.png
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - График весов облигаций сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/markowitz/bond_weights_pie.png
+2025-04-27 16:12:44 - PortfolioOptimizer - INFO - Генерация 5000 случайных портфелей для построения эффективной границы
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Создание улучшенного графика эффективной границы
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/markowitz/enhanced_efficient_frontier.png
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы успешно создан
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Детали облигаций сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/markowitz/bond_details.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/markowitz
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Инициализирован оптимизатор портфеля с моделью BLACK_LITTERMAN
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Запуск пайплайна оптимизации портфеля
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Максимальный вес одной бумаги: 0.15
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Используется модель оптимизации: BLACK_LITTERMAN
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Загружено 7110 строк данных
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Подготовка данных доходностей для оптимизации
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Отфильтровано 6695 строк по shortlist и сигналам
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Загрузка данных о рыночной капитализации
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/market_cap/cap.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/market_cap/cap.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/market_cap/cap.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/market_cap/cap.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/market_cap/cap.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/market_cap/cap.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/market_cap/cap.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/market_cap/cap.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/market_cap/cap.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/market_cap/cap.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/market_cap/cap.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/market_cap/cap.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/market_cap/cap.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/market_cap/cap.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/market_cap/cap.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/market_cap/cap.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - WARNING - Не удалось загрузить реальные данные о капитализации, создаем синтетические
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Рассчитаны рыночные веса на основе капитализации для 16 активов
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Расчет равновесных доходностей на основе CAPM
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Рассчитаны равновесные доходности для 16 активов
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Подготовка прогнозов на основе сигналов
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Включение субъективных прогнозов в модель
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Рассчитаны апостериорные доходности с учетом 16 прогнозов
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Запуск оптимизации портфеля для 16 активов с моделью BLACK_LITTERMAN
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Применение модели Блэка-Литермана
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Оптимизация успешно завершена
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Расчет итогового портфеля с долей безрисковых активов 40.0%
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Загрузка портфеля облигаций из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/bond_portfolio.csv
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Загружен портфель из 4 облигаций
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Ожидаемая доходность портфеля: 9.99%, волатильность: 14.49%, Шарп: -0.00
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - Создание визуализации портфеля
+2025-04-27 16:12:46 - PortfolioOptimizer - INFO - График весов сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman/portfolio_weights_pie.png
+2025-04-27 16:12:47 - PortfolioOptimizer - INFO - График весов облигаций сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman/bond_weights_pie.png
+2025-04-27 16:12:47 - PortfolioOptimizer - INFO - Генерация 5000 случайных портфелей для построения эффективной границы
+2025-04-27 16:12:48 - PortfolioOptimizer - INFO - Создание улучшенного графика эффективной границы
+2025-04-27 16:12:48 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman/enhanced_efficient_frontier.png
+2025-04-27 16:12:48 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы успешно создан
+2025-04-27 16:12:48 - PortfolioOptimizer - INFO - Детали облигаций сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman/bond_details.csv
+2025-04-27 16:12:48 - PortfolioOptimizer - INFO - Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman
+2025-04-27 16:12:48 - PortfolioOptimizer - INFO - Параметры модели Блэка-Литермана сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman/bl_parameters.json
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Инициализирован оптимизатор портфеля с моделью MARKOWITZ
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Загружено 7110 строк данных
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Подготовка данных доходностей для оптимизации с учетом шортов
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Отфильтровано 7110 строк по shortlist
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Тикер AFKS добавлен с ДЛИННОЙ позицией
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Тикер ALRS добавлен с ДЛИННОЙ позицией
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Тикер GAZP добавлен с ДЛИННОЙ позицией
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Тикер GMKN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Тикер LKOH добавлен с ДЛИННОЙ позицией
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Тикер MAGN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Тикер MTSS добавлен с ДЛИННОЙ позицией
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Тикер MVID добавлен с ДЛИННОЙ позицией
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Тикер NVTK добавлен с ДЛИННОЙ позицией
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Тикер PHOR добавлен с ДЛИННОЙ позицией
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Тикер ROSN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Тикер RUAL добавлен с ДЛИННОЙ позицией
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Тикер SBER добавлен с ДЛИННОЙ позицией
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Тикер SIBN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Тикер SNGS добавлен с ДЛИННОЙ позицией
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Тикер TATN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Запуск оптимизации портфеля для 16 активов с моделью MARKOWITZ
+2025-04-27 16:12:49 - PortfolioOptimizer - INFO - Оптимизация успешно завершена
+2025-04-27 16:41:20 - PortfolioOptimizer - INFO - Инициализирован оптимизатор портфеля с моделью MARKOWITZ
+2025-04-27 16:41:20 - PortfolioOptimizer - INFO - Запуск пайплайна оптимизации портфеля
+2025-04-27 16:41:20 - PortfolioOptimizer - INFO - Максимальный вес одной бумаги: 0.15
+2025-04-27 16:41:20 - PortfolioOptimizer - INFO - Используется модель оптимизации: MARKOWITZ
+2025-04-27 16:41:20 - PortfolioOptimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-27 16:41:20 - PortfolioOptimizer - INFO - Загружено 7110 строк данных
+2025-04-27 16:41:20 - PortfolioOptimizer - INFO - Подготовка данных доходностей для оптимизации
+2025-04-27 16:41:20 - PortfolioOptimizer - INFO - Отфильтровано 6695 строк по shortlist и сигналам
+2025-04-27 16:41:20 - PortfolioOptimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 16:41:20 - PortfolioOptimizer - INFO - Запуск оптимизации портфеля для 16 активов с моделью MARKOWITZ
+2025-04-27 16:41:21 - PortfolioOptimizer - INFO - Оптимизация успешно завершена
+2025-04-27 16:41:21 - PortfolioOptimizer - INFO - Расчет итогового портфеля с долей безрисковых активов 40.0%
+2025-04-27 16:41:21 - PortfolioOptimizer - INFO - Загрузка портфеля облигаций из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/bond_portfolio.csv
+2025-04-27 16:41:21 - PortfolioOptimizer - INFO - Загружен портфель из 4 облигаций
+2025-04-27 16:41:21 - PortfolioOptimizer - INFO - Ожидаемая доходность портфеля: 3.38%, волатильность: 12.09%, Шарп: -0.55
+2025-04-27 16:41:21 - PortfolioOptimizer - INFO - Создание визуализации портфеля
+2025-04-27 16:41:21 - PortfolioOptimizer - INFO - График весов сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/markowitz/portfolio_weights_pie_markowitz.png
+2025-04-27 16:41:21 - PortfolioOptimizer - INFO - График весов облигаций сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/markowitz/bond_weights_pie_markowitz.png
+2025-04-27 16:41:21 - PortfolioOptimizer - INFO - Генерация 5000 случайных портфелей для построения эффективной границы
+2025-04-27 16:41:22 - PortfolioOptimizer - INFO - Создание улучшенного графика эффективной границы
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/markowitz/enhanced_efficient_frontier.png
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы успешно создан
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Детали облигаций сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/markowitz/bond_details.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/markowitz
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Инициализирован оптимизатор портфеля с моделью BLACK_LITTERMAN
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Запуск пайплайна оптимизации портфеля
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Максимальный вес одной бумаги: 0.15
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Используется модель оптимизации: BLACK_LITTERMAN
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Загружено 7110 строк данных
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Подготовка данных доходностей для оптимизации
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Отфильтровано 6695 строк по shortlist и сигналам
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Загрузка данных о рыночной капитализации
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/market_cap/cap.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/market_cap/cap.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/market_cap/cap.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/market_cap/cap.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/market_cap/cap.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/market_cap/cap.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/market_cap/cap.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/market_cap/cap.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/market_cap/cap.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/market_cap/cap.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/market_cap/cap.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/market_cap/cap.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/market_cap/cap.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/market_cap/cap.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/market_cap/cap.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/market_cap/cap.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - WARNING - Не удалось загрузить реальные данные о капитализации, создаем синтетические
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Рассчитаны рыночные веса на основе капитализации для 16 активов
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Расчет равновесных доходностей на основе CAPM
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Рассчитаны равновесные доходности для 16 активов
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Подготовка прогнозов на основе сигналов
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Включение субъективных прогнозов в модель
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Рассчитаны апостериорные доходности с учетом 16 прогнозов
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Запуск оптимизации портфеля для 16 активов с моделью BLACK_LITTERMAN
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Применение модели Блэка-Литермана
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Оптимизация успешно завершена
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Расчет итогового портфеля с долей безрисковых активов 40.0%
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Загрузка портфеля облигаций из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/bond_portfolio.csv
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Загружен портфель из 4 облигаций
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Ожидаемая доходность портфеля: 9.99%, волатильность: 14.49%, Шарп: -0.00
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Создание визуализации портфеля
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - График весов сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman/portfolio_weights_pie_black_litterman.png
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - График весов облигаций сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman/bond_weights_pie_black_litterman.png
+2025-04-27 16:41:23 - PortfolioOptimizer - INFO - Генерация 5000 случайных портфелей для построения эффективной границы
+2025-04-27 16:41:24 - PortfolioOptimizer - INFO - Создание улучшенного графика эффективной границы
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman/enhanced_efficient_frontier.png
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы успешно создан
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Детали облигаций сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman/bond_details.csv
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Параметры модели Блэка-Литермана сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman/bl_parameters.json
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Инициализирован оптимизатор портфеля с моделью MARKOWITZ
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Загружено 7110 строк данных
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Подготовка данных доходностей для оптимизации с учетом шортов
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Отфильтровано 7110 строк по shortlist
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Тикер AFKS добавлен с ДЛИННОЙ позицией
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Тикер ALRS добавлен с ДЛИННОЙ позицией
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Тикер GAZP добавлен с ДЛИННОЙ позицией
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Тикер GMKN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Тикер LKOH добавлен с ДЛИННОЙ позицией
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Тикер MAGN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Тикер MTSS добавлен с ДЛИННОЙ позицией
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Тикер MVID добавлен с ДЛИННОЙ позицией
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Тикер NVTK добавлен с ДЛИННОЙ позицией
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Тикер PHOR добавлен с ДЛИННОЙ позицией
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Тикер ROSN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Тикер RUAL добавлен с ДЛИННОЙ позицией
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Тикер SBER добавлен с ДЛИННОЙ позицией
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Тикер SIBN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Тикер SNGS добавлен с ДЛИННОЙ позицией
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Тикер TATN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Запуск оптимизации портфеля для 16 активов с моделью MARKOWITZ
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Оптимизация успешно завершена
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Расчет итогового портфеля с долей безрисковых активов 40.0%
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Загрузка портфеля облигаций из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/bond_portfolio.csv
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Загружен портфель из 4 облигаций
+2025-04-27 16:41:25 - PortfolioOptimizer - INFO - Ожидаемая доходность портфеля: 7.69%, волатильность: 15.41%, Шарп: -0.15
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Инициализирован оптимизатор портфеля с моделью MARKOWITZ
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Запуск пайплайна оптимизации портфеля
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Максимальный вес одной бумаги: 0.15
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Используется модель оптимизации: MARKOWITZ
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Загружено 7110 строк данных
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Подготовка данных доходностей для оптимизации
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Отфильтровано 6695 строк по shortlist и сигналам
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Запуск оптимизации портфеля для 16 активов с моделью MARKOWITZ
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Оптимизация успешно завершена
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Расчет итогового портфеля с долей безрисковых активов 40.0%
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Загрузка портфеля облигаций из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/bond_portfolio.csv
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Загружен портфель из 4 облигаций
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Ожидаемая доходность портфеля: 3.38%, волатильность: 12.09%, Шарп: -0.55
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Создание визуализации портфеля
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - График весов сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/markowitz/portfolio_weights_pie_markowitz.png
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - График весов облигаций сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/markowitz/bond_weights_pie_markowitz.png
+2025-04-27 16:51:02 - PortfolioOptimizer - INFO - Генерация 5000 случайных портфелей для построения эффективной границы
+2025-04-27 16:51:03 - PortfolioOptimizer - INFO - Создание улучшенного графика эффективной границы
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/markowitz/enhanced_efficient_frontier.png
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы успешно создан
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Детали облигаций сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/markowitz/bond_details.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/markowitz
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Инициализирован оптимизатор портфеля с моделью BLACK_LITTERMAN
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Запуск пайплайна оптимизации портфеля
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Максимальный вес одной бумаги: 0.15
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Используется модель оптимизации: BLACK_LITTERMAN
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Загружено 7110 строк данных
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Подготовка данных доходностей для оптимизации
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Отфильтровано 6695 строк по shortlist и сигналам
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Загрузка данных о рыночной капитализации
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/market_cap/cap.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/market_cap/cap.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/market_cap/cap.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/market_cap/cap.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/market_cap/cap.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/market_cap/cap.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/market_cap/cap.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/market_cap/cap.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/market_cap/cap.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/market_cap/cap.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/market_cap/cap.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/market_cap/cap.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/market_cap/cap.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/market_cap/cap.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/market_cap/cap.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Некорректный формат файла /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/market_cap/cap.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - WARNING - Не удалось загрузить реальные данные о капитализации, создаем синтетические
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Рассчитаны рыночные веса на основе капитализации для 16 активов
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Расчет равновесных доходностей на основе CAPM
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Рассчитаны равновесные доходности для 16 активов
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Подготовка прогнозов на основе сигналов
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Включение субъективных прогнозов в модель
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Рассчитаны апостериорные доходности с учетом 16 прогнозов
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Запуск оптимизации портфеля для 16 активов с моделью BLACK_LITTERMAN
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Применение модели Блэка-Литермана
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Оптимизация успешно завершена
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Расчет итогового портфеля с долей безрисковых активов 40.0%
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Загрузка портфеля облигаций из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/bond_portfolio.csv
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Загружен портфель из 4 облигаций
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Ожидаемая доходность портфеля: 9.99%, волатильность: 14.49%, Шарп: -0.00
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Создание визуализации портфеля
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - График весов сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman/portfolio_weights_pie_black_litterman.png
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - График весов облигаций сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman/bond_weights_pie_black_litterman.png
+2025-04-27 16:51:04 - PortfolioOptimizer - INFO - Генерация 5000 случайных портфелей для построения эффективной границы
+2025-04-27 16:51:06 - PortfolioOptimizer - INFO - Создание улучшенного графика эффективной границы
+2025-04-27 16:51:06 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы сохранен в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman/enhanced_efficient_frontier.png
+2025-04-27 16:51:06 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы успешно создан
+2025-04-27 16:51:06 - PortfolioOptimizer - INFO - Детали облигаций сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman/bond_details.csv
+2025-04-27 16:51:06 - PortfolioOptimizer - INFO - Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman
+2025-04-27 16:51:06 - PortfolioOptimizer - INFO - Параметры модели Блэка-Литермана сохранены в /Users/aeshef/Documents/GitHub/kursach/data/portfolio/black_litterman/bl_parameters.json
+2025-04-27 16:51:20 - PortfolioOptimizer - INFO - Инициализирован оптимизатор портфеля с моделью MARKOWITZ
+2025-04-27 16:51:20 - PortfolioOptimizer - INFO - Запуск пайплайна оптимизации портфеля
+2025-04-27 16:51:20 - PortfolioOptimizer - INFO - Максимальный вес одной бумаги: 0.2
+2025-04-27 16:51:20 - PortfolioOptimizer - INFO - Используется модель оптимизации: MARKOWITZ
+2025-04-27 16:51:20 - PortfolioOptimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-27 16:51:20 - PortfolioOptimizer - INFO - Загружено 7110 строк данных
+2025-04-27 16:51:20 - PortfolioOptimizer - INFO - Подготовка данных доходностей для оптимизации
+2025-04-27 16:51:20 - PortfolioOptimizer - INFO - Отфильтровано 6695 строк по shortlist и сигналам
+2025-04-27 16:51:20 - PortfolioOptimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 16:51:20 - PortfolioOptimizer - INFO - Запуск оптимизации портфеля для 16 активов с моделью MARKOWITZ
+2025-04-27 16:51:20 - PortfolioOptimizer - INFO - Оптимизация успешно завершена
+2025-04-27 16:51:20 - PortfolioOptimizer - INFO - Расчет итогового портфеля с долей безрисковых активов 30.0%
+2025-04-27 16:51:20 - PortfolioOptimizer - INFO - Ожидаемая доходность портфеля: 3.85%, волатильность: 14.32%, Шарп: -0.43
+2025-04-27 16:51:20 - PortfolioOptimizer - INFO - Создание визуализации портфеля
+2025-04-27 16:51:20 - PortfolioOptimizer - INFO - График весов сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_portfolio/portfolio/markowitz/portfolio_weights_pie_markowitz.png
+2025-04-27 16:51:20 - PortfolioOptimizer - INFO - Генерация 5000 случайных портфелей для построения эффективной границы
+2025-04-27 16:51:22 - PortfolioOptimizer - INFO - Создание улучшенного графика эффективной границы
+2025-04-27 16:51:22 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_portfolio/portfolio/markowitz/enhanced_efficient_frontier.png
+2025-04-27 16:51:22 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы успешно создан
+2025-04-27 16:51:22 - PortfolioOptimizer - INFO - Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/honest_backtest/train_portfolio/portfolio/markowitz
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Инициализирован оптимизатор портфеля с моделью MARKOWITZ
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Запуск пайплайна оптимизации портфеля
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Максимальный вес одной бумаги: 0.2
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Используется модель оптимизации: MARKOWITZ
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Загружено 7110 строк данных
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Подготовка данных доходностей для оптимизации с учетом шортов
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Отфильтровано 7110 строк по shortlist
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Тикер AFKS добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Тикер ALRS добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Тикер GAZP добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Тикер GMKN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Тикер LKOH добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Тикер MAGN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Тикер MTSS добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Тикер MVID добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Тикер NVTK добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Тикер PHOR добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Тикер ROSN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Тикер RUAL добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Тикер SBER добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Тикер SIBN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Тикер SNGS добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Тикер TATN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Запуск оптимизации портфеля для 16 активов с моделью MARKOWITZ
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Оптимизация успешно завершена
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Расчет итогового портфеля с долей безрисковых активов 30.0%
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Ожидаемая доходность портфеля: 4.69%, волатильность: 15.16%, Шарп: -0.35
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Создание визуализации портфеля
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - График весов сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/portfolio/portfolio/markowitz/portfolio_weights_pie_markowitz.png
+2025-04-27 16:51:48 - PortfolioOptimizer - INFO - Генерация 5000 случайных портфелей для построения эффективной границы
+2025-04-27 16:51:50 - PortfolioOptimizer - INFO - Создание улучшенного графика эффективной границы
+2025-04-27 16:51:50 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/portfolio/portfolio/markowitz/enhanced_efficient_frontier.png
+2025-04-27 16:51:50 - PortfolioOptimizer - INFO - Улучшенный график эффективной границы успешно создан
+2025-04-27 16:51:50 - PortfolioOptimizer - INFO - Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_portfolio/portfolio/portfolio/markowitz
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Инициализирован оптимизатор портфеля с моделью MARKOWITZ
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Загрузка данных из /Users/aeshef/Documents/GitHub/kursach/data/signals.csv
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Загружено 7110 строк данных
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Подготовка данных доходностей для оптимизации с учетом шортов
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Отфильтровано 7110 строк по shortlist
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Тикер AFKS добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Тикер ALRS добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Тикер GAZP добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Тикер GMKN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Тикер LKOH добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Тикер MAGN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Тикер MTSS добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Тикер MVID добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Тикер NVTK добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Тикер PHOR добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Тикер ROSN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Тикер RUAL добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Тикер SBER добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Тикер SIBN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Тикер SNGS добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Тикер TATN добавлен с ДЛИННОЙ позицией
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Рассчитаны доходности для 16 тикеров
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Запуск оптимизации портфеля для 16 активов с моделью MARKOWITZ
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Оптимизация успешно завершена
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Расчет итогового портфеля с долей безрисковых активов 40.0%
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Загрузка портфеля облигаций из /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/bond_portfolio.csv
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Загружен портфель из 4 облигаций
+2025-04-27 16:51:51 - PortfolioOptimizer - INFO - Ожидаемая доходность портфеля: 7.69%, волатильность: 15.41%, Шарп: -0.15

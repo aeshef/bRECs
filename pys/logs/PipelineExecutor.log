@@ -220,3 +220,120 @@ FileNotFoundError: [Errno 2] No such file or directory: '/Users/aeshef/Documents
 2025-04-26 19:45:58 - PipelineExecutor - INFO - Создание итогового отчета о запуске
 2025-04-26 19:45:58 - PipelineExecutor - INFO - Итоговый отчет создан: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194455_standard_with_shorts/pipeline_summary.md
 2025-04-26 19:45:58 - PipelineExecutor - INFO - Выполнение пайплайна завершено. Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250426_194455_standard_with_shorts
+2025-04-27 15:51:46 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250427_155146_bond_enhanced_pipeline
+2025-04-27 15:54:26 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250427_155426_bond_enhanced_pipeline
+2025-04-27 15:54:51 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250427_155451_bond_enhanced_pipeline
+2025-04-27 15:54:51 - PipelineExecutor - INFO - Запуск полного цикла обработки облигаций
+2025-04-27 15:54:51 - PipelineExecutor - INFO - Обработка облигаций: оптимальный порог 99%
+2025-04-27 15:54:53 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_155451_bond_enhanced_pipeline/bond_portfolio.csv
+2025-04-27 15:55:22 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250427_155522_bond_enhanced_pipeline
+2025-04-27 15:55:22 - PipelineExecutor - INFO - Запуск полного цикла обработки облигаций
+2025-04-27 15:55:22 - PipelineExecutor - INFO - Обработка облигаций: оптимальный порог 99%
+2025-04-27 15:55:24 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_155522_bond_enhanced_pipeline/bond_portfolio.csv
+2025-04-27 16:08:47 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250427_160847_balanced_portfolio_0427_1608
+2025-04-27 16:09:05 - PipelineExecutor - INFO - Запуск полного цикла обработки облигаций
+2025-04-27 16:09:05 - PipelineExecutor - INFO - Обработка облигаций: оптимальный порог 99%
+2025-04-27 16:09:07 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_160847_balanced_portfolio_0427_1608/bond_portfolio.csv
+2025-04-27 16:09:18 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250427_160918_balanced_portfolio_0427_1609
+2025-04-27 16:09:19 - PipelineExecutor - INFO - Запуск полного цикла обработки облигаций
+2025-04-27 16:09:19 - PipelineExecutor - INFO - Обработка облигаций: оптимальный порог 99%
+2025-04-27 16:09:21 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_160918_balanced_portfolio_0427_1609/bond_portfolio.csv
+2025-04-27 16:11:00 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250427_161100_balanced_portfolio_0427_1611
+2025-04-27 16:11:03 - PipelineExecutor - INFO - Запуск полного цикла обработки облигаций
+2025-04-27 16:11:03 - PipelineExecutor - INFO - Обработка облигаций: оптимальный порог 99%
+2025-04-27 16:11:04 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161100_balanced_portfolio_0427_1611/bond_portfolio.csv
+2025-04-27 16:11:38 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250427_161138_balanced_portfolio_0427_1611
+2025-04-27 16:11:40 - PipelineExecutor - INFO - Запуск полного цикла обработки облигаций
+2025-04-27 16:11:40 - PipelineExecutor - INFO - Создана структура директорий для облигаций в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161138_balanced_portfolio_0427_1611/bonds
+2025-04-27 16:11:40 - PipelineExecutor - INFO - Датасет облигаций скопирован в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161138_balanced_portfolio_0427_1611/bonds/bonds_dataset.csv
+2025-04-27 16:11:40 - PipelineExecutor - INFO - Обработка облигаций: оптимальный порог 99%
+2025-04-27 16:11:42 - PipelineExecutor - INFO - Портфель облигаций дополнительно скопирован в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161138_balanced_portfolio_0427_1611/bond_portfolio.csv
+2025-04-27 16:12:25 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250427_161225_balanced_portfolio_0427_1612
+2025-04-27 16:12:25 - PipelineExecutor - INFO - Запуск полного цикла обработки облигаций
+2025-04-27 16:12:25 - PipelineExecutor - INFO - Создана структура директорий для облигаций в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/bonds
+2025-04-27 16:12:25 - PipelineExecutor - INFO - Датасет облигаций скопирован в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/bonds/bonds_dataset.csv
+2025-04-27 16:12:25 - PipelineExecutor - INFO - Обработка облигаций: оптимальный порог 99%
+2025-04-27 16:12:27 - PipelineExecutor - INFO - Портфель облигаций дополнительно скопирован в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/bond_portfolio.csv
+2025-04-27 16:12:30 - PipelineExecutor - INFO - Запуск полного пайплайна с ID: run_20250427_161225_balanced_portfolio_0427_1612, профиль: moderate
+2025-04-27 16:12:30 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/bond_portfolio.csv
+2025-04-27 16:12:30 - PipelineExecutor - INFO - Запуск генерации сигналов с параметрами: {'weight_tech': 0.5, 'weight_sentiment': 0.3, 'weight_fundamental': 0.2}
+2025-04-27 16:12:44 - PipelineExecutor - INFO - Скопированы сигналы: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/signals/signals.csv
+2025-04-27 16:12:44 - PipelineExecutor - INFO - Запуск оптимизации стандартного портфеля с параметрами: {'risk_free_rate': 0.1, 'min_rf_allocation': 0.3, 'max_rf_allocation': 0.5, 'max_weight': 0.15, 'include_short_selling': False}
+2025-04-27 16:12:49 - PipelineExecutor - INFO - Стандартный портфель успешно оптимизирован и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/portfolio
+2025-04-27 16:12:49 - PipelineExecutor - INFO - Запуск создания портфеля с короткими позициями с параметрами: {'risk_free_rate': 0.1, 'train_period': ('2024-01-01', '2024-12-31'), 'test_period': ('2025-01-01', '2025-06-30'), 'include_short_selling': True}
+2025-04-27 16:12:49 - PipelineExecutor - ERROR - Ошибка при создании портфеля с короткими позициями: argument of type 'NoneType' is not iterable
+2025-04-27 16:12:49 - PipelineExecutor - ERROR - Traceback (most recent call last):
+  File "/Users/aeshef/Documents/GitHub/kursach/pys/porfolio_optimization/executor.py", line 501, in create_short_portfolio
+    if 'production_portfolio' in portfolio_results and 'weights' in portfolio_results['production_portfolio']:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: argument of type 'NoneType' is not iterable
+
+2025-04-27 16:12:49 - PipelineExecutor - INFO - Запуск создания комбинированного портфеля с параметрами: {'risk_free_rate': 0.1, 'min_rf_allocation': 0.3, 'max_rf_allocation': 0.5, 'max_weight': 0.15, 'long_ratio': 0.7, 'include_short_selling': True}
+2025-04-27 16:12:49 - PipelineExecutor - ERROR - Ошибка при создании комбинированного портфеля: 'NoneType' object is not subscriptable
+2025-04-27 16:12:49 - PipelineExecutor - ERROR - Traceback (most recent call last):
+  File "/Users/aeshef/Documents/GitHub/kursach/pys/porfolio_optimization/executor.py", line 648, in create_combined_portfolio
+    long_weight = long_ratio * (1 - optimizer.portfolio_performance['rf_allocation'])
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+2025-04-27 16:12:49 - PipelineExecutor - INFO - Умеренная стратегия: выбран портфель 'standard' с лучшим Шарпом -0.55
+2025-04-27 16:12:49 - PipelineExecutor - INFO - Лучший портфель (standard) скопирован в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/final_portfolio
+2025-04-27 16:12:49 - PipelineExecutor - INFO - Создание итогового отчета о запуске
+2025-04-27 16:12:49 - PipelineExecutor - INFO - Итоговый отчет создан: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612/pipeline_summary.md
+2025-04-27 16:12:49 - PipelineExecutor - INFO - Выполнение пайплайна завершено. Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_161225_balanced_portfolio_0427_1612
+2025-04-27 16:41:04 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250427_164104_balanced_portfolio_0427_1641
+2025-04-27 16:41:05 - PipelineExecutor - INFO - Запуск полного цикла обработки облигаций
+2025-04-27 16:41:05 - PipelineExecutor - INFO - Создана структура директорий для облигаций в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/bonds
+2025-04-27 16:41:05 - PipelineExecutor - INFO - Датасет облигаций скопирован в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/bonds/bonds_dataset.csv
+2025-04-27 16:41:05 - PipelineExecutor - INFO - Обработка облигаций: оптимальный порог 99%
+2025-04-27 16:41:06 - PipelineExecutor - INFO - Портфель облигаций дополнительно скопирован в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/bond_portfolio.csv
+2025-04-27 16:41:06 - PipelineExecutor - INFO - Запуск полного пайплайна с ID: run_20250427_164104_balanced_portfolio_0427_1641, профиль: moderate
+2025-04-27 16:41:06 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/bond_portfolio.csv
+2025-04-27 16:41:06 - PipelineExecutor - INFO - Запуск генерации сигналов с параметрами: {'weight_tech': 0.5, 'weight_sentiment': 0.3, 'weight_fundamental': 0.2}
+2025-04-27 16:41:20 - PipelineExecutor - INFO - Скопированы сигналы: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/signals/signals.csv
+2025-04-27 16:41:20 - PipelineExecutor - INFO - Запуск оптимизации стандартного портфеля с параметрами: {'risk_free_rate': 0.1, 'min_rf_allocation': 0.3, 'max_rf_allocation': 0.5, 'max_weight': 0.15, 'include_short_selling': False}
+2025-04-27 16:41:25 - PipelineExecutor - INFO - Стандартный портфель успешно оптимизирован и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/portfolio
+2025-04-27 16:41:25 - PipelineExecutor - INFO - Запуск создания портфеля с короткими позициями с параметрами: {'risk_free_rate': 0.1, 'train_period': ('2024-01-01', '2024-12-31'), 'test_period': ('2025-01-01', '2025-06-30'), 'include_short_selling': True}
+2025-04-27 16:41:25 - PipelineExecutor - ERROR - Ошибка при создании портфеля с короткими позициями: argument of type 'NoneType' is not iterable
+2025-04-27 16:41:25 - PipelineExecutor - ERROR - Traceback (most recent call last):
+  File "/Users/aeshef/Documents/GitHub/kursach/pys/porfolio_optimization/executor.py", line 501, in create_short_portfolio
+    if 'production_portfolio' in portfolio_results and 'weights' in portfolio_results['production_portfolio']:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: argument of type 'NoneType' is not iterable
+
+2025-04-27 16:41:25 - PipelineExecutor - INFO - Запуск создания комбинированного портфеля с параметрами: {'risk_free_rate': 0.1, 'min_rf_allocation': 0.3, 'max_rf_allocation': 0.5, 'max_weight': 0.15, 'long_ratio': 0.7, 'include_short_selling': True}
+2025-04-27 16:41:25 - PipelineExecutor - INFO - Комбинированный портфель успешно создан и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/combined_portfolio
+2025-04-27 16:41:25 - PipelineExecutor - INFO - Умеренная стратегия: выбран портфель 'combined' с лучшим Шарпом -0.40
+2025-04-27 16:41:25 - PipelineExecutor - INFO - Лучший портфель (combined) скопирован в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/final_portfolio
+2025-04-27 16:41:25 - PipelineExecutor - INFO - Создание итогового отчета о запуске
+2025-04-27 16:41:25 - PipelineExecutor - INFO - Итоговый отчет создан: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641/pipeline_summary.md
+2025-04-27 16:41:25 - PipelineExecutor - INFO - Выполнение пайплайна завершено. Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_164104_balanced_portfolio_0427_1641
+2025-04-27 16:50:46 - PipelineExecutor - INFO - Создана структура директорий для запуска run_20250427_165046_balanced_portfolio_0427_1650
+2025-04-27 16:50:46 - PipelineExecutor - INFO - Запуск полного цикла обработки облигаций
+2025-04-27 16:50:46 - PipelineExecutor - INFO - Создана структура директорий для облигаций в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/bonds
+2025-04-27 16:50:46 - PipelineExecutor - INFO - Датасет облигаций скопирован в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/bonds/bonds_dataset.csv
+2025-04-27 16:50:46 - PipelineExecutor - INFO - Обработка облигаций: оптимальный порог 99%
+2025-04-27 16:50:48 - PipelineExecutor - INFO - Портфель облигаций дополнительно скопирован в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/bond_portfolio.csv
+2025-04-27 16:50:48 - PipelineExecutor - INFO - Запуск полного пайплайна с ID: run_20250427_165046_balanced_portfolio_0427_1650, профиль: moderate
+2025-04-27 16:50:48 - PipelineExecutor - INFO - Скопирован портфель облигаций: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/bond_portfolio.csv
+2025-04-27 16:50:48 - PipelineExecutor - INFO - Запуск генерации сигналов с параметрами: {'weight_tech': 0.5, 'weight_sentiment': 0.3, 'weight_fundamental': 0.2}
+2025-04-27 16:51:02 - PipelineExecutor - INFO - Скопированы сигналы: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/signals/signals.csv
+2025-04-27 16:51:02 - PipelineExecutor - INFO - Запуск оптимизации стандартного портфеля с параметрами: {'risk_free_rate': 0.1, 'min_rf_allocation': 0.3, 'max_rf_allocation': 0.5, 'max_weight': 0.15, 'include_short_selling': False}
+2025-04-27 16:51:06 - PipelineExecutor - INFO - Стандартный портфель успешно оптимизирован и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/portfolio
+2025-04-27 16:51:06 - PipelineExecutor - INFO - Запуск создания портфеля с короткими позициями с параметрами: {'risk_free_rate': 0.1, 'train_period': ('2024-01-01', '2024-12-31'), 'test_period': ('2025-01-01', '2025-06-30'), 'include_short_selling': True}
+2025-04-27 16:51:06 - PipelineExecutor - INFO - Запуск проверки с HonestBacktester
+2025-04-27 16:51:34 - PipelineExecutor - INFO - Результаты честного бэктеста:
+2025-04-27 16:51:34 - PipelineExecutor - INFO - Доходность в тесте: -3.96%
+2025-04-27 16:51:34 - PipelineExecutor - INFO - Шарп в тесте: -2.35
+2025-04-27 16:51:34 - PipelineExecutor - WARNING - Низкий коэффициент Шарпа в тестовом периоде! Стратегия может быть неэффективна.
+2025-04-27 16:51:34 - PipelineExecutor - INFO - Построение финального портфеля на всех данных с поддержкой коротких позиций
+2025-04-27 16:51:48 - PipelineExecutor - INFO - Используется оптимизатор с поддержкой коротких позиций
+2025-04-27 16:51:51 - PipelineExecutor - INFO - Итоговый отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio/production_summary.md
+2025-04-27 16:51:51 - PipelineExecutor - INFO - Портфель с короткими позициями успешно создан и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/shorts_portfolio
+2025-04-27 16:51:51 - PipelineExecutor - INFO - Запуск создания комбинированного портфеля с параметрами: {'risk_free_rate': 0.1, 'min_rf_allocation': 0.3, 'max_rf_allocation': 0.5, 'max_weight': 0.15, 'long_ratio': 0.7, 'include_short_selling': True}
+2025-04-27 16:51:51 - PipelineExecutor - INFO - Комбинированный портфель успешно создан и сохранен в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/combined_portfolio
+2025-04-27 16:51:51 - PipelineExecutor - INFO - Умеренная стратегия: выбран портфель 'combined' с лучшим Шарпом -0.40
+2025-04-27 16:51:51 - PipelineExecutor - INFO - Лучший портфель (combined) скопирован в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/final_portfolio
+2025-04-27 16:51:51 - PipelineExecutor - INFO - Создание итогового отчета о запуске
+2025-04-27 16:51:51 - PipelineExecutor - INFO - Итоговый отчет создан: /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650/pipeline_summary.md
+2025-04-27 16:51:51 - PipelineExecutor - INFO - Выполнение пайплайна завершено. Результаты сохранены в /Users/aeshef/Documents/GitHub/kursach/data/pipeline_runs/run_20250427_165046_balanced_portfolio_0427_1650

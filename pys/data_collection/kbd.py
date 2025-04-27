@@ -173,25 +173,56 @@ class KBDDownloader(BaseLogger):
             self.logger.error(traceback.format_exc())
             return None
     
-    def load_kbd_data(self, file_path=None):
-        """
-        Загрузить ранее сохраненные данные КБД из CSV файла
+def load_kbd_data(base_path=BASE_PATH, start_date=None, end_date=None, update_data=True):
+    """
+    Загружает данные КБД и возвращает их в виде DataFrame
+    
+    Parameters:
+    -----------
+    base_path : str
+        Базовый путь проекта
+    start_date : datetime или str
+        Начальная дата (если None, используется год назад)
+    end_date : datetime или str
+        Конечная дата (если None, используется текущая дата)
+    update_data : bool
+        Обновлять ли данные с сервера MOEX
+    
+    Returns:
+    --------
+    pandas.DataFrame
+        Данные КБД или None в случае ошибки
+    """
+    from datetime import datetime, timedelta
+    import os
+    
+    # Настройка директорий
+    kbd_dir = f"{base_path}/data/processed_data/BONDS/kbd"
+    
+    # Установка дат для КБД, если не указаны
+    if end_date is None:
+        end_date = datetime.now()
+    elif isinstance(end_date, str):
+        end_date = datetime.strptime(end_date, '%Y-%m-%d')
         
-        :param file_path: Путь к файлу CSV с данными КБД (если None, используется стандартный путь)
-        :return: DataFrame с данными КБД
-        """
-        if file_path is None:
-            file_path = os.path.join(self.data_dir, 'kbd_data.csv')
-            
-        try:
-            if os.path.exists(file_path):
-                df = pd.read_csv(file_path)
-                df['date'] = pd.to_datetime(df['date'])
-                self.logger.info(f"Successfully loaded KBD data from {file_path} ({len(df)} rows)")
-                return df
-            else:
-                self.logger.warning(f"KBD data file not found at {file_path}")
-                return None
-        except Exception as e:
-            self.logger.error(f"Error loading KBD data: {e}")
-            return None
+    if start_date is None:
+        start_date = end_date - timedelta(days=365)
+    elif isinstance(start_date, str):
+        start_date = datetime.strptime(start_date, '%Y-%m-%d')
+    
+    # Инициализируем загрузчик
+    downloader = KBDDownloader(output_dir=kbd_dir)
+    
+    # Загружаем данные КБД
+    kbd_data = None
+    
+    if update_data:
+        # Загружаем актуальные данные с MOEX API
+        kbd_data = downloader.get_kbd(start_date, end_date)
+        
+        if kbd_data is None or kbd_data.empty:
+            kbd_data = downloader.load_kbd_data()
+    else:
+        kbd_data = downloader.load_kbd_data()
+    
+    return kbd_data
