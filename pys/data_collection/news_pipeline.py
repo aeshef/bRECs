@@ -131,10 +131,6 @@ def save_events_data(event_detector, combined_sentiment: pd.DataFrame, events_fi
     logging.info(f"Данные по событиям объединены и сохранены в {events_file}")
     return news_with_events
 
-sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
-
-from private_info import BASE_PATH
-
 class NewsPipeline(BaseLogger):
     """Единый пайплайн для сбора и анализа новостей"""
     
