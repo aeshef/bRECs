@@ -13,3 +13,8 @@ kursachik.egg-info
 kursach.egg-info
 .DS_Store
 .DS_Store
+# Исключаем конфиденциальные данные
+pys/config/secrets/secret_config.py
+pys/data_collection/private_info.py
+*.session
+*.session-journal
