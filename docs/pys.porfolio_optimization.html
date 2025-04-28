@@ -1,0 +1,896 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pys.porfolio_optimization package &mdash; bRECs 29.04.2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=a80dce1d"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pys.utils package" href="pys.utils.html" />
+    <link rel="prev" title="pys.improved_pipeline package" href="pys.improved_pipeline.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            bRECs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="pys.html">pys package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pys.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pys.data_collection.html">pys.data_collection package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pys.improved_pipeline.html">pys.improved_pipeline package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">pys.porfolio_optimization package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.porfolio_optimization.backtester">pys.porfolio_optimization.backtester module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.porfolio_optimization.executor">pys.porfolio_optimization.executor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.porfolio_optimization.portfolio_optimizer">pys.porfolio_optimization.portfolio_optimizer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.porfolio_optimization.signal_generator">pys.porfolio_optimization.signal_generator module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.porfolio_optimization">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pys.utils.html">pys.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pys.html#module-pys">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pys.data_collection.html">pys.data_collection package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pys.porfolio_optimization package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.porfolio_optimization.backtester">pys.porfolio_optimization.backtester module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.porfolio_optimization.backtester.Backtester"><code class="docutils literal notranslate"><span class="pre">Backtester</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.backtester.Backtester.calculate_bonds_returns"><code class="docutils literal notranslate"><span class="pre">Backtester.calculate_bonds_returns()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.backtester.Backtester.calculate_performance_metrics"><code class="docutils literal notranslate"><span class="pre">Backtester.calculate_performance_metrics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.backtester.Backtester.calculate_portfolio_return"><code class="docutils literal notranslate"><span class="pre">Backtester.calculate_portfolio_return()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.backtester.Backtester.calculate_returns"><code class="docutils literal notranslate"><span class="pre">Backtester.calculate_returns()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.backtester.Backtester.calculate_returns_by_ticker"><code class="docutils literal notranslate"><span class="pre">Backtester.calculate_returns_by_ticker()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.backtester.Backtester.load_bonds_data"><code class="docutils literal notranslate"><span class="pre">Backtester.load_bonds_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.backtester.Backtester.load_data"><code class="docutils literal notranslate"><span class="pre">Backtester.load_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.backtester.Backtester.run_pipeline"><code class="docutils literal notranslate"><span class="pre">Backtester.run_pipeline()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.backtester.Backtester.visualize_results"><code class="docutils literal notranslate"><span class="pre">Backtester.visualize_results()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.porfolio_optimization.executor">pys.porfolio_optimization.executor module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.porfolio_optimization.executor.PipelineExecutor"><code class="docutils literal notranslate"><span class="pre">PipelineExecutor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.executor.PipelineExecutor.build_production_portfolio"><code class="docutils literal notranslate"><span class="pre">PipelineExecutor.build_production_portfolio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.executor.PipelineExecutor.copy_bond_portfolio"><code class="docutils literal notranslate"><span class="pre">PipelineExecutor.copy_bond_portfolio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.executor.PipelineExecutor.create_combined_portfolio"><code class="docutils literal notranslate"><span class="pre">PipelineExecutor.create_combined_portfolio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.executor.PipelineExecutor.create_short_portfolio"><code class="docutils literal notranslate"><span class="pre">PipelineExecutor.create_short_portfolio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.executor.PipelineExecutor.create_summary_report"><code class="docutils literal notranslate"><span class="pre">PipelineExecutor.create_summary_report()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.executor.PipelineExecutor.generate_signals"><code class="docutils literal notranslate"><span class="pre">PipelineExecutor.generate_signals()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.executor.PipelineExecutor.optimize_standard_portfolio"><code class="docutils literal notranslate"><span class="pre">PipelineExecutor.optimize_standard_portfolio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.executor.PipelineExecutor.process_bond_pipeline"><code class="docutils literal notranslate"><span class="pre">PipelineExecutor.process_bond_pipeline()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.executor.PipelineExecutor.run_pipeline"><code class="docutils literal notranslate"><span class="pre">PipelineExecutor.run_pipeline()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.executor.PipelineExecutor.select_best_portfolio"><code class="docutils literal notranslate"><span class="pre">PipelineExecutor.select_best_portfolio()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.porfolio_optimization.portfolio_optimizer">pys.porfolio_optimization.portfolio_optimizer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.calculate_final_portfolio"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.calculate_final_portfolio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.calculate_implied_returns"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.calculate_implied_returns()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.calculate_market_weights"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.calculate_market_weights()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.calculate_portfolio_performance"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.calculate_portfolio_performance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.generate_efficient_frontier"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.generate_efficient_frontier()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.incorporate_views"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.incorporate_views()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.load_data"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.load_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.load_market_caps"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.load_market_caps()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.load_risk_free_portfolio"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.load_risk_free_portfolio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.negative_sharpe_ratio"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.negative_sharpe_ratio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.optimize_portfolio"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.optimize_portfolio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.plot_efficient_frontier"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.plot_efficient_frontier()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.plot_enhanced_efficient_frontier"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.plot_enhanced_efficient_frontier()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.prepare_returns"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.prepare_returns()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.prepare_returns_standard"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.prepare_returns_standard()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.prepare_returns_with_shorts"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.prepare_returns_with_shorts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.prepare_views_from_signals"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.prepare_views_from_signals()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.run_pipeline"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.run_pipeline()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.visualize_portfolio"><code class="docutils literal notranslate"><span class="pre">PortfolioOptimizer.visualize_portfolio()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.porfolio_optimization.portfolio_optimizer.run_all_optimization_models"><code class="docutils literal notranslate"><span class="pre">run_all_optimization_models()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.porfolio_optimization.signal_generator">pys.porfolio_optimization.signal_generator module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.porfolio_optimization.signal_generator.SignalGenerator"><code class="docutils literal notranslate"><span class="pre">SignalGenerator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.calculate_composite_score"><code class="docutils literal notranslate"><span class="pre">SignalGenerator.calculate_composite_score()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.calculate_indicator_score"><code class="docutils literal notranslate"><span class="pre">SignalGenerator.calculate_indicator_score()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.calculate_quantiles"><code class="docutils literal notranslate"><span class="pre">SignalGenerator.calculate_quantiles()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.calculate_ticker_fundamental_score"><code class="docutils literal notranslate"><span class="pre">SignalGenerator.calculate_ticker_fundamental_score()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.create_shortlist"><code class="docutils literal notranslate"><span class="pre">SignalGenerator.create_shortlist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.generate_signals"><code class="docutils literal notranslate"><span class="pre">SignalGenerator.generate_signals()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.load_data"><code class="docutils literal notranslate"><span class="pre">SignalGenerator.load_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.load_fundamental_data"><code class="docutils literal notranslate"><span class="pre">SignalGenerator.load_fundamental_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.run_pipeline"><code class="docutils literal notranslate"><span class="pre">SignalGenerator.run_pipeline()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.save_shortlist"><code class="docutils literal notranslate"><span class="pre">SignalGenerator.save_shortlist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.visualize_composite_scores"><code class="docutils literal notranslate"><span class="pre">SignalGenerator.visualize_composite_scores()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.visualize_signals"><code class="docutils literal notranslate"><span class="pre">SignalGenerator.visualize_signals()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.porfolio_optimization.signal_generator.run_pipeline_signal_generator"><code class="docutils literal notranslate"><span class="pre">run_pipeline_signal_generator()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.porfolio_optimization">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pys.improved_pipeline.html">pys.improved_pipeline package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">bRECs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pys.html">pys package</a></li>
+      <li class="breadcrumb-item active">pys.porfolio_optimization package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/pys.porfolio_optimization.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pys-porfolio-optimization-package">
+<h1>pys.porfolio_optimization package<a class="headerlink" href="#pys-porfolio-optimization-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-pys.porfolio_optimization.backtester">
+<span id="pys-porfolio-optimization-backtester-module"></span><h2>pys.porfolio_optimization.backtester module<a class="headerlink" href="#module-pys.porfolio_optimization.backtester" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.backtester.Backtester">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.porfolio_optimization.backtester.</span></span><span class="sig-name descname"><span class="pre">Backtester</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">portfolio_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bonds_data_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.backtester.Backtester" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pys.utils.html#pys.utils.logger.BaseLogger" title="pys.utils.logger.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.backtester.Backtester.calculate_bonds_returns">
+<span class="sig-name descname"><span class="pre">calculate_bonds_returns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.backtester.Backtester.calculate_bonds_returns" title="Link to this definition"></a></dt>
+<dd><p>Рассчитывает доходности для облигаций</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.backtester.Backtester.calculate_performance_metrics">
+<span class="sig-name descname"><span class="pre">calculate_performance_metrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_free_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.075</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.backtester.Backtester.calculate_performance_metrics" title="Link to this definition"></a></dt>
+<dd><p>Рассчитывает метрики эффективности стратегии</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.backtester.Backtester.calculate_portfolio_return">
+<span class="sig-name descname"><span class="pre">calculate_portfolio_return</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.backtester.Backtester.calculate_portfolio_return" title="Link to this definition"></a></dt>
+<dd><p>Рассчитывает доходность портфеля с заданными весами,
+включая детализированную безрисковую часть (облигации) и поддержку коротких позиций</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.backtester.Backtester.calculate_returns">
+<span class="sig-name descname"><span class="pre">calculate_returns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signals_col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'signal'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">price_col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'close'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.backtester.Backtester.calculate_returns" title="Link to this definition"></a></dt>
+<dd><p>Рассчитывает доходность на основе сигналов с учетом коротких позиций</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.backtester.Backtester.calculate_returns_by_ticker">
+<span class="sig-name descname"><span class="pre">calculate_returns_by_ticker</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.backtester.Backtester.calculate_returns_by_ticker" title="Link to this definition"></a></dt>
+<dd><p>Рассчитывает доходности для каждого тикера отдельно</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.backtester.Backtester.load_bonds_data">
+<span class="sig-name descname"><span class="pre">load_bonds_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.backtester.Backtester.load_bonds_data" title="Link to this definition"></a></dt>
+<dd><p>Загрузка исторических данных по облигациям</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.backtester.Backtester.load_data">
+<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.backtester.Backtester.load_data" title="Link to this definition"></a></dt>
+<dd><p>Загрузка данных для бэктестирования акций</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.backtester.Backtester.run_pipeline">
+<span class="sig-name descname"><span class="pre">run_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">portfolio_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach/data/portfolio/results'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_free_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.075</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bonds_data_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.backtester.Backtester.run_pipeline" title="Link to this definition"></a></dt>
+<dd><p>Запускает полный пайплайн бэктестирования</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_file</strong> (<em>str</em><em>, </em><em>optional</em>) -- Путь к файлу с данными и сигналами</p></li>
+<li><p><strong>portfolio_weights</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Словарь с весами активов в портфеле</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em>, </em><em>optional</em>) -- Даты начала и конца бэктеста в формате 'YYYY-MM-DD'</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em>, </em><em>optional</em>) -- Даты начала и конца бэктеста в формате 'YYYY-MM-DD'</p></li>
+<li><p><strong>output_dir</strong> (<em>str</em><em>, </em><em>optional</em>) -- Директория для сохранения результатов</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>float</em>) -- Безрисковая ставка для расчета метрик</p></li>
+<li><p><strong>bonds_data_dir</strong> (<em>str</em><em>, </em><em>optional</em>) -- Директория с историческими данными по облигациям</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict с результатами бэктеста</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.backtester.Backtester.visualize_results">
+<span class="sig-name descname"><span class="pre">visualize_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.backtester.Backtester.visualize_results" title="Link to this definition"></a></dt>
+<dd><p>Визуализирует результаты бэктеста с поддержкой коротких позиций</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pys.porfolio_optimization.executor">
+<span id="pys-porfolio-optimization-executor-module"></span><h2>pys.porfolio_optimization.executor module<a class="headerlink" href="#module-pys.porfolio_optimization.executor" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.executor.PipelineExecutor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.porfolio_optimization.executor.</span></span><span class="sig-name descname"><span class="pre">PipelineExecutor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bond_results</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy_profile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'moderate'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_position_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_rf_allocation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_rf_allocation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_free_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.15</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.executor.PipelineExecutor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pys.utils.html#pys.utils.logger.BaseLogger" title="pys.utils.logger.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
+<p>Выполняет и организует финальные этапы пайплайна инвестиционной стратегии.</p>
+<p>Класс выполняет:
+- Генерацию сигналов
+- Оптимизацию портфелей разных типов (лонг, шорт, комбинированный)
+- Выбор лучшего портфеля на основе метрик
+- Создание отчета о запуске</p>
+<p>Все результаты сохраняются в отдельной директории для каждого запуска.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.executor.PipelineExecutor.build_production_portfolio">
+<span class="sig-name descname"><span class="pre">build_production_portfolio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_free_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.075</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">best_params_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_short_selling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verify_with_honest_backtest</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('2024-01-01',</span> <span class="pre">'2024-12-31')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('2025-01-01',</span> <span class="pre">'2025-06-30')</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.executor.PipelineExecutor.build_production_portfolio" title="Link to this definition"></a></dt>
+<dd><p>Комплексная функция построения и проверки инвестиционного портфеля</p>
+<section id="parameters">
+<h3>Parameters:<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>data_file<span class="classifier">str</span></dt><dd><p>Путь к файлу с данными</p>
+</dd>
+<dt>output_dir<span class="classifier">str</span></dt><dd><p>Директория для сохранения результатов</p>
+</dd>
+<dt>risk_free_rate<span class="classifier">float</span></dt><dd><p>Безрисковая ставка</p>
+</dd>
+<dt>best_params_file<span class="classifier">str, optional</span></dt><dd><p>Путь к файлу с оптимальными параметрами (из Grid Search)</p>
+</dd>
+<dt>include_short_selling<span class="classifier">bool</span></dt><dd><p>Включать ли короткие позиции в портфель (по умолчанию False)</p>
+</dd>
+<dt>verify_with_honest_backtest<span class="classifier">bool</span></dt><dd><p>Проверять ли стратегию с помощью HonestBacktester</p>
+</dd>
+<dt>train_period, test_period<span class="classifier">tuple</span></dt><dd><p>Периоды для проверки с помощью HonestBacktester</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns:<a class="headerlink" href="#returns" title="Link to this heading"></a></h3>
+<p>dict с результатами всех этапов</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.executor.PipelineExecutor.copy_bond_portfolio">
+<span class="sig-name descname"><span class="pre">copy_bond_portfolio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bond_results</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.executor.PipelineExecutor.copy_bond_portfolio" title="Link to this definition"></a></dt>
+<dd><p>Копирует результаты выбора облигаций.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bond_results</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Результаты выполнения run_bond_selection_with_kbd</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Путь к скопированному портфелю облигаций</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.executor.PipelineExecutor.create_combined_portfolio">
+<span class="sig-name descname"><span class="pre">create_combined_portfolio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tickers_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_free_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_rf_allocation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_rf_allocation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">long_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_short_selling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.executor.PipelineExecutor.create_combined_portfolio" title="Link to this definition"></a></dt>
+<dd><p>Создает комбинированный портфель с длинными и короткими позициями.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.executor.PipelineExecutor.create_short_portfolio">
+<span class="sig-name descname"><span class="pre">create_short_portfolio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">risk_free_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('2024-01-01',</span> <span class="pre">'2024-12-31')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('2025-01-01',</span> <span class="pre">'2025-06-30')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">best_params_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verify_with_honest_backtest</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.executor.PipelineExecutor.create_short_portfolio" title="Link to this definition"></a></dt>
+<dd><p>Создает портфель с короткими позициями.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>risk_free_rate</strong> (<em>float</em><em>, </em><em>optional</em>) -- Безрисковая ставка</p></li>
+<li><p><strong>train_period</strong> (<em>tuple</em>) -- Периоды для обучения и тестирования</p></li>
+<li><p><strong>test_period</strong> (<em>tuple</em>) -- Периоды для обучения и тестирования</p></li>
+<li><p><strong>best_params_file</strong> (<em>str</em><em>, </em><em>optional</em>) -- Путь к файлу с лучшими параметрами</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Результаты создания портфеля с короткими позициями</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.executor.PipelineExecutor.create_summary_report">
+<span class="sig-name descname"><span class="pre">create_summary_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_charts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">report_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'md'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.executor.PipelineExecutor.create_summary_report" title="Link to this definition"></a></dt>
+<dd><p>Создает итоговый отчет о запуске.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Путь к созданному отчету</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.executor.PipelineExecutor.generate_signals">
+<span class="sig-name descname"><span class="pre">generate_signals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weight_tech</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_sentiment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_fundamental</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold_buy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold_sell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_pct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_ticker_visualizations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tech_indicators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['RSI_14',</span> <span class="pre">'MACD_diff',</span> <span class="pre">'Stoch_%K',</span> <span class="pre">'CCI_20',</span> <span class="pre">'Williams_%R_14',</span> <span class="pre">'ROC_10']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sentiment_indicators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['sentiment_compound_median',</span> <span class="pre">'sentiment_direction',</span> <span class="pre">'sentiment_ma_7d',</span> <span class="pre">'sentiment_ratio',</span> <span class="pre">'sentiment_zscore_7d']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fund_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.executor.PipelineExecutor.generate_signals" title="Link to this definition"></a></dt>
+<dd><p>Запускает генерацию сигналов.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>weight_tech</strong> (<em>float</em>) -- Вес технических сигналов</p></li>
+<li><p><strong>weight_sentiment</strong> (<em>float</em>) -- Вес сентимент-сигналов</p></li>
+<li><p><strong>weight_fundamental</strong> (<em>float</em>) -- Вес фундаментальных сигналов</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Результаты генерации сигналов</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.executor.PipelineExecutor.optimize_standard_portfolio">
+<span class="sig-name descname"><span class="pre">optimize_standard_portfolio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tickers_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_free_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_rf_allocation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_rf_allocation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_short_selling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.executor.PipelineExecutor.optimize_standard_portfolio" title="Link to this definition"></a></dt>
+<dd><p>Запускает оптимизацию стандартного портфеля (только длинные позиции).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tickers_list</strong> (<em>list</em>) -- Список тикеров</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>float</em><em>, </em><em>optional</em>) -- Безрисковая ставка</p></li>
+<li><p><strong>min_rf_allocation</strong> (<em>float</em><em>, </em><em>optional</em>) -- Минимальная и максимальная доля безрисковых активов</p></li>
+<li><p><strong>max_rf_allocation</strong> (<em>float</em><em>, </em><em>optional</em>) -- Минимальная и максимальная доля безрисковых активов</p></li>
+<li><p><strong>max_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- Максимальный вес одного актива</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Результаты оптимизации портфеля</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.executor.PipelineExecutor.process_bond_pipeline">
+<span class="sig-name descname"><span class="pre">process_bond_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_bonds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">99</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy_profile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kbd_yield_adjustment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-3.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_kbd_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">excluded_issuers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bonds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kbd_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weighting_strategy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">portfolio_stability</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_kbd_recommendations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kbd_duration_flexibility</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_adjustment_iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.executor.PipelineExecutor.process_bond_pipeline" title="Link to this definition"></a></dt>
+<dd><p>Запускает полный цикл обработки облигаций - от парсинга до создания портфеля.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_date</strong> (<em>str</em>) -- Диапазон дат для анализа</p></li>
+<li><p><strong>end_date</strong> (<em>str</em>) -- Диапазон дат для анализа</p></li>
+<li><p><strong>min_bonds</strong> (<em>int</em>) -- Минимальное количество облигаций в выборке</p></li>
+<li><p><strong>max_threshold</strong> (<em>int</em>) -- Максимальный порог для фильтрации облигаций</p></li>
+<li><p><strong>strategy_profile</strong> (<em>str</em><em>, </em><em>optional</em>) -- Профиль стратегии ('aggressive', 'moderate', 'conservative')</p></li>
+<li><p><strong>kbd_yield_adjustment</strong> (<em>float</em>) -- Корректировка доходности КБД</p></li>
+<li><p><strong>update_kbd_data</strong> (<em>bool</em>) -- Флаг обновления данных КБД</p></li>
+<li><p><strong>excluded_issuers</strong> (<em>list</em><em>, </em><em>optional</em>) -- Список исключаемых эмитентов</p></li>
+<li><p><strong>n_bonds</strong> (<em>int</em>) -- Количество облигаций для включения в портфель</p></li>
+<li><p><strong>kbd_data</strong> (<em>pandas.DataFrame</em><em>, </em><em>optional</em>) -- Предварительно загруженные данные КБД</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Результаты обработки облигаций</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.executor.PipelineExecutor.run_pipeline">
+<span class="sig-name descname"><span class="pre">run_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tickers_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bond_results</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy_profile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signal_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">standard_portfolio_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">short_portfolio_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">combined_portfolio_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">portfolio_controls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backtest_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">select_portfolio_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">report_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimization_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visualization_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.executor.PipelineExecutor.run_pipeline" title="Link to this definition"></a></dt>
+<dd><p>Запускает все этапы пайплайна последовательно с полной настройкой параметров.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tickers_list</strong> (<em>list</em>) -- Список тикеров</p></li>
+<li><p><strong>bond_results</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Результаты выполнения run_bond_selection_with_kbd</p></li>
+<li><p><strong>strategy_profile</strong> (<em>str</em><em>, </em><em>optional</em>) -- Профиль стратегии ('aggressive', 'moderate', 'conservative')</p></li>
+<li><p><strong>этапов</strong> (<em># Параметры для разных</em>)</p></li>
+<li><p><strong>signal_params</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Параметры для генерации сигналов:
+- weight_tech (float): вес технических сигналов
+- weight_sentiment (float): вес сентимент-сигналов
+- weight_fundamental (float): вес фундаментальных сигналов
+- threshold_buy (float): порог для сигнала покупки
+- threshold_sell (float): порог для сигнала продажи
+- top_pct (float): процент лучших акций для shortlist
+- save_ticker_visualizations (bool): сохранять визуализации по тикерам</p></li>
+<li><p><strong>standard_portfolio_params</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Параметры для стандартного портфеля:
+- risk_free_rate (float): безрисковая ставка
+- min_rf_allocation (float): минимальная доля безрисковых активов
+- max_rf_allocation (float): максимальная доля безрисковых активов
+- max_weight (float): максимальный вес одной позиции
+- include_short_selling (bool): включать ли короткие позиции</p></li>
+<li><p><strong>short_portfolio_params</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Параметры для портфеля с короткими позициями:
+- risk_free_rate (float): безрисковая ставка
+- train_period (tuple): период обучения (начало, конец)
+- test_period (tuple): период тестирования (начало, конец)
+- best_params_file (str): путь к файлу с лучшими параметрами
+- verify_with_honest_backtest (bool): проверять с честным бэктестом</p></li>
+<li><p><strong>combined_portfolio_params</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Параметры для комбинированного портфеля:
+- risk_free_rate (float): безрисковая ставка
+- min_rf_allocation (float): минимальная доля безрисковых активов
+- max_rf_allocation (float): максимальная доля безрисковых активов
+- max_weight (float): максимальный вес одной позиции
+- long_ratio (float): соотношение длинных/коротких позиций
+- include_short_selling (bool): включать ли короткие позиции</p></li>
+<li><p><strong>portfolio_controls</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Контроль запуска различных портфелей:
+- run_standard_portfolio (bool): запускать стандартный портфель
+- run_short_portfolio (bool): запускать портфель с короткими позициями
+- run_combined_portfolio (bool): запускать комбинированный портфель
+- override_risk_profile (bool): игнорировать профиль риска</p></li>
+<li><p><strong>backtest_params</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Параметры для бэктестирования:
+- train_period (tuple): период обучения (начало, конец)
+- test_period (tuple): период тестирования (начало, конец)
+- risk_free_rate (float): безрисковая ставка
+- use_grid_search_params (bool): использовать параметры из Grid Search</p></li>
+<li><p><strong>select_portfolio_params</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Параметры для выбора лучшего портфеля:
+- metrics_priority (list): приоритет метрик ['sharpe', 'return', 'volatility']
+- min_sharpe (float): минимальный допустимый коэффициент Шарпа
+- prefer_standard (bool): предпочитать стандартный портфель
+- force_portfolio_type (str): принудительно выбрать тип портфеля</p></li>
+<li><p><strong>report_params</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Параметры для создания отчета:
+- include_charts (bool): включать графики в отчет
+- include_metrics (bool): включать метрики в отчет
+- include_weights (bool): включать веса в отчет
+- report_format (str): формат отчета ('md', 'html')</p></li>
+<li><p><strong>optimization_params</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Параметры оптимизации портфеля:
+- optimization (str): модель оптимизации ('markowitz', 'black_litterman')
+- tau (float): параметр неуверенности для Black-Litterman
+- views (dict): субъективные прогнозы
+- view_confidences (dict): уверенность в прогнозах
+- market_caps (dict): рыночные капитализации</p></li>
+<li><p><strong>visualization_params</strong> (<em>dict</em><em>, </em><em>optional</em>) -- Параметры визуализации:
+- plot_style (str): стиль графиков ('seaborn', 'ggplot', etc.)
+- chart_size (tuple): размер графиков в дюймах
+- dpi (int): разрешение графиков
+- color_scheme (str): цветовая схема
+- save_formats (list): форматы сохранения графиков ['png', 'svg', 'pdf']</p></li>
+<li><p><strong>Returns</strong></p></li>
+<li><p><strong>--------</strong></p></li>
+<li><p><strong>dict</strong> -- Результаты выполнения всех этапов пайплайна</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.executor.PipelineExecutor.select_best_portfolio">
+<span class="sig-name descname"><span class="pre">select_best_portfolio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metrics_priority</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_sharpe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefer_standard</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_portfolio_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.executor.PipelineExecutor.select_best_portfolio" title="Link to this definition"></a></dt>
+<dd><p>Выбирает лучший портфель на основе метрик и стратегии риска.
+Копирует выбранный портфель в директорию final_portfolio.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>metrics_priority</strong> (<em>list</em><em>, </em><em>optional</em>) -- Приоритет метрик для выбора ['sharpe', 'return', 'volatility']</p></li>
+<li><p><strong>min_sharpe</strong> (<em>float</em><em>, </em><em>optional</em>) -- Минимальный допустимый коэффициент Шарпа</p></li>
+<li><p><strong>prefer_standard</strong> (<em>bool</em><em>, </em><em>optional</em>) -- Предпочитать ли стандартный портфель при прочих равных</p></li>
+<li><p><strong>force_portfolio_type</strong> (<em>str</em><em>, </em><em>optional</em>) -- Принудительно выбрать тип портфеля ('standard', 'short', 'combined')</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Информация о выбранном лучшем портфеле</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pys.porfolio_optimization.portfolio_optimizer">
+<span id="pys-porfolio-optimization-portfolio-optimizer-module"></span><h2>pys.porfolio_optimization.portfolio_optimizer module<a class="headerlink" href="#module-pys.porfolio_optimization.portfolio_optimizer" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.porfolio_optimization.portfolio_optimizer.</span></span><span class="sig-name descname"><span class="pre">PortfolioOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_free_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_rf_allocation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_rf_allocation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.35</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimization</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'markowitz'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_confidences</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">market_caps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_free_portfolio_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_short_selling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pys.utils.html#pys.utils.logger.BaseLogger" title="pys.utils.logger.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.calculate_final_portfolio">
+<span class="sig-name descname"><span class="pre">calculate_final_portfolio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rf_allocation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.calculate_final_portfolio" title="Link to this definition"></a></dt>
+<dd><p>Рассчитывает итоговый портфель с учетом безрисковой части</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.calculate_implied_returns">
+<span class="sig-name descname"><span class="pre">calculate_implied_returns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.calculate_implied_returns" title="Link to this definition"></a></dt>
+<dd><p>Рассчитывает равновесные доходности на основе CAPM для модели Блэка-Литермана</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.calculate_market_weights">
+<span class="sig-name descname"><span class="pre">calculate_market_weights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.calculate_market_weights" title="Link to this definition"></a></dt>
+<dd><p>Рассчитывает рыночные веса на основе капитализации для модели Блэка-Литермана</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.calculate_portfolio_performance">
+<span class="sig-name descname"><span class="pre">calculate_portfolio_performance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.calculate_portfolio_performance" title="Link to this definition"></a></dt>
+<dd><p>Рассчитывает доходность и риск портфеля</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.generate_efficient_frontier">
+<span class="sig-name descname"><span class="pre">generate_efficient_frontier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_portfolios</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.generate_efficient_frontier" title="Link to this definition"></a></dt>
+<dd><p>Генерирует множество случайных портфелей и находит эффективную границу</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>num_portfolios</strong> (<em>int</em>) -- Количество случайных портфелей для генерации</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Словарь с данными о случайных портфелях и эффективной границе</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.incorporate_views">
+<span class="sig-name descname"><span class="pre">incorporate_views</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.incorporate_views" title="Link to this definition"></a></dt>
+<dd><p>Включает субъективные прогнозы в модель Блэка-Литермана</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.load_data">
+<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.load_data" title="Link to this definition"></a></dt>
+<dd><p>Загрузка данных для оптимизации</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.load_market_caps">
+<span class="sig-name descname"><span class="pre">load_market_caps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.load_market_caps" title="Link to this definition"></a></dt>
+<dd><p>Загружает реальные данные о рыночной капитализации для тикеров
+из {BASE_PATH}/data/processed_data/{ticker}/market_cap/cap.csv</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.load_risk_free_portfolio">
+<span class="sig-name descname"><span class="pre">load_risk_free_portfolio</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.load_risk_free_portfolio" title="Link to this definition"></a></dt>
+<dd><p>Загружает данные о портфеле облигаций для безрисковой части</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.negative_sharpe_ratio">
+<span class="sig-name descname"><span class="pre">negative_sharpe_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_free_rate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.negative_sharpe_ratio" title="Link to this definition"></a></dt>
+<dd><p>Отрицательный коэффициент Шарпа (для минимизации)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.optimize_portfolio">
+<span class="sig-name descname"><span class="pre">optimize_portfolio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_free_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constrained</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.optimize_portfolio" title="Link to this definition"></a></dt>
+<dd><p>Оптимизирует портфель, максимизируя коэффициент Шарпа</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.plot_efficient_frontier">
+<span class="sig-name descname"><span class="pre">plot_efficient_frontier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frontier_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.plot_efficient_frontier" title="Link to this definition"></a></dt>
+<dd><p>Визуализирует эффективную границу и множество портфелей</p>
+<section id="id1">
+<h3>Parameters:<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>frontier_data<span class="classifier">dict, optional</span></dt><dd><p>Данные эффективной границы (если None, будут сгенерированы)</p>
+</dd>
+<dt>output_dir<span class="classifier">str, optional</span></dt><dd><p>Директория для сохранения результатов</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.plot_enhanced_efficient_frontier">
+<span class="sig-name descname"><span class="pre">plot_enhanced_efficient_frontier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frontier_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.plot_enhanced_efficient_frontier" title="Link to this definition"></a></dt>
+<dd><p>Создает улучшенную визуализацию эффективной границы и оптимальных портфелей
+с выделением границы эффективных портфелей и точки касания с CML</p>
+<section id="id2">
+<h3>Parameters:<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>frontier_data<span class="classifier">dict, optional</span></dt><dd><p>Данные эффективной границы (если None, будут сгенерированы)</p>
+</dd>
+<dt>output_dir<span class="classifier">str, optional</span></dt><dd><p>Директория для сохранения результатов</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.prepare_returns">
+<span class="sig-name descname"><span class="pre">prepare_returns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.prepare_returns" title="Link to this definition"></a></dt>
+<dd><p>Выбирает метод подготовки доходностей в зависимости от флага</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.prepare_returns_standard">
+<span class="sig-name descname"><span class="pre">prepare_returns_standard</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.prepare_returns_standard" title="Link to this definition"></a></dt>
+<dd><p>Подготовка доходностей для оптимизации</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.prepare_returns_with_shorts">
+<span class="sig-name descname"><span class="pre">prepare_returns_with_shorts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.prepare_returns_with_shorts" title="Link to this definition"></a></dt>
+<dd><p>Подготовка доходностей с учетом коротких позиций</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.prepare_views_from_signals">
+<span class="sig-name descname"><span class="pre">prepare_views_from_signals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.prepare_views_from_signals" title="Link to this definition"></a></dt>
+<dd><p>Подготавливает прогнозы (views) и уверенность в них на основе сигналов</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.run_pipeline">
+<span class="sig-name descname"><span class="pre">run_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach/data'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_free_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_rf_allocation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_rf_allocation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_confidences</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimization</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.run_pipeline" title="Link to this definition"></a></dt>
+<dd><p>Запускает полный пайплайн оптимизации портфеля</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_file</strong> (<em>str</em><em>, </em><em>optional</em>) -- Путь к файлу с данными</p></li>
+<li><p><strong>output_dir</strong> (<em>str</em><em>, </em><em>optional</em>) -- Директория для сохранения результатов</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>float</em><em>, </em><em>optional</em>) -- Безрисковая ставка</p></li>
+<li><p><strong>min_rf_allocation</strong> (<em>float</em><em>, </em><em>optional</em>) -- Минимальная доля безрисковых активов</p></li>
+<li><p><strong>max_rf_allocation</strong> (<em>float</em><em>, </em><em>optional</em>) -- Максимальная доля безрисковых активов</p></li>
+<li><p><strong>max_weight</strong> (<em>float</em><em>, </em><em>optional</em>) -- Максимальный вес одной бумаги в портфеле (для диверсификации)</p></li>
+<li><p><strong>views</strong> (<em>dict</em><em> or </em><em>list</em><em>, </em><em>optional</em>) -- Субъективные прогнозы для модели Блэка-Литермана</p></li>
+<li><p><strong>view_confidences</strong> (<em>dict</em><em> or </em><em>list</em><em>, </em><em>optional</em>) -- Уверенность в прогнозах для модели Блэка-Литермана</p></li>
+<li><p><strong>optimization</strong> (<em>str</em><em>, </em><em>optional</em>) -- Модель оптимизации: 'markowitz' или 'black_litterman'</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Словарь с результатами оптимизации</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.visualize_portfolio">
+<span class="sig-name descname"><span class="pre">visualize_portfolio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.PortfolioOptimizer.visualize_portfolio" title="Link to this definition"></a></dt>
+<dd><p>Визуализирует итоговый портфель с помощью круговой диаграммы и эффективной границы</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.portfolio_optimizer.run_all_optimization_models">
+<span class="sig-prename descclassname"><span class="pre">pys.porfolio_optimization.portfolio_optimizer.</span></span><span class="sig-name descname"><span class="pre">run_all_optimization_models</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tickers_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_free_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_rf_allocation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_rf_allocation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_free_portfolio_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/Users/aeshef/Documents/GitHub/kursach/data/processed_data/BONDS/kbd/portfolios/bond_portfolio_20250426.csv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_short_selling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.portfolio_optimizer.run_all_optimization_models" title="Link to this definition"></a></dt>
+<dd><p>Запускает последовательно все модели оптимизации портфеля</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_path</strong> (<em>str</em>) -- Базовый путь проекта</p></li>
+<li><p><strong>tickers_list</strong> (<em>list</em>) -- Список тикеров для анализа</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>float</em>) -- Безрисковая ставка</p></li>
+<li><p><strong>min_rf_allocation</strong> (<em>float</em>) -- Минимальная доля безрисковых активов</p></li>
+<li><p><strong>max_rf_allocation</strong> (<em>float</em>) -- Максимальная доля безрисковых активов</p></li>
+<li><p><strong>max_weight</strong> (<em>float</em>) -- Максимальный вес одной бумаги в портфеле</p></li>
+<li><p><strong>input_file</strong> (<em>str</em><em>, </em><em>optional</em>) -- Путь к файлу с сигналами (если None, используется стандартный путь)</p></li>
+<li><p><strong>risk_free_portfolio_file</strong> (<em>str</em><em>, </em><em>optional</em>) -- Путь к файлу с оптимальным портфелем облигаций</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Словарь с результатами оптимизации для обеих моделей</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pys.porfolio_optimization.signal_generator">
+<span id="pys-porfolio-optimization-signal-generator-module"></span><h2>pys.porfolio_optimization.signal_generator module<a class="headerlink" href="#module-pys.porfolio_optimization.signal_generator" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.signal_generator.SignalGenerator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.porfolio_optimization.signal_generator.</span></span><span class="sig-name descname"><span class="pre">SignalGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_tech</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_sentiment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_fundamental</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold_buy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold_sell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.signal_generator.SignalGenerator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pys.utils.html#pys.utils.logger.BaseLogger" title="pys.utils.logger.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.signal_generator.SignalGenerator.calculate_composite_score">
+<span class="sig-name descname"><span class="pre">calculate_composite_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tech_indicators</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sentiment_indicators</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fund_weights</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.calculate_composite_score" title="Link to this definition"></a></dt>
+<dd><p>Рассчитывает композитный скор с учетом фундаментальных данных</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.signal_generator.SignalGenerator.calculate_indicator_score">
+<span class="sig-name descname"><span class="pre">calculate_indicator_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indicator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantiles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.calculate_indicator_score" title="Link to this definition"></a></dt>
+<dd><p>Рассчитывает скор для отдельного фундаментального показателя с учетом NO_DATA</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.signal_generator.SignalGenerator.calculate_quantiles">
+<span class="sig-name descname"><span class="pre">calculate_quantiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fund_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.calculate_quantiles" title="Link to this definition"></a></dt>
+<dd><p>Рассчитывает квантили для каждого показателя, учитывая только реальные данные</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.signal_generator.SignalGenerator.calculate_ticker_fundamental_score">
+<span class="sig-name descname"><span class="pre">calculate_ticker_fundamental_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fund_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantiles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fund_weights</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.calculate_ticker_fundamental_score" title="Link to this definition"></a></dt>
+<dd><p>Рассчитывает общий фундаментальный скор для тикера за определенный год</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.signal_generator.SignalGenerator.create_shortlist">
+<span class="sig-name descname"><span class="pre">create_shortlist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">top_pct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.create_shortlist" title="Link to this definition"></a></dt>
+<dd><p>Создает shortlist из топовых акций по композитному скору</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.signal_generator.SignalGenerator.generate_signals">
+<span class="sig-name descname"><span class="pre">generate_signals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.generate_signals" title="Link to this definition"></a></dt>
+<dd><p>Генерирует торговые сигналы на основе композитного скора</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.signal_generator.SignalGenerator.load_data">
+<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.load_data" title="Link to this definition"></a></dt>
+<dd><p>Загрузка данных для анализа</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.signal_generator.SignalGenerator.load_fundamental_data">
+<span class="sig-name descname"><span class="pre">load_fundamental_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.load_fundamental_data" title="Link to this definition"></a></dt>
+<dd><p>Загружает фундаментальные данные для всех тикеров с обработкой NO_DATA</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.signal_generator.SignalGenerator.run_pipeline">
+<span class="sig-name descname"><span class="pre">run_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_pct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach/data/signal_visualizations'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_ticker_visualizations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tech_indicators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['RSI_14',</span> <span class="pre">'MACD_diff',</span> <span class="pre">'Stoch_%K',</span> <span class="pre">'CCI_20',</span> <span class="pre">'Williams_%R_14',</span> <span class="pre">'ROC_10']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sentiment_indicators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['sentiment_compound_median',</span> <span class="pre">'sentiment_direction',</span> <span class="pre">'sentiment_ma_7d',</span> <span class="pre">'sentiment_ratio',</span> <span class="pre">'sentiment_zscore_7d']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fund_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.run_pipeline" title="Link to this definition"></a></dt>
+<dd><p>Запускает полный пайплайн генерации сигналов с сохранением результатов в структурированном виде</p>
+<section id="id3">
+<h3>Parameters:<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>input_file<span class="classifier">str, optional</span></dt><dd><p>Путь к CSV файлу с данными</p>
+</dd>
+<dt>output_file<span class="classifier">str, optional</span></dt><dd><p>Путь для сохранения результатов</p>
+</dd>
+<dt>top_pct<span class="classifier">float</span></dt><dd><p>Процент лучших акций для включения в shortlist</p>
+</dd>
+<dt>output_dir<span class="classifier">str</span></dt><dd><p>Директория для сохранения визуализаций и результатов</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h3>Returns:<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<p>DataFrame с добавленными скорами и сигналами</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.signal_generator.SignalGenerator.save_shortlist">
+<span class="sig-name descname"><span class="pre">save_shortlist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.save_shortlist" title="Link to this definition"></a></dt>
+<dd><p>Сохраняет шортлист акций в CSV-файл</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.signal_generator.SignalGenerator.visualize_composite_scores">
+<span class="sig-name descname"><span class="pre">visualize_composite_scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to_ticker_dirs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.visualize_composite_scores" title="Link to this definition"></a></dt>
+<dd><p>Визуализирует графики композитных скоров для каждого тикера</p>
+<section id="id5">
+<h3>Parameters:<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>output_dir<span class="classifier">str, optional</span></dt><dd><p>Директория для сохранения визуализаций (если None, то в директории тикеров)</p>
+</dd>
+<dt>save_to_ticker_dirs<span class="classifier">bool</span></dt><dd><p>Сохранять ли визуализации в директории тикеров</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.signal_generator.SignalGenerator.visualize_signals">
+<span class="sig-name descname"><span class="pre">visualize_signals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to_ticker_dirs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.signal_generator.SignalGenerator.visualize_signals" title="Link to this definition"></a></dt>
+<dd><p>Визуализирует графики сигналов для каждого тикера</p>
+<section id="id6">
+<h3>Parameters:<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>output_dir<span class="classifier">str, optional</span></dt><dd><p>Директория для сохранения визуализаций (если None, то в директории тикеров)</p>
+</dd>
+<dt>save_to_ticker_dirs<span class="classifier">bool</span></dt><dd><p>Сохранять ли визуализации в директории тикеров</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.porfolio_optimization.signal_generator.run_pipeline_signal_generator">
+<span class="sig-prename descclassname"><span class="pre">pys.porfolio_optimization.signal_generator.</span></span><span class="sig-name descname"><span class="pre">run_pipeline_signal_generator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weight_tech</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_sentiment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight_fundamental</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach/data/signal_visualizations'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_ticker_visualizations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tech_indicators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['RSI_14',</span> <span class="pre">'MACD_diff',</span> <span class="pre">'Stoch_%K',</span> <span class="pre">'CCI_20',</span> <span class="pre">'Williams_%R_14',</span> <span class="pre">'ROC_10']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sentiment_indicators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['sentiment_compound_median',</span> <span class="pre">'sentiment_direction',</span> <span class="pre">'sentiment_ma_7d',</span> <span class="pre">'sentiment_ratio',</span> <span class="pre">'sentiment_zscore_7d']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fund_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.porfolio_optimization.signal_generator.run_pipeline_signal_generator" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pys.porfolio_optimization">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pys.porfolio_optimization" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pys.improved_pipeline.html" class="btn btn-neutral float-left" title="pys.improved_pipeline package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pys.utils.html" class="btn btn-neutral float-right" title="pys.utils package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, aeshef, bolotnikovali.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,1546 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pys.data_collection package &mdash; bRECs 29.04.2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=a80dce1d"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pys.data_collection.news_processor package" href="pys.data_collection.news_processor.html" />
+    <link rel="prev" title="pys package" href="pys.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            bRECs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="pys.html">pys package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pys.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">pys.data_collection package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.bonds_kbd_pipeline">pys.data_collection.bonds_kbd_pipeline module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.bonds_kbd_strategies">pys.data_collection.bonds_kbd_strategies module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.bonds_parser">pys.data_collection.bonds_parser module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.bonds_processor">pys.data_collection.bonds_processor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.data_integration">pys.data_collection.data_integration module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.fundamental_data">pys.data_collection.fundamental_data module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.kbd">pys.data_collection.kbd module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.kbd_analyzer">pys.data_collection.kbd_analyzer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.market_cap">pys.data_collection.market_cap module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.market_data">pys.data_collection.market_data module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.news_pipeline">pys.data_collection.news_pipeline module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.private_info">pys.data_collection.private_info module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.tech_analysis">pys.data_collection.tech_analysis module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.technical_indicators">pys.data_collection.technical_indicators module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pys.improved_pipeline.html">pys.improved_pipeline package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pys.porfolio_optimization.html">pys.porfolio_optimization package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pys.utils.html">pys.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pys.html#module-pys">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pys.data_collection package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pys.data_collection.news_processor.html">pys.data_collection.news_processor package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.data_collection.bonds_kbd_pipeline">pys.data_collection.bonds_kbd_pipeline module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.bonds_kbd_pipeline.create_combined_report"><code class="docutils literal notranslate"><span class="pre">create_combined_report()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.bonds_kbd_pipeline.run_bond_selection_with_kbd"><code class="docutils literal notranslate"><span class="pre">run_bond_selection_with_kbd()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.data_collection.bonds_kbd_strategies">pys.data_collection.bonds_kbd_strategies module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.bonds_kbd_strategies.BondStrategy"><code class="docutils literal notranslate"><span class="pre">BondStrategy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_kbd_strategies.BondStrategy.get_filter_params"><code class="docutils literal notranslate"><span class="pre">BondStrategy.get_filter_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_kbd_strategies.BondStrategy.get_portfolio_params"><code class="docutils literal notranslate"><span class="pre">BondStrategy.get_portfolio_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_kbd_strategies.BondStrategy.rank_bonds"><code class="docutils literal notranslate"><span class="pre">BondStrategy.rank_bonds()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.bonds_kbd_strategies.KBDRateExpectationStrategy"><code class="docutils literal notranslate"><span class="pre">KBDRateExpectationStrategy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_kbd_strategies.KBDRateExpectationStrategy.get_filter_params"><code class="docutils literal notranslate"><span class="pre">KBDRateExpectationStrategy.get_filter_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_kbd_strategies.KBDRateExpectationStrategy.get_portfolio_params"><code class="docutils literal notranslate"><span class="pre">KBDRateExpectationStrategy.get_portfolio_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_kbd_strategies.KBDRateExpectationStrategy.rank_bonds"><code class="docutils literal notranslate"><span class="pre">KBDRateExpectationStrategy.rank_bonds()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.data_collection.bonds_parser">pys.data_collection.bonds_parser module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.API_DELAY"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser.API_DELAY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.BASE_DATA_DIR"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser.BASE_DATA_DIR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.BOARD_GROUPS"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser.BOARD_GROUPS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.CACHE_DIR"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser.CACHE_DIR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.analyze_bonds_continuity"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser.analyze_bonds_continuity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.analyze_continuity_from_consolidated"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser.analyze_continuity_from_consolidated()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.clear_cache"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser.clear_cache()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.filter_existing_data"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser.filter_existing_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.find_optimal_threshold"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser.find_optimal_threshold()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.find_optimal_threshold_from_consolidated"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser.find_optimal_threshold_from_consolidated()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.generate_complete_dataset"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser.generate_complete_dataset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.generate_dataset_with_threshold"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser.generate_dataset_with_threshold()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.get_available_bonds"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser.get_available_bonds()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.get_bonds_for_period"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser.get_bonds_for_period()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.get_latest_bonds"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser.get_latest_bonds()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.parse_interval"><code class="docutils literal notranslate"><span class="pre">MOEXBondHistoricalParser.parse_interval()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.bonds_parser.run_bond_pipeline"><code class="docutils literal notranslate"><span class="pre">run_bond_pipeline()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.data_collection.bonds_processor">pys.data_collection.bonds_processor module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.bonds_processor.BondsProcessor"><code class="docutils literal notranslate"><span class="pre">BondsProcessor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_processor.BondsProcessor.calculate_bond_metrics"><code class="docutils literal notranslate"><span class="pre">BondsProcessor.calculate_bond_metrics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_processor.BondsProcessor.generate_portfolio_analysis"><code class="docutils literal notranslate"><span class="pre">BondsProcessor.generate_portfolio_analysis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_processor.BondsProcessor.get_bonds_for_portfolio"><code class="docutils literal notranslate"><span class="pre">BondsProcessor.get_bonds_for_portfolio()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_processor.BondsProcessor.load_and_process_all_bonds"><code class="docutils literal notranslate"><span class="pre">BondsProcessor.load_and_process_all_bonds()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_processor.BondsProcessor.load_previous_recommendations"><code class="docutils literal notranslate"><span class="pre">BondsProcessor.load_previous_recommendations()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_processor.BondsProcessor.process_direct_data"><code class="docutils literal notranslate"><span class="pre">BondsProcessor.process_direct_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.bonds_processor.BondsProcessor.visualize_bond_universe"><code class="docutils literal notranslate"><span class="pre">BondsProcessor.visualize_bond_universe()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.bonds_processor.run_pipeline_bonds_processor"><code class="docutils literal notranslate"><span class="pre">run_pipeline_bonds_processor()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.data_collection.data_integration">pys.data_collection.data_integration module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.data_integration.DataIntegrator"><code class="docutils literal notranslate"><span class="pre">DataIntegrator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.data_integration.DataIntegrator.load_multiple_tickers"><code class="docutils literal notranslate"><span class="pre">DataIntegrator.load_multiple_tickers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.data_integration.DataIntegrator.load_ticker_data"><code class="docutils literal notranslate"><span class="pre">DataIntegrator.load_ticker_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.data_integration.DataIntegrator.run_pipeline"><code class="docutils literal notranslate"><span class="pre">DataIntegrator.run_pipeline()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.data_integration.run_pipeline_integration"><code class="docutils literal notranslate"><span class="pre">run_pipeline_integration()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.data_collection.fundamental_data">pys.data_collection.fundamental_data module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.fundamental_data.FundamentalPipeline"><code class="docutils literal notranslate"><span class="pre">FundamentalPipeline</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.fundamental_data.FundamentalPipeline.analyze_common_indicators"><code class="docutils literal notranslate"><span class="pre">FundamentalPipeline.analyze_common_indicators()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.fundamental_data.FundamentalPipeline.process_tickers"><code class="docutils literal notranslate"><span class="pre">FundamentalPipeline.process_tickers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.fundamental_data.FundamentalPipeline.save_data"><code class="docutils literal notranslate"><span class="pre">FundamentalPipeline.save_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.fundamental_data.FundamentalPipeline.visualize_common_indicators"><code class="docutils literal notranslate"><span class="pre">FundamentalPipeline.visualize_common_indicators()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.fundamental_data.SmartLabYearlyParser"><code class="docutils literal notranslate"><span class="pre">SmartLabYearlyParser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.fundamental_data.SmartLabYearlyParser.clean_table"><code class="docutils literal notranslate"><span class="pre">SmartLabYearlyParser.clean_table()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.fundamental_data.SmartLabYearlyParser.fetch_page"><code class="docutils literal notranslate"><span class="pre">SmartLabYearlyParser.fetch_page()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.fundamental_data.SmartLabYearlyParser.parse_yearly_tables"><code class="docutils literal notranslate"><span class="pre">SmartLabYearlyParser.parse_yearly_tables()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.fundamental_data.SmartLabYearlyParser.preprocess_dataframe"><code class="docutils literal notranslate"><span class="pre">SmartLabYearlyParser.preprocess_dataframe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.fundamental_data.SmartLabYearlyParser.to_float"><code class="docutils literal notranslate"><span class="pre">SmartLabYearlyParser.to_float()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.fundamental_data.run_pipeline_fundamental"><code class="docutils literal notranslate"><span class="pre">run_pipeline_fundamental()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.data_collection.kbd">pys.data_collection.kbd module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.kbd.KBDDownloader"><code class="docutils literal notranslate"><span class="pre">KBDDownloader</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.kbd.KBDDownloader.get_kbd"><code class="docutils literal notranslate"><span class="pre">KBDDownloader.get_kbd()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.kbd.run_pipeline_kbd_parser"><code class="docutils literal notranslate"><span class="pre">run_pipeline_kbd_parser()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.data_collection.kbd_analyzer">pys.data_collection.kbd_analyzer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.kbd_analyzer.KBDAnalyzer"><code class="docutils literal notranslate"><span class="pre">KBDAnalyzer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.kbd_analyzer.KBDAnalyzer.get_bonds_recommendations"><code class="docutils literal notranslate"><span class="pre">KBDAnalyzer.get_bonds_recommendations()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.kbd_analyzer.KBDAnalyzer.get_comprehensive_recommendations"><code class="docutils literal notranslate"><span class="pre">KBDAnalyzer.get_comprehensive_recommendations()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.kbd_analyzer.KBDAnalyzer.get_latest_kbd_metrics"><code class="docutils literal notranslate"><span class="pre">KBDAnalyzer.get_latest_kbd_metrics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.kbd_analyzer.KBDAnalyzer.get_optimal_weighting_strategy"><code class="docutils literal notranslate"><span class="pre">KBDAnalyzer.get_optimal_weighting_strategy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.kbd_analyzer.KBDAnalyzer.visualize_kbd"><code class="docutils literal notranslate"><span class="pre">KBDAnalyzer.visualize_kbd()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.data_collection.market_cap">pys.data_collection.market_cap module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.market_cap.MarketCapParser"><code class="docutils literal notranslate"><span class="pre">MarketCapParser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_cap.MarketCapParser.run_pipeline_market_cap"><code class="docutils literal notranslate"><span class="pre">MarketCapParser.run_pipeline_market_cap()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.market_cap.run_pipeline_market_cap"><code class="docutils literal notranslate"><span class="pre">run_pipeline_market_cap()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.data_collection.market_data">pys.data_collection.market_data module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.market_data.DataStorage"><code class="docutils literal notranslate"><span class="pre">DataStorage</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.DataStorage.extract_raw_data"><code class="docutils literal notranslate"><span class="pre">DataStorage.extract_raw_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.DataStorage.get_missing_date_ranges"><code class="docutils literal notranslate"><span class="pre">DataStorage.get_missing_date_ranges()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.DataStorage.get_ticker_processed_path"><code class="docutils literal notranslate"><span class="pre">DataStorage.get_ticker_processed_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.DataStorage.get_ticker_raw_path"><code class="docutils literal notranslate"><span class="pre">DataStorage.get_ticker_raw_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.DataStorage.load_processed_data"><code class="docutils literal notranslate"><span class="pre">DataStorage.load_processed_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.DataStorage.load_raw_csv_files"><code class="docutils literal notranslate"><span class="pre">DataStorage.load_raw_csv_files()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.DataStorage.save_processed_data"><code class="docutils literal notranslate"><span class="pre">DataStorage.save_processed_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.DataStorage.store_raw_data"><code class="docutils literal notranslate"><span class="pre">DataStorage.store_raw_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.market_data.MarketDataManager"><code class="docutils literal notranslate"><span class="pre">MarketDataManager</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.MarketDataManager.get_data"><code class="docutils literal notranslate"><span class="pre">MarketDataManager.get_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.MarketDataManager.get_data_for_multiple_tickers"><code class="docutils literal notranslate"><span class="pre">MarketDataManager.get_data_for_multiple_tickers()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.market_data.MarketDataPipeline"><code class="docutils literal notranslate"><span class="pre">MarketDataPipeline</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.MarketDataPipeline.run"><code class="docutils literal notranslate"><span class="pre">MarketDataPipeline.run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.market_data.TimeframeConverter"><code class="docutils literal notranslate"><span class="pre">TimeframeConverter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.TimeframeConverter.resample_ohlcv"><code class="docutils literal notranslate"><span class="pre">TimeframeConverter.resample_ohlcv()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.market_data.TinkoffDataDownloader"><code class="docutils literal notranslate"><span class="pre">TinkoffDataDownloader</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.TinkoffDataDownloader.download_for_ticker"><code class="docutils literal notranslate"><span class="pre">TinkoffDataDownloader.download_for_ticker()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.TinkoffDataDownloader.get_correct_figi"><code class="docutils literal notranslate"><span class="pre">TinkoffDataDownloader.get_correct_figi()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.TinkoffDataDownloader.get_figi"><code class="docutils literal notranslate"><span class="pre">TinkoffDataDownloader.get_figi()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.TinkoffDataDownloader.get_isin"><code class="docutils literal notranslate"><span class="pre">TinkoffDataDownloader.get_isin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.TinkoffDataDownloader.get_uid"><code class="docutils literal notranslate"><span class="pre">TinkoffDataDownloader.get_uid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.TinkoffDataDownloader.initialize_instruments"><code class="docutils literal notranslate"><span class="pre">TinkoffDataDownloader.initialize_instruments()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.market_data.TinkoffDataDownloader.is_figi_correct"><code class="docutils literal notranslate"><span class="pre">TinkoffDataDownloader.is_figi_correct()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.market_data.run_pipeline_market"><code class="docutils literal notranslate"><span class="pre">run_pipeline_market()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.data_collection.news_pipeline">pys.data_collection.news_pipeline module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.news_pipeline.NewsPipeline"><code class="docutils literal notranslate"><span class="pre">NewsPipeline</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.news_pipeline.NewsPipeline.run_pipeline"><code class="docutils literal notranslate"><span class="pre">NewsPipeline.run_pipeline()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.news_pipeline.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.news_pipeline.merge_with_existing"><code class="docutils literal notranslate"><span class="pre">merge_with_existing()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.news_pipeline.save_events_data"><code class="docutils literal notranslate"><span class="pre">save_events_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.news_pipeline.save_sentiment_data"><code class="docutils literal notranslate"><span class="pre">save_sentiment_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.news_pipeline.update_daily_sentiment"><code class="docutils literal notranslate"><span class="pre">update_daily_sentiment()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.data_collection.private_info">pys.data_collection.private_info module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.data_collection.tech_analysis">pys.data_collection.tech_analysis module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.tech_analysis.TechAnalysisPipeline"><code class="docutils literal notranslate"><span class="pre">TechAnalysisPipeline</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.tech_analysis.TechAnalysisPipeline.create_summary_report"><code class="docutils literal notranslate"><span class="pre">TechAnalysisPipeline.create_summary_report()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.tech_analysis.TechAnalysisPipeline.run_pipeline"><code class="docutils literal notranslate"><span class="pre">TechAnalysisPipeline.run_pipeline()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.tech_analysis.run_pipeline_technical"><code class="docutils literal notranslate"><span class="pre">run_pipeline_technical()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.data_collection.technical_indicators">pys.data_collection.technical_indicators module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pys.data_collection.technical_indicators.TechnicalIndicators"><code class="docutils literal notranslate"><span class="pre">TechnicalIndicators</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.technical_indicators.TechnicalIndicators.calculate_indicators"><code class="docutils literal notranslate"><span class="pre">TechnicalIndicators.calculate_indicators()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.technical_indicators.TechnicalIndicators.load_data"><code class="docutils literal notranslate"><span class="pre">TechnicalIndicators.load_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.technical_indicators.TechnicalIndicators.plot_macd"><code class="docutils literal notranslate"><span class="pre">TechnicalIndicators.plot_macd()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pys.data_collection.technical_indicators.TechnicalIndicators.plot_price_with_indicators"><code class="docutils literal notranslate"><span class="pre">TechnicalIndicators.plot_price_with_indicators()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pys.data_collection">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pys.porfolio_optimization.html">pys.porfolio_optimization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pys.improved_pipeline.html">pys.improved_pipeline package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">bRECs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pys.html">pys package</a></li>
+      <li class="breadcrumb-item active">pys.data_collection package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/pys.data_collection.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pys-data-collection-package">
+<h1>pys.data_collection package<a class="headerlink" href="#pys-data-collection-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pys.data_collection.news_processor.html">pys.data_collection.news_processor package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.news_processor.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.news_processor.html#module-pys.data_collection.news_processor.event_detector">pys.data_collection.news_processor.event_detector module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.event_detector.EventDetector"><code class="docutils literal notranslate"><span class="pre">EventDetector</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.event_detector.EventDetector.assess_event_impact"><code class="docutils literal notranslate"><span class="pre">EventDetector.assess_event_impact()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.event_detector.EventDetector.create_event_time_series"><code class="docutils literal notranslate"><span class="pre">EventDetector.create_event_time_series()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.event_detector.EventDetector.detect_events"><code class="docutils literal notranslate"><span class="pre">EventDetector.detect_events()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.news_processor.html#module-pys.data_collection.news_processor.keywords">pys.data_collection.news_processor.keywords module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.news_processor.html#module-pys.data_collection.news_processor.news_feature_extractor">pys.data_collection.news_processor.news_feature_extractor module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_feature_extractor.NewsFeatureExtractor"><code class="docutils literal notranslate"><span class="pre">NewsFeatureExtractor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_feature_extractor.NewsFeatureExtractor.create_time_series_features"><code class="docutils literal notranslate"><span class="pre">NewsFeatureExtractor.create_time_series_features()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_feature_extractor.NewsFeatureExtractor.create_topic_features"><code class="docutils literal notranslate"><span class="pre">NewsFeatureExtractor.create_topic_features()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_feature_extractor.NewsFeatureExtractor.extract_keyword_mentions"><code class="docutils literal notranslate"><span class="pre">NewsFeatureExtractor.extract_keyword_mentions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_feature_extractor.NewsFeatureExtractor.extract_topics_lda"><code class="docutils literal notranslate"><span class="pre">NewsFeatureExtractor.extract_topics_lda()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.news_processor.html#module-pys.data_collection.news_processor.news_integration">pys.data_collection.news_processor.news_integration module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_integration.NewsIntegration"><code class="docutils literal notranslate"><span class="pre">NewsIntegration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_integration.NewsIntegration.convert_news_to_views"><code class="docutils literal notranslate"><span class="pre">NewsIntegration.convert_news_to_views()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_integration.NewsIntegration.create_ml_features"><code class="docutils literal notranslate"><span class="pre">NewsIntegration.create_ml_features()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_integration.NewsIntegration.merge_news_with_price_data"><code class="docutils literal notranslate"><span class="pre">NewsIntegration.merge_news_with_price_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.news_processor.html#module-pys.data_collection.news_processor.news_preprocessor">pys.data_collection.news_processor.news_preprocessor module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_preprocessor.NewsPreprocessor"><code class="docutils literal notranslate"><span class="pre">NewsPreprocessor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_preprocessor.NewsPreprocessor.clean_text"><code class="docutils literal notranslate"><span class="pre">NewsPreprocessor.clean_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_preprocessor.NewsPreprocessor.process_all_tickers"><code class="docutils literal notranslate"><span class="pre">NewsPreprocessor.process_all_tickers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_preprocessor.NewsPreprocessor.process_news_file"><code class="docutils literal notranslate"><span class="pre">NewsPreprocessor.process_news_file()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_preprocessor.NewsPreprocessor.process_ticker_news"><code class="docutils literal notranslate"><span class="pre">NewsPreprocessor.process_ticker_news()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.news_processor.html#module-pys.data_collection.news_processor.news_visualizer">pys.data_collection.news_processor.news_visualizer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_visualizer.NewsVisualizer"><code class="docutils literal notranslate"><span class="pre">NewsVisualizer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_visualizer.NewsVisualizer.create_news_dashboard"><code class="docutils literal notranslate"><span class="pre">NewsVisualizer.create_news_dashboard()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_visualizer.NewsVisualizer.plot_event_distribution"><code class="docutils literal notranslate"><span class="pre">NewsVisualizer.plot_event_distribution()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_visualizer.NewsVisualizer.plot_sentiment_by_event_type"><code class="docutils literal notranslate"><span class="pre">NewsVisualizer.plot_sentiment_by_event_type()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_visualizer.NewsVisualizer.plot_sentiment_distribution"><code class="docutils literal notranslate"><span class="pre">NewsVisualizer.plot_sentiment_distribution()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_visualizer.NewsVisualizer.plot_sentiment_time_series"><code class="docutils literal notranslate"><span class="pre">NewsVisualizer.plot_sentiment_time_series()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_visualizer.NewsVisualizer.visualize_events"><code class="docutils literal notranslate"><span class="pre">NewsVisualizer.visualize_events()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.news_visualizer.NewsVisualizer.visualize_sentiment"><code class="docutils literal notranslate"><span class="pre">NewsVisualizer.visualize_sentiment()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.news_processor.html#module-pys.data_collection.news_processor.sentiment_analysis">pys.data_collection.news_processor.sentiment_analysis module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer"><code class="docutils literal notranslate"><span class="pre">SentimentAnalyzer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_news_dataframe"><code class="docutils literal notranslate"><span class="pre">SentimentAnalyzer.analyze_news_dataframe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_stock_impact"><code class="docutils literal notranslate"><span class="pre">SentimentAnalyzer.analyze_stock_impact()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_text"><code class="docutils literal notranslate"><span class="pre">SentimentAnalyzer.analyze_text()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_text_advanced_ru"><code class="docutils literal notranslate"><span class="pre">SentimentAnalyzer.analyze_text_advanced_ru()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_text_simple_ru"><code class="docutils literal notranslate"><span class="pre">SentimentAnalyzer.analyze_text_simple_ru()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_text_vader"><code class="docutils literal notranslate"><span class="pre">SentimentAnalyzer.analyze_text_vader()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_ticker_news"><code class="docutils literal notranslate"><span class="pre">SentimentAnalyzer.analyze_ticker_news()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.create_daily_sentiment_series"><code class="docutils literal notranslate"><span class="pre">SentimentAnalyzer.create_daily_sentiment_series()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.news_processor.html#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.set_cbr_meetings"><code class="docutils literal notranslate"><span class="pre">SentimentAnalyzer.set_cbr_meetings()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.news_processor.html#module-pys.data_collection.news_processor">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-pys.data_collection.bonds_kbd_pipeline">
+<span id="pys-data-collection-bonds-kbd-pipeline-module"></span><h2>pys.data_collection.bonds_kbd_pipeline module<a class="headerlink" href="#module-pys.data_collection.bonds_kbd_pipeline" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_kbd_pipeline.create_combined_report">
+<span class="sig-prename descclassname"><span class="pre">pys.data_collection.bonds_kbd_pipeline.</span></span><span class="sig-name descname"><span class="pre">create_combined_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bond_results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kbd_results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reports_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_kbd_pipeline.create_combined_report" title="Link to this definition"></a></dt>
+<dd><p>Создать комбинированный отчет по результатам анализа с информацией об адаптации параметров</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bond_results</strong> -- результаты выбора облигаций</p></li>
+<li><p><strong>kbd_results</strong> -- результаты анализа КБД</p></li>
+<li><p><strong>reports_dir</strong> -- директория для сохранения отчета</p></li>
+<li><p><strong>run_id</strong> -- идентификатор запуска</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>путь к созданному отчету</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_kbd_pipeline.run_bond_selection_with_kbd">
+<span class="sig-prename descclassname"><span class="pre">pys.data_collection.bonds_kbd_pipeline.</span></span><span class="sig-name descname"><span class="pre">run_bond_selection_with_kbd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bonds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_bonds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weighting_strategy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">portfolio_stability</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_kbd_recommendations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_kbd_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy_profile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'balanced'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kbd_yield_adjustment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kbd_duration_flexibility</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_adjustment_iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">excluded_issuers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kbd_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dirs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_kbd_pipeline.run_bond_selection_with_kbd" title="Link to this definition"></a></dt>
+<dd><p>Полный пайплайн для выбора облигаций с учетом кривой бескупонной доходности.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_path</strong> (<em>str</em>) -- базовый путь проекта.</p></li>
+<li><p><strong>dataset_path</strong> (<em>str</em>) -- путь к датасету облигаций.</p></li>
+<li><p><strong>n_bonds</strong> (<em>int</em>) -- целевое количество облигаций в портфеле.</p></li>
+<li><p><strong>min_bonds</strong> (<em>int</em>) -- минимальное количество облигаций для диверсификации.</p></li>
+<li><p><strong>weighting_strategy</strong> (<em>str</em><em>, </em><em>optional</em>) -- стратегия взвешивания (None для автовыбора на основе КБД).</p></li>
+<li><p><strong>portfolio_stability</strong> (<em>float</em>) -- стабильность портфеля (0.0-1.0).</p></li>
+<li><p><strong>use_kbd_recommendations</strong> (<em>bool</em>) -- использовать ли рекомендации на основе КБД.</p></li>
+<li><p><strong>override_params</strong> (<em>dict</em>) -- словарь для переопределения параметров.</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em> or </em><em>datetime</em><em>, </em><em>optional</em>) -- начальная дата для КБД (если None, используется год назад).</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em> or </em><em>datetime</em><em>, </em><em>optional</em>) -- конечная дата для КБД (если None, используется текущая дата).</p></li>
+<li><p><strong>update_kbd_data</strong> (<em>bool</em><em>, </em><em>optional</em>) -- обновлять ли данные КБД.</p></li>
+<li><p><strong>strategy_profile</strong> (<em>str</em>) -- профиль стратегии ('conservative', 'balanced', 'aggressive').</p></li>
+<li><p><strong>kbd_yield_adjustment</strong> (<em>float</em>) -- корректировка минимальной доходности (± процентные пункты).</p></li>
+<li><p><strong>kbd_duration_flexibility</strong> (<em>float</em>) -- множитель для расширения диапазона дюрации.</p></li>
+<li><p><strong>max_adjustment_iterations</strong> (<em>int</em>) -- максимальное число итераций адаптивной настройки.</p></li>
+<li><p><strong>excluded_issuers</strong> (<em>list</em><em>, </em><em>optional</em>) -- список исключаемых эмитентов.</p></li>
+<li><p><strong>output_format</strong> (<em>str</em>) -- формат выходных данных.</p></li>
+<li><p><strong>kbd_data</strong> (<em>DataFrame</em><em>, </em><em>optional</em>) -- предварительно загруженные данные КБД.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Результаты работы пайплайна.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pys.data_collection.bonds_kbd_strategies">
+<span id="pys-data-collection-bonds-kbd-strategies-module"></span><h2>pys.data_collection.bonds_kbd_strategies module<a class="headerlink" href="#module-pys.data_collection.bonds_kbd_strategies" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_kbd_strategies.BondStrategy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.bonds_kbd_strategies.</span></span><span class="sig-name descname"><span class="pre">BondStrategy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_kbd_strategies.BondStrategy" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code>, <a class="reference internal" href="pys.utils.html#pys.utils.logger.BaseLogger" title="pys.utils.logger.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
+<p>Абстрактный базовый класс для стратегий выбора облигаций</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_kbd_strategies.BondStrategy.get_filter_params">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_filter_params</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_kbd_strategies.BondStrategy.get_filter_params" title="Link to this definition"></a></dt>
+<dd><p>Получить параметры фильтрации облигаций</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_kbd_strategies.BondStrategy.get_portfolio_params">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_portfolio_params</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_kbd_strategies.BondStrategy.get_portfolio_params" title="Link to this definition"></a></dt>
+<dd><p>Получить параметры формирования портфеля</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_kbd_strategies.BondStrategy.rank_bonds">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rank_bonds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bonds_df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_kbd_strategies.BondStrategy.rank_bonds" title="Link to this definition"></a></dt>
+<dd><p>Ранжировать облигации по предпочтительности</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_kbd_strategies.KBDRateExpectationStrategy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.bonds_kbd_strategies.</span></span><span class="sig-name descname"><span class="pre">KBDRateExpectationStrategy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kbd_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'medium'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_kbd_strategies.KBDRateExpectationStrategy" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pys.data_collection.bonds_kbd_strategies.BondStrategy" title="pys.data_collection.bonds_kbd_strategies.BondStrategy"><code class="xref py py-class docutils literal notranslate"><span class="pre">BondStrategy</span></code></a></p>
+<p>Стратегия на основе ожиданий по процентным ставкам,
+определяемым из кривой бескупонной доходности</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_kbd_strategies.KBDRateExpectationStrategy.get_filter_params">
+<span class="sig-name descname"><span class="pre">get_filter_params</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_kbd_strategies.KBDRateExpectationStrategy.get_filter_params" title="Link to this definition"></a></dt>
+<dd><p>Получить параметры фильтрации облигаций на основе КБД</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_kbd_strategies.KBDRateExpectationStrategy.get_portfolio_params">
+<span class="sig-name descname"><span class="pre">get_portfolio_params</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_kbd_strategies.KBDRateExpectationStrategy.get_portfolio_params" title="Link to this definition"></a></dt>
+<dd><p>Получить параметры формирования портфеля</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_kbd_strategies.KBDRateExpectationStrategy.rank_bonds">
+<span class="sig-name descname"><span class="pre">rank_bonds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bonds_df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_kbd_strategies.KBDRateExpectationStrategy.rank_bonds" title="Link to this definition"></a></dt>
+<dd><p>Ранжировать облигации на основе КБД и толерантности к риску</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bonds_df</strong> -- DataFrame с облигациями</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с добавленным столбцом стратегического ранга</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pys.data_collection.bonds_parser">
+<span id="pys-data-collection-bonds-parser-module"></span><h2>pys.data_collection.bonds_parser module<a class="headerlink" href="#module-pys.data_collection.bonds_parser" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.bonds_parser.</span></span><span class="sig-name descname"><span class="pre">MOEXBondHistoricalParser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_ttl_days</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pys.utils.html#pys.utils.logger.BaseLogger" title="pys.utils.logger.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
+<p>Парсер для получения исторических данных по облигациям Московской биржи
+с возможностью применения различных фильтров.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser.API_DELAY">
+<span class="sig-name descname"><span class="pre">API_DELAY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.2</span></em><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.API_DELAY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser.BASE_DATA_DIR">
+<span class="sig-name descname"><span class="pre">BASE_DATA_DIR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/BONDS/moex'</span></em><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.BASE_DATA_DIR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser.BOARD_GROUPS">
+<span class="sig-name descname"><span class="pre">BOARD_GROUPS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[58,</span> <span class="pre">193,</span> <span class="pre">105,</span> <span class="pre">77,</span> <span class="pre">207,</span> <span class="pre">167,</span> <span class="pre">245]</span></em><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.BOARD_GROUPS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser.CACHE_DIR">
+<span class="sig-name descname"><span class="pre">CACHE_DIR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/BONDS/moex/moex_cache'</span></em><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.CACHE_DIR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser.analyze_bonds_continuity">
+<span class="sig-name descname"><span class="pre">analyze_bonds_continuity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to_csv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.analyze_bonds_continuity" title="Link to this definition"></a></dt>
+<dd><p>Анализирует непрерывность данных по облигациям в заданном периоде</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_date</strong> -- начало периода</p></li>
+<li><p><strong>end_date</strong> -- конец периода</p></li>
+<li><p><strong>save_to_csv</strong> -- сохранять ли результаты в CSV</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Кортеж (полное_пересечение, статистика_по_облигациям)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser.analyze_continuity_from_consolidated">
+<span class="sig-name descname"><span class="pre">analyze_continuity_from_consolidated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_to_csv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.analyze_continuity_from_consolidated" title="Link to this definition"></a></dt>
+<dd><p>Analyzes bond continuity from a consolidated dataset file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset_path</strong> -- Path to the period_data.csv file</p></li>
+<li><p><strong>save_to_csv</strong> -- Whether to save results to CSV</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tuple of (continuous_bonds, bond_stats)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser.clear_cache">
+<span class="sig-name descname"><span class="pre">clear_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">days_old</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.clear_cache" title="Link to this definition"></a></dt>
+<dd><p>Очистить кэш</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>days_old</strong> -- удалить файлы старше указанного количества дней (None = удалить все)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser.filter_existing_data">
+<span class="sig-name descname"><span class="pre">filter_existing_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">filter_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.filter_existing_data" title="Link to this definition"></a></dt>
+<dd><p>Фильтровать существующие данные без обращения к API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>date</strong> -- дата данных для фильтрации</p></li>
+<li><p><strong>**filter_params</strong> -- параметры фильтрации</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Отфильтрованные данные или None, если данные не найдены</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser.find_optimal_threshold">
+<span class="sig-name descname"><span class="pre">find_optimal_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_bonds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">99</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.find_optimal_threshold" title="Link to this definition"></a></dt>
+<dd><p>Находит оптимальный порог непрерывности данных для создания датасета</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_date</strong> -- начало периода</p></li>
+<li><p><strong>end_date</strong> -- конец периода</p></li>
+<li><p><strong>min_bonds</strong> -- минимальное количество облигаций, которое должно быть в датасете</p></li>
+<li><p><strong>max_threshold</strong> -- максимальный порог непрерывности (в процентах)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Оптимальный порог непрерывности (в процентах)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser.find_optimal_threshold_from_consolidated">
+<span class="sig-name descname"><span class="pre">find_optimal_threshold_from_consolidated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_bonds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">99</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.find_optimal_threshold_from_consolidated" title="Link to this definition"></a></dt>
+<dd><p>Find optimal continuity threshold from consolidated dataset</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser.generate_complete_dataset">
+<span class="sig-name descname"><span class="pre">generate_complete_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_continuous</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.generate_complete_dataset" title="Link to this definition"></a></dt>
+<dd><p>Генерирует полный датасет для облигаций за указанный период</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_date</strong> -- начало периода</p></li>
+<li><p><strong>end_date</strong> -- конец периода</p></li>
+<li><p><strong>filter_continuous</strong> -- использовать только облигации с непрерывными данными</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с полными данными</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser.generate_dataset_with_threshold">
+<span class="sig-name descname"><span class="pre">generate_dataset_with_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">continuity_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">90</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.generate_dataset_with_threshold" title="Link to this definition"></a></dt>
+<dd><p>Генерирует датасет с облигациями, имеющими указанный порог непрерывности</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_date</strong> -- начало периода</p></li>
+<li><p><strong>end_date</strong> -- конец периода</p></li>
+<li><p><strong>continuity_threshold</strong> -- порог непрерывности (в процентах)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с данными или None в случае ошибки</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser.get_available_bonds">
+<span class="sig-name descname"><span class="pre">get_available_bonds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yield_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">100)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">price_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">200)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">360)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volume_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bond_volume_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_qualified_investors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coupon_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">emitent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">issue_year_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">known_coupon_payments</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_existing_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_all_csv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.get_available_bonds" title="Link to this definition"></a></dt>
+<dd><p>Получить доступные облигации на указанную дату с применением фильтров</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>date</strong> -- дата, на которую нужно получить список облигаций</p></li>
+<li><p><strong>yield_range</strong> -- диапазон доходности (%)</p></li>
+<li><p><strong>price_range</strong> -- диапазон цены (%)</p></li>
+<li><p><strong>duration_range</strong> -- диапазон дюрации (месяцы)</p></li>
+<li><p><strong>volume_threshold</strong> -- минимальный объем сделок в день (шт)</p></li>
+<li><p><strong>bond_volume_threshold</strong> -- минимальный совокупный объем сделок (шт)</p></li>
+<li><p><strong>is_qualified_investors</strong> -- требуется ли квалификация инвестора</p></li>
+<li><p><strong>coupon_type</strong> -- тип купона (фиксированный, плавающий и т.д.)</p></li>
+<li><p><strong>emitent</strong> -- эмитент облигации</p></li>
+<li><p><strong>issue_year_range</strong> -- диапазон годов выпуска</p></li>
+<li><p><strong>known_coupon_payments</strong> -- требуется ли наличие всех известных купонных выплат</p></li>
+<li><p><strong>use_existing_data</strong> -- использовать существующие CSV-данные если доступны</p></li>
+<li><p><strong>load_all_csv</strong> -- загружать ли все облигации в all.csv</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Список словарей с информацией об облигациях</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser.get_bonds_for_period">
+<span class="sig-name descname"><span class="pre">get_bonds_for_period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_non_trading_days</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_all_csv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">filter_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.get_bonds_for_period" title="Link to this definition"></a></dt>
+<dd><p>Получить облигации за указанный период с применением фильтров</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_date</strong> -- начало периода</p></li>
+<li><p><strong>end_date</strong> -- конец периода</p></li>
+<li><p><strong>include_non_trading_days</strong> -- включать ли нерабочие дни (выходные и праздники)</p></li>
+<li><p><strong>**filter_params</strong> -- параметры фильтрации</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Словарь с датами и списками облигаций</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser.get_latest_bonds">
+<span class="sig-name descname"><span class="pre">get_latest_bonds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">filter_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.get_latest_bonds" title="Link to this definition"></a></dt>
+<dd><p>Получить актуальные облигации на последний торговый день</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**filter_params</strong> -- параметры фильтрации (см. get_available_bonds)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Список облигаций</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.MOEXBondHistoricalParser.parse_interval">
+<span class="sig-name descname"><span class="pre">parse_interval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_non_trading_days</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analyze_continuity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_all_csv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear_previous_loads</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">filter_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_parser.MOEXBondHistoricalParser.parse_interval" title="Link to this definition"></a></dt>
+<dd><p>Парсить данные за указанный интервал</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_date</strong> -- начальная дата интервала (по умолчанию 1 января 2024)</p></li>
+<li><p><strong>end_date</strong> -- конечная дата интервала (по умолчанию текущий торговый день)</p></li>
+<li><p><strong>include_non_trading_days</strong> -- включать ли нерабочие дни</p></li>
+<li><p><strong>analyze_continuity</strong> -- выполнять ли анализ непрерывности данных</p></li>
+<li><p><strong>load_all_csv</strong> -- загружать ли все облигации в all.csv (по умолчанию False)</p></li>
+<li><p><strong>clear_previous_loads</strong> -- удалить предыдущие загрузки (по умолчанию False)</p></li>
+<li><p><strong>**filter_params</strong> -- параметры фильтрации</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Словарь с датами и списками облигаций</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_parser.run_bond_pipeline">
+<span class="sig-prename descclassname"><span class="pre">pys.data_collection.bonds_parser.</span></span><span class="sig-name descname"><span class="pre">run_bond_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_reparse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_bonds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">99</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">filter_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_parser.run_bond_pipeline" title="Link to this definition"></a></dt>
+<dd><p>Comprehensive bond analysis pipeline that's resilient to restarts</p>
+</dd></dl>
+
+</section>
+<section id="module-pys.data_collection.bonds_processor">
+<span id="pys-data-collection-bonds-processor-module"></span><h2>pys.data_collection.bonds_processor module<a class="headerlink" href="#module-pys.data_collection.bonds_processor" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_processor.BondsProcessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.bonds_processor.</span></span><span class="sig-name descname"><span class="pre">BondsProcessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bonds_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/bonds_csv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direct_data_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_processor.BondsProcessor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pys.utils.html#pys.utils.logger.BaseLogger" title="pys.utils.logger.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_processor.BondsProcessor.calculate_bond_metrics">
+<span class="sig-name descname"><span class="pre">calculate_bond_metrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bonds_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">score_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_processor.BondsProcessor.calculate_bond_metrics" title="Link to this definition"></a></dt>
+<dd><p>Calculate additional bond metrics</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_processor.BondsProcessor.generate_portfolio_analysis">
+<span class="sig-name descname"><span class="pre">generate_portfolio_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">portfolio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_processor.BondsProcessor.generate_portfolio_analysis" title="Link to this definition"></a></dt>
+<dd><p>Generate detailed portfolio analysis and visualizations</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_processor.BondsProcessor.get_bonds_for_portfolio">
+<span class="sig-name descname"><span class="pre">get_bonds_for_portfolio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_bonds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weighting_strategy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inverse_duration'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">portfolio_stability</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_processor.BondsProcessor.get_bonds_for_portfolio" title="Link to this definition"></a></dt>
+<dd><p>Get top recommended bonds for portfolio inclusion</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_processor.BondsProcessor.load_and_process_all_bonds">
+<span class="sig-name descname"><span class="pre">load_and_process_all_bonds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">date_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_latest_snapshot_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_yield</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_yield</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_expiration_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_liquidity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">excluded_issuers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">excluded_bonds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_processor.BondsProcessor.load_and_process_all_bonds" title="Link to this definition"></a></dt>
+<dd><p>Load and process all bond files with filter criteria</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_processor.BondsProcessor.load_previous_recommendations">
+<span class="sig-name descname"><span class="pre">load_previous_recommendations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_processor.BondsProcessor.load_previous_recommendations" title="Link to this definition"></a></dt>
+<dd><p>Load previous bond recommendations if available</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_processor.BondsProcessor.process_direct_data">
+<span class="sig-name descname"><span class="pre">process_direct_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_yield</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_yield</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">22.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_expiration_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_liquidity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">excluded_issuers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">excluded_bonds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_latest_snapshot_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">score_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_processor.BondsProcessor.process_direct_data" title="Link to this definition"></a></dt>
+<dd><p>Обработка данных напрямую из файла датасета</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>min_yield</strong> -- минимальная доходность (%)</p></li>
+<li><p><strong>max_yield</strong> -- максимальная доходность (%)</p></li>
+<li><p><strong>min_duration</strong> -- минимальная дюрация (лет)</p></li>
+<li><p><strong>max_duration</strong> -- максимальная дюрация (лет)</p></li>
+<li><p><strong>max_expiration_date</strong> -- максимальная дата погашения</p></li>
+<li><p><strong>min_liquidity</strong> -- минимальный объем торгов</p></li>
+<li><p><strong>excluded_issuers</strong> -- список исключаемых эмитентов</p></li>
+<li><p><strong>excluded_bonds</strong> -- список исключаемых кодов облигаций</p></li>
+<li><p><strong>include_only</strong> -- список включаемых кодов облигаций</p></li>
+<li><p><strong>use_latest_snapshot_only</strong> -- использовать только последний снапшот данных</p></li>
+<li><p><strong>score_weights</strong> -- словарь весов для расчета скора облигаций</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с обработанными облигациями или None в случае ошибки</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_processor.BondsProcessor.visualize_bond_universe">
+<span class="sig-name descname"><span class="pre">visualize_bond_universe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_processor.BondsProcessor.visualize_bond_universe" title="Link to this definition"></a></dt>
+<dd><p>Create visualization of the bond universe</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.data_collection.bonds_processor.run_pipeline_bonds_processor">
+<span class="sig-prename descclassname"><span class="pre">pys.data_collection.bonds_processor.</span></span><span class="sig-name descname"><span class="pre">run_pipeline_bonds_processor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_yield</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_yield</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">22.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">excluded_issuers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_latest_snapshot_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bonds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weighting_strategy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inverse_duration'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">portfolio_stability</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.bonds_processor.run_pipeline_bonds_processor" title="Link to this definition"></a></dt>
+<dd><p>Полный пайплайн для обработки облигаций и создания оптимального портфеля.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_path</strong> (<em>str</em>) -- Базовый путь к проекту</p></li>
+<li><p><strong>dataset_path</strong> (<em>str</em><em>, </em><em>optional</em>) -- Путь к файлу с датасетом облигаций</p></li>
+<li><p><strong>results_dir</strong> (<em>str</em><em>, </em><em>optional</em>) -- Директория для сохранения результатов</p></li>
+<li><p><strong>min_yield</strong> (<em>float</em><em>, </em><em>default=6.0</em>) -- Минимальная доходность для фильтрации</p></li>
+<li><p><strong>max_yield</strong> (<em>float</em><em>, </em><em>default=22.0</em>) -- Максимальная доходность для фильтрации</p></li>
+<li><p><strong>min_duration</strong> (<em>float</em><em>, </em><em>default=0.1</em>) -- Минимальная дюрация для фильтрации</p></li>
+<li><p><strong>max_duration</strong> (<em>float</em><em>, </em><em>default=5.0</em>) -- Максимальная дюрация для фильтрации</p></li>
+<li><p><strong>excluded_issuers</strong> (<em>list</em><em>, </em><em>optional</em>) -- Список эмитентов для исключения</p></li>
+<li><p><strong>included_issuers</strong> (<em>list</em><em>, </em><em>optional</em>) -- Список эмитентов для включения (имеет приоритет)</p></li>
+<li><p><strong>n_bonds</strong> (<em>int</em><em>, </em><em>default=5</em>) -- Количество облигаций в портфеле</p></li>
+<li><p><strong>weighting_strategy</strong> (<em>str</em><em>, </em><em>default='inverse_duration'</em>) -- Стратегия взвешивания портфеля</p></li>
+<li><p><strong>portfolio_stability</strong> (<em>float</em><em>, </em><em>default=0.7</em>) -- Коэффициент стабильности портфеля</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Результаты выполнения пайплайна, включая портфель и пути к сохраненным файлам</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pys.data_collection.data_integration">
+<span id="pys-data-collection-data-integration-module"></span><h2>pys.data_collection.data_integration module<a class="headerlink" href="#module-pys.data_collection.data_integration" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.data_integration.DataIntegrator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.data_integration.</span></span><span class="sig-name descname"><span class="pre">DataIntegrator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nan_fill_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'median'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.data_integration.DataIntegrator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pys.utils.html#pys.utils.logger.BaseLogger" title="pys.utils.logger.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.data_integration.DataIntegrator.load_multiple_tickers">
+<span class="sig-name descname"><span class="pre">load_multiple_tickers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tickers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.data_integration.DataIntegrator.load_multiple_tickers" title="Link to this definition"></a></dt>
+<dd><p>Загружает и объединяет данные для списка тикеров.</p>
+<dl class="simple">
+<dt>Параметры:</dt><dd><p>tickers - список тикеров (например, [&quot;SBER&quot;, &quot;GAZP&quot;, ...])</p>
+</dd>
+<dt>Возвращает:</dt><dd><p>overall_df - совокупный DataFrame, содержащий данные для всех тикеров с колонкой 'ticker'</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.data_integration.DataIntegrator.load_ticker_data">
+<span class="sig-name descname"><span class="pre">load_ticker_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.data_integration.DataIntegrator.load_ticker_data" title="Link to this definition"></a></dt>
+<dd><p>Загружает и интегрирует данные для одного тикера.</p>
+<dl class="simple">
+<dt>Параметры:</dt><dd><p>ticker - тикер актива (например, &quot;SBER&quot;)</p>
+</dd>
+<dt>Возвращает:</dt><dd><p>df - объединённый DataFrame с данными для данного тикера, содержащий колонку 'ticker'</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.data_integration.DataIntegrator.run_pipeline">
+<span class="sig-name descname"><span class="pre">run_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tickers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.data_integration.DataIntegrator.run_pipeline" title="Link to this definition"></a></dt>
+<dd><p>Запускает полный процесс загрузки, объединения данных и сохранения результата.</p>
+<dl class="simple">
+<dt>Параметры:</dt><dd><p>tickers (list): Список тикеров для обработки.
+output_path (str): Путь для сохранения объединенного CSV-файла.</p>
+</dd>
+<dt>Возвращает:</dt><dd><p>pd.DataFrame: Объединенный датасет или пустой DataFrame в случае ошибки.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.data_collection.data_integration.run_pipeline_integration">
+<span class="sig-prename descclassname"><span class="pre">pys.data_collection.data_integration.</span></span><span class="sig-name descname"><span class="pre">run_pipeline_integration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tickers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach/data/df.csv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'zero'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.data_integration.run_pipeline_integration" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pys.data_collection.fundamental_data">
+<span id="pys-data-collection-fundamental-data-module"></span><h2>pys.data_collection.fundamental_data module<a class="headerlink" href="#module-pys.data_collection.fundamental_data" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.fundamental_data.FundamentalPipeline">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.fundamental_data.</span></span><span class="sig-name descname"><span class="pre">FundamentalPipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">needed_prc_per_year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.fundamental_data.FundamentalPipeline" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pys.utils.html#pys.utils.logger.BaseLogger" title="pys.utils.logger.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.fundamental_data.FundamentalPipeline.analyze_common_indicators">
+<span class="sig-name descname"><span class="pre">analyze_common_indicators</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.fundamental_data.FundamentalPipeline.analyze_common_indicators" title="Link to this definition"></a></dt>
+<dd><p>Analyze and identify common indicators across tickers by year</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.fundamental_data.FundamentalPipeline.process_tickers">
+<span class="sig-name descname"><span class="pre">process_tickers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.fundamental_data.FundamentalPipeline.process_tickers" title="Link to this definition"></a></dt>
+<dd><p>Process a list of tickers by fetching and parsing their data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.fundamental_data.FundamentalPipeline.save_data">
+<span class="sig-name descname"><span class="pre">save_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">all_years</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">common_indicators_by_year</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.fundamental_data.FundamentalPipeline.save_data" title="Link to this definition"></a></dt>
+<dd><p>Save processed data to files for each ticker and year</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.fundamental_data.FundamentalPipeline.visualize_common_indicators">
+<span class="sig-name descname"><span class="pre">visualize_common_indicators</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">all_years</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">common_indicators_by_year</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.fundamental_data.FundamentalPipeline.visualize_common_indicators" title="Link to this definition"></a></dt>
+<dd><p>Create visualizations for common indicators across tickers by year</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.fundamental_data.SmartLabYearlyParser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.fundamental_data.</span></span><span class="sig-name descname"><span class="pre">SmartLabYearlyParser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'//Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">needed_prc_per_year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.fundamental_data.SmartLabYearlyParser" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pys.utils.html#pys.utils.logger.BaseLogger" title="pys.utils.logger.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.fundamental_data.SmartLabYearlyParser.clean_table">
+<span class="sig-name descname"><span class="pre">clean_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.fundamental_data.SmartLabYearlyParser.clean_table" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.fundamental_data.SmartLabYearlyParser.fetch_page">
+<span class="sig-name descname"><span class="pre">fetch_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.fundamental_data.SmartLabYearlyParser.fetch_page" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.fundamental_data.SmartLabYearlyParser.parse_yearly_tables">
+<span class="sig-name descname"><span class="pre">parse_yearly_tables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">soup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.fundamental_data.SmartLabYearlyParser.parse_yearly_tables" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.fundamental_data.SmartLabYearlyParser.preprocess_dataframe">
+<span class="sig-name descname"><span class="pre">preprocess_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.fundamental_data.SmartLabYearlyParser.preprocess_dataframe" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.fundamental_data.SmartLabYearlyParser.to_float">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_float</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.fundamental_data.SmartLabYearlyParser.to_float" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.data_collection.fundamental_data.run_pipeline_fundamental">
+<span class="sig-prename descclassname"><span class="pre">pys.data_collection.fundamental_data.</span></span><span class="sig-name descname"><span class="pre">run_pipeline_fundamental</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.fundamental_data.run_pipeline_fundamental" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pys.data_collection.kbd">
+<span id="pys-data-collection-kbd-module"></span><h2>pys.data_collection.kbd module<a class="headerlink" href="#module-pys.data_collection.kbd" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.kbd.KBDDownloader">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.kbd.</span></span><span class="sig-name descname"><span class="pre">KBDDownloader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/BONDS/kbd'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.kbd.KBDDownloader" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pys.utils.html#pys.utils.logger.BaseLogger" title="pys.utils.logger.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
+<p>Класс для загрузки данных кривой бескупонной доходности (КБД) с MOEX API</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.kbd.KBDDownloader.get_kbd">
+<span class="sig-name descname"><span class="pre">get_kbd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.kbd.KBDDownloader.get_kbd" title="Link to this definition"></a></dt>
+<dd><p>Получить данные КБД с MOEX API за указанный период и сохранить их в CSV</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_date</strong> -- Начальная дата в формате datetime</p></li>
+<li><p><strong>end_date</strong> -- Конечная дата в формате datetime</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с данными КБД или None в случае ошибки</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.data_collection.kbd.run_pipeline_kbd_parser">
+<span class="sig-prename descclassname"><span class="pre">pys.data_collection.kbd.</span></span><span class="sig-name descname"><span class="pre">run_pipeline_kbd_parser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.kbd.run_pipeline_kbd_parser" title="Link to this definition"></a></dt>
+<dd><p>Загружает данные КБД и возвращает их в виде DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_path</strong> (<em>str</em>) -- Базовый путь проекта.</p></li>
+<li><p><strong>start_date</strong> (<em>datetime или str</em>) -- Начальная дата (если None, используется год назад).</p></li>
+<li><p><strong>end_date</strong> (<em>datetime или str</em>) -- Конечная дата (если None, используется текущая дата).</p></li>
+<li><p><strong>update_data</strong> (<em>bool</em>) -- Обновлять ли данные с сервера MOEX.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Данные КБД или None в случае ошибки.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pys.data_collection.kbd_analyzer">
+<span id="pys-data-collection-kbd-analyzer-module"></span><h2>pys.data_collection.kbd_analyzer module<a class="headerlink" href="#module-pys.data_collection.kbd_analyzer" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.kbd_analyzer.KBDAnalyzer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.kbd_analyzer.</span></span><span class="sig-name descname"><span class="pre">KBDAnalyzer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kbd_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/BONDS/kbd'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.kbd_analyzer.KBDAnalyzer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pys.utils.html#pys.utils.logger.BaseLogger" title="pys.utils.logger.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
+<p>Класс для анализа кривой бескупонной доходности (КБД) и
+определения оптимальных параметров для выбора облигаций</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.kbd_analyzer.KBDAnalyzer.get_bonds_recommendations">
+<span class="sig-name descname"><span class="pre">get_bonds_recommendations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.kbd_analyzer.KBDAnalyzer.get_bonds_recommendations" title="Link to this definition"></a></dt>
+<dd><p>Получить рекомендации для фильтрации облигаций на основе КБД</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>параметры для фильтрации облигаций</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.kbd_analyzer.KBDAnalyzer.get_comprehensive_recommendations">
+<span class="sig-name descname"><span class="pre">get_comprehensive_recommendations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.kbd_analyzer.KBDAnalyzer.get_comprehensive_recommendations" title="Link to this definition"></a></dt>
+<dd><p>Получить комплексные рекомендации для формирования портфеля облигаций
+на основе анализа КБД</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>полные рекомендации для формирования портфеля</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.kbd_analyzer.KBDAnalyzer.get_latest_kbd_metrics">
+<span class="sig-name descname"><span class="pre">get_latest_kbd_metrics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.kbd_analyzer.KBDAnalyzer.get_latest_kbd_metrics" title="Link to this definition"></a></dt>
+<dd><p>Получить последние метрики КБД для формирования рекомендаций</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Словарь с метриками КБД</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.kbd_analyzer.KBDAnalyzer.get_optimal_weighting_strategy">
+<span class="sig-name descname"><span class="pre">get_optimal_weighting_strategy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latest_kbd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.kbd_analyzer.KBDAnalyzer.get_optimal_weighting_strategy" title="Link to this definition"></a></dt>
+<dd><p>Определить оптимальную стратегию взвешивания на основе формы кривой КБД</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>latest_kbd</strong> -- последние данные КБД или None для использования внутренних данных</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>рекомендуемая стратегия взвешивания и параметры</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.kbd_analyzer.KBDAnalyzer.visualize_kbd">
+<span class="sig-name descname"><span class="pre">visualize_kbd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.kbd_analyzer.KBDAnalyzer.visualize_kbd" title="Link to this definition"></a></dt>
+<dd><p>Визуализировать текущую КБД</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>save_path</strong> -- путь для сохранения визуализации</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>путь к сохраненному файлу</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pys.data_collection.market_cap">
+<span id="pys-data-collection-market-cap-module"></span><h2>pys.data_collection.market_cap module<a class="headerlink" href="#module-pys.data_collection.market_cap" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.market_cap.MarketCapParser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.market_cap.</span></span><span class="sig-name descname"><span class="pre">MarketCapParser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_cap.MarketCapParser" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pys.utils.html#pys.utils.logger.BaseLogger" title="pys.utils.logger.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
+<p>Класс для парсинга капитализаций компаний с Московской биржи
+и сохранения в структурированном виде</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_cap.MarketCapParser.run_pipeline_market_cap">
+<span class="sig-name descname"><span class="pre">run_pipeline_market_cap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tickers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_cap.MarketCapParser.run_pipeline_market_cap" title="Link to this definition"></a></dt>
+<dd><p>Запускает пайплайн парсинга капитализаций компаний.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tickers</strong> (<em>list</em><em>, </em><em>optional</em>) -- Список тикеров для получения капитализации (если None, запрашиваются все доступные).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с тикерами и рыночной капитализацией.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.data_collection.market_cap.run_pipeline_market_cap">
+<span class="sig-prename descclassname"><span class="pre">pys.data_collection.market_cap.</span></span><span class="sig-name descname"><span class="pre">run_pipeline_market_cap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tickers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_cap.run_pipeline_market_cap" title="Link to this definition"></a></dt>
+<dd><p>Запускает пайплайн парсинга капитализаций компаний.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_path</strong> (<em>str</em>) -- Базовый путь для хранения данных.</p></li>
+<li><p><strong>tickers</strong> (<em>list</em><em>, </em><em>optional</em>) -- Список тикеров для получения капитализации (если None, запрашиваются все доступные).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с тикерами и рыночной капитализацией.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-pys.data_collection.market_data">
+<span id="pys-data-collection-market-data-module"></span><h2>pys.data_collection.market_data module<a class="headerlink" href="#module-pys.data_collection.market_data" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.DataStorage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.market_data.</span></span><span class="sig-name descname"><span class="pre">DataStorage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.DataStorage" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></p>
+<p>Класс для управления хранением данных</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.DataStorage.extract_raw_data">
+<span class="sig-name descname"><span class="pre">extract_raw_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.DataStorage.extract_raw_data" title="Link to this definition"></a></dt>
+<dd><p>Распаковать все ZIP-файлы для тикера</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.DataStorage.get_missing_date_ranges">
+<span class="sig-name descname"><span class="pre">get_missing_date_ranges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.DataStorage.get_missing_date_ranges" title="Link to this definition"></a></dt>
+<dd><p>Определить, какие периоды данных отсутствуют для тикера</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Список кортежей (start_date, end_date) для отсутствующих периодов</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.DataStorage.get_ticker_processed_path">
+<span class="sig-name descname"><span class="pre">get_ticker_processed_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.DataStorage.get_ticker_processed_path" title="Link to this definition"></a></dt>
+<dd><p>Получить путь к папке обработанных данных для тикера</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.DataStorage.get_ticker_raw_path">
+<span class="sig-name descname"><span class="pre">get_ticker_raw_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.DataStorage.get_ticker_raw_path" title="Link to this definition"></a></dt>
+<dd><p>Получить путь к папке сырых данных для тикера</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.DataStorage.load_processed_data">
+<span class="sig-name descname"><span class="pre">load_processed_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.DataStorage.load_processed_data" title="Link to this definition"></a></dt>
+<dd><p>Загрузить обработанные данные для тикера из фиксированного файла</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.DataStorage.load_raw_csv_files">
+<span class="sig-name descname"><span class="pre">load_raw_csv_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">csv_files</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.DataStorage.load_raw_csv_files" title="Link to this definition"></a></dt>
+<dd><p>Загрузить данные из CSV-файлов в единый DataFrame</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.DataStorage.save_processed_data">
+<span class="sig-name descname"><span class="pre">save_processed_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.DataStorage.save_processed_data" title="Link to this definition"></a></dt>
+<dd><p>Сохранить обработанные данные в один паркет-файл.
+Если файл уже существует, объединяем с новыми данными, удаляем дубликаты и перезаписываем
+:param ticker: Тикер инструмента
+:param new_data: DataFrame с новыми данными
+:return: Путь к сохранённому файлу</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.DataStorage.store_raw_data">
+<span class="sig-name descname"><span class="pre">store_raw_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.DataStorage.store_raw_data" title="Link to this definition"></a></dt>
+<dd><p>Сохранить сырые данные из API</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.MarketDataManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.market_data.</span></span><span class="sig-name descname"><span class="pre">MarketDataManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.MarketDataManager" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></p>
+<p>Основной класс для управления рыночными данными</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.MarketDataManager.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeframe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1min'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_download</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.MarketDataManager.get_data" title="Link to this definition"></a></dt>
+<dd><p>Получить данные для тикера с указанным временным интервалом</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ticker</strong> -- Тикер инструмента</p></li>
+<li><p><strong>start_date</strong> -- Дата начала в формате YYYY-MM-DD</p></li>
+<li><p><strong>end_date</strong> -- Дата окончания в формате YYYY-MM-DD</p></li>
+<li><p><strong>timeframe</strong> -- Временной интервал ('1min', '5min', '15min', '1h', '1d', '1w', '1M')</p></li>
+<li><p><strong>force_download</strong> -- Принудительно скачать новые данные, даже если они уже есть</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с данными</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.MarketDataManager.get_data_for_multiple_tickers">
+<span class="sig-name descname"><span class="pre">get_data_for_multiple_tickers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tickers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeframe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1min'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_workers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.MarketDataManager.get_data_for_multiple_tickers" title="Link to this definition"></a></dt>
+<dd><p>Получить данные для нескольких тикеров с использованием многопоточности</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tickers</strong> -- Список тикеров</p></li>
+<li><p><strong>start_date</strong> -- Дата начала в формате YYYY-MM-DD</p></li>
+<li><p><strong>end_date</strong> -- Дата окончания в формате YYYY-MM-DD</p></li>
+<li><p><strong>timeframe</strong> -- Временной интервал ('1min', '5min', '15min', '1h', '1d', '1w', '1M')</p></li>
+<li><p><strong>max_workers</strong> -- Максимальное количество потоков</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Словарь {ticker: DataFrame}</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.MarketDataPipeline">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.market_data.</span></span><span class="sig-name descname"><span class="pre">MarketDataPipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'//Users/aeshef/Desktop/FOR3.9TEST/kursach/data'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.MarketDataPipeline" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></p>
+<p>Класс для запуска пайплайна загрузки рыночных данных</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.MarketDataPipeline.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tickers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeframe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1min'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.MarketDataPipeline.run" title="Link to this definition"></a></dt>
+<dd><p>s
+Запускает пайплайн: настраивает логирование и загружает данные.</p>
+<dl class="simple">
+<dt>Параметры:</dt><dd><p>tickers (list): Список тикеров.
+start_date (str): Начальная дата в формате &quot;YYYY-MM-DD&quot;.
+end_date (str): Конечная дата в формате &quot;YYYY-MM-DD&quot;.
+token (str): API токен Tinkoff.
+timeframe (str): Временной интервал, по умолчанию &quot;1min&quot;.</p>
+</dd>
+<dt>Возвращает:</dt><dd><p>Данные, полученные через get_data_for_multiple_tickers.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.TimeframeConverter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.market_data.</span></span><span class="sig-name descname"><span class="pre">TimeframeConverter</span></span><a class="headerlink" href="#pys.data_collection.market_data.TimeframeConverter" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс для преобразования временных интервалов</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.TimeframeConverter.resample_ohlcv">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resample_ohlcv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeframe</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.TimeframeConverter.resample_ohlcv" title="Link to this definition"></a></dt>
+<dd><p>Преобразовать минутные данные OHLCV в другой временной интервал</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> -- DataFrame с минутными данными (колонки: date, open, close, min, max, volume)</p></li>
+<li><p><strong>timeframe</strong> -- Целевой временной интервал ('5min', '15min', '1h', '1d', '1w', '1M')</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с преобразованными данными</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.TinkoffDataDownloader">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.market_data.</span></span><span class="sig-name descname"><span class="pre">TinkoffDataDownloader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.TinkoffDataDownloader" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></p>
+<p>Класс для скачивания данных из Tinkoff API</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.TinkoffDataDownloader.download_for_ticker">
+<span class="sig-name descname"><span class="pre">download_for_ticker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.TinkoffDataDownloader.download_for_ticker" title="Link to this definition"></a></dt>
+<dd><p>Скачать данные для тикера за указанный период</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ticker</strong> -- Тикер инструмента</p></li>
+<li><p><strong>start_date</strong> -- Дата начала в формате YYYY-MM-DD</p></li>
+<li><p><strong>end_date</strong> -- Дата окончания в формате YYYY-MM-DD</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с минутными данными</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.TinkoffDataDownloader.get_correct_figi">
+<span class="sig-name descname"><span class="pre">get_correct_figi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">figi_list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pys.data_collection.market_data.TinkoffDataDownloader.get_correct_figi" title="Link to this definition"></a></dt>
+<dd><p>Получение корректного FIGI из списка</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.TinkoffDataDownloader.get_figi">
+<span class="sig-name descname"><span class="pre">get_figi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#pys.data_collection.market_data.TinkoffDataDownloader.get_figi" title="Link to this definition"></a></dt>
+<dd><p>Получение FIGI для тикера</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.TinkoffDataDownloader.get_isin">
+<span class="sig-name descname"><span class="pre">get_isin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#pys.data_collection.market_data.TinkoffDataDownloader.get_isin" title="Link to this definition"></a></dt>
+<dd><p>Получение ISIN для тикера</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.TinkoffDataDownloader.get_uid">
+<span class="sig-name descname"><span class="pre">get_uid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#pys.data_collection.market_data.TinkoffDataDownloader.get_uid" title="Link to this definition"></a></dt>
+<dd><p>Получение UID для тикера</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.TinkoffDataDownloader.initialize_instruments">
+<span class="sig-name descname"><span class="pre">initialize_instruments</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.TinkoffDataDownloader.initialize_instruments" title="Link to this definition"></a></dt>
+<dd><p>Получение списка доступных инструментов</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.TinkoffDataDownloader.is_figi_correct">
+<span class="sig-name descname"><span class="pre">is_figi_correct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">figi</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pys.data_collection.market_data.TinkoffDataDownloader.is_figi_correct" title="Link to this definition"></a></dt>
+<dd><p>Проверка корректности FIGI</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.data_collection.market_data.run_pipeline_market">
+<span class="sig-prename descclassname"><span class="pre">pys.data_collection.market_data.</span></span><span class="sig-name descname"><span class="pre">run_pipeline_market</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tickers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeframe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1min'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.market_data.run_pipeline_market" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pys.data_collection.news_pipeline">
+<span id="pys-data-collection-news-pipeline-module"></span><h2>pys.data_collection.news_pipeline module<a class="headerlink" href="#module-pys.data_collection.news_pipeline" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.news_pipeline.NewsPipeline">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.news_pipeline.</span></span><span class="sig-name descname"><span class="pre">NewsPipeline</span></span><a class="headerlink" href="#pys.data_collection.news_pipeline.NewsPipeline" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pys.utils.html#pys.utils.logger.BaseLogger" title="pys.utils.logger.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
+<p>Единый пайплайн для сбора и анализа новостей</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_pipeline.NewsPipeline.run_pipeline">
+<span class="sig-name descname"><span class="pre">run_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tickers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collect_telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telegram_api_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telegram_api_hash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telegram_channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cbrstocks'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telegram_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">date</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">date</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cached_telegram</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cleanup_old_files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_history_days</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">30</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_pipeline.NewsPipeline.run_pipeline" title="Link to this definition"></a></dt>
+<dd><p>Запуск полного пайплайна анализа новостей</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.data_collection.news_pipeline.main">
+<span class="sig-prename descclassname"><span class="pre">pys.data_collection.news_pipeline.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_pipeline.main" title="Link to this definition"></a></dt>
+<dd><p>Запуск пайплайна из командной строки</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.data_collection.news_pipeline.merge_with_existing">
+<span class="sig-prename descclassname"><span class="pre">pys.data_collection.news_pipeline.</span></span><span class="sig-name descname"><span class="pre">merge_with_existing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unique_columns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_pipeline.merge_with_existing" title="Link to this definition"></a></dt>
+<dd><p>Загружает существующий CSV, объединяет с new_df и удаляет дубликаты на основе уникальных колонок.
+Если файла нет, возвращает new_df.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.data_collection.news_pipeline.save_events_data">
+<span class="sig-prename descclassname"><span class="pre">pys.data_collection.news_pipeline.</span></span><span class="sig-name descname"><span class="pre">save_events_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_detector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">combined_sentiment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">events_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_pipeline.save_events_data" title="Link to this definition"></a></dt>
+<dd><p>Обнаруживает и оценивает события на основе сентиментированных новостей, затем объединяет
+их с историческими данными и сохраняет результат.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.data_collection.news_pipeline.save_sentiment_data">
+<span class="sig-prename descclassname"><span class="pre">pys.data_collection.news_pipeline.</span></span><span class="sig-name descname"><span class="pre">save_sentiment_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sentiment_analyzer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">news_df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sentiment_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_pipeline.save_sentiment_data" title="Link to this definition"></a></dt>
+<dd><p>Производит сентимент-анализ новостей с объединением новых и исторических данных.
+Если файл уже существует, выбираются только новые записи, затем объединяются и сохраняются.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.data_collection.news_pipeline.update_daily_sentiment">
+<span class="sig-prename descclassname"><span class="pre">pys.data_collection.news_pipeline.</span></span><span class="sig-name descname"><span class="pre">update_daily_sentiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sentiment_analyzer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">combined_sentiment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_pipeline.update_daily_sentiment" title="Link to this definition"></a></dt>
+<dd><p>Создает или обновляет CSV-файл с ежедневным сентиментом путем объединения новых и исторических данных.</p>
+</dd></dl>
+
+</section>
+<section id="module-pys.data_collection.private_info">
+<span id="pys-data-collection-private-info-module"></span><h2>pys.data_collection.private_info module<a class="headerlink" href="#module-pys.data_collection.private_info" title="Link to this heading"></a></h2>
+</section>
+<section id="module-pys.data_collection.tech_analysis">
+<span id="pys-data-collection-tech-analysis-module"></span><h2>pys.data_collection.tech_analysis module<a class="headerlink" href="#module-pys.data_collection.tech_analysis" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.tech_analysis.TechAnalysisPipeline">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.tech_analysis.</span></span><span class="sig-name descname"><span class="pre">TechAnalysisPipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tickers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.tech_analysis.TechAnalysisPipeline" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pys.utils.html#pys.utils.logger.BaseLogger" title="pys.utils.logger.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.tech_analysis.TechAnalysisPipeline.create_summary_report">
+<span class="sig-name descname"><span class="pre">create_summary_report</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.tech_analysis.TechAnalysisPipeline.create_summary_report" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.tech_analysis.TechAnalysisPipeline.run_pipeline">
+<span class="sig-name descname"><span class="pre">run_pipeline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.tech_analysis.TechAnalysisPipeline.run_pipeline" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pys.data_collection.tech_analysis.run_pipeline_technical">
+<span class="sig-prename descclassname"><span class="pre">pys.data_collection.tech_analysis.</span></span><span class="sig-name descname"><span class="pre">run_pipeline_technical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tickers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/Users/aeshef/Desktop/FOR3.9TEST/kursach'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.tech_analysis.run_pipeline_technical" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pys.data_collection.technical_indicators">
+<span id="pys-data-collection-technical-indicators-module"></span><h2>pys.data_collection.technical_indicators module<a class="headerlink" href="#module-pys.data_collection.technical_indicators" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.technical_indicators.TechnicalIndicators">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.technical_indicators.</span></span><span class="sig-name descname"><span class="pre">TechnicalIndicators</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resample_rule</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1D'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sma_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rsi_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.technical_indicators.TechnicalIndicators" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="pys.utils.html#pys.utils.logger.BaseLogger" title="pys.utils.logger.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.technical_indicators.TechnicalIndicators.calculate_indicators">
+<span class="sig-name descname"><span class="pre">calculate_indicators</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.technical_indicators.TechnicalIndicators.calculate_indicators" title="Link to this definition"></a></dt>
+<dd><p>Рассчитывает технические индикаторы по агрегированным дневным данным:</p>
+<ul class="simple">
+<li><p>Скользящая средняя (SMA) и экспоненциальная скользящая средняя (EMA) по окну sma_window</p></li>
+<li><p>Индекс относительной силы (RSI) по окну rsi_window</p></li>
+<li><p>MACD, сигнальная линия и разница</p></li>
+<li><p>Полосы Боллинджера (используется sma_window и стандартное отклонение=2)</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DataFrame с добавленными столбцами индикаторов.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.technical_indicators.TechnicalIndicators.load_data">
+<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.technical_indicators.TechnicalIndicators.load_data" title="Link to this definition"></a></dt>
+<dd><p>Загружает данные из Parquet-файла, преобразует временной столбец и
+агрегирует минутные данные до дневного масштаба с помощью resample_rule.
+Ожидается, что в файле имеются столбцы 'open', 'high', 'low', 'close', 'volume'
+и либо 'date', либо 'timestamp' (если timestamp в миллисекундах).
+:return: агрегированный DataFrame с дневными данными</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.technical_indicators.TechnicalIndicators.plot_macd">
+<span class="sig-name descname"><span class="pre">plot_macd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.technical_indicators.TechnicalIndicators.plot_macd" title="Link to this definition"></a></dt>
+<dd><p>Строит график MACD (линия MACD, сигнальная линия и разница).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.technical_indicators.TechnicalIndicators.plot_price_with_indicators">
+<span class="sig-name descname"><span class="pre">plot_price_with_indicators</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.technical_indicators.TechnicalIndicators.plot_price_with_indicators" title="Link to this definition"></a></dt>
+<dd><p>Строит график цены с наложенными скользящими средними и полосами Боллинджера.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pys.data_collection">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pys.data_collection" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pys.html" class="btn btn-neutral float-left" title="pys package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pys.data_collection.news_processor.html" class="btn btn-neutral float-right" title="pys.data_collection.news_processor package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, aeshef, bolotnikovali.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

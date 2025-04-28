@@ -1,7 +1,5 @@
-pys
-===
+kursach
+=======
 
 .. toctree::
    :maxdepth: 4
-
-   pys

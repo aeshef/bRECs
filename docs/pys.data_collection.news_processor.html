@@ -1,0 +1,702 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en, ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pys.data_collection.news_processor package &mdash; bRECs 29.04.2025 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=a80dce1d"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pys.improved_pipeline package" href="pys.improved_pipeline.html" />
+    <link rel="prev" title="pys.data_collection package" href="pys.data_collection.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            bRECs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="pys.html">pys package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pys.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="pys.data_collection.html">pys.data_collection package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="pys.data_collection.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.bonds_kbd_pipeline">pys.data_collection.bonds_kbd_pipeline module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.bonds_kbd_strategies">pys.data_collection.bonds_kbd_strategies module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.bonds_parser">pys.data_collection.bonds_parser module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.bonds_processor">pys.data_collection.bonds_processor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.data_integration">pys.data_collection.data_integration module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.fundamental_data">pys.data_collection.fundamental_data module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.kbd">pys.data_collection.kbd module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.kbd_analyzer">pys.data_collection.kbd_analyzer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.market_cap">pys.data_collection.market_cap module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.market_data">pys.data_collection.market_data module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.news_pipeline">pys.data_collection.news_pipeline module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.private_info">pys.data_collection.private_info module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.tech_analysis">pys.data_collection.tech_analysis module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.technical_indicators">pys.data_collection.technical_indicators module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pys.improved_pipeline.html">pys.improved_pipeline package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pys.porfolio_optimization.html">pys.porfolio_optimization package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pys.utils.html">pys.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pys.html#module-pys">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="pys.data_collection.html">pys.data_collection package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pys.data_collection.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">pys.data_collection.news_processor package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.news_processor.event_detector">pys.data_collection.news_processor.event_detector module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.news_processor.keywords">pys.data_collection.news_processor.keywords module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.news_processor.news_feature_extractor">pys.data_collection.news_processor.news_feature_extractor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.news_processor.news_integration">pys.data_collection.news_processor.news_integration module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.news_processor.news_preprocessor">pys.data_collection.news_processor.news_preprocessor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.news_processor.news_visualizer">pys.data_collection.news_processor.news_visualizer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.news_processor.sentiment_analysis">pys.data_collection.news_processor.sentiment_analysis module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-pys.data_collection.news_processor">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.bonds_kbd_pipeline">pys.data_collection.bonds_kbd_pipeline module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.bonds_kbd_strategies">pys.data_collection.bonds_kbd_strategies module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.bonds_parser">pys.data_collection.bonds_parser module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.bonds_processor">pys.data_collection.bonds_processor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.data_integration">pys.data_collection.data_integration module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.fundamental_data">pys.data_collection.fundamental_data module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.kbd">pys.data_collection.kbd module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.kbd_analyzer">pys.data_collection.kbd_analyzer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.market_cap">pys.data_collection.market_cap module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.market_data">pys.data_collection.market_data module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.news_pipeline">pys.data_collection.news_pipeline module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.private_info">pys.data_collection.private_info module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.tech_analysis">pys.data_collection.tech_analysis module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection.technical_indicators">pys.data_collection.technical_indicators module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pys.data_collection.html#module-pys.data_collection">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pys.porfolio_optimization.html">pys.porfolio_optimization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pys.improved_pipeline.html">pys.improved_pipeline package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">bRECs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pys.html">pys package</a></li>
+          <li class="breadcrumb-item"><a href="pys.data_collection.html">pys.data_collection package</a></li>
+      <li class="breadcrumb-item active">pys.data_collection.news_processor package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/pys.data_collection.news_processor.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pys-data-collection-news-processor-package">
+<h1>pys.data_collection.news_processor package<a class="headerlink" href="#pys-data-collection-news-processor-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-pys.data_collection.news_processor.event_detector">
+<span id="pys-data-collection-news-processor-event-detector-module"></span><h2>pys.data_collection.news_processor.event_detector module<a class="headerlink" href="#module-pys.data_collection.news_processor.event_detector" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.event_detector.EventDetector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.news_processor.event_detector.</span></span><span class="sig-name descname"><span class="pre">EventDetector</span></span><a class="headerlink" href="#pys.data_collection.news_processor.event_detector.EventDetector" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс для обнаружения событий в новостях</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.event_detector.EventDetector.assess_event_impact">
+<span class="sig-name descname"><span class="pre">assess_event_impact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sentiment_column</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sentiment_compound'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.event_detector.EventDetector.assess_event_impact" title="Link to this definition"></a></dt>
+<dd><p>Оценка влияния событий на основе настроения и типа события</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) -- DataFrame с обнаруженными событиями</p></li>
+<li><p><strong>sentiment_column</strong> (<em>str</em>) -- Название колонки с оценкой настроения</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с добавленной оценкой влияния событий</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.event_detector.EventDetector.create_event_time_series">
+<span class="sig-name descname"><span class="pre">create_event_time_series</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_column</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'date'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.event_detector.EventDetector.create_event_time_series" title="Link to this definition"></a></dt>
+<dd><p>Создание временного ряда событий</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) -- DataFrame с обнаруженными событиями</p></li>
+<li><p><strong>date_column</strong> (<em>str</em>) -- Название колонки с датой</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с ежедневной агрегацией событий</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.event_detector.EventDetector.detect_events">
+<span class="sig-name descname"><span class="pre">detect_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_column</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'clean_text'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.event_detector.EventDetector.detect_events" title="Link to this definition"></a></dt>
+<dd><p>Обнаружение событий в новостях</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) -- DataFrame с новостями</p></li>
+<li><p><strong>text_column</strong> (<em>str</em>) -- Название колонки с текстом для анализа</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с добавленными колонками событий</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pys.data_collection.news_processor.keywords">
+<span id="pys-data-collection-news-processor-keywords-module"></span><h2>pys.data_collection.news_processor.keywords module<a class="headerlink" href="#module-pys.data_collection.news_processor.keywords" title="Link to this heading"></a></h2>
+<p>Keywords for sentiment analysis of Russian financial news</p>
+</section>
+<section id="module-pys.data_collection.news_processor.news_feature_extractor">
+<span id="pys-data-collection-news-processor-news-feature-extractor-module"></span><h2>pys.data_collection.news_processor.news_feature_extractor module<a class="headerlink" href="#module-pys.data_collection.news_processor.news_feature_extractor" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_feature_extractor.NewsFeatureExtractor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.news_processor.news_feature_extractor.</span></span><span class="sig-name descname"><span class="pre">NewsFeatureExtractor</span></span><a class="headerlink" href="#pys.data_collection.news_processor.news_feature_extractor.NewsFeatureExtractor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс для извлечения признаков из новостей</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_feature_extractor.NewsFeatureExtractor.create_time_series_features">
+<span class="sig-name descname"><span class="pre">create_time_series_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">daily_sentiment_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_sizes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[3,</span> <span class="pre">7,</span> <span class="pre">14]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_feature_extractor.NewsFeatureExtractor.create_time_series_features" title="Link to this definition"></a></dt>
+<dd><p>Создание признаков временных рядов из ежедневных данных о настроениях</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>daily_sentiment_df</strong> (<em>pd.DataFrame</em>) -- DataFrame с ежедневными настроениями</p></li>
+<li><p><strong>window_sizes</strong> (<em>list</em>) -- Список размеров окон для скользящих статистик</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с добавленными признаками временных рядов</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_feature_extractor.NewsFeatureExtractor.create_topic_features">
+<span class="sig-name descname"><span class="pre">create_topic_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_column</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'clean_text'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_topics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_feature_extractor.NewsFeatureExtractor.create_topic_features" title="Link to this definition"></a></dt>
+<dd><p>Создание признаков на основе тем для всех новостей в DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) -- DataFrame с новостями</p></li>
+<li><p><strong>text_column</strong> (<em>str</em>) -- Название колонки с текстом для анализа</p></li>
+<li><p><strong>n_topics</strong> (<em>int</em>) -- Количество тем для извлечения</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с добавленными признаками тем</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_feature_extractor.NewsFeatureExtractor.extract_keyword_mentions">
+<span class="sig-name descname"><span class="pre">extract_keyword_mentions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_feature_extractor.NewsFeatureExtractor.extract_keyword_mentions" title="Link to this definition"></a></dt>
+<dd><p>Извлечение упоминаний ключевых слов из текста</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em>) -- Текст для анализа</p></li>
+<li><p><strong>keywords</strong> (<em>list</em>) -- Список ключевых слов для поиска</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Словарь {keyword: count} с количеством упоминаний каждого ключевого слова</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_feature_extractor.NewsFeatureExtractor.extract_topics_lda">
+<span class="sig-name descname"><span class="pre">extract_topics_lda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_topics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_top_words</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_feature_extractor.NewsFeatureExtractor.extract_topics_lda" title="Link to this definition"></a></dt>
+<dd><p>Извлечение тем из коллекции текстов с помощью LDA</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>texts</strong> (<em>list</em>) -- Список текстов для анализа</p></li>
+<li><p><strong>n_topics</strong> (<em>int</em>) -- Количество тем для извлечения</p></li>
+<li><p><strong>n_top_words</strong> (<em>int</em>) -- Количество ключевых слов для каждой темы</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(lda_model, vectorizer, document_topics, topic_keywords)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pys.data_collection.news_processor.news_integration">
+<span id="pys-data-collection-news-processor-news-integration-module"></span><h2>pys.data_collection.news_processor.news_integration module<a class="headerlink" href="#module-pys.data_collection.news_processor.news_integration" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_integration.NewsIntegration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.news_processor.news_integration.</span></span><span class="sig-name descname"><span class="pre">NewsIntegration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resample_rule</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1D'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sma_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ema_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rsi_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bb_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atr_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stoch_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adx_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cci_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_integration.NewsIntegration" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс для интеграции новостных данных с моделями прогнозирования</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_integration.NewsIntegration.convert_news_to_views">
+<span class="sig-name descname"><span class="pre">convert_news_to_views</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">news_features_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">market_returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_aversion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_integration.NewsIntegration.convert_news_to_views" title="Link to this definition"></a></dt>
+<dd><p>Конвертация новостных сигналов в мнения инвесторов для модели Блека-Литермана</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>news_features_df</strong> (<em>pd.DataFrame</em>) -- DataFrame с признаками новостей</p></li>
+<li><p><strong>market_returns</strong> (<em>dict</em>) -- Словарь {ticker: expected_return} с историческими доходностями</p></li>
+<li><p><strong>risk_aversion</strong> (<em>float</em>) -- Коэффициент неприятия риска</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Словарь {ticker: (expected_return, confidence)} с мнениями инвесторов</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_integration.NewsIntegration.create_ml_features">
+<span class="sig-name descname"><span class="pre">create_ml_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">combined_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_column</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'close'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prediction_horizon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_integration.NewsIntegration.create_ml_features" title="Link to this definition"></a></dt>
+<dd><p>Создание признаков для моделей ML на основе объединенных данных</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>combined_df</strong> (<em>pd.DataFrame</em>) -- Объединенный DataFrame с ценами и новостными признаками</p></li>
+<li><p><strong>target_column</strong> (<em>str</em>) -- Название колонки с целевой переменной (обычно цена закрытия)</p></li>
+<li><p><strong>prediction_horizon</strong> (<em>int</em>) -- Горизонт прогнозирования (в днях)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с признаками для ML</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_integration.NewsIntegration.merge_news_with_price_data">
+<span class="sig-name descname"><span class="pre">merge_news_with_price_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">news_features_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">price_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_column</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'date'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_integration.NewsIntegration.merge_news_with_price_data" title="Link to this definition"></a></dt>
+<dd><p>Объединение новостных признаков с ценовыми данными</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>news_features_df</strong> (<em>pd.DataFrame</em>) -- DataFrame с признаками новостей</p></li>
+<li><p><strong>price_df</strong> (<em>pd.DataFrame</em>) -- DataFrame с ценовыми данными</p></li>
+<li><p><strong>date_column</strong> (<em>str</em>) -- Название колонки с датой</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Объединенный DataFrame</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pys.data_collection.news_processor.news_preprocessor">
+<span id="pys-data-collection-news-processor-news-preprocessor-module"></span><h2>pys.data_collection.news_processor.news_preprocessor module<a class="headerlink" href="#module-pys.data_collection.news_processor.news_preprocessor" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_preprocessor.NewsPreprocessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.news_processor.news_preprocessor.</span></span><span class="sig-name descname"><span class="pre">NewsPreprocessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_nltk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_preprocessor.NewsPreprocessor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс для очистки и предобработки новостных данных</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_preprocessor.NewsPreprocessor.clean_text">
+<span class="sig-name descname"><span class="pre">clean_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_preprocessor.NewsPreprocessor.clean_text" title="Link to this definition"></a></dt>
+<dd><p>Очистка текста новостей от специальных символов, ссылок и emoji</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) -- Исходный текст новости</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Очищенный текст</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_preprocessor.NewsPreprocessor.process_all_tickers">
+<span class="sig-name descname"><span class="pre">process_all_tickers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tickers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_preprocessor.NewsPreprocessor.process_all_tickers" title="Link to this definition"></a></dt>
+<dd><p>Обработка новостей для всех указанных тикеров</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tickers</strong> (<em>list</em>) -- Список тикеров. Если None, будут обработаны все тикеры в директории</p></li>
+<li><p><strong>save</strong> (<em>bool</em>) -- Сохранять ли результат в файл</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Словарь {ticker: DataFrame} с обработанными новостями для каждого тикера</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_preprocessor.NewsPreprocessor.process_news_file">
+<span class="sig-name descname"><span class="pre">process_news_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_preprocessor.NewsPreprocessor.process_news_file" title="Link to this definition"></a></dt>
+<dd><p>Обработка одного файла с новостями</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_path</strong> (<em>str</em>) -- Путь к файлу с новостями</p></li>
+<li><p><strong>save</strong> (<em>bool</em>) -- Сохранять ли результат в файл</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame с обработанными новостями</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_preprocessor.NewsPreprocessor.process_ticker_news">
+<span class="sig-name descname"><span class="pre">process_ticker_news</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_preprocessor.NewsPreprocessor.process_ticker_news" title="Link to this definition"></a></dt>
+<dd><p>Обработка всех файлов новостей для конкретного тикера</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pys.data_collection.news_processor.news_visualizer">
+<span id="pys-data-collection-news-processor-news-visualizer-module"></span><h2>pys.data_collection.news_processor.news_visualizer module<a class="headerlink" href="#module-pys.data_collection.news_processor.news_visualizer" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_visualizer.NewsVisualizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.news_processor.news_visualizer.</span></span><span class="sig-name descname"><span class="pre">NewsVisualizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_visualizer.NewsVisualizer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс для визуализации новостных данных</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_visualizer.NewsVisualizer.create_news_dashboard">
+<span class="sig-name descname"><span class="pre">create_news_dashboard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">news_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sentiment_ts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_plotly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_visualizer.NewsVisualizer.create_news_dashboard" title="Link to this definition"></a></dt>
+<dd><p>Создание дашборда с результатами анализа новостей</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>news_df</strong> (<em>pd.DataFrame</em>) -- DataFrame с новостями и результатами анализа</p></li>
+<li><p><strong>sentiment_ts</strong> (<em>pd.DataFrame</em>) -- DataFrame с временным рядом настроений</p></li>
+<li><p><strong>ticker</strong> (<em>str</em>) -- Тикер компании для заголовка</p></li>
+<li><p><strong>save</strong> (<em>bool</em>) -- Сохранять ли дашборд в файл</p></li>
+<li><p><strong>use_plotly</strong> (<em>bool</em>) -- Использовать ли Plotly (иначе Matplotlib)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Словарь с объектами графиков</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_visualizer.NewsVisualizer.plot_event_distribution">
+<span class="sig-name descname"><span class="pre">plot_event_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_plotly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_visualizer.NewsVisualizer.plot_event_distribution" title="Link to this definition"></a></dt>
+<dd><p>Визуализация распределения типов событий</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) -- DataFrame с обнаруженными событиями</p></li>
+<li><p><strong>ticker</strong> (<em>str</em>) -- Тикер компании для заголовка</p></li>
+<li><p><strong>save</strong> (<em>bool</em>) -- Сохранять ли график в файл</p></li>
+<li><p><strong>use_plotly</strong> (<em>bool</em>) -- Использовать ли Plotly (иначе Matplotlib)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Объект графика</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>go.Figure или plt.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_visualizer.NewsVisualizer.plot_sentiment_by_event_type">
+<span class="sig-name descname"><span class="pre">plot_sentiment_by_event_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_plotly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_visualizer.NewsVisualizer.plot_sentiment_by_event_type" title="Link to this definition"></a></dt>
+<dd><p>Визуализация распределения настроений по типам событий</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) -- DataFrame с обнаруженными событиями и настроениями</p></li>
+<li><p><strong>ticker</strong> (<em>str</em>) -- Тикер компании для заголовка</p></li>
+<li><p><strong>save</strong> (<em>bool</em>) -- Сохранять ли график в файл</p></li>
+<li><p><strong>use_plotly</strong> (<em>bool</em>) -- Использовать ли Plotly (иначе Matplotlib)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Объект графика</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>go.Figure или plt.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_visualizer.NewsVisualizer.plot_sentiment_distribution">
+<span class="sig-name descname"><span class="pre">plot_sentiment_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_plotly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_visualizer.NewsVisualizer.plot_sentiment_distribution" title="Link to this definition"></a></dt>
+<dd><p>Визуализация распределения настроений</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) -- DataFrame с настроениями</p></li>
+<li><p><strong>ticker</strong> (<em>str</em>) -- Тикер компании для заголовка</p></li>
+<li><p><strong>save</strong> (<em>bool</em>) -- Сохранять ли график в файл</p></li>
+<li><p><strong>use_plotly</strong> (<em>bool</em>) -- Использовать ли Plotly (иначе Matplotlib)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Объект графика</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>go.Figure или plt.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_visualizer.NewsVisualizer.plot_sentiment_time_series">
+<span class="sig-name descname"><span class="pre">plot_sentiment_time_series</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sentiment_ts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_plotly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_visualizer.NewsVisualizer.plot_sentiment_time_series" title="Link to this definition"></a></dt>
+<dd><p>Визуализация временного ряда настроений</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sentiment_ts</strong> (<em>pd.DataFrame</em>) -- DataFrame с временным рядом настроений</p></li>
+<li><p><strong>ticker</strong> (<em>str</em>) -- Тикер компании для заголовка</p></li>
+<li><p><strong>save</strong> (<em>bool</em>) -- Сохранять ли график в файл</p></li>
+<li><p><strong>use_plotly</strong> (<em>bool</em>) -- Использовать ли Plotly (иначе Matplotlib)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Объект графика</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>go.Figure или plt.Figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_visualizer.NewsVisualizer.visualize_events">
+<span class="sig-name descname"><span class="pre">visualize_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">news_with_events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">daily_events</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_visualizer.NewsVisualizer.visualize_events" title="Link to this definition"></a></dt>
+<dd><p>Визуализация событий для пайплайна новостей</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ticker</strong> (<em>str</em>) -- Тикер компании</p></li>
+<li><p><strong>news_with_events</strong> (<em>pd.DataFrame</em>) -- DataFrame с новостями и событиями</p></li>
+<li><p><strong>daily_events</strong> (<em>pd.DataFrame</em>) -- DataFrame с ежедневными событиями</p></li>
+<li><p><strong>output_dir</strong> (<em>str</em>) -- Директория для сохранения</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.news_visualizer.NewsVisualizer.visualize_sentiment">
+<span class="sig-name descname"><span class="pre">visualize_sentiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">news_with_sentiment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">daily_sentiment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.news_visualizer.NewsVisualizer.visualize_sentiment" title="Link to this definition"></a></dt>
+<dd><p>Визуализация настроений для пайплайна новостей</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ticker</strong> (<em>str</em>) -- Тикер компании</p></li>
+<li><p><strong>news_with_sentiment</strong> (<em>pd.DataFrame</em>) -- DataFrame с новостями и настроениями</p></li>
+<li><p><strong>daily_sentiment</strong> (<em>pd.DataFrame</em>) -- DataFrame с ежедневными настроениями</p></li>
+<li><p><strong>output_dir</strong> (<em>str</em>) -- Директория для сохранения</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pys.data_collection.news_processor.sentiment_analysis">
+<span id="pys-data-collection-news-processor-sentiment-analysis-module"></span><h2>pys.data_collection.news_processor.sentiment_analysis module<a class="headerlink" href="#module-pys.data_collection.news_processor.sentiment_analysis" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pys.data_collection.news_processor.sentiment_analysis.</span></span><span class="sig-name descname"><span class="pre">SentimentAnalyzer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_vader</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'english'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Класс для анализа настроений в новостях</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_news_dataframe">
+<span class="sig-name descname"><span class="pre">analyze_news_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_column</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'clean_text'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_news_dataframe" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_stock_impact">
+<span class="sig-name descname"><span class="pre">analyze_stock_impact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticker</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_stock_impact" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_text">
+<span class="sig-name descname"><span class="pre">analyze_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticker</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_text_advanced_ru">
+<span class="sig-name descname"><span class="pre">analyze_text_advanced_ru</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticker</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_text_advanced_ru" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_text_simple_ru">
+<span class="sig-name descname"><span class="pre">analyze_text_simple_ru</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_text_simple_ru" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_text_vader">
+<span class="sig-name descname"><span class="pre">analyze_text_vader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_text_vader" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_ticker_news">
+<span class="sig-name descname"><span class="pre">analyze_ticker_news</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">news_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.analyze_ticker_news" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.create_daily_sentiment_series">
+<span class="sig-name descname"><span class="pre">create_daily_sentiment_series</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyzed_df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.create_daily_sentiment_series" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.set_cbr_meetings">
+<span class="sig-name descname"><span class="pre">set_cbr_meetings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meeting_dates</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pys.data_collection.news_processor.sentiment_analysis.SentimentAnalyzer.set_cbr_meetings" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pys.data_collection.news_processor">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pys.data_collection.news_processor" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pys.data_collection.html" class="btn btn-neutral float-left" title="pys.data_collection package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pys.improved_pipeline.html" class="btn btn-neutral float-right" title="pys.improved_pipeline package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, aeshef, bolotnikovali.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
