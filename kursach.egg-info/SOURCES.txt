@@ -51,3 +51,7 @@ pys/utils/run_with_config.py
 telegram_bot/__init__.py
 telegram_bot/bot.py
 telegram_bot/notification_sender.py
+telegram_bot/handlers/__init__.py
+telegram_bot/handlers/portfolio_handler.py
+telegram_bot/handlers/risk_profile_handler.py
+telegram_bot/handlers/settings_handler.py
