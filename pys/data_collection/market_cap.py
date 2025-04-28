@@ -125,15 +125,15 @@ class MarketCapParser(BaseLogger):
     
     def run_pipeline_market_cap(self, tickers=None):
         """
-        Запускает пайплайн получения и сохранения данных о капитализации компаний
-        
-        :param tickers: Список тикеров для получения капитализации (если None, запрашиваются все доступные)
-        
+        Запускает пайплайн парсинга капитализаций компаний.
+
+        Args:
+            tickers (list, optional): Список тикеров для получения капитализации (если None, запрашиваются все доступные).
+
         Returns:
-        --------
-        pd.DataFrame
-            DataFrame с тикерами и рыночной капитализацией
+            DataFrame: DataFrame с тикерами и рыночной капитализацией.
         """
+
         self.logger.info(f"Запуск пайплайна парсинга капитализаций {'для выбранных тикеров' if tickers else 'для всех компаний'}")
         
         market_caps_df = self._get_moex_market_caps(tickers)
@@ -155,11 +155,14 @@ class MarketCapParser(BaseLogger):
 
 def run_pipeline_market_cap(base_path, tickers=None):
     """
-    Запускает пайплайн парсинга капитализаций компаний
-    
-    :param base_path: Базовый путь для хранения данных
-    :param tickers: Список тикеров для получения капитализации (если None, запрашиваются все доступные)
-    :return: DataFrame с тикерами и рыночной капитализацией
+    Запускает пайплайн парсинга капитализаций компаний.
+
+    Args:
+        base_path (str): Базовый путь для хранения данных.
+        tickers (list, optional): Список тикеров для получения капитализации (если None, запрашиваются все доступные).
+
+    Returns:
+        DataFrame: DataFrame с тикерами и рыночной капитализацией.
     """
     parser = MarketCapParser(base_path)
     return parser.run_pipeline_market_cap(tickers)

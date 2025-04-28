@@ -175,24 +175,25 @@ class KBDDownloader(BaseLogger):
     
 def run_pipeline_kbd_parser(base_path=BASE_PATH, start_date=None, end_date=None, update_data=True):
     """
-    Загружает данные КБД и возвращает их в виде DataFrame
-    
-    Parameters:
-    -----------
+    Загружает данные КБД и возвращает их в виде DataFrame.
+
+    Parameters
+    ----------
     base_path : str
-        Базовый путь проекта
+        Базовый путь проекта.
     start_date : datetime или str
-        Начальная дата (если None, используется год назад)
+        Начальная дата (если None, используется год назад).
     end_date : datetime или str
-        Конечная дата (если None, используется текущая дата)
+        Конечная дата (если None, используется текущая дата).
     update_data : bool
-        Обновлять ли данные с сервера MOEX
-    
-    Returns:
-    --------
+        Обновлять ли данные с сервера MOEX.
+
+    Returns
+    -------
     pandas.DataFrame
-        Данные КБД или None в случае ошибки
+        Данные КБД или None в случае ошибки.
     """
+    
     from datetime import datetime, timedelta
     import os
     

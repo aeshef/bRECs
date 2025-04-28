@@ -1027,8 +1027,8 @@ def run_pipeline_bonds_processor(
 ):
     """
     Полный пайплайн для обработки облигаций и создания оптимального портфеля.
-    
-    Parameters:
+
+    Parameters
     -----------
     base_path : str
         Базовый путь к проекту
@@ -1054,12 +1054,13 @@ def run_pipeline_bonds_processor(
         Стратегия взвешивания портфеля
     portfolio_stability : float, default=0.7
         Коэффициент стабильности портфеля
-        
-    Returns:
+
+    Returns
     --------
     dict
         Результаты выполнения пайплайна, включая портфель и пути к сохраненным файлам
     """
+
     import os
     import sys
     from datetime import datetime

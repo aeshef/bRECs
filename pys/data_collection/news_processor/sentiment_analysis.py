@@ -161,6 +161,10 @@ class SentimentAnalyzer:
             for project, score in self.company_dict[ticker.lower()].items():
                 if project in text:
                     pos_score += score
+
+        from pys.data_collection.news_processor.keywords import (
+        special_cases
+        )
         
         special_cases = special_cases
         
@@ -202,6 +206,10 @@ class SentimentAnalyzer:
         }
     
     def analyze_stock_impact(self, text, ticker=None):
+        from pys.data_collection.news_processor.keywords import (
+            strong_indicators
+        )
+
         strong_indicators = strong_indicators
         
         text_lower = text.lower()

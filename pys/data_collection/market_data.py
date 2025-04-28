@@ -1,7 +1,5 @@
 import tinkoff.invest
-from tinkoff.invest import PortfolioRequest, PortfolioPosition, Client, RequestError, CandleInterval, HistoricCandle, \
-    OrderType, OrderDirection, Quotation, InstrumentIdType, InstrumentStatus
-from tinkoff.invest.services import InstrumentsService
+from tinkoff.invest import Client, InstrumentStatus
 from datetime import datetime
 import pandas as pd
 import os
@@ -12,19 +10,43 @@ import numpy as np
 from concurrent.futures import ThreadPoolExecutor
 import sys
 
-# current_dir = os.path.dirname(os.path.abspath(__file__))
-# while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
-#     current_dir = os.path.dirname(current_dir)
-#     if current_dir == os.path.dirname(current_dir):
-#         break
+# Добавляем код для определения путей
+try:
+    # Пытаемся импортировать path_helper напрямую
+    from utils.path_helper import setup_python_path, get_project_root
+    project_root = setup_python_path()
+except ImportError:
+    # Если не получается импортировать напрямую, ищем путь к utils
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    parent_dir = os.path.dirname(current_dir)  # pys директория
+    
+    if 'pys' in parent_dir:
+        # Если мы в pys структуре
+        if parent_dir not in sys.path:
+            sys.path.insert(0, parent_dir)
+    else:
+        # Предполагаем, что мы находимся в /opt/portfolio-advisor/data_collection
+        portfolio_advisor_dir = os.path.dirname(current_dir)
+        if portfolio_advisor_dir not in sys.path:
+            sys.path.insert(0, portfolio_advisor_dir)
+    
+    from utils.path_helper import setup_python_path, get_project_root
+    project_root = setup_python_path()
 
-# if current_dir not in sys.path:
-#     sys.path.insert(0, current_dir)
+# Теперь можем импортировать модули относительно корня проекта
+from utils.logger import BaseLogger
 
-# from utils.logger import BaseLogger
-
-from pys.utils.logger import BaseLogger
-from pys.data_collection.private_info import BASE_PATH
+# Определение BASE_PATH динамически
+try:
+    from data_collection.private_info import BASE_PATH
+except ImportError:
+    # Если не удалось импортировать, используем путь из project_root
+    if 'pys' in project_root:
+        # Для локальной разработки
+        BASE_PATH = project_root
+    else:
+        # Для сервера
+        BASE_PATH = project_root + '/data'
 
 class DataStorage(BaseLogger):
     """Класс для управления хранением данных"""

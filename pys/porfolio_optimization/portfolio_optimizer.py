@@ -808,16 +808,17 @@ class PortfolioOptimizer(BaseLogger):
         """
         Генерирует множество случайных портфелей и находит эффективную границу
         
-        Parameters:
+        Parameters
         -----------
         num_portfolios : int
             Количество случайных портфелей для генерации
             
-        Returns:
+        Returns
         --------
         dict
             Словарь с данными о случайных портфелях и эффективной границе
         """
+
         if self.returns is None:
             self.logger.error("Доходности не рассчитаны")
             return None
@@ -1432,7 +1433,7 @@ class PortfolioOptimizer(BaseLogger):
         """
         Запускает полный пайплайн оптимизации портфеля
         
-        Parameters:
+        Parameters
         -----------
         input_file : str, optional
             Путь к файлу с данными
@@ -1453,11 +1454,12 @@ class PortfolioOptimizer(BaseLogger):
         optimization : str, optional
             Модель оптимизации: 'markowitz' или 'black_litterman'
         
-        Returns:
+        Returns
         --------
         dict
             Словарь с результатами оптимизации
         """
+
         # Закрываем все предыдущие фигуры для предотвращения утечек памяти
         plt.close('all')
         self.logger.info("Запуск пайплайна оптимизации портфеля")
@@ -1551,7 +1553,7 @@ def run_all_optimization_models(
     """
     Запускает последовательно все модели оптимизации портфеля
     
-    Parameters:
+    Parameters
     -----------
     base_path : str
         Базовый путь проекта
@@ -1569,12 +1571,13 @@ def run_all_optimization_models(
         Путь к файлу с сигналами (если None, используется стандартный путь)
     risk_free_portfolio_file : str, optional
         Путь к файлу с оптимальным портфелем облигаций
-        
-    Returns:
+
+    Returns
     --------
     dict
         Словарь с результатами оптимизации для обеих моделей
     """
+
     from pys.utils.logger import BaseLogger
     from pys.data_collection.market_cap import run_pipeline_market_cap
     logger = BaseLogger('OptimizationPipeline').logger

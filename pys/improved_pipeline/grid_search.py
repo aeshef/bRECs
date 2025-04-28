@@ -289,8 +289,8 @@ def run_grid_search_pipeline(
 ):
     """
     Запускает Grid Search для поиска оптимальных параметров пайплайна
-    
-    Parameters:
+
+    Parameters
     -----------
     data_file : str
         Путь к файлу с данными
@@ -299,12 +299,13 @@ def run_grid_search_pipeline(
     training_period : tuple
         Период обучения в формате (start_date, end_date)
     n_jobs : int
-        Количество параллельных процессов
-        
-    Returns:
+        Количество параллельных процессов 
+
+    Returns
     --------
     (DataFrame, dict) - DataFrame с результатами и словарь с лучшими параметрами
     """
+    
     # Упрощаем сетку параметров для ускорения поиска
     signal_params = {
         'weight_tech': [0.4, 0.5, 0.6],

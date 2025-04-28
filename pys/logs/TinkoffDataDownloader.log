@@ -6882,3 +6882,304 @@
 2025-04-26 18:52:09 - TinkoffDataDownloader - INFO -   - Total rows: 979
 2025-04-26 18:52:09 - TinkoffDataDownloader - INFO -   - First date: 2025-04-14 03:59:00
 2025-04-26 18:52:09 - TinkoffDataDownloader - INFO -   - Last date: 2025-04-14 20:49:00
+2025-04-28 13:29:19 - TinkoffDataDownloader - INFO - Initializing instruments from Tinkoff API
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Successfully loaded 6224 instruments, 794 in RUB
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Downloading data for SBER from 2024-01-01 to 2025-04-15
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Found multiple FIGI for SBER: ['TCS109029540', 'TCS009029540', 'TCS704730N88', 'BBG004730N88', 'TCS804730N88']
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Found multiple UIDs for SBER: ['5c0ad78f-7188-4846-bdaf-dd1bfd0f0547', 'a78b8349-a1dc-447d-9277-1d75826d089a', '882ed2e6-12d0-4d67-aba9-50413a6f952d', 'e6123145-9665-43e0-8413-cd61b8aa9b13', '87f581df-e130-4d45-823b-c24b3b7b60da']
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Found multiple ISINs for SBER: ['RU0009029540', 'RU0009029540', 'RU0009029540', 'RU0009029540', 'RU0009029540']
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Downloading data for GAZP from 2024-01-01 to 2025-04-15
+2025-04-28 13:29:22 - TinkoffDataDownloader - WARNING - No correct FIGI found in the list
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Found multiple FIGI for GAZP: ['TCS907661625', 'TCSS07661625', 'TCS007661625', 'BBG004730RP0']
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - No correct FIGI found, trying all available identifiers for SBER
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Downloading data for LKOH from 2024-01-01 to 2025-04-15
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Found multiple UIDs for GAZP: ['49a412f6-3e9f-4719-8a81-70706d6b5398', '4d50dfc5-a02c-44d1-b380-9d69751a60e8', '9100df58-0e92-48ec-b962-4e788e6b61fd', '962e2a95-02a9-4171-abd7-aa198dbe643a']
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Trying FIGI TCS109029540 for SBER
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Found multiple FIGI for LKOH: ['TCS009024277', 'TCS609024277', 'BBG004731032']
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Downloading data for GMKN from 2024-01-01 to 2025-04-15
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Found multiple ISINs for GAZP: ['RU0007661625', 'RU0007661625', 'RU0007661625', 'RU0007661625']
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Downloading SBER (TCS109029540) for year 2024
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Downloading data for ROSN from 2024-01-01 to 2025-04-15
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Found multiple UIDs for LKOH: ['0fd5a59e-b130-42d0-a6cc-df2f9cae584f', '2eca4582-fbdc-4916-b94a-d7785796f386', '02cfdf61-6298-4c0f-a9ca-9cabc82afaf3']
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Found multiple FIGI for GMKN: ['TCS907288411', 'BBG004731489', 'TCS007288411']
+2025-04-28 13:29:22 - TinkoffDataDownloader - WARNING - No correct FIGI found in the list
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Found multiple FIGI for ROSN: ['TCS00A0J2Q06', 'BBG004731354', 'TCS70A0J2Q06']
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Found multiple ISINs for LKOH: ['RU0009024277', 'RU0009024277', 'RU0009024277']
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Found multiple UIDs for GMKN: ['7235f401-79ef-403a-9e4c-c99e36fe9536', '509edd0c-129c-4ee2-934d-7f6246126da1', '38e0d7ac-23cf-4bba-9a6c-d09cdffcfb74']
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - No correct FIGI found, trying all available identifiers for GAZP
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Found multiple UIDs for ROSN: ['76d05391-b4b0-43a4-8373-73c3166ab74e', 'fd417230-19cf-4e7b-9623-f7c9ca18ec6b', 'b6308eb8-a397-4a3b-a337-c7a9795de7fc']
+2025-04-28 13:29:22 - TinkoffDataDownloader - WARNING - No correct FIGI found in the list
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Found multiple ISINs for GMKN: ['RU0007288411', 'RU0007288411', 'RU0007288411']
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Trying FIGI TCS907661625 for GAZP
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Found multiple ISINs for ROSN: ['RU000A0J2Q06', 'RU000A0J2Q06', 'RU000A0J2Q06']
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - No correct FIGI found, trying all available identifiers for LKOH
+2025-04-28 13:29:22 - TinkoffDataDownloader - WARNING - No correct FIGI found in the list
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Downloading GAZP (TCS907661625) for year 2024
+2025-04-28 13:29:22 - TinkoffDataDownloader - WARNING - No correct FIGI found in the list
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Trying FIGI TCS009024277 for LKOH
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - No correct FIGI found, trying all available identifiers for GMKN
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - No correct FIGI found, trying all available identifiers for ROSN
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Downloading LKOH (TCS009024277) for year 2024
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Trying FIGI TCS907288411 for GMKN
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Trying FIGI TCS00A0J2Q06 for ROSN
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Downloading GMKN (TCS907288411) for year 2024
+2025-04-28 13:29:22 - TinkoffDataDownloader - INFO - Downloading ROSN (TCS00A0J2Q06) for year 2024
+2025-04-28 13:29:22 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:29:22 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:29:22 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:29:22 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:29:22 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:29:27 - TinkoffDataDownloader - INFO - Downloading GAZP (TCS907661625) for year 2024
+2025-04-28 13:29:27 - TinkoffDataDownloader - INFO - Downloading SBER (TCS109029540) for year 2024
+2025-04-28 13:29:27 - TinkoffDataDownloader - INFO - Downloading LKOH (TCS009024277) for year 2024
+2025-04-28 13:29:27 - TinkoffDataDownloader - INFO - Downloading ROSN (TCS00A0J2Q06) for year 2024
+2025-04-28 13:29:27 - TinkoffDataDownloader - INFO - Downloading GMKN (TCS907288411) for year 2024
+2025-04-28 13:29:27 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:29:27 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:29:27 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:29:27 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:29:27 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:29:32 - TinkoffDataDownloader - INFO - Downloading GMKN (TCS907288411) for year 2024
+2025-04-28 13:29:32 - TinkoffDataDownloader - INFO - Downloading GAZP (TCS907661625) for year 2024
+2025-04-28 13:29:32 - TinkoffDataDownloader - INFO - Downloading SBER (TCS109029540) for year 2024
+2025-04-28 13:29:32 - TinkoffDataDownloader - INFO - Downloading ROSN (TCS00A0J2Q06) for year 2024
+2025-04-28 13:29:32 - TinkoffDataDownloader - INFO - Downloading LKOH (TCS009024277) for year 2024
+2025-04-28 13:29:32 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:29:32 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:29:32 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:29:32 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:29:33 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:30:20 - TinkoffDataDownloader - INFO - Initializing instruments from Tinkoff API
+2025-04-28 13:30:24 - TinkoffDataDownloader - INFO - Successfully loaded 6224 instruments, 794 in RUB
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Downloading data for GMKN from 2024-01-01 to 2024-01-02
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Found multiple FIGI for GMKN: ['TCS907288411', 'BBG004731489', 'TCS007288411']
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Found multiple UIDs for GMKN: ['7235f401-79ef-403a-9e4c-c99e36fe9536', '509edd0c-129c-4ee2-934d-7f6246126da1', '38e0d7ac-23cf-4bba-9a6c-d09cdffcfb74']
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Found multiple ISINs for GMKN: ['RU0007288411', 'RU0007288411', 'RU0007288411']
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Downloading data for SBER from 2024-01-01 to 2024-01-02
+2025-04-28 13:30:27 - TinkoffDataDownloader - WARNING - No correct FIGI found in the list
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Found multiple FIGI for SBER: ['TCS109029540', 'TCS009029540', 'TCS704730N88', 'BBG004730N88', 'TCS804730N88']
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Downloading data for LKOH from 2024-01-01 to 2024-01-02
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - No correct FIGI found, trying all available identifiers for GMKN
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Downloading data for GAZP from 2024-01-01 to 2024-01-02
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Found multiple UIDs for SBER: ['5c0ad78f-7188-4846-bdaf-dd1bfd0f0547', 'a78b8349-a1dc-447d-9277-1d75826d089a', '882ed2e6-12d0-4d67-aba9-50413a6f952d', 'e6123145-9665-43e0-8413-cd61b8aa9b13', '87f581df-e130-4d45-823b-c24b3b7b60da']
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Downloading data for ROSN from 2024-01-01 to 2024-01-02
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Found multiple FIGI for LKOH: ['TCS009024277', 'TCS609024277', 'BBG004731032']
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Trying FIGI TCS907288411 for GMKN
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Found multiple FIGI for GAZP: ['TCS907661625', 'TCSS07661625', 'TCS007661625', 'BBG004730RP0']
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Found multiple ISINs for SBER: ['RU0009029540', 'RU0009029540', 'RU0009029540', 'RU0009029540', 'RU0009029540']
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Found multiple FIGI for ROSN: ['TCS00A0J2Q06', 'BBG004731354', 'TCS70A0J2Q06']
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Found multiple UIDs for LKOH: ['0fd5a59e-b130-42d0-a6cc-df2f9cae584f', '2eca4582-fbdc-4916-b94a-d7785796f386', '02cfdf61-6298-4c0f-a9ca-9cabc82afaf3']
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Downloading GMKN (TCS907288411) for year 2024
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Found multiple UIDs for GAZP: ['49a412f6-3e9f-4719-8a81-70706d6b5398', '4d50dfc5-a02c-44d1-b380-9d69751a60e8', '9100df58-0e92-48ec-b962-4e788e6b61fd', '962e2a95-02a9-4171-abd7-aa198dbe643a']
+2025-04-28 13:30:27 - TinkoffDataDownloader - WARNING - No correct FIGI found in the list
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Found multiple UIDs for ROSN: ['76d05391-b4b0-43a4-8373-73c3166ab74e', 'fd417230-19cf-4e7b-9623-f7c9ca18ec6b', 'b6308eb8-a397-4a3b-a337-c7a9795de7fc']
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Found multiple ISINs for LKOH: ['RU0009024277', 'RU0009024277', 'RU0009024277']
+2025-04-28 13:30:27 - TinkoffDataDownloader - WARNING - No correct FIGI found in the list
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - No correct FIGI found, trying all available identifiers for SBER
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Found multiple ISINs for ROSN: ['RU000A0J2Q06', 'RU000A0J2Q06', 'RU000A0J2Q06']
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Found multiple ISINs for GAZP: ['RU0007661625', 'RU0007661625', 'RU0007661625', 'RU0007661625']
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - No correct FIGI found, trying all available identifiers for LKOH
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Trying FIGI TCS109029540 for SBER
+2025-04-28 13:30:27 - TinkoffDataDownloader - WARNING - No correct FIGI found in the list
+2025-04-28 13:30:27 - TinkoffDataDownloader - WARNING - No correct FIGI found in the list
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Trying FIGI TCS009024277 for LKOH
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Downloading SBER (TCS109029540) for year 2024
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - No correct FIGI found, trying all available identifiers for ROSN
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - No correct FIGI found, trying all available identifiers for GAZP
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Downloading LKOH (TCS009024277) for year 2024
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Trying FIGI TCS00A0J2Q06 for ROSN
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Downloading ROSN (TCS00A0J2Q06) for year 2024
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Trying FIGI TCS907661625 for GAZP
+2025-04-28 13:30:27 - TinkoffDataDownloader - INFO - Downloading GAZP (TCS907661625) for year 2024
+2025-04-28 13:30:27 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:30:27 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:30:27 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:30:27 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:30:27 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:30:32 - TinkoffDataDownloader - INFO - Downloading GMKN (TCS907288411) for year 2024
+2025-04-28 13:30:32 - TinkoffDataDownloader - INFO - Downloading LKOH (TCS009024277) for year 2024
+2025-04-28 13:30:32 - TinkoffDataDownloader - INFO - Downloading ROSN (TCS00A0J2Q06) for year 2024
+2025-04-28 13:30:32 - TinkoffDataDownloader - INFO - Downloading GAZP (TCS907661625) for year 2024
+2025-04-28 13:30:32 - TinkoffDataDownloader - INFO - Downloading SBER (TCS109029540) for year 2024
+2025-04-28 13:30:32 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:30:32 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:30:32 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:30:32 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:30:32 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:30:37 - TinkoffDataDownloader - INFO - Downloading GMKN (TCS907288411) for year 2024
+2025-04-28 13:30:37 - TinkoffDataDownloader - INFO - Downloading LKOH (TCS009024277) for year 2024
+2025-04-28 13:30:37 - TinkoffDataDownloader - INFO - Downloading GAZP (TCS907661625) for year 2024
+2025-04-28 13:30:37 - TinkoffDataDownloader - INFO - Downloading ROSN (TCS00A0J2Q06) for year 2024
+2025-04-28 13:30:37 - TinkoffDataDownloader - INFO - Downloading SBER (TCS109029540) for year 2024
+2025-04-28 13:30:37 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:30:37 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:30:37 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:30:37 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 13:30:37 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:10 - TinkoffDataDownloader - INFO - Initializing instruments from Tinkoff API
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Successfully loaded 6225 instruments, 794 in RUB
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Downloading data for GMKN from 2024-01-01 to 2024-01-02
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Found multiple FIGI for GMKN: ['TCS907288411', 'BBG004731489', 'TCS007288411']
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Downloading data for ROSN from 2024-01-01 to 2024-01-02
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Found multiple UIDs for GMKN: ['7235f401-79ef-403a-9e4c-c99e36fe9536', '509edd0c-129c-4ee2-934d-7f6246126da1', '38e0d7ac-23cf-4bba-9a6c-d09cdffcfb74']
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Found multiple FIGI for ROSN: ['TCS00A0J2Q06', 'BBG004731354', 'TCS70A0J2Q06']
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Downloading data for LKOH from 2024-01-01 to 2024-01-02
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Found multiple ISINs for GMKN: ['RU0007288411', 'RU0007288411', 'RU0007288411']
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Downloading data for GAZP from 2024-01-01 to 2024-01-02
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Downloading data for SBER from 2024-01-01 to 2024-01-02
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Found multiple UIDs for ROSN: ['76d05391-b4b0-43a4-8373-73c3166ab74e', 'fd417230-19cf-4e7b-9623-f7c9ca18ec6b', 'b6308eb8-a397-4a3b-a337-c7a9795de7fc']
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Found multiple FIGI for LKOH: ['TCS009024277', 'TCS609024277', 'BBG004731032']
+2025-04-28 14:28:13 - TinkoffDataDownloader - WARNING - No correct FIGI found in the list
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Found multiple FIGI for GAZP: ['TCS907661625', 'TCSS07661625', 'TCS007661625', 'BBG004730RP0']
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Found multiple FIGI for SBER: ['TCS109029540', 'TCS009029540', 'TCS704730N88', 'BBG004730N88', 'TCS804730N88']
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Found multiple ISINs for ROSN: ['RU000A0J2Q06', 'RU000A0J2Q06', 'RU000A0J2Q06']
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Found multiple UIDs for LKOH: ['0fd5a59e-b130-42d0-a6cc-df2f9cae584f', '2eca4582-fbdc-4916-b94a-d7785796f386', '02cfdf61-6298-4c0f-a9ca-9cabc82afaf3']
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - No correct FIGI found, trying all available identifiers for GMKN
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Found multiple UIDs for GAZP: ['49a412f6-3e9f-4719-8a81-70706d6b5398', '4d50dfc5-a02c-44d1-b380-9d69751a60e8', '9100df58-0e92-48ec-b962-4e788e6b61fd', '962e2a95-02a9-4171-abd7-aa198dbe643a']
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Found multiple UIDs for SBER: ['5c0ad78f-7188-4846-bdaf-dd1bfd0f0547', 'a78b8349-a1dc-447d-9277-1d75826d089a', '882ed2e6-12d0-4d67-aba9-50413a6f952d', 'e6123145-9665-43e0-8413-cd61b8aa9b13', '87f581df-e130-4d45-823b-c24b3b7b60da']
+2025-04-28 14:28:13 - TinkoffDataDownloader - WARNING - No correct FIGI found in the list
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Found multiple ISINs for LKOH: ['RU0009024277', 'RU0009024277', 'RU0009024277']
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Trying FIGI TCS907288411 for GMKN
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Found multiple ISINs for GAZP: ['RU0007661625', 'RU0007661625', 'RU0007661625', 'RU0007661625']
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Found multiple ISINs for SBER: ['RU0009029540', 'RU0009029540', 'RU0009029540', 'RU0009029540', 'RU0009029540']
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - No correct FIGI found, trying all available identifiers for ROSN
+2025-04-28 14:28:13 - TinkoffDataDownloader - WARNING - No correct FIGI found in the list
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Downloading GMKN (TCS907288411) for year 2024
+2025-04-28 14:28:13 - TinkoffDataDownloader - WARNING - No correct FIGI found in the list
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Trying FIGI TCS00A0J2Q06 for ROSN
+2025-04-28 14:28:13 - TinkoffDataDownloader - WARNING - No correct FIGI found in the list
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - No correct FIGI found, trying all available identifiers for LKOH
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - No correct FIGI found, trying all available identifiers for GAZP
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Downloading ROSN (TCS00A0J2Q06) for year 2024
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - No correct FIGI found, trying all available identifiers for SBER
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Trying FIGI TCS009024277 for LKOH
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Trying FIGI TCS907661625 for GAZP
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Trying FIGI TCS109029540 for SBER
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Downloading LKOH (TCS009024277) for year 2024
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Downloading GAZP (TCS907661625) for year 2024
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Downloading SBER (TCS109029540) for year 2024
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Successfully downloaded data for SBER (TCS109029540) in 2024
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Successfully downloaded data for GAZP (TCS907661625) in 2024
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Successfully downloaded data for LKOH (TCS009024277) in 2024
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Trying FIGI TCSS07661625 for GAZP
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Trying FIGI TCS009029540 for SBER
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Downloading GAZP (TCSS07661625) for year 2024
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Downloading SBER (TCS009029540) for year 2024
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Trying FIGI TCS609024277 for LKOH
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Downloading LKOH (TCS609024277) for year 2024
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Successfully downloaded data for GMKN (TCS907288411) in 2024
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Trying FIGI BBG004731489 for GMKN
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Downloading GMKN (BBG004731489) for year 2024
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Successfully downloaded data for ROSN (TCS00A0J2Q06) in 2024
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Trying FIGI BBG004731354 for ROSN
+2025-04-28 14:28:13 - TinkoffDataDownloader - INFO - Downloading ROSN (BBG004731354) for year 2024
+2025-04-28 14:28:14 - TinkoffDataDownloader - INFO - Successfully downloaded data for LKOH (TCS609024277) in 2024
+2025-04-28 14:28:14 - TinkoffDataDownloader - INFO - Successfully downloaded data for GAZP (TCSS07661625) in 2024
+2025-04-28 14:28:14 - TinkoffDataDownloader - INFO - Trying FIGI BBG004731032 for LKOH
+2025-04-28 14:28:14 - TinkoffDataDownloader - INFO - Trying FIGI TCS007661625 for GAZP
+2025-04-28 14:28:14 - TinkoffDataDownloader - INFO - Downloading LKOH (BBG004731032) for year 2024
+2025-04-28 14:28:14 - TinkoffDataDownloader - INFO - Downloading GAZP (TCS007661625) for year 2024
+2025-04-28 14:28:14 - TinkoffDataDownloader - INFO - Successfully downloaded data for SBER (TCS009029540) in 2024
+2025-04-28 14:28:14 - TinkoffDataDownloader - INFO - Trying FIGI TCS704730N88 for SBER
+2025-04-28 14:28:14 - TinkoffDataDownloader - INFO - Downloading SBER (TCS704730N88) for year 2024
+2025-04-28 14:28:14 - TinkoffDataDownloader - INFO - Successfully downloaded data for GAZP (TCS007661625) in 2024
+2025-04-28 14:28:14 - TinkoffDataDownloader - WARNING - No data found for SBER (TCS704730N88) in 2024
+2025-04-28 14:28:14 - TinkoffDataDownloader - INFO - Trying FIGI BBG004730RP0 for GAZP
+2025-04-28 14:28:14 - TinkoffDataDownloader - INFO - Trying FIGI BBG004730N88 for SBER
+2025-04-28 14:28:14 - TinkoffDataDownloader - INFO - Downloading GAZP (BBG004730RP0) for year 2024
+2025-04-28 14:28:14 - TinkoffDataDownloader - INFO - Downloading SBER (BBG004730N88) for year 2024
+2025-04-28 14:28:15 - TinkoffDataDownloader - INFO - Successfully downloaded data for GMKN (BBG004731489) in 2024
+2025-04-28 14:28:15 - TinkoffDataDownloader - INFO - Trying FIGI TCS007288411 for GMKN
+2025-04-28 14:28:15 - TinkoffDataDownloader - INFO - Downloading GMKN (TCS007288411) for year 2024
+2025-04-28 14:28:15 - TinkoffDataDownloader - INFO - Successfully downloaded data for GMKN (TCS007288411) in 2024
+2025-04-28 14:28:15 - TinkoffDataDownloader - INFO - Trying ISIN RU0007288411 for GMKN
+2025-04-28 14:28:15 - TinkoffDataDownloader - INFO - Downloading GMKN (RU0007288411) for year 2024
+2025-04-28 14:28:15 - TinkoffDataDownloader - INFO - Successfully downloaded data for LKOH (BBG004731032) in 2024
+2025-04-28 14:28:15 - TinkoffDataDownloader - INFO - Trying ISIN RU0009024277 for LKOH
+2025-04-28 14:28:15 - TinkoffDataDownloader - INFO - Downloading LKOH (RU0009024277) for year 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - WARNING - No data found for GMKN (RU0007288411) in 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Trying ISIN RU0007288411 for GMKN
+2025-04-28 14:28:16 - TinkoffDataDownloader - WARNING - No data found for LKOH (RU0009024277) in 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Downloading GMKN (RU0007288411) for year 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Trying ISIN RU0009024277 for LKOH
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Downloading LKOH (RU0009024277) for year 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Successfully downloaded data for SBER (BBG004730N88) in 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Trying FIGI TCS804730N88 for SBER
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Downloading SBER (TCS804730N88) for year 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - WARNING - No data found for GMKN (RU0007288411) in 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - WARNING - No data found for LKOH (RU0009024277) in 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Trying ISIN RU0007288411 for GMKN
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Trying ISIN RU0009024277 for LKOH
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Downloading GMKN (RU0007288411) for year 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Downloading LKOH (RU0009024277) for year 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - WARNING - No data found for SBER (TCS804730N88) in 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Trying ISIN RU0009029540 for SBER
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Downloading SBER (RU0009029540) for year 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - WARNING - No data found for LKOH (RU0009024277) in 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Trying UID 0fd5a59e-b130-42d0-a6cc-df2f9cae584f for LKOH
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Downloading LKOH (0fd5a59e-b130-42d0-a6cc-df2f9cae584f) for year 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - WARNING - No data found for GMKN (RU0007288411) in 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Trying UID 7235f401-79ef-403a-9e4c-c99e36fe9536 for GMKN
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Downloading GMKN (7235f401-79ef-403a-9e4c-c99e36fe9536) for year 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - WARNING - No data found for SBER (RU0009029540) in 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Trying ISIN RU0009029540 for SBER
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Downloading SBER (RU0009029540) for year 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Successfully downloaded data for ROSN (BBG004731354) in 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Trying FIGI TCS70A0J2Q06 for ROSN
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Downloading ROSN (TCS70A0J2Q06) for year 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - WARNING - No data found for LKOH (0fd5a59e-b130-42d0-a6cc-df2f9cae584f) in 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Trying UID 2eca4582-fbdc-4916-b94a-d7785796f386 for LKOH
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Downloading LKOH (2eca4582-fbdc-4916-b94a-d7785796f386) for year 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - WARNING - No data found for GMKN (7235f401-79ef-403a-9e4c-c99e36fe9536) in 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Trying UID 509edd0c-129c-4ee2-934d-7f6246126da1 for GMKN
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Downloading GMKN (509edd0c-129c-4ee2-934d-7f6246126da1) for year 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - WARNING - No data found for SBER (RU0009029540) in 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Trying ISIN RU0009029540 for SBER
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Downloading SBER (RU0009029540) for year 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Successfully downloaded data for ROSN (TCS70A0J2Q06) in 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Trying ISIN RU000A0J2Q06 for ROSN
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Downloading ROSN (RU000A0J2Q06) for year 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - WARNING - No data found for LKOH (2eca4582-fbdc-4916-b94a-d7785796f386) in 2024
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Trying UID 02cfdf61-6298-4c0f-a9ca-9cabc82afaf3 for LKOH
+2025-04-28 14:28:16 - TinkoffDataDownloader - INFO - Downloading LKOH (02cfdf61-6298-4c0f-a9ca-9cabc82afaf3) for year 2024
+2025-04-28 14:28:17 - TinkoffDataDownloader - INFO - Successfully downloaded data for GAZP (BBG004730RP0) in 2024
+2025-04-28 14:28:17 - TinkoffDataDownloader - INFO - Trying ISIN RU0007661625 for GAZP
+2025-04-28 14:28:17 - TinkoffDataDownloader - INFO - Downloading GAZP (RU0007661625) for year 2024
+2025-04-28 14:28:17 - TinkoffDataDownloader - WARNING - No data found for GMKN (509edd0c-129c-4ee2-934d-7f6246126da1) in 2024
+2025-04-28 14:28:17 - TinkoffDataDownloader - INFO - Trying UID 38e0d7ac-23cf-4bba-9a6c-d09cdffcfb74 for GMKN
+2025-04-28 14:28:17 - TinkoffDataDownloader - INFO - Downloading GMKN (38e0d7ac-23cf-4bba-9a6c-d09cdffcfb74) for year 2024
+2025-04-28 14:28:17 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:17 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:17 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:17 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:17 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:22 - TinkoffDataDownloader - INFO - Downloading SBER (RU0009029540) for year 2024
+2025-04-28 14:28:22 - TinkoffDataDownloader - INFO - Downloading ROSN (RU000A0J2Q06) for year 2024
+2025-04-28 14:28:22 - TinkoffDataDownloader - INFO - Downloading LKOH (02cfdf61-6298-4c0f-a9ca-9cabc82afaf3) for year 2024
+2025-04-28 14:28:22 - TinkoffDataDownloader - INFO - Downloading GAZP (RU0007661625) for year 2024
+2025-04-28 14:28:22 - TinkoffDataDownloader - INFO - Downloading GMKN (38e0d7ac-23cf-4bba-9a6c-d09cdffcfb74) for year 2024
+2025-04-28 14:28:22 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:22 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:22 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:22 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:22 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:27 - TinkoffDataDownloader - INFO - Downloading SBER (RU0009029540) for year 2024
+2025-04-28 14:28:27 - TinkoffDataDownloader - INFO - Downloading ROSN (RU000A0J2Q06) for year 2024
+2025-04-28 14:28:27 - TinkoffDataDownloader - INFO - Downloading LKOH (02cfdf61-6298-4c0f-a9ca-9cabc82afaf3) for year 2024
+2025-04-28 14:28:27 - TinkoffDataDownloader - INFO - Downloading GAZP (RU0007661625) for year 2024
+2025-04-28 14:28:27 - TinkoffDataDownloader - INFO - Downloading GMKN (38e0d7ac-23cf-4bba-9a6c-d09cdffcfb74) for year 2024
+2025-04-28 14:28:27 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:27 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:27 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:27 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:27 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:32 - TinkoffDataDownloader - INFO - Downloading SBER (RU0009029540) for year 2024
+2025-04-28 14:28:32 - TinkoffDataDownloader - INFO - Downloading ROSN (RU000A0J2Q06) for year 2024
+2025-04-28 14:28:32 - TinkoffDataDownloader - INFO - Downloading LKOH (02cfdf61-6298-4c0f-a9ca-9cabc82afaf3) for year 2024
+2025-04-28 14:28:32 - TinkoffDataDownloader - INFO - Downloading GAZP (RU0007661625) for year 2024
+2025-04-28 14:28:32 - TinkoffDataDownloader - INFO - Downloading GMKN (38e0d7ac-23cf-4bba-9a6c-d09cdffcfb74) for year 2024
+2025-04-28 14:28:32 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:32 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:32 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:32 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...
+2025-04-28 14:28:32 - TinkoffDataDownloader - WARNING - Rate limit exceeded. Sleeping for 5 seconds...

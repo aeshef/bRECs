@@ -873,8 +873,8 @@ class Backtester(BaseLogger):
                risk_free_rate=0.075, bonds_data_dir=None):
         """
         Запускает полный пайплайн бэктестирования
-        
-        Parameters:
+
+        Parameters
         -----------
         input_file : str, optional
             Путь к файлу с данными и сигналами
@@ -888,11 +888,12 @@ class Backtester(BaseLogger):
             Безрисковая ставка для расчета метрик
         bonds_data_dir : str, optional
             Директория с историческими данными по облигациям
-            
-        Returns:
+
+        Returns
         --------
         dict с результатами бэктеста
         """
+        
         self.logger.info("Запуск пайплайна бэктестирования")
 
         # Обновление параметров, если указаны

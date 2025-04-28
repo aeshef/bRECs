@@ -626,3 +626,49 @@
 2025-04-26 18:52:09 - MarketDataManager - INFO -   - First date: 2024-01-02 07:16:00
 2025-04-26 18:52:09 - MarketDataManager - INFO -   - Last date: 2025-04-14 20:49:00
 2025-04-26 18:52:09 - MarketDataManager - INFO - Completed data retrieval for 16 tickers
+2025-04-28 13:29:22 - MarketDataManager - INFO - MarketDataManager initialized
+2025-04-28 13:29:22 - MarketDataManager - INFO - Getting data for 16 tickers with 5 workers
+2025-04-28 13:29:22 - MarketDataManager - INFO - Getting data for SBER from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-28 13:29:22 - MarketDataManager - INFO - Getting data for GAZP from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-28 13:29:22 - MarketDataManager - INFO - Getting data for LKOH from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-28 13:29:22 - MarketDataManager - INFO - Getting data for GMKN from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-28 13:29:22 - MarketDataManager - INFO - Getting data for ROSN from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-28 13:29:22 - MarketDataManager - INFO - No existing data found for SBER, downloading from scratch
+2025-04-28 13:29:22 - MarketDataManager - INFO - No existing data found for GAZP, downloading from scratch
+2025-04-28 13:29:22 - MarketDataManager - INFO - No existing data found for LKOH, downloading from scratch
+2025-04-28 13:29:22 - MarketDataManager - INFO - No existing data found for GMKN, downloading from scratch
+2025-04-28 13:29:22 - MarketDataManager - INFO - No existing data found for ROSN, downloading from scratch
+2025-04-28 13:30:24 - MarketDataManager - INFO - MarketDataManager initialized
+2025-04-28 13:30:24 - MarketDataManager - INFO - Getting data for 16 tickers with 5 workers
+2025-04-28 13:30:24 - MarketDataManager - INFO - Getting data for SBER from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-28 13:30:24 - MarketDataManager - INFO - Getting data for GAZP from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-28 13:30:24 - MarketDataManager - INFO - Getting data for LKOH from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-28 13:30:24 - MarketDataManager - INFO - Getting data for GMKN from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-28 13:30:24 - MarketDataManager - INFO - Getting data for ROSN from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-28 13:30:27 - MarketDataManager - INFO - Found existing data for GMKN, checking for missing ranges
+2025-04-28 13:30:27 - MarketDataManager - INFO - Found existing data for SBER, checking for missing ranges
+2025-04-28 13:30:27 - MarketDataManager - INFO - Found existing data for LKOH, checking for missing ranges
+2025-04-28 13:30:27 - MarketDataManager - INFO - Found existing data for ROSN, checking for missing ranges
+2025-04-28 13:30:27 - MarketDataManager - INFO - Found existing data for GAZP, checking for missing ranges
+2025-04-28 13:30:27 - MarketDataManager - INFO - Downloading missing data for GMKN from 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-28 13:30:27 - MarketDataManager - INFO - Downloading missing data for SBER from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-28 13:30:27 - MarketDataManager - INFO - Downloading missing data for LKOH from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-28 13:30:27 - MarketDataManager - INFO - Downloading missing data for GAZP from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-28 13:30:27 - MarketDataManager - INFO - Downloading missing data for ROSN from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-28 14:28:13 - MarketDataManager - INFO - MarketDataManager initialized
+2025-04-28 14:28:13 - MarketDataManager - INFO - Getting data for 16 tickers with 5 workers
+2025-04-28 14:28:13 - MarketDataManager - INFO - Getting data for SBER from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-28 14:28:13 - MarketDataManager - INFO - Getting data for GAZP from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-28 14:28:13 - MarketDataManager - INFO - Getting data for LKOH from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-28 14:28:13 - MarketDataManager - INFO - Getting data for GMKN from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-28 14:28:13 - MarketDataManager - INFO - Getting data for ROSN from 2024-01-01 to 2025-04-15 with timeframe 1min
+2025-04-28 14:28:13 - MarketDataManager - INFO - Found existing data for GMKN, checking for missing ranges
+2025-04-28 14:28:13 - MarketDataManager - INFO - Found existing data for ROSN, checking for missing ranges
+2025-04-28 14:28:13 - MarketDataManager - INFO - Found existing data for GAZP, checking for missing ranges
+2025-04-28 14:28:13 - MarketDataManager - INFO - Found existing data for SBER, checking for missing ranges
+2025-04-28 14:28:13 - MarketDataManager - INFO - Found existing data for LKOH, checking for missing ranges
+2025-04-28 14:28:13 - MarketDataManager - INFO - Downloading missing data for GMKN from 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-28 14:28:13 - MarketDataManager - INFO - Downloading missing data for ROSN from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-28 14:28:13 - MarketDataManager - INFO - Downloading missing data for LKOH from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-28 14:28:13 - MarketDataManager - INFO - Downloading missing data for GAZP from 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-28 14:28:13 - MarketDataManager - INFO - Downloading missing data for SBER from 2024-01-01 00:00:00 to 2024-01-02 07:16:00

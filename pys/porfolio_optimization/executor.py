@@ -110,7 +110,7 @@ class PipelineExecutor(BaseLogger):
         """
         Запускает полный цикл обработки облигаций - от парсинга до создания портфеля.
         
-        Parameters:
+        Parameters
         -----------
         start_date, end_date : str
             Диапазон дат для анализа
@@ -131,11 +131,12 @@ class PipelineExecutor(BaseLogger):
         kbd_data : pandas.DataFrame, optional
             Предварительно загруженные данные КБД
         
-        Returns:
+        Returns
         --------
         dict
             Результаты обработки облигаций
         """
+
         from pys.data_collection.bonds_parser import run_bond_pipeline  # Исправленный импорт
         from pys.data_collection.bonds_kbd_pipeline import run_bond_selection_with_kbd
         
@@ -267,16 +268,17 @@ class PipelineExecutor(BaseLogger):
         """
         Копирует результаты выбора облигаций.
         
-        Parameters:
+        Parameters
         -----------
         bond_results : dict, optional
             Результаты выполнения run_bond_selection_with_kbd
         
-        Returns:
+        Returns
         --------
         str
             Путь к скопированному портфелю облигаций
         """
+
         bond_results = bond_results or self.bond_results
         
         if not bond_results:
@@ -314,7 +316,7 @@ class PipelineExecutor(BaseLogger):
         """
         Запускает генерацию сигналов.
         
-        Parameters:
+        Parameters
         -----------
         weight_tech : float
             Вес технических сигналов
@@ -323,11 +325,12 @@ class PipelineExecutor(BaseLogger):
         weight_fundamental : float
             Вес фундаментальных сигналов
         
-        Returns:
+        Returns
         --------
         dict
             Результаты генерации сигналов
         """
+
         from pys.porfolio_optimization.signal_generator import run_pipeline_signal_generator
         
         self.signal_params = {
@@ -384,7 +387,7 @@ class PipelineExecutor(BaseLogger):
         """
         Запускает оптимизацию стандартного портфеля (только длинные позиции).
         
-        Parameters:
+        Parameters
         -----------
         tickers_list : list
             Список тикеров
@@ -395,11 +398,12 @@ class PipelineExecutor(BaseLogger):
         max_weight : float, optional
             Максимальный вес одного актива
         
-        Returns:
+        Returns
         --------
         dict
             Результаты оптимизации портфеля
         """
+
         from pys.porfolio_optimization.portfolio_optimizer import run_all_optimization_models
         
         # Использовать параметры из объекта, если не указаны
@@ -478,7 +482,7 @@ class PipelineExecutor(BaseLogger):
         """
         Создает портфель с короткими позициями.
         
-        Parameters:
+        Parameters
         -----------
         risk_free_rate : float, optional
             Безрисковая ставка
@@ -487,12 +491,12 @@ class PipelineExecutor(BaseLogger):
         best_params_file : str, optional
             Путь к файлу с лучшими параметрами
         
-        Returns:
+        Returns
         --------
         dict
             Результаты создания портфеля с короткими позициями
         """
-        # Использовать параметры из объекта, если не указаны
+
         risk_free_rate = risk_free_rate or self.risk_free_rate
         
         self.short_params = {
@@ -962,7 +966,7 @@ class PipelineExecutor(BaseLogger):
         Выбирает лучший портфель на основе метрик и стратегии риска.
         Копирует выбранный портфель в директорию final_portfolio.
         
-        Parameters:
+        Parameters
         -----------
         metrics_priority : list, optional
             Приоритет метрик для выбора ['sharpe', 'return', 'volatility']
@@ -973,11 +977,12 @@ class PipelineExecutor(BaseLogger):
         force_portfolio_type : str, optional
             Принудительно выбрать тип портфеля ('standard', 'short', 'combined')
         
-        Returns:
+        Returns
         --------
         dict
             Информация о выбранном лучшем портфеле
         """
+        
         # Проверяем, созданы ли необходимые портфели
         available_portfolios = {}
         
@@ -1206,11 +1211,12 @@ class PipelineExecutor(BaseLogger):
         """
         Создает итоговый отчет о запуске.
         
-        Returns:
+        Returns
         --------
         str
             Путь к созданному отчету
         """
+
         summary_path = os.path.join(self.run_dir, "pipeline_summary.md")
         
         self.logger.info(f"Создание итогового отчета о запуске")
@@ -1628,13 +1634,12 @@ class PipelineExecutor(BaseLogger):
                signal_params=None, standard_portfolio_params=None, 
                short_portfolio_params=None, combined_portfolio_params=None,
                portfolio_controls=None, backtest_params=None,
-               # Дополнительные параметры для детальной настройки
                select_portfolio_params=None, report_params=None,
                optimization_params=None, visualization_params=None):
         """
         Запускает все этапы пайплайна последовательно с полной настройкой параметров.
         
-        Parameters:
+        Parameters
         -----------
         tickers_list : list
             Список тикеров
@@ -1642,7 +1647,6 @@ class PipelineExecutor(BaseLogger):
             Результаты выполнения run_bond_selection_with_kbd
         strategy_profile : str, optional
             Профиль стратегии ('aggressive', 'moderate', 'conservative')
-            
         # Параметры для разных этапов
         signal_params : dict, optional
             Параметры для генерации сигналов:
@@ -1653,7 +1657,6 @@ class PipelineExecutor(BaseLogger):
             - threshold_sell (float): порог для сигнала продажи
             - top_pct (float): процент лучших акций для shortlist
             - save_ticker_visualizations (bool): сохранять визуализации по тикерам
-            
         standard_portfolio_params : dict, optional
             Параметры для стандартного портфеля:
             - risk_free_rate (float): безрисковая ставка
@@ -1661,7 +1664,6 @@ class PipelineExecutor(BaseLogger):
             - max_rf_allocation (float): максимальная доля безрисковых активов
             - max_weight (float): максимальный вес одной позиции
             - include_short_selling (bool): включать ли короткие позиции
-            
         short_portfolio_params : dict, optional
             Параметры для портфеля с короткими позициями:
             - risk_free_rate (float): безрисковая ставка
@@ -1669,7 +1671,6 @@ class PipelineExecutor(BaseLogger):
             - test_period (tuple): период тестирования (начало, конец)
             - best_params_file (str): путь к файлу с лучшими параметрами
             - verify_with_honest_backtest (bool): проверять с честным бэктестом
-            
         combined_portfolio_params : dict, optional
             Параметры для комбинированного портфеля:
             - risk_free_rate (float): безрисковая ставка
@@ -1678,35 +1679,30 @@ class PipelineExecutor(BaseLogger):
             - max_weight (float): максимальный вес одной позиции
             - long_ratio (float): соотношение длинных/коротких позиций
             - include_short_selling (bool): включать ли короткие позиции
-            
         portfolio_controls : dict, optional
             Контроль запуска различных портфелей:
             - run_standard_portfolio (bool): запускать стандартный портфель
             - run_short_portfolio (bool): запускать портфель с короткими позициями
             - run_combined_portfolio (bool): запускать комбинированный портфель
-            - override_risk_profile (bool): игнорировать профиль риска
-            
+            - override_risk_profile (bool): игнорировать профиль риска 
         backtest_params : dict, optional
             Параметры для бэктестирования:
             - train_period (tuple): период обучения (начало, конец)
             - test_period (tuple): период тестирования (начало, конец)
             - risk_free_rate (float): безрисковая ставка
             - use_grid_search_params (bool): использовать параметры из Grid Search
-            
         select_portfolio_params : dict, optional
             Параметры для выбора лучшего портфеля:
             - metrics_priority (list): приоритет метрик ['sharpe', 'return', 'volatility']
             - min_sharpe (float): минимальный допустимый коэффициент Шарпа
             - prefer_standard (bool): предпочитать стандартный портфель
             - force_portfolio_type (str): принудительно выбрать тип портфеля
-            
         report_params : dict, optional
             Параметры для создания отчета:
             - include_charts (bool): включать графики в отчет
             - include_metrics (bool): включать метрики в отчет
             - include_weights (bool): включать веса в отчет
             - report_format (str): формат отчета ('md', 'html')
-            
         optimization_params : dict, optional
             Параметры оптимизации портфеля:
             - optimization (str): модель оптимизации ('markowitz', 'black_litterman')
@@ -1714,7 +1710,6 @@ class PipelineExecutor(BaseLogger):
             - views (dict): субъективные прогнозы 
             - view_confidences (dict): уверенность в прогнозах
             - market_caps (dict): рыночные капитализации
-            
         visualization_params : dict, optional
             Параметры визуализации:
             - plot_style (str): стиль графиков ('seaborn', 'ggplot', etc.)
@@ -1722,12 +1717,13 @@ class PipelineExecutor(BaseLogger):
             - dpi (int): разрешение графиков
             - color_scheme (str): цветовая схема
             - save_formats (list): форматы сохранения графиков ['png', 'svg', 'pdf']
-            
+
         Returns:
         --------
         dict
             Результаты выполнения всех этапов пайплайна
         """
+
         if strategy_profile:
             self.strategy_profile = strategy_profile
             

@@ -30,3 +30,15 @@
 2025-04-26 18:45:05 - MarketDataPipeline - INFO - Starting process: Data download
 2025-04-26 18:52:09 - MarketDataPipeline - INFO - Successfully completed: Data download
 2025-04-26 18:52:09 - MarketDataPipeline - INFO - Successfully downloaded data for 16 out of 16 tickers
+2025-04-28 13:29:19 - MarketDataPipeline - INFO - MarketDataPipeline initialized with base directory: //Users/aeshef/Desktop/FOR3.9TEST/kursach/data
+2025-04-28 13:29:19 - MarketDataPipeline - INFO - Starting market data pipeline for 16 tickers
+2025-04-28 13:29:19 - MarketDataPipeline - INFO - Date range: 2024-01-01 to 2025-04-15, timeframe: 1min
+2025-04-28 13:29:22 - MarketDataPipeline - INFO - Starting process: Data download
+2025-04-28 13:30:20 - MarketDataPipeline - INFO - MarketDataPipeline initialized with base directory: //Users/aeshef/Desktop/FOR3.9TEST/kursach/data
+2025-04-28 13:30:20 - MarketDataPipeline - INFO - Starting market data pipeline for 16 tickers
+2025-04-28 13:30:20 - MarketDataPipeline - INFO - Date range: 2024-01-01 to 2025-04-15, timeframe: 1min
+2025-04-28 13:30:24 - MarketDataPipeline - INFO - Starting process: Data download
+2025-04-28 14:28:10 - MarketDataPipeline - INFO - MarketDataPipeline initialized with base directory: //Users/aeshef/Desktop/FOR3.9TEST/kursach/data
+2025-04-28 14:28:10 - MarketDataPipeline - INFO - Starting market data pipeline for 16 tickers
+2025-04-28 14:28:10 - MarketDataPipeline - INFO - Date range: 2024-01-01 to 2025-04-15, timeframe: 1min
+2025-04-28 14:28:13 - MarketDataPipeline - INFO - Starting process: Data download

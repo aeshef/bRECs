@@ -318,8 +318,8 @@ def run_honest_backtest(
 ):
     """
     Запускает честный бэктест на будущий период используя класс HonestBacktester
-    
-    Parameters:
+
+    Parameters
     -----------
     data_file : str
         Путь к файлу с данными
@@ -335,11 +335,12 @@ def run_honest_backtest(
         Безрисковая ставка
     use_grid_search_params : bool
         Использовать ли параметры из Grid Search
-        
-    Returns:
+
+    Returns
     --------
     dict с результатами бэктеста
     """
+    
     backtester = HonestBacktester(
         data_file=data_file,
         best_params_file=best_params_file,

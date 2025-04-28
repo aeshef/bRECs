@@ -33,31 +33,32 @@ def run_bond_selection_with_kbd(
     output_dirs=None
 ):
     """
-    Полный пайплайн для выбора облигаций с учетом кривой бескупонной доходности
-    
+    Полный пайплайн для выбора облигаций с учетом кривой бескупонной доходности.
+
     Args:
-        base_path: базовый путь проекта
-        dataset_path: путь к датасету облигаций
-        n_bonds: целевое количество облигаций в портфеле
-        min_bonds: минимальное количество облигаций для диверсификации
-        weighting_strategy: стратегия взвешивания (None для автовыбора на основе КБД)
-        portfolio_stability: стабильность портфеля (0.0-1.0)
-        use_kbd_recommendations: использовать ли рекомендации на основе КБД
-        override_params: словарь для переопределения параметров
-        start_date: начальная дата для КБД (если None, используется год назад)
-        end_date: конечная дата для КБД (если None, используется текущая дата)
-        update_kbd_data: обновлять ли данные КБД
-        strategy_profile: профиль стратегии ('conservative', 'balanced', 'aggressive')
-        kbd_yield_adjustment: корректировка минимальной доходности (± процентные пункты)
-        kbd_duration_flexibility: множитель для расширения диапазона дюрации
-        max_adjustment_iterations: максимальное число итераций адаптивной настройки
-        excluded_issuers: список исключаемых эмитентов
-        output_format: формат выходных данных
-        kbd_data: предварительно загруженные данные КБД (DataFrame)
-        
+        base_path (str): базовый путь проекта.
+        dataset_path (str): путь к датасету облигаций.
+        n_bonds (int): целевое количество облигаций в портфеле.
+        min_bonds (int): минимальное количество облигаций для диверсификации.
+        weighting_strategy (str, optional): стратегия взвешивания (None для автовыбора на основе КБД).
+        portfolio_stability (float): стабильность портфеля (0.0-1.0).
+        use_kbd_recommendations (bool): использовать ли рекомендации на основе КБД.
+        override_params (dict): словарь для переопределения параметров.
+        start_date (str or datetime, optional): начальная дата для КБД (если None, используется год назад).
+        end_date (str or datetime, optional): конечная дата для КБД (если None, используется текущая дата).
+        update_kbd_data (bool, optional): обновлять ли данные КБД.
+        strategy_profile (str): профиль стратегии ('conservative', 'balanced', 'aggressive').
+        kbd_yield_adjustment (float): корректировка минимальной доходности (± процентные пункты).
+        kbd_duration_flexibility (float): множитель для расширения диапазона дюрации.
+        max_adjustment_iterations (int): максимальное число итераций адаптивной настройки.
+        excluded_issuers (list, optional): список исключаемых эмитентов.
+        output_format (str): формат выходных данных.
+        kbd_data (DataFrame, optional): предварительно загруженные данные КБД.
+
     Returns:
-        dict: результаты работы пайплайна
+        dict: Результаты работы пайплайна.
     """
+
     logger = BaseLogger('BondsKBDPipeline').logger
     logger.info("Запуск пайплайна выбора облигаций с учетом КБД")
     

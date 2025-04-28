@@ -602,3 +602,68 @@
 2025-04-26 18:52:08 - DataStorage - INFO - Loaded 345214 rows from 484 CSV files
 2025-04-26 18:52:08 - DataStorage - INFO - Combined 979 new rows with 335826 existing rows for RUAL
 2025-04-26 18:52:09 - DataStorage - INFO - Saved processed data for RUAL to //Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/RUAL.parquet
+2025-04-28 13:29:22 - DataStorage - ERROR - Error reading processed data for SBER: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2025-04-28 13:29:22 - DataStorage - ERROR - Error reading processed data for GAZP: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2025-04-28 13:29:22 - DataStorage - ERROR - Error reading processed data for LKOH: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2025-04-28 13:29:22 - DataStorage - ERROR - Error reading processed data for GMKN: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2025-04-28 13:29:22 - DataStorage - ERROR - Error reading processed data for ROSN: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2025-04-28 13:30:27 - DataStorage - INFO - Loaded 343880 rows of processed data for GMKN
+2025-04-28 13:30:27 - DataStorage - INFO - Loaded 412938 rows of processed data for SBER
+2025-04-28 13:30:27 - DataStorage - INFO - Loaded 378326 rows of processed data for LKOH
+2025-04-28 13:30:27 - DataStorage - INFO - Loaded 417184 rows of processed data for ROSN
+2025-04-28 13:30:27 - DataStorage - INFO - Loaded 411925 rows of processed data for GAZP
+2025-04-28 13:30:27 - DataStorage - INFO - Loaded 343880 rows of processed data for GMKN
+2025-04-28 13:30:27 - DataStorage - INFO - Loaded 412938 rows of processed data for SBER
+2025-04-28 13:30:27 - DataStorage - INFO - Missing date range for GMKN: 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-28 13:30:27 - DataStorage - INFO - Loaded 378326 rows of processed data for LKOH
+2025-04-28 13:30:27 - DataStorage - INFO - Loaded 411925 rows of processed data for GAZP
+2025-04-28 13:30:27 - DataStorage - INFO - Missing date range for GMKN: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-28 13:30:27 - DataStorage - INFO - Loaded 417184 rows of processed data for ROSN
+2025-04-28 13:30:27 - DataStorage - INFO - Missing date range for SBER: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-28 13:30:27 - DataStorage - INFO - Missing date range for LKOH: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-28 13:30:27 - DataStorage - INFO - Missing date range for GAZP: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-28 13:30:27 - DataStorage - INFO - Missing date range for SBER: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-28 13:30:27 - DataStorage - INFO - Missing date range for LKOH: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-28 13:30:27 - DataStorage - INFO - Missing date range for ROSN: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-28 13:30:27 - DataStorage - INFO - Missing date range for GAZP: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-28 13:30:27 - DataStorage - INFO - Missing date range for ROSN: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-28 14:28:13 - DataStorage - INFO - Loaded 343880 rows of processed data for GMKN
+2025-04-28 14:28:13 - DataStorage - INFO - Loaded 417184 rows of processed data for ROSN
+2025-04-28 14:28:13 - DataStorage - INFO - Loaded 411925 rows of processed data for GAZP
+2025-04-28 14:28:13 - DataStorage - INFO - Loaded 412938 rows of processed data for SBER
+2025-04-28 14:28:13 - DataStorage - INFO - Loaded 378326 rows of processed data for LKOH
+2025-04-28 14:28:13 - DataStorage - INFO - Loaded 343880 rows of processed data for GMKN
+2025-04-28 14:28:13 - DataStorage - INFO - Loaded 417184 rows of processed data for ROSN
+2025-04-28 14:28:13 - DataStorage - INFO - Missing date range for GMKN: 2024-01-01 00:00:00 to 2024-01-02 07:17:00
+2025-04-28 14:28:13 - DataStorage - INFO - Loaded 378326 rows of processed data for LKOH
+2025-04-28 14:28:13 - DataStorage - INFO - Loaded 411925 rows of processed data for GAZP
+2025-04-28 14:28:13 - DataStorage - INFO - Loaded 412938 rows of processed data for SBER
+2025-04-28 14:28:13 - DataStorage - INFO - Missing date range for GMKN: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-28 14:28:13 - DataStorage - INFO - Missing date range for ROSN: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-28 14:28:13 - DataStorage - INFO - Missing date range for LKOH: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-28 14:28:13 - DataStorage - INFO - Missing date range for ROSN: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-28 14:28:13 - DataStorage - INFO - Missing date range for GAZP: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-28 14:28:13 - DataStorage - INFO - Missing date range for SBER: 2024-01-01 00:00:00 to 2024-01-02 07:16:00
+2025-04-28 14:28:13 - DataStorage - INFO - Missing date range for LKOH: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-28 14:28:13 - DataStorage - INFO - Missing date range for GAZP: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
+2025-04-28 14:28:13 - DataStorage - INFO - Missing date range for SBER: 2025-04-14 20:49:00 to 2025-04-15 00:00:00
