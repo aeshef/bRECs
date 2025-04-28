@@ -18,3 +18,12 @@ pys/config/secrets/secret_config.py
 pys/data_collection/private_info.py
 *.session
 *.session-journal
+docs/build/
+# Sphinx build artifacts
+_build/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+*.egg-info/
