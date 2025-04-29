@@ -1,5 +1,3 @@
-# 📊 Название проекта
-
 ![Логотип](https://i.ibb.co/pVLH0Ky/IMAGE-2025-04-28-15-06-10.jpg)
 
 ## 📑 Оглавление
@@ -23,8 +21,9 @@
 
 ## 📌 Архитектура проекта
 
-![Архитектура проекта](https://i.ibb.co/pVLH0Ky/IMAGE-2025-04-28-15-06-10.jpg)
-
+<p align="center">
+  <img src="https://i.ibb.co/G3scrSyR/IMAGE-2025-04-29-19-38-11.jpg" width="30%">
+</p>
 
 ## 🚀 Инструкция по запуску
 
@@ -35,14 +34,14 @@
 
 ## 1. Клонируй репозиторий
 
-```
+```bash
 git clone <URL_ВАШЕГО_РЕПОЗИТОРИЯ>
 cd название_папки_проекта
 ```
 
 ## 2. Создай и активируй виртуальное окружение
 
-```
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
@@ -53,13 +52,13 @@ source .venv/bin/activate
 
 ## 3. Установи зависимости и проект в editable-режиме
 
-```
+```bash
 pip install --upgrade pip
 pip install -e .
 ```
 Если используешь Jupyter Notebook — также:
 
-```
+```bash
 pip install jupyter ipykernel
 ```
 
@@ -67,7 +66,7 @@ pip install jupyter ipykernel
 
 ## 4. Добавь Jupyter kernel* (чтобы запускать ноутбуки в своем venv)
 
-```
+```bash
 python -m ipykernel install --user --name kursach-env --display-name "Kursach Env"
 ```
 
@@ -79,7 +78,7 @@ python -m ipykernel install --user --name kursach-env --display-name "Kursach En
 
 После выполнения команд выше, в любом ноутбуке или скрипте из любой папки проекта можно писать:
 
-```
+```py
 from pys.utils.logger import BaseLogger
 from pys.data_collection.private_info import BASE_PATH
 from pys.data_collection.bonds_processor import run_pipeline_bonds_processor
@@ -111,17 +110,3 @@ from pys.data_collection.bonds_processor import run_pipeline_bonds_processor
 ## 📬 Контакты
 - **Почта:** liza.bolotnikova@gmail.com aeshevchenko1704@gmail.com
 - **Telegram:** @liza_bolotnikova @plxlrd
-
-
-
-
-
-
-
-
-
-
-
-
-
-
