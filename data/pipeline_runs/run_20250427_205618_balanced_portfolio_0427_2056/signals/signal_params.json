@@ -1,8 +1,0 @@
-{
-    "weight_tech": 0.5,
-    "weight_sentiment": 0.3,
-    "weight_fundamental": 0.2,
-    "threshold_buy": 0.5,
-    "threshold_sell": -0.5,
-    "top_pct": 0.3
-}

@@ -1,46 +1,46 @@
 === Сводный отчет по техническому анализу ===
-Дата анализа: 2025-04-26 13:43:19.471836
+Дата анализа: 2025-04-29 17:23:26.918479
 
 Тикер: SBER
-Общее число строк данных: 468
+Общее число строк данных: 109
 sma_window: 20, rsi_window: 14
-CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_tech_indicators.csv
-График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_price_indicators.png
-График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SBER/tech_analysis/SBER_MACD.png
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_MACD.png
 
 Информация по вычисленным индикаторам:
-  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 468 записей
-  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 468 записей
-  WMA -&gt; window: 14 | Пропущено: 13 из 468 записей
-  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 468 записей
-  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 468 записей
-  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 468 записей
-  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
-  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 468 записей
-  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
-  ATR_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
-  OBV -&gt; N/A | Пропущено: 0 из 468 записей
-  CMF_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
-  MACD -&gt; default settings | Пропущено: 25 из 468 записей
-  MACD_signal -&gt; default settings | Пропущено: 33 из 468 записей
-  MACD_diff -&gt; default settings | Пропущено: 33 из 468 записей
-  ADX_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
-  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 468 записей
-  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 468 записей
-  CCI_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
-  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 468 записей
-  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 468 записей
-  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 468 записей
-  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 468 записей
-  ROC_10 -&gt; window: 10 | Пропущено: 10 из 468 записей
-  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 468 записей
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 109 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 109 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 109 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 109 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 109 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 109 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 109 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 109 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 109 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 109 записей
+  OBV -&gt; N/A | Пропущено: 0 из 109 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 109 записей
+  MACD -&gt; default settings | Пропущено: 25 из 109 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 109 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 109 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 109 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 109 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 109 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 109 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 109 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 109 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 109 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 109 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 109 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 109 записей
 --------------------------------------------------
 Тикер: GAZP
 Общее число строк данных: 468
 sma_window: 20, rsi_window: 14
-CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_tech_indicators.csv
-График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_price_indicators.png
-График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GAZP/tech_analysis/GAZP_MACD.png
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_MACD.png
 
 Информация по вычисленным индикаторам:
   SMA_20 -&gt; window: sma_window | Пропущено: 19 из 468 записей
@@ -70,453 +70,487 @@ CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/pro
   Ultimate_Osc -&gt; default settings | Пропущено: 28 из 468 записей
 --------------------------------------------------
 Тикер: LKOH
-Общее число строк данных: 468
+Общее число строк данных: 109
 sma_window: 20, rsi_window: 14
-CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_tech_indicators.csv
-График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_price_indicators.png
-График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/LKOH/tech_analysis/LKOH_MACD.png
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_MACD.png
 
 Информация по вычисленным индикаторам:
-  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 468 записей
-  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 468 записей
-  WMA -&gt; window: 14 | Пропущено: 13 из 468 записей
-  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 468 записей
-  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 468 записей
-  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 468 записей
-  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
-  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 468 записей
-  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
-  ATR_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
-  OBV -&gt; N/A | Пропущено: 0 из 468 записей
-  CMF_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
-  MACD -&gt; default settings | Пропущено: 25 из 468 записей
-  MACD_signal -&gt; default settings | Пропущено: 33 из 468 записей
-  MACD_diff -&gt; default settings | Пропущено: 33 из 468 записей
-  ADX_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
-  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 468 записей
-  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 468 записей
-  CCI_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
-  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 468 записей
-  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 468 записей
-  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 468 записей
-  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 468 записей
-  ROC_10 -&gt; window: 10 | Пропущено: 10 из 468 записей
-  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 468 записей
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 109 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 109 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 109 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 109 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 109 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 109 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 109 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 109 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 109 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 109 записей
+  OBV -&gt; N/A | Пропущено: 0 из 109 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 109 записей
+  MACD -&gt; default settings | Пропущено: 25 из 109 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 109 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 109 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 109 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 109 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 109 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 109 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 109 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 109 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 109 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 109 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 109 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 109 записей
 --------------------------------------------------
 Тикер: GMKN
-Общее число строк данных: 462
+Общее число строк данных: 476
 sma_window: 20, rsi_window: 14
-CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_tech_indicators.csv
-График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_price_indicators.png
-График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/GMKN/tech_analysis/GMKN_MACD.png
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_MACD.png
 
 Информация по вычисленным индикаторам:
-  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 462 записей
-  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 462 записей
-  WMA -&gt; window: 14 | Пропущено: 13 из 462 записей
-  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 462 записей
-  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 462 записей
-  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 462 записей
-  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 462 записей
-  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 462 записей
-  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 462 записей
-  ATR_14 -&gt; window: 14 | Пропущено: 0 из 462 записей
-  OBV -&gt; N/A | Пропущено: 0 из 462 записей
-  CMF_20 -&gt; window: 20 | Пропущено: 19 из 462 записей
-  MACD -&gt; default settings | Пропущено: 25 из 462 записей
-  MACD_signal -&gt; default settings | Пропущено: 33 из 462 записей
-  MACD_diff -&gt; default settings | Пропущено: 33 из 462 записей
-  ADX_14 -&gt; window: 14 | Пропущено: 0 из 462 записей
-  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 462 записей
-  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 462 записей
-  CCI_20 -&gt; window: 20 | Пропущено: 19 из 462 записей
-  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 462 записей
-  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 462 записей
-  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 462 записей
-  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 462 записей
-  ROC_10 -&gt; window: 10 | Пропущено: 10 из 462 записей
-  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 462 записей
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 476 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 476 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 476 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 476 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 476 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 476 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 476 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 476 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 476 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 476 записей
+  OBV -&gt; N/A | Пропущено: 0 из 476 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 476 записей
+  MACD -&gt; default settings | Пропущено: 25 из 476 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 476 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 476 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 476 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 476 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 476 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 476 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 476 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 476 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 476 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 476 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 476 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 476 записей
 --------------------------------------------------
 Тикер: ROSN
-Общее число строк данных: 468
+Общее число строк данных: 109
 sma_window: 20, rsi_window: 14
-CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_tech_indicators.csv
-График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_price_indicators.png
-График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ROSN/tech_analysis/ROSN_MACD.png
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_MACD.png
 
 Информация по вычисленным индикаторам:
-  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 468 записей
-  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 468 записей
-  WMA -&gt; window: 14 | Пропущено: 13 из 468 записей
-  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 468 записей
-  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 468 записей
-  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 468 записей
-  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
-  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 468 записей
-  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
-  ATR_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
-  OBV -&gt; N/A | Пропущено: 0 из 468 записей
-  CMF_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
-  MACD -&gt; default settings | Пропущено: 25 из 468 записей
-  MACD_signal -&gt; default settings | Пропущено: 33 из 468 записей
-  MACD_diff -&gt; default settings | Пропущено: 33 из 468 записей
-  ADX_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
-  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 468 записей
-  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 468 записей
-  CCI_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
-  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 468 записей
-  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 468 записей
-  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 468 записей
-  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 468 записей
-  ROC_10 -&gt; window: 10 | Пропущено: 10 из 468 записей
-  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 468 записей
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 109 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 109 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 109 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 109 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 109 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 109 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 109 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 109 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 109 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 109 записей
+  OBV -&gt; N/A | Пропущено: 0 из 109 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 109 записей
+  MACD -&gt; default settings | Пропущено: 25 из 109 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 109 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 109 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 109 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 109 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 109 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 109 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 109 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 109 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 109 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 109 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 109 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 109 записей
 --------------------------------------------------
 Тикер: TATN
-Общее число строк данных: 466
+Общее число строк данных: 480
 sma_window: 20, rsi_window: 14
-CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_tech_indicators.csv
-График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_price_indicators.png
-График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/TATN/tech_analysis/TATN_MACD.png
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_MACD.png
 
 Информация по вычисленным индикаторам:
-  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 466 записей
-  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 466 записей
-  WMA -&gt; window: 14 | Пропущено: 13 из 466 записей
-  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 466 записей
-  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 466 записей
-  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 466 записей
-  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 466 записей
-  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 466 записей
-  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 466 записей
-  ATR_14 -&gt; window: 14 | Пропущено: 0 из 466 записей
-  OBV -&gt; N/A | Пропущено: 0 из 466 записей
-  CMF_20 -&gt; window: 20 | Пропущено: 19 из 466 записей
-  MACD -&gt; default settings | Пропущено: 25 из 466 записей
-  MACD_signal -&gt; default settings | Пропущено: 33 из 466 записей
-  MACD_diff -&gt; default settings | Пропущено: 33 из 466 записей
-  ADX_14 -&gt; window: 14 | Пропущено: 0 из 466 записей
-  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 466 записей
-  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 466 записей
-  CCI_20 -&gt; window: 20 | Пропущено: 19 из 466 записей
-  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 466 записей
-  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 466 записей
-  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 466 записей
-  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 466 записей
-  ROC_10 -&gt; window: 10 | Пропущено: 10 из 466 записей
-  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 466 записей
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 480 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 480 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 480 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 480 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 480 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 480 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 480 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 480 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 480 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 480 записей
+  OBV -&gt; N/A | Пропущено: 0 из 480 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 480 записей
+  MACD -&gt; default settings | Пропущено: 25 из 480 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 480 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 480 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 480 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 480 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 480 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 480 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 480 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 480 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 480 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 480 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 480 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 480 записей
 --------------------------------------------------
 Тикер: MTSS
-Общее число строк данных: 468
+Общее число строк данных: 348
 sma_window: 20, rsi_window: 14
-CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_tech_indicators.csv
-График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_price_indicators.png
-График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MTSS/tech_analysis/MTSS_MACD.png
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_MACD.png
 
 Информация по вычисленным индикаторам:
-  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 468 записей
-  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 468 записей
-  WMA -&gt; window: 14 | Пропущено: 13 из 468 записей
-  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 468 записей
-  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 468 записей
-  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 468 записей
-  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
-  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 468 записей
-  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
-  ATR_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
-  OBV -&gt; N/A | Пропущено: 0 из 468 записей
-  CMF_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
-  MACD -&gt; default settings | Пропущено: 25 из 468 записей
-  MACD_signal -&gt; default settings | Пропущено: 33 из 468 записей
-  MACD_diff -&gt; default settings | Пропущено: 33 из 468 записей
-  ADX_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
-  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 468 записей
-  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 468 записей
-  CCI_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
-  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 468 записей
-  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 468 записей
-  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 468 записей
-  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 468 записей
-  ROC_10 -&gt; window: 10 | Пропущено: 10 из 468 записей
-  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 468 записей
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 348 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 348 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 348 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 348 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 348 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 348 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 348 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 348 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 348 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 348 записей
+  OBV -&gt; N/A | Пропущено: 0 из 348 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 348 записей
+  MACD -&gt; default settings | Пропущено: 25 из 348 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 348 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 348 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 348 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 348 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 348 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 348 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 348 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 348 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 348 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 348 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 348 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 348 записей
 --------------------------------------------------
 Тикер: ALRS
-Общее число строк данных: 468
+Общее число строк данных: 482
 sma_window: 20, rsi_window: 14
-CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_tech_indicators.csv
-График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_price_indicators.png
-График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/ALRS/tech_analysis/ALRS_MACD.png
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_MACD.png
 
 Информация по вычисленным индикаторам:
-  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 468 записей
-  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 468 записей
-  WMA -&gt; window: 14 | Пропущено: 13 из 468 записей
-  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 468 записей
-  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 468 записей
-  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 468 записей
-  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
-  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 468 записей
-  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
-  ATR_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
-  OBV -&gt; N/A | Пропущено: 0 из 468 записей
-  CMF_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
-  MACD -&gt; default settings | Пропущено: 25 из 468 записей
-  MACD_signal -&gt; default settings | Пропущено: 33 из 468 записей
-  MACD_diff -&gt; default settings | Пропущено: 33 из 468 записей
-  ADX_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
-  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 468 записей
-  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 468 записей
-  CCI_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
-  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 468 записей
-  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 468 записей
-  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 468 записей
-  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 468 записей
-  ROC_10 -&gt; window: 10 | Пропущено: 10 из 468 записей
-  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 468 записей
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 482 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 482 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 482 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 482 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 482 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 482 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 482 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 482 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 482 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 482 записей
+  OBV -&gt; N/A | Пропущено: 0 из 482 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 482 записей
+  MACD -&gt; default settings | Пропущено: 25 из 482 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 482 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 482 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 482 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 482 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 482 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 482 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 482 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 482 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 482 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 482 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 482 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 482 записей
 --------------------------------------------------
 Тикер: SNGS
-Общее число строк данных: 468
+Общее число строк данных: 109
 sma_window: 20, rsi_window: 14
-CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_tech_indicators.csv
-График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_price_indicators.png
-График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SNGS/tech_analysis/SNGS_MACD.png
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_MACD.png
 
 Информация по вычисленным индикаторам:
-  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 468 записей
-  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 468 записей
-  WMA -&gt; window: 14 | Пропущено: 13 из 468 записей
-  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 468 записей
-  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 468 записей
-  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 468 записей
-  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
-  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 468 записей
-  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
-  ATR_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
-  OBV -&gt; N/A | Пропущено: 0 из 468 записей
-  CMF_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
-  MACD -&gt; default settings | Пропущено: 25 из 468 записей
-  MACD_signal -&gt; default settings | Пропущено: 33 из 468 записей
-  MACD_diff -&gt; default settings | Пропущено: 33 из 468 записей
-  ADX_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
-  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 468 записей
-  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 468 записей
-  CCI_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
-  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 468 записей
-  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 468 записей
-  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 468 записей
-  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 468 записей
-  ROC_10 -&gt; window: 10 | Пропущено: 10 из 468 записей
-  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 468 записей
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 109 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 109 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 109 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 109 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 109 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 109 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 109 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 109 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 109 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 109 записей
+  OBV -&gt; N/A | Пропущено: 0 из 109 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 109 записей
+  MACD -&gt; default settings | Пропущено: 25 из 109 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 109 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 109 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 109 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 109 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 109 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 109 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 109 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 109 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 109 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 109 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 109 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 109 записей
 --------------------------------------------------
 Тикер: NVTK
-Общее число строк данных: 465
+Общее число строк данных: 109
 sma_window: 20, rsi_window: 14
-CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_tech_indicators.csv
-График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_price_indicators.png
-График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/NVTK/tech_analysis/NVTK_MACD.png
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_MACD.png
 
 Информация по вычисленным индикаторам:
-  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 465 записей
-  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 465 записей
-  WMA -&gt; window: 14 | Пропущено: 13 из 465 записей
-  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 465 записей
-  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 465 записей
-  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 465 записей
-  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 465 записей
-  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 465 записей
-  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 465 записей
-  ATR_14 -&gt; window: 14 | Пропущено: 0 из 465 записей
-  OBV -&gt; N/A | Пропущено: 0 из 465 записей
-  CMF_20 -&gt; window: 20 | Пропущено: 19 из 465 записей
-  MACD -&gt; default settings | Пропущено: 25 из 465 записей
-  MACD_signal -&gt; default settings | Пропущено: 33 из 465 записей
-  MACD_diff -&gt; default settings | Пропущено: 33 из 465 записей
-  ADX_14 -&gt; window: 14 | Пропущено: 0 из 465 записей
-  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 465 записей
-  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 465 записей
-  CCI_20 -&gt; window: 20 | Пропущено: 19 из 465 записей
-  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 465 записей
-  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 465 записей
-  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 465 записей
-  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 465 записей
-  ROC_10 -&gt; window: 10 | Пропущено: 10 из 465 записей
-  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 465 записей
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 109 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 109 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 109 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 109 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 109 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 109 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 109 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 109 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 109 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 109 записей
+  OBV -&gt; N/A | Пропущено: 0 из 109 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 109 записей
+  MACD -&gt; default settings | Пропущено: 25 из 109 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 109 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 109 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 109 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 109 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 109 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 109 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 109 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 109 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 109 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 109 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 109 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 109 записей
 --------------------------------------------------
 Тикер: MVID
-Общее число строк данных: 468
+Общее число строк данных: 109
 sma_window: 20, rsi_window: 14
-CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_tech_indicators.csv
-График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_price_indicators.png
-График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MVID/tech_analysis/MVID_MACD.png
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_MACD.png
 
 Информация по вычисленным индикаторам:
-  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 468 записей
-  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 468 записей
-  WMA -&gt; window: 14 | Пропущено: 13 из 468 записей
-  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 468 записей
-  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 468 записей
-  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 468 записей
-  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
-  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 468 записей
-  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
-  ATR_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
-  OBV -&gt; N/A | Пропущено: 0 из 468 записей
-  CMF_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
-  MACD -&gt; default settings | Пропущено: 25 из 468 записей
-  MACD_signal -&gt; default settings | Пропущено: 33 из 468 записей
-  MACD_diff -&gt; default settings | Пропущено: 33 из 468 записей
-  ADX_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
-  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 468 записей
-  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 468 записей
-  CCI_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
-  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 468 записей
-  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 468 записей
-  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 468 записей
-  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 468 записей
-  ROC_10 -&gt; window: 10 | Пропущено: 10 из 468 записей
-  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 468 записей
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 109 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 109 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 109 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 109 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 109 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 109 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 109 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 109 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 109 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 109 записей
+  OBV -&gt; N/A | Пропущено: 0 из 109 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 109 записей
+  MACD -&gt; default settings | Пропущено: 25 из 109 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 109 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 109 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 109 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 109 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 109 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 109 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 109 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 109 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 109 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 109 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 109 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 109 записей
 --------------------------------------------------
 Тикер: PHOR
-Общее число строк данных: 107
+Общее число строк данных: 482
 sma_window: 20, rsi_window: 14
-CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_tech_indicators.csv
-График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_price_indicators.png
-График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/PHOR/tech_analysis/PHOR_MACD.png
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_MACD.png
 
 Информация по вычисленным индикаторам:
-  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 107 записей
-  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 107 записей
-  WMA -&gt; window: 14 | Пропущено: 13 из 107 записей
-  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 107 записей
-  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 107 записей
-  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 107 записей
-  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 107 записей
-  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 107 записей
-  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 107 записей
-  ATR_14 -&gt; window: 14 | Пропущено: 0 из 107 записей
-  OBV -&gt; N/A | Пропущено: 0 из 107 записей
-  CMF_20 -&gt; window: 20 | Пропущено: 19 из 107 записей
-  MACD -&gt; default settings | Пропущено: 25 из 107 записей
-  MACD_signal -&gt; default settings | Пропущено: 33 из 107 записей
-  MACD_diff -&gt; default settings | Пропущено: 33 из 107 записей
-  ADX_14 -&gt; window: 14 | Пропущено: 0 из 107 записей
-  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 107 записей
-  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 107 записей
-  CCI_20 -&gt; window: 20 | Пропущено: 19 из 107 записей
-  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 107 записей
-  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 107 записей
-  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 107 записей
-  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 107 записей
-  ROC_10 -&gt; window: 10 | Пропущено: 10 из 107 записей
-  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 107 записей
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 482 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 482 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 482 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 482 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 482 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 482 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 482 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 482 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 482 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 482 записей
+  OBV -&gt; N/A | Пропущено: 0 из 482 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 482 записей
+  MACD -&gt; default settings | Пропущено: 25 из 482 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 482 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 482 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 482 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 482 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 482 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 482 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 482 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 482 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 482 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 482 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 482 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 482 записей
 --------------------------------------------------
 Тикер: SIBN
-Общее число строк данных: 464
+Общее число строк данных: 478
 sma_window: 20, rsi_window: 14
-CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_tech_indicators.csv
-График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_price_indicators.png
-График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/SIBN/tech_analysis/SIBN_MACD.png
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_MACD.png
 
 Информация по вычисленным индикаторам:
-  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 464 записей
-  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 464 записей
-  WMA -&gt; window: 14 | Пропущено: 13 из 464 записей
-  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 464 записей
-  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 464 записей
-  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 464 записей
-  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 464 записей
-  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 464 записей
-  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 464 записей
-  ATR_14 -&gt; window: 14 | Пропущено: 0 из 464 записей
-  OBV -&gt; N/A | Пропущено: 0 из 464 записей
-  CMF_20 -&gt; window: 20 | Пропущено: 19 из 464 записей
-  MACD -&gt; default settings | Пропущено: 25 из 464 записей
-  MACD_signal -&gt; default settings | Пропущено: 33 из 464 записей
-  MACD_diff -&gt; default settings | Пропущено: 33 из 464 записей
-  ADX_14 -&gt; window: 14 | Пропущено: 0 из 464 записей
-  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 464 записей
-  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 464 записей
-  CCI_20 -&gt; window: 20 | Пропущено: 19 из 464 записей
-  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 464 записей
-  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 464 записей
-  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 464 записей
-  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 464 записей
-  ROC_10 -&gt; window: 10 | Пропущено: 10 из 464 записей
-  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 464 записей
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 478 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 478 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 478 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 478 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 478 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 478 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 478 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 478 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 478 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 478 записей
+  OBV -&gt; N/A | Пропущено: 0 из 478 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 478 записей
+  MACD -&gt; default settings | Пропущено: 25 из 478 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 478 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 478 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 478 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 478 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 478 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 478 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 478 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 478 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 478 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 478 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 478 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 478 записей
 --------------------------------------------------
 Тикер: AFKS
-Общее число строк данных: 468
+Общее число строк данных: 482
 sma_window: 20, rsi_window: 14
-CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_tech_indicators.csv
-График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_price_indicators.png
-График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/AFKS/tech_analysis/AFKS_MACD.png
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_MACD.png
 
 Информация по вычисленным индикаторам:
-  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 468 записей
-  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 468 записей
-  WMA -&gt; window: 14 | Пропущено: 13 из 468 записей
-  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 468 записей
-  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 468 записей
-  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 468 записей
-  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
-  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 468 записей
-  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
-  ATR_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
-  OBV -&gt; N/A | Пропущено: 0 из 468 записей
-  CMF_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
-  MACD -&gt; default settings | Пропущено: 25 из 468 записей
-  MACD_signal -&gt; default settings | Пропущено: 33 из 468 записей
-  MACD_diff -&gt; default settings | Пропущено: 33 из 468 записей
-  ADX_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
-  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 468 записей
-  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 468 записей
-  CCI_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
-  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 468 записей
-  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 468 записей
-  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 468 записей
-  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 468 записей
-  ROC_10 -&gt; window: 10 | Пропущено: 10 из 468 записей
-  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 468 записей
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 482 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 482 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 482 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 482 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 482 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 482 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 482 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 482 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 482 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 482 записей
+  OBV -&gt; N/A | Пропущено: 0 из 482 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 482 записей
+  MACD -&gt; default settings | Пропущено: 25 из 482 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 482 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 482 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 482 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 482 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 482 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 482 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 482 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 482 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 482 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 482 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 482 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 482 записей
 --------------------------------------------------
 Тикер: MAGN
-Общее число строк данных: 466
+Общее число строк данных: 480
 sma_window: 20, rsi_window: 14
-CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_tech_indicators.csv
-График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_price_indicators.png
-График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/MAGN/tech_analysis/MAGN_MACD.png
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_MACD.png
 
 Информация по вычисленным индикаторам:
-  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 466 записей
-  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 466 записей
-  WMA -&gt; window: 14 | Пропущено: 13 из 466 записей
-  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 466 записей
-  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 466 записей
-  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 466 записей
-  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 466 записей
-  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 466 записей
-  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 466 записей
-  ATR_14 -&gt; window: 14 | Пропущено: 0 из 466 записей
-  OBV -&gt; N/A | Пропущено: 0 из 466 записей
-  CMF_20 -&gt; window: 20 | Пропущено: 19 из 466 записей
-  MACD -&gt; default settings | Пропущено: 25 из 466 записей
-  MACD_signal -&gt; default settings | Пропущено: 33 из 466 записей
-  MACD_diff -&gt; default settings | Пропущено: 33 из 466 записей
-  ADX_14 -&gt; window: 14 | Пропущено: 0 из 466 записей
-  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 466 записей
-  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 466 записей
-  CCI_20 -&gt; window: 20 | Пропущено: 19 из 466 записей
-  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 466 записей
-  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 466 записей
-  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 466 записей
-  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 466 записей
-  ROC_10 -&gt; window: 10 | Пропущено: 10 из 466 записей
-  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 466 записей
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 480 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 480 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 480 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 480 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 480 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 480 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 480 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 480 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 480 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 480 записей
+  OBV -&gt; N/A | Пропущено: 0 из 480 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 480 записей
+  MACD -&gt; default settings | Пропущено: 25 из 480 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 480 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 480 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 480 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 480 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 480 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 480 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 480 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 480 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 480 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 480 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 480 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 480 записей
 --------------------------------------------------
 Тикер: RUAL
+Общее число строк данных: 482
+sma_window: 20, rsi_window: 14
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 482 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 482 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 482 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 482 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 482 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 482 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 482 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 482 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 482 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 482 записей
+  OBV -&gt; N/A | Пропущено: 0 из 482 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 482 записей
+  MACD -&gt; default settings | Пропущено: 25 из 482 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 482 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 482 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 482 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 482 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 482 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 482 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 482 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 482 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 482 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 482 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 482 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 482 записей
+--------------------------------------------------
+Тикер: AFLT
 Общее число строк данных: 468
 sma_window: 20, rsi_window: 14
-CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_tech_indicators.csv
-График цены с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_price_indicators.png
-График MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_MACD.png
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFLT/tech_analysis/AFLT_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFLT/tech_analysis/AFLT_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFLT/tech_analysis/AFLT_MACD.png
 
 Информация по вычисленным индикаторам:
   SMA_20 -&gt; window: sma_window | Пропущено: 19 из 468 записей
@@ -544,4 +578,106 @@ CSV с индикаторами: /Users/aeshef/Documents/GitHub/kursach/data/pro
   KAMA_10 -&gt; window: 10 | Пропущено: 9 из 468 записей
   ROC_10 -&gt; window: 10 | Пропущено: 10 из 468 записей
   Ultimate_Osc -&gt; default settings | Пропущено: 28 из 468 записей
+--------------------------------------------------
+Тикер: CBOM
+Общее число строк данных: 441
+sma_window: 20, rsi_window: 14
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/CBOM/tech_analysis/CBOM_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/CBOM/tech_analysis/CBOM_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/CBOM/tech_analysis/CBOM_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 441 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 441 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 441 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 441 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 441 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 441 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 441 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 441 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 441 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 441 записей
+  OBV -&gt; N/A | Пропущено: 0 из 441 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 441 записей
+  MACD -&gt; default settings | Пропущено: 25 из 441 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 441 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 441 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 441 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 441 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 441 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 441 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 441 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 441 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 441 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 441 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 441 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 441 записей
+--------------------------------------------------
+Тикер: POSI
+Общее число строк данных: 468
+sma_window: 20, rsi_window: 14
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/POSI/tech_analysis/POSI_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/POSI/tech_analysis/POSI_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/POSI/tech_analysis/POSI_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 468 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 468 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 468 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 468 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 468 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 468 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 468 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 468 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
+  OBV -&gt; N/A | Пропущено: 0 из 468 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
+  MACD -&gt; default settings | Пропущено: 25 из 468 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 468 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 468 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 468 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 468 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 468 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 468 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 468 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 468 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 468 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 468 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 468 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 468 записей
+--------------------------------------------------
+Тикер: PLZL
+Общее число строк данных: 463
+sma_window: 20, rsi_window: 14
+CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PLZL/tech_analysis/PLZL_tech_indicators.csv
+График цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PLZL/tech_analysis/PLZL_price_indicators.png
+График MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PLZL/tech_analysis/PLZL_MACD.png
+
+Информация по вычисленным индикаторам:
+  SMA_20 -&gt; window: sma_window | Пропущено: 19 из 463 записей
+  EMA_20 -&gt; window: sma_window | Пропущено: 0 из 463 записей
+  WMA -&gt; window: 14 | Пропущено: 13 из 463 записей
+  RSI_14 -&gt; window: rsi_window | Пропущено: 13 из 463 записей
+  Stoch_%K -&gt; window: 14 | Пропущено: 13 из 463 записей
+  Stoch_%D -&gt; signal period: 14 | Пропущено: 15 из 463 записей
+  BB_upper -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 463 записей
+  BB_mid -&gt; BB window: sma_window | Пропущено: 19 из 463 записей
+  BB_lower -&gt; BB window: sma_window, std: 2 | Пропущено: 19 из 463 записей
+  ATR_14 -&gt; window: 14 | Пропущено: 0 из 463 записей
+  OBV -&gt; N/A | Пропущено: 0 из 463 записей
+  CMF_20 -&gt; window: 20 | Пропущено: 19 из 463 записей
+  MACD -&gt; default settings | Пропущено: 25 из 463 записей
+  MACD_signal -&gt; default settings | Пропущено: 33 из 463 записей
+  MACD_diff -&gt; default settings | Пропущено: 33 из 463 записей
+  ADX_14 -&gt; window: 14 | Пропущено: 0 из 463 записей
+  Vortex_14+ -&gt; window: 14 | Пропущено: 14 из 463 записей
+  Vortex_14- -&gt; window: 14 | Пропущено: 14 из 463 записей
+  CCI_20 -&gt; window: 20 | Пропущено: 19 из 463 записей
+  Williams_%R_14 -&gt; window: 14 | Пропущено: 13 из 463 записей
+  Ichimoku_Conversion -&gt; params: (9,26) | Пропущено: 8 из 463 записей
+  Ichimoku_Base -&gt; params: (9,26) | Пропущено: 25 из 463 записей
+  KAMA_10 -&gt; window: 10 | Пропущено: 9 из 463 записей
+  ROC_10 -&gt; window: 10 | Пропущено: 10 из 463 записей
+  Ultimate_Osc -&gt; default settings | Пропущено: 28 из 463 записей
 --------------------------------------------------

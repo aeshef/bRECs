@@ -30,6 +30,10 @@ from pys.data_collection.news_processor.news_integration import NewsIntegration
 
 from pys.utils.logger import BaseLogger
 from pys.data_collection.private_info import BASE_PATH
+# token = 't.6vI7rHdW8TEcg9R6KlKyOeHVNyGnPdlyIwkaK5DbJxGdOI_PM7UIPJJpdjpYkHP7GvLWvkiVnX_mXWMWAPYJnQ'
+# YOUR_API_ID = 28994010
+# YOUR_API_HASH = '6e7a57fdfe1a10b0a3434104b42badf2'
+# BASE_PATH = '/Users/bolotnikovali/WORKING/kursach'
 
 # Импорт и применение патча
 try:
@@ -131,6 +135,10 @@ def save_events_data(event_detector, combined_sentiment: pd.DataFrame, events_fi
     logging.info(f"Данные по событиям объединены и сохранены в {events_file}")
     return news_with_events
 
+sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
+
+# from private_info import BASE_PATH
+
 class NewsPipeline(BaseLogger):
     """Единый пайплайн для сбора и анализа новостей"""
     
@@ -156,41 +164,48 @@ class NewsPipeline(BaseLogger):
         os.makedirs(output_dir, exist_ok=True)
 
         COMPANY_INFO = {
-            'SBER': {'name': 'Сбербанк', 'industry': 'банк', 
-                    'keywords': ['сбербанк', 'греф', 'сбер', 'банковские услуги']},
-            'GAZP': {'name': 'Газпром', 'industry': 'нефтегаз', 
-                    'keywords': ['газпром', 'газ', 'миллер', 'энергетика']},
-            'LKOH': {'name': 'Лукойл', 'industry': 'нефтегаз', 
-                    'keywords': ['лукойл', 'нефть', 'вазов', 'энергетика']},
-            'GMKN': {'name': 'ГМК "Норильский никель"', 'industry': 'металлургия', 
-                    'keywords': ['норильский никель', 'никель', 'потанин', 'металлы']},
-            'ROSN': {'name': 'Роснефть', 'industry': 'нефтегаз', 
-                    'keywords': ['роснефть', 'нефть', 'сечин', 'энергетика']},
-            'TATN': {'name': 'Татнефть', 'industry': 'нефтегаз', 
-                    'keywords': ['татнефть', 'нефть', 'татарыстан', 'энергетика']},
-            'MTSS': {'name': 'МТС', 'industry': 'телекоммуникации', 
-                    'keywords': ['мтс', 'телеком', 'связь', 'мобильные услуги']},
-            'ALRS': {'name': 'АК Алроса', 'industry': 'алмазы', 
-                    'keywords': ['алроса', 'алмаз', 'добыча алмазов', 'якутия']},
-            'SNGS': {'name': 'Сургутнефтегаз', 'industry': 'нефтегаз', 
-                    'keywords': ['сургутнефтегаз', 'нефть', 'сургут', 'энергетика']},
-            'VTBR': {'name': 'ВТБ', 'industry': 'банк', 
-                    'keywords': ['втб', 'костин', 'сбербанк', 'банковские услуги']},
-            'NVTK': {'name': 'Новатэк', 'industry': 'нефтегаз', 
-                    'keywords': ['новатэк', 'газ', 'нефть', 'михельсон']},
-            'MVID': {'name': 'М.Видео', 'industry': 'розничная торговля', 
-                    'keywords': ['м.видео', 'электроника', 'розница', 'техника']},
-            'PHOR': {'name': 'ФосАгро', 'industry': 'химическая промышленность', 
-                    'keywords': ['фосагро', 'удобрения', 'химия', 'промышленность']},
-            'SIBN': {'name': 'Сибнефть', 'industry': 'нефтегаз', 
-                    'keywords': ['сибнефть', 'нефть', 'газпром', 'энергетика']},
-            'AFKS': {'name': 'АФК "Система"', 'industry': 'конгломерат', 
-                    'keywords': ['афк система', 'система', 'евтушенков']},
-            'MAGN': {'name': 'Магнитогорский металлургический комбинат', 'industry': 'металлургия', 
-                    'keywords': ['магнитогорский', 'металлургия', 'сталь', 'магнитка']},
-            'RUAL': {'name': 'Русал', 'industry': 'металлургия', 
-                    'keywords': ['русал', 'алюминий', 'дерипаска', 'металлы']}
-        }
+    'SBER': {'name': 'Сбербанк', 'industry': 'банк', 
+            'keywords': ['сбербанк', 'греф', 'сбер', 'банковские услуги']},
+    'GAZP': {'name': 'Газпром', 'industry': 'нефтегаз', 
+            'keywords': ['газпром', 'газ', 'миллер', 'энергетика']},
+    'LKOH': {'name': 'Лукойл', 'industry': 'нефтегаз', 
+            'keywords': ['лукойл', 'нефть', 'вазов', 'энергетика']},
+    'GMKN': {'name': 'ГМК "Норильский никель"', 'industry': 'металлургия', 
+            'keywords': ['норильский никель', 'никель', 'потанин', 'металлы']},
+    'ROSN': {'name': 'Роснефть', 'industry': 'нефтегаз', 
+            'keywords': ['роснефть', 'нефть', 'сечин', 'энергетика']},
+    'TATN': {'name': 'Татнефть', 'industry': 'нефтегаз', 
+            'keywords': ['татнефть', 'нефть', 'татарыстан', 'энергетика']},
+    'MTSS': {'name': 'МТС', 'industry': 'телекоммуникации', 
+            'keywords': ['мтс', 'телеком', 'связь', 'мобильные услуги']},
+    'ALRS': {'name': 'АК Алроса', 'industry': 'алмазы', 
+            'keywords': ['алроса', 'алмаз', 'добыча алмазов', 'якутия']},
+    'SNGS': {'name': 'Сургутнефтегаз', 'industry': 'нефтегаз', 
+            'keywords': ['сургутнефтегаз', 'нефть', 'сургут', 'энергетика']},
+    'NVTK': {'name': 'Новатэк', 'industry': 'нефтегаз', 
+            'keywords': ['новатэк', 'газ', 'нефть', 'михельсон']},
+    'MVID': {'name': 'М.Видео', 'industry': 'розничная торговля', 
+            'keywords': ['м.видео', 'электроника', 'розница', 'техника']},
+    'PHOR': {'name': 'ФосАгро', 'industry': 'химическая промышленность', 
+            'keywords': ['фосагро', 'удобрения', 'химия', 'промышленность']},
+    'SIBN': {'name': 'Сибнефть', 'industry': 'нефтегаз', 
+            'keywords': ['сибнефть', 'нефть', 'газпром', 'энергетика']},
+    'AFKS': {'name': 'АФК "Система"', 'industry': 'конгломерат', 
+            'keywords': ['афк система', 'система', 'евтушенков']},
+    'MAGN': {'name': 'Магнитогорский металлургический комбинат', 'industry': 'металлургия', 
+            'keywords': ['магнитогорский', 'металлургия', 'сталь', 'магнитка']},
+    'RUAL': {'name': 'Русал', 'industry': 'металлургия', 
+            'keywords': ['русал', 'алюминий', 'дерипаска', 'металлы']},
+    'AFLT': {'name': 'Аэрофлот', 'industry': 'авиаперевозки', 
+            'keywords': ['аэрофлот', 'авиакомпания', 'авиаперевозки', 'савельев']},
+    'CBOM': {'name': 'Московский Кредитный Банк', 'industry': 'банк', 
+            'keywords': ['московский кредитный банк', 'мкб', 'кредитование', 'банковские услуги']},
+    'POSI': {'name': 'Positive Technologies', 'industry': 'информационные технологии', 
+            'keywords': ['positive technologies', 'кибербезопасность', 'информационная безопасность', 'IT']},
+    'PLZL': {'name': 'Полюс', 'industry': 'добыча золота', 
+            'keywords': ['полюс', 'золото', 'драгоценные металлы', 'добыча золота']}
+}
+
 
         results = {}
         try:

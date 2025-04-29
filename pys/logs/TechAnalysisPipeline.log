@@ -338,3 +338,573 @@
 2025-04-26 13:43:19 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Documents/GitHub/kursach/data/processed_data/RUAL/tech_analysis/RUAL_MACD.png
 2025-04-26 13:43:19 - TechAnalysisPipeline - INFO - Сводный отчет сохранен в /Users/aeshef/Documents/GitHub/kursach/data/summaries/tech_analysis_summary.txt
 2025-04-26 13:43:19 - TechAnalysisPipeline - INFO - === ТЕХНИЧЕСКИЙ АНАЛИЗ ЗАВЕРШЕН ===
+2025-04-29 10:32:08 - TechAnalysisPipeline - INFO - === НАЧАЛО ТЕХНИЧЕСКОГО АНАЛИЗА ===
+2025-04-29 10:32:08 - TechAnalysisPipeline - INFO - Обработка тикера: SBER
+2025-04-29 10:32:08 - TechAnalysisPipeline - INFO - Используем файл: SBER.parquet
+2025-04-29 10:32:08 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_tech_indicators.csv
+2025-04-29 10:32:08 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_price_indicators.png
+2025-04-29 10:32:08 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_MACD.png
+2025-04-29 10:32:08 - TechAnalysisPipeline - INFO - Обработка тикера: GAZP
+2025-04-29 10:32:08 - TechAnalysisPipeline - INFO - Используем файл: GAZP.parquet
+2025-04-29 10:32:09 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_tech_indicators.csv
+2025-04-29 10:32:09 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_price_indicators.png
+2025-04-29 10:32:09 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_MACD.png
+2025-04-29 10:32:09 - TechAnalysisPipeline - INFO - Обработка тикера: LKOH
+2025-04-29 10:32:09 - TechAnalysisPipeline - INFO - Используем файл: LKOH.parquet
+2025-04-29 10:32:09 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_tech_indicators.csv
+2025-04-29 10:32:09 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_price_indicators.png
+2025-04-29 10:32:09 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_MACD.png
+2025-04-29 10:32:09 - TechAnalysisPipeline - INFO - Обработка тикера: GMKN
+2025-04-29 10:32:09 - TechAnalysisPipeline - INFO - Используем файл: GMKN.parquet
+2025-04-29 10:32:09 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_tech_indicators.csv
+2025-04-29 10:32:09 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_price_indicators.png
+2025-04-29 10:32:10 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_MACD.png
+2025-04-29 10:32:10 - TechAnalysisPipeline - INFO - Обработка тикера: ROSN
+2025-04-29 10:32:10 - TechAnalysisPipeline - INFO - Используем файл: ROSN.parquet
+2025-04-29 10:32:10 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_tech_indicators.csv
+2025-04-29 10:32:10 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_price_indicators.png
+2025-04-29 10:32:10 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_MACD.png
+2025-04-29 10:32:10 - TechAnalysisPipeline - INFO - Обработка тикера: TATN
+2025-04-29 10:32:10 - TechAnalysisPipeline - INFO - Используем файл: TATN.parquet
+2025-04-29 10:32:10 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_tech_indicators.csv
+2025-04-29 10:32:10 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_price_indicators.png
+2025-04-29 10:32:10 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_MACD.png
+2025-04-29 10:32:10 - TechAnalysisPipeline - INFO - Обработка тикера: MTSS
+2025-04-29 10:32:10 - TechAnalysisPipeline - INFO - Используем файл: MTSS.parquet
+2025-04-29 10:32:10 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_tech_indicators.csv
+2025-04-29 10:32:10 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_price_indicators.png
+2025-04-29 10:32:11 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_MACD.png
+2025-04-29 10:32:11 - TechAnalysisPipeline - INFO - Обработка тикера: ALRS
+2025-04-29 10:32:11 - TechAnalysisPipeline - INFO - Используем файл: ALRS.parquet
+2025-04-29 10:32:11 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_tech_indicators.csv
+2025-04-29 10:32:11 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_price_indicators.png
+2025-04-29 10:32:11 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_MACD.png
+2025-04-29 10:32:11 - TechAnalysisPipeline - INFO - Обработка тикера: SNGS
+2025-04-29 10:32:11 - TechAnalysisPipeline - INFO - Используем файл: SNGS.parquet
+2025-04-29 10:32:11 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_tech_indicators.csv
+2025-04-29 10:32:11 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_price_indicators.png
+2025-04-29 10:32:11 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_MACD.png
+2025-04-29 10:32:11 - TechAnalysisPipeline - INFO - Обработка тикера: NVTK
+2025-04-29 10:32:11 - TechAnalysisPipeline - INFO - Используем файл: NVTK.parquet
+2025-04-29 10:32:11 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_tech_indicators.csv
+2025-04-29 10:32:12 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_price_indicators.png
+2025-04-29 10:32:12 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_MACD.png
+2025-04-29 10:32:12 - TechAnalysisPipeline - INFO - Обработка тикера: MVID
+2025-04-29 10:32:12 - TechAnalysisPipeline - INFO - Используем файл: MVID.parquet
+2025-04-29 10:32:12 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_tech_indicators.csv
+2025-04-29 10:32:12 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_price_indicators.png
+2025-04-29 10:32:12 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_MACD.png
+2025-04-29 10:32:12 - TechAnalysisPipeline - INFO - Обработка тикера: PHOR
+2025-04-29 10:32:12 - TechAnalysisPipeline - INFO - Используем файл: PHOR.parquet
+2025-04-29 10:32:12 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_tech_indicators.csv
+2025-04-29 10:32:12 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_price_indicators.png
+2025-04-29 10:32:12 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_MACD.png
+2025-04-29 10:32:12 - TechAnalysisPipeline - INFO - Обработка тикера: SIBN
+2025-04-29 10:32:12 - TechAnalysisPipeline - INFO - Используем файл: SIBN.parquet
+2025-04-29 10:32:12 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_tech_indicators.csv
+2025-04-29 10:32:13 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_price_indicators.png
+2025-04-29 10:32:13 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_MACD.png
+2025-04-29 10:32:13 - TechAnalysisPipeline - INFO - Обработка тикера: AFKS
+2025-04-29 10:32:13 - TechAnalysisPipeline - INFO - Используем файл: AFKS.parquet
+2025-04-29 10:32:13 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_tech_indicators.csv
+2025-04-29 10:32:13 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_price_indicators.png
+2025-04-29 10:32:13 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_MACD.png
+2025-04-29 10:32:13 - TechAnalysisPipeline - INFO - Обработка тикера: MAGN
+2025-04-29 10:32:13 - TechAnalysisPipeline - INFO - Используем файл: MAGN.parquet
+2025-04-29 10:32:13 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_tech_indicators.csv
+2025-04-29 10:32:13 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_price_indicators.png
+2025-04-29 10:32:14 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_MACD.png
+2025-04-29 10:32:14 - TechAnalysisPipeline - INFO - Обработка тикера: RUAL
+2025-04-29 10:32:14 - TechAnalysisPipeline - INFO - Используем файл: RUAL.parquet
+2025-04-29 10:32:14 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_tech_indicators.csv
+2025-04-29 10:32:14 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_price_indicators.png
+2025-04-29 10:32:14 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_MACD.png
+2025-04-29 10:32:14 - TechAnalysisPipeline - INFO - Сводный отчет сохранен в /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/summaries/tech_analysis_summary.txt
+2025-04-29 10:32:14 - TechAnalysisPipeline - INFO - === ТЕХНИЧЕСКИЙ АНАЛИЗ ЗАВЕРШЕН ===
+2025-04-29 10:55:13 - TechAnalysisPipeline - INFO - === НАЧАЛО ТЕХНИЧЕСКОГО АНАЛИЗА ===
+2025-04-29 10:55:13 - TechAnalysisPipeline - INFO - Обработка тикера: SBER
+2025-04-29 10:55:13 - TechAnalysisPipeline - INFO - Используем файл: SBER.parquet
+2025-04-29 10:55:13 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_tech_indicators.csv
+2025-04-29 10:55:13 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_price_indicators.png
+2025-04-29 10:55:13 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_MACD.png
+2025-04-29 10:55:13 - TechAnalysisPipeline - INFO - Обработка тикера: GAZP
+2025-04-29 10:55:13 - TechAnalysisPipeline - INFO - Используем файл: GAZP.parquet
+2025-04-29 10:55:14 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_tech_indicators.csv
+2025-04-29 10:55:14 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_price_indicators.png
+2025-04-29 10:55:14 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_MACD.png
+2025-04-29 10:55:14 - TechAnalysisPipeline - INFO - Обработка тикера: LKOH
+2025-04-29 10:55:14 - TechAnalysisPipeline - INFO - Используем файл: LKOH.parquet
+2025-04-29 10:55:14 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_tech_indicators.csv
+2025-04-29 10:55:14 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_price_indicators.png
+2025-04-29 10:55:14 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_MACD.png
+2025-04-29 10:55:14 - TechAnalysisPipeline - INFO - Обработка тикера: GMKN
+2025-04-29 10:55:14 - TechAnalysisPipeline - INFO - Используем файл: GMKN.parquet
+2025-04-29 10:55:14 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_tech_indicators.csv
+2025-04-29 10:55:15 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_price_indicators.png
+2025-04-29 10:55:15 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_MACD.png
+2025-04-29 10:55:15 - TechAnalysisPipeline - INFO - Обработка тикера: ROSN
+2025-04-29 10:55:15 - TechAnalysisPipeline - INFO - Используем файл: ROSN.parquet
+2025-04-29 10:55:15 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_tech_indicators.csv
+2025-04-29 10:55:15 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_price_indicators.png
+2025-04-29 10:55:15 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_MACD.png
+2025-04-29 10:55:15 - TechAnalysisPipeline - INFO - Обработка тикера: TATN
+2025-04-29 10:55:15 - TechAnalysisPipeline - INFO - Используем файл: TATN.parquet
+2025-04-29 10:55:15 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_tech_indicators.csv
+2025-04-29 10:55:15 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_price_indicators.png
+2025-04-29 10:55:16 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_MACD.png
+2025-04-29 10:55:16 - TechAnalysisPipeline - INFO - Обработка тикера: MTSS
+2025-04-29 10:55:16 - TechAnalysisPipeline - INFO - Используем файл: MTSS.parquet
+2025-04-29 10:55:16 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_tech_indicators.csv
+2025-04-29 10:55:16 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_price_indicators.png
+2025-04-29 10:55:16 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_MACD.png
+2025-04-29 10:55:16 - TechAnalysisPipeline - INFO - Обработка тикера: ALRS
+2025-04-29 10:55:16 - TechAnalysisPipeline - INFO - Используем файл: ALRS.parquet
+2025-04-29 10:55:16 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_tech_indicators.csv
+2025-04-29 10:55:16 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_price_indicators.png
+2025-04-29 10:55:16 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_MACD.png
+2025-04-29 10:55:16 - TechAnalysisPipeline - INFO - Обработка тикера: SNGS
+2025-04-29 10:55:16 - TechAnalysisPipeline - INFO - Используем файл: SNGS.parquet
+2025-04-29 10:55:16 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_tech_indicators.csv
+2025-04-29 10:55:16 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_price_indicators.png
+2025-04-29 10:55:17 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_MACD.png
+2025-04-29 10:55:17 - TechAnalysisPipeline - INFO - Обработка тикера: NVTK
+2025-04-29 10:55:17 - TechAnalysisPipeline - INFO - Используем файл: NVTK.parquet
+2025-04-29 10:55:17 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_tech_indicators.csv
+2025-04-29 10:55:17 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_price_indicators.png
+2025-04-29 10:55:17 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_MACD.png
+2025-04-29 10:55:17 - TechAnalysisPipeline - INFO - Обработка тикера: MVID
+2025-04-29 10:55:17 - TechAnalysisPipeline - INFO - Используем файл: MVID.parquet
+2025-04-29 10:55:17 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_tech_indicators.csv
+2025-04-29 10:55:17 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_price_indicators.png
+2025-04-29 10:55:18 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_MACD.png
+2025-04-29 10:55:18 - TechAnalysisPipeline - INFO - Обработка тикера: PHOR
+2025-04-29 10:55:18 - TechAnalysisPipeline - INFO - Используем файл: PHOR.parquet
+2025-04-29 10:55:18 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_tech_indicators.csv
+2025-04-29 10:55:18 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_price_indicators.png
+2025-04-29 10:55:18 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_MACD.png
+2025-04-29 10:55:18 - TechAnalysisPipeline - INFO - Обработка тикера: SIBN
+2025-04-29 10:55:18 - TechAnalysisPipeline - INFO - Используем файл: SIBN.parquet
+2025-04-29 10:55:18 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_tech_indicators.csv
+2025-04-29 10:55:18 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_price_indicators.png
+2025-04-29 10:55:18 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_MACD.png
+2025-04-29 10:55:18 - TechAnalysisPipeline - INFO - Обработка тикера: AFKS
+2025-04-29 10:55:18 - TechAnalysisPipeline - INFO - Используем файл: AFKS.parquet
+2025-04-29 10:55:18 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_tech_indicators.csv
+2025-04-29 10:55:18 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_price_indicators.png
+2025-04-29 10:55:19 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_MACD.png
+2025-04-29 10:55:19 - TechAnalysisPipeline - INFO - Обработка тикера: MAGN
+2025-04-29 10:55:19 - TechAnalysisPipeline - INFO - Используем файл: MAGN.parquet
+2025-04-29 10:55:19 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_tech_indicators.csv
+2025-04-29 10:55:19 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_price_indicators.png
+2025-04-29 10:55:19 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_MACD.png
+2025-04-29 10:55:19 - TechAnalysisPipeline - INFO - Обработка тикера: RUAL
+2025-04-29 10:55:19 - TechAnalysisPipeline - INFO - Используем файл: RUAL.parquet
+2025-04-29 10:55:19 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_tech_indicators.csv
+2025-04-29 10:55:19 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_price_indicators.png
+2025-04-29 10:55:19 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_MACD.png
+2025-04-29 10:55:19 - TechAnalysisPipeline - INFO - Сводный отчет сохранен в /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/summaries/tech_analysis_summary.txt
+2025-04-29 10:55:19 - TechAnalysisPipeline - INFO - === ТЕХНИЧЕСКИЙ АНАЛИЗ ЗАВЕРШЕН ===
+2025-04-29 11:07:27 - TechAnalysisPipeline - INFO - === НАЧАЛО ТЕХНИЧЕСКОГО АНАЛИЗА ===
+2025-04-29 11:07:27 - TechAnalysisPipeline - INFO - Обработка тикера: SBER
+2025-04-29 11:07:27 - TechAnalysisPipeline - INFO - Используем файл: SBER.parquet
+2025-04-29 11:07:27 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_tech_indicators.csv
+2025-04-29 11:07:27 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_price_indicators.png
+2025-04-29 11:07:28 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_MACD.png
+2025-04-29 11:07:28 - TechAnalysisPipeline - INFO - Обработка тикера: GAZP
+2025-04-29 11:07:28 - TechAnalysisPipeline - INFO - Используем файл: GAZP.parquet
+2025-04-29 11:07:28 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_tech_indicators.csv
+2025-04-29 11:07:28 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_price_indicators.png
+2025-04-29 11:07:28 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_MACD.png
+2025-04-29 11:07:28 - TechAnalysisPipeline - INFO - Обработка тикера: LKOH
+2025-04-29 11:07:28 - TechAnalysisPipeline - INFO - Используем файл: LKOH.parquet
+2025-04-29 11:07:28 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_tech_indicators.csv
+2025-04-29 11:07:28 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_price_indicators.png
+2025-04-29 11:07:29 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_MACD.png
+2025-04-29 11:07:29 - TechAnalysisPipeline - INFO - Обработка тикера: GMKN
+2025-04-29 11:07:29 - TechAnalysisPipeline - INFO - Используем файл: GMKN.parquet
+2025-04-29 11:07:29 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_tech_indicators.csv
+2025-04-29 11:07:29 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_price_indicators.png
+2025-04-29 11:07:29 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_MACD.png
+2025-04-29 11:07:29 - TechAnalysisPipeline - INFO - Обработка тикера: ROSN
+2025-04-29 11:07:29 - TechAnalysisPipeline - INFO - Используем файл: ROSN.parquet
+2025-04-29 11:07:29 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_tech_indicators.csv
+2025-04-29 11:07:29 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_price_indicators.png
+2025-04-29 11:07:29 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_MACD.png
+2025-04-29 11:07:29 - TechAnalysisPipeline - INFO - Обработка тикера: TATN
+2025-04-29 11:07:29 - TechAnalysisPipeline - INFO - Используем файл: TATN.parquet
+2025-04-29 11:07:29 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_tech_indicators.csv
+2025-04-29 11:07:30 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_price_indicators.png
+2025-04-29 11:07:30 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_MACD.png
+2025-04-29 11:07:30 - TechAnalysisPipeline - INFO - Обработка тикера: MTSS
+2025-04-29 11:07:30 - TechAnalysisPipeline - INFO - Используем файл: MTSS.parquet
+2025-04-29 11:07:30 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_tech_indicators.csv
+2025-04-29 11:07:30 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_price_indicators.png
+2025-04-29 11:07:30 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_MACD.png
+2025-04-29 11:07:30 - TechAnalysisPipeline - INFO - Обработка тикера: ALRS
+2025-04-29 11:07:30 - TechAnalysisPipeline - INFO - Используем файл: ALRS.parquet
+2025-04-29 11:07:30 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_tech_indicators.csv
+2025-04-29 11:07:30 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_price_indicators.png
+2025-04-29 11:07:31 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_MACD.png
+2025-04-29 11:07:31 - TechAnalysisPipeline - INFO - Обработка тикера: SNGS
+2025-04-29 11:07:31 - TechAnalysisPipeline - INFO - Используем файл: SNGS.parquet
+2025-04-29 11:07:31 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_tech_indicators.csv
+2025-04-29 11:07:31 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_price_indicators.png
+2025-04-29 11:07:31 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_MACD.png
+2025-04-29 11:07:31 - TechAnalysisPipeline - INFO - Обработка тикера: NVTK
+2025-04-29 11:07:31 - TechAnalysisPipeline - INFO - Используем файл: NVTK.parquet
+2025-04-29 11:07:31 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_tech_indicators.csv
+2025-04-29 11:07:31 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_price_indicators.png
+2025-04-29 11:07:31 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_MACD.png
+2025-04-29 11:07:31 - TechAnalysisPipeline - INFO - Обработка тикера: MVID
+2025-04-29 11:07:31 - TechAnalysisPipeline - INFO - Используем файл: MVID.parquet
+2025-04-29 11:07:31 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_tech_indicators.csv
+2025-04-29 11:07:31 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_price_indicators.png
+2025-04-29 11:07:32 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_MACD.png
+2025-04-29 11:07:32 - TechAnalysisPipeline - INFO - Обработка тикера: PHOR
+2025-04-29 11:07:32 - TechAnalysisPipeline - INFO - Используем файл: PHOR.parquet
+2025-04-29 11:07:32 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_tech_indicators.csv
+2025-04-29 11:07:32 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_price_indicators.png
+2025-04-29 11:07:32 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_MACD.png
+2025-04-29 11:07:32 - TechAnalysisPipeline - INFO - Обработка тикера: SIBN
+2025-04-29 11:07:32 - TechAnalysisPipeline - INFO - Используем файл: SIBN.parquet
+2025-04-29 11:07:32 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_tech_indicators.csv
+2025-04-29 11:07:32 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_price_indicators.png
+2025-04-29 11:07:32 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_MACD.png
+2025-04-29 11:07:32 - TechAnalysisPipeline - INFO - Обработка тикера: AFKS
+2025-04-29 11:07:32 - TechAnalysisPipeline - INFO - Используем файл: AFKS.parquet
+2025-04-29 11:07:32 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_tech_indicators.csv
+2025-04-29 11:07:32 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_price_indicators.png
+2025-04-29 11:07:33 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_MACD.png
+2025-04-29 11:07:33 - TechAnalysisPipeline - INFO - Обработка тикера: MAGN
+2025-04-29 11:07:33 - TechAnalysisPipeline - INFO - Используем файл: MAGN.parquet
+2025-04-29 11:07:33 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_tech_indicators.csv
+2025-04-29 11:07:33 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_price_indicators.png
+2025-04-29 11:07:33 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_MACD.png
+2025-04-29 11:07:33 - TechAnalysisPipeline - INFO - Обработка тикера: RUAL
+2025-04-29 11:07:33 - TechAnalysisPipeline - INFO - Используем файл: RUAL.parquet
+2025-04-29 11:07:33 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_tech_indicators.csv
+2025-04-29 11:07:33 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_price_indicators.png
+2025-04-29 11:07:34 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_MACD.png
+2025-04-29 11:07:34 - TechAnalysisPipeline - INFO - Сводный отчет сохранен в /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/summaries/tech_analysis_summary.txt
+2025-04-29 11:07:34 - TechAnalysisPipeline - INFO - === ТЕХНИЧЕСКИЙ АНАЛИЗ ЗАВЕРШЕН ===
+2025-04-29 11:19:50 - TechAnalysisPipeline - INFO - === НАЧАЛО ТЕХНИЧЕСКОГО АНАЛИЗА ===
+2025-04-29 11:19:50 - TechAnalysisPipeline - INFO - Обработка тикера: SBER
+2025-04-29 11:19:50 - TechAnalysisPipeline - WARNING - Нет файлов .parquet для тикера SBER
+2025-04-29 11:19:50 - TechAnalysisPipeline - INFO - Обработка тикера: GAZP
+2025-04-29 11:19:50 - TechAnalysisPipeline - WARNING - Нет файлов .parquet для тикера GAZP
+2025-04-29 11:19:50 - TechAnalysisPipeline - INFO - Обработка тикера: LKOH
+2025-04-29 11:19:50 - TechAnalysisPipeline - INFO - Используем файл: LKOH.parquet
+2025-04-29 11:19:50 - TechAnalysisPipeline - ERROR - Ошибка при обработке тикера LKOH: index 13 is out of bounds for axis 0 with size 5
+2025-04-29 11:19:50 - TechAnalysisPipeline - INFO - Обработка тикера: GMKN
+2025-04-29 11:19:50 - TechAnalysisPipeline - INFO - Используем файл: GMKN.parquet
+2025-04-29 11:19:50 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_tech_indicators.csv
+2025-04-29 11:19:50 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_price_indicators.png
+2025-04-29 11:19:50 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_MACD.png
+2025-04-29 11:19:50 - TechAnalysisPipeline - INFO - Обработка тикера: ROSN
+2025-04-29 11:19:50 - TechAnalysisPipeline - INFO - Используем файл: ROSN.parquet
+2025-04-29 11:19:50 - TechAnalysisPipeline - ERROR - Ошибка при обработке тикера ROSN: index 13 is out of bounds for axis 0 with size 5
+2025-04-29 11:19:50 - TechAnalysisPipeline - INFO - Обработка тикера: TATN
+2025-04-29 11:19:50 - TechAnalysisPipeline - INFO - Используем файл: TATN.parquet
+2025-04-29 11:19:50 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_tech_indicators.csv
+2025-04-29 11:19:50 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_price_indicators.png
+2025-04-29 11:19:51 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_MACD.png
+2025-04-29 11:19:51 - TechAnalysisPipeline - INFO - Обработка тикера: MTSS
+2025-04-29 11:19:51 - TechAnalysisPipeline - INFO - Используем файл: MTSS.parquet
+2025-04-29 11:19:51 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_tech_indicators.csv
+2025-04-29 11:19:51 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_price_indicators.png
+2025-04-29 11:19:51 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_MACD.png
+2025-04-29 11:19:51 - TechAnalysisPipeline - INFO - Обработка тикера: ALRS
+2025-04-29 11:19:51 - TechAnalysisPipeline - INFO - Используем файл: ALRS.parquet
+2025-04-29 11:19:51 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_tech_indicators.csv
+2025-04-29 11:19:51 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_price_indicators.png
+2025-04-29 11:19:51 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_MACD.png
+2025-04-29 11:19:51 - TechAnalysisPipeline - INFO - Обработка тикера: SNGS
+2025-04-29 11:19:51 - TechAnalysisPipeline - INFO - Используем файл: SNGS.parquet
+2025-04-29 11:19:51 - TechAnalysisPipeline - ERROR - Ошибка при обработке тикера SNGS: index 13 is out of bounds for axis 0 with size 5
+2025-04-29 11:19:51 - TechAnalysisPipeline - INFO - Обработка тикера: NVTK
+2025-04-29 11:19:51 - TechAnalysisPipeline - INFO - Используем файл: NVTK.parquet
+2025-04-29 11:19:52 - TechAnalysisPipeline - ERROR - Ошибка при обработке тикера NVTK: index 13 is out of bounds for axis 0 with size 5
+2025-04-29 11:19:52 - TechAnalysisPipeline - INFO - Обработка тикера: MVID
+2025-04-29 11:19:52 - TechAnalysisPipeline - INFO - Используем файл: MVID.parquet
+2025-04-29 11:19:52 - TechAnalysisPipeline - ERROR - Ошибка при обработке тикера MVID: index 13 is out of bounds for axis 0 with size 5
+2025-04-29 11:19:52 - TechAnalysisPipeline - INFO - Обработка тикера: PHOR
+2025-04-29 11:19:52 - TechAnalysisPipeline - INFO - Используем файл: PHOR.parquet
+2025-04-29 11:19:52 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_tech_indicators.csv
+2025-04-29 11:19:52 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_price_indicators.png
+2025-04-29 11:19:52 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_MACD.png
+2025-04-29 11:19:52 - TechAnalysisPipeline - INFO - Обработка тикера: SIBN
+2025-04-29 11:19:52 - TechAnalysisPipeline - INFO - Используем файл: SIBN.parquet
+2025-04-29 11:19:52 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_tech_indicators.csv
+2025-04-29 11:19:52 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_price_indicators.png
+2025-04-29 11:19:52 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_MACD.png
+2025-04-29 11:19:52 - TechAnalysisPipeline - INFO - Обработка тикера: AFKS
+2025-04-29 11:19:52 - TechAnalysisPipeline - INFO - Используем файл: AFKS.parquet
+2025-04-29 11:19:52 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_tech_indicators.csv
+2025-04-29 11:19:52 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_price_indicators.png
+2025-04-29 11:19:53 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_MACD.png
+2025-04-29 11:19:53 - TechAnalysisPipeline - INFO - Обработка тикера: MAGN
+2025-04-29 11:19:53 - TechAnalysisPipeline - INFO - Используем файл: MAGN.parquet
+2025-04-29 11:19:53 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_tech_indicators.csv
+2025-04-29 11:19:53 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_price_indicators.png
+2025-04-29 11:19:53 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_MACD.png
+2025-04-29 11:19:53 - TechAnalysisPipeline - INFO - Обработка тикера: RUAL
+2025-04-29 11:19:53 - TechAnalysisPipeline - INFO - Используем файл: RUAL.parquet
+2025-04-29 11:19:53 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_tech_indicators.csv
+2025-04-29 11:19:53 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_price_indicators.png
+2025-04-29 11:19:53 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_MACD.png
+2025-04-29 11:19:53 - TechAnalysisPipeline - INFO - Сводный отчет сохранен в /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/summaries/tech_analysis_summary.txt
+2025-04-29 11:19:53 - TechAnalysisPipeline - INFO - === ТЕХНИЧЕСКИЙ АНАЛИЗ ЗАВЕРШЕН ===
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - === НАЧАЛО ТЕХНИЧЕСКОГО АНАЛИЗА ===
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - Обработка тикера: SBER
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - Используем файл: SBER.parquet
+2025-04-29 11:54:12 - TechAnalysisPipeline - ERROR - Ошибка при обработке тикера SBER: index 13 is out of bounds for axis 0 with size 5
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - Обработка тикера: GAZP
+2025-04-29 11:54:12 - TechAnalysisPipeline - WARNING - Нет файлов .parquet для тикера GAZP
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - Обработка тикера: LKOH
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - Используем файл: LKOH.parquet
+2025-04-29 11:54:12 - TechAnalysisPipeline - ERROR - Ошибка при обработке тикера LKOH: index 13 is out of bounds for axis 0 with size 5
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - Обработка тикера: GMKN
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - Используем файл: GMKN.parquet
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_tech_indicators.csv
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_price_indicators.png
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_MACD.png
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - Обработка тикера: ROSN
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - Используем файл: ROSN.parquet
+2025-04-29 11:54:12 - TechAnalysisPipeline - ERROR - Ошибка при обработке тикера ROSN: index 13 is out of bounds for axis 0 with size 5
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - Обработка тикера: TATN
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - Используем файл: TATN.parquet
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_tech_indicators.csv
+2025-04-29 11:54:12 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_price_indicators.png
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_MACD.png
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Обработка тикера: MTSS
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Используем файл: MTSS.parquet
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_tech_indicators.csv
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_price_indicators.png
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_MACD.png
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Обработка тикера: ALRS
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Используем файл: ALRS.parquet
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_tech_indicators.csv
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_price_indicators.png
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_MACD.png
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Обработка тикера: SNGS
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Используем файл: SNGS.parquet
+2025-04-29 11:54:13 - TechAnalysisPipeline - ERROR - Ошибка при обработке тикера SNGS: index 13 is out of bounds for axis 0 with size 5
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Обработка тикера: NVTK
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Используем файл: NVTK.parquet
+2025-04-29 11:54:13 - TechAnalysisPipeline - ERROR - Ошибка при обработке тикера NVTK: index 13 is out of bounds for axis 0 with size 5
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Обработка тикера: MVID
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Используем файл: MVID.parquet
+2025-04-29 11:54:13 - TechAnalysisPipeline - ERROR - Ошибка при обработке тикера MVID: index 13 is out of bounds for axis 0 with size 5
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Обработка тикера: PHOR
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Используем файл: PHOR.parquet
+2025-04-29 11:54:13 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_tech_indicators.csv
+2025-04-29 11:54:14 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_price_indicators.png
+2025-04-29 11:54:14 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_MACD.png
+2025-04-29 11:54:14 - TechAnalysisPipeline - INFO - Обработка тикера: SIBN
+2025-04-29 11:54:14 - TechAnalysisPipeline - INFO - Используем файл: SIBN.parquet
+2025-04-29 11:54:14 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_tech_indicators.csv
+2025-04-29 11:54:14 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_price_indicators.png
+2025-04-29 11:54:14 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_MACD.png
+2025-04-29 11:54:14 - TechAnalysisPipeline - INFO - Обработка тикера: AFKS
+2025-04-29 11:54:14 - TechAnalysisPipeline - INFO - Используем файл: AFKS.parquet
+2025-04-29 11:54:14 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_tech_indicators.csv
+2025-04-29 11:54:14 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_price_indicators.png
+2025-04-29 11:54:15 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_MACD.png
+2025-04-29 11:54:15 - TechAnalysisPipeline - INFO - Обработка тикера: MAGN
+2025-04-29 11:54:15 - TechAnalysisPipeline - INFO - Используем файл: MAGN.parquet
+2025-04-29 11:54:15 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_tech_indicators.csv
+2025-04-29 11:54:15 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_price_indicators.png
+2025-04-29 11:54:15 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_MACD.png
+2025-04-29 11:54:15 - TechAnalysisPipeline - INFO - Обработка тикера: RUAL
+2025-04-29 11:54:15 - TechAnalysisPipeline - INFO - Используем файл: RUAL.parquet
+2025-04-29 11:54:15 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_tech_indicators.csv
+2025-04-29 11:54:15 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_price_indicators.png
+2025-04-29 11:54:15 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_MACD.png
+2025-04-29 11:54:15 - TechAnalysisPipeline - INFO - Сводный отчет сохранен в /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/summaries/tech_analysis_summary.txt
+2025-04-29 11:54:15 - TechAnalysisPipeline - INFO - === ТЕХНИЧЕСКИЙ АНАЛИЗ ЗАВЕРШЕН ===
+2025-04-29 12:20:15 - TechAnalysisPipeline - INFO - === НАЧАЛО ТЕХНИЧЕСКОГО АНАЛИЗА ===
+2025-04-29 12:20:15 - TechAnalysisPipeline - INFO - Обработка тикера: SBER
+2025-04-29 12:20:15 - TechAnalysisPipeline - INFO - Используем файл: SBER.parquet
+2025-04-29 12:20:15 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_tech_indicators.csv
+2025-04-29 12:20:16 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_price_indicators.png
+2025-04-29 12:20:16 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_MACD.png
+2025-04-29 12:20:16 - TechAnalysisPipeline - INFO - Обработка тикера: GAZP
+2025-04-29 12:20:16 - TechAnalysisPipeline - INFO - Используем файл: GAZP.parquet
+2025-04-29 12:20:16 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_tech_indicators.csv
+2025-04-29 12:20:16 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_price_indicators.png
+2025-04-29 12:20:16 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_MACD.png
+2025-04-29 12:20:16 - TechAnalysisPipeline - INFO - Обработка тикера: LKOH
+2025-04-29 12:20:16 - TechAnalysisPipeline - INFO - Используем файл: LKOH.parquet
+2025-04-29 12:20:16 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_tech_indicators.csv
+2025-04-29 12:20:16 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_price_indicators.png
+2025-04-29 12:20:16 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_MACD.png
+2025-04-29 12:20:16 - TechAnalysisPipeline - INFO - Обработка тикера: GMKN
+2025-04-29 12:20:16 - TechAnalysisPipeline - INFO - Используем файл: GMKN.parquet
+2025-04-29 12:20:16 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_tech_indicators.csv
+2025-04-29 12:20:16 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_price_indicators.png
+2025-04-29 12:20:17 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_MACD.png
+2025-04-29 12:20:17 - TechAnalysisPipeline - INFO - Обработка тикера: ROSN
+2025-04-29 12:20:17 - TechAnalysisPipeline - INFO - Используем файл: ROSN.parquet
+2025-04-29 12:20:17 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_tech_indicators.csv
+2025-04-29 12:20:17 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_price_indicators.png
+2025-04-29 12:20:17 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_MACD.png
+2025-04-29 12:20:17 - TechAnalysisPipeline - INFO - Обработка тикера: TATN
+2025-04-29 12:20:17 - TechAnalysisPipeline - INFO - Используем файл: TATN.parquet
+2025-04-29 12:20:17 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_tech_indicators.csv
+2025-04-29 12:20:17 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_price_indicators.png
+2025-04-29 12:20:17 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_MACD.png
+2025-04-29 12:20:17 - TechAnalysisPipeline - INFO - Обработка тикера: MTSS
+2025-04-29 12:20:17 - TechAnalysisPipeline - INFO - Используем файл: MTSS.parquet
+2025-04-29 12:20:17 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_tech_indicators.csv
+2025-04-29 12:20:17 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_price_indicators.png
+2025-04-29 12:20:18 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_MACD.png
+2025-04-29 12:20:18 - TechAnalysisPipeline - INFO - Обработка тикера: ALRS
+2025-04-29 12:20:18 - TechAnalysisPipeline - INFO - Используем файл: ALRS.parquet
+2025-04-29 12:20:18 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_tech_indicators.csv
+2025-04-29 12:20:18 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_price_indicators.png
+2025-04-29 12:20:18 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_MACD.png
+2025-04-29 12:20:18 - TechAnalysisPipeline - INFO - Обработка тикера: SNGS
+2025-04-29 12:20:18 - TechAnalysisPipeline - INFO - Используем файл: SNGS.parquet
+2025-04-29 12:20:18 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_tech_indicators.csv
+2025-04-29 12:20:18 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_price_indicators.png
+2025-04-29 12:20:18 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_MACD.png
+2025-04-29 12:20:18 - TechAnalysisPipeline - INFO - Обработка тикера: NVTK
+2025-04-29 12:20:18 - TechAnalysisPipeline - INFO - Используем файл: NVTK.parquet
+2025-04-29 12:20:18 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_tech_indicators.csv
+2025-04-29 12:20:18 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_price_indicators.png
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_MACD.png
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Обработка тикера: MVID
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Используем файл: MVID.parquet
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_tech_indicators.csv
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_price_indicators.png
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_MACD.png
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Обработка тикера: PHOR
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Используем файл: PHOR.parquet
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_tech_indicators.csv
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_price_indicators.png
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_MACD.png
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Обработка тикера: SIBN
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Используем файл: SIBN.parquet
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_tech_indicators.csv
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_price_indicators.png
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_MACD.png
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Обработка тикера: AFKS
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Используем файл: AFKS.parquet
+2025-04-29 12:20:19 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_tech_indicators.csv
+2025-04-29 12:20:20 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_price_indicators.png
+2025-04-29 12:20:20 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_MACD.png
+2025-04-29 12:20:20 - TechAnalysisPipeline - INFO - Обработка тикера: MAGN
+2025-04-29 12:20:20 - TechAnalysisPipeline - INFO - Используем файл: MAGN.parquet
+2025-04-29 12:20:20 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_tech_indicators.csv
+2025-04-29 12:20:20 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_price_indicators.png
+2025-04-29 12:20:20 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_MACD.png
+2025-04-29 12:20:20 - TechAnalysisPipeline - INFO - Обработка тикера: RUAL
+2025-04-29 12:20:20 - TechAnalysisPipeline - INFO - Используем файл: RUAL.parquet
+2025-04-29 12:20:20 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_tech_indicators.csv
+2025-04-29 12:20:20 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_price_indicators.png
+2025-04-29 12:20:21 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_MACD.png
+2025-04-29 12:20:21 - TechAnalysisPipeline - INFO - Сводный отчет сохранен в /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/summaries/tech_analysis_summary.txt
+2025-04-29 12:20:21 - TechAnalysisPipeline - INFO - === ТЕХНИЧЕСКИЙ АНАЛИЗ ЗАВЕРШЕН ===
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - === НАЧАЛО ТЕХНИЧЕСКОГО АНАЛИЗА ===
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Обработка тикера: SBER
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Используем файл: SBER.parquet
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_tech_indicators.csv
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_price_indicators.png
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SBER/tech_analysis/SBER_MACD.png
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Обработка тикера: GAZP
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Используем файл: GAZP.parquet
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_tech_indicators.csv
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_price_indicators.png
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GAZP/tech_analysis/GAZP_MACD.png
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Обработка тикера: LKOH
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Используем файл: LKOH.parquet
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_tech_indicators.csv
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_price_indicators.png
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/LKOH/tech_analysis/LKOH_MACD.png
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Обработка тикера: GMKN
+2025-04-29 17:23:20 - TechAnalysisPipeline - INFO - Используем файл: GMKN.parquet
+2025-04-29 17:23:21 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_tech_indicators.csv
+2025-04-29 17:23:21 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_price_indicators.png
+2025-04-29 17:23:21 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/GMKN/tech_analysis/GMKN_MACD.png
+2025-04-29 17:23:21 - TechAnalysisPipeline - INFO - Обработка тикера: ROSN
+2025-04-29 17:23:21 - TechAnalysisPipeline - INFO - Используем файл: ROSN.parquet
+2025-04-29 17:23:21 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_tech_indicators.csv
+2025-04-29 17:23:21 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_price_indicators.png
+2025-04-29 17:23:21 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ROSN/tech_analysis/ROSN_MACD.png
+2025-04-29 17:23:21 - TechAnalysisPipeline - INFO - Обработка тикера: TATN
+2025-04-29 17:23:21 - TechAnalysisPipeline - INFO - Используем файл: TATN.parquet
+2025-04-29 17:23:21 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_tech_indicators.csv
+2025-04-29 17:23:21 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_price_indicators.png
+2025-04-29 17:23:22 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/TATN/tech_analysis/TATN_MACD.png
+2025-04-29 17:23:22 - TechAnalysisPipeline - INFO - Обработка тикера: MTSS
+2025-04-29 17:23:22 - TechAnalysisPipeline - INFO - Используем файл: MTSS.parquet
+2025-04-29 17:23:22 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_tech_indicators.csv
+2025-04-29 17:23:22 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_price_indicators.png
+2025-04-29 17:23:22 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MTSS/tech_analysis/MTSS_MACD.png
+2025-04-29 17:23:22 - TechAnalysisPipeline - INFO - Обработка тикера: ALRS
+2025-04-29 17:23:22 - TechAnalysisPipeline - INFO - Используем файл: ALRS.parquet
+2025-04-29 17:23:22 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_tech_indicators.csv
+2025-04-29 17:23:22 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_price_indicators.png
+2025-04-29 17:23:22 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/ALRS/tech_analysis/ALRS_MACD.png
+2025-04-29 17:23:22 - TechAnalysisPipeline - INFO - Обработка тикера: SNGS
+2025-04-29 17:23:22 - TechAnalysisPipeline - INFO - Используем файл: SNGS.parquet
+2025-04-29 17:23:22 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_tech_indicators.csv
+2025-04-29 17:23:22 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_price_indicators.png
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SNGS/tech_analysis/SNGS_MACD.png
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Обработка тикера: NVTK
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Используем файл: NVTK.parquet
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_tech_indicators.csv
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_price_indicators.png
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/NVTK/tech_analysis/NVTK_MACD.png
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Обработка тикера: MVID
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Используем файл: MVID.parquet
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_tech_indicators.csv
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_price_indicators.png
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MVID/tech_analysis/MVID_MACD.png
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Обработка тикера: PHOR
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Используем файл: PHOR.parquet
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_tech_indicators.csv
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_price_indicators.png
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PHOR/tech_analysis/PHOR_MACD.png
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Обработка тикера: SIBN
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Используем файл: SIBN.parquet
+2025-04-29 17:23:23 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_tech_indicators.csv
+2025-04-29 17:23:24 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_price_indicators.png
+2025-04-29 17:23:24 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/SIBN/tech_analysis/SIBN_MACD.png
+2025-04-29 17:23:24 - TechAnalysisPipeline - INFO - Обработка тикера: AFKS
+2025-04-29 17:23:24 - TechAnalysisPipeline - INFO - Используем файл: AFKS.parquet
+2025-04-29 17:23:24 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_tech_indicators.csv
+2025-04-29 17:23:24 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_price_indicators.png
+2025-04-29 17:23:24 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFKS/tech_analysis/AFKS_MACD.png
+2025-04-29 17:23:24 - TechAnalysisPipeline - INFO - Обработка тикера: MAGN
+2025-04-29 17:23:24 - TechAnalysisPipeline - INFO - Используем файл: MAGN.parquet
+2025-04-29 17:23:24 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_tech_indicators.csv
+2025-04-29 17:23:24 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_price_indicators.png
+2025-04-29 17:23:24 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/MAGN/tech_analysis/MAGN_MACD.png
+2025-04-29 17:23:24 - TechAnalysisPipeline - INFO - Обработка тикера: RUAL
+2025-04-29 17:23:24 - TechAnalysisPipeline - INFO - Используем файл: RUAL.parquet
+2025-04-29 17:23:25 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_tech_indicators.csv
+2025-04-29 17:23:25 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_price_indicators.png
+2025-04-29 17:23:25 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/RUAL/tech_analysis/RUAL_MACD.png
+2025-04-29 17:23:25 - TechAnalysisPipeline - INFO - Обработка тикера: AFLT
+2025-04-29 17:23:25 - TechAnalysisPipeline - INFO - Используем файл: AFLT.parquet
+2025-04-29 17:23:25 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFLT/tech_analysis/AFLT_tech_indicators.csv
+2025-04-29 17:23:25 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFLT/tech_analysis/AFLT_price_indicators.png
+2025-04-29 17:23:25 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/AFLT/tech_analysis/AFLT_MACD.png
+2025-04-29 17:23:25 - TechAnalysisPipeline - INFO - Обработка тикера: CBOM
+2025-04-29 17:23:25 - TechAnalysisPipeline - INFO - Используем файл: CBOM.parquet
+2025-04-29 17:23:25 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/CBOM/tech_analysis/CBOM_tech_indicators.csv
+2025-04-29 17:23:25 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/CBOM/tech_analysis/CBOM_price_indicators.png
+2025-04-29 17:23:26 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/CBOM/tech_analysis/CBOM_MACD.png
+2025-04-29 17:23:26 - TechAnalysisPipeline - INFO - Обработка тикера: POSI
+2025-04-29 17:23:26 - TechAnalysisPipeline - INFO - Используем файл: POSI.parquet
+2025-04-29 17:23:26 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/POSI/tech_analysis/POSI_tech_indicators.csv
+2025-04-29 17:23:26 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/POSI/tech_analysis/POSI_price_indicators.png
+2025-04-29 17:23:26 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/POSI/tech_analysis/POSI_MACD.png
+2025-04-29 17:23:26 - TechAnalysisPipeline - INFO - Обработка тикера: PLZL
+2025-04-29 17:23:26 - TechAnalysisPipeline - INFO - Используем файл: PLZL.parquet
+2025-04-29 17:23:26 - TechAnalysisPipeline - INFO - Сохранен CSV с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PLZL/tech_analysis/PLZL_tech_indicators.csv
+2025-04-29 17:23:26 - TechAnalysisPipeline - INFO - Сохранен график цены с индикаторами: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PLZL/tech_analysis/PLZL_price_indicators.png
+2025-04-29 17:23:26 - TechAnalysisPipeline - INFO - Сохранен график MACD: /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/PLZL/tech_analysis/PLZL_MACD.png
+2025-04-29 17:23:26 - TechAnalysisPipeline - INFO - Сводный отчет сохранен в /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/summaries/tech_analysis_summary.txt
+2025-04-29 17:23:26 - TechAnalysisPipeline - INFO - === ТЕХНИЧЕСКИЙ АНАЛИЗ ЗАВЕРШЕН ===

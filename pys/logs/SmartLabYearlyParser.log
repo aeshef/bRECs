@@ -1,0 +1,1552 @@
+2025-04-29 12:14:55 - SmartLabYearlyParser - INFO - Adding delay of 3.00 seconds before requesting SBER
+2025-04-29 12:14:58 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/SBER/f/y/
+2025-04-29 12:14:58 - SmartLabYearlyParser - ERROR - Error during request: 'SmartLabYearlyParser' object has no attribute 'session'
+2025-04-29 12:14:58 - SmartLabYearlyParser - ERROR - Traceback (most recent call last):
+  File "/Users/aeshef/Desktop/FOR3.9TEST/kursach/pys/data_collection/fundamental_data.py", line 55, in fetch_page
+    response = self.session.get(self.url, headers=headers, timeout=10)
+AttributeError: 'SmartLabYearlyParser' object has no attribute 'session'
+
+2025-04-29 12:14:58 - SmartLabYearlyParser - INFO - Adding delay of 2.57 seconds before requesting GAZP
+2025-04-29 12:15:01 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/GAZP/f/y/
+2025-04-29 12:15:01 - SmartLabYearlyParser - ERROR - Error during request: 'SmartLabYearlyParser' object has no attribute 'session'
+2025-04-29 12:15:01 - SmartLabYearlyParser - ERROR - Traceback (most recent call last):
+  File "/Users/aeshef/Desktop/FOR3.9TEST/kursach/pys/data_collection/fundamental_data.py", line 55, in fetch_page
+    response = self.session.get(self.url, headers=headers, timeout=10)
+AttributeError: 'SmartLabYearlyParser' object has no attribute 'session'
+
+2025-04-29 12:15:01 - SmartLabYearlyParser - INFO - Adding delay of 3.16 seconds before requesting LKOH
+2025-04-29 12:15:04 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/LKOH/f/y/
+2025-04-29 12:15:04 - SmartLabYearlyParser - ERROR - Error during request: 'SmartLabYearlyParser' object has no attribute 'session'
+2025-04-29 12:15:04 - SmartLabYearlyParser - ERROR - Traceback (most recent call last):
+  File "/Users/aeshef/Desktop/FOR3.9TEST/kursach/pys/data_collection/fundamental_data.py", line 55, in fetch_page
+    response = self.session.get(self.url, headers=headers, timeout=10)
+AttributeError: 'SmartLabYearlyParser' object has no attribute 'session'
+
+2025-04-29 12:15:04 - SmartLabYearlyParser - INFO - Adding delay of 2.80 seconds before requesting GMKN
+2025-04-29 12:15:07 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/GMKN/f/y/
+2025-04-29 12:15:07 - SmartLabYearlyParser - ERROR - Error during request: 'SmartLabYearlyParser' object has no attribute 'session'
+2025-04-29 12:15:07 - SmartLabYearlyParser - ERROR - Traceback (most recent call last):
+  File "/Users/aeshef/Desktop/FOR3.9TEST/kursach/pys/data_collection/fundamental_data.py", line 55, in fetch_page
+    response = self.session.get(self.url, headers=headers, timeout=10)
+AttributeError: 'SmartLabYearlyParser' object has no attribute 'session'
+
+2025-04-29 12:15:07 - SmartLabYearlyParser - INFO - Adding delay of 3.85 seconds before requesting ROSN
+2025-04-29 12:15:11 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/ROSN/f/y/
+2025-04-29 12:15:11 - SmartLabYearlyParser - ERROR - Error during request: 'SmartLabYearlyParser' object has no attribute 'session'
+2025-04-29 12:15:11 - SmartLabYearlyParser - ERROR - Traceback (most recent call last):
+  File "/Users/aeshef/Desktop/FOR3.9TEST/kursach/pys/data_collection/fundamental_data.py", line 55, in fetch_page
+    response = self.session.get(self.url, headers=headers, timeout=10)
+AttributeError: 'SmartLabYearlyParser' object has no attribute 'session'
+
+2025-04-29 12:15:11 - SmartLabYearlyParser - INFO - Adding delay of 2.41 seconds before requesting TATN
+2025-04-29 12:15:13 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/TATN/f/y/
+2025-04-29 12:15:13 - SmartLabYearlyParser - ERROR - Error during request: 'SmartLabYearlyParser' object has no attribute 'session'
+2025-04-29 12:15:13 - SmartLabYearlyParser - ERROR - Traceback (most recent call last):
+  File "/Users/aeshef/Desktop/FOR3.9TEST/kursach/pys/data_collection/fundamental_data.py", line 55, in fetch_page
+    response = self.session.get(self.url, headers=headers, timeout=10)
+AttributeError: 'SmartLabYearlyParser' object has no attribute 'session'
+
+2025-04-29 12:15:13 - SmartLabYearlyParser - INFO - Adding delay of 3.73 seconds before requesting MTSS
+2025-04-29 12:15:17 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/MTSS/f/y/
+2025-04-29 12:15:17 - SmartLabYearlyParser - ERROR - Error during request: 'SmartLabYearlyParser' object has no attribute 'session'
+2025-04-29 12:15:17 - SmartLabYearlyParser - ERROR - Traceback (most recent call last):
+  File "/Users/aeshef/Desktop/FOR3.9TEST/kursach/pys/data_collection/fundamental_data.py", line 55, in fetch_page
+    response = self.session.get(self.url, headers=headers, timeout=10)
+AttributeError: 'SmartLabYearlyParser' object has no attribute 'session'
+
+2025-04-29 12:15:17 - SmartLabYearlyParser - INFO - Adding delay of 2.71 seconds before requesting ALRS
+2025-04-29 12:15:20 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/ALRS/f/y/
+2025-04-29 12:15:20 - SmartLabYearlyParser - ERROR - Error during request: 'SmartLabYearlyParser' object has no attribute 'session'
+2025-04-29 12:15:20 - SmartLabYearlyParser - ERROR - Traceback (most recent call last):
+  File "/Users/aeshef/Desktop/FOR3.9TEST/kursach/pys/data_collection/fundamental_data.py", line 55, in fetch_page
+    response = self.session.get(self.url, headers=headers, timeout=10)
+AttributeError: 'SmartLabYearlyParser' object has no attribute 'session'
+
+2025-04-29 12:15:20 - SmartLabYearlyParser - INFO - Adding delay of 4.89 seconds before requesting SNGS
+2025-04-29 12:15:24 - SmartLabYearlyParser - INFO - Adding delay of 3.49 seconds before requesting SBER
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/SBER/f/y/
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:15:28 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/SBER_response.html
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Response size: 80092 bytes
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Page title: Сбербанк (SBER): годовая финансовая отчетность МСФО
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:15:28 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:15:28 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Table 1 has 82 rows
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Table 1 first row: Сбербанк (SBER): годовая финансовая отчетность МСФО...
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>Сбербанк (SBER): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">...
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Table dimensions: 82 rows × 1 columns
+2025-04-29 12:15:28 - SmartLabYearlyParser - WARNING - pd.read_html failed for table #1: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Manually extracted table #1 with shape (82, 10)
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (82, 10)
+2025-04-29 12:15:28 - SmartLabYearlyParser - INFO - Adding delay of 2.08 seconds before requesting GAZP
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/GAZP/f/y/
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:15:30 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/GAZP_response.html
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Response size: 77858 bytes
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Page title: Газпром (GAZP): годовая финансовая отчетность МСФО
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:15:30 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:15:30 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Table 1 has 83 rows
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Table 1 first row: Газпром (GAZP): годовая финансовая отчетность МСФО...
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>Газпром (GAZP): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">
+...
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Table dimensions: 83 rows × 1 columns
+2025-04-29 12:15:30 - SmartLabYearlyParser - WARNING - pd.read_html failed for table #1: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Manually extracted table #1 with shape (83, 10)
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (83, 10)
+2025-04-29 12:15:30 - SmartLabYearlyParser - INFO - Adding delay of 4.97 seconds before requesting LKOH
+2025-04-29 12:15:35 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/LKOH/f/y/
+2025-04-29 12:15:35 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:15:35 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:15:36 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:15:35 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/LKOH_response.html
+2025-04-29 12:15:35 - SmartLabYearlyParser - INFO - Response size: 74776 bytes
+2025-04-29 12:15:36 - SmartLabYearlyParser - INFO - Page title: Лукойл (LKOH): годовая финансовая отчетность МСФО
+2025-04-29 12:15:36 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:15:36 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:15:36 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:15:36 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:15:36 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:15:36 - SmartLabYearlyParser - INFO - Table 1 has 79 rows
+2025-04-29 12:15:36 - SmartLabYearlyParser - INFO - Table 1 first row: Лукойл (LKOH): годовая финансовая отчетность МСФО...
+2025-04-29 12:15:36 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:15:36 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:15:36 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>Лукойл (LKOH): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">
+<...
+2025-04-29 12:15:36 - SmartLabYearlyParser - INFO - Table dimensions: 79 rows × 1 columns
+2025-04-29 12:15:36 - SmartLabYearlyParser - WARNING - pd.read_html failed for table #1: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-04-29 12:15:36 - SmartLabYearlyParser - INFO - Manually extracted table #1 with shape (79, 10)
+2025-04-29 12:15:36 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (79, 10)
+2025-04-29 12:15:36 - SmartLabYearlyParser - INFO - Adding delay of 4.22 seconds before requesting GMKN
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/GMKN/f/y/
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:15:40 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/GMKN_response.html
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Response size: 79128 bytes
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Page title: ГМК Норникель (GMKN): годовая финансовая отчетность МСФО
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:15:40 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:15:40 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Table 1 has 82 rows
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Table 1 first row: ГМК Норникель (GMKN): годовая финансовая отчетность МСФО...
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>ГМК Норникель (GMKN): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan=...
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Table dimensions: 82 rows × 1 columns
+2025-04-29 12:15:40 - SmartLabYearlyParser - WARNING - pd.read_html failed for table #1: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Manually extracted table #1 with shape (82, 10)
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (82, 10)
+2025-04-29 12:15:40 - SmartLabYearlyParser - INFO - Adding delay of 2.30 seconds before requesting ROSN
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/ROSN/f/y/
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:15:42 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/ROSN_response.html
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Response size: 71842 bytes
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Page title: Роснефть (ROSN): годовая финансовая отчетность МСФО
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:15:42 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:15:42 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Table 1 has 72 rows
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Table 1 first row: Роснефть (ROSN): годовая финансовая отчетность МСФО...
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>Роснефть (ROSN): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">...
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Table dimensions: 72 rows × 1 columns
+2025-04-29 12:15:42 - SmartLabYearlyParser - WARNING - pd.read_html failed for table #1: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Manually extracted table #1 with shape (72, 10)
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (72, 10)
+2025-04-29 12:15:42 - SmartLabYearlyParser - INFO - Adding delay of 3.43 seconds before requesting TATN
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/TATN/f/y/
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:15:46 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/TATN_response.html
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Response size: 72711 bytes
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Page title: Татнефть (TATN): годовая финансовая отчетность МСФО
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:15:46 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:15:46 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Table 1 has 74 rows
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Table 1 first row: Татнефть (TATN): годовая финансовая отчетность МСФО...
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>Татнефть (TATN): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">...
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Table dimensions: 74 rows × 1 columns
+2025-04-29 12:15:46 - SmartLabYearlyParser - WARNING - pd.read_html failed for table #1: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Manually extracted table #1 with shape (74, 10)
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (74, 10)
+2025-04-29 12:15:46 - SmartLabYearlyParser - INFO - Adding delay of 3.09 seconds before requesting MTSS
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/MTSS/f/y/
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:15:49 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/MTSS_response.html
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Response size: 77077 bytes
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Page title: МТС (MTSS): годовая финансовая отчетность МСФО
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:15:49 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:15:49 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Table 1 has 80 rows
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Table 1 first row: МТС (MTSS): годовая финансовая отчетность МСФО...
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>МТС (MTSS): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">
+<div...
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Table dimensions: 80 rows × 1 columns
+2025-04-29 12:15:49 - SmartLabYearlyParser - WARNING - pd.read_html failed for table #1: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Manually extracted table #1 with shape (80, 10)
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (80, 10)
+2025-04-29 12:15:49 - SmartLabYearlyParser - INFO - Adding delay of 4.76 seconds before requesting ALRS
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/ALRS/f/y/
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:15:54 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/ALRS_response.html
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Response size: 77234 bytes
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Page title: АЛРОСА (ALRS): годовая финансовая отчетность МСФО
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:15:54 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:15:54 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Table 1 has 82 rows
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Table 1 first row: АЛРОСА (ALRS): годовая финансовая отчетность МСФО...
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>АЛРОСА (ALRS): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">
+<...
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Table dimensions: 82 rows × 1 columns
+2025-04-29 12:15:54 - SmartLabYearlyParser - WARNING - pd.read_html failed for table #1: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Manually extracted table #1 with shape (82, 10)
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (82, 10)
+2025-04-29 12:15:54 - SmartLabYearlyParser - INFO - Adding delay of 2.43 seconds before requesting SNGS
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/SNGS/f/y/
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:15:57 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/SNGS_response.html
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Response size: 75548 bytes
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Page title: Сургутнефтегаз (SNGS): годовая финансовая отчетность МСФО
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:15:57 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:15:57 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Table 1 has 81 rows
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Table 1 first row: Сургутнефтегаз (SNGS): годовая финансовая отчетность МСФО...
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>Сургутнефтегаз (SNGS): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan...
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Table dimensions: 81 rows × 1 columns
+2025-04-29 12:15:57 - SmartLabYearlyParser - WARNING - pd.read_html failed for table #1: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Manually extracted table #1 with shape (81, 10)
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (81, 10)
+2025-04-29 12:15:57 - SmartLabYearlyParser - INFO - Adding delay of 3.37 seconds before requesting NVTK
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/NVTK/f/y/
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:16:00 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/NVTK_response.html
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Response size: 75714 bytes
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Page title: НОВАТЭК (NVTK): годовая финансовая отчетность МСФО
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:16:00 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:16:00 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Table 1 has 80 rows
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Table 1 first row: НОВАТЭК (NVTK): годовая финансовая отчетность МСФО...
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>НОВАТЭК (NVTK): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">
+...
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Table dimensions: 80 rows × 1 columns
+2025-04-29 12:16:00 - SmartLabYearlyParser - WARNING - pd.read_html failed for table #1: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Manually extracted table #1 with shape (80, 10)
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (80, 10)
+2025-04-29 12:16:00 - SmartLabYearlyParser - INFO - Adding delay of 2.53 seconds before requesting MVID
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/MVID/f/y/
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:16:03 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/MVID_response.html
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Response size: 83180 bytes
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Page title: М.Видео-Эльдорадо (MVID): годовая финансовая отчетность МСФО
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:16:03 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:16:03 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Table 1 has 89 rows
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Table 1 first row: М.Видео-Эльдорадо (MVID): годовая финансовая отчетность МСФО...
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>М.Видео-Эльдорадо (MVID): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" cols...
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Table dimensions: 89 rows × 1 columns
+2025-04-29 12:16:03 - SmartLabYearlyParser - WARNING - pd.read_html failed for table #1: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Manually extracted table #1 with shape (89, 10)
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (89, 10)
+2025-04-29 12:16:03 - SmartLabYearlyParser - INFO - Adding delay of 3.95 seconds before requesting PHOR
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/PHOR/f/y/
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:16:07 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/PHOR_response.html
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Response size: 76320 bytes
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Page title: ФосАгро (PHOR): годовая финансовая отчетность МСФО
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:16:07 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:16:07 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Table 1 has 80 rows
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Table 1 first row: ФосАгро (PHOR): годовая финансовая отчетность МСФО...
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>ФосАгро (PHOR): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">
+...
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Table dimensions: 80 rows × 1 columns
+2025-04-29 12:16:07 - SmartLabYearlyParser - WARNING - pd.read_html failed for table #1: Missing optional dependency 'lxml'.  Use pip or conda to install lxml.
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Manually extracted table #1 with shape (80, 10)
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (80, 10)
+2025-04-29 12:16:07 - SmartLabYearlyParser - INFO - Adding delay of 3.78 seconds before requesting SIBN
+2025-04-29 12:16:56 - SmartLabYearlyParser - INFO - Adding delay of 3.79 seconds before requesting SBER
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/SBER/f/y/
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:17:00 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/SBER_response.html
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Response size: 80092 bytes
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Page title: Сбербанк (SBER): годовая финансовая отчетность МСФО
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:17:00 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:17:00 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Table 1 has 82 rows
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Table 1 first row: Сбербанк (SBER): годовая финансовая отчетность МСФО...
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>Сбербанк (SBER): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">...
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Table dimensions: 82 rows × 1 columns
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Successfully parsed table #1 into DataFrame with shape (82, 11)
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - First rows of the dataframe: 
+                                                  0   \
+0  Сбербанк (SBER): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  1   \
+0  Сбербанк (SBER): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  2   \
+0  Сбербанк (SBER): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  3   \
+0  Сбербанк (SBER): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  4   \
+0  Сбербанк (SBER): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  5   \
+0  Сбербанк (SBER): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  6   \
+0  Сбербанк (SBER): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  7   \
+0  Сбербанк (SBER): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  8   \
+0  Сбербанк (SBER): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  9   \
+0  Сбербанк (SBER): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  10  
+0  Сбербанк (SBER): годовая финансовая отчетность...  
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...  
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (82, 11)
+2025-04-29 12:17:00 - SmartLabYearlyParser - INFO - Adding delay of 3.90 seconds before requesting GAZP
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/GAZP/f/y/
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:17:04 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/GAZP_response.html
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Response size: 77361 bytes
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Page title: Газпром (GAZP): годовая финансовая отчетность МСФО
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:17:04 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:17:04 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Table 1 has 83 rows
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Table 1 first row: Газпром (GAZP): годовая финансовая отчетность МСФО...
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>Газпром (GAZP): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">
+...
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Table dimensions: 83 rows × 1 columns
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Successfully parsed table #1 into DataFrame with shape (83, 11)
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - First rows of the dataframe: 
+                                                  0   \
+0  Газпром (GAZP): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  1   \
+0  Газпром (GAZP): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  2   \
+0  Газпром (GAZP): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  3   \
+0  Газпром (GAZP): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  4   \
+0  Газпром (GAZP): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  5   \
+0  Газпром (GAZP): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  6   \
+0  Газпром (GAZP): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  7   \
+0  Газпром (GAZP): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  8   \
+0  Газпром (GAZP): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  9   \
+0  Газпром (GAZP): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  10  
+0  Газпром (GAZP): годовая финансовая отчетность ...  
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...  
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (83, 11)
+2025-04-29 12:17:04 - SmartLabYearlyParser - INFO - Adding delay of 3.44 seconds before requesting LKOH
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/LKOH/f/y/
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:17:08 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/LKOH_response.html
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Response size: 74776 bytes
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Page title: Лукойл (LKOH): годовая финансовая отчетность МСФО
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:17:08 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:17:08 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Table 1 has 79 rows
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Table 1 first row: Лукойл (LKOH): годовая финансовая отчетность МСФО...
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>Лукойл (LKOH): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">
+<...
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Table dimensions: 79 rows × 1 columns
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Successfully parsed table #1 into DataFrame with shape (79, 11)
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - First rows of the dataframe: 
+                                                  0   \
+0  Лукойл (LKOH): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  1   \
+0  Лукойл (LKOH): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  2   \
+0  Лукойл (LKOH): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  3   \
+0  Лукойл (LKOH): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  4   \
+0  Лукойл (LKOH): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  5   \
+0  Лукойл (LKOH): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  6   \
+0  Лукойл (LKOH): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  7   \
+0  Лукойл (LKOH): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  8   \
+0  Лукойл (LKOH): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  9   \
+0  Лукойл (LKOH): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  10  
+0  Лукойл (LKOH): годовая финансовая отчетность МСФО  
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...  
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (79, 11)
+2025-04-29 12:17:08 - SmartLabYearlyParser - INFO - Adding delay of 3.03 seconds before requesting GMKN
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/GMKN/f/y/
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:17:11 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/GMKN_response.html
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Response size: 79128 bytes
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Page title: ГМК Норникель (GMKN): годовая финансовая отчетность МСФО
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:17:11 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:17:11 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Table 1 has 82 rows
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Table 1 first row: ГМК Норникель (GMKN): годовая финансовая отчетность МСФО...
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>ГМК Норникель (GMKN): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan=...
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Table dimensions: 82 rows × 1 columns
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Successfully parsed table #1 into DataFrame with shape (82, 11)
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - First rows of the dataframe: 
+                                                  0   \
+0  ГМК Норникель (GMKN): годовая финансовая отчет...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  1   \
+0  ГМК Норникель (GMKN): годовая финансовая отчет...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  2   \
+0  ГМК Норникель (GMKN): годовая финансовая отчет...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  3   \
+0  ГМК Норникель (GMKN): годовая финансовая отчет...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  4   \
+0  ГМК Норникель (GMKN): годовая финансовая отчет...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  5   \
+0  ГМК Норникель (GMKN): годовая финансовая отчет...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  6   \
+0  ГМК Норникель (GMKN): годовая финансовая отчет...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  7   \
+0  ГМК Норникель (GMKN): годовая финансовая отчет...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  8   \
+0  ГМК Норникель (GMKN): годовая финансовая отчет...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  9   \
+0  ГМК Норникель (GMKN): годовая финансовая отчет...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  10  
+0  ГМК Норникель (GMKN): годовая финансовая отчет...  
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...  
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (82, 11)
+2025-04-29 12:17:11 - SmartLabYearlyParser - INFO - Adding delay of 2.26 seconds before requesting ROSN
+2025-04-29 12:17:13 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/ROSN/f/y/
+2025-04-29 12:17:13 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:17:13 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:17:14 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:17:13 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/ROSN_response.html
+2025-04-29 12:17:13 - SmartLabYearlyParser - INFO - Response size: 71842 bytes
+2025-04-29 12:17:13 - SmartLabYearlyParser - INFO - Page title: Роснефть (ROSN): годовая финансовая отчетность МСФО
+2025-04-29 12:17:13 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:17:13 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:17:13 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:17:13 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:17:13 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:17:13 - SmartLabYearlyParser - INFO - Table 1 has 72 rows
+2025-04-29 12:17:13 - SmartLabYearlyParser - INFO - Table 1 first row: Роснефть (ROSN): годовая финансовая отчетность МСФО...
+2025-04-29 12:17:13 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:17:13 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:17:13 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>Роснефть (ROSN): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">...
+2025-04-29 12:17:13 - SmartLabYearlyParser - INFO - Table dimensions: 72 rows × 1 columns
+2025-04-29 12:17:14 - SmartLabYearlyParser - INFO - Successfully parsed table #1 into DataFrame with shape (72, 11)
+2025-04-29 12:17:14 - SmartLabYearlyParser - INFO - First rows of the dataframe: 
+                                                  0   \
+0  Роснефть (ROSN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  1   \
+0  Роснефть (ROSN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  2   \
+0  Роснефть (ROSN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  3   \
+0  Роснефть (ROSN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  4   \
+0  Роснефть (ROSN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  5   \
+0  Роснефть (ROSN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  6   \
+0  Роснефть (ROSN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  7   \
+0  Роснефть (ROSN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  8   \
+0  Роснефть (ROSN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  9   \
+0  Роснефть (ROSN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  10  
+0  Роснефть (ROSN): годовая финансовая отчетность...  
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...  
+2025-04-29 12:17:14 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (72, 11)
+2025-04-29 12:17:14 - SmartLabYearlyParser - INFO - Adding delay of 3.56 seconds before requesting TATN
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/TATN/f/y/
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:17:17 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/TATN_response.html
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Response size: 72711 bytes
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Page title: Татнефть (TATN): годовая финансовая отчетность МСФО
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:17:17 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:17:17 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Table 1 has 74 rows
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Table 1 first row: Татнефть (TATN): годовая финансовая отчетность МСФО...
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>Татнефть (TATN): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">...
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Table dimensions: 74 rows × 1 columns
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Successfully parsed table #1 into DataFrame with shape (74, 11)
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - First rows of the dataframe: 
+                                                  0   \
+0  Татнефть (TATN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  1   \
+0  Татнефть (TATN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  2   \
+0  Татнефть (TATN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  3   \
+0  Татнефть (TATN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  4   \
+0  Татнефть (TATN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  5   \
+0  Татнефть (TATN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  6   \
+0  Татнефть (TATN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  7   \
+0  Татнефть (TATN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  8   \
+0  Татнефть (TATN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  9   \
+0  Татнефть (TATN): годовая финансовая отчетность...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  10  
+0  Татнефть (TATN): годовая финансовая отчетность...  
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...  
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (74, 11)
+2025-04-29 12:17:17 - SmartLabYearlyParser - INFO - Adding delay of 2.64 seconds before requesting MTSS
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/MTSS/f/y/
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:17:20 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/MTSS_response.html
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Response size: 77077 bytes
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Page title: МТС (MTSS): годовая финансовая отчетность МСФО
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:17:20 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:17:20 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Table 1 has 80 rows
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Table 1 first row: МТС (MTSS): годовая финансовая отчетность МСФО...
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>МТС (MTSS): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">
+<div...
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Table dimensions: 80 rows × 1 columns
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Successfully parsed table #1 into DataFrame with shape (80, 11)
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - First rows of the dataframe: 
+                                                  0   \
+0     МТС (MTSS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  1   \
+0     МТС (MTSS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  2   \
+0     МТС (MTSS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  3   \
+0     МТС (MTSS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  4   \
+0     МТС (MTSS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  5   \
+0     МТС (MTSS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  6   \
+0     МТС (MTSS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  7   \
+0     МТС (MTSS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  8   \
+0     МТС (MTSS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  9   \
+0     МТС (MTSS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  10  
+0     МТС (MTSS): годовая финансовая отчетность МСФО  
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...  
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (80, 11)
+2025-04-29 12:17:20 - SmartLabYearlyParser - INFO - Adding delay of 4.69 seconds before requesting ALRS
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/ALRS/f/y/
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:17:25 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/ALRS_response.html
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Response size: 76909 bytes
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Page title: АЛРОСА (ALRS): годовая финансовая отчетность МСФО
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:17:25 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:17:25 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Table 1 has 82 rows
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Table 1 first row: АЛРОСА (ALRS): годовая финансовая отчетность МСФО...
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>АЛРОСА (ALRS): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">
+<...
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Table dimensions: 82 rows × 1 columns
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Successfully parsed table #1 into DataFrame with shape (82, 11)
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - First rows of the dataframe: 
+                                                  0   \
+0  АЛРОСА (ALRS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  1   \
+0  АЛРОСА (ALRS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  2   \
+0  АЛРОСА (ALRS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  3   \
+0  АЛРОСА (ALRS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  4   \
+0  АЛРОСА (ALRS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  5   \
+0  АЛРОСА (ALRS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  6   \
+0  АЛРОСА (ALRS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  7   \
+0  АЛРОСА (ALRS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  8   \
+0  АЛРОСА (ALRS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  9   \
+0  АЛРОСА (ALRS): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  10  
+0  АЛРОСА (ALRS): годовая финансовая отчетность МСФО  
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...  
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (82, 11)
+2025-04-29 12:17:25 - SmartLabYearlyParser - INFO - Adding delay of 4.98 seconds before requesting SNGS
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/SNGS/f/y/
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:17:30 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/SNGS_response.html
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Response size: 75548 bytes
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Page title: Сургутнефтегаз (SNGS): годовая финансовая отчетность МСФО
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:17:30 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:17:30 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Table 1 has 81 rows
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Table 1 first row: Сургутнефтегаз (SNGS): годовая финансовая отчетность МСФО...
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>Сургутнефтегаз (SNGS): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan...
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Table dimensions: 81 rows × 1 columns
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Successfully parsed table #1 into DataFrame with shape (81, 11)
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - First rows of the dataframe: 
+                                                  0   \
+0  Сургутнефтегаз (SNGS): годовая финансовая отче...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  1   \
+0  Сургутнефтегаз (SNGS): годовая финансовая отче...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  2   \
+0  Сургутнефтегаз (SNGS): годовая финансовая отче...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  3   \
+0  Сургутнефтегаз (SNGS): годовая финансовая отче...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  4   \
+0  Сургутнефтегаз (SNGS): годовая финансовая отче...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  5   \
+0  Сургутнефтегаз (SNGS): годовая финансовая отче...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  6   \
+0  Сургутнефтегаз (SNGS): годовая финансовая отче...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  7   \
+0  Сургутнефтегаз (SNGS): годовая финансовая отче...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  8   \
+0  Сургутнефтегаз (SNGS): годовая финансовая отче...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  9   \
+0  Сургутнефтегаз (SNGS): годовая финансовая отче...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  10  
+0  Сургутнефтегаз (SNGS): годовая финансовая отче...  
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...  
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (81, 11)
+2025-04-29 12:17:30 - SmartLabYearlyParser - INFO - Adding delay of 4.22 seconds before requesting NVTK
+2025-04-29 12:17:34 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/NVTK/f/y/
+2025-04-29 12:17:34 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:17:34 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:17:35 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:17:34 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/NVTK_response.html
+2025-04-29 12:17:34 - SmartLabYearlyParser - INFO - Response size: 75714 bytes
+2025-04-29 12:17:35 - SmartLabYearlyParser - INFO - Page title: НОВАТЭК (NVTK): годовая финансовая отчетность МСФО
+2025-04-29 12:17:35 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:17:35 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:17:35 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:17:35 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:17:35 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:17:35 - SmartLabYearlyParser - INFO - Table 1 has 80 rows
+2025-04-29 12:17:35 - SmartLabYearlyParser - INFO - Table 1 first row: НОВАТЭК (NVTK): годовая финансовая отчетность МСФО...
+2025-04-29 12:17:35 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:17:35 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:17:35 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>НОВАТЭК (NVTK): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">
+...
+2025-04-29 12:17:35 - SmartLabYearlyParser - INFO - Table dimensions: 80 rows × 1 columns
+2025-04-29 12:17:35 - SmartLabYearlyParser - INFO - Successfully parsed table #1 into DataFrame with shape (80, 11)
+2025-04-29 12:17:35 - SmartLabYearlyParser - INFO - First rows of the dataframe: 
+                                                  0   \
+0  НОВАТЭК (NVTK): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  1   \
+0  НОВАТЭК (NVTK): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  2   \
+0  НОВАТЭК (NVTK): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  3   \
+0  НОВАТЭК (NVTK): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  4   \
+0  НОВАТЭК (NVTK): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  5   \
+0  НОВАТЭК (NVTK): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  6   \
+0  НОВАТЭК (NVTK): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  7   \
+0  НОВАТЭК (NVTK): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  8   \
+0  НОВАТЭК (NVTK): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  9   \
+0  НОВАТЭК (NVTK): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  10  
+0  НОВАТЭК (NVTK): годовая финансовая отчетность ...  
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...  
+2025-04-29 12:17:35 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (80, 11)
+2025-04-29 12:17:35 - SmartLabYearlyParser - INFO - Adding delay of 3.60 seconds before requesting MVID
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/MVID/f/y/
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:17:38 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/MVID_response.html
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Response size: 83180 bytes
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Page title: М.Видео-Эльдорадо (MVID): годовая финансовая отчетность МСФО
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:17:38 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:17:38 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Table 1 has 89 rows
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Table 1 first row: М.Видео-Эльдорадо (MVID): годовая финансовая отчетность МСФО...
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>М.Видео-Эльдорадо (MVID): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" cols...
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Table dimensions: 89 rows × 1 columns
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Successfully parsed table #1 into DataFrame with shape (89, 11)
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - First rows of the dataframe: 
+                                                  0   \
+0  М.Видео-Эльдорадо (MVID): годовая финансовая о...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  1   \
+0  М.Видео-Эльдорадо (MVID): годовая финансовая о...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  2   \
+0  М.Видео-Эльдорадо (MVID): годовая финансовая о...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  3   \
+0  М.Видео-Эльдорадо (MVID): годовая финансовая о...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  4   \
+0  М.Видео-Эльдорадо (MVID): годовая финансовая о...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  5   \
+0  М.Видео-Эльдорадо (MVID): годовая финансовая о...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  6   \
+0  М.Видео-Эльдорадо (MVID): годовая финансовая о...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  7   \
+0  М.Видео-Эльдорадо (MVID): годовая финансовая о...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  8   \
+0  М.Видео-Эльдорадо (MVID): годовая финансовая о...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  9   \
+0  М.Видео-Эльдорадо (MVID): годовая финансовая о...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  10  
+0  М.Видео-Эльдорадо (MVID): годовая финансовая о...  
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...  
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (89, 11)
+2025-04-29 12:17:38 - SmartLabYearlyParser - INFO - Adding delay of 3.56 seconds before requesting PHOR
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/PHOR/f/y/
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:17:42 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/PHOR_response.html
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Response size: 76320 bytes
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Page title: ФосАгро (PHOR): годовая финансовая отчетность МСФО
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:17:42 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:17:42 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Table 1 has 80 rows
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Table 1 first row: ФосАгро (PHOR): годовая финансовая отчетность МСФО...
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>ФосАгро (PHOR): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">
+...
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Table dimensions: 80 rows × 1 columns
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Successfully parsed table #1 into DataFrame with shape (80, 11)
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - First rows of the dataframe: 
+                                                  0   \
+0  ФосАгро (PHOR): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  1   \
+0  ФосАгро (PHOR): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  2   \
+0  ФосАгро (PHOR): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  3   \
+0  ФосАгро (PHOR): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  4   \
+0  ФосАгро (PHOR): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  5   \
+0  ФосАгро (PHOR): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  6   \
+0  ФосАгро (PHOR): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  7   \
+0  ФосАгро (PHOR): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  8   \
+0  ФосАгро (PHOR): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  9   \
+0  ФосАгро (PHOR): годовая финансовая отчетность ...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  10  
+0  ФосАгро (PHOR): годовая финансовая отчетность ...  
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...  
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (80, 11)
+2025-04-29 12:17:42 - SmartLabYearlyParser - INFO - Adding delay of 4.11 seconds before requesting SIBN
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/SIBN/f/y/
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:17:46 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/SIBN_response.html
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Response size: 69391 bytes
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Page title: Газпромнефть (SIBN): годовая финансовая отчетность МСФО
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:17:46 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:17:46 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Table 1 has 70 rows
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Table 1 first row: Газпромнефть (SIBN): годовая финансовая отчетность МСФО...
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>Газпромнефть (SIBN): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="...
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Table dimensions: 70 rows × 1 columns
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Successfully parsed table #1 into DataFrame with shape (70, 11)
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - First rows of the dataframe: 
+                                                  0   \
+0  Газпромнефть (SIBN): годовая финансовая отчетн...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  1   \
+0  Газпромнефть (SIBN): годовая финансовая отчетн...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  2   \
+0  Газпромнефть (SIBN): годовая финансовая отчетн...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  3   \
+0  Газпромнефть (SIBN): годовая финансовая отчетн...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  4   \
+0  Газпромнефть (SIBN): годовая финансовая отчетн...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  5   \
+0  Газпромнефть (SIBN): годовая финансовая отчетн...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  6   \
+0  Газпромнефть (SIBN): годовая финансовая отчетн...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  7   \
+0  Газпромнефть (SIBN): годовая финансовая отчетн...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  8   \
+0  Газпромнефть (SIBN): годовая финансовая отчетн...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  9   \
+0  Газпромнефть (SIBN): годовая финансовая отчетн...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  10  
+0  Газпромнефть (SIBN): годовая финансовая отчетн...  
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...  
+2025-04-29 12:17:46 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (70, 11)
+2025-04-29 12:17:47 - SmartLabYearlyParser - INFO - Adding delay of 2.17 seconds before requesting AFKS
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/AFKS/f/y/
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:17:49 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/AFKS_response.html
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Response size: 70564 bytes
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Page title: АФК Система (AFKS): годовая финансовая отчетность МСФО
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:17:49 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:17:49 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Table 1 has 69 rows
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Table 1 first row: АФК Система (AFKS): годовая финансовая отчетность МСФО...
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>АФК Система (AFKS): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="1...
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Table dimensions: 69 rows × 1 columns
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Successfully parsed table #1 into DataFrame with shape (69, 11)
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - First rows of the dataframe: 
+                                                  0   \
+0  АФК Система (AFKS): годовая финансовая отчетно...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  1   \
+0  АФК Система (AFKS): годовая финансовая отчетно...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  2   \
+0  АФК Система (AFKS): годовая финансовая отчетно...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  3   \
+0  АФК Система (AFKS): годовая финансовая отчетно...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  4   \
+0  АФК Система (AFKS): годовая финансовая отчетно...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  5   \
+0  АФК Система (AFKS): годовая финансовая отчетно...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  6   \
+0  АФК Система (AFKS): годовая финансовая отчетно...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  7   \
+0  АФК Система (AFKS): годовая финансовая отчетно...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  8   \
+0  АФК Система (AFKS): годовая финансовая отчетно...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  9   \
+0  АФК Система (AFKS): годовая финансовая отчетно...   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  10  
+0  АФК Система (AFKS): годовая финансовая отчетно...  
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...  
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (69, 11)
+2025-04-29 12:17:49 - SmartLabYearlyParser - INFO - Adding delay of 3.12 seconds before requesting MAGN
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/MAGN/f/y/
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:17:52 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/MAGN_response.html
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Response size: 71743 bytes
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Page title: ММК (MAGN): годовая финансовая отчетность МСФО
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:17:52 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:17:52 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Table 1 has 74 rows
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Table 1 first row: ММК (MAGN): годовая финансовая отчетность МСФО...
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>ММК (MAGN): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">
+<div...
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Table dimensions: 74 rows × 1 columns
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Successfully parsed table #1 into DataFrame with shape (74, 11)
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - First rows of the dataframe: 
+                                                  0   \
+0     ММК (MAGN): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  1   \
+0     ММК (MAGN): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  2   \
+0     ММК (MAGN): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  3   \
+0     ММК (MAGN): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  4   \
+0     ММК (MAGN): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  5   \
+0     ММК (MAGN): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  6   \
+0     ММК (MAGN): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  7   \
+0     ММК (MAGN): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  8   \
+0     ММК (MAGN): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  9   \
+0     ММК (MAGN): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  10  
+0     ММК (MAGN): годовая финансовая отчетность МСФО  
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...  
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (74, 11)
+2025-04-29 12:17:52 - SmartLabYearlyParser - INFO - Adding delay of 4.65 seconds before requesting RUAL
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Sending request to https://smart-lab.ru/q/RUAL/f/y/
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Response status code: 200
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Response headers: {'Server': 'nginx/1.26.2', 'Date': 'Tue, 29 Apr 2025 09:17:57 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'X-Accel-Expires': '300', 'Content-Encoding': 'gzip', 'Vary': 'Accept-Encoding', 'Referrer-Policy': 'origin-when-cross-origin', 'Strict-Transport-Security': 'max-age=31536000', 'Cross-Origin-Opener-Policy': 'same-origin'}
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Saved HTML response to /Users/aeshef/Desktop/FOR3.9TEST/kursach/data/processed_data/debug_html/RUAL_response.html
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Response size: 79882 bytes
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Page title: Русал (RUAL): годовая финансовая отчетность МСФО
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Meta description: None
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Found 0 table containers
+2025-04-29 12:17:57 - SmartLabYearlyParser - WARNING - Possible captcha or blocking detected in response
+2025-04-29 12:17:57 - SmartLabYearlyParser - WARNING - Got a 404 page or 'Page not found' message
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Found 1 table elements in HTML
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Table 1 has 85 rows
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Table 1 first row: Русал (RUAL): годовая финансовая отчетность МСФО...
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Attempting to parse 1 tables in HTML
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Parsing table #1
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Table HTML preview: <table cellspacing="0" class="simple-little-table financials">
+<tr>
+<td colspan="11">
+<h1>Русал (RUAL): годовая финансовая отчетность МСФО</h1>
+</td>
+</tr>
+<tr>
+<td class="tabs-block" colspan="11">
+<d...
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Table dimensions: 85 rows × 1 columns
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Successfully parsed table #1 into DataFrame with shape (85, 11)
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - First rows of the dataframe: 
+                                                  0   \
+0   Русал (RUAL): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  1   \
+0   Русал (RUAL): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  2   \
+0   Русал (RUAL): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  3   \
+0   Русал (RUAL): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  4   \
+0   Русал (RUAL): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  5   \
+0   Русал (RUAL): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  6   \
+0   Русал (RUAL): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  7   \
+0   Русал (RUAL): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  8   \
+0   Русал (RUAL): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  9   \
+0   Русал (RUAL): годовая финансовая отчетность МСФО   
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...   
+
+                                                  10  
+0   Русал (RUAL): годовая финансовая отчетность МСФО  
+1  Годовые, руб. Год, изм% Квартальные, руб. Кв, ...  
+2025-04-29 12:17:57 - SmartLabYearlyParser - INFO - Final combined DataFrame shape: (85, 11)

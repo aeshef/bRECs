@@ -11,15 +11,6 @@ import sys
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# current_dir = os.path.dirname(os.path.abspath(__file__))
-# while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
-#     current_dir = os.path.dirname(current_dir)
-
-# if current_dir not in sys.path:
-#     sys.path.insert(0, current_dir)
-
-# from utils.logger import BaseLogger
-
 from pys.utils.logger import BaseLogger
 from pys.data_collection.private_info import BASE_PATH
 
@@ -41,7 +32,6 @@ class SmartLabYearlyParser(BaseLogger):
             "Upgrade-Insecure-Requests": "1",
             "Cache-Control": "max-age=0"
         }
-
         
         try:
             self.logger.debug(f"Sending request to {self.url}")

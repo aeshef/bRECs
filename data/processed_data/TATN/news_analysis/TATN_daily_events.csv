@@ -1,6 +1,4 @@
 date,event_earnings,event_dividends,event_mergers_acquisitions,event_regulatory,event_management,event_products,event_macroeconomic,has_event,event_impact
-2024-04-18 00:00:00+00:00,0,0,0,0,0,0,0,0,1.0
-2024-04-19 00:00:00+00:00,1,0,0,0,0,0,0,1,1.5
 2024-04-20 00:00:00+00:00,1,1,0,1,0,0,0,1,4.0
 2024-04-21 00:00:00+00:00,0,0,0,0,0,0,0,0,0.0
 2024-04-22 00:00:00+00:00,0,0,0,2,0,0,2,2,2.5

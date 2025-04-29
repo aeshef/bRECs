@@ -37,6 +37,24 @@ class SignalGenerator(BaseLogger):
         self.threshold_buy = threshold_buy
         self.threshold_sell = threshold_sell
         self.df = None
+        
+        # Определение значений по умолчанию для индикаторов
+        self.default_tech_indicators = ['RSI_14', 'MACD_diff', 'Stoch_%K', 'CCI_20', 'Williams_%R_14', 'ROC_10']
+        self.default_sentiment_indicators = ['sentiment_compound_median', 'sentiment_direction', 'sentiment_ma_7d', 'sentiment_ratio', 'sentiment_zscore_7d']
+        self.default_fund_weights = {
+            "Чистая прибыль, млрд руб": 0.10,
+            "Див доход, ао, %": 0.10,
+            "Дивиденды/прибыль, %": 0.05,
+            "EBITDA, млрд руб": 0.08,
+            "FCF, млрд руб": 0.10,
+            "Рентаб EBITDA, %": 0.08,
+            "Чистый долг, млрд руб": 0.08,
+            "Долг/EBITDA": 0.07,
+            "EPS, руб": 0.07,
+            "ROE, %": 0.10,
+            "ROA, %": 0.08,
+            "P/E": 0.09
+        }
 
     def load_data(self, input_file=None):
         """Загрузка данных для анализа"""
@@ -59,18 +77,20 @@ class SignalGenerator(BaseLogger):
             self.logger.error(f"Ошибка при загрузке данных: {e}")
             return None
     
-    def calculate_composite_score(self, tech_indicators, sentiment_indicators, fund_weights):
+    def calculate_composite_score(self, tech_indicators=None, sentiment_indicators=None, fund_weights=None):
         """Рассчитывает композитный скор с учетом фундаментальных данных"""
         if self.df is None:
             self.logger.error("Данные не загружены")
             return None
+        
+        # Безопасная установка значений по умолчанию для всех параметров
+        if tech_indicators is None:
+            tech_indicators = self.default_tech_indicators
+        if sentiment_indicators is None:
+            sentiment_indicators = self.default_sentiment_indicators
+        if fund_weights is None:
+            fund_weights = self.default_fund_weights.copy()  # Используем копию словаря по умолчанию
             
-        # Технические индикаторы для скоринга
-        tech_indicators = tech_indicators
-        
-        # Сентимент-индикаторы
-        sentiment_indicators = sentiment_indicators
-        
         self.logger.info("Расчет композитного скора")
         
         # Проверка наличия необходимых колонок
@@ -320,30 +340,18 @@ class SignalGenerator(BaseLogger):
             
         return quantiles
     
-    def calculate_ticker_fundamental_score(self, ticker, year, fund_data, quantiles, fund_weights):
+    def calculate_ticker_fundamental_score(self, ticker, year, fund_data, quantiles, fund_weights=None):
         """Рассчитывает общий фундаментальный скор для тикера за определенный год"""
         if ticker not in fund_data[year]:
             return 0
             
         data = fund_data[year][ticker]
         
-        # Веса показателей
-        # weights = {
-        #     "Чистая прибыль, млрд руб": 0.10,
-        #     "Див доход, ао, %": 0.10,
-        #     "Дивиденды/прибыль, %": 0.05,
-        #     "EBITDA, млрд руб": 0.08,
-        #     "FCF, млрд руб": 0.10,
-        #     "Рентаб EBITDA, %": 0.08,
-        #     "Чистый долг, млрд руб": 0.08,
-        #     "Долг/EBITDA": 0.07,
-        #     "EPS, руб": 0.07,
-        #     "ROE, %": 0.10,
-        #     "ROA, %": 0.08,
-        #     "P/E": 0.09
-        # }
-
-        weights = fund_weights
+        # Защита от None: если fund_weights не задан, используем пустой словарь или значения по умолчанию
+        if fund_weights is None:
+            weights = self.default_fund_weights
+        else:
+            weights = fund_weights
         
         indicator_scores = []
         indicator_weights = []
@@ -755,8 +763,8 @@ class SignalGenerator(BaseLogger):
     
     def run_pipeline(self, input_file=None, output_file=None, top_pct=0.3, output_dir=f'{BASE_PATH}/data/signal_visualizations',
         save_ticker_visualizations=False, 
-        tech_indicators=['RSI_14', 'MACD_diff', 'Stoch_%K', 'CCI_20', 'Williams_%R_14', 'ROC_10'], 
-        sentiment_indicators=['sentiment_compound_median', 'sentiment_direction', 'sentiment_ma_7d', 'sentiment_ratio', 'sentiment_zscore_7d'],
+        tech_indicators=None, 
+        sentiment_indicators=None,
         fund_weights=None):
         """
         Запускает полный пайплайн генерации сигналов с сохранением результатов в структурированном виде
@@ -771,6 +779,14 @@ class SignalGenerator(BaseLogger):
             Процент лучших акций для включения в shortlist
         output_dir : str
             Директория для сохранения визуализаций и результатов
+        save_ticker_visualizations : bool
+            Сохранять ли визуализации по тикерам
+        tech_indicators : list, optional
+            Список технических индикаторов (используется по умолчанию, если None)
+        sentiment_indicators : list, optional
+            Список сентимент-индикаторов (используется по умолчанию, если None)
+        fund_weights : dict, optional
+            Веса фундаментальных показателей (используется по умолчанию, если None)
             
         Returns:
         --------
@@ -791,7 +807,11 @@ class SignalGenerator(BaseLogger):
             return None
             
         # Расчет композитного скора
-        self.calculate_composite_score(tech_indicators=tech_indicators, sentiment_indicators=sentiment_indicators, fund_weights=fund_weights)
+        self.calculate_composite_score(
+            tech_indicators=tech_indicators, 
+            sentiment_indicators=sentiment_indicators, 
+            fund_weights=fund_weights
+        )
         
         # Генерация сигналов
         self.generate_signals()
@@ -853,20 +873,52 @@ def run_pipeline_signal_generator(
         weight_fundamental=0.2,
         output_dir=f"{BASE_PATH}/data/signal_visualizations",
         save_ticker_visualizations=False,
-        tech_indicators=['RSI_14', 'MACD_diff', 'Stoch_%K', 'CCI_20', 'Williams_%R_14', 'ROC_10'], 
-        sentiment_indicators=['sentiment_compound_median', 'sentiment_direction', 'sentiment_ma_7d', 'sentiment_ratio', 'sentiment_zscore_7d'],
+        tech_indicators=None, 
+        sentiment_indicators=None,
         fund_weights=None
     ):
+    """
+    Запускает генерацию сигналов для акций.
+    
+    Parameters:
+    -----------
+    weight_tech : float
+        Вес технических индикаторов
+    weight_sentiment : float
+        Вес сентимент-индикаторов
+    weight_fundamental : float
+        Вес фундаментальных индикаторов
+    output_dir : str
+        Директория для сохранения результатов
+    save_ticker_visualizations : bool
+        Сохранять ли визуализации для отдельных тикеров
+    tech_indicators : list, optional
+        Список используемых технических индикаторов
+    sentiment_indicators : list, optional
+        Список используемых сентимент-индикаторов
+    fund_weights : dict, optional
+        Словарь весов фундаментальных показателей
+        
+    Returns:
+    --------
+    DataFrame с сигналами
+    """
 
-    SignalGenerator(
+    # Создаем экземпляр генератора сигналов с базовыми параметрами
+    signal_generator = SignalGenerator(
         input_file=f"{BASE_PATH}/data/df.csv",
         weight_tech=weight_tech,
         weight_sentiment=weight_sentiment,
         weight_fundamental=weight_fundamental
-    ).run_pipeline(
+    )
+    
+    # Запускаем полный пайплайн с передачей дополнительных параметров
+    return signal_generator.run_pipeline(
         output_file=f"{BASE_PATH}/data/signals.csv",
         output_dir=output_dir,
         save_ticker_visualizations=save_ticker_visualizations, 
         tech_indicators=tech_indicators, 
         sentiment_indicators=sentiment_indicators, 
-        fund_weights=fund_weights)
+        fund_weights=fund_weights  # Передаем fund_weights в pipeline, а не в конструктор
+    )
+

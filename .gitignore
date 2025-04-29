@@ -27,3 +27,55 @@ _build/
 __pycache__/
 *.so
 *.egg-info/
+.env
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+
+# IDE and OS files
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Configuration - IMPORTANT!
+.env
+
+# Data and Logs - Exclude generated data and logs
+logs/*
+!logs/.gitkeep
+data/*
+!data/.gitkeep
+*.sqlite # Если используешь SQLite локально
+*.log
+*.db
+
+# Telegram session files
+*.session
+*.session-journal
+
+# Backup files
+backups/
+*.sql
+*.tar.gz
+telegram_session.session
+.\alembic
+alembic/env.py
+alembic/README
+alembic/script.py.mako
+alembic/versions/e3197c339625_add_allow_short_column.py
+.gitignore
+alembic.ini
+secrets_manager.py
+telegram_session.session
