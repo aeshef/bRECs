@@ -75,8 +75,8 @@ from pys.data_collection.private_info import BASE_PATH
 from pys.data_collection.bonds_processor import run_pipeline_bonds_processor
 ```
 
-# и т.п.
-**НЕ используйте sys.path.insert, os.chdir и т.п. костыли — они больше не нужны и только мешают!**
+и т.п.
+НЕ используйте sys.path.insert, os.chdir и т.п. костыли — они больше не нужны и только мешают!
 
 ---
 
