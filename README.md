@@ -25,25 +25,28 @@
   <img src="https://i.ibb.co/G3scrSyR/IMAGE-2025-04-29-19-38-11.jpg" width="30%">
 </p>
 
-**Пример результата работы пайплайна на случайном наборе параметров: **
+## Пример результата работы пайплайна на случайном наборе параметров:
+
+**Example Pipeline Run Output Tree (Concise):**
 
 *   [`run_20250429_174251_balanced_portfolio_0429_1715/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715)
     *   [`pipeline_summary.md`](https://github.com/aeshef/kursach/blob/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/pipeline_summary.md) - Общий итог пайплайна
     *   [`bonds/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/bonds/) - Анализ и портфель облигаций
-        *   [`portfolio/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/bonds/portfolio/) - Результаты портфеля (статистика, веса, графики)
-        *   [`reports/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/bonds/reports/) - HTML отчет по облигациям
+        *   [`portfolio/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/bonds/portfolio/) - Результаты (статистика, веса, графики)
+        *   [`reports/bonds_kbd_report_...html`](https://github.com/aeshef/kursach/blob/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/bonds/reports/bonds_kbd_report_20250429_174251.html) - HTML отчет
     *   [`portfolio/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/portfolio/) - Оптимизация портфеля акций (лонг)
         *   [`black_litterman/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/portfolio/black_litterman/) - Результаты Black-Litterman
         *   [`markowitz/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/portfolio/markowitz/) - Результаты Марковица
     *   [`signals/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/signals/) - Генерация сигналов (для шорта)
-        *   `signals.csv`, `results.csv`
-        *   [`ticker_visualizations/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/signals/ticker_visualizations/) - Визуализации по тикерам
+        *   [`ticker_visualizations/AFKS/signals.png`](https://github.com/aeshef/kursach/blob/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/signals/ticker_visualizations/AFKS/signals.png) - График сигналов (Пример: AFKS)
+        *   [`ticker_visualizations/AFKS/scores.png`](https://github.com/aeshef/kursach/blob/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/signals/ticker_visualizations/AFKS/scores.png) - График скоринга (Пример: AFKS)
     *   [`shorts_portfolio/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/shorts_portfolio/) - Шорт-стратегия и бэктест
-        *   [`honest_backtest/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/shorts_portfolio/honest_backtest/) - Бэктест на тестовых данных (OOS)
-        *   [`production_portfolio/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/shorts_portfolio/production_portfolio/) - Финальный шорт-портфель и его бэктест
+        *   [`honest_backtest/honest_backtest_report.md`](https://github.com/aeshef/kursach/blob/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/shorts_portfolio/honest_backtest/honest_backtest_report.md) - Отчет по бэктесту OOS
+        *   [`production_portfolio/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/shorts_portfolio/production_portfolio/) - Финальный шорт-портфель
     *   [`final_portfolio/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/final_portfolio/) - Итоговый скомбинированный портфель
-        *   `combined_weights.csv`, `combined_portfolio_metrics.txt`
         *   [`README.md`](https://github.com/aeshef/kursach/blob/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/final_portfolio/README.md) - Описание итогового портфеля
+        *   [`combined_portfolio_pie.png`](https://github.com/aeshef/kursach/blob/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/final_portfolio/combined_portfolio_pie.png) - Структура итогового портфеля (Pie)
+        *   [`combined_portfolio_bars.png`](https://github.com/aeshef/kursach/blob/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/final_portfolio/combined_portfolio_bars.png) - Структура итогового портфеля (Bars)
 
 
 ## 🚀 Инструкция по запуску
