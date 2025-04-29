@@ -84,6 +84,7 @@ pys/utils/monkey_patch.py
 kursach.egg-info/
 telegram_session.session
 .vscode/
+ipynbs/.DS_Store
 
 /Users/aeshef/Desktop/FOR3.9TEST/kursach/pys/config/secrets/secret_config_template.py
 /Users/aeshef/Desktop/FOR3.9TEST/kursach/pys/config/secrets/secret_config.py
