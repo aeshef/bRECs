@@ -86,3 +86,4 @@ telegram_session.session
 
 /Users/aeshef/Desktop/FOR3.9TEST/kursach/pys/config/secrets/secret_config_template.py
 /Users/aeshef/Desktop/FOR3.9TEST/kursach/pys/config/secrets/secret_config.py
+/Users/aeshef/Desktop/FOR3.9TEST/kursach/pys/utils/monkey_patch.py

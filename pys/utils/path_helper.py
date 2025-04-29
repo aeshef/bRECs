@@ -84,23 +84,16 @@ import sys
 # Идем на 3 уровня вверх от текущего файла: /pys/utils/path_helper.py -> /pys/utils -> /pys -> /
 try:
     PROJECT_ROOT = Path(__file__).parent.parent.parent.resolve()
-    # Проверка: ищем характерный файл/папку в корне, например, '.env' или 'pys'
     if not (PROJECT_ROOT / '.env').is_file() and not (PROJECT_ROOT / 'pys').is_dir():
-         # Если не нашли, возможно, структура другая? Попробуем другой метод.
-         # Эта часть может потребовать адаптации, если твоя структура отличается.
          print("Warning: PROJECT_ROOT auto-detection might be inaccurate. Trying parent.")
-         alt_root = Path(os.getcwd()) # Запасной вариант - текущая рабочая директория? Не очень надежно.
+         alt_root = Path(os.getcwd())
          if (alt_root / 'pys').is_dir():
               PROJECT_ROOT = alt_root
          else:
-              # Если ничего не помогает, используем расчетный путь, но выводим предупреждение
               print(f"Warning: Assuming project root is {PROJECT_ROOT}, but validation failed.")
 except NameError:
-     # Если __file__ не определен (например, в интерактивной сессии)
      print("Warning: __file__ not defined. Using current working directory as PROJECT_ROOT.")
      PROJECT_ROOT = Path(os.getcwd()).resolve()
-
-# --- Функции для получения путей ---
 
 def get_project_root() -> Path:
     """Возвращает объект Path корневой директории проекта."""
@@ -109,7 +102,7 @@ def get_project_root() -> Path:
 def get_pys_path() -> Path:
     """Возвращает путь к директории 'pys'."""
     path = PROJECT_ROOT / 'pys'
-    path.mkdir(parents=True, exist_ok=True) # Создаем, если нет
+    path.mkdir(parents=True, exist_ok=True)
     return path
 
 def get_data_path() -> Path:
@@ -158,26 +151,14 @@ def get_venv_path() -> Path:
      """Возвращает путь к директории 'venv' (если она в корне)."""
      return PROJECT_ROOT / 'venv'
 
-
-# --- Настройка sys.path ---
 def setup_python_path():
     """Добавляет корень проекта и папку pys в sys.path для импортов."""
     project_root_str = str(PROJECT_ROOT)
     pys_path_str = str(get_pys_path())
 
-    # Добавляем пути в начало sys.path, если их там еще нет
     if project_root_str not in sys.path:
         sys.path.insert(0, project_root_str)
-        # print(f"Added to sys.path: {project_root_str}") # Для отладки
     if pys_path_str != project_root_str and pys_path_str not in sys.path:
         sys.path.insert(0, pys_path_str)
-        # print(f"Added to sys.path: {pys_path_str}") # Для отладки
 
-# Вызываем настройку пути при импорте модуля.
-# Это упрощает запуск скриптов из разных мест.
 setup_python_path()
-
-# --- Старая логика (для справки, но не используется) ---
-# Функции is_server, get_project_root (старая), get_base_path (старая)
-# основанные на hostname, удалены как ненадежные.
-# Импорт BASE_PATH из private_info удален как плохая практика.
