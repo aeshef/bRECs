@@ -1,4 +1,0 @@
-config
-database
-pys
-telegram_bot

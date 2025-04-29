@@ -79,3 +79,7 @@ alembic/versions/e3197c339625_add_allow_short_column.py
 alembic.ini
 secrets_manager.py
 telegram_session.session
+
+kursach.egg-info/
+telegram_session.session
+.vscode/
