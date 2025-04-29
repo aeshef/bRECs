@@ -29,14 +29,14 @@
 
 ## Общие требования
 
-- Python 3.8+ (настоятельбно рекомендуется 3.9.22)
+- Python 3.8+ (настоятельно рекомендуется 3.9.22)
 - (опционально) Jupyter Notebook или Visual Studio Code
 
 ## 1. Клонируй репозиторий
 
 ```bash
-git clone <URL_ВАШЕГО_РЕПОЗИТОРИЯ>
-cd название_папки_проекта
+git clone https://github.com/aeshef/bRECs.git
+cd bRECs
 ```
 
 ## 2. Создай и активируй виртуальное окружение
@@ -67,7 +67,7 @@ pip install jupyter ipykernel
 ## 4. Добавь Jupyter kernel* (чтобы запускать ноутбуки в своем venv)
 
 ```bash
-python -m ipykernel install --user --name kursach-env --display-name "Kursach Env"
+python -m ipykernel install --user --name kursach-env --display-name "bRECs env"
 ```
 
 Теперь в Jupyter или в VS Code выбирай ядро "Kursach Env".
@@ -79,18 +79,13 @@ python -m ipykernel install --user --name kursach-env --display-name "Kursach En
 После выполнения команд выше, в любом ноутбуке или скрипте из любой папки проекта можно писать:
 
 ```py
-from pys.utils.logger import BaseLogger
-from pys.data_collection.private_info import BASE_PATH
-from pys.data_collection.bonds_processor import run_pipeline_bonds_processor
+from pys.portfolio_optimization.executor import run_pipeline
 ```
-
-и т.п.
-НЕ используйте sys.path.insert, os.chdir и т.п. костыли — они больше не нужны и только мешают!
 
 ---
 
 ## ⚙️ Требования
-- Python 3.8+(настоятельбно рекомендуется 3.9.22)
+- Python 3.8+ (настоятельно рекомендуется 3.9.22)
 - numpy  
 - pandas  
 - scikit-learn  
@@ -105,7 +100,7 @@ from pys.data_collection.bonds_processor import run_pipeline_bonds_processor
 - requests  
 - beautifulsoup4  
 - pyportfolioopt  
-- и другие библиотеки (см. `setup.py`)
+- и другие библиотеки (см. `setup.py` и `requirements.txt`)
 
 ## 📬 Контакты
 - **Почта:** liza.bolotnikova@gmail.com aeshevchenko1704@gmail.com
