@@ -1,0 +1,27 @@
+{
+  "run_time": "2025-04-29 13:37:14",
+  "strategy_profile": "moderate",
+  "parameters": {
+    "start_date": "2024-01-01",
+    "end_date": "2025-04-15",
+    "min_bonds": 5,
+    "max_threshold": 99,
+    "kbd_yield_adjustment": -2.0,
+    "n_bonds": 5,
+    "excluded_issuers": [
+      "ВТБ",
+      "Мечел"
+    ]
+  },
+  "results": {
+    "optimal_threshold": 99,
+    "bond_count": 0,
+    "weighted_yield": null,
+    "weighted_duration": null
+  },
+  "paths": {
+    "dataset_path": "/Users/aeshef/Desktop/FOR3.9TEST/kursach/data/pipeline_runs/run_20250429_133712_moderate_user_1_20250429_1337/bonds/bonds_dataset.csv",
+    "portfolio_path": null,
+    "report_path": null
+  }
+}

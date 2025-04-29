@@ -1,0 +1,48 @@
+{
+    "train_period": [
+        "2024-01-01",
+        "2024-12-31"
+    ],
+    "test_period": [
+        "2025-01-01",
+        "2025-04-15"
+    ],
+    "train_metrics": {
+        "cumulative_return": 0.0030347783615547463,
+        "annual_return": 0.0020942612635943547,
+        "annual_volatility": 0.04103086392960217,
+        "sharpe_ratio": -1.7768511738259305,
+        "sortino_ratio": -1.7704963037390897,
+        "calmar_ratio": 0.03579582978322451,
+        "max_drawdown": -0.05850573310569873,
+        "win_rate": 0.7205479452054795,
+        "drawdown_count": 3,
+        "avg_drawdown_days": 14.0
+    },
+    "test_metrics": {
+        "cumulative_return": 0.01121266964770129,
+        "annual_return": 0.027386265520316755,
+        "annual_volatility": 0.04768996209854055,
+        "sharpe_ratio": -0.9984016003472638,
+        "sortino_ratio": -1.211460458334461,
+        "calmar_ratio": 0.8932762185530313,
+        "max_drawdown": -0.03065822749057201,
+        "win_rate": 0.7211538461538461,
+        "drawdown_count": 0,
+        "avg_drawdown_days": 0
+    },
+    "used_params": {
+        "signal_params": {
+            "weight_tech": 0.5,
+            "weight_sentiment": 0.3,
+            "weight_fundamental": 0.2,
+            "threshold_buy": 0.5,
+            "threshold_sell": -0.5
+        },
+        "portfolio_params": {
+            "min_rf_allocation": 0.25,
+            "max_rf_allocation": 0.35
+        },
+        "risk_free_rate": 0.075
+    }
+}

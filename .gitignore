@@ -55,7 +55,6 @@ Thumbs.db
 # Data and Logs - Exclude generated data and logs
 logs/*
 !logs/.gitkeep
-data/*
 !data/.gitkeep
 *.sqlite # Если используешь SQLite локально
 *.log

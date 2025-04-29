@@ -1,0 +1,8 @@
+{
+    "risk_free_rate": 0.08,
+    "min_rf_allocation": 0.1,
+    "max_rf_allocation": 0.3,
+    "max_weight": 0.2,
+    "long_ratio": 0.7,
+    "include_short_selling": true
+}
