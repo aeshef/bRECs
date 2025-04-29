@@ -21,7 +21,9 @@
 
 ## 📌 Архитектура проекта
 
-<img src="https://i.ibb.co/G3scrSyR/IMAGE-2025-04-29-19-38-11.jpg" width="30%">
+<p align="center">
+  <img src="https://i.ibb.co/G3scrSyR/IMAGE-2025-04-29-19-38-11.jpg" width="30%">
+</p>
 
 ## 🚀 Инструкция по запуску
 
