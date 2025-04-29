@@ -23,8 +23,7 @@
 
 ## 📌 Архитектура проекта
 
-![Архитектура проекта](https://i.ibb.co/G3scrSyR/IMAGE-2025-04-29-19-38-11.jpg)
-
+<img src="https://i.ibb.co/G3scrSyR/IMAGE-2025-04-29-19-38-11.jpg" width="50%">
 
 ## 🚀 Инструкция по запуску
 
@@ -53,13 +52,13 @@ source .venv/bin/activate
 
 ## 3. Установи зависимости и проект в editable-режиме
 
-```py
+```bash
 pip install --upgrade pip
 pip install -e .
 ```
 Если используешь Jupyter Notebook — также:
 
-```py
+```bash
 pip install jupyter ipykernel
 ```
 
@@ -67,7 +66,7 @@ pip install jupyter ipykernel
 
 ## 4. Добавь Jupyter kernel* (чтобы запускать ноутбуки в своем venv)
 
-```py
+```bash
 python -m ipykernel install --user --name kursach-env --display-name "Kursach Env"
 ```
 
@@ -111,17 +110,3 @@ from pys.data_collection.bonds_processor import run_pipeline_bonds_processor
 ## 📬 Контакты
 - **Почта:** liza.bolotnikova@gmail.com aeshevchenko1704@gmail.com
 - **Telegram:** @liza_bolotnikova @plxlrd
-
-
-
-
-
-
-
-
-
-
-
-
-
-
