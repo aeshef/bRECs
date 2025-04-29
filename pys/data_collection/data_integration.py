@@ -3,18 +3,6 @@ import numpy as np
 import os
 import logging
 import sys
-
-# current_dir = os.path.dirname(os.path.abspath(__file__))
-# while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
-#     current_dir = os.path.dirname(current_dir)
-
-# if current_dir not in sys.path:
-#     sys.path.insert(0, current_dir)
-
-# from utils.logger import BaseLogger
-# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
-# from private_info import BASE_PATH
-
 from pys.utils.logger import BaseLogger
 from pys.data_collection.private_info import BASE_PATH
 

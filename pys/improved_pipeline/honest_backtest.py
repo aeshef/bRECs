@@ -7,31 +7,9 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 import importlib
 import sys
-
-# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/porfolio_optimization')
-
-# import signal_generator
-# importlib.reload(signal_generator)
-# from signal_generator import SignalGenerator, run_pipeline_signal_generator
-
-# import portfolio_optimizer
-# importlib.reload(portfolio_optimizer)
-# from portfolio_optimizer import PortfolioOptimizer
-
-# import backtester
-# importlib.reload(backtester)
-# from backtester import Backtester
-
 from pys.porfolio_optimization.signal_generator import SignalGenerator, run_pipeline_signal_generator
 from pys.porfolio_optimization.portfolio_optimizer import PortfolioOptimizer
 from pys.porfolio_optimization.backtester import Backtester
-
-# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys')
-# from utils.logger import BaseLogger
-
-# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
-# from private_info import BASE_PATH
-
 from pys.utils.logger import BaseLogger
 from pys.data_collection.private_info import BASE_PATH
 
@@ -95,7 +73,6 @@ class HonestBacktester(BaseLogger):
         --------
         dict с результатами бэктеста
         """
-        # Загружаем данные
         self.logger.info(f"Загрузка данных из {self.data_file}")
         try:
             df = pd.read_csv(self.data_file)
@@ -106,7 +83,6 @@ class HonestBacktester(BaseLogger):
             self.logger.error(f"Ошибка при загрузке данных: {e}")
             return None
         
-        # Разделение на тренировочные и тестовые данные
         train_start, train_end = self.train_period
         test_start, test_end = self.test_period
         
@@ -115,7 +91,6 @@ class HonestBacktester(BaseLogger):
         
         self.logger.info(f"Данные разделены: {len(train_df)} строк для обучения, {len(test_df)} строк для тестирования")
         
-        # Создаем временные файлы для тренировочных и тестовых данных
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         train_file = os.path.join(self.output_dir, f'train_data_{timestamp}.csv')
         test_file = os.path.join(self.output_dir, f'test_data_{timestamp}.csv')
@@ -123,7 +98,6 @@ class HonestBacktester(BaseLogger):
         train_df.to_csv(train_file)
         test_df.to_csv(test_file)
         
-        # Параметры для моделей
         if self.use_grid_search_params and self.best_params_file and os.path.exists(self.best_params_file):
             self.logger.info(f"Загрузка лучших параметров из {self.best_params_file}")
             with open(self.best_params_file, 'r') as f:
@@ -152,7 +126,6 @@ class HonestBacktester(BaseLogger):
         self.logger.info("Запуск генерации сигналов на тренировочных данных")
         train_signals_file = os.path.join(self.output_dir, f'train_signals_{timestamp}.csv')
         
-        # Запускаем генератор сигналов на тренировочных данных
         signal_gen = SignalGenerator(
             input_file=train_file,
             **signal_params
@@ -227,11 +200,9 @@ class HonestBacktester(BaseLogger):
         
         plt.figure(figsize=(12, 8))
         
-        # График кумулятивной доходности на тренировочных данных
         train_cum_returns = train_backtest_results['cumulative_returns']
         plt.plot(train_cum_returns.index, train_cum_returns, label='Тренировочный период', color='blue')
         
-        # График кумулятивной доходности на тестовых данных
         test_cum_returns = test_results['cumulative_returns']
         plt.plot(test_cum_returns.index, test_cum_returns, label='Тестовый период', color='red')
         
@@ -259,11 +230,9 @@ class HonestBacktester(BaseLogger):
             }
         }
         
-        # Сохраняем отчет в JSON
         with open(os.path.join(self.output_dir, 'honest_backtest_report.json'), 'w') as f:
             json.dump(report, f, indent=4, default=str)
         
-        # Создаем markdown отчет для более удобного чтения
         with open(os.path.join(self.output_dir, 'honest_backtest_report.md'), 'w') as f:
             f.write("# Отчет о честном бэктесте\n\n")
             
@@ -296,7 +265,6 @@ class HonestBacktester(BaseLogger):
             
             f.write(f"\nБезрисковая ставка: {self.risk_free_rate*100:.2f}%\n")
         
-        # Удаляем временные файлы
         for temp_file in [train_file, test_file, train_signals_file, test_signals_file]:
             if os.path.exists(temp_file):
                 os.remove(temp_file)
@@ -304,8 +272,6 @@ class HonestBacktester(BaseLogger):
         self.logger.info(f"Отчет сохранен в {self.output_dir}")
         
         return report
-
-
 
 def run_honest_backtest(
     data_file=f"{BASE_PATH}/data/df.csv",

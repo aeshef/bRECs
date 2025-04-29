@@ -40,11 +40,9 @@ class NewsIntegration:
             print("Один из входных DataFrame пуст")
             return pd.DataFrame()
         
-        # Создаем копии для безопасности
         news_features_df_copy = news_features_df.copy()
         price_df_copy = price_df.copy()
         
-        # Преобразуем даты в единый формат (без часовых поясов)
         news_features_df_copy[date_column] = pd.to_datetime(news_features_df_copy[date_column]).dt.tz_localize(None)
         
         if isinstance(price_df_copy.index, pd.DatetimeIndex):
@@ -56,13 +54,10 @@ class NewsIntegration:
             price_df_copy[date_col] = pd.to_datetime(price_df_copy[date_col]).dt.tz_localize(None)
             price_df_copy.set_index(date_col, inplace=True)
         
-        # Теперь обе даты без часовых поясов
         news_features_index = news_features_df_copy.set_index(date_column)
         
-        # Выполняем объединение
         combined_df = price_df_copy.join(news_features_index, how='left')
         
-        # Заполняем пропуски
         numeric_cols = news_features_df_copy.select_dtypes(include=['number']).columns
         for col in numeric_cols:
             if col in combined_df.columns and col != date_column:

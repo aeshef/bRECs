@@ -20,22 +20,10 @@ from pys.data_collection.news_processor.news_feature_extractor import NewsFeatur
 from pys.data_collection.news_processor.event_detector import EventDetector
 from pys.data_collection.news_processor.news_visualizer import NewsVisualizer
 from pys.data_collection.news_processor.news_integration import NewsIntegration
-
-# current_dir = os.path.dirname(os.path.abspath(__file__))
-# while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
-#     current_dir = os.path.dirname(current_dir)
-
-# if current_dir not in sys.path:
-#     sys.path.insert(0, current_dir)
-
 from pys.utils.logger import BaseLogger
 from pys.data_collection.private_info import BASE_PATH
-# token = 't.6vI7rHdW8TEcg9R6KlKyOeHVNyGnPdlyIwkaK5DbJxGdOI_PM7UIPJJpdjpYkHP7GvLWvkiVnX_mXWMWAPYJnQ'
-# YOUR_API_ID = 28994010
-# YOUR_API_HASH = '6e7a57fdfe1a10b0a3434104b42badf2'
-# BASE_PATH = '/Users/bolotnikovali/WORKING/kursach'
 
-# Импорт и применение патча
+
 try:
     from pys.utils.monkey_patch import apply_patch
     apply_patch()
@@ -77,12 +65,10 @@ def save_sentiment_data(sentiment_analyzer, news_df: pd.DataFrame, sentiment_fil
             logging.error(f"Ошибка при загрузке файла {sentiment_file}: {e}")
             existing_sentiment = pd.DataFrame()
 
-        # Выборка новых новостей, которых ещё нет в исторических данных.
         if 'id' in existing_sentiment.columns and 'id' in news_df.columns:
             processed_ids = set(existing_sentiment['id'])
             news_to_process = news_df[~news_df['id'].isin(processed_ids)]
         else:
-            # Генерируем уникальный ключ, если отсутствует идентификатор.
             existing_sentiment['key'] = existing_sentiment.apply(
                 lambda row: f"{str(row.get('date', ''))}_{row.get('clean_text', '')[:50]}",
                 axis=1
@@ -135,10 +121,6 @@ def save_events_data(event_detector, combined_sentiment: pd.DataFrame, events_fi
     logging.info(f"Данные по событиям объединены и сохранены в {events_file}")
     return news_with_events
 
-sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
-
-# from private_info import BASE_PATH
-
 class NewsPipeline(BaseLogger):
     """Единый пайплайн для сбора и анализа новостей"""
     
@@ -146,15 +128,6 @@ class NewsPipeline(BaseLogger):
         self.telegram_data = {}
         super().__init__('NewsPipeline')
         self.base_dir=BASE_PATH
-        
-    # def _setup_logger(self):
-    #     """Настройка логгера"""
-    #     logging.basicConfig(
-    #         level=logging.INFO,
-    #         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    #         datefmt='%Y-%m-%d %H:%M:%S'
-    #     )
-    #     return logging.getLogger('NewsPipeline')
 
     def _collect_telegram_data(self, api_id, api_hash, channel, limit, output_dir, tickers, start_date=None, end_date=None):
         if not api_id or not api_hash:
@@ -206,7 +179,6 @@ class NewsPipeline(BaseLogger):
             'keywords': ['полюс', 'золото', 'драгоценные металлы', 'добыча золота']}
 }
 
-
         results = {}
         try:
             session_file = os.path.join(self.base_dir, 'telegram_session')
@@ -220,7 +192,6 @@ class NewsPipeline(BaseLogger):
                     self.logger.error(f"Ошибка получения сущности: {str(e)}")
                     return {}
                 
-                # Собираем сообщения
                 messages = []
                 try:
                     for message in client.iter_messages(entity, limit=limit):
@@ -243,18 +214,15 @@ class NewsPipeline(BaseLogger):
                     if not messages:
                         return {}
                 
-                # Обработка сообщений
                 message_data = []
                 for msg in messages:
                     if not msg.text:
                         continue
                     
-                    # Поиск тикеров в тегах
                     ticker_pattern = r'#([A-Z0-9]{4,6})'
                     tickers_from_tags = [t for t in re.findall(ticker_pattern, msg.text) 
                                         if t in COMPANY_INFO]
                     
-                    # Поиск тикеров по ключевым словам
                     tickers_from_keywords = []
                     text_lower = msg.text.lower()
                     for ticker, info in COMPANY_INFO.items():
@@ -268,7 +236,7 @@ class NewsPipeline(BaseLogger):
                                 break
                     
                     all_tickers = list(set(tickers_from_tags + tickers_from_keywords))
-                    if not all_tickers:  # Если нет тикеров, просто пропускаем
+                    if not all_tickers:
                         continue
                         
                     message_data.append({
@@ -281,15 +249,12 @@ class NewsPipeline(BaseLogger):
                         'has_media': msg.media is not None
                     })
                 
-                # Проверка наличия данных
                 if not message_data:
                     self.logger.warning("Не найдено сообщений с тикерами")
                     return {}
-                    
-                # Создаем DataFrame и сохраняем
+                
                 df = pd.DataFrame(message_data)
                 
-                # Проверим все необходимые колонки
                 required_columns = ['id', 'date', 'text', 'tickers', 'tickers_from_tags', 'tickers_from_keywords']
                 for col in required_columns:
                     if col not in df.columns:
@@ -303,12 +268,10 @@ class NewsPipeline(BaseLogger):
                     df.to_csv(all_messages_file, index=False, encoding='utf-8')
                     self.logger.info(f"Сохранено {len(df)} сообщений в файл {all_messages_file}")
                 
-                # Разделение по тикерам
                 for ticker in tickers:
                     if ticker not in COMPANY_INFO:
                         continue
                         
-                    # Проверяем, существуют ли необходимые колонки
                     ticker_messages = df[df['tickers'].apply(
                         lambda x: isinstance(x, list) and ticker in x
                     )].copy() if 'tickers' in df.columns else pd.DataFrame()
@@ -316,7 +279,6 @@ class NewsPipeline(BaseLogger):
                     if ticker_messages.empty:
                         continue
                     
-                    # Добавляем информацию
                     ticker_messages['ticker'] = ticker
                     ticker_messages['company_name'] = COMPANY_INFO[ticker]['name']
                     ticker_messages['industry'] = COMPANY_INFO[ticker]['industry']
@@ -350,14 +312,11 @@ class NewsPipeline(BaseLogger):
         """Загрузка кэшированных Telegram данных"""
         results = {}
         
-        # Поиск всех файлов с новостями из телеграм
         for ticker in tickers:
-            # Ищем в директории telegram_news
             telegram_dir = os.path.join(data_dir, 'telegram_news')
             if os.path.exists(telegram_dir):
                 ticker_files = glob.glob(os.path.join(telegram_dir, f"{ticker}_telegram_news_*.csv"))
                 
-                # Ищем в директории processed_data/{ticker}
                 ticker_dir = os.path.join(data_dir, 'processed_data', ticker)
                 if os.path.exists(ticker_dir):
                     ticker_files.extend(glob.glob(os.path.join(ticker_dir, f"{ticker}_news_*.csv")))
@@ -366,32 +325,25 @@ class NewsPipeline(BaseLogger):
                 if not ticker_files:
                     continue
                     
-                # Берем самый свежий файл
                 latest_file = max(ticker_files, key=os.path.getmtime)
                 
                 try:
                     df = pd.read_csv(latest_file, encoding='utf-8')
                     
-                    # Преобразуем строковые списки в списки Python
-                    # Улучшенная обработка строковых списков
                     for col in ['tickers', 'tickers_from_tags', 'tickers_from_keywords']:
                         if col in df.columns:
                             df[col] = df[col].apply(
                                 lambda x: eval(x) if isinstance(x, str) and x.startswith('[') and pd.notna(x) else 
-                                        ([] if pd.isna(x) else x)
-        )
+                                        ([] if pd.isna(x) else x))
                     
-                    # Конвертируем дату
                     if 'date' in df.columns:
                         df['date'] = pd.to_datetime(df['date'])
                         
-                        # Применяем фильтр по датам
                         if start_date:
                             df = df[df['date'].dt.date >= start_date]
                         if end_date:
                             df = df[df['date'].dt.date <= end_date]
                     
-                    # Удаляем дубликаты
                     if 'id' in df.columns:
                         df = df.drop_duplicates(subset='id')
                         
@@ -419,7 +371,6 @@ class NewsPipeline(BaseLogger):
         output_dir = os.path.join(base_dir, 'data', 'processed_data', ticker, 'news_analysis')
         os.makedirs(output_dir, exist_ok=True)
         
-        # Шаг 1: Предобработка объединяет все новости, включая новые
         self.logger.info(f"Предобработка новостей для {ticker}")
         news_df = preprocessor.process_ticker_news(ticker, save=True)
         
@@ -429,10 +380,8 @@ class NewsPipeline(BaseLogger):
             
         results['processed_news'] = news_df
         
-        # Проверяем, есть ли уже обработанные новости с сентиментом
         sentiment_file = os.path.join(output_dir, f"{ticker}_news_with_sentiment.csv")
         
-        # Если файл существует, загружаем и объединяем с новыми данными
         if os.path.exists(sentiment_file):
             self.logger.info(f"Найден существующий файл с сентиментом: {sentiment_file}")
             existing_sentiment = pd.read_csv(sentiment_file)
@@ -440,12 +389,10 @@ class NewsPipeline(BaseLogger):
             if 'date' in existing_sentiment.columns:
                 existing_sentiment['date'] = pd.to_datetime(existing_sentiment['date'])
             
-            # Определяем, какие новости уже обработаны (по id или по тексту и дате)
             if 'id' in existing_sentiment.columns and 'id' in news_df.columns:
                 processed_ids = set(existing_sentiment['id'])
                 news_to_process = news_df[~news_df['id'].isin(processed_ids)]
             else:
-                # Альтернативный метод, если нет id
                 existing_sentiment['key'] = existing_sentiment.apply(
                     lambda row: f"{str(row.get('date', ''))}_{row.get('clean_text', '')[:50]}", axis=1
                 )
@@ -461,7 +408,6 @@ class NewsPipeline(BaseLogger):
                 self.logger.info(f"Нет новых новостей для {ticker}, используем существующие данные")
                 results['news_with_sentiment'] = existing_sentiment
                 
-                # Шаг 3: Обнаружение событий (используем существующие данные)
                 events_file = os.path.join(output_dir, f"{ticker}_news_with_events.csv")
                 if os.path.exists(events_file):
                     news_with_events = pd.read_csv(events_file)
@@ -469,7 +415,6 @@ class NewsPipeline(BaseLogger):
                     results['news_with_events'] = news_with_events
                     results['daily_events'] = daily_events
                 else:
-                    # Если файл событий не существует, создаем его
                     news_with_events = event_detector.detect_events(existing_sentiment)
                     news_with_events = event_detector.assess_event_impact(news_with_events)
                     news_with_events.to_csv(events_file, index=False)
@@ -478,13 +423,11 @@ class NewsPipeline(BaseLogger):
                     results['news_with_events'] = news_with_events
                     results['daily_events'] = daily_events
                 
-                # Шаг 4: Используем существующие признаки или создаем новые
                 daily_sentiment = sentiment_analyzer.create_daily_sentiment_series(existing_sentiment)
                 sentiment_features = feature_extractor.create_time_series_features(daily_sentiment)
                 results['daily_sentiment'] = daily_sentiment
                 results['sentiment_features'] = sentiment_features
                 
-                # Переходим сразу к шагу 5 (интеграция с ценами)
                 self.logger.info(f"Интеграция с ценами для {ticker}")
                 ticker_dir = os.path.join(base_dir, 'data', 'processed_data', ticker)
                 parquet_files = [f for f in os.listdir(ticker_dir) if f.endswith('.parquet') and ticker in f]
@@ -493,20 +436,16 @@ class NewsPipeline(BaseLogger):
                     self.logger.warning(f"Ценовые данные для {ticker} не найдены")
                     return results
                     
-                # Берем самый свежий parquet файл
                 parquet_file = max(parquet_files, key=lambda x: os.path.getmtime(os.path.join(ticker_dir, x)))
                 price_path = os.path.join(ticker_dir, parquet_file)
                 
                 try:
-                    # Загрузка и агрегация цен
                     price_df = pd.read_parquet(price_path)
                     price_df['date'] = pd.to_datetime(price_df['date'])
                     
-                    # Приведение к стандартным названиям столбцов
                     column_mapping = {'min': 'low', 'max': 'high'}
                     price_df = price_df.rename(columns=column_mapping)
                     
-                    # Агрегация до дневных данных
                     price_df['day'] = price_df['date'].dt.date
                     daily_price = price_df.groupby('day').agg({
                         'open': 'first',
@@ -519,26 +458,21 @@ class NewsPipeline(BaseLogger):
                     daily_price = daily_price.rename(columns={'day': 'date'})
                     daily_price['date'] = pd.to_datetime(daily_price['date'])
                     
-                    # Объединение с новостными признаками
                     combined_df = integrator.merge_news_with_price_data(
                         sentiment_features,
                         daily_price,
                         date_column='date'
                     )
                     
-                    # Проверяем, что объединение успешно
                     if combined_df.empty:
                         self.logger.warning(f"Не удалось объединить новостные и ценовые данные для {ticker}")
                     else:
-                        # Визуализация цен и настроений
                         plt.figure(figsize=(12, 6))
                         ax1 = plt.gca()
                         ax2 = ax1.twinx()
                         
-                        # Получаем данные для графика
                         date_col = combined_df.index if isinstance(combined_df.index, pd.DatetimeIndex) else combined_df['date']
                         
-                        # Построение графика
                         line1 = ax1.plot(date_col, combined_df['close'], 'b-', label='Цена')
                         line2 = ax2.plot(date_col, combined_df['avg_sentiment'], 'r-', label='Настроение')
                         
@@ -546,7 +480,6 @@ class NewsPipeline(BaseLogger):
                         ax1.set_ylabel('Цена закрытия', color='b')
                         ax2.set_ylabel('Среднее настроение', color='r')
                         
-                        # Объединение легенд
                         lines = line1 + line2
                         labels = ['Цена', 'Настроение']
                         ax1.legend(lines, labels, loc='upper left')
@@ -554,48 +487,37 @@ class NewsPipeline(BaseLogger):
                         plt.title(f'Сравнение цен и настроений для {ticker}')
                         plt.tight_layout()
                         
-                        # Сохранение с явным указанием пути
                         chart_path = os.path.join(output_dir, f"{ticker}_price_vs_sentiment.png")
                         plt.savefig(chart_path)
                         self.logger.info(f"График сохранен в {chart_path}")
                         plt.close()
                     
-                    # Создание признаков для ML
                     ml_df = combined_df.copy()
                     
-                    # Целевая переменная
                     prediction_horizon = 5
                     ml_df['target_return'] = ml_df['close'].pct_change(prediction_horizon).shift(-prediction_horizon)
                     
-                    # Новостные признаки
                     news_features = [col for col in ml_df.columns if col.startswith(('sentiment', 'news_count', 'event_', 'topic_'))]
                 
-                    # Инженерия признаков
                     feature_dict = {}
                     
-                    # Лаги
                     for feature in news_features:
                         for lag in [1, 2, 3, 5, 10]:
                             feature_dict[f'{feature}_lag{lag}'] = ml_df[feature].shift(lag)
                     
-                    # Скользящие средние
                     for feature in news_features:
                         for window in [3, 7, 14, 30]:
                             feature_dict[f'{feature}_ma{window}'] = ml_df[feature].rolling(window=window, min_periods=1).mean()
-                        
-                        # Волатильность
+
                         feature_dict[f'{feature}_std7'] = ml_df[feature].rolling(window=7, min_periods=1).std()
                         feature_dict[f'{feature}_std14'] = ml_df[feature].rolling(window=14, min_periods=1).std()
                         
-                    # Комплексные признаки
-                                        # Комплексные признаки
                     if 'avg_sentiment' in ml_df.columns:
                         feature_dict['sentiment_return_corr'] = ml_df['avg_sentiment'].rolling(window=14).corr(ml_df['close'].pct_change())
                     
                     if 'news_count' in ml_df.columns:
                         feature_dict['news_count_volatility'] = ml_df['news_count'] * ml_df['close'].pct_change().rolling(window=7).std()
                     
-                    # Добавление всех признаков
                     ml_features = pd.concat([ml_df, pd.DataFrame(feature_dict)], axis=1).reset_index()
                     ml_features.to_csv(os.path.join(output_dir, f"{ticker}_ml_features.csv"))
                     
@@ -609,17 +531,14 @@ class NewsPipeline(BaseLogger):
         else:
             news_to_process = news_df
         
-        # Шаг 2: Анализ настроений для новых новостей
         self.logger.info(f"Анализ настроений для {ticker}")
         news_with_sentiment = sentiment_analyzer.analyze_ticker_news(
             news_to_process,
-            save_path=None  # Не сохраняем сразу, сначала объединим
+            save_path=None
         )
         
-        # Объединяем с существующими данными, если они есть
         if os.path.exists(sentiment_file):
             combined_sentiment = pd.concat([existing_sentiment, news_with_sentiment], ignore_index=True)
-            # Удаление дубликатов
             if 'id' in combined_sentiment.columns:
                 combined_sentiment = combined_sentiment.drop_duplicates(subset='id')
             else:
@@ -627,20 +546,16 @@ class NewsPipeline(BaseLogger):
         else:
             combined_sentiment = news_with_sentiment
         
-        # Сохраняем обновленные данные
         combined_sentiment.to_csv(sentiment_file, index=False)
         self.logger.info(f"Сохранены обновленные данные с сентиментом для {ticker}: {len(combined_sentiment)} новостей")
         
-        # Обновляем результаты
         results['news_with_sentiment'] = combined_sentiment
         
-        # Создаем временной ряд из всех данных
         daily_sentiment = sentiment_analyzer.create_daily_sentiment_series(combined_sentiment)
         daily_sentiment.to_csv(os.path.join(output_dir, f"{ticker}_daily_sentiment.csv"), index=False)
         
         results['daily_sentiment'] = daily_sentiment
         
-        # Визуализация настроений
         plt.figure(figsize=(10, 5))
         sns.countplot(x='sentiment_category', data=combined_sentiment)
         plt.title(f'Распределение настроений для {ticker}')
@@ -648,7 +563,6 @@ class NewsPipeline(BaseLogger):
         plt.savefig(os.path.join(output_dir, f"{ticker}_sentiment_distribution.png"))
         plt.close()
         
-        # Шаг 3: Обнаружение событий
         self.logger.info(f"Обнаружение событий для {ticker}")
         news_with_events = event_detector.detect_events(combined_sentiment)
         news_with_events = event_detector.assess_event_impact(news_with_events)
@@ -660,7 +574,6 @@ class NewsPipeline(BaseLogger):
         results['news_with_events'] = news_with_events
         results['daily_events'] = daily_events
         
-        # Визуализация событий
         event_columns = [col for col in news_with_events.columns 
                         if col.startswith('event_') and col not in ['event_impact', 'event_direction', 'has_event']]
         event_counts = {col.replace('event_', ''): news_with_events[col].sum() for col in event_columns}
@@ -673,7 +586,6 @@ class NewsPipeline(BaseLogger):
         plt.savefig(os.path.join(output_dir, f"{ticker}_event_distribution.png"))
         plt.close()
         
-        # Шаг 4: Извлечение признаков
         self.logger.info(f"Извлечение признаков для {ticker}")
         try:
             news_with_topics, topic_dict = feature_extractor.create_topic_features(
@@ -694,12 +606,10 @@ class NewsPipeline(BaseLogger):
             results['topic_dict'] = {}
             results['news_with_topics'] = news_with_events
         
-        # Извлечение временных признаков
         sentiment_features = feature_extractor.create_time_series_features(daily_sentiment)
         sentiment_features.to_csv(os.path.join(output_dir, f"{ticker}_sentiment_features.csv"), index=False)
         results['sentiment_features'] = sentiment_features
         
-        # Визуализация временного ряда
         plt.figure(figsize=(15, 8))
         plt.subplot(2, 1, 1)
         plt.plot(sentiment_features['date'], sentiment_features['avg_sentiment'], label='Среднее настроение')
@@ -716,7 +626,6 @@ class NewsPipeline(BaseLogger):
         plt.savefig(os.path.join(output_dir, f"{ticker}_sentiment_dynamics.png"))
         plt.close()
         
-        # Шаг 5: Интеграция с ценами
         self.logger.info(f"Интеграция с ценами для {ticker}")
         ticker_dir = os.path.join(base_dir, 'data', 'processed_data', ticker)
         parquet_files = [f for f in os.listdir(ticker_dir) if f.endswith('.parquet') and ticker in f]
@@ -725,20 +634,16 @@ class NewsPipeline(BaseLogger):
             self.logger.warning(f"Ценовые данные для {ticker} не найдены")
             return results
             
-        # Берем самый свежий parquet файл
         parquet_file = max(parquet_files, key=lambda x: os.path.getmtime(os.path.join(ticker_dir, x)))
         price_path = os.path.join(ticker_dir, parquet_file)
         
         try:
-            # Загрузка и агрегация цен
             price_df = pd.read_parquet(price_path)
             price_df['date'] = pd.to_datetime(price_df['date'])
             
-            # Приведение к стандартным названиям столбцов
             column_mapping = {'min': 'low', 'max': 'high'}
             price_df = price_df.rename(columns=column_mapping)
             
-            # Агрегация до дневных данных
             price_df['day'] = price_df['date'].dt.date
             daily_price = price_df.groupby('day').agg({
                 'open': 'first',
@@ -751,26 +656,21 @@ class NewsPipeline(BaseLogger):
             daily_price = daily_price.rename(columns={'day': 'date'})
             daily_price['date'] = pd.to_datetime(daily_price['date'])
             
-            # Объединение с новостными признаками
             combined_df = integrator.merge_news_with_price_data(
                 sentiment_features,
                 daily_price,
                 date_column='date'
             )
             
-            # Проверяем, что объединение успешно
             if combined_df.empty:
                 self.logger.warning(f"Не удалось объединить новостные и ценовые данные для {ticker}")
             else:
-                # Визуализация цен и настроений
                 plt.figure(figsize=(12, 6))
                 ax1 = plt.gca()
                 ax2 = ax1.twinx()
                 
-                # Получаем данные для графика
                 date_col = combined_df.index if isinstance(combined_df.index, pd.DatetimeIndex) else combined_df['date']
                 
-                # Построение графика
                 line1 = ax1.plot(date_col, combined_df['close'], 'b-', label='Цена')
                 line2 = ax2.plot(date_col, combined_df['avg_sentiment'], 'r-', label='Настроение')
                 
@@ -778,7 +678,6 @@ class NewsPipeline(BaseLogger):
                 ax1.set_ylabel('Цена закрытия', color='b')
                 ax2.set_ylabel('Среднее настроение', color='r')
                 
-                # Объединение легенд
                 lines = line1 + line2
                 labels = ['Цена', 'Настроение']
                 ax1.legend(lines, labels, loc='upper left')
@@ -786,47 +685,37 @@ class NewsPipeline(BaseLogger):
                 plt.title(f'Сравнение цен и настроений для {ticker}')
                 plt.tight_layout()
                 
-                # Сохранение с явным указанием пути
                 chart_path = os.path.join(output_dir, f"{ticker}_price_vs_sentiment.png")
                 plt.savefig(chart_path)
                 self.logger.info(f"График сохранен в {chart_path}")
                 plt.close()
             
-            # Создание признаков для ML
             ml_df = combined_df.copy()
             
-            # Целевая переменная
             prediction_horizon = 5
             ml_df['target_return'] = ml_df['close'].pct_change(prediction_horizon).shift(-prediction_horizon)
             
-            # Новостные признаки
             news_features = [col for col in ml_df.columns if col.startswith(('sentiment', 'news_count', 'event_', 'topic_'))]
             
-            # Инженерия признаков
             feature_dict = {}
             
-            # Лаги
             for feature in news_features:
                 for lag in [1, 2, 3, 5, 10]:
                     feature_dict[f'{feature}_lag{lag}'] = ml_df[feature].shift(lag)
             
-            # Скользящие средние
             for feature in news_features:
                 for window in [3, 7, 14, 30]:
                     feature_dict[f'{feature}_ma{window}'] = ml_df[feature].rolling(window=window, min_periods=1).mean()
                 
-                # Волатильность
                 feature_dict[f'{feature}_std7'] = ml_df[feature].rolling(window=7, min_periods=1).std()
                 feature_dict[f'{feature}_std14'] = ml_df[feature].rolling(window=14, min_periods=1).std()
 
-            # Комплексные признаки
             if 'avg_sentiment' in ml_df.columns:
                 feature_dict['sentiment_return_corr'] = ml_df['avg_sentiment'].rolling(window=14).corr(ml_df['close'].pct_change())
             
             if 'news_count' in ml_df.columns:
                 feature_dict['news_count_volatility'] = ml_df['news_count'] * ml_df['close'].pct_change().rolling(window=7).std()
             
-            # Добавление всех признаков
             ml_features = pd.concat([ml_df, pd.DataFrame(feature_dict)], axis=1).reset_index()
             ml_features.to_csv(os.path.join(output_dir, f"{ticker}_ml_features.csv"))
             
@@ -850,8 +739,8 @@ class NewsPipeline(BaseLogger):
         start_date: Optional[datetime.date] = None,
         end_date: Optional[datetime.date] = None,
         use_cached_telegram: bool = True,
-        cleanup_old_files: bool = False,  # Параметр для управления очисткой
-        max_history_days: int = 30  # Сколько дней хранить старые файлы
+        cleanup_old_files: bool = False,
+        max_history_days: int = 30
     ):
         """Запуск полного пайплайна анализа новостей"""
         
@@ -867,8 +756,6 @@ class NewsPipeline(BaseLogger):
         event_detector = EventDetector()
         integrator = NewsIntegration()
         
-        # В методе run_pipeline добавить защиту от пустых данных
-        # Шаг 1: Сбор данных из Telegram
         if collect_telegram:
             self.logger.info("=== СБОР ДАННЫХ ИЗ TELEGRAM ===")
             try:
@@ -884,11 +771,9 @@ class NewsPipeline(BaseLogger):
                     end_date=end_date
                 )
                 
-                # Проверяем, получены ли данные
                 if not telegram_data:
                     self.logger.warning("Данные из Telegram не получены, переходим к кэшированным данным")
                 else:
-                    # Сохраняем данные в директорию каждого тикера
                     for ticker, df in telegram_data.items():
                         print(f"СБОР ДАННЫХ ДЛЯ {ticker}")
                         ticker_dir = os.path.join(base_dir, 'data', 'processed_data', ticker)
@@ -905,7 +790,6 @@ class NewsPipeline(BaseLogger):
                 self.logger.error(f"Ошибка при сборе данных из Telegram: {str(e)}")
                 traceback.print_exc()
         
-        # Шаг 2: Загрузка кэшированных данных
         if use_cached_telegram:
             self.logger.info("=== ЗАГРУЗКА КЭШИРОВАННЫХ ДАННЫХ ===")
             cached_data = self._load_telegram_data(
@@ -916,7 +800,6 @@ class NewsPipeline(BaseLogger):
             )
             self.telegram_data.update(cached_data)
         
-        # Шаг 3: Обработка каждого тикера
         all_results = {}
         for ticker in tickers:
             self.logger.info(f"\n=== ОБРАБОТКА ТИКЕРА {ticker} ===")
@@ -931,7 +814,6 @@ class NewsPipeline(BaseLogger):
             )
             all_results[ticker] = ticker_results
             
-        # Шаг 4: Создание сводного отчета
         self.logger.info("\n=== СОЗДАНИЕ СВОДНОГО ОТЧЕТА ===")
         summary_dir = os.path.join(base_dir, 'data', 'summaries')
         os.makedirs(summary_dir, exist_ok=True)
@@ -989,11 +871,9 @@ def main():
     """Запуск пайплайна из командной строки"""
     parser = argparse.ArgumentParser(description='News Pipeline')
     
-    # Основной параметр - файл конфигурации
     parser.add_argument('--config', type=str, 
                         help='Путь к файлу конфигурации JSON')
     
-    # Дополнительные параметры для прямого запуска
     parser.add_argument('--base_dir', type=str, 
                         help='Базовая директория проекта')
     parser.add_argument('--tickers', type=str, nargs='+', 
@@ -1017,27 +897,22 @@ def main():
     
     args = parser.parse_args()
     
-    # Запуск через файл конфигурации
     if args.config:
         try:
             with open(args.config, 'r') as f:
                 config = json.load(f)
                 
-            # Получаем параметры
-            params = config.get('params', config)  # Совместимость с обоими форматами
+            params = config.get('params', config)
             
-            # Преобразование строк дат в объекты date
             if 'start_date' in params and isinstance(params['start_date'], str):
                 params['start_date'] = datetime.datetime.strptime(params['start_date'], '%Y-%m-%d').date()
             if 'end_date' in params and isinstance(params['end_date'], str):
                 params['end_date'] = datetime.datetime.strptime(params['end_date'], '%Y-%m-%d').date()
             
-            # Получаем информацию о классе и методе (если есть)
             target = config.get('target')
             method = config.get('method')
             
             if target == 'NewsPipeline' and method == 'run_pipeline' or not target:
-                # Стандартный запуск пайплайна
                 pipeline = NewsPipeline()
                 print(f"Запуск pipeline.run_pipeline с параметрами: {params}")
                 pipeline.run_pipeline(**params)
@@ -1050,14 +925,11 @@ def main():
             traceback.print_exc()
             return 1
     
-    # Прямой запуск с аргументами командной строки
     else:
-        # Проверяем, что указаны минимально необходимые параметры
         if not args.base_dir:
             print("Необходимо указать базовую директорию (--base_dir)")
             return 1
-        
-        # Создаем словарь параметров из аргументов командной строки
+
         params = {
             'base_dir': args.base_dir
         }
@@ -1081,7 +953,6 @@ def main():
         if args.use_cached_telegram:
             params['use_cached_telegram'] = args.use_cached_telegram
         
-        # Запускаем пайплайн
         try:
             pipeline = NewsPipeline()
             pipeline.run_pipeline(**params)

@@ -36,11 +36,9 @@ class KBDAnalyzer(BaseLogger):
         if kbd_data is not None:
             self.kbd_data = kbd_data
         else:
-            # Загружаем данные КБД
             downloader = KBDDownloader(output_dir=output_dir)
             self.kbd_data = downloader.load_kbd_data()
             
-            # Если данных нет, пробуем загрузить их за последний год
             if self.kbd_data is None:
                 end_date = datetime.now()
                 start_date = end_date - timedelta(days=365)
@@ -56,13 +54,10 @@ class KBDAnalyzer(BaseLogger):
         """Предобработка данных КБД"""
         df = self.kbd_data.copy()
         
-        # Убедимся, что колонка с датой имеет правильный формат
         df['date'] = pd.to_datetime(df['date'])
         
-        # Список всех ожидаемых колонок с тенорами (в стандартизированном формате)
         tenor_columns = ['0.25Y', '0.5Y', '0.75Y', '1Y', '2Y', '3Y', '5Y', '7Y', '10Y', '15Y', '20Y', '30Y']
         
-        # Преобразуем строковые значения в числовые для колонок тенора
         for col in tenor_columns:
             if col in df.columns:
                 if df[col].dtype == object:  # Если колонка строкового типа
@@ -107,7 +102,6 @@ class KBDAnalyzer(BaseLogger):
             
             for col in tenor_columns:
                 if col in latest_kbd and not pd.isna(latest_kbd[col]):
-                    # Преобразуем названия колонок в числа лет
                     tenor = float(col.replace('Y', ''))
                     tenors.append(tenor)
                     yields.append(latest_kbd[col])
@@ -116,7 +110,6 @@ class KBDAnalyzer(BaseLogger):
                 self.logger.warning("Недостаточно данных для построения кривой")
                 return None
                 
-            # Создаем график
             plt.figure(figsize=(10, 6))
             plt.plot(tenors, yields, 'o-', linewidth=2)
             plt.title(f'Кривая бескупонной доходности на {date_str}')
@@ -124,10 +117,8 @@ class KBDAnalyzer(BaseLogger):
             plt.ylabel('Доходность (%)')
             plt.grid(True, alpha=0.3)
             
-            # Заполняем область под кривой
             plt.fill_between(tenors, yields, alpha=0.2)
             
-            # Добавляем аннотации для ключевых точек
             for i, (x, y) in enumerate(zip(tenors, yields)):
                 if x in [1, 2, 5, 10]:
                     plt.annotate(
@@ -138,12 +129,9 @@ class KBDAnalyzer(BaseLogger):
                         ha='center'
                     )
             
-            # Сохраняем график внутри viz_dir
             if save_path is None:
-                # Используем директорию для визуализаций
                 save_path = os.path.join(self.viz_dir, f'kbd_curve_{datetime.now().strftime("%Y%m%d")}.png')
             else:
-                # Убеждаемся, что путь внутри нужной директории
                 if not os.path.dirname(save_path) == self.viz_dir:
                     save_path = os.path.join(self.viz_dir, os.path.basename(save_path))
             
@@ -168,7 +156,6 @@ class KBDAnalyzer(BaseLogger):
         if self.kbd_data is None or len(self.kbd_data) == 0:
             return {}
         
-        # Берем последнюю запись КБД
         latest_kbd = self.kbd_data.iloc[-1]
         
         # Собираем доступные значения КБД для всех тенорів
@@ -315,7 +302,6 @@ class KBDAnalyzer(BaseLogger):
         
         market_state = self._determine_market_state(latest_kbd)
         
-        # Выбор стратегии в зависимости от состояния рынка
         if market_state == 'inverted':
             # При инвертированной кривой, когда короткие ставки выше длинных,
             # лучше взвешивать по доходности или использовать равное взвешивание

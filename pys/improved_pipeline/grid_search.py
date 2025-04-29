@@ -14,10 +14,6 @@ import concurrent.futures
 from pys.porfolio_optimization.signal_generator import SignalGenerator, run_pipeline_signal_generator
 from pys.porfolio_optimization.portfolio_optimizer import PortfolioOptimizer
 from pys.porfolio_optimization.backtester import Backtester
-
-# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
-# from private_info import BASE_PATH
-
 from pys.utils.logger import BaseLogger
 from pys.data_collection.private_info import BASE_PATH
 
@@ -49,14 +45,12 @@ class GridSearch:
         
         self.logger.setLevel(log_level)
         
-        # Проверяем, есть ли уже обработчики, чтобы избежать дублирования
         if not self.logger.handlers:
             file_handler = logging.FileHandler(os.path.join(output_dir, 'grid_search.log'))
             file_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
             file_handler.setFormatter(file_formatter)
             self.logger.addHandler(file_handler)
             
-            # Добавляем вывод в консоль
             console_handler = logging.StreamHandler()
             console_handler.setFormatter(file_formatter)
             self.logger.addHandler(console_handler)
@@ -79,7 +73,7 @@ class GridSearch:
             
             signals_df = signal_gen.run_pipeline(
                 output_file=signals_file,
-                output_dir=None  # Отключаем запись промежуточных результатов
+                output_dir=None
             )
             
             if signals_df is None:
@@ -146,7 +140,6 @@ class GridSearch:
                 except:
                     pass
             
-            # Явно очищаем память
             gc.collect()
 
     def run_grid_search(self, signal_params, portfolio_params, risk_free_rates=None, periods=None, chunk_size=10):
@@ -176,7 +169,6 @@ class GridSearch:
         if periods is None:
             periods = [('2024-01-01', '2024-12-31')]
         
-        # Создаем список всех комбинаций параметров для тестирования
         combinations = []
         
         signal_keys = list(signal_params.keys())
@@ -187,7 +179,6 @@ class GridSearch:
         portfolio_values = list(portfolio_params.values())
         portfolio_combinations = list(itertools.product(*portfolio_values))
         
-        # Создаем все комбинации параметров для тестирования
         for period_idx, (start_date, end_date) in enumerate(periods):
             for signal_comb in signal_combinations:
                 signal_params_dict = dict(zip(signal_keys, signal_comb))
@@ -200,7 +191,6 @@ class GridSearch:
         total_tests = len(combinations)
         self.logger.info(f"Запуск Grid Search: {total_tests} комбинаций параметров")
         
-        # Проверяем наличие контрольных точек
         checkpoint_path = os.path.join(self.output_dir, 'checkpoints', 'last_results.csv')
         if os.path.exists(checkpoint_path):
             self.logger.info(f"Найдена контрольная точка. Загрузка предыдущих результатов...")
@@ -221,31 +211,25 @@ class GridSearch:
                     # Запускаем тесты в параллель с отображением прогресса
                     results = list(tqdm(executor.map(self._test_combination, chunk), total=len(chunk), desc=f"Чанк {chunk_idx+1}"))
                     
-                    # Отфильтровываем None результаты и добавляем в общий список
                     valid_results = [r for r in results if r is not None]
                     self.results.extend(valid_results)
             else:
-                # Последовательное выполнение
                 for args in tqdm(chunk, desc=f"Чанк {chunk_idx+1}"):
                     result = self._test_combination(args)
                     if result is not None:
                         self.results.append(result)
             
-            # Сохраняем промежуточные результаты
             if self.results:
                 results_df = pd.DataFrame(self.results)
                 checkpoint_file = os.path.join(self.output_dir, 'checkpoints', f'results_chunk_{chunk_idx}.csv')
                 results_df.to_csv(checkpoint_file, index=False)
                 
-                # Обновляем последнюю контрольную точку
                 results_df.to_csv(os.path.join(self.output_dir, 'checkpoints', 'last_results.csv'), index=False)
                 
                 self.logger.info(f"Сохранены промежуточные результаты: {len(self.results)} тестов")
             
-            # Очищаем память
             gc.collect()
         
-        # Финальная обработка результатов
         if not self.results:
             self.logger.error("Нет результатов Grid Search")
             return None, None
@@ -306,7 +290,6 @@ def run_grid_search_pipeline(
     (DataFrame, dict) - DataFrame с результатами и словарь с лучшими параметрами
     """
     
-    # Упрощаем сетку параметров для ускорения поиска
     signal_params = {
         'weight_tech': [0.4, 0.5, 0.6],
         'weight_sentiment': [0.2, 0.3],
@@ -329,13 +312,12 @@ def run_grid_search_pipeline(
         n_jobs=n_jobs
     )
     
-    # Используем чанкинг для сохранения промежуточных результатов
     results_df, best_params = grid_search.run_grid_search(
         signal_params=signal_params,
         portfolio_params=portfolio_params,
         risk_free_rates=risk_free_rates,
         periods=[training_period],
-        chunk_size=20  # Сохраняем результаты каждые 20 комбинаций
+        chunk_size=20
     )
     
     return results_df, best_params

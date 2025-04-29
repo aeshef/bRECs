@@ -5,15 +5,6 @@ import sys
 import os
 import logging
 
-# current_dir = os.path.dirname(os.path.abspath(__file__))
-# while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
-#     current_dir = os.path.dirname(current_dir)
-
-# if current_dir not in sys.path:
-#     sys.path.insert(0, current_dir)
-
-# from utils.logger import BaseLogger
-
 from pys.utils.logger import BaseLogger
 from pys.data_collection.private_info import BASE_PATH
 
@@ -32,7 +23,6 @@ class TechnicalIndicators(BaseLogger):
         self.sma_window = sma_window
         self.rsi_window = rsi_window
         self.df = None
-        # self.logger = self._setup_logger()
 
     def load_data(self):
         """

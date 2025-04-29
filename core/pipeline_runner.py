@@ -1,4 +1,3 @@
-# /Твой_Проект_Kursach/core/pipeline_runner.py
 import logging
 import sys
 import os
@@ -16,7 +15,6 @@ import shutil
 import base64
 from io import BytesIO
 
-# --- Импорт параметров из params.py ---
 from .params import (
     COMMON_PARAMS, KBD_PARAMS, SIGNAL_PARAMS, PORTFOLIO_PARAMS,
     OPTIMIZATION_PARAMS, TICKERS, KBD_DATA_PATH, DATA_PATH, NEWS_PARAMS,
@@ -25,29 +23,24 @@ from .params import (
     SELECT_PARAMS_BY_PROFILE, PORTFOLIO_CONTROLS, PORTFOLIO_TYPE_PARAMS
 )
 
-# --- Инициализация Кэша KBD ---
 CACHED_KBD_DATA = None
 LAST_KBD_UPDATE = None
-KBD_CACHE_TTL = 7200  # 2 часа в секундах
+KBD_CACHE_TTL = 7200
 
-# --- Настройка Логирования ---
-logger = logging.getLogger(__name__) # Настройка должна быть в вызывающем коде (bot/scheduler)
+logger = logging.getLogger(__name__)
 
-# --- Загрузка .env (если еще не загружен) ---
 env_path = PROJECT_ROOT / '.env'
 if env_path.exists():
     load_dotenv(dotenv_path=env_path)
 else:
     logger.warning(f".env file not found at {env_path}")
 
-# --- Получение переменных окружения ---
 ENV_TYPE = os.getenv('ENV_TYPE', 'local')
 MOCK_PIPELINES = os.getenv('MOCK_PIPELINES', 'False').lower() in ('true', '1', 't')
 TINKOFF_TOKEN = os.getenv('TINKOFF_API_TOKEN')
 TELEGRAM_API_ID = os.getenv('TELEGRAM_API_ID')
 TELEGRAM_API_HASH = os.getenv('TELEGRAM_API_HASH')
 
-# --- Импорт Модулей Проекта ---
 try:
     from pys.data_collection.private_info import BASE_PATH, token
     from pys.data_collection.market_data import run_pipeline_market
@@ -60,11 +53,9 @@ try:
     from pys.porfolio_optimization.executor import PipelineExecutor
 except ImportError as e:
     logger.error(f"Could not import pipeline modules. Error: {e}")
-    # Можно остановить или переключиться в MOCK
     MOCK_PIPELINES = True
     logger.warning("Switched to MOCK mode due to import errors.")
 
-# --- Импорт Модулей Базы Данных ---
 try:
     from db.models import SessionLocal, User, Portfolio, UserPreferences
     from db import crud
@@ -72,7 +63,6 @@ except ImportError as e:
      logger.critical(f"Fatal Error: Could not import database modules. Error: {e}")
      sys.exit(1)
 
-# --- Константы для отчетов ---
 REPORT_TYPES = {
     "portfolio_summary": "summary.md",
     "portfolio_weights": "weights.csv",
@@ -85,15 +75,11 @@ REPORT_TYPES = {
     "backtest_metrics": "backtest_metrics.txt"
 }
 
-# --- Функции для работы с KBD данными ---
-
 def resolve_kbd_path() -> Path:
     """Разрешает путь к файлу KBD данных, учитывая относительную структуру проекта."""
-    # Сначала пробуем относительный путь из params.py
     if KBD_DATA_PATH.exists():
         return KBD_DATA_PATH
     
-    # Затем пробуем использовать BASE_PATH из pys.data_collection.private_info
     try:
         alt_path = Path(BASE_PATH) / "data" / "kbd" / "kbd_data.csv"
         if alt_path.exists():
@@ -102,7 +88,6 @@ def resolve_kbd_path() -> Path:
     except:
         pass
     
-    # Наконец, пробуем найти в стандартных местах
     standard_paths = [
         PROJECT_ROOT / "data" / "kbd" / "kbd_data.csv",
         PROJECT_ROOT.parent / "data" / "kbd" / "kbd_data.csv",
@@ -114,7 +99,6 @@ def resolve_kbd_path() -> Path:
             logger.info(f"Found KBD data at standard path: {path}")
             return path
     
-    # Если ничего не найдено, возвращаем путь по умолчанию для создания
     default_path = PROJECT_ROOT / "data" / "kbd" / "kbd_data.csv"
     logger.warning(f"No existing KBD data found. Will create at: {default_path}")
     default_path.parent.mkdir(parents=True, exist_ok=True)
@@ -132,15 +116,13 @@ def get_cached_kbd_data() -> pd.DataFrame:
             logger.debug("Using cached KBD data.")
             return CACHED_KBD_DATA
 
-    # Найдем правильный путь к файлу KBD данных
     kbd_path = resolve_kbd_path()
     logger.info(f"Checking KBD data file at: {kbd_path}")
     
     if kbd_path.exists():
         try:
-            # Проверим возраст файла, чтобы не читать слишком старый кэш
             file_mod_time = datetime.fromtimestamp(kbd_path.stat().st_mtime)
-            if (now - file_mod_time).total_seconds() < KBD_CACHE_TTL * 1.5: # Даем запас
+            if (now - file_mod_time).total_seconds() < KBD_CACHE_TTL * 1.5:
                  logger.info("Loading KBD data from file cache...")
                  CACHED_KBD_DATA = pd.read_csv(kbd_path)
                  LAST_KBD_UPDATE = now
@@ -153,20 +135,16 @@ def get_cached_kbd_data() -> pd.DataFrame:
 
     logger.info("No valid KBD cache found. Running KBD pipeline...")
     try:
-        # Убедимся, что директория существует
         kbd_path.parent.mkdir(parents=True, exist_ok=True)
         
-        # Убедимся, что start_date и end_date передаются правильно
         start_date_kbd = datetime.strptime(COMMON_PARAMS['start_date'], '%Y-%m-%d')
         end_date_kbd = datetime.strptime(COMMON_PARAMS['end_date'], '%Y-%m-%d')
 
-        # Убедимся, что функция получает правильный base_path
         try:
-            base_path_for_kbd = BASE_PATH  # Из private_info
+            base_path_for_kbd = BASE_PATH
         except:
             base_path_for_kbd = str(PROJECT_ROOT)
         
-        # Запускаем пайплайн KBD
         run_pipeline_kbd_parser(
             base_path=base_path_for_kbd,
             start_date=start_date_kbd.strftime('%Y-%m-%d'), 
@@ -174,10 +152,8 @@ def get_cached_kbd_data() -> pd.DataFrame:
             update_data=True
         )
         
-        # Проверяем, создался ли файл
         if not kbd_path.exists():
              logger.error(f"KBD data file was not created at {kbd_path} after pipeline run!")
-             # Попробуем найти файл в других местах
              alternative_paths = [
                  Path(base_path_for_kbd) / "data" / "kbd" / "kbd_data.csv",
                  Path("data") / "kbd" / "kbd_data.csv"
@@ -185,11 +161,9 @@ def get_cached_kbd_data() -> pd.DataFrame:
              for alt_path in alternative_paths:
                  if alt_path.exists():
                      logger.info(f"Found KBD data at alternative location: {alt_path}")
-                     # Копируем файл в ожидаемое место
                      shutil.copy2(alt_path, kbd_path)
                      break
         
-        # Если после всех попыток файл существует, загружаем его
         if kbd_path.exists():
             CACHED_KBD_DATA = pd.read_csv(kbd_path)
             LAST_KBD_UPDATE = now
@@ -214,16 +188,13 @@ def run_global_data_update() -> bool:
         return False
 
     try:
-        # Получаем даты из COMMON_PARAMS
         start_date = datetime.strptime(COMMON_PARAMS['start_date'], '%Y-%m-%d')
         end_date = datetime.strptime(COMMON_PARAMS['end_date'], '%Y-%m-%d')
-        # Можно также использовать динамические даты для некоторых пайплайнов
         now = datetime.now()
         start_date_short = now - timedelta(days=10)
         start_date_long = now - timedelta(days=400)
 
         try:
-            # Убедимся, что можем получить BASE_PATH из private_info
             base_path = BASE_PATH
             token_value = token if token else TINKOFF_TOKEN
         except:
@@ -270,7 +241,7 @@ def run_global_data_update() -> bool:
 
         # 5. KBD Data
         logger.info("Initializing KBD data (will run pipeline if needed)...")
-        kbd_data = get_cached_kbd_data() # Используем кэширующую функцию
+        kbd_data = get_cached_kbd_data()
         if kbd_data.empty:
             logger.error("Critical error: KBD data initialization failed! Stopping global update.")
             return False
@@ -278,11 +249,9 @@ def run_global_data_update() -> bool:
 
         # 6. News Data
         logger.info("Running news pipeline...")
-        # Конвертируем строки дат в объекты date для функции
         news_start_date = datetime.strptime(NEWS_PARAMS['start_date'], '%Y-%m-%d').date()
         news_end_date = datetime.strptime(NEWS_PARAMS['end_date'], '%Y-%m-%d').date()
         
-        # Собираем параметры для вызова, исключая start_date/end_date из NEWS_PARAMS
         news_call_params = {k: v for k, v in NEWS_PARAMS.items() if k not in ['start_date', 'end_date']}
 
         if TELEGRAM_API_ID and TELEGRAM_API_HASH:
@@ -326,9 +295,6 @@ def run_global_data_update() -> bool:
         logger.exception(f"Error during real global data update: {e}")
         return False
 
-
-# --- Функции для формирования отчетов ---
-
 def collect_portfolio_report_files(pipeline_path: Path) -> Dict[str, Optional[Path]]:
     """
     Собирает файлы отчетов из директории выходных данных пайплайна.
@@ -347,7 +313,6 @@ def collect_portfolio_report_files(pipeline_path: Path) -> Dict[str, Optional[Pa
         if file_path.exists():
             report_files[report_type] = file_path
         else:
-            # Если не нашли в корне, ищем глубже
             for subdir in pipeline_path.glob('**/'):
                 subfile_path = subdir / filename
                 if subfile_path.exists():
@@ -398,10 +363,8 @@ def extract_portfolio_data(run_path: Path) -> Tuple[Dict[str, float], Dict[str, 
     weights = {}
     metrics = {}
     
-    # Собираем файлы отчетов
     report_files = collect_portfolio_report_files(run_path)
     
-    # Извлекаем веса из CSV файла
     if 'portfolio_weights' in report_files:
         try:
             weights_df = pd.read_csv(report_files['portfolio_weights'])
@@ -411,7 +374,7 @@ def extract_portfolio_data(run_path: Path) -> Tuple[Dict[str, float], Dict[str, 
                     ticker = row['Ticker']
                     weight = float(row['Weight'])
                     weights[ticker] = weight
-            elif len(weights_df.columns) >= 2:  # Предполагаем, что первая колонка - тикер, вторая - вес
+            elif len(weights_df.columns) >= 2:
                 for _, row in weights_df.iterrows():
                     ticker = row.iloc[0]
                     weight = float(row.iloc[1])
@@ -419,7 +382,6 @@ def extract_portfolio_data(run_path: Path) -> Tuple[Dict[str, float], Dict[str, 
         except Exception as e:
             logger.error(f"Error extracting weights from CSV: {e}")
     
-    # Если не нашли CSV, ищем в JSON
     if not weights and 'metrics_report' in report_files:
         try:
             with open(report_files['metrics_report'], 'r') as f:
@@ -429,7 +391,6 @@ def extract_portfolio_data(run_path: Path) -> Tuple[Dict[str, float], Dict[str, 
         except Exception as e:
             logger.error(f"Error extracting weights from JSON: {e}")
     
-    # Извлекаем метрики из JSON или текстового файла
     if 'metrics_report' in report_files:
         try:
             with open(report_files['metrics_report'], 'r') as f:
@@ -441,7 +402,6 @@ def extract_portfolio_data(run_path: Path) -> Tuple[Dict[str, float], Dict[str, 
         except Exception as e:
             logger.error(f"Error extracting metrics from JSON: {e}")
     
-    # Если не нашли в JSON, пробуем текстовый файл
     if not metrics and 'metrics_text' in report_files:
         try:
             metrics = {}
@@ -466,19 +426,16 @@ def extract_portfolio_data(run_path: Path) -> Tuple[Dict[str, float], Dict[str, 
         except Exception as e:
             logger.error(f"Error extracting metrics from text: {e}")
     
-    # Если всё ещё нет метрик, ищем в README.md
     if not metrics and (run_path / 'final_portfolio' / 'README.md').exists():
         try:
             with open(run_path / 'final_portfolio' / 'README.md', 'r') as f:
                 readme_text = f.read()
-                # Ищем строки с метриками в формате "- Ожидаемая доходность: XX.XX%"
                 metric_lines = [line for line in readme_text.split('\n') if line.startswith('- ') and ':' in line]
                 for line in metric_lines:
                     parts = line.split(':', 1)
                     if len(parts) == 2:
                         key = parts[0].replace('-', '').strip().lower().replace(' ', '_')
                         value_str = parts[1].strip()
-                        # Попробуем извлечь числовое значение
                         if '%' in value_str:
                             value_str = value_str.replace('%', '')
                             try:
@@ -509,7 +466,6 @@ def get_report_images(run_path: Path) -> Dict[str, str]:
     image_data = {}
     report_files = collect_portfolio_report_files(run_path)
     
-    # Извлекаем изображения
     for report_type, file_path in report_files.items():
         if file_path and file_path.exists() and file_path.suffix.lower() in ['.png', '.jpg', '.jpeg', '.gif']:
             try:
@@ -533,16 +489,13 @@ def format_portfolio_summary(weights: Dict[str, float], metrics: Dict[str, float
     Returns:
         Отформатированный текстовый отчет
     """
-    # Форматируем отчет в MarkDown формате
     output = "```\n"
     output += "╔═══════════════════════════════════════════════════╗\n"
     output += "║                ИНВЕСТИЦИОННЫЙ ПОРТФЕЛЬ             ║\n"
     output += "╚═══════════════════════════════════════════════════╝\n\n"
     
-    # Метрики портфеля
     output += "┌─────────────── КЛЮЧЕВЫЕ ПОКАЗАТЕЛИ ───────────────┐\n"
     
-    # Преобразуем метрики и форматируем их
     metric_labels = {
         'expected_return': 'Ожидаемая доходность',
         'expected_volatility': 'Ожидаемая волатильность',
@@ -558,19 +511,16 @@ def format_portfolio_summary(weights: Dict[str, float], metrics: Dict[str, float
         'коэффициент_шарпа': 'Коэффициент Шарпа'
     }
     
-    # Форматируем метрики
-     # Форматируем метрики
     for key, label in metric_labels.items():
         if key in metrics:
             value = metrics[key]
             if key in ['expected_return', 'expected_volatility', 'annual_return', 'annual_volatility', 'max_drawdown', 'win_rate']:
-                output += f"│ {label:30} │ {value*100:7.2f}% │\n"  # Проверьте форматирование
+                output += f"│ {label:30} │ {value*100:7.2f}% │\n"
             else:
                 output += f"│ {label:30} │ {value:7.2f}  │\n"
     
     output += "└───────────────────────────────────────────────────┘\n\n"
     
-    # Разделение активов на группы
     stocks = {}
     bonds = {}
     shorts = {}
@@ -578,7 +528,7 @@ def format_portfolio_summary(weights: Dict[str, float], metrics: Dict[str, float
     
     for ticker, weight in weights.items():
         if ticker == 'RISK_FREE':
-            continue  # Пропускаем RISK_FREE для отдельной секции
+            continue
         if 'ОФЗ' in ticker or 'OFZ' in ticker or ticker.startswith('RU000') or 'Bond' in ticker:
             bonds[ticker] = weight
         elif weight < 0:
@@ -587,11 +537,9 @@ def format_portfolio_summary(weights: Dict[str, float], metrics: Dict[str, float
             stocks[ticker] = weight
         else:
             other[ticker] = weight
-    
-    # Доля безрисковых активов
+
     risk_free_weight = weights.get('RISK_FREE', 0)
     
-    # Распределение активов
     output += "┌──────────── РАСПРЕДЕЛЕНИЕ ПОРТФЕЛЯ ────────────┐\n"
     output += f"│ Безрисковые активы (облигации): {risk_free_weight*100:7.2f}%    │\n"
     output += f"│ Акции (длинные позиции):       {sum(stocks.values())*100:7.2f}%    │\n"
@@ -604,31 +552,25 @@ def format_portfolio_summary(weights: Dict[str, float], metrics: Dict[str, float
         
     output += "└───────────────────────────────────────────────┘\n\n"
     
-    # Состав портфеля
     output += "┌─────────────── СОСТАВ ПОРТФЕЛЯ ───────────────┐\n"
     output += "│ Тикер            │  Вес   │        Тип        │\n"
     output += "├──────────────────┼────────┼───────────────────┤\n"
     
-    # Сначала выводим RISK_FREE
     if risk_free_weight > 0:
         output += f"│ RISK_FREE        │ {risk_free_weight*100:6.2f}% │ Безрисковые активы │\n"
     
-    # Затем сортированные по весу акции (длинные позиции)
     for ticker, weight in sorted(stocks.items(), key=lambda x: x[1], reverse=True):
         type_label = "Акции (длинные)"
         output += f"│ {ticker:16} │ {weight*100:6.2f}% │ {type_label:17} │\n"
     
-    # Затем короткие позиции
     for ticker, weight in sorted(shorts.items(), key=lambda x: x[1]):
         type_label = "Акции (короткие)"
         output += f"│ {ticker:16} │ {weight*100:6.2f}% │ {type_label:17} │\n"
     
-    # Затем облигации (кроме RISK_FREE)
     for ticker, weight in sorted(bonds.items(), key=lambda x: x[1], reverse=True):
         type_label = "Облигации"
         output += f"│ {ticker:16} │ {weight*100:6.2f}% │ {type_label:17} │\n"
     
-    # Затем прочие активы
     for ticker, weight in sorted(other.items(), key=lambda x: x[1], reverse=True):
         type_label = "Прочие активы"
         output += f"│ {ticker:16} │ {weight*100:6.2f}% │ {type_label:17} │\n"
@@ -649,17 +591,14 @@ def generate_full_report(run_path: Path) -> Dict[str, Any]:
     Returns:
         Словарь с данными отчета
     """
-    # Извлекаем данные о портфеле
+
     weights, metrics = extract_portfolio_data(run_path)
     
-    # Получаем графики в формате base64
     images = get_report_images(run_path)
     
-    # Форматируем текстовый отчет
     text_report = format_portfolio_summary(weights, metrics)
     
-    # Определяем тип портфеля на основе данных
-    portfolio_type = "balanced"  # по умолчанию
+    portfolio_type = "balanced"
     if any(weight < 0 for weight in weights.values()):
         if sum(weight for weight in weights.values() if weight > 0) > 0.8:
             portfolio_type = "combined"
@@ -670,10 +609,8 @@ def generate_full_report(run_path: Path) -> Dict[str, Any]:
     elif weights.get('RISK_FREE', 0) < 0.3:
         portfolio_type = "aggressive"
     
-    # Формируем рекомендации на основе типа портфеля и метрик
     recommendations = generate_recommendations(portfolio_type, metrics, weights)
     
-    # Объединяем все в один отчет
     report = {
         "weights": weights,
         "metrics": metrics,
@@ -701,7 +638,6 @@ def generate_recommendations(portfolio_type: str, metrics: Dict[str, float], wei
     """
     recommendations = []
     
-    # Базовые рекомендации в зависимости от типа портфеля
     if portfolio_type == "conservative":
         recommendations.append("Этот консервативный портфель подходит для сохранения капитала с умеренным ростом.")
         recommendations.append("Рекомендуется для горизонта инвестирования от 1 года.")
@@ -718,7 +654,6 @@ def generate_recommendations(portfolio_type: str, metrics: Dict[str, float], wei
         recommendations.append("Комбинированный портфель сочетает длинные и короткие позиции для улучшения соотношения риск-доходность.")
         recommendations.append("Рекомендуется для инвесторов, стремящихся к рыночно-нейтральным стратегиям.")
     
-    # Дополнительные рекомендации на основе метрик
     expected_return = metrics.get('expected_return', metrics.get('annual_return', 0))
     volatility = metrics.get('expected_volatility', metrics.get('annual_volatility', 0))
     sharpe = metrics.get('sharpe_ratio', 0)
@@ -738,7 +673,6 @@ def generate_recommendations(portfolio_type: str, metrics: Dict[str, float], wei
     if max_drawdown > 0.3:
         recommendations.append("Портфель демонстрирует высокую просадку. Для снижения просадок рекомендуется увеличить диверсификацию.")
     
-    # Рекомендации по оптимальному количеству активов
     risk_free_weight = weights.get('RISK_FREE', 0)
     stock_count = sum(1 for ticker, weight in weights.items() if weight > 0 and ticker != 'RISK_FREE')
     
@@ -747,7 +681,6 @@ def generate_recommendations(portfolio_type: str, metrics: Dict[str, float], wei
     elif stock_count > 15:
         recommendations.append("Портфель высоко диверсифицирован. Это снижает потенциал как больших потерь, так и значительного роста.")
     
-    # Общие рекомендации
     recommendations.append("Регулярно пересматривайте состав портфеля (не реже раза в квартал).")
     
     if portfolio_type in ["short", "combined"]:
@@ -776,8 +709,6 @@ def _save_portfolio_results(user_id: int, weights: dict, metrics: dict, strategy
     finally:
         db_save.close()
 
-
-# --- Обновление Портфеля Пользователя ---
 def run_user_portfolio_update(user_id: int, is_initial: bool = False) -> Optional[Tuple[Optional[Dict], Optional[Dict], bool, Optional[Dict]]]:
     """
     Запускает пайплайн генерации портфеля для пользователя.
@@ -806,7 +737,6 @@ def run_user_portfolio_update(user_id: int, is_initial: bool = False) -> Optiona
             logger.warning(f"User {user_id} is not active. Skipping.")
             return None, None, False, None
 
-        # Получаем или устанавливаем риск-профиль
         strategy_profile = db_user.risk_profile
         if not strategy_profile:
             logger.warning(f"User {user_id} has no risk profile. Assigning 'moderate'.")
@@ -818,12 +748,10 @@ def run_user_portfolio_update(user_id: int, is_initial: bool = False) -> Optiona
                 logger.error(f"Could not assign default profile to user {user_id}: {profile_err}")
                 return None, None, False, None
 
-        # Получаем или создаем предпочтения
         preferences = crud.get_user_preferences(db, user_id)
         if not preferences:
             logger.warning(f"User {user_id} preferences not found. Creating defaults.")
             try:
-                # Получаем дефолтное allow_short из params.py на основе профиля
                 default_allow_short = PORTFOLIO_PARAMS.get(strategy_profile, {}).get('allow_short', False)
                 preferences = crud.create_or_update_preferences(db, user_id, allow_short=default_allow_short)
                 if not preferences: raise Exception("Failed to create default preferences.")
@@ -838,94 +766,94 @@ def run_user_portfolio_update(user_id: int, is_initial: bool = False) -> Optiona
         logger.exception(f"Database error fetching user {user_id} data: {db_err}")
         return None, None, False, None
     finally:
-        db.close() # Закрываем сессию
+        db.close()
 
     # --- 2. MOCK Режим (если включен) ---
-    if MOCK_PIPELINES:
-        logger.warning(f"[MOCK] Simulating portfolio {operation.lower()} for user {user_id} ({strategy_profile}).")
-        time.sleep(random.uniform(5, 10)) # Имитация
+    # if MOCK_PIPELINES:
+    #     logger.warning(f"[MOCK] Simulating portfolio {operation.lower()} for user {user_id} ({strategy_profile}).")
+    #     time.sleep(random.uniform(5, 10)) # Имитация
 
-        # Логика генерации мок-портфеля
-        mock_weights = {}
-        mock_tickers = ['SBER', 'GAZP', 'LKOH', 'NVTK', 'YNDX', 'POLY', 'PLZL', 'MGNT', 'TATN', 'ROSN']
-        num_stocks = random.randint(preferences.max_stocks // 2, preferences.max_stocks)
-        num_bonds = random.randint(preferences.max_bonds // 2, preferences.max_bonds)
-        sampled_stocks = random.sample(mock_tickers, num_stocks)
-        bond_tickers = [f"OFZ-{random.randint(26200, 26240)}" for _ in range(num_bonds)]
+    #     # Логика генерации мок-портфеля
+    #     mock_weights = {}
+    #     mock_tickers = ['SBER', 'GAZP', 'LKOH', 'NVTK', 'YNDX', 'POLY', 'PLZL', 'MGNT', 'TATN', 'ROSN']
+    #     num_stocks = random.randint(preferences.max_stocks // 2, preferences.max_stocks)
+    #     num_bonds = random.randint(preferences.max_bonds // 2, preferences.max_bonds)
+    #     sampled_stocks = random.sample(mock_tickers, num_stocks)
+    #     bond_tickers = [f"OFZ-{random.randint(26200, 26240)}" for _ in range(num_bonds)]
 
-        # РАСЧЕТ ВЕСОВ (упрощенный, как в старом коде)
-        total_weight = 0
-        base_params = PORTFOLIO_PARAMS.get(strategy_profile, PORTFOLIO_PARAMS['moderate']) # Параметры для профиля
+    #     # РАСЧЕТ ВЕСОВ (упрощенный, как в старом коде)
+    #     total_weight = 0
+    #     base_params = PORTFOLIO_PARAMS.get(strategy_profile, PORTFOLIO_PARAMS['moderate']) # Параметры для профиля
 
-        # Доли облигаций
-        target_bond_weight = random.uniform(base_params['min_rf_allocation'], base_params['max_rf_allocation'])
-        current_bond_weight = 0
-        bond_weights_raw = {}
-        for ticker in bond_tickers:
-            w_bond = random.uniform(0.03, 0.1)
-            bond_weights_raw[ticker] = w_bond
-            current_bond_weight += w_bond
-        # Масштабируем облигации
-        if current_bond_weight > 0:
-            scale_factor_bonds = target_bond_weight / current_bond_weight
-            for ticker, w_bond in bond_weights_raw.items():
-                scaled_w = w_bond * scale_factor_bonds
-                mock_weights[ticker] = scaled_w
-                total_weight += scaled_w
+    #     # Доли облигаций
+    #     target_bond_weight = random.uniform(base_params['min_rf_allocation'], base_params['max_rf_allocation'])
+    #     current_bond_weight = 0
+    #     bond_weights_raw = {}
+    #     for ticker in bond_tickers:
+    #         w_bond = random.uniform(0.03, 0.1)
+    #         bond_weights_raw[ticker] = w_bond
+    #         current_bond_weight += w_bond
+    #     # Масштабируем облигации
+    #     if current_bond_weight > 0:
+    #         scale_factor_bonds = target_bond_weight / current_bond_weight
+    #         for ticker, w_bond in bond_weights_raw.items():
+    #             scaled_w = w_bond * scale_factor_bonds
+    #             mock_weights[ticker] = scaled_w
+    #             total_weight += scaled_w
 
-        # Доли акций (остаток)
-        stock_weight_target = 1.0 - sum(mock_weights.get(bt, 0) for bt in bond_tickers)
-        current_stock_weight = 0
-        stock_weights_raw = {}
-        for ticker in sampled_stocks:
-            w_stock = random.uniform(0.02, base_params['max_weight'] * 0.8) # Чуть меньше макс веса
-            stock_weights_raw[ticker] = w_stock
-            current_stock_weight += w_stock
-        # Масштабируем акции
-        if current_stock_weight > 0:
-            scale_factor_stocks = stock_weight_target / current_stock_weight
-            for ticker, w_stock in stock_weights_raw.items():
-                scaled_w = w_stock * scale_factor_stocks
-                mock_weights[ticker] = min(scaled_w, base_params['max_weight']) # Ограничиваем макс вес
-                total_weight += mock_weights[ticker]
+    #     # Доли акций (остаток)
+    #     stock_weight_target = 1.0 - sum(mock_weights.get(bt, 0) for bt in bond_tickers)
+    #     current_stock_weight = 0
+    #     stock_weights_raw = {}
+    #     for ticker in sampled_stocks:
+    #         w_stock = random.uniform(0.02, base_params['max_weight'] * 0.8) # Чуть меньше макс веса
+    #         stock_weights_raw[ticker] = w_stock
+    #         current_stock_weight += w_stock
+    #     # Масштабируем акции
+    #     if current_stock_weight > 0:
+    #         scale_factor_stocks = stock_weight_target / current_stock_weight
+    #         for ticker, w_stock in stock_weights_raw.items():
+    #             scaled_w = w_stock * scale_factor_stocks
+    #             mock_weights[ticker] = min(scaled_w, base_params['max_weight']) # Ограничиваем макс вес
+    #             total_weight += mock_weights[ticker]
 
-        # Финальная нормализация
-        final_total = sum(mock_weights.values())
-        if final_total > 0:
-            mock_weights = {k: round(v / final_total, 4) for k, v in mock_weights.items() if v / final_total > 0.001}
+    #     # Финальная нормализация
+    #     final_total = sum(mock_weights.values())
+    #     if final_total > 0:
+    #         mock_weights = {k: round(v / final_total, 4) for k, v in mock_weights.items() if v / final_total > 0.001}
 
-        # Метрики
-        mock_metrics = {
-            'expected_return': round(random.uniform(0.05, 0.15) if strategy_profile == 'conservative' else random.uniform(0.10, 0.25), 4),
-            'volatility': round(random.uniform(0.08, 0.18) if strategy_profile == 'conservative' else random.uniform(0.15, 0.30), 4),
-            'sharpe_ratio': round(random.uniform(0.4, 0.9) if strategy_profile == 'conservative' else random.uniform(0.6, 1.5), 2)
-        }
+    #     # Метрики
+    #     mock_metrics = {
+    #         'expected_return': round(random.uniform(0.05, 0.15) if strategy_profile == 'conservative' else random.uniform(0.10, 0.25), 4),
+    #         'volatility': round(random.uniform(0.08, 0.18) if strategy_profile == 'conservative' else random.uniform(0.15, 0.30), 4),
+    #         'sharpe_ratio': round(random.uniform(0.4, 0.9) if strategy_profile == 'conservative' else random.uniform(0.6, 1.5), 2)
+    #     }
         
-        # Создаем мок-отчет
-        mock_report = {
-            "weights": mock_weights,
-            "metrics": mock_metrics,
-            "images": {},  # Пустой словарь для изображений
-            "text_report": format_portfolio_summary(mock_weights, mock_metrics),
-            "portfolio_type": strategy_profile,
-            "recommendations": generate_recommendations(strategy_profile, mock_metrics, mock_weights),
-            "generated_at": datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        }
+    #     # Создаем мок-отчет
+    #     mock_report = {
+    #         "weights": mock_weights,
+    #         "metrics": mock_metrics,
+    #         "images": {},  # Пустой словарь для изображений
+    #         "text_report": format_portfolio_summary(mock_weights, mock_metrics),
+    #         "portfolio_type": strategy_profile,
+    #         "recommendations": generate_recommendations(strategy_profile, mock_metrics, mock_weights),
+    #         "generated_at": datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    #     }
         
-        logger.info(f"[MOCK] Simulation finished for user {user_id}. Weights: {len(mock_weights)} assets.")
-        # Имитация проверки изменений
-        significant_changes = True if is_initial else random.choice([True, False, False])
+    #     logger.info(f"[MOCK] Simulation finished for user {user_id}. Weights: {len(mock_weights)} assets.")
+    #     # Имитация проверки изменений
+    #     significant_changes = True if is_initial else random.choice([True, False, False])
         
-        # Сохранение мок-портфеля в БД
-        _save_portfolio_results(user_id, mock_weights, mock_metrics, strategy_profile, "MOCK_Portfolio")
+    #     # Сохранение мок-портфеля в БД
+    #     _save_portfolio_results(user_id, mock_weights, mock_metrics, strategy_profile, "MOCK_Portfolio")
         
-        return mock_weights, mock_metrics, significant_changes, mock_report
+    #     return mock_weights, mock_metrics, significant_changes, mock_report
 
 
     # --- 3. РЕАЛЬНЫЙ ЗАПУСК PipelineExecutor ---
     try:
         # --- 3.1 Получение данных KBD ---
-        kbd_data = get_cached_kbd_data() # Используем кэш
+        kbd_data = get_cached_kbd_data()
         if kbd_data.empty:
             logger.error("KBD data not available for bond processing. Cannot generate portfolio.")
             return None, None, False, None
@@ -938,7 +866,6 @@ def run_user_portfolio_update(user_id: int, is_initial: bool = False) -> Optiona
         logger.info(f"Using tickers for user {user_id}: {tickers_final_list}")
 
         # --- 3.3 Инициализация PipelineExecutor ---
-        # Адаптация основных параметров под профиль
         portfolio_base_params = PORTFOLIO_PARAMS.get(strategy_profile, PORTFOLIO_PARAMS['moderate'])
         executor_init_params = {
             'base_path': str(PROJECT_ROOT),
@@ -949,7 +876,7 @@ def run_user_portfolio_update(user_id: int, is_initial: bool = False) -> Optiona
             'max_rf_allocation': portfolio_base_params['max_rf_allocation'],
             'risk_free_rate': COMMON_PARAMS['risk_free_rate'],
             'max_weight': portfolio_base_params['max_weight'],
-            #min_assets': 5,
+            # min_assets': 5,
             #'max_assets': preferences.max_stocks
             'max_assets': portfolio_base_params['max_assets'],
             'min_assets': portfolio_base_params['min_assets'],
@@ -993,7 +920,6 @@ def run_user_portfolio_update(user_id: int, is_initial: bool = False) -> Optiona
         # --- 3.5 Основной пайплайн (генерация, оптимизация) ---
         logger.info(f"Running main portfolio pipeline for user {user_id}...")
 
-        # Формируем параметры для каждого типа портфеля
         standard_portfolio_params = {
             'risk_free_rate': COMMON_PARAMS['risk_free_rate'],
             'min_rf_allocation': portfolio_base_params['min_rf_allocation'],
@@ -1007,7 +933,7 @@ def run_user_portfolio_update(user_id: int, is_initial: bool = False) -> Optiona
             'train_period': COMMON_PARAMS['train_period'],
             'test_period': COMMON_PARAMS['test_period'],
             'best_params_file': None,
-            'verify_with_honest_backtest': False # Для скорости
+            'verify_with_honest_backtest': False
         }
         
         combined_portfolio_params = {
@@ -1029,14 +955,13 @@ def run_user_portfolio_update(user_id: int, is_initial: bool = False) -> Optiona
                 short_portfolio_params=short_portfolio_params,
                 combined_portfolio_params=combined_portfolio_params,
                 optimization_params=OPTIMIZATION_PARAMS,
-                # Отключение честного бэктеста для скорости
                 portfolio_controls={
                     'run_standard_portfolio': True,
                     'run_short_portfolio': preferences.allow_short,
                     'run_combined_portfolio': preferences.allow_short and strategy_profile in ['moderate', 'aggressive'],
                     'override_risk_profile': False
                 },
-                select_portfolio_params=SELECT_PARAMS_BY_PROFILE[strategy_profile], # Выбор по профилю
+                select_portfolio_params=SELECT_PARAMS_BY_PROFILE[strategy_profile],
                 report_params={
                     'include_charts': True,
                     'include_metrics': True,
@@ -1110,11 +1035,9 @@ def run_user_portfolio_update(user_id: int, is_initial: bool = False) -> Optiona
             logger.error(f"Failed to save portfolio results to DB for user {user_id}. Returning result anyway.")
 
         # --- 4.3 Генерация полного отчета ---
-        # Получаем путь к директории с результатами пайплайна
         run_path = Path(pipeline_results.get('run_dir', ''))
         if not run_path.exists():
             logger.warning(f"Results directory not found: {run_path}. Will create basic report.")
-            # Создаем базовый отчет без визуализаций
             report = {
                 "weights": final_weights,
                 "metrics": final_metrics,
@@ -1136,9 +1059,6 @@ def run_user_portfolio_update(user_id: int, is_initial: bool = False) -> Optiona
     except Exception as e:
         logger.exception(f"Unhandled exception during portfolio update for user {user_id}: {e}")
         return None, None, False, None
-
-
-# --- Вспомогательные Функции ---
 
 def check_significant_portfolio_changes(old_weights: Optional[dict], new_weights: dict, threshold=0.05) -> bool:
     """Сравнивает два словаря весов."""

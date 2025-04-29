@@ -8,17 +8,6 @@ import logging
 import sys
 
 from pys.data_collection.technical_indicators import TechnicalIndicators
-  
-# current_dir = os.path.dirname(os.path.abspath(__file__))
-# while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
-#     current_dir = os.path.dirname(current_dir)
-# if current_dir not in sys.path:
-#     sys.path.insert(0, current_dir)
-# from utils.logger import BaseLogger
-
-# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
-# from private_info import BASE_PATH
-
 from pys.utils.logger import BaseLogger
 from pys.data_collection.private_info import BASE_PATH
 
@@ -185,11 +174,9 @@ class TechAnalysisPipeline(BaseLogger):
                 summary_lines.append(f"  {indicator} -&gt; {param_info} | Пропущено: {missing} из {total} записей")
             summary_lines.append("-" * 50)
 
-        # Создаем директорию summaries, если она не существует
         summary_dir = os.path.join(self.base_dir, "data", "summaries")
         os.makedirs(summary_dir, exist_ok=True)
         
-        # Формируем путь к файлу в новой директории
         report_path = os.path.join(summary_dir, "tech_analysis_summary.txt")
         
         with open(report_path, "w", encoding="utf-8") as f:

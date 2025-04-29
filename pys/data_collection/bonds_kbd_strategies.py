@@ -121,7 +121,6 @@ class KBDRateExpectationStrategy(BondStrategy):
         
         df = bonds_df.copy()
         
-        # Получаем ключевые показатели КБД для разных сроков
         kbd_values = self.kbd_metrics.get('kbd_values', {})
         
         try:

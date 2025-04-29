@@ -32,17 +32,14 @@ class MarketCapParser(BaseLogger):
         """
         self.logger.info(f"Запрос данных о капитализации с MOEX API {'для выбранных тикеров' if tickers else 'для всех тикеров'}")
         
-        # URL для получения данных по основному рынку акций
         url = "https://iss.moex.com/iss/engines/stock/markets/shares/boards/TQBR/securities.json"
         
-        # Параметры запроса
         params = {
             "iss.meta": "off",  # Отключаем мета-информацию
             "iss.only": "securities",  # Запрашиваем только секцию securities
             "securities.columns": "SECID,PREVPRICE,ISSUESIZE,ISSUECAPITALIZATION,MARKETVALUE"
         }
         
-        # Выполняем запрос
         try:
             response = requests.get(url, params=params)
             response.raise_for_status()  # Проверяем на ошибки
@@ -51,15 +48,12 @@ class MarketCapParser(BaseLogger):
             self.logger.error(f"Ошибка при запросе данных: {e}")
             return pd.DataFrame(columns=["ticker", "market_cap"])
         
-        # Преобразуем в DataFrame
         df = pd.DataFrame(data["securities"]["data"], 
                          columns=data["securities"]["columns"])
         
-        # Создаем итоговый DataFrame
         result_df = pd.DataFrame()
         result_df["ticker"] = df["SECID"]
         
-        # Используем готовую капитализацию из API, если она есть
         if "MARKETVALUE" in df.columns and not df["MARKETVALUE"].isnull().all():
             result_df["market_cap"] = df["MARKETVALUE"]
         elif "ISSUECAPITALIZATION" in df.columns and not df["ISSUECAPITALIZATION"].isnull().all():
@@ -68,15 +62,12 @@ class MarketCapParser(BaseLogger):
             # Рассчитываем капитализацию как цена * количество акций
             result_df["market_cap"] = df["PREVPRICE"] * df["ISSUESIZE"]
         
-        # Удаляем строки с пустыми значениями капитализации
         result_df = result_df.dropna(subset=["market_cap"])
         
-        # Фильтруем по списку тикеров, если он предоставлен
         if tickers:
-            tickers_upper = [t.upper() for t in tickers]  # Переводим в верхний регистр для надежности
+            tickers_upper = [t.upper() for t in tickers]
             result_df = result_df[result_df["ticker"].isin(tickers_upper)]
             
-            # Проверяем, все ли запрошенные тикеры найдены
             found_tickers = set(result_df["ticker"].tolist())
             missing_tickers = set(tickers_upper) - found_tickers
             if missing_tickers:
@@ -92,14 +83,11 @@ class MarketCapParser(BaseLogger):
         :param ticker: Тикер компании
         :param market_cap: Значение капитализации
         """
-        # Создаем директорию для тикера
         ticker_dir = os.path.join(self.processed_data_dir, ticker, "market_cap")
         os.makedirs(ticker_dir, exist_ok=True)
         
-        # Путь к файлу с капитализацией
         cap_file = os.path.join(ticker_dir, "cap.csv")
         
-        # Создаем и сохраняем DataFrame с капитализацией
         cap_df = pd.DataFrame({
             "ticker": [ticker],
             "market_cap": [market_cap]

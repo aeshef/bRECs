@@ -10,20 +10,6 @@ import json
 import re
 import sys
 
-# current_dir = os.path.dirname(os.path.abspath(__file__))
-# while os.path.basename(current_dir) != 'pys' and current_dir != os.path.dirname(current_dir):
-#     current_dir = os.path.dirname(current_dir)
-#     if current_dir == os.path.dirname(current_dir):
-#         break
-
-# if current_dir not in sys.path:
-#     sys.path.insert(0, current_dir)
-
-# from utils.logger import BaseLogger
-
-# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
-# from private_info import BASE_PATH
-
 from pys.utils.logger import BaseLogger
 from pys.data_collection.private_info import BASE_PATH
 
@@ -49,9 +35,7 @@ class BondsProcessor(BaseLogger):
         try:
             files = [f for f in os.listdir(self.bonds_dir) if f.endswith('.csv') or f.endswith('.txt')]
             
-            # Extract date from filename pattern
             def extract_date(filename):
-                # Try different date patterns in filenames
                 date_patterns = [
                     r'(\d{4}-\d{2}-\d{2})',  # YYYY-MM-DD
                     r'(\d{8})',              # YYYYMMDD
@@ -72,7 +56,6 @@ class BondsProcessor(BaseLogger):
                         except ValueError:
                             pass
                 
-                # If no date found in filename, use file modification time
                 file_path = os.path.join(self.bonds_dir, filename)
                 mod_time = os.path.getmtime(file_path)
                 return datetime.fromtimestamp(mod_time)
@@ -133,10 +116,8 @@ class BondsProcessor(BaseLogger):
         self.logger.info(f"Loading direct data from {self.direct_data_file}")
         
         try:
-            # Загружаем данные
             dataset = pd.read_csv(self.direct_data_file)
             
-            # Сохраняем параметры фильтрации
             self.filter_params = {
                 'min_yield': min_yield,
                 'max_yield': max_yield,
@@ -150,10 +131,8 @@ class BondsProcessor(BaseLogger):
                 'use_latest_snapshot_only': use_latest_snapshot_only
             }
             
-            # Определяем идентификационную колонку
             id_col = 'secid' if 'secid' in dataset.columns else dataset.columns[0]
             
-            # Стандартизируем имена колонок
             column_mapping = {
                 'secid': 'security_code',
                 'name': 'full_name',
@@ -165,21 +144,17 @@ class BondsProcessor(BaseLogger):
                 'value': 'trading_value'
             }
             
-            # Переименовываем колонки, которые существуют в датасете
             rename_cols = {k: v for k, v in column_mapping.items() 
                           if k in dataset.columns and v not in dataset.columns}
             if rename_cols:
                 dataset = dataset.rename(columns=rename_cols)
                 self.logger.info(f"Renamed columns: {rename_cols}")
                 
-            # Добавляем колонку duration_years, если её нет
             if 'duration_years' not in dataset.columns:
                 if 'duration_months' in dataset.columns:
-                    # Преобразуем месяцы в годы
                     dataset['duration_years'] = dataset['duration_months'] / 12
                     self.logger.info("Created duration_years column from duration_months")
                 elif 'duration' in dataset.columns:
-                    # Определяем, в чём измеряется duration на основе максимального значения
                     max_duration = dataset['duration'].max()
                     if pd.notnull(max_duration):
                         if max_duration > 100:  # Если в днях
@@ -193,8 +168,6 @@ class BondsProcessor(BaseLogger):
                                 dataset['duration_years'] = dataset['duration']
                                 self.logger.info("Created duration_years column from duration (already in years)")
             
-                        ## В методе process_direct_data добавьте следующий код для обработки даты
-            # Обрабатываем колонку даты снапшота
             if 'date' in dataset.columns and 'snapshot_date' not in dataset.columns:
                 dataset['snapshot_date'] = pd.to_datetime(dataset['date'], errors='coerce')
                 self.logger.info("Created snapshot_date from date column")
@@ -203,20 +176,16 @@ class BondsProcessor(BaseLogger):
                 self.logger.info("Converted snapshot_date to datetime")
 
             
-            # Используем только последний снапшот, если нужно
             if use_latest_snapshot_only and 'snapshot_date' in dataset.columns:
                 latest_date = dataset['snapshot_date'].max()
                 dataset = dataset[dataset['snapshot_date'] == latest_date]
                 self.logger.info(f"Filtered data to use only latest snapshot: {latest_date}")
                 
-            # Применяем фильтры
             filtered_data = self._apply_custom_filters(dataset)
             
-            # Рассчитываем метрики
             self.processed_bonds = self.calculate_bond_metrics(filtered_data, score_weights)
             self.logger.info(f"Processed {len(self.processed_bonds)} bonds from direct data")
             
-            # Определяем рыночные условия
             self.market_condition = self._detect_market_condition()
             self.logger.info(f"Detected market condition: {self.market_condition}")
             
@@ -326,7 +295,6 @@ class BondsProcessor(BaseLogger):
                                   excluded_bonds=None,
                                   include_only=None):
         """Load and process all bond files with filter criteria"""
-        # Если указан прямой файл с данными, используем его
         if self.direct_data_file:
             return self.process_direct_data(
                 min_yield=min_yield,
@@ -344,7 +312,6 @@ class BondsProcessor(BaseLogger):
         self.logger.info(f"Starting to load and process bond data from {self.bonds_dir}")
         bond_snapshots = []
         
-        # Store the filter parameters
         self.filter_params = {
             'date_range': date_range,
             'use_latest_snapshot_only': use_latest_snapshot_only,
@@ -363,24 +330,20 @@ class BondsProcessor(BaseLogger):
             try:
                 file_path = os.path.join(self.bonds_dir, file)
                 
-                # Extract date from filename
                 match = re.search(r'(\d{4}-\d{2}-\d{2})', file)
                 if match:
                     date_str = match.group(1)
                     snapshot_date = datetime.strptime(date_str, '%Y-%m-%d')
                 else:
-                    # If no date in filename, try to get from file modification time
                     mod_time = os.path.getmtime(file_path)
                     snapshot_date = datetime.fromtimestamp(mod_time).replace(hour=0, minute=0, second=0, microsecond=0)
                 
-                # Filter by date range if specified
                 if date_range:
                     start_date = datetime.strptime(date_range[0], '%Y-%m-%d') if isinstance(date_range[0], str) else date_range[0]
                     end_date = datetime.strptime(date_range[1], '%Y-%m-%d') if isinstance(date_range[1], str) else date_range[1]
                     if snapshot_date < start_date or snapshot_date > end_date:
                         continue
                 
-                # Read the bond data - try different separators
                 try:
                     df = pd.read_csv(file_path, sep='\t', encoding='utf-8')
                 except:
@@ -390,16 +353,12 @@ class BondsProcessor(BaseLogger):
                         self.logger.warning(f"Could not read file {file} with standard separators")
                         continue
                 
-                # Check if this is the expected format
                 if ('secid' in df.columns and 'yield' in df.columns) or \
                    ('security_code' in df.columns and 'yield' in df.columns):
-                    # This is the expected format
                     df['snapshot_date'] = snapshot_date
                     
-                    # Standardize column names
                     df = self._standardize_moex_columns(df)
                     
-                    # Clean data types
                     df = self._clean_data_types_moex(df)
                     
                     bond_snapshots.append(df)
@@ -415,7 +374,6 @@ class BondsProcessor(BaseLogger):
             self.logger.error("No bond data found!")
             return pd.DataFrame()
             
-        # Combine all snapshots
         try:
             all_bonds = pd.concat(bond_snapshots, ignore_index=True)
             self.logger.info(f"Combined data for {len(all_bonds)} bond entries")
@@ -423,7 +381,6 @@ class BondsProcessor(BaseLogger):
             self.logger.error(f"Error combining data: {e}")
             return pd.DataFrame()
         
-        # Use only the latest snapshot if needed
         if use_latest_snapshot_only and 'snapshot_date' in all_bonds.columns:
             latest_date = all_bonds['snapshot_date'].max()
             all_bonds = all_bonds[all_bonds['snapshot_date'] == latest_date]
@@ -444,7 +401,6 @@ class BondsProcessor(BaseLogger):
     
     def _standardize_moex_columns(self, df):
         """Standardize column names from MOEX format"""
-        # Create a mapping for column names
         column_mapping = {
             'secid': 'security_code',
             'name': 'full_name',
@@ -462,18 +418,15 @@ class BondsProcessor(BaseLogger):
             'accint': 'accrued_interest'
         }
         
-        # Rename only existing columns
         rename_cols = {k: v for k, v in column_mapping.items() if k in df.columns}
         df = df.rename(columns=rename_cols)
         
-        # Log transformed columns
         self.logger.info(f"Standardized columns: {list(rename_cols.values())}")
         
         return df
         
     def _clean_data_types_moex(self, df):
         """Clean and convert data types for MOEX format"""
-        # Convert numeric columns
         numeric_cols = ['price_pct', 'yield', 'duration_months', 'trading_volume', 
                        'trading_value', 'coupon_rate', 'coupon_value', 'nominal_value']
         
@@ -481,21 +434,17 @@ class BondsProcessor(BaseLogger):
             if col in df.columns:
                 df[col] = pd.to_numeric(df[col], errors='coerce')
         
-        # Convert date columns
         date_cols = ['expiration_date', 'trade_date', 'offer_date']
         for col in date_cols:
             if col in df.columns:
                 df[col] = pd.to_datetime(df[col], errors='coerce')
         
-        # Convert duration from months to years if it exists
         if 'duration_months' in df.columns:
-            # In MOEX data, duration is often already in years
             if df['duration_months'].max() < 100:  # If max duration < 100, it's likely already in years
                 df['duration_years'] = df['duration_months']
             else:
                 df['duration_years'] = df['duration_months'] / 12
                 
-        # Check if we need to calculate tax benefit (not explicitly provided in MOEX data)
         if 'tax_benefit' not in df.columns:
             # Add a placeholder. In real implementation, this would need proper logic
             df['tax_benefit'] = False
@@ -697,24 +646,19 @@ class BondsProcessor(BaseLogger):
             else:
                 top_candidates = bond_pool.head(expanded_n)
             
-            # Apply portfolio stability logic
             top_bonds = self._apply_portfolio_stability(top_candidates, n_bonds, portfolio_stability)
             
-            # Create summary for portfolio inclusion
             columns_to_keep = ['security_code', 'full_name', 'yield', 'duration_years', 
                              'risk_adjusted_yield', 'bond_score', 'price_pct', 'currency']
             columns_to_keep = [col for col in columns_to_keep if col in top_bonds.columns]
             
             bond_summary = top_bonds[columns_to_keep].copy()
             
-            # Calculate weights based on strategy
             bond_summary = self._calculate_weights(bond_summary, weighting_strategy)
             
-            # Add market condition info
             bond_summary.attrs['market_condition'] = self.market_condition
             bond_summary.attrs['timestamp'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             
-            # Save current recommendations for future comparison
             self._save_current_recommendations(bond_summary)
             
             self.logger.info(f"Portfolio formed with {len(bond_summary)} bonds")
@@ -731,25 +675,19 @@ class BondsProcessor(BaseLogger):
             return candidates.nlargest(n_bonds, 'bond_score') if 'bond_score' in candidates.columns else candidates.head(n_bonds)
         
         try:
-            # Get previous recommendations
             prev_bonds = self.previous_recommendations['bonds']
             prev_codes = [b['security_code'] for b in prev_bonds if 'security_code' in b]
             
-            # Determine how many bonds to keep
             keep_n = int(n_bonds * stability)
             
-            # Find bonds that were in previous portfolio and are in current candidates
             kept_bonds = candidates[candidates['security_code'].isin(prev_codes)]
             
             if len(kept_bonds) > 0:
-                # Sort kept bonds by score
                 kept_bonds = kept_bonds.nlargest(min(keep_n, len(kept_bonds)), 'bond_score') if 'bond_score' in kept_bonds.columns else kept_bonds.head(min(keep_n, len(kept_bonds)))
                 
-                # Select new bonds, excluding those already kept
                 new_n = n_bonds - len(kept_bonds)
                 new_bonds = candidates[~candidates['security_code'].isin(kept_bonds['security_code'])].nlargest(new_n, 'bond_score') if 'bond_score' in candidates.columns else candidates[~candidates['security_code'].isin(kept_bonds['security_code'])].head(new_n)
                 
-                # Combine kept and new bonds
                 result = pd.concat([kept_bonds, new_bonds])
                 self.logger.info(f"Kept {len(kept_bonds)} bonds from previous portfolio, added {len(new_bonds)} new ones")
                 
@@ -810,7 +748,6 @@ class BondsProcessor(BaseLogger):
                 'bonds': bond_summary.to_dict(orient='records')
             }
             
-            # Save to JSON for future use
             with open(os.path.join(results_dir, 'latest_recommendations.json'), 'w') as f:
                 json.dump(recommendations, f, indent=2)
                 
@@ -825,12 +762,10 @@ class BondsProcessor(BaseLogger):
             return None
         
         try:
-            # Create directory for visualizations
             if output_dir is None:
                 output_dir = os.path.join(os.path.dirname(self.bonds_dir), 'visualizations')
             os.makedirs(output_dir, exist_ok=True)
             
-            # Get data for visualization
             if 'snapshot_date' in self.processed_bonds.columns:
                 latest_date = self.processed_bonds['snapshot_date'].max()
                 plot_bonds = self.processed_bonds[self.processed_bonds['snapshot_date'] == latest_date].copy()
@@ -843,13 +778,11 @@ class BondsProcessor(BaseLogger):
             if 'duration_years' in plot_bonds.columns and 'yield' in plot_bonds.columns:
                 plt.figure(figsize=(12, 8))
                 
-                # Main scatter plot - используем параметры в зависимости от доступных данных
                 scatter_params = {
                     'alpha': 0.7,
                     's': 100
                 }
                 
-                # Добавляем параметры для цветового отображения только если есть bond_score
                 if 'bond_score' in plot_bonds.columns and not plot_bonds['bond_score'].isna().all():
                     scatter_params['c'] = plot_bonds['bond_score']
                     scatter_params['cmap'] = 'viridis'
@@ -860,7 +793,6 @@ class BondsProcessor(BaseLogger):
                     **scatter_params
                 )
                 
-                # Highlight different currencies if available
                 if 'currency' in plot_bonds.columns:
                     currencies = plot_bonds['currency'].unique()
                     if len(currencies) > 1:
@@ -878,7 +810,6 @@ class BondsProcessor(BaseLogger):
                                 )
                         plt.legend()
                 
-                # Annotate top bonds
                 if 'bond_score' in plot_bonds.columns and len(plot_bonds) > 0:
                     # Берем не больше 5 облигаций, но не больше имеющихся
                     top_count = min(5, len(plot_bonds))
@@ -930,7 +861,6 @@ class BondsProcessor(BaseLogger):
         os.makedirs(output_dir, exist_ok=True)
         
         try:
-            # Calculate portfolio characteristics
             portfolio_stats = {
                 'number_of_bonds': len(portfolio),
                 'date': datetime.now().strftime('%Y-%m-%d')
@@ -945,7 +875,6 @@ class BondsProcessor(BaseLogger):
             if 'bond_score' in portfolio.columns:
                 portfolio_stats['avg_score'] = portfolio['bond_score'].mean()
             
-            # Create portfolio weights chart
             plt.figure(figsize=(10, 6))
             plt.bar(portfolio['security_code'], portfolio['weight'], color='teal', alpha=0.7)
             plt.title('Bond Portfolio Weights')
@@ -954,16 +883,13 @@ class BondsProcessor(BaseLogger):
             plt.xticks(rotation=45)
             plt.tight_layout()
             
-            # Save the chart
             weights_file = os.path.join(output_dir, f'portfolio_weights_{datetime.now().strftime("%Y%m%d")}.png')
             plt.savefig(weights_file, dpi=300, bbox_inches='tight')
             plt.close()
             
-            # Create risk/return plot
             if 'duration_years' in portfolio.columns and 'yield' in portfolio.columns:
                 plt.figure(figsize=(10, 6))
                 
-                # If we have the original bond universe, plot it as background
                 if self.processed_bonds is not None and len(self.processed_bonds) > 0:
                     plt.scatter(
                         self.processed_bonds['duration_years'], 
@@ -971,14 +897,12 @@ class BondsProcessor(BaseLogger):
                         alpha=0.3, s=30, color='gray', label='All bonds'
                     )
                 
-                # Plot portfolio bonds
                 plt.scatter(
                     portfolio['duration_years'],
                     portfolio['yield'],
                     alpha=0.8, s=100, color='blue', label='Portfolio bonds'
                 )
                 
-                # Annotate each bond
                 for _, bond in portfolio.iterrows():
                     plt.annotate(
                         bond['security_code'],
@@ -995,12 +919,10 @@ class BondsProcessor(BaseLogger):
                 plt.grid(True, alpha=0.3)
                 plt.legend()
                 
-                # Save the chart
                 risk_return_file = os.path.join(output_dir, f'portfolio_risk_return_{datetime.now().strftime("%Y%m%d")}.png')
                 plt.savefig(risk_return_file, dpi=300, bbox_inches='tight')
                 plt.close()
             
-            # Save portfolio statistics
             with open(os.path.join(output_dir, f'portfolio_stats_{datetime.now().strftime("%Y%m%d")}.json'), 'w') as f:
                 json.dump(portfolio_stats, f, indent=2)
             
@@ -1139,10 +1061,8 @@ def run_pipeline_bonds_processor(
             display_cols = [col for col in ['security_code', 'full_name', 'yield', 'duration_years', 'weight'] 
                         if col in portfolio.columns]
             
-            # Выводим портфель
             print(portfolio[display_cols])
             
-            # Сохраняем портфель
             portfolio_path = os.path.join(results_dir, f"bond_portfolio_{datetime.now().strftime('%Y%m%d')}.csv")
             portfolio.to_csv(portfolio_path, index=False)
             print(f"\nПортфель сохранен в {portfolio_path}")

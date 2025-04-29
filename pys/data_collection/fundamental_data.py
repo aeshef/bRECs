@@ -61,7 +61,6 @@ class SmartLabYearlyParser(BaseLogger):
         
         if not tables:
             self.logger.warning("No tables found on the page")
-            # Проверим, есть ли какие-то другие элементы, которые могут содержать данные
             divs = soup.find_all("div", class_="table")
             self.logger.debug(f"Found {len(divs)} div elements with class 'table'")
             return pd.DataFrame()
@@ -70,7 +69,6 @@ class SmartLabYearlyParser(BaseLogger):
         for i, table in enumerate(tables):
             try:
                 self.logger.debug(f"Attempting to parse table #{i+1}")
-                # Выведем первые 100 символов HTML таблицы для диагностики
                 self.logger.debug(f"Table HTML snippet: {str(table)[:100]}...")
                 df_list = pd.read_html(str(table), header=None, decimal=',')
                 if df_list:

@@ -4,9 +4,6 @@ import pandas as pd
 from scipy.optimize import minimize
 import sys
 
-# sys.path.append('/Users/aeshef/Documents/GitHub/kursach/pys/data_collection')
-# from private_info import BASE_PATH
-
 from pys.utils.logger import BaseLogger
 from pys.data_collection.private_info import BASE_PATH
 
@@ -42,12 +39,10 @@ def modify_signal_generator_for_shorts(signal_generator_class):
         self.df.loc[self.df['composite_score'] > self.threshold_buy, 'signal'] = 1  # Long
         self.df.loc[self.df['composite_score'] < self.threshold_sell, 'signal'] = -1  # Short
         
-        # Добавляем текстовое описание позиции
         self.df['position_type'] = 'Hold'
         self.df.loc[self.df['signal'] == 1, 'position_type'] = 'Long'
         self.df.loc[self.df['signal'] == -1, 'position_type'] = 'Short'
         
-        # Статистика по сигналам
         long_count = (self.df['signal'] == 1).sum()
         hold_count = (self.df['signal'] == 0).sum()
         short_count = (self.df['signal'] == -1).sum()
@@ -78,34 +73,26 @@ def modify_portfolio_optimizer_for_shorts(portfolio_optimizer_class):
         self.logger.info("Подготовка данных доходностей для оптимизации с учетом шортов")
         
         try:
-            # Фильтруем данные по shortlist, если есть
             filtered_df = self.df
             if 'in_shortlist' in self.df.columns:
                 filtered_df = self.df[self.df['in_shortlist'] == True].copy()
                 
-            # Проверяем необходимые колонки
             if 'ticker' in filtered_df.columns and 'close' in filtered_df.columns:
                 returns_dict = {}
                 
-                # Группируем по тикерам
                 for ticker, ticker_data in filtered_df.groupby('ticker'):
-                    # Сортируем данные по дате
                     ticker_data = ticker_data.sort_index()
                     
-                    # Рассчитываем процентные изменения цены
                     price_changes = ticker_data['close'].pct_change().dropna()
                     if len(price_changes) == 0:
                         self.logger.warning(f"Тикер {ticker} не имеет ценовых данных")
                         continue
                     
-                    # Определяем преобладающий сигнал для тикера (если есть сигналы)
                     if 'signal' in ticker_data.columns:
-                        # Считаем количество каждого типа сигнала
                         signal_counts = ticker_data['signal'].value_counts()
                         long_signals = signal_counts.get(1, 0)
                         short_signals = signal_counts.get(-1, 0)
                         
-                        # Процент сигналов каждого типа
                         total_signals = len(ticker_data)
                         long_percent = long_signals / total_signals if total_signals > 0 else 0
                         short_percent = short_signals / total_signals if total_signals > 0 else 0
@@ -163,10 +150,8 @@ def modify_portfolio_optimizer_for_shorts(portfolio_optimizer_class):
         n = len(returns.columns)
         self.logger.info(f"Запуск оптимизации портфеля для {n} активов (с учетом long/short)")
         
-        # Основное ограничение: сумма весов = 1
         constraints = [{'type': 'eq', 'fun': lambda x: np.sum(x) - 1}]
         
-        # Определяем границы для весов
         if bounds is None:
             bounds = []
             for col in returns.columns:
@@ -178,11 +163,9 @@ def modify_portfolio_optimizer_for_shorts(portfolio_optimizer_class):
                     bounds.append((0, 0.2))
             bounds = tuple(bounds)
         
-        # Начальные значения - равные веса
         init_weights = np.array([1/n] * n)
         
         try:
-            # Оптимизация
             results = minimize(
                 self.negative_sharpe_ratio, 
                 init_weights, 
@@ -203,7 +186,6 @@ def modify_portfolio_optimizer_for_shorts(portfolio_optimizer_class):
                         self.logger.info(f"  {col}: {weight:.4f}")
             else:
                 self.logger.warning(f"Оптимизация не сошлась: {results['message']}")
-                # В случае ошибки используем равные веса
                 self.optimal_weights = init_weights
                 self.logger.info("Используются равные веса (оптимизация не удалась)")
 
@@ -213,7 +195,6 @@ def modify_portfolio_optimizer_for_shorts(portfolio_optimizer_class):
             self.logger.error(f"Ошибка при оптимизации портфеля: {e}")
             return None
     
-    # Замена методов
     portfolio_optimizer_class.prepare_returns = prepare_returns_with_shorts
     portfolio_optimizer_class.optimize_portfolio = optimize_portfolio_with_shorts
     return portfolio_optimizer_class
@@ -279,9 +260,8 @@ def run_short_selling_pipeline(
     output_dir=f"{BASE_PATH}/data/short_selling_results",
     risk_free_rate=0.075,
     period=('2024-01-01', '2025-04-15'),
-    signal_params=None  # Новый параметр для настроек сигналов
+    signal_params=None
 ):
-    # Параметры по умолчанию
     if signal_params is None:
         signal_params = {
             'weight_tech': 0.5,
@@ -291,13 +271,10 @@ def run_short_selling_pipeline(
             'threshold_sell': -0.2  # Более мягкий порог
         }
     
-    # Получаем модифицированные классы с поддержкой коротких позиций
     SignalGenerator, PortfolioOptimizer, Backtester = apply_short_selling_support()
     
-    # Создаем директории для результатов
     os.makedirs(output_dir, exist_ok=True)
     
-    # Создаем подкаталоги для каждого этапа
     signals_dir = os.path.join(output_dir, 'signals')
     portfolio_dir = os.path.join(output_dir, 'portfolio')
     backtest_dir = os.path.join(output_dir, 'backtest')
@@ -322,7 +299,6 @@ def run_short_selling_pipeline(
         output_dir=signals_dir
     )
     
-    # Проверка результатов генерации сигналов
     if signals_df is None or len(signals_df) == 0:
         print("Ошибка: Не удалось сгенерировать сигналы")
         return {
@@ -342,7 +318,6 @@ def run_short_selling_pipeline(
         )
         
         # Модифицируем данные, чтобы гарантировать преобладающие сигналы
-        # Это обходное решение проблемы с пропуском тикеров
         if signals_df is not None and 'ticker' in signals_df.columns and 'signal' in signals_df.columns:
             # Принудительно присваиваем некоторым тикерам преобладающие сигналы
             ticker_list = signals_df['ticker'].unique()
@@ -350,18 +325,15 @@ def run_short_selling_pipeline(
             # Модифицируем данные, чтобы распределить сигналы
             df_mod = signals_df.copy()
             
-            # Разделим тикеры на две группы - Long и Short
             long_tickers = ticker_list[:len(ticker_list)//2]
             short_tickers = ticker_list[len(ticker_list)//2:]
             
-            # Принудительно присваиваем сигналы
             for ticker in long_tickers:
                 df_mod.loc[df_mod['ticker'] == ticker, 'signal'] = 1  # Long
             
             for ticker in short_tickers:
                 df_mod.loc[df_mod['ticker'] == ticker, 'signal'] = -1  # Short
             
-            # Создаем временный файл с модифицированными данными
             temp_signals_file = os.path.join(output_dir, 'signals_modified.csv')
             df_mod.to_csv(temp_signals_file)
             
@@ -378,7 +350,6 @@ def run_short_selling_pipeline(
         print(f"Ошибка при оптимизации портфеля: {e}")
         portfolio = None
     
-    # Проверка результатов оптимизации
     if portfolio is None:
         print("Создаем портфель с равными весами")
         
@@ -399,10 +370,8 @@ def run_short_selling_pipeline(
                     # SHORT позиция
                     weights[f"{ticker}_SHORT"] = equal_weight
             
-            # Добавляем безрисковую часть
             weights['RISK_FREE'] = 0.3
             
-            # Создаем портфель с равными весами
             portfolio = {
                 'weights': weights,
                 'expected_return': 0.1,  # Предполагаемая годовая доходность
@@ -412,18 +381,15 @@ def run_short_selling_pipeline(
                 'rf_allocation': 0.3
             }
             
-            # Создаем CSV файл с равными весами
             weights_df = pd.DataFrame(list(weights.items()), columns=['Ticker', 'Weight'])
             weights_df.to_csv(os.path.join(portfolio_dir, 'portfolio_weights.csv'), index=False)
             
-            # Создаем текстовый файл с описанием
             with open(os.path.join(portfolio_dir, 'portfolio_summary.txt'), 'w') as f:
                 f.write("Портфель с равными весами (оптимизация не удалась)\n")
                 f.write(f"Безрисковая ставка: {risk_free_rate*100:.2f}%\n")
                 f.write(f"Доля безрисковых активов: 30.00%\n")
                 f.write(f"Всего тикеров: {len(tickers)}\n")
         else:
-            # Если нет тикеров, используем только безрисковый актив
             portfolio = {
                 'weights': {'RISK_FREE': 1.0},
                 'expected_return': risk_free_rate,
@@ -433,7 +399,6 @@ def run_short_selling_pipeline(
                 'rf_allocation': 1.0
             }
             
-            # Сохраняем даже для полностью безрискового портфеля
             weights_df = pd.DataFrame([('RISK_FREE', 1.0)], columns=['Ticker', 'Weight'])
             weights_df.to_csv(os.path.join(portfolio_dir, 'portfolio_weights.csv'), index=False)
             
@@ -458,7 +423,6 @@ def run_short_selling_pipeline(
         
         if results is None:
             print("Предупреждение: Бэктест не дал результатов")
-            # Создаем заглушку для результатов, чтобы избежать ошибок
             results = {
                 "message": "Бэктест не дал результатов",
                 "metrics": {
@@ -469,7 +433,6 @@ def run_short_selling_pipeline(
                 }
             }
             
-            # Создаем файл с объяснением, почему бэктест не сработал
             with open(os.path.join(backtest_dir, 'backtest_error.txt'), 'w') as f:
                 f.write("Бэктест не дал результатов\n\n")
                 f.write("Возможные причины:\n")
@@ -478,7 +441,6 @@ def run_short_selling_pipeline(
                 f.write("3. Отсутствие сигналов для выбранного периода\n")
     except Exception as e:
         print(f"Ошибка при бэктестировании: {e}")
-        # Создаем заглушку с информацией об ошибке
         results = {
             "error": str(e),
             "metrics": {
@@ -489,14 +451,12 @@ def run_short_selling_pipeline(
             }
         }
         
-        # Записываем информацию об ошибке
         with open(os.path.join(backtest_dir, 'backtest_error.txt'), 'w') as f:
             f.write(f"Ошибка при выполнении бэктеста: {e}\n\n")
             f.write("Трассировка ошибки:\n")
             import traceback
             f.write(traceback.format_exc())
     
-    # Создаем базовый отчет для случая отсутствия метрик
     if not os.path.exists(os.path.join(backtest_dir, 'backtest_report.md')):
         with open(os.path.join(backtest_dir, 'backtest_report.md'), 'w') as f:
             f.write("# Отчет о бэктестировании стратегии с короткими позициями\n\n")
@@ -515,7 +475,6 @@ def run_short_selling_pipeline(
                 f.write(f"**Информация:** {results['message']}\n\n")
                 f.write("Бэктест не дал результатов. Возможно, недостаточно данных или отсутствуют сигналы.\n")
     
-    # Возвращаем результаты всех этапов
     return {
         'signals': signals_df,
         'portfolio': portfolio,
