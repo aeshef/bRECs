@@ -27,8 +27,6 @@
 
 ## Пример результата работы пайплайна на случайном наборе параметров:
 
-**Example Pipeline Run Output Tree (Concise):**
-
 *   [`run_20250429_174251_balanced_portfolio_0429_1715/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715)
     *   [`pipeline_summary.md`](https://github.com/aeshef/kursach/blob/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/pipeline_summary.md) - Общий итог пайплайна
     *   [`bonds/`](https://github.com/aeshef/kursach/tree/main/data/pipeline_runs/run_20250429_174251_balanced_portfolio_0429_1715/bonds/) - Анализ и портфель облигаций
